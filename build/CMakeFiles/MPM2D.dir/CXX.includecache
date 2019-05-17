@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/MPMProcess.hpp
+
+/Users/sash/mpm_2d/src/main.cpp
+MPMProcess.hpp
+-
+iostream
+-
+fstream
+-
+string
+-
+vector
+-
+

@@ -1,0 +1,4 @@
+/Users/sash/mpm_2d/build/CMakeFiles/rebuild_cache.dir
+/Users/sash/mpm_2d/build/CMakeFiles/edit_cache.dir
+/Users/sash/mpm_2d/build/CMakeFiles/MPM2D.dir
+/Users/sash/mpm_2d/build/CMakeFiles/mdm2dp.dir
