@@ -6,3 +6,13 @@
 
 #IncludeRegexTransform: 
 
+../include/MPM_Particle.hpp
+
+/Users/sash/mpm_2d/src/MPM_Particle.cpp
+MPM_Particle.hpp
+-
+iostream
+-
+iomanip
+-
+

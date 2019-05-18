@@ -136,6 +136,33 @@ mdm2dp/fast:
 	$(MAKE) -f CMakeFiles/mdm2dp.dir/build.make CMakeFiles/mdm2dp.dir/build
 .PHONY : mdm2dp/fast
 
+src/MPMOutputVTK.o: src/MPMOutputVTK.cpp.o
+
+.PHONY : src/MPMOutputVTK.o
+
+# target to build an object file
+src/MPMOutputVTK.cpp.o:
+	$(MAKE) -f CMakeFiles/mdm2dp.dir/build.make CMakeFiles/mdm2dp.dir/src/MPMOutputVTK.cpp.o
+.PHONY : src/MPMOutputVTK.cpp.o
+
+src/MPMOutputVTK.i: src/MPMOutputVTK.cpp.i
+
+.PHONY : src/MPMOutputVTK.i
+
+# target to preprocess a source file
+src/MPMOutputVTK.cpp.i:
+	$(MAKE) -f CMakeFiles/mdm2dp.dir/build.make CMakeFiles/mdm2dp.dir/src/MPMOutputVTK.cpp.i
+.PHONY : src/MPMOutputVTK.cpp.i
+
+src/MPMOutputVTK.s: src/MPMOutputVTK.cpp.s
+
+.PHONY : src/MPMOutputVTK.s
+
+# target to generate assembly for a file
+src/MPMOutputVTK.cpp.s:
+	$(MAKE) -f CMakeFiles/mdm2dp.dir/build.make CMakeFiles/mdm2dp.dir/src/MPMOutputVTK.cpp.s
+.PHONY : src/MPMOutputVTK.cpp.s
+
 src/MPMProcess.o: src/MPMProcess.cpp.o
 
 .PHONY : src/MPMProcess.o
@@ -162,6 +189,33 @@ src/MPMProcess.s: src/MPMProcess.cpp.s
 src/MPMProcess.cpp.s:
 	$(MAKE) -f CMakeFiles/mdm2dp.dir/build.make CMakeFiles/mdm2dp.dir/src/MPMProcess.cpp.s
 .PHONY : src/MPMProcess.cpp.s
+
+src/MPM_Particle.o: src/MPM_Particle.cpp.o
+
+.PHONY : src/MPM_Particle.o
+
+# target to build an object file
+src/MPM_Particle.cpp.o:
+	$(MAKE) -f CMakeFiles/mdm2dp.dir/build.make CMakeFiles/mdm2dp.dir/src/MPM_Particle.cpp.o
+.PHONY : src/MPM_Particle.cpp.o
+
+src/MPM_Particle.i: src/MPM_Particle.cpp.i
+
+.PHONY : src/MPM_Particle.i
+
+# target to preprocess a source file
+src/MPM_Particle.cpp.i:
+	$(MAKE) -f CMakeFiles/mdm2dp.dir/build.make CMakeFiles/mdm2dp.dir/src/MPM_Particle.cpp.i
+.PHONY : src/MPM_Particle.cpp.i
+
+src/MPM_Particle.s: src/MPM_Particle.cpp.s
+
+.PHONY : src/MPM_Particle.s
+
+# target to generate assembly for a file
+src/MPM_Particle.cpp.s:
+	$(MAKE) -f CMakeFiles/mdm2dp.dir/build.make CMakeFiles/mdm2dp.dir/src/MPM_Particle.cpp.s
+.PHONY : src/MPM_Particle.cpp.s
 
 src/main.o: src/main.cpp.o
 
@@ -200,9 +254,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... MPM2D"
 	@echo "... mdm2dp"
+	@echo "... src/MPMOutputVTK.o"
+	@echo "... src/MPMOutputVTK.i"
+	@echo "... src/MPMOutputVTK.s"
 	@echo "... src/MPMProcess.o"
 	@echo "... src/MPMProcess.i"
 	@echo "... src/MPMProcess.s"
+	@echo "... src/MPM_Particle.o"
+	@echo "... src/MPM_Particle.i"
+	@echo "... src/MPM_Particle.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
