@@ -53,7 +53,7 @@ int main()
 
     MPMProcess MyProcess1; // Create a Process class (terminates automatically)
     MPMOutputVTK MyOutput; // Create a MPMOutputVTK class (terminates automatically)
-    MPMParticle MyFirstParticle;
+    MPMParticle MyFirstParticle(0.0,1.0,2.0);
     //MyFirstParticle.Coordinate = [0.0, 0.0, 0.0];
     MyFirstParticle.Mass = 10.0;
     std::cout << "MyFirstParticle has Mass: " << MyFirstParticle.getMass() << std::endl;
