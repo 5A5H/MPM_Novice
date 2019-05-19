@@ -4,5 +4,6 @@
 CMakeFiles/MPM2D.dir/src/main.cpp.o
  ../include/MPMOutputVTK.hpp
  ../include/MPMProcess.hpp
+ ../include/MPM_GridNode.hpp
  ../include/MPM_Particle.hpp
  /Users/sash/mpm_2d/src/main.cpp

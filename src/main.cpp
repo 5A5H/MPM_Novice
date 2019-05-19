@@ -3,64 +3,89 @@
 #include <MPMProcess.hpp>
 #include <MPMOutputVTK.hpp>
 #include <MPM_Particle.hpp>
+#include <MPM_GridNode.hpp>
 //#include <MPM_OwnLib.hpp>
 #include <iostream>
 #include <fstream>
 #include <string>
 #include <vector>
+#include <chrono>
 
 //declare function
 void ReadParticleAreaData(double vec[]);
 void ReadParticlePosition(double vec[][2]);
+void TestVTUExport(double *xvecstart, int numx);
 
 
 //------------------------------------------ MAIN ---------------------------------------------
 int main()
 {
     std::cout << "_______Welcome to MPM2D!______\n";
+    std::chrono::high_resolution_clock::time_point t1 = std::chrono::high_resolution_clock::now(); // Capture time at program start
     // First read in Particle Area data:
     // known particle len = 261
     //std::vector<double> Vp;
     int i;
-    int nParticle = 216;        //Known number of particle
-    double Vp[nParticle];       // Particle Volume Array
-    double Xp[nParticle][2];    // Particle Position
+    // Read In The Problem:
+    int nParticle = 216;          // Known number of particle
+    //MPMParticle* GlobalParticleContainer = new MPMParticle[nParticle];
+    std::vector<MPMParticle> GlobalParticleContainer;
+
+    int NoGridNodes = 576;             // Number of GridNodes
+    MPMGridNode* GlobalGridNodeContainer = new MPMGridNode[NoGridNodes];
+
+    int nElements = 529;          // Number of GridElements
+    double Vp[nParticle];         // Particle Volume Array
+    double Xp[nParticle][2];      // Particle Position
+    double XI[NoGridNodes][2];         // Particle Position
+    //int nElements[nElements][4];  // Grid Element Connectivity
+
     ReadParticleAreaData(Vp);
     ReadParticlePosition(Xp);
+    for(i=0;i<nParticle;i++){
+      MPMParticle TempPart; // Give birth to a new particle class
+      TempPart.Volume = Vp[i];            // Assign a volume
+      TempPart.Coordinate[0] = Xp[i][0];  // Assign a X Coordinate
+      TempPart.Coordinate[1] = Xp[i][1];  // Assign a Y Coordinate
+      TempPart.Coordinate[2] = 0.0;       // Assign a Z Coordinate
+      GlobalParticleContainer.push_back(TempPart); // put new born particle in the global container
+    }
+    // Hover over all particles in the global container and get a report
+    std::vector<MPMParticle>::iterator v = GlobalParticleContainer.begin();
+    while( v != GlobalParticleContainer.end()) {
+    std::cout << "value of volume = " << (*v).Volume << std::endl;
+    v++;
+    }
+    v = GlobalParticleContainer.begin();
+    while( v != GlobalParticleContainer.end()) {
+    (*v).Report();
+    v++;
+    }
     //for(i=0;i<nParticle;i++) std::cout << " Particle " << i+1 << " X=( " << Xp[i][0] << " , "<< Xp[i][1] << ")" << std::endl;
 
     // code for look at an array
     //for(i=0;i<261;i++) std::cout << i << "  " << Vp[i] << std::endl;
 
-    // write to vtu file
-    std::ofstream vtpfile;
-    vtpfile.open("/Users/sash/mpm_2d/data/vpuout_1.vtp");
-    vtpfile << "<VTKFile  type=\"PolyData\"  version=\"0.1\" >\n";
-    vtpfile << "<PolyData>\n";
-    vtpfile << "<Piece  NumberOfPoints=\"216\"  NumberOfVerts=\"0\"  NumberOfLines=\"0\"  NumberOfStrips=\"0\" NumberOfPolys=\"0\">\n";
-    vtpfile << "<Points>\n";
-    vtpfile << "<DataArray  type=\"Float64\"  NumberOfComponents=\"3\"  format=\"ascii\" >\n";
-    for(i=0;i<nParticle;i++){
-      vtpfile << Xp[i][0] << "  " << Xp[i][1] << "  " << 0.0 << "\n";
-    }
-    vtpfile << "</DataArray>\n";
-    vtpfile << "</Points>\n";
-    vtpfile << "</Piece>\n";
-    vtpfile << "</PolyData>\n";
-    vtpfile << "</VTKFile>\n";
-    vtpfile.close();
-
-
     MPMProcess MyProcess1; // Create a Process class (terminates automatically)
-    MPMOutputVTK MyOutput; // Create a MPMOutputVTK class (terminates automatically)
     MPMParticle MyFirstParticle(0.0,1.0,2.0);
+    MPMOutputVTK MyOutput; // Create a MPMOutputVTK class (terminates automatically)
     //MyFirstParticle.Coordinate = [0.0, 0.0, 0.0];
+    MyOutput.WriteVTK();
     MyFirstParticle.Mass = 10.0;
-    std::cout << "MyFirstParticle has Mass: " << MyFirstParticle.getMass() << std::endl;
     MyFirstParticle.Report();
+    double x[4] = {0.0,1.0,1.0,0.0};
+    double y[4] = {0.0,0.0,1.0,1.0};
+    double z[4] = {0.0,0.0,0.0,0.0};
+    TestVTUExport(x, 4);
 
+    std::vector<double> xx;
+
+    std::cout << "___________ The End __________\n";
+    std::chrono::high_resolution_clock::time_point t2 = std::chrono::high_resolution_clock::now(); // Capture time at program start
+    auto duration = std::chrono::duration_cast<std::chrono::microseconds>( t2 - t1 ).count();
+    std::cout << "Runtime: " << duration*10e-6 << "s" << std::endl;
+    //delete[] GlobalParticleContainer;
     return 0;
-    std::cout << "_______ The End ______\n";
 }
 
 void ReadParticleAreaData(double vec[]) {
@@ -128,5 +153,11 @@ void ReadParticlePosition(double vec[][2]) {
     } catch (const std::exception& e) {
       std::cout << "End Reading Particle Position File" << std::endl;
     }
+  }
+}
+
+void TestVTUExport(double *xvecstart, int numx){
+  for(int m=0;m<numx;m++){
+  std::cout << m+1 << "th X coordinate:" << *(xvecstart+m) << std::endl;
   }
 }

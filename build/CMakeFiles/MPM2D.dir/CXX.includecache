@@ -7,8 +7,18 @@
 #IncludeRegexTransform: 
 
 ../include/MPMOutputVTK.hpp
+string
+-
+iostream
+-
+fstream
+-
+vector
+-
 
 ../include/MPMProcess.hpp
+
+../include/MPM_GridNode.hpp
 
 ../include/MPM_Particle.hpp
 
@@ -19,6 +29,8 @@ MPMOutputVTK.hpp
 -
 MPM_Particle.hpp
 -
+MPM_GridNode.hpp
+-
 iostream
 -
 fstream
@@ -26,5 +38,7 @@ fstream
 string
 -
 vector
+-
+chrono
 -
 

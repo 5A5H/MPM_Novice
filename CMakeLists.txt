@@ -7,10 +7,12 @@ add_library(mdm2dp
     include/MPMProcess.hpp
     include/MPMOutputVTK.hpp
     include/MPM_Particle.hpp
+    include/MPM_GridNode.hpp
     #include/MPM_OwnLib.hpp
     src/MPMProcess.cpp
     src/MPMOutputVTK.cpp
     src/MPM_Particle.cpp
+    src/MPM_GridNode.cpp
     #src/MPM_OwnLib.cpp
 )
 
