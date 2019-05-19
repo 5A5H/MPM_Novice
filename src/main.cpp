@@ -25,6 +25,7 @@ int main()
     // First read in Particle Area data:
     // known particle len = 261
     //std::vector<double> Vp;
+    double dens = 10;
     int i;
     // Read In The Problem:
     int nParticle = 216;          // Known number of particle
@@ -43,12 +44,7 @@ int main()
     ReadParticleAreaData(Vp);
     ReadParticlePosition(Xp);
     for(i=0;i<nParticle;i++){
-      MPMParticle TempPart; // Give birth to a new particle class
-      TempPart.Volume = Vp[i];            // Assign a volume
-      TempPart.Coordinate[0] = Xp[i][0];  // Assign a X Coordinate
-      TempPart.Coordinate[1] = Xp[i][1];  // Assign a Y Coordinate
-      TempPart.Coordinate[2] = 0.0;       // Assign a Z Coordinate
-      GlobalParticleContainer.push_back(TempPart); // put new born particle in the global container
+      GlobalParticleContainer.push_back(MPMParticle(i+1,Xp[i][0],Xp[i][1],0.0,Vp[i],dens)); // put new born particle in the global container
     }
     // Hover over all particles in the global container and get a report
     std::vector<MPMParticle>::iterator v = GlobalParticleContainer.begin();
@@ -72,7 +68,7 @@ int main()
     //MyFirstParticle.Coordinate = [0.0, 0.0, 0.0];
     MyOutput.WriteVTK();
     MyFirstParticle.Mass = 10.0;
-    MyFirstParticle.Report();
+    //MyFirstParticle.Report();
     double x[4] = {0.0,1.0,1.0,0.0};
     double y[4] = {0.0,0.0,1.0,1.0};
     double z[4] = {0.0,0.0,0.0,0.0};
