@@ -29,7 +29,6 @@ int main()
     int i;
     // Read In The Problem:
     int nParticle = 216;          // Known number of particle
-    //MPMParticle* GlobalParticleContainer = new MPMParticle[nParticle];
     std::vector<MPMParticle> GlobalParticleContainer;
 
     int NoGridNodes = 576;             // Number of GridNodes
@@ -49,26 +48,30 @@ int main()
     // Hover over all particles in the global container and get a report
     std::vector<MPMParticle>::iterator v = GlobalParticleContainer.begin();
     while( v != GlobalParticleContainer.end()) {
-    std::cout << "value of volume = " << (*v).Volume << std::endl;
+    //std::cout << "value of volume = " << (*v).Volume << std::endl;
     v++;
     }
     v = GlobalParticleContainer.begin();
     while( v != GlobalParticleContainer.end()) {
-    (*v).Report();
+    //(*v).Report();
     v++;
     }
-    //for(i=0;i<nParticle;i++) std::cout << " Particle " << i+1 << " X=( " << Xp[i][0] << " , "<< Xp[i][1] << ")" << std::endl;
+
+    double sumvol = 0;
+    v = GlobalParticleContainer.begin();
+    while( v != GlobalParticleContainer.end()) {
+    sumvol += (*v).Volume;
+    v++;
+    }
+    std::cout << "Complete Particle Volume :" << sumvol << std::endl;
 
     // code for look at an array
     //for(i=0;i<261;i++) std::cout << i << "  " << Vp[i] << std::endl;
 
     MPMProcess MyProcess1; // Create a Process class (terminates automatically)
-    MPMParticle MyFirstParticle(0.0,1.0,2.0);
     MPMOutputVTK MyOutput; // Create a MPMOutputVTK class (terminates automatically)
     //MyFirstParticle.Coordinate = [0.0, 0.0, 0.0];
     MyOutput.WriteVTK();
-    MyFirstParticle.Mass = 10.0;
-    //MyFirstParticle.Report();
     double x[4] = {0.0,1.0,1.0,0.0};
     double y[4] = {0.0,0.0,1.0,1.0};
     double z[4] = {0.0,0.0,0.0,0.0};

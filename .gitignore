@@ -1,2 +1,4 @@
 #ignore the whole build content
 /build/*
+#ignore .o files
+*.o
