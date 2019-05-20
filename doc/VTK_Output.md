@@ -1,5 +1,5 @@
 # VTK-Output
-## The UnstructuredGrid format
+## The UnstructuredGrid format (.vtu)
 The general format for UnstructuredGrid is:
 ```
 <VTKFile type=”UnstructuredGrid” ...>

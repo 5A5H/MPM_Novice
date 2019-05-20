@@ -2,3 +2,6 @@
 /build/*
 #ignore .o files
 *.o
+
+#ignore .vtu files
+*.vtu

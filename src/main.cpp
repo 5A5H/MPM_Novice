@@ -4,7 +4,7 @@
 #include <MPMOutputVTK.hpp>
 #include <MPM_Particle.hpp>
 #include <MPM_GridNode.hpp>
-//#include <MPM_OwnLib.hpp>
+
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -14,7 +14,7 @@
 //declare function
 void ReadParticleAreaData(double vec[]);
 void ReadParticlePosition(double vec[][2]);
-void TestVTUExport(double *xvecstart, int numx);
+void TestVTUExport(std::vector<MPMParticle> &OutParticleContainer);
 
 
 //------------------------------------------ MAIN ---------------------------------------------
@@ -70,12 +70,8 @@ int main()
 
     MPMProcess MyProcess1; // Create a Process class (terminates automatically)
     MPMOutputVTK MyOutput; // Create a MPMOutputVTK class (terminates automatically)
-    //MyFirstParticle.Coordinate = [0.0, 0.0, 0.0];
     MyOutput.WriteVTK();
-    double x[4] = {0.0,1.0,1.0,0.0};
-    double y[4] = {0.0,0.0,1.0,1.0};
-    double z[4] = {0.0,0.0,0.0,0.0};
-    TestVTUExport(x, 4);
+    TestVTUExport(GlobalParticleContainer);
 
     std::vector<double> xx;
 
@@ -83,7 +79,6 @@ int main()
     std::chrono::high_resolution_clock::time_point t2 = std::chrono::high_resolution_clock::now(); // Capture time at program start
     auto duration = std::chrono::duration_cast<std::chrono::microseconds>( t2 - t1 ).count();
     std::cout << "Runtime: " << duration*10e-6 << "s" << std::endl;
-    //delete[] GlobalParticleContainer;
     return 0;
 }
 
@@ -155,8 +150,60 @@ void ReadParticlePosition(double vec[][2]) {
   }
 }
 
-void TestVTUExport(double *xvecstart, int numx){
-  for(int m=0;m<numx;m++){
-  std::cout << m+1 << "th X coordinate:" << *(xvecstart+m) << std::endl;
+void TestVTUExport(std::vector<MPMParticle> &OutParticleContainer){                     //GlobalParticleContainerLength->GPCL #, int GPCL
+  std::cout << "container len:" << OutParticleContainer.size() << std::endl;
+
+  //collecting information
+  //piece information
+  int NumberOfPoints  =   OutParticleContainer.size();
+  int NumberOfCells   =   0;
+
+
+  //open a file stream for output
+  std::ofstream OutputFile;
+  OutputFile.open("/Users/sash/mpm_2d/data/vpuout_2.vtu", std::ios::out);
+  // Write headder
+  OutputFile << "<?xml version=\"1.0\" ?>" << std::endl;
+  OutputFile << "<VTKFile byte_order=\"LittleEndian\" type=\"UnstructuredGrid\" version=\"0.1\">" << std::endl;
+  OutputFile << "<UnstructuredGrid>" << std::endl;
+  // Write Piece Headder
+  OutputFile << "<Piece NumberOfCells=\"" << NumberOfCells << "\" NumberOfPoints=\"" << NumberOfPoints << "\">" << std::endl;
+  // Write Points
+  OutputFile << "<Points>" << std::endl;
+
+  OutputFile << "<DataArray NumberOfComponents=\"3\" format=\"ascii\" type=\"Float32\">";
+  for(int i = 0; i < NumberOfPoints; i++){
+    OutputFile << "  " << OutParticleContainer[i].Coordinate[0] ;
+    OutputFile << "  " << OutParticleContainer[i].Coordinate[1] ;
+    OutputFile << "  " << OutParticleContainer[i].Coordinate[2] ;
   }
+  OutputFile << "</DataArray>" << std::endl;
+
+  OutputFile << "</Points>" << std::endl;
+  // Write Cells
+  OutputFile << "<Cells>" << std::endl;
+
+  OutputFile << "<DataArray Name=\"connectivity\" format=\"ascii\" type=\"Int32\">0</DataArray>" << std::endl;
+  OutputFile << "<DataArray Name=\"offsets\" format=\"ascii\" type=\"Int32\">0</DataArray>" << std::endl;
+  OutputFile << "<DataArray Name=\"types\" format=\"ascii\" type=\"UInt8\">1</DataArray>" << std::endl;
+
+  OutputFile << "</Cells>" << std::endl;
+  // Write Point Data
+  OutputFile << "<PointData/>" << std::endl;
+  // Write Cell Data
+  OutputFile << "<CellData/>" << std::endl;
+  // Write Piece foot
+  OutputFile << "</Piece>" << std::endl;
+  // Write foot
+  OutputFile << "</UnstructuredGrid>" << std::endl;
+  OutputFile << "</VTKFile>" << std::endl;
+  //close the file stram
+  OutputFile.close();
 }
+
+
+// void TestVTUExport(double *xvecstart, int numx){
+//   for(int m=0;m<numx;m++){
+//   std::cout << m+1 << "th X coordinate:" << *(xvecstart+m) << std::endl;
+//   }
+// }
