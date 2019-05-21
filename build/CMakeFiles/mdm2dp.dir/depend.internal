@@ -7,6 +7,9 @@ CMakeFiles/mdm2dp.dir/src/MPMOutputVTK.cpp.o
 CMakeFiles/mdm2dp.dir/src/MPMProcess.cpp.o
  ../include/MPMProcess.hpp
  /Users/sash/mpm_2d/src/MPMProcess.cpp
+CMakeFiles/mdm2dp.dir/src/MPM_GridElement.cpp.o
+ ../include/MPM_GridElement.hpp
+ /Users/sash/mpm_2d/src/MPM_GridElement.cpp
 CMakeFiles/mdm2dp.dir/src/MPM_GridNode.cpp.o
  ../include/MPM_GridNode.hpp
  /Users/sash/mpm_2d/src/MPM_GridNode.cpp

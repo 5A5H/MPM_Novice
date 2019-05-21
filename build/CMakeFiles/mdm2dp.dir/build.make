@@ -109,12 +109,26 @@ CMakeFiles/mdm2dp.dir/src/MPM_GridNode.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mdm2dp.dir/src/MPM_GridNode.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sash/mpm_2d/src/MPM_GridNode.cpp -o CMakeFiles/mdm2dp.dir/src/MPM_GridNode.cpp.s
 
+CMakeFiles/mdm2dp.dir/src/MPM_GridElement.cpp.o: CMakeFiles/mdm2dp.dir/flags.make
+CMakeFiles/mdm2dp.dir/src/MPM_GridElement.cpp.o: ../src/MPM_GridElement.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sash/mpm_2d/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/mdm2dp.dir/src/MPM_GridElement.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mdm2dp.dir/src/MPM_GridElement.cpp.o -c /Users/sash/mpm_2d/src/MPM_GridElement.cpp
+
+CMakeFiles/mdm2dp.dir/src/MPM_GridElement.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mdm2dp.dir/src/MPM_GridElement.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sash/mpm_2d/src/MPM_GridElement.cpp > CMakeFiles/mdm2dp.dir/src/MPM_GridElement.cpp.i
+
+CMakeFiles/mdm2dp.dir/src/MPM_GridElement.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mdm2dp.dir/src/MPM_GridElement.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sash/mpm_2d/src/MPM_GridElement.cpp -o CMakeFiles/mdm2dp.dir/src/MPM_GridElement.cpp.s
+
 # Object files for target mdm2dp
 mdm2dp_OBJECTS = \
 "CMakeFiles/mdm2dp.dir/src/MPMProcess.cpp.o" \
 "CMakeFiles/mdm2dp.dir/src/MPMOutputVTK.cpp.o" \
 "CMakeFiles/mdm2dp.dir/src/MPM_Particle.cpp.o" \
-"CMakeFiles/mdm2dp.dir/src/MPM_GridNode.cpp.o"
+"CMakeFiles/mdm2dp.dir/src/MPM_GridNode.cpp.o" \
+"CMakeFiles/mdm2dp.dir/src/MPM_GridElement.cpp.o"
 
 # External object files for target mdm2dp
 mdm2dp_EXTERNAL_OBJECTS =
@@ -123,9 +137,10 @@ libmdm2dp.a: CMakeFiles/mdm2dp.dir/src/MPMProcess.cpp.o
 libmdm2dp.a: CMakeFiles/mdm2dp.dir/src/MPMOutputVTK.cpp.o
 libmdm2dp.a: CMakeFiles/mdm2dp.dir/src/MPM_Particle.cpp.o
 libmdm2dp.a: CMakeFiles/mdm2dp.dir/src/MPM_GridNode.cpp.o
+libmdm2dp.a: CMakeFiles/mdm2dp.dir/src/MPM_GridElement.cpp.o
 libmdm2dp.a: CMakeFiles/mdm2dp.dir/build.make
 libmdm2dp.a: CMakeFiles/mdm2dp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/sash/mpm_2d/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library libmdm2dp.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/sash/mpm_2d/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library libmdm2dp.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/mdm2dp.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/mdm2dp.dir/link.txt --verbose=$(VERBOSE)
 

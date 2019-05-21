@@ -5,18 +5,18 @@
 // Constructor of the Particle class
 MPMGridNode::MPMGridNode(double x, double y, double z){
   ID = 0;
-  Coordinate[0] = x;
-  Coordinate[1] = y;
-  Coordinate[2] = z;
+  X[0] = x;
+  X[1] = y;
+  X[2] = z;
   Density = 1;
-  Volume = 1;
-  Mass = Density*Volume;
+  Vol = 1;
+  Mass = Density*Vol;
 }
 MPMGridNode::MPMGridNode(){
   ID = 0;
   Density = 1;
-  Volume = 1;
-  Mass = Density*Volume;
+  Vol= 1;
+  Mass = Density*Vol;
 }
 
 // Destructor of the Particle class
@@ -28,9 +28,26 @@ MPMGridNode::~MPMGridNode(){
 void MPMGridNode::Report(void){
   std::cout << "------------------------------------\n";
   std::cout << "This is GridNode :"  << std::setw(18) << ID << std::endl;
-  std::cout << "Coordinate  X :"  << std::setw(21) << Coordinate[0] << std::endl;
-  std::cout << "            Y :"  << std::setw(21) << Coordinate[1] << std::endl;
-  std::cout << "            Z :"  << std::setw(21) << Coordinate[2] << std::endl;
+  std::cout << "Coordinate  X :"  << std::setw(21) << X[0] << std::endl;
+  std::cout << "            Y :"  << std::setw(21) << X[1] << std::endl;
+  std::cout << "            Z :"  << std::setw(21) << X[2] << std::endl;
   std::cout << "Mass          :"  << std::setw(21) << Mass << std::endl;
-  std::cout << "Volume        :"  << std::setw(21) << Volume << std::endl;
+  std::cout << "Volume        :"  << std::setw(21) << Vol << std::endl;
+}
+
+void MPMGridNode::Reset(){
+  // Reset Nodal Mass
+  Mass = 0;
+  // Reset Nodal Momentum
+  Momentum[0] = 0;
+  Momentum[1] = 0;
+  Momentum[2] = 0;
+  // Reset Nodal Internal Forces
+  InternalForce[0] = 0;
+  InternalForce[1] = 0;
+  InternalForce[2] = 0;
+  // Reset Nodal Velocity
+  V[0] = 0;
+  V[1] = 0;
+  V[2] = 0;
 }

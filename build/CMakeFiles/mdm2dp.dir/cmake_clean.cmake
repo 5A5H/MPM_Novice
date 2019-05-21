@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/mdm2dp.dir/src/MPMOutputVTK.cpp.o"
   "CMakeFiles/mdm2dp.dir/src/MPM_Particle.cpp.o"
   "CMakeFiles/mdm2dp.dir/src/MPM_GridNode.cpp.o"
+  "CMakeFiles/mdm2dp.dir/src/MPM_GridElement.cpp.o"
   "libmdm2dp.pdb"
   "libmdm2dp.a"
 )

@@ -6,10 +6,10 @@
 
 #IncludeRegexTransform: 
 
-../include/MPM_Particle.hpp
+../include/MPM_GridNode.hpp
 
-/Users/sash/mpm_2d/src/MPM_Particle.cpp
-MPM_Particle.hpp
+/Users/sash/mpm_2d/src/MPM_GridNode.cpp
+MPM_GridNode.hpp
 -
 iostream
 -
