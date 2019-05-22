@@ -97,16 +97,46 @@ int main()
     }
     MPMTimings.SetTime("Search End");
 
-    MPMSHPQ4 MyShape(
-      GlobalGridNodeContainer[GlobalGridElementContainer[0].N1].X,
-      GlobalGridNodeContainer[GlobalGridElementContainer[0].N2].X,
-      GlobalGridNodeContainer[GlobalGridElementContainer[0].N3].X,
-      GlobalGridNodeContainer[GlobalGridElementContainer[0].N4].X,
-      GlobalParticleContainer[1].X
-    );
+    // MPMSHPQ4 MyShape(
+    //   GlobalGridNodeContainer[GlobalGridElementContainer[0].N1].X,
+    //   GlobalGridNodeContainer[GlobalGridElementContainer[0].N2].X,
+    //   GlobalGridNodeContainer[GlobalGridElementContainer[0].N3].X,
+    //   GlobalGridNodeContainer[GlobalGridElementContainer[0].N4].X,
+    //   GlobalParticleContainer[1].X
+    // );
+
+    // MPM Project Particle to grid
+
+    MPMSHPQ4 SHP;
+    for(int i=0; i<GlobalParticleContainer.size(); i++){
+      // element for particle computation: ParticleGridConnectivity[i]
+      // Cut Of if element is out of scope
+      int ParticleElement = ParticleGridConnectivity[i];
+
+      if (true) {
+
+        // evaluate shape function
+        SHP.evaluate(
+          GlobalGridNodeContainer[GlobalGridElementContainer[ParticleElement].N1].X,
+          GlobalGridNodeContainer[GlobalGridElementContainer[ParticleElement].N2].X,
+          GlobalGridNodeContainer[GlobalGridElementContainer[ParticleElement].N3].X,
+          GlobalGridNodeContainer[GlobalGridElementContainer[ParticleElement].N4].X,
+          GlobalParticleContainer[i].X
+        );
+
+        // update nodal mass
+        GlobalGridNodeContainer[GlobalGridElementContainer[ParticleElement].N1].Mass += SHP.N1 * GlobalParticleContainer[i].Mass;
+        GlobalGridNodeContainer[GlobalGridElementContainer[ParticleElement].N2].Mass += SHP.N2 * GlobalParticleContainer[i].Mass;
+        GlobalGridNodeContainer[GlobalGridElementContainer[ParticleElement].N3].Mass += SHP.N3 * GlobalParticleContainer[i].Mass;
+        GlobalGridNodeContainer[GlobalGridElementContainer[ParticleElement].N4].Mass += SHP.N4 * GlobalParticleContainer[i].Mass;
+
+      }// end if for cutoff criterion
+    }// end loop over partcle
 
 
-
+    for (auto &Node : GlobalGridNodeContainer) {
+      std::cout << Node.Mass << std::endl;
+    }
 
 
     //   GlobalParticleContainer.push_back(MPMParticle(i+1,Xp[i][0],Xp[i][1],0.0,Vp[i],dens)); // put new born particle in the global container
@@ -547,8 +577,8 @@ void TestVTUGridExport(
       OutputFile << "<PointData>" << std::endl;
         // Write Particle Volume
         OutputFile << "<DataArray Name=\"Mass\" NumberOfComponents=\"1\" format=\"ascii\" type=\"Float32\">";
-        for(int i = 0; i < NumberOfNodes; i++){
-          OutputFile << "  " << 0;//OutNodeContainer[i].Vol ;
+        for (auto &Node : OutNodeContainer) {
+          OutputFile << "  " << Node.Mass;
         }
         OutputFile << "</DataArray>" << std::endl;
 
@@ -573,3 +603,7 @@ void TestVTUGridExport(
       OutputFile.close();
     }
   }
+// Some NOtES
+// for (auto &Node : GlobalGridNodeContainer) {
+//   std::cout << *(Node.X) << std::endl;
+// }

@@ -10,13 +10,13 @@ MPMGridNode::MPMGridNode(double x, double y, double z){
   X[2] = z;
   Density = 1;
   Vol = 1;
-  Mass = Density*Vol;
+  Mass = 0;
 }
 MPMGridNode::MPMGridNode(){
   ID = 0;
   Density = 1;
   Vol= 1;
-  Mass = Density*Vol;
+  Mass = 0;
 }
 
 // Destructor of the Particle class
