@@ -9,9 +9,10 @@ class MPMParticle {
       double V[3];                         // The Particles Velocity
       double Vol;                              // The Particles Volume
       double Mass;                                // The Particles Mass
-      double Stress;                                // The Particles Stress {Sig11,Sig22,Sig12}
-      double Deformation;                                // The Particles Deformation {F11,F12,F21,F22}
+      double Stress[3];                                // The Particles Stress {Sig11,Sig22,Sig12}
+      double Deformation[4];                                // The Particles Deformation {F11,F12,F21,F22}
 
+      bool checkNAN();
       double getMass(void);                       // A Member Function that returns the Current Mass of the Particle  MemberFunction: hass access to all data of the object
       void Report(void);                          // A Member Function to print out a report of this object
 

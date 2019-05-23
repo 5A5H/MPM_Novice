@@ -13,6 +13,13 @@ MPMParticle::MPMParticle(double x, double y, double z){
   V[0] = 0.0;
   V[1] = 0.0;
   V[2] = 0.0;
+  Stress[0] = 0.0;
+  Stress[1] = 0.0;
+  Stress[2] = 0.0;
+  Deformation[0] = 1.0;
+  Deformation[1] = 0.0;
+  Deformation[2] = 0.0;
+  Deformation[3] = 1.0;
 }
 MPMParticle::MPMParticle(){
   ID = 0;
@@ -21,6 +28,13 @@ MPMParticle::MPMParticle(){
   V[0] = 0.0;
   V[1] = 0.0;
   V[2] = 0.0;
+  Stress[0] = 0.0;
+  Stress[1] = 0.0;
+  Stress[2] = 0.0;
+  Deformation[0] = 1.0;
+  Deformation[1] = 0.0;
+  Deformation[2] = 0.0;
+  Deformation[3] = 1.0;
 }
 MPMParticle::MPMParticle(int id, double x, double y, double z, double vol){
   ID = id;
@@ -32,6 +46,13 @@ MPMParticle::MPMParticle(int id, double x, double y, double z, double vol){
   V[0] = 0.0;
   V[1] = 0.0;
   V[2] = 0.0;
+  Stress[0] = 0.0;
+  Stress[1] = 0.0;
+  Stress[2] = 0.0;
+  Deformation[0] = 1.0;
+  Deformation[1] = 0.0;
+  Deformation[2] = 0.0;
+  Deformation[3] = 1.0;
 }
 
 // Destructor of the Particle class
@@ -41,6 +62,17 @@ MPMParticle::~MPMParticle(){
 // A member function to return the mass (all dummy)
 double MPMParticle::getMass(void){
   return Mass;
+}
+
+// Check for check
+bool MPMParticle::checkNAN(){
+  if (X[0]!=X[0] || X[1]!=X[1] || X[2]!=X[2]){
+    std::cout << std::endl;
+    std::cerr << "Unfortunately NAN detected in Particle :" << ID << "\n";
+    return true;
+  } else {
+    return false;
+ }
 }
 
 // particle data report to prompt
