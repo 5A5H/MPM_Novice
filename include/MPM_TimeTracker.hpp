@@ -32,6 +32,6 @@ void MPMTimeTracker::printTimeTable(){
   for(; iter < CodeTimings.size(); iter++){
   auto delta = std::chrono::duration_cast<std::chrono::microseconds>( CodeTimings[iter] - CodeTimings[iter==0? iter: iter-1] ).count();
   auto duration = std::chrono::duration_cast<std::chrono::microseconds>( CodeTimings[iter] - CodeTimings[0] ).count();
-  std::cout << "|  " << std::setw(20)  << std::left << CodeTimingTags[iter]  << "  |" << std::setw(10) << delta*10e-6 << " s  |" << std::setw(10) << duration*10e-6 << " s|" << std::endl;
+  std::cout << "|  " << std::setw(20)  << std::left << CodeTimingTags[iter]  << "  |" << std::setw(10) << delta*10e-7 << " s  |" << std::setw(10) << duration*10e-6 << " s|" << std::endl;
   }
 }

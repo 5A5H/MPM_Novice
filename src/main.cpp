@@ -45,7 +45,6 @@ int main()
     double nu   = 0.3;
     double lam  = (Emod*nu)/((1+nu)*(1-2*nu));
     double mue  = Emod/(2*(1+nu));
-    double dt   = 0.001;
 
 
     //Read and Create Objects
@@ -60,6 +59,7 @@ int main()
     MPMTimings.SetTime("Read End");
 
     //Set Particle Mass [and BC experimental]
+    std::cout << "- Set Initial conditions" << std::endl;
     for (auto &Pt : Particle) {
        Pt.Mass = rho*Pt.Vol;
        if (Pt.X[0]<0.5){
@@ -69,9 +69,24 @@ int main()
        }
      }
 
-    // Find initial Element Connectivity
-    MPMTimings.SetTime("Search Start");
+    std::cout << "- Begin Time Integration" << std::endl;
     std::vector<int> PGC;  // PGC ->  ParticleGridConnectivity; holds element connectivity {0->element2 1->element3 .. noparticles->element89}
+    double t0 = 0.0;
+    double tmax = 2.5;
+    double dt = 0.01;
+    int step = 1;
+    MPMTimings.SetTime("Start TimeLoop");
+    for (double t=t0;t<tmax;t=t+dt){
+
+    // Reset Grid
+    for (auto &Node : GridNode) {
+       Node.Reset();
+     }
+
+    // Find initial Element Connectivity
+    //MPMTimings.SetTime("Search Start");
+    //std::cout << "Start Initial Particle-Grid connectivity search   : " << std::endl;
+    PGC.clear();
     for (auto &Pt : Particle) {
       for (auto &Elmt : GridElement) {
          bool InsideThisElement;
@@ -82,7 +97,7 @@ int main()
          }
        }
      }
-    MPMTimings.SetTime("Search End");
+    //MPMTimings.SetTime("Search End");
 
     // MPM Project Particle to Grid
     MPMSHPQ4 SHP;
@@ -175,6 +190,9 @@ int main()
       }
     }
 
+  }// end time loop
+  MPMTimings.SetTime("End TimeLoop");
+  std::cout << "- End Time Integration" << std::endl;
 
     MPMTimings.SetTime("TestVTUExport Start");
     TestVTUGridExport("/Users/sash/mpm_2d/data/Grid_001.vtu",GridNode,GridElement);
