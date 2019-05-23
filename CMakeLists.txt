@@ -10,6 +10,7 @@ add_library(mdm2dp
     include/MPM_GridNode.hpp
     include/MPM_TimeTracker.hpp
     include/MPM_GridElement.hpp
+    include/MPM_Read.hpp
     src/MPMProcess.cpp
     src/MPMOutputVTK.cpp
     src/MPM_Particle.cpp

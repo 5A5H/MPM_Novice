@@ -1,6 +1,7 @@
 class MPMGridElement {
   public:
       MPMGridElement();
+      MPMGridElement(int id, int n1, int n2, int n3, int n4);
       ~MPMGridElement();
       int ID;
       int N1;

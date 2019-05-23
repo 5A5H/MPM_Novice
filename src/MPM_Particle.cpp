@@ -8,24 +8,30 @@ MPMParticle::MPMParticle(double x, double y, double z){
   X[0] = x;
   X[1] = y;
   X[2] = z;
-  Density = 1;
   Vol = 1;
-  Mass = Density*Vol;
+  Mass = 0;
+  V[0] = 0.0;
+  V[1] = 0.0;
+  V[2] = 0.0;
 }
 MPMParticle::MPMParticle(){
   ID = 0;
-  Density = 1;
   Vol = 1;
-  Mass = Density*Vol;
+  Mass = 0;
+  V[0] = 0.0;
+  V[1] = 0.0;
+  V[2] = 0.0;
 }
-MPMParticle::MPMParticle(int id, double x, double y, double z, double vol, double dens){
+MPMParticle::MPMParticle(int id, double x, double y, double z, double vol){
   ID = id;
   X[0] = x;
   X[1] = y;
   X[2] = z;
-  Density = dens;
   Vol = vol;
-  Mass = Density*Vol;
+  Mass = 0.0;
+  V[0] = 0.0;
+  V[1] = 0.0;
+  V[2] = 0.0;
 }
 
 // Destructor of the Particle class

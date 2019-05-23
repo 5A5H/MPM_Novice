@@ -3,26 +3,46 @@
 #include <iomanip>
 
 // Constructor of the Particle class
-MPMGridNode::MPMGridNode(double x, double y, double z){
-  ID = 0;
+MPMGridNode::MPMGridNode(int id, double x, double y, double z){
+  ID = id;
   X[0] = x;
   X[1] = y;
   X[2] = z;
-  Density = 1;
-  Vol = 1;
+  Density = 0;
+  Vol = 0;
   Mass = 0;
+  Momentum[0] = 0.0;
+  Momentum[1] = 0.0;
+  Momentum[2] = 0.0;
+  InternalForce[0] = 0;
+  InternalForce[1] = 0;
+  InternalForce[2] = 0;
+  V[0] = 0;
+  V[1] = 0;
+  V[2] = 0;
 }
 MPMGridNode::MPMGridNode(){
-  ID = 0;
-  Density = 1;
-  Vol= 1;
+  ID = -1;
+  X[0] = 0.0;
+  X[1] = 0.0;
+  X[2] = 0.0;
+  Density = 0;
+  Vol = 0;
   Mass = 0;
+  Momentum[0] = 0.0;
+  Momentum[1] = 0.0;
+  Momentum[2] = 0.0;
+  InternalForce[0] = 0;
+  InternalForce[1] = 0;
+  InternalForce[2] = 0;
+  V[0] = 0;
+  V[1] = 0;
+  V[2] = 0;
 }
 
 // Destructor of the Particle class
 MPMGridNode::~MPMGridNode(){
 }
-
 
 // particle data report to prompt
 void MPMGridNode::Report(void){

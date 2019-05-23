@@ -1,7 +1,7 @@
 class MPMGridNode {
   public:
       MPMGridNode();                              // The GridNode Class Constructor
-      MPMGridNode(double x, double y, double z);  // The GridNode Class Constructor requires coordinate
+      MPMGridNode(int id, double x, double y, double z);  // The GridNode Class Constructor requires coordinate
       ~MPMGridNode();                             // The GridNode Class Destructor
       int ID;                                     // The GridNode Id
       double X[3];                       // The GridNode Spatial Coordinate
