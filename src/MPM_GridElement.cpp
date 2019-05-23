@@ -11,6 +11,10 @@ MPMGridElement::MPMGridElement(int id, int n1, int n2, int n3, int n4){
    N2 = n2;
    N3 = n3;
    N4 = n4;
+   *N[0] = N1;
+   *N[1] = N2;
+   *N[2] = N3;
+   *N[3] = N4; 
 }
 // Destructor s
 MPMGridElement::~MPMGridElement(){

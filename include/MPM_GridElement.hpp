@@ -8,6 +8,7 @@ class MPMGridElement {
       int N2;
       int N3;
       int N4;
+      int *N[4] = {&N1, &N2, &N3, &N4};
       void Report();
 
   private:

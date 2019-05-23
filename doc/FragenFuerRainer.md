@@ -7,3 +7,9 @@
 * definiere ich particel container lieber global oder übergebe ich ihn lieber immer
 
 * shape function ist ein gutes beispiel für viele einfache funktionsaufrufe .. inline ?
+
+* wo liegen nu die daten ... ?
+
+* wie loop over smth in a class pointer .. e.g. grid to particle
+
+* rainer zeile 161

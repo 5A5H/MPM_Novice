@@ -10,10 +10,12 @@
 #include <MPM_Read.hpp>
 
 #include <math.h>
+#include <unistd.h>                                                             // sleep
 #include <iostream>
 #include <fstream>
 #include <string>
 #include <vector>
+
 
 //declare function
 void TestVTUParticleExport(std::string FileName, std::vector<MPMParticle> &OutParticleContainer);
@@ -31,10 +33,12 @@ std::vector<MPMGridElement> GridElement;
 //------------------------------------------ MAIN ---------------------------------------------
 int main()
 {
-    std::cout << "______________Welcome to MPM2D!_____________\n";
+    std::cout << "_____________________Welcome to MPM2D!____________________\n";
     // Genrate The Time Tracker
     MPMTimeTracker MPMTimings;
     MPMTimings.SetTime("Program Start");
+
+    double MassTolerance = 10e-6;
 
     double Emod = 1000;
     double rho  = 1000;
@@ -80,7 +84,7 @@ int main()
      }
     MPMTimings.SetTime("Search End");
 
-    // MPM Project Particle to grid
+    // MPM Project Particle to Grid
     MPMSHPQ4 SHP;
     for (auto &Pt : Particle) {
        //Element where the particle maps to
@@ -118,7 +122,7 @@ int main()
       Node.Momentum[1] += Node.InternalForce[1] * dt;
       Node.Momentum[2] += Node.InternalForce[2] * dt;
       // time integrate velocity
-      if (Node.Mass > 10e-6){
+      if (Node.Mass > MassTolerance){
         Node.V[0] += Node.Momentum[0] * dt;
         Node.V[1] += Node.Momentum[1] * dt;
         Node.V[2] += Node.Momentum[2] * dt;
@@ -127,153 +131,59 @@ int main()
         Node.V[1] = Node.Momentum[1]/Node.Mass;
         Node.V[2] = Node.Momentum[2]/Node.Mass;
       }
-
     }
 
-    // for(int i=0; i<GlobalParticleContainer.size(); i++){
-    //   // element for particle computation: ParticleGridConnectivity[i]
-    //   // Cut Of if element is out of scope
-    //   int ParticleElement = ParticleGridConnectivity[i];
-    //
-    //   if (true) {
-    //
-    //     // evaluate shape function
-    //     SHP.evaluate(
-    //       GlobalGridNodeContainer[GlobalGridElementContainer[ParticleElement].N1].X,
-    //       GlobalGridNodeContainer[GlobalGridElementContainer[ParticleElement].N2].X,
-    //       GlobalGridNodeContainer[GlobalGridElementContainer[ParticleElement].N3].X,
-    //       GlobalGridNodeContainer[GlobalGridElementContainer[ParticleElement].N4].X,
-    //       GlobalParticleContainer[i].X
-    //     );
-    //
-    //     // update nodal mass
-    //     GlobalGridNodeContainer[GlobalGridElementContainer[ParticleElement].N1].Mass += SHP.N1 * GlobalParticleContainer[i].Mass;
-    //     GlobalGridNodeContainer[GlobalGridElementContainer[ParticleElement].N2].Mass += SHP.N2 * GlobalParticleContainer[i].Mass;
-    //     GlobalGridNodeContainer[GlobalGridElementContainer[ParticleElement].N3].Mass += SHP.N3 * GlobalParticleContainer[i].Mass;
-    //     GlobalGridNodeContainer[GlobalGridElementContainer[ParticleElement].N4].Mass += SHP.N4 * GlobalParticleContainer[i].Mass;
-    //     if(SHP.N1!=SHP.N1 || SHP.N2!=SHP.N2 || SHP.N3!=SHP.N3 || SHP.N4!=SHP.N4){
-    //       std::cout << SHP.N1 << "  ";
-    //       std::cout << SHP.N2 << "  ";
-    //       std::cout << SHP.N3 << "  ";
-    //       std::cout << SHP.N4 << "  ";
-    //       std::cout <<std::endl;
-    //       std::cout << "shp evaluated for";
-    //       std::cout <<std::endl;
-    //       std::cout << "X1 :";
-    //       std::cout << GlobalGridNodeContainer[GlobalGridElementContainer[ParticleElement].N1].X[0] << " ,";
-    //       std::cout << GlobalGridNodeContainer[GlobalGridElementContainer[ParticleElement].N1].X[1] << " ,";
-    //       std::cout << GlobalGridNodeContainer[GlobalGridElementContainer[ParticleElement].N1].X[2] << " ,";
-    //       std::cout << "| X2 :";
-    //       std::cout << GlobalGridNodeContainer[GlobalGridElementContainer[ParticleElement].N2].X[0] << " ,";
-    //       std::cout << GlobalGridNodeContainer[GlobalGridElementContainer[ParticleElement].N2].X[1] << " ,";
-    //       std::cout << GlobalGridNodeContainer[GlobalGridElementContainer[ParticleElement].N2].X[2] << " ,";
-    //       std::cout << "| X3 :";
-    //       std::cout << GlobalGridNodeContainer[GlobalGridElementContainer[ParticleElement].N3].X[0] << " ,";
-    //       std::cout << GlobalGridNodeContainer[GlobalGridElementContainer[ParticleElement].N3].X[1] << " ,";
-    //       std::cout << GlobalGridNodeContainer[GlobalGridElementContainer[ParticleElement].N3].X[2] << " ,";
-    //       std::cout << "| X4 :";
-    //       std::cout << GlobalGridNodeContainer[GlobalGridElementContainer[ParticleElement].N4].X[0] << " ,";
-    //       std::cout << GlobalGridNodeContainer[GlobalGridElementContainer[ParticleElement].N4].X[1] << " ,";
-    //       std::cout << GlobalGridNodeContainer[GlobalGridElementContainer[ParticleElement].N4].X[2] << " ,";
-    //       std::cout <<std::endl;
-    //       std::cout << "| XP :";
-    //       std::cout << GlobalGridNodeContainer[GlobalGridElementContainer[ParticleElement].N4].X[0] << " ,";
-    //       std::cout << GlobalGridNodeContainer[GlobalGridElementContainer[ParticleElement].N4].X[1] << " ,";
-    //       std::cout << GlobalGridNodeContainer[GlobalGridElementContainer[ParticleElement].N4].X[2] << " ,";
-    //       std::cout <<std::endl;
-    //       std::cout << "The element is";
-    //       std::cout << ParticleElement;
-    //       std::cout << "  with id  ";
-    //       std::cout << GlobalGridElementContainer[ParticleElement].ID;
-    //       std::cout <<std::endl;
-    //       GlobalGridElementContainer[ParticleElement].Report();
-    //     }
-    //
-    //   }// end if for cutoff criterion
-    // }// end loop over partcle
+    // MPM Project Grid to Particle
+    for (auto &Pt : Particle) {
+       //Element where the particle maps to
+      if (PGC[Pt.ID]>=0){ //Catch node that is not in an element
+        auto &PtElmt = GridElement[PGC[Pt.ID]];
+        // Evaluate shape function
+        SHP.evaluate(GridNode[PtElmt.N1].X, GridNode[PtElmt.N2].X, GridNode[PtElmt.N3].X, GridNode[PtElmt.N4].X, Pt.X);
+        // update particle velocity and momentum
+
+          if (GridNode[PtElmt.N1].Mass > MassTolerance) {
+            for (int j=0;j<3;j++){
+              Pt.V[j] += SHP.N1 * (GridNode[PtElmt.N1].InternalForce[j]/GridNode[PtElmt.N1].Mass)*dt;
+              Pt.X[j] += SHP.N1 * (GridNode[PtElmt.N1].Momentum[j]/GridNode[PtElmt.N1].Mass)*dt;
+            }
+          }
+
+          if (GridNode[PtElmt.N2].Mass > MassTolerance) {
+            for (int j=0;j<3;j++){
+              Pt.V[j] += SHP.N2 * (GridNode[PtElmt.N2].InternalForce[j]/GridNode[PtElmt.N2].Mass)*dt;
+              Pt.X[j] += SHP.N2 * (GridNode[PtElmt.N2].Momentum[j]     /GridNode[PtElmt.N2].Mass)*dt;
+            }
+          }
+
+          if (GridNode[PtElmt.N3].Mass > MassTolerance) {
+            for (int j=0;j<3;j++){
+              // !!!! EXAMPLE: double mass = .... and then use mass instead of ...
+              Pt.V[j] += SHP.N3 * (GridNode[PtElmt.N3].InternalForce[j]/GridNode[PtElmt.N3].Mass)*dt;
+              Pt.X[j] += SHP.N3 * (GridNode[PtElmt.N3].Momentum[j]     /GridNode[PtElmt.N3].Mass)*dt;
+            }
+          }
+
+          if (GridNode[PtElmt.N4].Mass > MassTolerance) {
+            for (int j=0;j<3;j++){
+              Pt.V[j] += SHP.N4 * (GridNode[PtElmt.N4].InternalForce[j]/GridNode[PtElmt.N4].Mass)*dt;
+              Pt.X[j] += SHP.N4 * (GridNode[PtElmt.N4].Momentum[j]     /GridNode[PtElmt.N4].Mass)*dt;
+            }
+          }
 
 
-    // for (auto &Node : GlobalGridNodeContainer) {
-    //   std::cout << Node.ID << Node.Mass << std::endl;
-    // }
-    // for (int i=0;i<GlobalParticleContainer.size();i++) {
-    //   std::cout << ParticleGridConnectivity[i] << std::endl;
-    // }
-
-    //   GlobalParticleContainer.push_back(MPMParticle(i+1,Xp[i][0],Xp[i][1],0.0,Vp[i],dens)); // put new born particle in the global container
-    //   GlobalParticleContainer[i].V[0] = (( Xp[i][0] < 0.5)? .1 : -0.1 );
-    //   GlobalParticleContainer[i].V[1] = (( Xp[i][1] < 0.5)? .1 : -0.1 );
-    //   GlobalParticleContainer[i].V[2] = 0.0;
-    // }
+      }
+    }
 
 
-
-    // First read in Particle Area data:
-    // known particle len = 261
-    //std::vector<double> Vp;
-    //double dens = 10;
-    // Read In The Problem:
-              // Known number of particle
-
-
-                 // Number of GridNodes
-
-              // Number of GridElements
-    //double Vp[NoParticles];         // Particle Volume Array
-    //double Xp[NoParticles][2];      // Particle Position
-    //double XI[NoGridNodes][2];         // Particle Position
-    //int nElements[nElements][4];  // Grid Element Connectivity
-
-    // ReadParticleAreaData(Vp);
-    // ReadParticlePosition(Xp);
-    // for(i=0;i<nParticle;i++){
-    //   GlobalParticleContainer.push_back(MPMParticle(i+1,Xp[i][0],Xp[i][1],0.0,Vp[i],dens)); // put new born particle in the global container
-    //   GlobalParticleContainer[i].V[0] = (( Xp[i][0] < 0.5)? .1 : -0.1 );
-    //   GlobalParticleContainer[i].V[1] = (( Xp[i][1] < 0.5)? .1 : -0.1 );
-    //   GlobalParticleContainer[i].V[2] = 0.0;
-    // }
-    // // Hover over all particles in the global container and get a report
-    // std::vector<MPMParticle>::iterator v = GlobalParticleContainer.begin();
-    // while( v != GlobalParticleContainer.end()) {
-    // //std::cout << "value of volume = " << (*v).Volume << std::endl;
-    // v++;
-    // }
-    // std::vector<MPMParticle>::iterator v = GlobalParticleContainer.begin();
-    // while( v != GlobalParticleContainer.end()) {
-    // (*v).Report();
-    // v++;
-    // }
-
-    // double sumvol = 0;
-    // std::vector<MPMParticle>::iterator v = GlobalParticleContainer.begin();
-    // while( v != GlobalParticleContainer.end()) {
-    // sumvol += (*v).Volume;
-    // v++;
-    // }
-    // std::cout << "Complete Particle Volume :" << sumvol << std::endl;
-
-    // code for look at an array
-    //for(i=0;i<261;i++) std::cout << i << "  " << Vp[i] << std::endl;
-
-    // MPMProcess MyProcess1; // Create a Process class (terminates automatically)
-    // MPMOutputVTK MyOutput; // Create a MPMOutputVTK class (terminates automatically)
-    // MyOutput.WriteVTK();
-    // GlobalGridElementContainer[0].Report();
-    // GlobalGridElementContainer[528].Report();
-    // GlobalGridElementContainer[529].Report();
-    // GlobalGridElementContainer[530].Report();
-    // GlobalGridElementContainer[531].Report();
-    // std::cout << "size " << GlobalGridElementContainer.size();
-    // VTK Export
     MPMTimings.SetTime("TestVTUExport Start");
     TestVTUGridExport("/Users/sash/mpm_2d/data/Grid_001.vtu",GridNode,GridElement);
     TestVTUParticleExport("/Users/sash/mpm_2d/data/Particle_001.vtu",Particle);
     MPMTimings.SetTime("TestVTUExport Finish");
 
-
-    std::cout << "__________________ The End _________________\n";
-    MPMTimings.SetTime("Program Finish");
     MPMTimings.printTimeTable();
+    std::cout << "_________________________ The End ________________________\n";
+    MPMTimings.SetTime("Program Finish");
     return 0;
 }
 
@@ -554,3 +464,9 @@ void TestVTUGridExport(
 // for (auto &Node : GlobalGridNodeContainer) {
 //   std::cout << *(Node.X) << std::endl;
 // }
+// MPMTimings.printTimeTable();
+// for (int i = 0; i < 10; i++) {
+//         std::cout << "Status: " << i << "\r" << std::flush;
+//         sleep(1);
+// }
+// std::cout << "Completed.\n";
