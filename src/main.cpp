@@ -10,7 +10,6 @@
 #include <MPM_Read.hpp>
 
 #include <math.h>
-//#include <unistd.h>                                                             // sleep
 
 #include <iostream>
 #include <fstream>
@@ -40,11 +39,11 @@ int main()
     MPMTimings.SetTime("Program Start");
 
     double MassTolerance = 10e-6;
-    int PostFrequency = 20;
+    int PostFrequency = 200;
 
     double t0 = 0.0;
-    double tmax = 4.0;
-    double dt = 0.001;
+    double tmax = 2.5;
+    double dt = 0.0001;
     int step = 1;
 
     bool ParaviewOutput = true;
@@ -60,9 +59,9 @@ int main()
 
     //Read and Create Objects
     MPMTimings.SetTime("Read Start");
-    ReadParticle("/Users/sash/mpm_2d/data/two_discs_particledata.txt", Particle);
-    ReadGridNodes("/Users/sash/mpm_2d/data/two_discs_node.txt", GridNode);
-    ReadGridElementsQ4("/Users/sash/mpm_2d/data/two_discs_element.txt", GridElement);
+    ReadParticle("/Users/sash/mpm_2d/data/two_discs_particledata_fine.txt", Particle);
+    ReadGridNodes("/Users/sash/mpm_2d/data/two_discs_node_fine.txt", GridNode);
+    ReadGridElementsQ4("/Users/sash/mpm_2d/data/two_discs_element_fine.txt", GridElement);
     std::cout << "Problem Data: " << std::endl;
     std::cout << "Number of Particles    : " << Particle.size() << std::endl;
     std::cout << "Number of Grid Nodes   : " << GridNode.size() << std::endl;
