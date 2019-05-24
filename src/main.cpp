@@ -254,7 +254,7 @@ int main()
       for (int i = 0;i<=(t/tmax)*24;i++) std::cout << "%";
       for (int i = 0;i<=24-(t/tmax)*24;i++) std::cout << "-";
       std::cout << "]";
-      std::cout << "   Progress : " << std::setprecision(3) << (t/tmax)*100 << "% \r" << std::flush;
+      std::cout << "   Progress : " << std::setprecision(3) << std::setw(4) << std::left << (t/tmax)*100 << " % \r" << std::flush;
       // Paraview Output
       if (ParaviewOutput){
       TestVTUGridExport(GridOutputFile + "_" + std::to_string(step) + ".vtu",GridNode,GridElement);
