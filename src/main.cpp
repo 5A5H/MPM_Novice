@@ -39,14 +39,14 @@ int main()
     MPMTimings.SetTime("Program Start");
 
     double MassTolerance = 10e-6;
-    int PostFrequency = 200;
+    int PostFrequency = 2;
 
     double t0 = 0.0;
-    double tmax = 2.5;
-    double dt = 0.0001;
+    double tmax = 0.5;
+    double dt = 0.001;
     int step = 1;
 
-    bool ParaviewOutput = true;
+    bool ParaviewOutput = false;
     std::string ParticleOutputFile = "/Users/sash/mpm_2d/data/out/TwoParticle_Particle";
     std::string GridOutputFile = "/Users/sash/mpm_2d/data/out/TwoParticle_Grid";
 
