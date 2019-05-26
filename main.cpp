@@ -8,6 +8,8 @@
 #include <MPM_GridElement.hpp>
 #include <MPM_SHPQ4.hpp>
 #include <MPM_Read.hpp>
+#include <MPM_Material.hpp>
+#include <AceMaterials.hpp>
 
 #include <math.h>
 
@@ -25,12 +27,15 @@ void TestVTUGridExport(
   std::vector<MPMGridElement> &OutElementContainer
 );
 bool PointInQ4(double X1[3], double X2[3], double X3[3], double X4[3], double XP[3]);
-//----------------------------------- Global Variables ----------------------------------------
+
+//----------------------------------- Global Variables ----------------------------------------------------------------
 std::vector<MPMParticle> Particle;
 std::vector<MPMGridNode> GridNode;
 std::vector<MPMGridElement> GridElement;
+std::vector<MPMMaterial> Material;
 
-//------------------------------------------ MAIN ---------------------------------------------
+
+//------------------------------------------ MAIN ---------------------------------------------------------------------
 int main()
 {
     std::cout << "_____________________Welcome to MPM2D!____________________\n";
@@ -39,29 +44,63 @@ int main()
     MPMTimings.SetTime("Program Start");
 
     double MassTolerance = 10e-6;
-    int PostFrequency = 2;
 
     double t0 = 0.0;
-    double tmax = 0.5;
+    double tmax = 3.5;
     double dt = 0.001;
+    double rho  = 1000;
     int step = 1;
 
-    bool ParaviewOutput = false;
+
+
+
+//------------------------------------------- Output declaration ------------------------------------------------------
+    bool ParaviewOutput = true;
     std::string ParticleOutputFile = "/Users/sash/mpm_2d/data/out/TwoParticle_Particle";
     std::string GridOutputFile = "/Users/sash/mpm_2d/data/out/TwoParticle_Grid";
+    int PostFrequency = 200;
 
+//------------------------------------------ Material declaration -----------------------------------------------------
+    MPMMaterial Steel(3);
     double Emod = 1000;
-    double rho  = 1000;
     double nu   = 0.3;
-    double lam  = (Emod*nu)/((1+nu)*(1-2*nu));
-    double mue  = Emod/(2*(1+nu));
+    Steel.SetMaterialParameter(Emod);
+    Steel.SetMaterialParameter(nu);
+    Material.push_back(Steel);
+
+//------------------------------------------ spatial discretization ---------------------------------------------------
+    std::string InputfileParticle, InputfileNodes, InputfileGrid;
+    int ProblemTag = 0;
+    switch (ProblemTag) {
+      case 0 :
+      std::cout << "Problem: Two distcs colision standard." << std::endl;
+
+      InputfileParticle = "/Users/sash/mpm_2d/data/two_discs_particledata.txt";
+      InputfileNodes = "/Users/sash/mpm_2d/data/two_discs_node.txt";
+      InputfileGrid = "/Users/sash/mpm_2d/data/two_discs_element.txt";
+
+      break;
+
+      case 1 :
+      std::cout << "Problem: Two distcs colision both fine." << std::endl;
+
+      InputfileParticle = "/Users/sash/mpm_2d/data/two_discs_particledata_fine.txt";
+      InputfileNodes = "/Users/sash/mpm_2d/data/two_discs_node_fine.txt";
+      InputfileGrid = "/Users/sash/mpm_2d/data/two_discs_element_fine.txt";
+
+      break;
+
+      default:
+      std::cout << "No Problem specified" << std::endl;
+      return 0;
+    }
 
 
     //Read and Create Objects
     MPMTimings.SetTime("Read Start");
-    ReadParticle("/Users/sash/mpm_2d/data/two_discs_particledata_fine.txt", Particle);
-    ReadGridNodes("/Users/sash/mpm_2d/data/two_discs_node_fine.txt", GridNode);
-    ReadGridElementsQ4("/Users/sash/mpm_2d/data/two_discs_element_fine.txt", GridElement);
+    ReadParticle(InputfileParticle, Particle);
+    ReadGridNodes(InputfileNodes, GridNode);
+    ReadGridElementsQ4(InputfileGrid, GridElement);
     std::cout << "Problem Data: " << std::endl;
     std::cout << "Number of Particles    : " << Particle.size() << std::endl;
     std::cout << "Number of Grid Nodes   : " << GridNode.size() << std::endl;
@@ -78,7 +117,13 @@ int main()
          Pt.V[0] = -0.1; Pt.V[1] = -0.1; Pt.V[2] = 0.0;
        }
      }
+//---------------------------------------------------------------------------------------------------------------------
+// Check Materials
+     for (auto &Mat : Material) {
+        Mat.Report();
+      }
 
+//---------------------------------------------------------------------------------------------------------------------
     std::cout << "- Begin Time Integration" << std::endl;
     std::vector<int> PGC;  // PGC ->  ParticleGridConnectivity; holds element connectivity {0->element2 1->element3 .. noparticles->element89}
     std::string statusbar;
@@ -218,30 +263,51 @@ int main()
         Lp[2] = SHP.dN1dX * GridNode[PtElmt.N1].V[1] + SHP.dN2dX * GridNode[PtElmt.N2].V[1] + SHP.dN3dX * GridNode[PtElmt.N3].V[1] + SHP.dN4dX * GridNode[PtElmt.N4].V[1];
         Lp[3] = SHP.dN1dY * GridNode[PtElmt.N1].V[1] + SHP.dN2dY * GridNode[PtElmt.N2].V[1] + SHP.dN3dY * GridNode[PtElmt.N3].V[1] + SHP.dN4dY * GridNode[PtElmt.N4].V[1];
         double Fn[4] = { Pt.Deformation[0], Pt.Deformation[1], Pt.Deformation[2], Pt.Deformation[3]}; // 2D deformation gradient Fn = [ dxxdx , dxydx ,dxxdy, dxydy]
-        //      update deformation gradient
+        //      update deformation gradient F = [ dxxdx , dxydx ,dxxdy, dxydy]
         double F[4];
         F[0] = Fn[0]*(1.0+Lp[0]*dt)+dt*Fn[2]*Lp[1];
         F[1] = Fn[1]*(1.0+Lp[0]*dt)+dt*Fn[3]*Lp[1];
         F[2] = Fn[2]*(1.0+Lp[3]*dt)+dt*Fn[0]*Lp[2];
         F[3] = Fn[3]*(1.0+Lp[3]*dt)+dt*Fn[1]*Lp[2];
         //      compute small strain tensor
-        double Eps[3]; // Eps = [Eps11, Eps22, Eps12]
-        Eps[0] = 0.5*(-2.0+2.0*F[0]);
-        Eps[1] = 0.5*(-2.0+2.0*F[3]);
-        Eps[2] = 0.5*(F[1]+F[2]);
-        //      compute small strain tensor hookes law
-        double Sig11, Sig22, Sig12;
-        Sig11 = (lam+2.0*mue)*Eps[0] + lam*Eps[1];
-        Sig22 = (lam+2.0*mue)*Eps[1] + lam * Eps[0];
-        Sig12 = lam * Eps[0] + lam * Eps[1] + 2.0 * mue * Eps[2];
+        //
+        // //      compute small strain tensor hookes law
+        // double Sig11, Sig22, Sig12;
+        // Sig11 = (lam+2.0*mue)*Eps[0] + lam*Eps[1];
+        // Sig22 = (lam+2.0*mue)*Eps[1] + lam * Eps[0];
+        // Sig12 = lam * Eps[0] + lam * Eps[1] + 2.0 * mue * Eps[2];
+        // // ace mate test
+        // double AceSig11, AceSig22, AceSig12;
+        // double bvec[2] = {Emod, nu};
+        // double aceout[16] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+        // SmallStrainHookePlaneStress2D(bvec, Eps, aceout);
+        // Sig11 = aceout[0];
+        // Sig22 = aceout[1];
+        // Sig12 = aceout[3];
+        // if(step % PostFrequency == 100000){
+        //   std::cout << " -------- " << std::endl;
+        //   std::cout << " " << Sig11 << ", " << Sig22 << ", " << Sig12 << std::endl;
+        //   SmallStrainHookePlaneStrain2D(bvec, Eps, aceout);
+        //   std::cout << " " << aceout[0] << ", " << aceout[1] << ", " << aceout[3] << std::endl;
+        //   //std::cout << "- End Time Integration" << std::endl;
+        //   std::cout << " -------- " << std::endl;
+        // }
+        // Call Material Class
+        double *SigMate;
+        double defgrad[9]; //F = [F11,  F12,  F13,  F21,  F22,  F23,  F31,  F32,  F33]
+        defgrad[0] = F[0];
+        defgrad[1] = F[1];
+        defgrad[3] = F[2];
+        defgrad[4] = F[3];
+        SigMate = Steel.getStresses(defgrad); //Sig = [Sig11,  Sig12,  Sig13,  Sig21,  Sig22,  Sig23,  Sig31,  Sig32,  Sig33]
         //      update stress and deformation onto particle
         Pt.Deformation[0] = F[0];
         Pt.Deformation[1] = F[1];
         Pt.Deformation[2] = F[2];
         Pt.Deformation[3] = F[3];
-        Pt.Stress[0] = Sig11;
-        Pt.Stress[1] = Sig22;
-        Pt.Stress[2] = Sig12;
+        Pt.Stress[0] = SigMate[0]; // Sig11
+        Pt.Stress[1] = SigMate[4]; // Sig22
+        Pt.Stress[2] = SigMate[1]; // Sig12
 
       }
     }
