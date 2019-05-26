@@ -1,6 +1,6 @@
 /*************************************************************
 * AceGen    6.923 MacOSX (19 Apr 19)                         *
-*           Co. J. Korelc  2013           24 May 19 09:27:47 *
+*           Co. J. Korelc  2013           26 May 19 09:27:43 *
 **************************************************************
 User     : Full professional version
 Notebook : mate_planestrain_linearelasticity_ctest
@@ -8,13 +8,13 @@ Evaluation time                 : 0 s     Mode  : Optimal
 Number of formulae              : 6       Method: Automatic
 Subroutine                      : mate01 size: 205
 Total size of Mathematica  code : 205 subexpressions
-Total size of C code            : 558 bytes */
+Total size of C code            : 553 bytes */
 #include "sms.h"
 
 /******************* S U B R O U T I N E *********************/
-void mate01(double v[138],double MaterialData[2],double Eps[3]
-     ,double Exp[16])
+void mate01(double MaterialData[2],double Eps[3],double Exp[16])
 {
+double v[138];
 v[28]=MaterialData[0]/(1e0+MaterialData[1]);
 v[12]=(MaterialData[1]*v[28])/(1e0-2e0*MaterialData[1]);
 v[20]=(Eps[0]+Eps[2])*v[12];

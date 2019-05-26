@@ -274,7 +274,7 @@ int main()
   return 0;
 }
 
-bool PointInQ4(double X1[3], double X2[3], double X3[3], double X4[3], double XP[3]){
+inline bool PointInQ4(double X1[3], double X2[3], double X3[3], double X4[3], double XP[3]){
   bool DetailedOutput = false;
   if (DetailedOutput){
   std::cout << "Test X1: " << X1[0] << " ," << X1[1] << " ," << X1[2] << std::endl;

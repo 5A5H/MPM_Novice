@@ -95,28 +95,28 @@ void MPMSHPQ4::evaluate(double X1[3], double X2[3], double X3[3], double X4[3], 
 }
 
 // Shape Function For Node 1 Evaluated at XP
-double MPMSHPQ4::SHPN1(double X1[3], double X2[3], double X3[3], double X4[3], double XP[3]){
+inline double MPMSHPQ4::SHPN1(double X1[3], double X2[3], double X3[3], double X4[3], double XP[3]){
   return (X2[0]*(-(XP[0]*(X3[1] - X4[1])*(X2[1] - XP[1])) + X4[0]*(X2[1] - X4[1])*(X3[1] - XP[1]) - X3[0]*(X2[1] - X3[1])*(X4[1] - XP[1])) -
      X3[0]*X4[0]*(X3[1] - X4[1])*(X2[1] - XP[1]) + X3[0]*XP[0]*(X2[1] - X4[1])*(X3[1] - XP[1]) - X4[0]*XP[0]*(X2[1] - X3[1])*(X4[1] - XP[1]))/
    (X1[0]*(X4[0]*(X2[1] - X3[1])*(X1[1] - X4[1]) - X3[0]*(X1[1] - X3[1])*(X2[1] - X4[1]) + X2[0]*(X1[1] - X2[1])*(X3[1] - X4[1])) +
      X2[0]*X3[0]*(X2[1] - X3[1])*(X1[1] - X4[1]) - X2[0]*X4[0]*(X1[1] - X3[1])*(X2[1] - X4[1]) + X3[0]*X4[0]*(X1[1] - X2[1])*(X3[1] - X4[1]));
 }
 // Shape Function For Node 1 Evaluated at XP
-double MPMSHPQ4::SHPN2(double X1[3], double X2[3], double X3[3], double X4[3], double XP[3]){
+inline double MPMSHPQ4::SHPN2(double X1[3], double X2[3], double X3[3], double X4[3], double XP[3]){
   return (X1[0]*(XP[0]*(X3[1] - X4[1])*(X1[1] - XP[1]) - X4[0]*(X1[1] - X4[1])*(X3[1] - XP[1]) + X3[0]*(X1[1] - X3[1])*(X4[1] - XP[1])) +
      X3[0]*X4[0]*(X3[1] - X4[1])*(X1[1] - XP[1]) - X3[0]*XP[0]*(X1[1] - X4[1])*(X3[1] - XP[1]) + X4[0]*XP[0]*(X1[1] - X3[1])*(X4[1] - XP[1]))/
    (X1[0]*(X4[0]*(X2[1] - X3[1])*(X1[1] - X4[1]) - X3[0]*(X1[1] - X3[1])*(X2[1] - X4[1]) + X2[0]*(X1[1] - X2[1])*(X3[1] - X4[1])) +
      X2[0]*X3[0]*(X2[1] - X3[1])*(X1[1] - X4[1]) - X2[0]*X4[0]*(X1[1] - X3[1])*(X2[1] - X4[1]) + X3[0]*X4[0]*(X1[1] - X2[1])*(X3[1] - X4[1]));
 }
 // Shape Function For Node 1 Evaluated at XP
-double MPMSHPQ4::SHPN3(double X1[3], double X2[3], double X3[3], double X4[3], double XP[3]){
+inline double MPMSHPQ4::SHPN3(double X1[3], double X2[3], double X3[3], double X4[3], double XP[3]){
   return (X1[0]*(-(XP[0]*(X2[1] - X4[1])*(X1[1] - XP[1])) + X4[0]*(X1[1] - X4[1])*(X2[1] - XP[1]) - X2[0]*(X1[1] - X2[1])*(X4[1] - XP[1])) -
      X2[0]*X4[0]*(X2[1] - X4[1])*(X1[1] - XP[1]) + X2[0]*XP[0]*(X1[1] - X4[1])*(X2[1] - XP[1]) - X4[0]*XP[0]*(X1[1] - X2[1])*(X4[1] - XP[1]))/
    (X1[0]*(X4[0]*(X2[1] - X3[1])*(X1[1] - X4[1]) - X3[0]*(X1[1] - X3[1])*(X2[1] - X4[1]) + X2[0]*(X1[1] - X2[1])*(X3[1] - X4[1])) +
      X2[0]*X3[0]*(X2[1] - X3[1])*(X1[1] - X4[1]) - X2[0]*X4[0]*(X1[1] - X3[1])*(X2[1] - X4[1]) + X3[0]*X4[0]*(X1[1] - X2[1])*(X3[1] - X4[1]));
 }
 // Shape Function For Node 1 Evaluated at XP
-double MPMSHPQ4::SHPN4(double X1[3], double X2[3], double X3[3], double X4[3], double XP[3]){
+inline double MPMSHPQ4::SHPN4(double X1[3], double X2[3], double X3[3], double X4[3], double XP[3]){
   return (X1[0]*(XP[0]*(X2[1] - X3[1])*(X1[1] - XP[1]) - X3[0]*(X1[1] - X3[1])*(X2[1] - XP[1]) + X2[0]*(X1[1] - X2[1])*(X3[1] - XP[1])) +
      X2[0]*X3[0]*(X2[1] - X3[1])*(X1[1] - XP[1]) - X2[0]*XP[0]*(X1[1] - X3[1])*(X2[1] - XP[1]) + X3[0]*XP[0]*(X1[1] - X2[1])*(X3[1] - XP[1]))/
    (X1[0]*(X4[0]*(X2[1] - X3[1])*(X1[1] - X4[1]) - X3[0]*(X1[1] - X3[1])*(X2[1] - X4[1]) + X2[0]*(X1[1] - X2[1])*(X3[1] - X4[1])) +
@@ -124,28 +124,28 @@ double MPMSHPQ4::SHPN4(double X1[3], double X2[3], double X3[3], double X4[3], d
 }
 
 // Derived Shape Functions
-double MPMSHPQ4::dSHPN1dX(double X1[3], double X2[3], double X3[3], double X4[3], double XP[3]){
+inline double MPMSHPQ4::dSHPN1dX(double X1[3], double X2[3], double X3[3], double X4[3], double XP[3]){
   return (-(X2[0]*(X3[1] - X4[1])*(X2[1] - XP[1])) + X3[0]*(X2[1] - X4[1])*(X3[1] - XP[1]) - X4[0]*(X2[1] - X3[1])*(X4[1] - XP[1]))/(X1[0]*(X4[0]*(X2[1] - X3[1])*(X1[1] - X4[1]) - X3[0]*(X1[1] - X3[1])*(X2[1] - X4[1]) + X2[0]*(X1[1] - X2[1])*(X3[1] - X4[1])) + X2[0]*X3[0]*(X2[1] - X3[1])*(X1[1] - X4[1]) - X2[0]*X4[0]*(X1[1] - X3[1])*(X2[1] - X4[1]) + X3[0]*X4[0]*(X1[1] - X2[1])*(X3[1] - X4[1]));
 }
-double MPMSHPQ4::dSHPN2dX(double X1[3], double X2[3], double X3[3], double X4[3], double XP[3]){
+inline double MPMSHPQ4::dSHPN2dX(double X1[3], double X2[3], double X3[3], double X4[3], double XP[3]){
   return (X1[0]*(X3[1] - X4[1])*(X1[1] - XP[1]) - X3[0]*(X1[1] - X4[1])*(X3[1] - XP[1]) + X4[0]*(X1[1] - X3[1])*(X4[1] - XP[1]))/(X1[0]*(X4[0]*(X2[1] - X3[1])*(X1[1] - X4[1]) - X3[0]*(X1[1] - X3[1])*(X2[1] - X4[1]) + X2[0]*(X1[1] - X2[1])*(X3[1] - X4[1])) + X2[0]*X3[0]*(X2[1] - X3[1])*(X1[1] - X4[1]) - X2[0]*X4[0]*(X1[1] - X3[1])*(X2[1] - X4[1]) + X3[0]*X4[0]*(X1[1] - X2[1])*(X3[1] - X4[1]));
 }
-double MPMSHPQ4::dSHPN3dX(double X1[3], double X2[3], double X3[3], double X4[3], double XP[3]){
+inline double MPMSHPQ4::dSHPN3dX(double X1[3], double X2[3], double X3[3], double X4[3], double XP[3]){
   return (-(X1[0]*(X2[1] - X4[1])*(X1[1] - XP[1])) + X2[0]*(X1[1] - X4[1])*(X2[1] - XP[1]) - X4[0]*(X1[1] - X2[1])*(X4[1] - XP[1]))/(X1[0]*(X4[0]*(X2[1] - X3[1])*(X1[1] - X4[1]) - X3[0]*(X1[1] - X3[1])*(X2[1] - X4[1]) + X2[0]*(X1[1] - X2[1])*(X3[1] - X4[1])) + X2[0]*X3[0]*(X2[1] - X3[1])*(X1[1] - X4[1]) - X2[0]*X4[0]*(X1[1] - X3[1])*(X2[1] - X4[1]) + X3[0]*X4[0]*(X1[1] - X2[1])*(X3[1] - X4[1]));
 }
-double MPMSHPQ4::dSHPN4dX(double X1[3], double X2[3], double X3[3], double X4[3], double XP[3]){
+inline double MPMSHPQ4::dSHPN4dX(double X1[3], double X2[3], double X3[3], double X4[3], double XP[3]){
   return (X1[0]*(X2[1] - X3[1])*(X1[1] - XP[1]) - X2[0]*(X1[1] - X3[1])*(X2[1] - XP[1]) + X3[0]*(X1[1] - X2[1])*(X3[1] - XP[1]))/(X1[0]*(X4[0]*(X2[1] - X3[1])*(X1[1] - X4[1]) - X3[0]*(X1[1] - X3[1])*(X2[1] - X4[1]) + X2[0]*(X1[1] - X2[1])*(X3[1] - X4[1])) + X2[0]*X3[0]*(X2[1] - X3[1])*(X1[1] - X4[1]) - X2[0]*X4[0]*(X1[1] - X3[1])*(X2[1] - X4[1]) + X3[0]*X4[0]*(X1[1] - X2[1])*(X3[1] - X4[1]));
 }
-double MPMSHPQ4::dSHPN1dY(double X1[3], double X2[3], double X3[3], double X4[3], double XP[3]){
+inline double MPMSHPQ4::dSHPN1dY(double X1[3], double X2[3], double X3[3], double X4[3], double XP[3]){
   return (X4[0]*XP[0]*(X2[1] - X3[1]) + X2[0]*(X3[0]*(X2[1] - X3[1]) - X4[0]*(X2[1] - X4[1]) + XP[0]*(X3[1] - X4[1])) - X3[0]*XP[0]*(X2[1] - X4[1]) + X3[0]*X4[0]*(X3[1] - X4[1]))/(X1[0]*(X4[0]*(X2[1] - X3[1])*(X1[1] - X4[1]) - X3[0]*(X1[1] - X3[1])*(X2[1] - X4[1]) + X2[0]*(X1[1] - X2[1])*(X3[1] - X4[1])) + X2[0]*X3[0]*(X2[1] - X3[1])*(X1[1] - X4[1]) - X2[0]*X4[0]*(X1[1] - X3[1])*(X2[1] - X4[1]) + X3[0]*X4[0]*(X1[1] - X2[1])*(X3[1] - X4[1]));
 }
-double MPMSHPQ4::dSHPN2dY(double X1[3], double X2[3], double X3[3], double X4[3], double XP[3]){
+inline double MPMSHPQ4::dSHPN2dY(double X1[3], double X2[3], double X3[3], double X4[3], double XP[3]){
   return (-(X4[0]*XP[0]*(X1[1] - X3[1])) + X1[0]*(-(X3[0]*(X1[1] - X3[1])) + X4[0]*(X1[1] - X4[1]) - XP[0]*(X3[1] - X4[1])) + X3[0]*XP[0]*(X1[1] - X4[1]) - X3[0]*X4[0]*(X3[1] - X4[1]))/(X1[0]*(X4[0]*(X2[1] - X3[1])*(X1[1] - X4[1]) - X3[0]*(X1[1] - X3[1])*(X2[1] - X4[1]) + X2[0]*(X1[1] - X2[1])*(X3[1] - X4[1])) + X2[0]*X3[0]*(X2[1] - X3[1])*(X1[1] - X4[1]) - X2[0]*X4[0]*(X1[1] - X3[1])*(X2[1] - X4[1]) + X3[0]*X4[0]*(X1[1] - X2[1])*(X3[1] - X4[1]));
 }
-double MPMSHPQ4::dSHPN3dY(double X1[3], double X2[3], double X3[3], double X4[3], double XP[3]){
+inline double MPMSHPQ4::dSHPN3dY(double X1[3], double X2[3], double X3[3], double X4[3], double XP[3]){
   return (X4[0]*XP[0]*(X1[1] - X2[1]) + X1[0]*(X2[0]*(X1[1] - X2[1]) - X4[0]*(X1[1] - X4[1]) + XP[0]*(X2[1] - X4[1])) - X2[0]*XP[0]*(X1[1] - X4[1]) + X2[0]*X4[0]*(X2[1] - X4[1]))/(X1[0]*(X4[0]*(X2[1] - X3[1])*(X1[1] - X4[1]) - X3[0]*(X1[1] - X3[1])*(X2[1] - X4[1]) + X2[0]*(X1[1] - X2[1])*(X3[1] - X4[1])) + X2[0]*X3[0]*(X2[1] - X3[1])*(X1[1] - X4[1]) - X2[0]*X4[0]*(X1[1] - X3[1])*(X2[1] - X4[1]) + X3[0]*X4[0]*(X1[1] - X2[1])*(X3[1] - X4[1]));
 }
-double MPMSHPQ4::dSHPN4dY(double X1[3], double X2[3], double X3[3], double X4[3], double XP[3]){
+inline double MPMSHPQ4::dSHPN4dY(double X1[3], double X2[3], double X3[3], double X4[3], double XP[3]){
   return (-(X3[0]*XP[0]*(X1[1] - X2[1])) + X1[0]*(-(X2[0]*(X1[1] - X2[1])) + X3[0]*(X1[1] - X3[1]) - XP[0]*(X2[1] - X3[1])) + X2[0]*XP[0]*(X1[1] - X3[1]) - X2[0]*X3[0]*(X2[1] - X3[1]))/(X1[0]*(X4[0]*(X2[1] - X3[1])*(X1[1] - X4[1]) - X3[0]*(X1[1] - X3[1])*(X2[1] - X4[1]) + X2[0]*(X1[1] - X2[1])*(X3[1] - X4[1])) + X2[0]*X3[0]*(X2[1] - X3[1])*(X1[1] - X4[1]) - X2[0]*X4[0]*(X1[1] - X3[1])*(X2[1] - X4[1]) + X3[0]*X4[0]*(X1[1] - X2[1])*(X3[1] - X4[1]));
 }
 
