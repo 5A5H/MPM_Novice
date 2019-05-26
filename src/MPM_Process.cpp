@@ -1,4 +1,4 @@
-#include <MPMProcess.hpp>
+#include <MPM_Process.hpp>
 #include <iostream>
 
 // Constructor of the MPMProcess

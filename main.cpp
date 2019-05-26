@@ -1,7 +1,7 @@
 // 2D Material Point Method
 
-#include <MPMProcess.hpp>
-#include <MPMOutputVTK.hpp>
+#include <MPM_Process.hpp>
+#include <MPM_OutputVTK.hpp>
 #include <MPM_Particle.hpp>
 #include <MPM_GridNode.hpp>
 #include <MPM_TimeTracker.hpp>
@@ -9,7 +9,7 @@
 #include <MPM_SHPQ4.hpp>
 #include <MPM_Read.hpp>
 #include <MPM_Material.hpp>
-#include <AceMaterials.hpp>
+#include <MPM_AceMaterials.hpp>
 
 #include <math.h>
 

@@ -1,4 +1,11 @@
 # Notes on CMake
+
+## Recources:
+https://crascit.com/2016/01/31/enhanced-source-file-handling-with-target_sources/
+
+
+
+## Stuff
 an old version of cmake for this project
 ```
 cmake_minimum_required(VERSION 3.10)
