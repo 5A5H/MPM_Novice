@@ -4,6 +4,7 @@
 #include <MPM_OutputVTK.hpp>
 #include <MPM_Particle.hpp>
 #include <MPM_GridNode.hpp>
+#include <MPM_GridNodeBC.hpp>
 #include <MPM_TimeTracker.hpp>
 #include <MPM_GridElement.hpp>
 #include <MPM_SHPQ4.hpp>
@@ -46,7 +47,7 @@ int main()
     double MassTolerance = 10e-6;
 
     double t0 = 0.0;
-    double tmax = 3.5;
+    double tmax = 6.5;
     double dt = 0.001;
     double rho  = 1000;
     int step = 1;
@@ -62,7 +63,7 @@ int main()
 
 //------------------------------------------ Material declaration -----------------------------------------------------
     MPMMaterial Steel(3);
-    double Emod = 1000;
+    double Emod = 4*1000;
     double nu   = 0.3;
     Steel.SetMaterialParameter(Emod);
     Steel.SetMaterialParameter(nu);
@@ -107,7 +108,10 @@ int main()
     std::cout << "Number of Grid Elements: " << GridElement.size() << std::endl;
     MPMTimings.SetTime("Read End");
 
-    //Set Particle Mass [and BC experimental]
+    //Set Particle Mass [and Partical initial condition experimental]
+    MPMGridNodeBC MyFirstGridNodeBC;
+    MyFirstGridNodeBC.setBC("EssentialBC","V",0);
+
     std::cout << "- Set Initial conditions" << std::endl;
     for (auto &Pt : Particle) {
        Pt.Mass = rho*Pt.Vol;
@@ -117,6 +121,12 @@ int main()
          Pt.V[0] = -0.1; Pt.V[1] = -0.1; Pt.V[2] = 0.0;
        }
      }
+     // Search and add nodes for bc
+     for (auto &Node : GridNode) {
+        if (Node.X[0]==0 || Node.X[0]==1 || Node.X[1]==0 || Node.X[1]==1) {
+          MyFirstGridNodeBC.addGridNode(Node.ID);
+        }
+      }
 //---------------------------------------------------------------------------------------------------------------------
 // Check Materials
      for (auto &Mat : Material) {
@@ -219,6 +229,9 @@ int main()
       }
     }
 
+    // Apply Boundary Conditions
+    if (t>3.0) MyFirstGridNodeBC.applyBC(GridNode);
+
     // MPM Project Grid to Particle
     for (auto &Pt : Particle) {
        //Element where the particle maps to
@@ -269,29 +282,6 @@ int main()
         F[1] = Fn[1]*(1.0+Lp[0]*dt)+dt*Fn[3]*Lp[1];
         F[2] = Fn[2]*(1.0+Lp[3]*dt)+dt*Fn[0]*Lp[2];
         F[3] = Fn[3]*(1.0+Lp[3]*dt)+dt*Fn[1]*Lp[2];
-        //      compute small strain tensor
-        //
-        // //      compute small strain tensor hookes law
-        // double Sig11, Sig22, Sig12;
-        // Sig11 = (lam+2.0*mue)*Eps[0] + lam*Eps[1];
-        // Sig22 = (lam+2.0*mue)*Eps[1] + lam * Eps[0];
-        // Sig12 = lam * Eps[0] + lam * Eps[1] + 2.0 * mue * Eps[2];
-        // // ace mate test
-        // double AceSig11, AceSig22, AceSig12;
-        // double bvec[2] = {Emod, nu};
-        // double aceout[16] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
-        // SmallStrainHookePlaneStress2D(bvec, Eps, aceout);
-        // Sig11 = aceout[0];
-        // Sig22 = aceout[1];
-        // Sig12 = aceout[3];
-        // if(step % PostFrequency == 100000){
-        //   std::cout << " -------- " << std::endl;
-        //   std::cout << " " << Sig11 << ", " << Sig22 << ", " << Sig12 << std::endl;
-        //   SmallStrainHookePlaneStrain2D(bvec, Eps, aceout);
-        //   std::cout << " " << aceout[0] << ", " << aceout[1] << ", " << aceout[3] << std::endl;
-        //   //std::cout << "- End Time Integration" << std::endl;
-        //   std::cout << " -------- " << std::endl;
-        // }
         // Call Material Class
         double *SigMate;
         double defgrad[9]; //F = [F11,  F12,  F13,  F21,  F22,  F23,  F31,  F32,  F33]
