@@ -1,3 +1,6 @@
+#ifndef _MPM_GRID_NODE_
+#define _MPM_GRID_NODE_
+
 class MPMGridNode {
   public:
       MPMGridNode();                              // The GridNode Class Constructor
@@ -17,3 +20,5 @@ class MPMGridNode {
 
   private:
 };
+
+#endif

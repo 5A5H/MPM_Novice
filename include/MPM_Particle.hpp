@@ -1,3 +1,6 @@
+#ifndef _MPM_PARTICLE_
+#define _MPM_PARTICLE_
+
 class MPMParticle {
   public:
       MPMParticle();                              // The Particle Class Constructor
@@ -18,3 +21,5 @@ class MPMParticle {
 
   private:
 };
+
+#endif

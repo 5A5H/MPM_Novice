@@ -1,3 +1,6 @@
+#ifndef _MPM_GRID_ELEMENT_
+#define _MPM_GRID_ELEMENT_
+
 class MPMGridElement {
   public:
       MPMGridElement();
@@ -13,3 +16,5 @@ class MPMGridElement {
 
   private:
 };
+
+#endif

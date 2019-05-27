@@ -21,12 +21,7 @@
 
 
 //declare function
-void TestVTUParticleExport(std::string FileName, std::vector<MPMParticle> &OutParticleContainer);
-void TestVTUGridExport(
-  std::string FileName,
-  std::vector<MPMGridNode> &OutNodeContainer,
-  std::vector<MPMGridElement> &OutElementContainer
-);
+
 bool PointInQ4(double X1[3], double X2[3], double X3[3], double X4[3], double XP[3]);
 
 //----------------------------------- Global Variables ----------------------------------------------------------------
@@ -63,7 +58,7 @@ int main()
 
 //------------------------------------------ Material declaration -----------------------------------------------------
     MPMMaterial Steel(3);
-    double Emod = 4*1000;
+    double Emod = 1000;
     double nu   = 0.3;
     Steel.SetMaterialParameter(Emod);
     Steel.SetMaterialParameter(nu);
@@ -312,8 +307,8 @@ int main()
       std::cout << "   Progress : " << std::setprecision(3) << std::setw(4) << std::left << (t/tmax)*100 << " % \r" << std::flush;
       // Paraview Output
       if (ParaviewOutput){
-      TestVTUGridExport(GridOutputFile + "_" + std::to_string(step) + ".vtu",GridNode,GridElement);
-      TestVTUParticleExport(ParticleOutputFile + "_" + std::to_string(step) + ".vtu",Particle);
+      //TestVTUGridExport(GridOutputFile + "_" + std::to_string(step) + ".vtu",GridNode,GridElement);
+      //TestVTUParticleExport(ParticleOutputFile + "_" + std::to_string(step) + ".vtu",Particle);
       }
     }
 
@@ -401,205 +396,7 @@ inline bool PointInQ4(double X1[3], double X2[3], double X3[3], double X4[3], do
   return XPInside;
 }
 
-void TestVTUParticleExport(std::string FileName, std::vector<MPMParticle> &OutParticleContainer){
 
-
-  //collecting information
-  //piece information
-  int NumberOfParticles  = OutParticleContainer.size();
-
-
-  //open a file stream for output
-  std::ofstream OutputFile;
-  OutputFile.open(FileName, std::ios::out);
-  // Write headder
-  OutputFile << "<?xml version=\"1.0\" ?>" << std::endl;
-  OutputFile << "<VTKFile byte_order=\"LittleEndian\" type=\"UnstructuredGrid\" version=\"0.1\">" << std::endl;
-  OutputFile << "<UnstructuredGrid>" << std::endl;
-
-  // Piece 1 -> Particle
-  // Write Piece Headder
-  OutputFile << "<Piece NumberOfCells=\"" << NumberOfParticles << "\" NumberOfPoints=\"" << NumberOfParticles << "\">" << std::endl;
-  // Write Points
-  OutputFile << "<Points>" << std::endl;
-
-  OutputFile << "<DataArray NumberOfComponents=\"3\" format=\"ascii\" type=\"Float32\">";
-  for(int i = 0; i < NumberOfParticles; i++){
-    OutputFile << "  " << OutParticleContainer[i].X[0] ;
-    OutputFile << "  " << OutParticleContainer[i].X[1] ;
-    OutputFile << "  " << OutParticleContainer[i].X[2] ;
-  }
-  OutputFile << "</DataArray>" << std::endl;
-
-  OutputFile << "</Points>" << std::endl;
-  // Write Cells
-  OutputFile << "<Cells>" << std::endl;
-
-  OutputFile << "<DataArray Name=\"connectivity\" format=\"ascii\" type=\"Int32\">";
-  for(int i = 0; i < NumberOfParticles; i++){
-    OutputFile << "  " << i ;
-  }
-  OutputFile << "</DataArray>" << std::endl;
-
-  OutputFile << "<DataArray Name=\"offsets\" format=\"ascii\" type=\"Int32\">";
-  for(int i = 0; i < NumberOfParticles; i++) OutputFile << "  " << (i+1)*1;
-  OutputFile << "</DataArray>" << std::endl;
-
-
-  OutputFile << "<DataArray Name=\"types\" format=\"ascii\" type=\"UInt8\">";
-  for(int i = 0; i < NumberOfParticles; i++) OutputFile << "  " << 1;
-  OutputFile << "</DataArray>" << std::endl;
-
-  //OutputFile << "<DataArray Name=\"connectivity\" format=\"ascii\" type=\"Int32\">0</DataArray>" << std::endl;
-  //OutputFile << "<DataArray Name=\"offsets\" format=\"ascii\" type=\"Int32\">0</DataArray>" << std::endl;
-  //OutputFile << "<DataArray Name=\"types\" format=\"ascii\" type=\"UInt8\">1</DataArray>" << std::endl;
-
-  OutputFile << "</Cells>" << std::endl;
-  // Write Point Data
-  OutputFile << "<PointData>" << std::endl;
-    // Write Particle Volume
-    OutputFile << "<DataArray Name=\"Volume\" NumberOfComponents=\"1\" format=\"ascii\" type=\"Float32\">";
-    for(int i = 0; i < NumberOfParticles; i++){
-      OutputFile << "  " << OutParticleContainer[i].Vol ;
-    }
-    OutputFile << "</DataArray>" << std::endl;
-    // Write Particle Mass
-    OutputFile << "<DataArray Name=\"Mass\" NumberOfComponents=\"1\" format=\"ascii\" type=\"Float32\">";
-    for (auto &Particle : OutParticleContainer) {
-      OutputFile << "  " << Particle.Mass;
-    }
-    OutputFile << "</DataArray>" << std::endl;
-
-    // Write Particle Velocity
-    OutputFile << "<DataArray Name=\"Velocity\" NumberOfComponents=\"3\" format=\"ascii\" type=\"Float32\">";
-    for(int i = 0; i < NumberOfParticles; i++){
-      OutputFile << "  " << OutParticleContainer[i].V[0] ;
-      OutputFile << "  " << OutParticleContainer[i].V[1] ;
-      OutputFile << "  " << OutParticleContainer[i].V[2] ;
-    }
-    OutputFile << "</DataArray>" << std::endl;
-  OutputFile << "</PointData>" << std::endl;
-  // Write Cell Data
-  OutputFile << "<CellData/>" << std::endl;
-  // Write Piece foot
-  OutputFile << "</Piece>" << std::endl;
-
-  // Write foot
-  OutputFile << "</UnstructuredGrid>" << std::endl;
-  OutputFile << "</VTKFile>" << std::endl;
-  //close the file stram
-  OutputFile.close();
-}
-
-void TestVTUGridExport(
-  std::string FileName,
-  std::vector<MPMGridNode> &OutNodeContainer,
-  std::vector<MPMGridElement> &OutElementContainer){
-    {
-
-
-      //collecting information
-      //piece information
-      int NumberOfNodes   =   OutNodeContainer.size();
-      int NumberOfCells   =   OutElementContainer.size();
-
-
-      //open a file stream for output
-      std::ofstream OutputFile;
-      OutputFile.open(FileName, std::ios::out);
-      // Write headder
-      OutputFile << "<?xml version=\"1.0\" ?>" << std::endl;
-      OutputFile << "<VTKFile byte_order=\"LittleEndian\" type=\"UnstructuredGrid\" version=\"0.1\">" << std::endl;
-      OutputFile << "<UnstructuredGrid>" << std::endl;
-
-      // Piece 1 -> Particle
-      // Write Piece Headder
-      OutputFile << "<Piece NumberOfCells=\"" << NumberOfCells << "\" NumberOfPoints=\"" << NumberOfNodes << "\">" << std::endl;
-      // Write Points
-      OutputFile << "<Points>" << std::endl;
-
-      OutputFile << "<DataArray NumberOfComponents=\"3\" format=\"ascii\" type=\"Float32\">";
-      for(int i = 0; i < NumberOfNodes; i++){
-        OutputFile << "  " << OutNodeContainer[i].X[0] ;
-        OutputFile << "  " << OutNodeContainer[i].X[1] ;
-        OutputFile << "  " << OutNodeContainer[i].X[2] ;
-      }
-      OutputFile << "</DataArray>" << std::endl;
-
-      OutputFile << "</Points>" << std::endl;
-      // Write Cells
-      OutputFile << "<Cells>" << std::endl;
-
-          OutputFile << "<DataArray Name=\"connectivity\" format=\"ascii\" type=\"Int32\">";
-          for(int i = 0; i < NumberOfCells; i++){
-            OutputFile << "  " << OutElementContainer[i].N1;
-            OutputFile << "  " << OutElementContainer[i].N2;
-            OutputFile << "  " << OutElementContainer[i].N3;
-            OutputFile << "  " << OutElementContainer[i].N4;
-          }
-          OutputFile << "</DataArray>" << std::endl;
-
-          OutputFile << "<DataArray Name=\"offsets\" format=\"ascii\" type=\"Int32\">";
-          for(int i = 0; i < NumberOfCells; i++) OutputFile << "  " << (i+1)*4;
-          OutputFile << "</DataArray>" << std::endl;
-
-
-          OutputFile << "<DataArray Name=\"types\" format=\"ascii\" type=\"UInt8\">";
-          for(int i = 0; i < NumberOfCells; i++) OutputFile << "  " << 9;
-          OutputFile << "</DataArray>" << std::endl;
-
-      OutputFile << "</Cells>" << std::endl;
-
-      // Write Point Data
-      OutputFile << "<PointData>" << std::endl;
-        // Write Particle Volume
-        OutputFile << "<DataArray Name=\"Mass\" NumberOfComponents=\"1\" format=\"ascii\" type=\"Float32\">";
-        for (auto &Node : OutNodeContainer) {
-          OutputFile << "  " << Node.Mass;
-        }
-        OutputFile << "</DataArray>" << std::endl;
-
-        // Write Particle Velocity
-        OutputFile << "<DataArray Name=\"V\" NumberOfComponents=\"3\" format=\"ascii\" type=\"Float32\">";
-        for(int i = 0; i < NumberOfNodes; i++){
-          OutputFile << "  " << OutNodeContainer[i].V[0] ;
-          OutputFile << "  " << OutNodeContainer[i].V[1] ;
-          OutputFile << "  " << OutNodeContainer[i].V[2] ;
-        }
-        OutputFile << "</DataArray>" << std::endl;
-
-//------ Write Nodal Momentum
-        OutputFile << "<DataArray Name=\"Momentum\" NumberOfComponents=\"3\" format=\"ascii\" type=\"Float32\">";
-        for (auto &Node : OutNodeContainer) {
-          OutputFile << "  " << Node.Momentum[0];
-          OutputFile << "  " << Node.Momentum[1];
-          OutputFile << "  " << Node.Momentum[2];
-        }
-        OutputFile << "</DataArray>" << std::endl;
-
-//------ Write Nodal Momentum
-        OutputFile << "<DataArray Name=\"InternalForce\" NumberOfComponents=\"3\" format=\"ascii\" type=\"Float32\">";
-        for (auto &Node : OutNodeContainer) {
-          OutputFile << "  " << Node.InternalForce[0];
-          OutputFile << "  " << Node.InternalForce[1];
-          OutputFile << "  " << Node.InternalForce[2];
-        }
-        OutputFile << "</DataArray>" << std::endl;
-
-
-      OutputFile << "</PointData>" << std::endl;
-      // Write Cell Data
-      OutputFile << "<CellData/>" << std::endl;
-      // Write Piece foot
-      OutputFile << "</Piece>" << std::endl;
-
-      // Write foot
-      OutputFile << "</UnstructuredGrid>" << std::endl;
-      OutputFile << "</VTKFile>" << std::endl;
-      //close the file stram
-      OutputFile.close();
-    }
-  }
 
 
 
