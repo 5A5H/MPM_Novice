@@ -5,3 +5,6 @@
 
 #ignore .vtu files
 *.vtu
+
+#ignore mac specific files
+*.DS_Store
