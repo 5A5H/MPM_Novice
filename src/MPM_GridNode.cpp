@@ -17,6 +17,9 @@ MPMGridNode::MPMGridNode(int id, double x, double y, double z){
   InternalForce[0] = 0;
   InternalForce[1] = 0;
   InternalForce[2] = 0;
+  Force[0] = 0;
+  Force[1] = 0;
+  Force[2] = 0;
   V[0] = 0;
   V[1] = 0;
   V[2] = 0;
@@ -38,6 +41,9 @@ MPMGridNode::MPMGridNode(){
   V[0] = 0;
   V[1] = 0;
   V[2] = 0;
+  Force[0] = 0;
+  Force[1] = 0;
+  Force[2] = 0;
 }
 
 // Destructor of the Particle class
@@ -70,4 +76,8 @@ void MPMGridNode::Reset(){
   V[0] = 0;
   V[1] = 0;
   V[2] = 0;
+  // Reset Grid Forces
+  Force[0] = 0;
+  Force[1] = 0;
+  Force[2] = 0;
 }

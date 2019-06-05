@@ -14,6 +14,8 @@ class MPMGridNode {
       double Mass;                                // The GridNode Mass
       double Momentum[3];
       double InternalForce[3];
+      double ExternalForce[3];
+      double Force[3];
 
       void Reset();
       void Report(void);                          // A Member Function to print out a report of this object

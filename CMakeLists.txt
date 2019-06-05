@@ -14,6 +14,7 @@ add_library(mdm2dp
     include/MPM_GridElement.hpp
     include/MPM_Read.hpp
     include/MPM_SHPQ4.hpp
+    include/MPM_HF.hpp
     ace_mate/MPM_AceMaterials.hpp
     ace_mate/sms.h
     ace_mate/SMSUtility.c
@@ -38,4 +39,14 @@ add_executable(MPM2D
   main.cpp
 )
 
+add_executable(DiscMDM2D
+  two_discs.cpp
+)
+
+add_executable(BarMDM2D
+  bar.cpp
+)
+
 target_link_libraries(MPM2D mdm2dp)
+target_link_libraries(DiscMDM2D mdm2dp)
+target_link_libraries(BarMDM2D mdm2dp)

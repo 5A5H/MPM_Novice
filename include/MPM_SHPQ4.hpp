@@ -28,6 +28,55 @@ class MPMSHPQ4 {
       double *dNdX[4] = {&dN1dX, &dN2dX, &dN3dX, &dN4dX};                       // Introduce vector structure to loop over ansatz functions ! use *() to get value
       double *dNdY[4] = {&dN1dY, &dN2dY, &dN3dY, &dN4dY};                       // Introduce vector structure to loop over ansatz functions ! use *() to get value
 
+      // SHP_i
+      double SHP(int i){
+        if (i==0) return N1;
+        if (i==1) return N2;
+        if (i==2) return N3;
+        if (i==3) return N4;
+        return 0;
+      };
+      // dSHP_i dX_j
+      double SHP(int i, int j){
+        if (i==0) {
+          if(j==0) {
+            return dN1dX;
+          }
+          if(j==1) {
+            return dN1dY;
+          }
+          return 0;
+        }
+        if (i==1) {
+          if(j==0) {
+            return dN2dX;
+          }
+          if(j==1) {
+            return dN2dY;
+          }
+          return 0;
+        }
+        if (i==2) {
+          if(j==0) {
+            return dN3dX;
+          }
+          if(j==1) {
+            return dN3dY;
+          }
+          return 0;
+        }
+        if (i==3) {
+          if(j==0) {
+            return dN4dX;
+          }
+          if(j==1) {
+            return dN4dY;
+          }
+          return 0;
+        }
+        return 0;
+      };
+
       void evaluate(double X1[3], double X2[3], double X3[3], double X4[3], double XP[3]);
       //double getMass(void);                       // A Member Function that returns the Current Mass of the Particle  MemberFunction: hass access to all data of the object
       //void Report(void);                          // A Member Function to print out a report of this object

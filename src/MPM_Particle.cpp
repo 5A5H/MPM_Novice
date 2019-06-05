@@ -20,6 +20,15 @@ MPMParticle::MPMParticle(double x, double y, double z){
   Deformation[1] = 0.0;
   Deformation[2] = 0.0;
   Deformation[3] = 1.0;
+  for (int i=0;i<3;i++){
+    for (int j=0;j<3;j++){
+      Sig[i][j] = 0e0;
+      F[i][j] = 0e0;
+      L[i][j] = 0e0;
+    }
+    F[i][i] = 1e0;
+    b[i] = 0e0;
+  }
 }
 MPMParticle::MPMParticle(){
   ID = 0;
@@ -35,6 +44,15 @@ MPMParticle::MPMParticle(){
   Deformation[1] = 0.0;
   Deformation[2] = 0.0;
   Deformation[3] = 1.0;
+  for (int i=0;i<3;i++){
+    for (int j=0;j<3;j++){
+      Sig[i][j] = 0e0;
+      F[i][j] = 0e0;
+      L[i][j] = 0e0;
+    }
+    F[i][i] = 1e0;
+    b[i] = 0e0;
+  }
 }
 MPMParticle::MPMParticle(int id, double x, double y, double z, double vol){
   ID = id;
@@ -53,6 +71,17 @@ MPMParticle::MPMParticle(int id, double x, double y, double z, double vol){
   Deformation[1] = 0.0;
   Deformation[2] = 0.0;
   Deformation[3] = 1.0;
+
+  for (int i=0;i<3;i++){
+    for (int j=0;j<3;j++){
+      Sig[i][j] = 0e0;
+      F[i][j] = 0e0;
+      L[i][j] = 0e0;
+    }
+    F[i][i] = 1e0;
+    b[i] = 0e0;
+  }
+
 }
 
 // Destructor of the Particle class

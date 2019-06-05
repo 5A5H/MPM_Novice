@@ -43,12 +43,15 @@ void MPMGridNodeBC::applyBC(std::vector<MPMGridNode> &AllNodeContainer){
   //std::cout << AffectedNodes.size() << std::endl;
   int j;
   for (j=0;j<AffectedNodes.size();j++){
-     AllNodeContainer[AffectedNodes[j]].V[0] = 0.0;
+     //AllNodeContainer[AffectedNodes[j]].V[0] = 0.0;
      AllNodeContainer[AffectedNodes[j]].V[1] = 0.0;
-     AllNodeContainer[AffectedNodes[j]].V[2] = 0.0;
-     AllNodeContainer[AffectedNodes[j]].Momentum[0] = 0.0;
+     //AllNodeContainer[AffectedNodes[j]].V[2] = 0.0;
+     //AllNodeContainer[AffectedNodes[j]].Momentum[0] = 0.0;
      AllNodeContainer[AffectedNodes[j]].Momentum[1] = 0.0;
-     AllNodeContainer[AffectedNodes[j]].Momentum[2] = 0.0;
+     //AllNodeContainer[AffectedNodes[j]].Momentum[2] = 0.0;
+     //AllNodeContainer[AffectedNodes[j]].InternalForce[0] = 0.0;
+     AllNodeContainer[AffectedNodes[j]].InternalForce[1] = 0.0;
+     //AllNodeContainer[AffectedNodes[j]].InternalForce[2] = 0.0;
      //std::cout << "set bc on node: " << AffectedNodes[j] << "   X: " << AllNodeContainer[AffectedNodes[j]].X[0] << ", " << AllNodeContainer[AffectedNodes[j]].X[1] << ", " << AllNodeContainer[AffectedNodes[j]].X[2] << std::endl;
    }
 }
