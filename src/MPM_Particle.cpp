@@ -104,6 +104,7 @@ bool MPMParticle::checkNAN(){
  }
 }
 
+
 // particle data report to prompt
 void MPMParticle::Report(void){
   std::cout << "------------------------------------\n";
@@ -113,4 +114,31 @@ void MPMParticle::Report(void){
   std::cout << "            Z :"  << std::setw(21) << X[2] << std::endl;
   std::cout << "Mass          :"  << std::setw(21) << Mass << std::endl;
   std::cout << "Volume        :"  << std::setw(21) << Vol << std::endl;
+  std::cout << "Sig11         :"  << std::setw(21) << Sig[0][0] << std::endl;
+  std::cout << "Sig12         :"  << std::setw(21) << Sig[0][1] << std::endl;
+  std::cout << "Sig13         :"  << std::setw(21) << Sig[0][2] << std::endl;
+  std::cout << "Sig21         :"  << std::setw(21) << Sig[1][0] << std::endl;
+  std::cout << "Sig22         :"  << std::setw(21) << Sig[1][1] << std::endl;
+  std::cout << "Sig23         :"  << std::setw(21) << Sig[1][2] << std::endl;
+  std::cout << "Sig31         :"  << std::setw(21) << Sig[2][0] << std::endl;
+  std::cout << "Sig32         :"  << std::setw(21) << Sig[2][1] << std::endl;
+  std::cout << "Sig33         :"  << std::setw(21) << Sig[2][2] << std::endl;
+  std::cout << "F11         :"  << std::setw(21) << F[0][0] << std::endl;
+  std::cout << "F12         :"  << std::setw(21) << F[0][1] << std::endl;
+  std::cout << "F13         :"  << std::setw(21) << F[0][2] << std::endl;
+  std::cout << "F21         :"  << std::setw(21) << F[1][0] << std::endl;
+  std::cout << "F22         :"  << std::setw(21) << F[1][1] << std::endl;
+  std::cout << "F23         :"  << std::setw(21) << F[1][2] << std::endl;
+  std::cout << "F31         :"  << std::setw(21) << F[2][0] << std::endl;
+  std::cout << "F32         :"  << std::setw(21) << F[2][1] << std::endl;
+  std::cout << "F33         :"  << std::setw(21) << F[2][2] << std::endl;
+  std::cout << "L11         :"  << std::setw(21) << L[0][0] << std::endl;
+  std::cout << "L12         :"  << std::setw(21) << L[0][1] << std::endl;
+  std::cout << "L13         :"  << std::setw(21) << L[0][2] << std::endl;
+  std::cout << "L21         :"  << std::setw(21) << L[1][0] << std::endl;
+  std::cout << "L22         :"  << std::setw(21) << L[1][1] << std::endl;
+  std::cout << "L23         :"  << std::setw(21) << L[1][2] << std::endl;
+  std::cout << "L31         :"  << std::setw(21) << L[2][0] << std::endl;
+  std::cout << "L32         :"  << std::setw(21) << L[2][1] << std::endl;
+  std::cout << "L33         :"  << std::setw(21) << L[2][2] << std::endl;
 }

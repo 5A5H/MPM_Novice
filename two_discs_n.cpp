@@ -21,19 +21,16 @@
 #include <vector>
 
 
-
 //declare function
+
 bool PointInQ4(double X1[3], double X2[3], double X3[3], double X4[3], double XP[3]);
 
 //----------------------------------- Global Variables ----------------------------------------------------------------
-std::vector<MPMParticle> Particle;
-std::vector<MPMGridNode> GridNode;
-std::vector<MPMGridElement> GridElement;
-std::vector<MPMMaterial> Material;
-double MassTolerance = 10e-6;
-
-//----------------------------------- Global Functions ----------------------------------------------------------------
-
+static std::vector<MPMParticle> Particle;
+static std::vector<MPMGridNode> GridNode;
+static std::vector<MPMGridElement> GridElement;
+static std::vector<MPMMaterial> Material;
+static double MassTolerance = 10e-6;
 
 void ParticlesToGrid(){
 // Calculate the grid nodal mass and momentum by mapping the particle mass and momemntum to the corresponding grid nodes.
@@ -155,9 +152,9 @@ for (auto &Pt : Particle){
 void GridTimeIntegration(double &dt){
   for (auto &Node : GridNode) {
     // Integrate the grid nodal momentum
-    Node.Momentum[0] += Node.InternalForce[0] * dt;
-    Node.Momentum[1] += Node.InternalForce[1] * dt;
-    Node.Momentum[2] += Node.InternalForce[2] * dt;
+    Node.Momentum[0] += Node.Force[0] * dt;
+    Node.Momentum[1] += Node.Force[1] * dt;
+    Node.Momentum[2] += Node.Force[2] * dt;
     // Calculate the grid nodal velocity
     if (Node.Mass > MassTolerance){
       Node.V[0] = Node.Momentum[0]/Node.Mass;
@@ -168,6 +165,7 @@ void GridTimeIntegration(double &dt){
       Node.V[1] = 0e0;
       Node.V[2] = 0e0;
     }
+    //Node.Report();
   }
 };
 void GridToParticle(double &dt, MPMMaterial &Mate){
@@ -195,6 +193,9 @@ void GridToParticle(double &dt, MPMMaterial &Mate){
     // Currently associated Element with this particle
     int AE = Pt.Elmt;
 
+    // Check if node is in element
+    if (AE >= 0) {
+
     // Current Element Nodes
     int n[4] = { GridElement[AE].N1, GridElement[AE].N2, GridElement[AE].N3, GridElement[AE].N4 };
 
@@ -219,6 +220,7 @@ void GridToParticle(double &dt, MPMMaterial &Mate){
 
       // Nodal Mass
       double MI = GridNode[n[I]].Mass;
+      if (false) std::cout <<"Mass :" << MI << std::endl;
 
       // Nodal Momentum
       double PI[3];
@@ -261,6 +263,8 @@ void GridToParticle(double &dt, MPMMaterial &Mate){
         }
       }
 
+    }// End nodal loop
+
       // Identity Tensor
       double Iden[3][3];
       for (int i=0;i<3;i++){
@@ -282,18 +286,20 @@ void GridToParticle(double &dt, MPMMaterial &Mate){
       }
 
 
+
       // Update Particles Stresses
       double dummyh[20];
       Mate.GetStresses(Pt.F, dummyh, Pt.Sig);
+      // for (int i=0;i<3;i++){
+      //   for (int j=0;j<3;j++){
+      //     Pt.Sig[i][j] = 0e0;
+      //   }
+      // }
 
-    }// End nodal loop
 
-
+  } // end if particle is alone in the dark ...
   }//End particle loop
 };
-
-
-
 
 //------------------------------------------ MAIN ---------------------------------------------------------------------
 int main()
@@ -303,35 +309,33 @@ int main()
     MPMTimeTracker MPMTimings;
     MPMTimings.SetTime("Program Start");
 
-    double t0 = 0.0;    double tmax = 6.3;
-    double dt = 10e-5;  double rho  = 100;
-    int step = 0;
+    double t0 = 0.0;
+    double tmax = 3.5;
+    double dt = 0.001;
+    double rho  = 1000;
+    int step = 1;
 
 //------------------------------------------- Output declaration ------------------------------------------------------
     bool ParaviewOutput = true;
-    std::string ParticleOutputFile = "/Users/sash/mpm_2d/data/Bar/Bar_Particle";
-    std::string GridOutputFile = "/Users/sash/mpm_2d/data/Bar/Bar_Grid";
+    std::string ParticleOutputFile = "/Users/sash/mpm_2d/data/out/TwoParticle_Particle";
+    std::string GridOutputFile = "/Users/sash/mpm_2d/data/out/TwoParticle_Grid";
     int PostFrequency = 200;
-    MPMOutputVTK VTK1;
-    File_CVS MyFile_V("/Users/sash/mpm_2d/data/Bar/MyCVS_V");
-    File_CVS MyFile_X("/Users/sash/mpm_2d/data/Bar/MyCVS_X");
 
 //------------------------------------------ Material declaration -----------------------------------------------------
-    MPMMaterial Steel(3);
-    double Emod = 10000;
+    MPMMaterial Steel(2);
+    double Emod = 1000;
     double nu   = 0.3;
     Steel.SetMaterialParameter(Emod);
     Steel.SetMaterialParameter(nu);
     Material.push_back(Steel);
 
 //------------------------------------------ spatial discretization ---------------------------------------------------
-    std::string InputfileParticle = "/Users/sash/mpm_2d/data/falling_bar_particle.txt";
-    std::string InputfileNodes = "/Users/sash/mpm_2d/data/falling_bar_node.txt";
-    std::string InputfileGrid = "/Users/sash/mpm_2d/data/falling_bar_element.txt";
+    std::string InputfileParticle = "/Users/sash/mpm_2d/data/two_discs_particledata.txt";
+    std::string InputfileNodes = "/Users/sash/mpm_2d/data/two_discs_node.txt";
+    std::string InputfileGrid = "/Users/sash/mpm_2d/data/two_discs_element.txt";
 
 
     //Read and Create Objects
-    {
     MPMTimings.SetTime("Read Start");
     ReadParticle(InputfileParticle, Particle);
     ReadGridNodes(InputfileNodes, GridNode);
@@ -341,23 +345,27 @@ int main()
     std::cout << "Number of Grid Nodes   : " << GridNode.size() << std::endl;
     std::cout << "Number of Grid Elements: " << GridElement.size() << std::endl;
     MPMTimings.SetTime("Read End");
-    }
 
     //Set Particle Mass [and Partical initial condition experimental]
-    MPMGridNodeBC MyFirstGridNodeBC;
-    MyFirstGridNodeBC.setBC("EssentialBC","V",0);
+    // MPMGridNodeBC MyFirstGridNodeBC;
+    // MyFirstGridNodeBC.setBC("EssentialBC","V",0);
 
     std::cout << "- Set Initial conditions" << std::endl;
     for (auto &Pt : Particle) {
        Pt.Mass = rho*Pt.Vol;
-       Pt.V[1] = -0.1;
-    }
+       Pt.Density = rho;
+       if (Pt.X[0]<0.5){
+         Pt.V[0] = 0.1; Pt.V[1] = 0.1; Pt.V[2] = 0.0;
+       } else {
+         Pt.V[0] = -0.1; Pt.V[1] = -0.1; Pt.V[2] = 0.0;
+       }
+     }
      // Search and add nodes for bc
-     for (auto &Node : GridNode) {
-        if (Node.X[0]==0 || Node.X[0]==1 || Node.X[1]==0 || Node.X[1]==1) {
-          MyFirstGridNodeBC.addGridNode(Node.ID);
-        }
-      }
+     // for (auto &Node : GridNode) {
+     //    if (Node.X[0]==0 || Node.X[0]==1 || Node.X[1]==0 || Node.X[1]==1) {
+     //      MyFirstGridNodeBC.addGridNode(Node.ID);
+     //    }
+     //  }
 //---------------------------------------------------------------------------------------------------------------------
 // Check Materials
      for (auto &Mat : Material) {
@@ -369,224 +377,15 @@ int main()
     std::vector<int> PGC;  // PGC ->  ParticleGridConnectivity; holds element connectivity {0->element2 1->element3 .. noparticles->element89}
     std::string statusbar;
     MPMTimings.SetTime("Start TimeLoop");
-    // Output initial VTK
-    if (ParaviewOutput){
-    VTK1.TestVTUGridExport(GridOutputFile + "_" + std::to_string(step) + ".vtu",GridNode,GridElement);
-    VTK1.TestVTUParticleExport(ParticleOutputFile + "_" + std::to_string(step) + ".vtu",Particle);
-    }
-    // Time Loop
-    if (false){
     for (double t=t0;t<tmax;t=t+dt){
 
-
     // Check for nan
     for (auto &Pt : Particle) {
-        if (Pt.checkNAN()) return 1;
-    }
-
-    // Reset Grid
-    for (auto &Node : GridNode) {
-       Node.Reset();
-    }
-
-    // Find initial Element Connectivity
-    //MPMTimings.SetTime("Search Start");
-    //std::cout << "Start Initial Particle-Grid connectivity search   : " << std::endl;
-    PGC.clear();
-    for (auto &Pt : Particle) {
-      PGC.push_back(-1);
-      for (auto &Elmt : GridElement) {
-         bool InsideThisElement;
-         InsideThisElement = PointInQ4( GridNode[Elmt.N1].X, GridNode[Elmt.N2].X, GridNode[Elmt.N3].X, GridNode[Elmt.N4].X, Pt.X );
-         if (InsideThisElement) {
-           PGC.back() = Elmt.ID;
-           break;
-         }
-       }
-     }
-     if (PGC.size() < Particle.size()){
-       std::cout << "warning";
-     }
-    //MPMTimings.SetTime("Search End");
-
-    // MPM Project Particle to Grid
-    MPMSHPQ4 SHP;
-    for (auto &Pt : Particle) {
-       //Element where the particle maps to
-      if (PGC[Pt.ID]>=0){ //Catch node that is not in an element
-        auto &PtElmt = GridElement[PGC[Pt.ID]];
-        // Evaluate shape function
-        SHP.evaluate(GridNode[PtElmt.N1].X, GridNode[PtElmt.N2].X, GridNode[PtElmt.N3].X, GridNode[PtElmt.N4].X, Pt.X);
-        // update nodal masses
-        GridNode[PtElmt.N1].Mass += SHP.N1 * Pt.Mass;
-        GridNode[PtElmt.N2].Mass += SHP.N2 * Pt.Mass;
-        GridNode[PtElmt.N3].Mass += SHP.N3 * Pt.Mass;
-        GridNode[PtElmt.N4].Mass += SHP.N4 * Pt.Mass;
-        // update nodal momentum
-        for (int i=0;i<3;i++) {
-        GridNode[PtElmt.N1].Momentum[i] += SHP.N1 * Pt.V[i] * Pt.Mass;
-        GridNode[PtElmt.N2].Momentum[i] += SHP.N2 * Pt.V[i] * Pt.Mass;
-        GridNode[PtElmt.N3].Momentum[i] += SHP.N3 * Pt.V[i] * Pt.Mass;
-        GridNode[PtElmt.N4].Momentum[i] += SHP.N4 * Pt.V[i] * Pt.Mass;
+        if (Pt.checkNAN()) {
+          std::cout << "Time :" << t << std::endl;
+          Pt.Report();
+          return 1;
         }
-        // update nodal internal force vector
-        double Sig11 = Pt.Stress[0];
-        double Sig22 = Pt.Stress[1];
-        double Sig12 = Pt.Stress[2];
-
-        GridNode[PtElmt.N1].InternalForce[0] -= Pt.Vol * (Sig11*SHP.dN1dX + Sig12*SHP.dN1dY);
-        GridNode[PtElmt.N1].InternalForce[1] -= Pt.Vol * (Sig12*SHP.dN1dX + Sig22*SHP.dN1dY);
-        GridNode[PtElmt.N1].InternalForce[2] -= 0.0;
-
-        GridNode[PtElmt.N2].InternalForce[0] -= Pt.Vol * (Sig11*SHP.dN2dX + Sig12*SHP.dN2dY);
-        GridNode[PtElmt.N2].InternalForce[1] -= Pt.Vol * (Sig12*SHP.dN2dX + Sig22*SHP.dN2dY);
-        GridNode[PtElmt.N2].InternalForce[2] -= 0.0;
-
-        GridNode[PtElmt.N3].InternalForce[0] -= Pt.Vol * (Sig11*SHP.dN3dX + Sig12*SHP.dN3dY);
-        GridNode[PtElmt.N3].InternalForce[1] -= Pt.Vol * (Sig12*SHP.dN3dX + Sig22*SHP.dN3dY);
-        GridNode[PtElmt.N3].InternalForce[2] -= 0.0;
-
-        GridNode[PtElmt.N4].InternalForce[0] -= Pt.Vol * (Sig11*SHP.dN4dX + Sig12*SHP.dN4dY);
-        GridNode[PtElmt.N4].InternalForce[1] -= Pt.Vol * (Sig12*SHP.dN4dX + Sig22*SHP.dN4dY);
-        GridNode[PtElmt.N4].InternalForce[2] -= 0.0;
-
-      }
-    }
-
-    // Apply BC on grid nodal mom.
-    // Time Integration
-    for (auto &Node : GridNode) {
-      if (Node.X[0]<10e-5 || Node.X[0]==1 || Node.X[1]<10e-5 || Node.X[1]==1) {
-      //Node.Momentum[0] = 0;
-      Node.Momentum[1] = 0;
-      //Node.Momentum[2] = 0;
-      //Node.InternalForce[0] = 0;
-      Node.InternalForce[1] = 0;
-      //Node.InternalForce[2] = 0;
-    }
-    }
-
-
-    // Time Integration
-    for (auto &Node : GridNode) {
-      // time integrate momentum
-      Node.Momentum[0] += Node.InternalForce[0] * dt;
-      Node.Momentum[1] += Node.InternalForce[1] * dt;
-      Node.Momentum[2] += Node.InternalForce[2] * dt;
-      // time integrate velocity
-      if (Node.Mass > MassTolerance){
-        Node.V[0] = Node.Momentum[0]/Node.Mass;
-        Node.V[1] = Node.Momentum[1]/Node.Mass;
-        Node.V[2] = Node.Momentum[2]/Node.Mass;
-      } else {
-        Node.V[0] = 0.0;
-        Node.V[1] = 0.0;
-        Node.V[2] = 0.0;
-      }
-    }
-
-    // Apply Boundary Conditions
-    //MyFirstGridNodeBC.applyBC(GridNode);
-
-    // MPM Project Grid to Particle
-    for (auto &Pt : Particle) {
-       //Element where the particle maps to
-      if (PGC[Pt.ID]>=0){ //Catch node that is not in an element
-        auto &PtElmt = GridElement[PGC[Pt.ID]];
-        // Evaluate shape function
-        SHP.evaluate(GridNode[PtElmt.N1].X, GridNode[PtElmt.N2].X, GridNode[PtElmt.N3].X, GridNode[PtElmt.N4].X, Pt.X);
-        // update particle velocity and momentum
-
-          if (GridNode[PtElmt.N1].Mass > MassTolerance) {
-            for (int j=0;j<3;j++){
-              Pt.V[j] += SHP.N1 * (GridNode[PtElmt.N1].InternalForce[j]/GridNode[PtElmt.N1].Mass)*dt;
-              Pt.X[j] += SHP.N1 * (GridNode[PtElmt.N1].Momentum[j]/GridNode[PtElmt.N1].Mass)*dt;
-            }
-          }
-
-          if (GridNode[PtElmt.N2].Mass > MassTolerance) {
-            for (int j=0;j<3;j++){
-              Pt.V[j] += SHP.N2 * (GridNode[PtElmt.N2].InternalForce[j]/GridNode[PtElmt.N2].Mass)*dt;
-              Pt.X[j] += SHP.N2 * (GridNode[PtElmt.N2].Momentum[j]     /GridNode[PtElmt.N2].Mass)*dt;
-            }
-          }
-
-          if (GridNode[PtElmt.N3].Mass > MassTolerance) {
-            for (int j=0;j<3;j++){
-              // !!!! EXAMPLE: double mass = .... and then use mass instead of ...
-              Pt.V[j] += SHP.N3 * (GridNode[PtElmt.N3].InternalForce[j]/GridNode[PtElmt.N3].Mass)*dt;
-              Pt.X[j] += SHP.N3 * (GridNode[PtElmt.N3].Momentum[j]     /GridNode[PtElmt.N3].Mass)*dt;
-            }
-          }
-
-          if (GridNode[PtElmt.N4].Mass > MassTolerance) {
-            for (int j=0;j<3;j++){
-              Pt.V[j] += SHP.N4 * (GridNode[PtElmt.N4].InternalForce[j]/GridNode[PtElmt.N4].Mass)*dt;
-              Pt.X[j] += SHP.N4 * (GridNode[PtElmt.N4].Momentum[j]     /GridNode[PtElmt.N4].Mass)*dt;
-            }
-          }
-
-        // update particle deformation and stresses
-        double Lp[4]; // 2D velocity gradient Lp = [ dvxdx , dvxdy ,dvydx, dvydy]
-        Lp[0] = SHP.dN1dX * GridNode[PtElmt.N1].V[0] + SHP.dN2dX * GridNode[PtElmt.N2].V[0] + SHP.dN3dX * GridNode[PtElmt.N3].V[0] + SHP.dN4dX * GridNode[PtElmt.N4].V[0];
-        Lp[1] = SHP.dN1dY * GridNode[PtElmt.N1].V[0] + SHP.dN2dY * GridNode[PtElmt.N2].V[0] + SHP.dN3dY * GridNode[PtElmt.N3].V[0] + SHP.dN4dY * GridNode[PtElmt.N4].V[0];
-        Lp[2] = SHP.dN1dX * GridNode[PtElmt.N1].V[1] + SHP.dN2dX * GridNode[PtElmt.N2].V[1] + SHP.dN3dX * GridNode[PtElmt.N3].V[1] + SHP.dN4dX * GridNode[PtElmt.N4].V[1];
-        Lp[3] = SHP.dN1dY * GridNode[PtElmt.N1].V[1] + SHP.dN2dY * GridNode[PtElmt.N2].V[1] + SHP.dN3dY * GridNode[PtElmt.N3].V[1] + SHP.dN4dY * GridNode[PtElmt.N4].V[1];
-        double Fn[4] = { Pt.Deformation[0], Pt.Deformation[1], Pt.Deformation[2], Pt.Deformation[3]}; // 2D deformation gradient Fn = [ dxxdx , dxydx ,dxxdy, dxydy]
-        //      update deformation gradient F = [ dxxdx , dxydx ,dxxdy, dxydy]
-        double F[4];
-        F[0] = Fn[0]*(1.0+Lp[0]*dt)+dt*Fn[2]*Lp[1];
-        F[1] = Fn[1]*(1.0+Lp[0]*dt)+dt*Fn[3]*Lp[1];
-        F[2] = Fn[2]*(1.0+Lp[3]*dt)+dt*Fn[0]*Lp[2];
-        F[3] = Fn[3]*(1.0+Lp[3]*dt)+dt*Fn[1]*Lp[2];
-        // Call Material Class
-        double *SigMate;
-        double defgrad[9]; //F = [F11,  F12,  F13,  F21,  F22,  F23,  F31,  F32,  F33]
-        defgrad[0] = F[0];
-        defgrad[1] = F[1];
-        defgrad[3] = F[2];
-        defgrad[4] = F[3];
-        SigMate = Steel.getStresses(defgrad); //Sig = [Sig11,  Sig12,  Sig13,  Sig21,  Sig22,  Sig23,  Sig31,  Sig32,  Sig33]
-        //      update stress and deformation onto particle
-        Pt.Deformation[0] = F[0];
-        Pt.Deformation[1] = F[1];
-        Pt.Deformation[2] = F[2];
-        Pt.Deformation[3] = F[3];
-        Pt.Stress[0] = SigMate[0]; // Sig11
-        Pt.Stress[1] = SigMate[4]; // Sig22
-        Pt.Stress[2] = SigMate[1]; // Sig12
-
-      }
-    }
-
-    // PostProcessing and Report
-    // Export smth.
-    *MyFile_V.strm() << t << " , " << Particle[0].V[0] << " , " << Particle[0].V[1] << " , " << Particle[0].V[2] << std::endl;
-    *MyFile_X.strm() << t << " , " << Particle[0].X[0] << " , " << Particle[0].X[1] << " , " << Particle[0].X[2] << std::endl;
-    // regular export
-    if(step % PostFrequency == 0){
-      // Progress Bar
-      std::cout << "   Time Integration Progress : [";
-      for (int i = 0;i<=(t/tmax)*24;i++) std::cout << "%";
-      for (int i = 0;i<=24-(t/tmax)*24;i++) std::cout << "-";
-      std::cout << "]";
-      std::cout << "   Progress : " << std::setprecision(3) << std::setw(4) << std::left << (t/tmax)*100 << " % \r" << std::flush;
-      // Paraview Output
-      if (ParaviewOutput){
-      VTK1.TestVTUGridExport(GridOutputFile + "_" + std::to_string(step) + ".vtu",GridNode,GridElement);
-      VTK1.TestVTUParticleExport(ParticleOutputFile + "_" + std::to_string(step) + ".vtu",Particle);
-      }
-    }
-
-    step++;
-    }// end time loop
-    }
-
-    //New Loop
-
-    // Check for nan
-    for (auto &Pt : Particle) {
-        if (Pt.checkNAN()) return 1;
     }
 
     // Reset Grid
@@ -596,9 +395,33 @@ int main()
 
     ParticlesToGrid();
     GridTimeIntegration(dt);
+
+
+
+    // Apply Boundary Conditions
+    //if (t>3.0) MyFirstGridNodeBC.applyBC(GridNode);
+
     GridToParticle(dt, Steel);
+    //Particle[0].Report();
 
+    // PostProcessing and Report
+    if(step % PostFrequency == 0){
+      // Progress Bar
+      std::cout << "   Time Integration Progress : [";
+      for (int i = 0;i<=(t/tmax)*24;i++) std::cout << "%";
+      for (int i = 0;i<=24-(t/tmax)*24;i++) std::cout << "-";
+      std::cout << "]";
+      std::cout << "   Progress : " << std::setprecision(3) << std::setw(4) << std::left << (t/tmax)*100 << " % \r" << std::flush;
+      // Paraview Output
+      if (ParaviewOutput){
+      MPMOutputVTK VTKExport;
+      VTKExport.TestVTUGridExport(GridOutputFile + "_" + std::to_string(step) + ".vtu",GridNode,GridElement);
+      VTKExport.TestVTUParticleExport(ParticleOutputFile + "_" + std::to_string(step) + ".vtu",Particle);
+      }
+    }
 
+    step++;
+  }// end time loop
   std::cout << std::endl;
   MPMTimings.SetTime("End TimeLoop");
   std::cout << "- End Time Integration" << std::endl;
@@ -701,13 +524,3 @@ inline bool PointInQ4(double X1[3], double X2[3], double X3[3], double X4[3], do
 // TestVTUGridExport("/Users/sash/mpm_2d/data/Grid_001.vtu",GridNode,GridElement);
 // TestVTUParticleExport("/Users/sash/mpm_2d/data/Particle_001.vtu",Particle);
 // MPMTimings.SetTime("TestVTUExport Finish");
-
-
-// find  Particle
-// double min=100;
-//     int id;
-//     for (auto &Pt : Particle) {
-//        if (Pt.X[1] > min) {id = Pt.ID;}
-//     }
-//     std::cout << id <<std::endl;
-//     Particle[id].Report();

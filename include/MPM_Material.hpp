@@ -1,3 +1,6 @@
+#ifndef _MATERIAL_HPP_
+#define _MATERIAL_HPP_
+
 #include <vector>
 #include <iostream>
 #include <MPM_AceMaterials.hpp>
@@ -17,6 +20,7 @@ class MPMMaterial {
 
       void SetMaterialParameter(double InputMaterialParameter);
       double *getStresses(double F[9]);                                       // for now only F but for future extended with optional args. e.g. time dependent
+      void GetStresses(double F[3][3], double h[20], double Sig[3][3] );
       void Report(void);                          // A Member Function to print out a report of this object
 
   private:
@@ -120,6 +124,72 @@ double *MPMMaterial::getStresses(double F[9]){                                  
   return Sig;                                                                   // Sig = [Sig11,  Sig12,  Sig13,  Sig21,  Sig22,  Sig23,  Sig31,  Sig32,  Sig33]
 }
 
+void MPMMaterial::GetStresses(double F[3][3], double h[20], double Sig[3][3] ){
+  //
+double Eps[6] = {0,0,0,0,0,0};
+double v[10];                                                                 // vector with auxillary variables (at least for default material)
+double vaux[100];                                                             // vector with auxillary variables (at least for acereturn)
+switch (ID){
+case 1:
+// Linear Elastic Default Material 2D
+if (MaterialParameter.size()!=2) {std::cout << "Warning: Material Parameter not set properly! "  << std::endl; break;}
+v[0] = MaterialParameter[0]; // Emod
+v[1] = MaterialParameter[1]; // nu
+v[2] = (v[0]*v[1]) / ( (1.0+v[1])*(1.0 - 2.0* v[1]) );  // lambda
+v[3] = v[0] / (2.0*(1.0 + v[1]));                       // mue
+Eps[0] = F[0][0]-1.0; // Eps11
+Eps[1] = F[1][1]-1.0; // Eps22
+Eps[2] = 0.5 * (F[0][1]+F[1][0]); // Eps12
+Sig[0][0] = (v[2]+2.0*v[3]) * Eps[0] + v[2] * Eps[1];  //Sig11
+Sig[1][1] = (v[2]+2.0*v[3]) * Eps[1] + v[2] * Eps[0];  //Sig22
+Sig[2][2] = v[2] * (Eps[0]+Eps[1]);                    //Sig33
+Sig[0][1] = 2.0*v[3] * Eps[2];                         //Sig12
+Sig[1][0] = 2.0*v[3] * Eps[2];                         //Sig21
+
+break;
+
+case 2:
+// Call AceGen Material Subroutine: Linear Elastic Hookes Law with Plain Strain assumption
+if (MaterialParameter.size()!=2) {std::cout << "Warning: Material Parameter not set properly! "  << std::endl; break;}
+v[0] = MaterialParameter[0]; // Emod
+v[1] = MaterialParameter[1]; // nu
+Eps[0] = F[0][0]-1.0; // Eps11
+Eps[1] = F[1][1]-1.0; // Eps22
+Eps[2] = 0.5 * (F[0][1]+F[1][0]); // Eps12
+SmallStrainHookePlaneStrain2D(v, Eps, vaux);                          // call this way possible even if matrix dimensions dont agree, as eitherway only the pointer gets passed and the subroutine does not access beyond the dimensions of the arrays
+Sig[0][0] = vaux[0];
+Sig[1][1] = vaux[1];
+Sig[0][1] = vaux[4];
+Sig[2][2] = vaux[3];
+Sig[1][0] = vaux[4];
+
+// note: this is a minmal version, a mature subroutine shall return the full stress tensor, but also gets the full deformation gradient !
+
+break;
+
+case 3:
+// Call AceGen Material Subroutine: Linear Elastic Hookes Law with Plain Strain assumption
+if (MaterialParameter.size()!=2) {std::cout << "Warning: Material Parameter not set properly! "  << std::endl; break;}
+v[0] = MaterialParameter[0]; // Emod
+v[1] = MaterialParameter[1]; // nu
+Eps[0] = F[0][0]-1.0; // Eps11
+Eps[1] = F[1][1]-1.0; // Eps22
+Eps[2] = 0.5 * (F[0][1]+F[1][0]); // Eps12
+SmallStrainHookePlaneStress2D(v, Eps, vaux);                          // call this way possible even if matrix dimensions dont agree, as eitherway only the pointer gets passed and the subroutine does not access beyond the dimensions of the arrays
+Sig[0][0] = vaux[0];
+Sig[1][1] = vaux[1];
+Sig[0][1] = vaux[4];
+Sig[2][2] = vaux[3];
+Sig[1][0] = vaux[4];
+// note: this is a minmal version, a mature subroutine shall return the full stress tensor, but also gets the full deformation gradient !
+
+break;
+
+default:
+std::cout << "Waring: Material not defined!"  << std::endl;
+}                                                                             //        Sig[0], Sig[1], Sig[2], Sig[3], Sig[4], Sig[5], Sig[6], Sig[7], Sig[8]
+}
+
 void MPMMaterial::Report(){
   std::cout << "---- Material Report ----" << std::endl;
   std::cout << "Material ID is: " << ID << std::endl;
@@ -129,3 +199,5 @@ void MPMMaterial::Report(){
   }
   std::cout << "---- Material Report ----" << std::endl;
 }
+
+#endif

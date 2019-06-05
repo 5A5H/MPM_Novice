@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.0)
+cmake_minimum_required(VERSION 3.0)
 set(CMAKE_CXX_STANDARD 11)
 
 project(MPM2DProject)
@@ -38,15 +38,19 @@ target_include_directories(
 add_executable(MPM2D
   main.cpp
 )
+target_link_libraries(MPM2D mdm2dp)
 
 add_executable(DiscMDM2D
   two_discs.cpp
 )
+target_link_libraries(DiscMDM2D mdm2dp)
+
+add_executable(DiscMDM2Dn
+  two_discs_n.cpp
+)
+target_link_libraries(DiscMDM2Dn mdm2dp)
 
 add_executable(BarMDM2D
   bar.cpp
 )
-
-target_link_libraries(MPM2D mdm2dp)
-target_link_libraries(DiscMDM2D mdm2dp)
 target_link_libraries(BarMDM2D mdm2dp)

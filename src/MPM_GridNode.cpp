@@ -59,6 +59,9 @@ void MPMGridNode::Report(void){
   std::cout << "            Z :"  << std::setw(21) << X[2] << std::endl;
   std::cout << "Mass          :"  << std::setw(21) << Mass << std::endl;
   std::cout << "Volume        :"  << std::setw(21) << Vol << std::endl;
+  std::cout << "Momentum :"  << std::setw(10) << Momentum[0] << ", " << Momentum[1] << ", " << Momentum[2] << std::endl;
+  std::cout << "Velocity :"  << std::setw(10) << V[0] << ", " << V[1] << ", " << V[2] << std::endl;
+  std::cout << "Force    :"  << std::setw(10) << Force[0] << ", " << Force[1] << ", " << Force[2] << std::endl;
 }
 
 void MPMGridNode::Reset(){

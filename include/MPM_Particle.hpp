@@ -1,6 +1,7 @@
 #ifndef _MPM_PARTICLE_
 #define _MPM_PARTICLE_
 
+
 class MPMParticle {
   public:
       MPMParticle();                              // The Particle Class Constructor
@@ -23,6 +24,7 @@ class MPMParticle {
       double F[3][3]; //deformation gradient
       double L[3][3]; //velocity gradient
       double b[3]; //body force
+      int Elmt; //current element of the particle
 
       bool checkNAN();
       double getMass(void);                       // A Member Function that returns the Current Mass of the Particle  MemberFunction: hass access to all data of the object
