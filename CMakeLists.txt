@@ -20,6 +20,8 @@ add_library(mdm2dp
     ace_mate/SMSUtility.c
     ace_mate/SmallStrainHookePlaneStrain2D.cpp
     ace_mate/SmallStrainHookePlaneStress2D.cpp
+    ace_mate/STVKPlaneStress2D.cpp
+    ace_mate/STVKPlaneStrain2D.cpp
     src/MPM_Process.cpp
     src/MPM_OutputVTK.cpp
     src/MPM_Particle.cpp

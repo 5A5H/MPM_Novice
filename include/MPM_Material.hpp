@@ -49,6 +49,22 @@ MPMMaterial::MPMMaterial(int id){
       ID=id;
       break;
 
+    case 4:
+      std::cout << "AceGen material Created"  << std::endl;
+      std::cout << " - STVK elastic Hooke's law"  << std::endl;
+      std::cout << " - plane stress assumption"  << std::endl;
+      ID=id;
+      break;
+
+    case 5:
+      std::cout << "AceGen material Created"  << std::endl;
+      std::cout << " - STVK elastic Hooke's law"  << std::endl;
+      std::cout << " - plane strain assumption"  << std::endl;
+      ID=id;
+      break;
+
+    
+
     default:
       std::cout << "Waring: Material not defined!"  << std::endl;
   }
@@ -129,6 +145,9 @@ void MPMMaterial::GetStresses(double F[3][3], double h[20], double Sig[3][3] ){
 double Eps[6] = {0,0,0,0,0,0};
 double v[10];                                                                 // vector with auxillary variables (at least for default material)
 double vaux[100];                                                             // vector with auxillary variables (at least for acereturn)
+double Fvec[9];
+double Cmat[9][9];
+double Sigvec[9];
 switch (ID){
 case 1:
 // Linear Elastic Default Material 2D
@@ -182,6 +201,42 @@ Sig[0][1] = vaux[4];
 Sig[2][2] = vaux[3];
 Sig[1][0] = vaux[4];
 // note: this is a minmal version, a mature subroutine shall return the full stress tensor, but also gets the full deformation gradient !
+
+break;
+
+case 4:
+// Call AceGen Material Subroutine: STVK Elastic Hookes Law with Plain Stress assumption
+if (MaterialParameter.size()!=2) {std::cout << "Warning: Material Parameter not set properly! "  << std::endl; break;}
+v[0] = MaterialParameter[0]; // Emod
+v[1] = MaterialParameter[1]; // nu
+// Flatten deformation gradient
+Fvec[0]=F[0][0]; Fvec[1]=F[0][1]; Fvec[2]=F[0][2];
+Fvec[3]=F[1][0]; Fvec[4]=F[1][1]; Fvec[5]=F[1][2];
+Fvec[6]=F[2][0]; Fvec[7]=F[2][1]; Fvec[8]=F[2][2];
+STVKPlaneStress2D(v ,Fvec ,Sigvec ,Cmat);
+// Transform Sigvec back to tensor notation
+Sig[0][0]=Sigvec[0];Sig[0][1]=Sigvec[1];Sig[0][2]=Sigvec[2];
+Sig[1][0]=Sigvec[3];Sig[1][1]=Sigvec[4];Sig[1][2]=Sigvec[5];
+Sig[2][0]=Sigvec[6];Sig[2][1]=Sigvec[7];Sig[2][2]=Sigvec[8];
+
+
+break;
+
+case 5:
+// Call AceGen Material Subroutine: STVK Elastic Hookes Law with Plain Strain assumption
+if (MaterialParameter.size()!=2) {std::cout << "Warning: Material Parameter not set properly! "  << std::endl; break;}
+v[0] = MaterialParameter[0]; // Emod
+v[1] = MaterialParameter[1]; // nu
+// Flatten deformation gradient
+Fvec[0]=F[0][0]; Fvec[1]=F[0][1]; Fvec[2]=F[0][2];
+Fvec[3]=F[1][0]; Fvec[4]=F[1][1]; Fvec[5]=F[1][2];
+Fvec[6]=F[2][0]; Fvec[7]=F[2][1]; Fvec[8]=F[2][2];
+STVKPlaneStrain2D(v ,Fvec ,Sigvec ,Cmat);
+// Transform Sigvec back to tensor notation
+Sig[0][0]=Sigvec[0];Sig[0][1]=Sigvec[1];Sig[0][2]=Sigvec[2];
+Sig[1][0]=Sigvec[3];Sig[1][1]=Sigvec[4];Sig[1][2]=Sigvec[5];
+Sig[2][0]=Sigvec[6];Sig[2][1]=Sigvec[7];Sig[2][2]=Sigvec[8];
+
 
 break;
 

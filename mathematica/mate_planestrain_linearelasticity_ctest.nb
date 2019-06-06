@@ -3,10 +3,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[         0,          0]
-NotebookDataLength[     46773,       1227]
-NotebookOptionsPosition[     44551,       1172]
-NotebookOutlinePosition[     44890,       1187]
-CellTagsIndexPosition[     44847,       1184]
+NotebookDataLength[    112439,       2773]
+NotebookOptionsPosition[    108619,       2690]
+NotebookOutlinePosition[    108961,       2705]
+CellTagsIndexPosition[    108918,       2702]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -333,24 +333,26 @@ Cell[BoxData[{
       RowBox[{"Eps$$", "[", "3", "]"}]}], "}"}], "]"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"\[CurlyEpsilon]33", "=", "0"}], ";", 
   RowBox[{
-   RowBox[{"-", "\[Lambda]"}], 
+   RowBox[{"\[CurlyEpsilon]33", "=", "0"}], ";", 
    RowBox[{
-    RowBox[{"(", 
-     RowBox[{
+    RowBox[{"-", "\[Lambda]"}], 
+    RowBox[{
+     RowBox[{"(", 
       RowBox[{
-      "\[CurlyEpsilon]vec", "\[LeftDoubleBracket]", "1", 
-       "\[RightDoubleBracket]"}], "+", 
-      RowBox[{
-      "\[CurlyEpsilon]vec", "\[LeftDoubleBracket]", "2", 
-       "\[RightDoubleBracket]"}]}], ")"}], "/", 
-    RowBox[{"(", 
-     RowBox[{"\[Lambda]", "+", 
-      RowBox[{"2", "\[Mu]"}]}], ")"}]}]}], ";", 
+       RowBox[{
+       "\[CurlyEpsilon]vec", "\[LeftDoubleBracket]", "1", 
+        "\[RightDoubleBracket]"}], "+", 
+       RowBox[{
+       "\[CurlyEpsilon]vec", "\[LeftDoubleBracket]", "2", 
+        "\[RightDoubleBracket]"}]}], ")"}], "/", 
+     RowBox[{"(", 
+      RowBox[{"\[Lambda]", "+", 
+       RowBox[{"2", "\[Mu]"}]}], ")"}]}]}], ";"}], 
   RowBox[{"(*", 
-   RowBox[{"0", " ", "for", " ", "plane", " ", "strain"}], "*)"}], 
-  "\[IndentingNewLine]", 
+   RowBox[{"0", " ", "for", " ", "plane", " ", "strain"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
   RowBox[{"SMSFreeze", "[", 
    RowBox[{"\[CurlyEpsilon]", ",", 
     RowBox[{"(", "\[NoBreak]", GridBox[{
@@ -917,7 +919,7 @@ Cell[BoxData[
   "During evaluation of \
 In[493]:=",ExpressionUUID->"e28674ba-0e9b-44b9-af1b-f33499755eb8"]
 }, Open  ]]
-}, Open  ]],
+}, Closed]],
 
 Cell[CellGroupData[{
 
@@ -1168,10 +1170,1526 @@ Cell[BoxData[
   "During evaluation of \
 In[479]:=",ExpressionUUID->"16313108-f1a0-4935-8a32-63230d3d9ee3"]
 }, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Material Plane Stress STVK", "Title",
+ CellChangeTimes->{{3.7678722273326683`*^9, 3.767872232631587*^9}, {
+  3.7687464402495003`*^9, 3.768746441186487*^9}, {3.7687464919864883`*^9, 
+  3.768746492835479*^9}},ExpressionUUID->"cbefa29c-0ce1-4064-a6c5-\
+a28ad2c7906d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"<<", "AceGen`"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSInitialize", "[", 
+   RowBox[{"\"\<STVKPlaneStress2D\>\"", ",", 
+    RowBox[{"\"\<Language\>\"", "\[Rule]", "\"\<C++\>\""}], ",", 
+    RowBox[{"\"\<Mode\>\"", "\[Rule]", "\"\<Optimal\>\""}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSModule", "[", 
+   RowBox[{"\"\<STVKPlaneStress2D\>\"", ",", 
+    RowBox[{"Real", "[", 
+     RowBox[{
+      RowBox[{"MaterialData$$", "[", "2", "]"}], ",", 
+      RowBox[{"F$$", "[", "9", "]"}], ",", 
+      RowBox[{"Sig$$", "[", "9", "]"}], ",", 
+      RowBox[{"Cmat$$", "[", 
+       RowBox[{"9", ",", "9"}], "]"}]}], "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"Emod", ",", "\[Nu]"}], "}"}], "\[RightTee]", 
+   RowBox[{"SMSReal", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"MaterialData$$", "[", "1", "]"}], ",", 
+      RowBox[{"MaterialData$$", "[", "2", "]"}]}], "}"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"\[Lambda]", ",", "\[Mu]"}], "}"}], "\[DoubleRightTee]", 
+   RowBox[{"SMSHookeToLame", "[", 
+    RowBox[{"Emod", ",", "\[Nu]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[DoubleStruckCapitalF]vec", "\[RightTee]", 
+   RowBox[{"SMSReal", "[", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"F$$", "[", "i", "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "9"}], "}"}]}], "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[DoubleStruckCapitalF]", "=", 
+   RowBox[{"Partition", "[", 
+    RowBox[{"\[DoubleStruckCapitalF]vec", ",", "3"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"J", "\[DoubleRightTee]", 
+   RowBox[{"SMSDet", "[", "\[DoubleStruckCapitalF]", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[DoubleStruckCapitalE]", "\[DoubleRightTee]", 
+   RowBox[{
+    RowBox[{"1", "/", "2"}], 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"\[DoubleStruckCapitalF]", "\[Transpose]"}], ".", 
+       "\[DoubleStruckCapitalF]"}], "-", 
+      RowBox[{"IdentityMatrix", "[", "3", "]"}]}], ")"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[DoubleStruckCapitalE]33", "=."}], ";", 
+  RowBox[{
+   RowBox[{"\[DoubleStruckCapitalE]", "\[LeftDoubleBracket]", 
+    RowBox[{"3", ",", "3"}], "\[RightDoubleBracket]"}], "=", 
+   "\[DoubleStruckCapitalE]33"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[DoubleStruckCapitalS]", "=", 
+   RowBox[{
+    RowBox[{"\[Lambda]", " ", 
+     RowBox[{"Tr", "[", "\[DoubleStruckCapitalE]", "]"}], " ", 
+     RowBox[{"IdentityMatrix", "[", "3", "]"}]}], "+", 
+    RowBox[{"2", " ", "\[Mu]", " ", "\[DoubleStruckCapitalE]"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"PlaneStressCondition", "=", 
+   RowBox[{
+    RowBox[{"Solve", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"\[DoubleStruckCapitalS]", "\[LeftDoubleBracket]", 
+        RowBox[{"3", ",", "3"}], "\[RightDoubleBracket]"}], "\[Equal]", "0"}],
+       ",", "\[DoubleStruckCapitalE]33"}], "]"}], "\[LeftDoubleBracket]", "1",
+     "\[RightDoubleBracket]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[DoubleStruckCapitalS]", "\[DoubleRightTee]", 
+   RowBox[{"FullSimplify", "[", 
+    RowBox[{"ReplaceAll", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"\[Lambda]", " ", 
+        RowBox[{"Tr", "[", "\[DoubleStruckCapitalE]", "]"}], 
+        RowBox[{"IdentityMatrix", "[", "3", "]"}]}], "+", 
+       RowBox[{"2", " ", "\[Mu]", " ", "\[DoubleStruckCapitalE]"}]}], ",", 
+      "PlaneStressCondition"}], "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Sigma]", "\[DoubleRightTee]", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"1", "/", "J"}], ")"}], " ", 
+    RowBox[{"\[DoubleStruckCapitalF]", ".", "\[DoubleStruckCapitalS]", ".", 
+     RowBox[{"\[DoubleStruckCapitalF]", "\[Transpose]"}]}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Sigma]vec", "=", 
+   RowBox[{"Flatten", "[", "\[Sigma]", "]"}]}], ";"}], "\[IndentingNewLine]", 
+
+ RowBox[{
+  RowBox[{
+   RowBox[{"SMSExport", "[", 
+    RowBox[{"\[Sigma]vec", ",", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"Sig$$", "[", "i", "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "9"}], "}"}]}], "]"}]}], "]"}], ";"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"\[DoubleStruckD]\[Sigma]\[DoubleStruckD]\[CurlyEpsilon]", "=", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"SMSD", "[", 
+        RowBox[{
+         RowBox[{
+         "\[Sigma]vec", "\[LeftDoubleBracket]", "i", 
+          "\[RightDoubleBracket]"}], ",", 
+         RowBox[{
+         "\[CurlyEpsilon]vec", "\[LeftDoubleBracket]", "j", 
+          "\[RightDoubleBracket]"}]}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "4"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"j", ",", "3"}], "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"SMSExport", "[", 
+     RowBox[{
+      RowBox[{
+      "Flatten", "[", 
+       "\[DoubleStruckD]\[Sigma]\[DoubleStruckD]\[CurlyEpsilon]", "]"}], ",", 
+      
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"Exp$$", "[", "i", "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"i", ",", "5", ",", "16"}], "}"}]}], "]"}]}], "]"}], ";"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSWrite", "[", 
+   RowBox[{"\"\<LocalAuxiliaryVariables\>\"", "\[Rule]", "True"}], "]"}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.7019422334683743`*^9, 3.701942240555492*^9}, {
+   3.701942551827433*^9, 3.7019425973402653`*^9}, 3.701942657899887*^9, {
+   3.701942771968176*^9, 3.701942954385462*^9}, {3.701944266809721*^9, 
+   3.701944420250247*^9}, {3.7019445990421953`*^9, 3.701944599570176*^9}, {
+   3.701944660346901*^9, 3.70194477540685*^9}, {3.701955726306006*^9, 
+   3.7019557287308893`*^9}, {3.701955760567013*^9, 3.701955763836216*^9}, {
+   3.701955819458672*^9, 3.701955822311013*^9}, {3.704201913057893*^9, 
+   3.704201913157365*^9}, {3.704202100890979*^9, 3.704202146351118*^9}, {
+   3.704202634440819*^9, 3.704202640132511*^9}, {3.704217798786852*^9, 
+   3.704217819290286*^9}, {3.704218573992752*^9, 3.70421858640561*^9}, {
+   3.704453218676137*^9, 3.7044532579484673`*^9}, {3.704453315091712*^9, 
+   3.704453383782406*^9}, 3.704513741771583*^9, {3.704515797861112*^9, 
+   3.7045158628588753`*^9}, {3.7045159165994053`*^9, 3.704515963792543*^9}, {
+   3.704516027311037*^9, 3.704516046615904*^9}, {3.7045160797269497`*^9, 
+   3.7045160968497143`*^9}, {3.704516141041891*^9, 3.704516172774065*^9}, {
+   3.7045162078456173`*^9, 3.704516365739004*^9}, {3.704516493039452*^9, 
+   3.704516501224061*^9}, {3.7045169809462557`*^9, 3.704517035591731*^9}, {
+   3.704535860102519*^9, 3.704535860744782*^9}, {3.704535959453867*^9, 
+   3.7045360998216133`*^9}, {3.704536215915635*^9, 3.704536269991667*^9}, 
+   3.704536389908112*^9, {3.7045365036142178`*^9, 3.7045365790668383`*^9}, {
+   3.704536735560103*^9, 3.704536738897978*^9}, {3.704536770466611*^9, 
+   3.7045369008464937`*^9}, 3.704536982085279*^9, {3.704544490268446*^9, 
+   3.704544623680798*^9}, {3.704544728826064*^9, 3.704544729455533*^9}, {
+   3.704553052376581*^9, 3.704553056288372*^9}, {3.704555019650963*^9, 
+   3.704555042754455*^9}, {3.704615454633226*^9, 3.704615473779351*^9}, {
+   3.704616514913865*^9, 3.704616551846909*^9}, 3.704963196886642*^9, {
+   3.767671638965519*^9, 3.7676716667878857`*^9}, {3.7678438777695017`*^9, 
+   3.7678439028250113`*^9}, {3.767854050966913*^9, 3.7678541558615437`*^9}, {
+   3.767854189445915*^9, 3.767854258071858*^9}, 3.767854302526312*^9, {
+   3.7678543419698477`*^9, 3.767854401822257*^9}, {3.7678544634173307`*^9, 
+   3.767854471415948*^9}, {3.767854655424312*^9, 3.767854724903532*^9}, 
+   3.767855019748522*^9, 3.767858231452024*^9, {3.7678722477328157`*^9, 
+   3.76787227185513*^9}, {3.767872379483078*^9, 3.767872384129302*^9}, {
+   3.76874650280758*^9, 3.76874656165804*^9}, {3.768746599673617*^9, 
+   3.768746700664364*^9}, {3.768746799417774*^9, 3.768746863068692*^9}, {
+   3.768746949650963*^9, 3.768747048851878*^9}, {3.768747106079649*^9, 
+   3.7687472224326077`*^9}, {3.768747316857086*^9, 3.76874739157579*^9}, {
+   3.768747441232719*^9, 3.768747465560882*^9}, {3.76874761030118*^9, 
+   3.7687476577671537`*^9}, {3.768747693775981*^9, 3.768747733807246*^9}},
+ CellLabel->
+  "In[1620]:=",ExpressionUUID->"3850eaae-ceee-40a7-b471-af8c3ea4c819"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     TemplateBox[{StyleBox["\"File: \"", Bold, 
+        RGBColor[0, 0, 1], StripOnInput -> False],"\"STVKPlaneStress2D.cpp\"",
+       StyleBox["\"  Size: \"", Bold, 
+        RGBColor[0, 0, 1], StripOnInput -> False],"2084",StyleBox[
+       "\"  Time: \"", Bold, 
+        RGBColor[0, 0, 1], StripOnInput -> False],"1"},
+      "RowDefault"]},
+    {
+     TagBox[GridBox[{
+        {
+         StyleBox["\<\"Method\"\>",
+          StripOnInput->False,
+          LineColor->RGBColor[0, 0, 1],
+          FrontFaceColor->RGBColor[0, 0, 1],
+          BackFaceColor->RGBColor[0, 0, 1],
+          GraphicsColor->RGBColor[0, 0, 1],
+          FontWeight->Bold,
+          FontColor->RGBColor[0, 0, 1]], 
+         StyleBox["\<\"STVKPlaneStress2D\"\>",
+          StripOnInput->False,
+          LineColor->RGBColor[0, 0, 1],
+          FrontFaceColor->RGBColor[0, 0, 1],
+          BackFaceColor->RGBColor[0, 0, 1],
+          GraphicsColor->RGBColor[0, 0, 1],
+          FontColor->RGBColor[0, 0, 1]]},
+        {
+         StyleBox["\<\"No.Formulae\"\>",
+          StripOnInput->False,
+          LineColor->RGBColor[0, 0, 1],
+          FrontFaceColor->RGBColor[0, 0, 1],
+          BackFaceColor->RGBColor[0, 0, 1],
+          GraphicsColor->RGBColor[0, 0, 1],
+          FontWeight->Bold,
+          FontColor->RGBColor[0, 0, 1]], "23"},
+        {
+         StyleBox["\<\"No.Leafs\"\>",
+          StripOnInput->False,
+          LineColor->RGBColor[0, 0, 1],
+          FrontFaceColor->RGBColor[0, 0, 1],
+          BackFaceColor->RGBColor[0, 0, 1],
+          GraphicsColor->RGBColor[0, 0, 1],
+          FontWeight->Bold,
+          FontColor->RGBColor[0, 0, 1]], "847"}
+       },
+       AutoDelete->False,
+       GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Center}}},
+       GridBoxDividers->{"Columns" -> {True, True}},
+       GridBoxFrame->{"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"]}
+   },
+   DefaultBaseStyle->"Column",
+   GridBoxAlignment->{"Columns" -> {{Left}}},
+   GridBoxDividers->{"Rows" -> {True, True}},
+   GridBoxFrame->{"Columns" -> False, "Rows" -> False},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Column"]], "Print",
+ CellChangeTimes->{
+  3.768747659010727*^9, {3.7687477103610888`*^9, 3.7687477366194677`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[1620]:=",ExpressionUUID->"4e2b9cab-e6e7-4f53-8251-4973d9f2aec9"]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Material Plane Strain STVK", "Title",
+ CellChangeTimes->{{3.7678722273326683`*^9, 3.767872232631587*^9}, {
+  3.7687464402495003`*^9, 3.768746441186487*^9}, {3.7687464919864883`*^9, 
+  3.768746492835479*^9}, {3.7687491422917643`*^9, 
+  3.768749143878159*^9}},ExpressionUUID->"321d3b9c-1ea4-4ef6-b307-\
+1eb4bdc603fe"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"<<", "AceGen`"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSInitialize", "[", 
+   RowBox[{"\"\<STVKPlaneStrain2D\>\"", ",", 
+    RowBox[{"\"\<Language\>\"", "\[Rule]", "\"\<C++\>\""}], ",", 
+    RowBox[{"\"\<Mode\>\"", "\[Rule]", "\"\<Optimal\>\""}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSModule", "[", 
+   RowBox[{"\"\<STVKPlaneStrain2D\>\"", ",", 
+    RowBox[{"Real", "[", 
+     RowBox[{
+      RowBox[{"MaterialData$$", "[", "2", "]"}], ",", 
+      RowBox[{"F$$", "[", "9", "]"}], ",", 
+      RowBox[{"Sig$$", "[", "9", "]"}], ",", 
+      RowBox[{"Cmat$$", "[", 
+       RowBox[{"9", ",", "9"}], "]"}]}], "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"Emod", ",", "\[Nu]"}], "}"}], "\[RightTee]", 
+   RowBox[{"SMSReal", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"MaterialData$$", "[", "1", "]"}], ",", 
+      RowBox[{"MaterialData$$", "[", "2", "]"}]}], "}"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"\[Lambda]", ",", "\[Mu]"}], "}"}], "\[DoubleRightTee]", 
+   RowBox[{"SMSHookeToLame", "[", 
+    RowBox[{"Emod", ",", "\[Nu]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[DoubleStruckCapitalF]vec", "\[RightTee]", 
+   RowBox[{"SMSReal", "[", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"F$$", "[", "i", "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "9"}], "}"}]}], "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[DoubleStruckCapitalF]", "=", 
+   RowBox[{"Partition", "[", 
+    RowBox[{"\[DoubleStruckCapitalF]vec", ",", "3"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"J", "\[DoubleRightTee]", 
+   RowBox[{"SMSDet", "[", "\[DoubleStruckCapitalF]", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[DoubleStruckCapitalE]", "\[DoubleRightTee]", 
+   RowBox[{
+    RowBox[{"1", "/", "2"}], 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"\[DoubleStruckCapitalF]", "\[Transpose]"}], ".", 
+       "\[DoubleStruckCapitalF]"}], "-", 
+      RowBox[{"IdentityMatrix", "[", "3", "]"}]}], ")"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[DoubleStruckCapitalS]", "\[DoubleRightTee]", 
+   RowBox[{"FullSimplify", "[", 
+    RowBox[{
+     RowBox[{"\[Lambda]", " ", 
+      RowBox[{"Tr", "[", "\[DoubleStruckCapitalE]", "]"}], 
+      RowBox[{"IdentityMatrix", "[", "3", "]"}]}], "+", 
+     RowBox[{"2", " ", "\[Mu]", " ", "\[DoubleStruckCapitalE]"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Sigma]", "\[DoubleRightTee]", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"1", "/", "J"}], ")"}], " ", 
+    RowBox[{"\[DoubleStruckCapitalF]", ".", "\[DoubleStruckCapitalS]", ".", 
+     RowBox[{"\[DoubleStruckCapitalF]", "\[Transpose]"}]}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Sigma]vec", "=", 
+   RowBox[{"Flatten", "[", "\[Sigma]", "]"}]}], ";"}], "\[IndentingNewLine]", 
+
+ RowBox[{
+  RowBox[{
+   RowBox[{"SMSExport", "[", 
+    RowBox[{"\[Sigma]vec", ",", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"Sig$$", "[", "i", "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "9"}], "}"}]}], "]"}]}], "]"}], ";"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"\[DoubleStruckD]\[Sigma]\[DoubleStruckD]\[CurlyEpsilon]", "=", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"SMSD", "[", 
+        RowBox[{
+         RowBox[{
+         "\[Sigma]vec", "\[LeftDoubleBracket]", "i", 
+          "\[RightDoubleBracket]"}], ",", 
+         RowBox[{
+         "\[CurlyEpsilon]vec", "\[LeftDoubleBracket]", "j", 
+          "\[RightDoubleBracket]"}]}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "4"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"j", ",", "3"}], "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"SMSExport", "[", 
+     RowBox[{
+      RowBox[{
+      "Flatten", "[", 
+       "\[DoubleStruckD]\[Sigma]\[DoubleStruckD]\[CurlyEpsilon]", "]"}], ",", 
+      
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"Exp$$", "[", "i", "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"i", ",", "5", ",", "16"}], "}"}]}], "]"}]}], "]"}], ";"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSWrite", "[", 
+   RowBox[{"\"\<LocalAuxiliaryVariables\>\"", "\[Rule]", "True"}], "]"}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.7019422334683743`*^9, 3.701942240555492*^9}, {
+   3.701942551827433*^9, 3.7019425973402653`*^9}, 3.701942657899887*^9, {
+   3.701942771968176*^9, 3.701942954385462*^9}, {3.701944266809721*^9, 
+   3.701944420250247*^9}, {3.7019445990421953`*^9, 3.701944599570176*^9}, {
+   3.701944660346901*^9, 3.70194477540685*^9}, {3.701955726306006*^9, 
+   3.7019557287308893`*^9}, {3.701955760567013*^9, 3.701955763836216*^9}, {
+   3.701955819458672*^9, 3.701955822311013*^9}, {3.704201913057893*^9, 
+   3.704201913157365*^9}, {3.704202100890979*^9, 3.704202146351118*^9}, {
+   3.704202634440819*^9, 3.704202640132511*^9}, {3.704217798786852*^9, 
+   3.704217819290286*^9}, {3.704218573992752*^9, 3.70421858640561*^9}, {
+   3.704453218676137*^9, 3.7044532579484673`*^9}, {3.704453315091712*^9, 
+   3.704453383782406*^9}, 3.704513741771583*^9, {3.704515797861112*^9, 
+   3.7045158628588753`*^9}, {3.7045159165994053`*^9, 3.704515963792543*^9}, {
+   3.704516027311037*^9, 3.704516046615904*^9}, {3.7045160797269497`*^9, 
+   3.7045160968497143`*^9}, {3.704516141041891*^9, 3.704516172774065*^9}, {
+   3.7045162078456173`*^9, 3.704516365739004*^9}, {3.704516493039452*^9, 
+   3.704516501224061*^9}, {3.7045169809462557`*^9, 3.704517035591731*^9}, {
+   3.704535860102519*^9, 3.704535860744782*^9}, {3.704535959453867*^9, 
+   3.7045360998216133`*^9}, {3.704536215915635*^9, 3.704536269991667*^9}, 
+   3.704536389908112*^9, {3.7045365036142178`*^9, 3.7045365790668383`*^9}, {
+   3.704536735560103*^9, 3.704536738897978*^9}, {3.704536770466611*^9, 
+   3.7045369008464937`*^9}, 3.704536982085279*^9, {3.704544490268446*^9, 
+   3.704544623680798*^9}, {3.704544728826064*^9, 3.704544729455533*^9}, {
+   3.704553052376581*^9, 3.704553056288372*^9}, {3.704555019650963*^9, 
+   3.704555042754455*^9}, {3.704615454633226*^9, 3.704615473779351*^9}, {
+   3.704616514913865*^9, 3.704616551846909*^9}, 3.704963196886642*^9, {
+   3.767671638965519*^9, 3.7676716667878857`*^9}, {3.7678438777695017`*^9, 
+   3.7678439028250113`*^9}, {3.767854050966913*^9, 3.7678541558615437`*^9}, {
+   3.767854189445915*^9, 3.767854258071858*^9}, 3.767854302526312*^9, {
+   3.7678543419698477`*^9, 3.767854401822257*^9}, {3.7678544634173307`*^9, 
+   3.767854471415948*^9}, {3.767854655424312*^9, 3.767854724903532*^9}, 
+   3.767855019748522*^9, 3.767858231452024*^9, {3.7678722477328157`*^9, 
+   3.76787227185513*^9}, {3.767872379483078*^9, 3.767872384129302*^9}, {
+   3.76874650280758*^9, 3.76874656165804*^9}, {3.768746599673617*^9, 
+   3.768746700664364*^9}, {3.768746799417774*^9, 3.768746863068692*^9}, {
+   3.768746949650963*^9, 3.768747048851878*^9}, {3.768747106079649*^9, 
+   3.7687472224326077`*^9}, {3.768747316857086*^9, 3.76874739157579*^9}, {
+   3.768747441232719*^9, 3.768747465560882*^9}, {3.76874761030118*^9, 
+   3.7687476577671537`*^9}, {3.768747693775981*^9, 3.768747733807246*^9}, {
+   3.7687491506589003`*^9, 3.768749198679803*^9}},
+ CellLabel->
+  "In[1637]:=",ExpressionUUID->"0dd1c630-14b1-4057-ad63-1c077c9fce3c"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     TemplateBox[{StyleBox["\"File: \"", Bold, 
+        RGBColor[0, 0, 1], StripOnInput -> False],"\"STVKPlaneStrain2D.cpp\"",
+       StyleBox["\"  Size: \"", Bold, 
+        RGBColor[0, 0, 1], StripOnInput -> False],"2154",StyleBox[
+       "\"  Time: \"", Bold, 
+        RGBColor[0, 0, 1], StripOnInput -> False],"1"},
+      "RowDefault"]},
+    {
+     TagBox[GridBox[{
+        {
+         StyleBox["\<\"Method\"\>",
+          StripOnInput->False,
+          LineColor->RGBColor[0, 0, 1],
+          FrontFaceColor->RGBColor[0, 0, 1],
+          BackFaceColor->RGBColor[0, 0, 1],
+          GraphicsColor->RGBColor[0, 0, 1],
+          FontWeight->Bold,
+          FontColor->RGBColor[0, 0, 1]], 
+         StyleBox["\<\"STVKPlaneStrain2D\"\>",
+          StripOnInput->False,
+          LineColor->RGBColor[0, 0, 1],
+          FrontFaceColor->RGBColor[0, 0, 1],
+          BackFaceColor->RGBColor[0, 0, 1],
+          GraphicsColor->RGBColor[0, 0, 1],
+          FontColor->RGBColor[0, 0, 1]]},
+        {
+         StyleBox["\<\"No.Formulae\"\>",
+          StripOnInput->False,
+          LineColor->RGBColor[0, 0, 1],
+          FrontFaceColor->RGBColor[0, 0, 1],
+          BackFaceColor->RGBColor[0, 0, 1],
+          GraphicsColor->RGBColor[0, 0, 1],
+          FontWeight->Bold,
+          FontColor->RGBColor[0, 0, 1]], "23"},
+        {
+         StyleBox["\<\"No.Leafs\"\>",
+          StripOnInput->False,
+          LineColor->RGBColor[0, 0, 1],
+          FrontFaceColor->RGBColor[0, 0, 1],
+          BackFaceColor->RGBColor[0, 0, 1],
+          GraphicsColor->RGBColor[0, 0, 1],
+          FontWeight->Bold,
+          FontColor->RGBColor[0, 0, 1]], "886"}
+       },
+       AutoDelete->False,
+       GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Center}}},
+       GridBoxDividers->{"Columns" -> {True, True}},
+       GridBoxFrame->{"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"]}
+   },
+   DefaultBaseStyle->"Column",
+   GridBoxAlignment->{"Columns" -> {{Left}}},
+   GridBoxDividers->{"Rows" -> {True, True}},
+   GridBoxFrame->{"Columns" -> False, "Rows" -> False},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Column"]], "Print",
+ CellChangeTimes->{
+  3.768747659010727*^9, {3.7687477103610888`*^9, 3.7687477366194677`*^9}, 
+   3.76874920222353*^9},
+ CellLabel->
+  "During evaluation of \
+In[1637]:=",ExpressionUUID->"6b1121d0-2648-47bd-8bd9-c8f2780b7cbf"]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Material 3D J2 FiniteStrain", "Title",
+ CellChangeTimes->{{3.7678722273326683`*^9, 3.767872232631587*^9}, {
+  3.7687464402495003`*^9, 3.768746441186487*^9}, {3.7687464919864883`*^9, 
+  3.768746492835479*^9}, {3.7687491422917643`*^9, 3.768749143878159*^9}, {
+  3.768749886631278*^9, 
+  3.768749916970417*^9}},ExpressionUUID->"d0645cbb-5c75-4e12-94d0-\
+0df5355fc01a"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"<<", "AceGen`"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"PlasticMaterial", "[", 
+    RowBox[{"task_", ",", "\[DoubleStruckH]gm_"}], "]"}], ":=", 
+   RowBox[{"Block", "[", 
+    RowBox[{
+     RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"\[DoubleStruckCapitalF]pinv", "=", 
+       RowBox[{
+        RowBox[{"IdentityMatrix", "[", "3", "]"}], "+", 
+        RowBox[{"(", "\[NoBreak]", GridBox[{
+           {
+            RowBox[{
+            "\[DoubleStruckH]gm", "\[LeftDoubleBracket]", "1", 
+             "\[RightDoubleBracket]"}], 
+            RowBox[{
+            "\[DoubleStruckH]gm", "\[LeftDoubleBracket]", "4", 
+             "\[RightDoubleBracket]"}], 
+            RowBox[{
+            "\[DoubleStruckH]gm", "\[LeftDoubleBracket]", "5", 
+             "\[RightDoubleBracket]"}]},
+           {
+            RowBox[{
+            "\[DoubleStruckH]gm", "\[LeftDoubleBracket]", "7", 
+             "\[RightDoubleBracket]"}], 
+            RowBox[{
+            "\[DoubleStruckH]gm", "\[LeftDoubleBracket]", "2", 
+             "\[RightDoubleBracket]"}], 
+            RowBox[{
+            "\[DoubleStruckH]gm", "\[LeftDoubleBracket]", "6", 
+             "\[RightDoubleBracket]"}]},
+           {
+            RowBox[{
+            "\[DoubleStruckH]gm", "\[LeftDoubleBracket]", "8", 
+             "\[RightDoubleBracket]"}], 
+            RowBox[{
+            "\[DoubleStruckH]gm", "\[LeftDoubleBracket]", "9", 
+             "\[RightDoubleBracket]"}], 
+            RowBox[{
+            "\[DoubleStruckH]gm", "\[LeftDoubleBracket]", "3", 
+             "\[RightDoubleBracket]"}]}
+          },
+          
+          GridBoxDividers->{
+           "Columns" -> {True, {False}, True}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {True, {False}, True}, "RowsIndexed" -> {}}], 
+         "\[NoBreak]", ")"}]}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"\[Lambda]", "=", 
+       RowBox[{
+       "\[DoubleStruckH]gm", "\[LeftDoubleBracket]", "10", 
+        "\[RightDoubleBracket]"}]}], ";", "\[IndentingNewLine]", 
+      "\[IndentingNewLine]", 
+      RowBox[{"SMSFreeze", "[", 
+       RowBox[{"\[DoubleStruckCapitalF]e", ",", 
+        RowBox[{
+        "\[DoubleStruckCapitalF]", ".", "\[DoubleStruckCapitalF]pinv"}]}], 
+       "]"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"SMSFreeze", "[", 
+       RowBox[{"\[DoubleStruckCapitalC]e", ",", 
+        RowBox[{
+         RowBox[{"\[DoubleStruckCapitalF]e", "\[Transpose]"}], ".", 
+         "\[DoubleStruckCapitalF]e"}], ",", 
+        RowBox[{"\"\<Symmetric\>\"", "\[Rule]", "True"}]}], "]"}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"JF2", "\[DoubleRightTee]", 
+       RowBox[{"Det", "[", "\[DoubleStruckCapitalC]e", "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"\[CapitalPi]", "\[DoubleRightTee]", 
+       RowBox[{"Simplify", "[", 
+        RowBox[{
+         RowBox[{
+          FractionBox["\[Mu]g", "2"], 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"Tr", "[", "\[DoubleStruckCapitalC]e", "]"}], "-", "3", 
+            "-", 
+            RowBox[{"Log", "[", "JF2", "]"}]}], ")"}]}], "+", 
+         RowBox[{
+          FractionBox["\[Lambda]g", "4"], 
+          RowBox[{"(", 
+           RowBox[{"JF2", "-", "1", "-", 
+            RowBox[{"Log", "[", "JF2", "]"}]}], ")"}]}]}], "]"}]}], ";", 
+      "\[IndentingNewLine]", "\[IndentingNewLine]", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"task", "\[Equal]", "\"\<\[CapitalPi]\>\""}], ",", 
+        RowBox[{"Return", "[", "\[CapitalPi]", "]"}]}], "]"}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"SMSFreeze", "[", 
+       RowBox[{"\[Tau]", ",", 
+        RowBox[{"2", 
+         RowBox[{"\[DoubleStruckCapitalF]e", ".", 
+          RowBox[{"SMSD", "[", 
+           RowBox[{"\[CapitalPi]", ",", "\[DoubleStruckCapitalC]e", ",", 
+            RowBox[{"\"\<Symmetric\>\"", "\[Rule]", "True"}]}], "]"}], ".", 
+          RowBox[{"\[DoubleStruckCapitalF]e", "\[Transpose]"}]}]}], ",", 
+        RowBox[{"\"\<Symmetric\>\"", "\[Rule]", "True"}]}], "]"}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"task", "\[Equal]", "\"\<P\>\""}], ",", 
+        RowBox[{"Return", "[", 
+         RowBox[{"SMSD", "[", 
+          RowBox[{"\[CapitalPi]", ",", "\[DoubleStruckCapitalF]", ",", 
+           RowBox[{"\"\<Constant\>\"", "\[Rule]", "\[DoubleStruckH]gm"}]}], 
+          "]"}], "]"}]}], "]"}], ";", "\[IndentingNewLine]", 
+      "\[IndentingNewLine]", 
+      RowBox[{"dev\[Tau]", "\[DoubleRightTee]", 
+       RowBox[{"\[Tau]", "-", 
+        RowBox[{
+         FractionBox["1", "3"], 
+         RowBox[{"Tr", "[", "\[Tau]", "]"}], 
+         RowBox[{"IdentityMatrix", "[", "3", "]"}]}]}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"\[Tau]Mises", "\[DoubleRightTee]", 
+       RowBox[{"SMSSqrt", "[", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"3", "/", "2"}], ")"}], 
+         RowBox[{"Tr", "[", 
+          RowBox[{"dev\[Tau]", ".", "dev\[Tau]"}], "]"}]}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"\[Tau]y", "\[DoubleRightTee]", 
+       RowBox[{"(", 
+        RowBox[{"y\[Infinity]", "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"y0", "-", "y\[Infinity]"}], ")"}], 
+          RowBox[{"Exp", "[", 
+           RowBox[{
+            RowBox[{"-", "\[Delta]h"}], " ", "\[Lambda]"}], "]"}]}], "+", 
+         RowBox[{"Kh", " ", "\[Lambda]"}]}], ")"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"\[ScriptF]", "\[DoubleRightTee]", 
+       RowBox[{"\[Tau]Mises", "-", "\[Tau]y"}]}], ";", "\[IndentingNewLine]", 
+      
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"task", "\[Equal]", "\"\<f\>\""}], ",", 
+        RowBox[{"Return", "[", "\[ScriptF]", "]"}]}], "]"}], ";", 
+      "\[IndentingNewLine]", "\[IndentingNewLine]", 
+      RowBox[{"\[DoubleStruckN]", "\[DoubleRightTee]", 
+       RowBox[{"Simplify", "[", 
+        RowBox[{"SMSD", "[", 
+         RowBox[{"\[ScriptF]", ",", "\[Tau]", ",", 
+          RowBox[{"\"\<Symmetric\>\"", "\[Rule]", "True"}]}], "]"}], "]"}]}], 
+      ";", "\[IndentingNewLine]", 
+      RowBox[{"\[DoubleStruckCapitalF]pinvn", "=", 
+       RowBox[{
+        RowBox[{"IdentityMatrix", "[", "3", "]"}], "+", 
+        RowBox[{"(", "\[NoBreak]", GridBox[{
+           {
+            RowBox[{
+            "hn", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+            RowBox[{
+            "hn", "\[LeftDoubleBracket]", "4", "\[RightDoubleBracket]"}], 
+            RowBox[{
+            "hn", "\[LeftDoubleBracket]", "5", "\[RightDoubleBracket]"}]},
+           {
+            RowBox[{
+            "hn", "\[LeftDoubleBracket]", "7", "\[RightDoubleBracket]"}], 
+            RowBox[{
+            "hn", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], 
+            RowBox[{
+            "hn", "\[LeftDoubleBracket]", "6", "\[RightDoubleBracket]"}]},
+           {
+            RowBox[{
+            "hn", "\[LeftDoubleBracket]", "8", "\[RightDoubleBracket]"}], 
+            RowBox[{
+            "hn", "\[LeftDoubleBracket]", "9", "\[RightDoubleBracket]"}], 
+            RowBox[{
+            "hn", "\[LeftDoubleBracket]", "3", "\[RightDoubleBracket]"}]}
+          },
+          
+          GridBoxDividers->{
+           "Columns" -> {True, {False}, True}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {True, {False}, True}, "RowsIndexed" -> {}}], 
+         "\[NoBreak]", ")"}]}]}], ";", 
+      RowBox[{"\[Lambda]n", "=", 
+       RowBox[{
+       "hn", "\[LeftDoubleBracket]", "10", "\[RightDoubleBracket]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"\[DoubleStruckCapitalQ]F", "=", 
+       RowBox[{"Simplify", "[", 
+        RowBox[{"\[DoubleStruckCapitalF]e", "-", 
+         RowBox[{
+          RowBox[{"SMSMatrixExp", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"-", 
+              RowBox[{"(", 
+               RowBox[{"\[Lambda]", "-", "\[Lambda]n"}], ")"}]}], 
+             RowBox[{"Sqrt", "[", 
+              RowBox[{"3", "/", "2"}], "]"}], "\[DoubleStruckN]"}], ",", 
+            "1"}], "]"}], ".", "\[DoubleStruckCapitalF]", ".", 
+          "\[DoubleStruckCapitalF]pinvn"}]}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"task", "\[Equal]", "\"\<Q\>\""}], ",", 
+        RowBox[{"Return", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"\[DoubleStruckCapitalQ]F", "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}], ",", 
+           RowBox[{"\[DoubleStruckCapitalQ]F", "\[LeftDoubleBracket]", 
+            RowBox[{"2", ",", "2"}], "\[RightDoubleBracket]"}], ",", 
+           RowBox[{"\[DoubleStruckCapitalQ]F", "\[LeftDoubleBracket]", 
+            RowBox[{"3", ",", "3"}], "\[RightDoubleBracket]"}], ",", 
+           RowBox[{"\[DoubleStruckCapitalQ]F", "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "2"}], "\[RightDoubleBracket]"}], ",", 
+           RowBox[{"\[DoubleStruckCapitalQ]F", "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "3"}], "\[RightDoubleBracket]"}], ",", 
+           RowBox[{"\[DoubleStruckCapitalQ]F", "\[LeftDoubleBracket]", 
+            RowBox[{"2", ",", "3"}], "\[RightDoubleBracket]"}], ",", 
+           RowBox[{"\[DoubleStruckCapitalQ]F", "\[LeftDoubleBracket]", 
+            RowBox[{"2", ",", "1"}], "\[RightDoubleBracket]"}], ",", 
+           RowBox[{"\[DoubleStruckCapitalQ]F", "\[LeftDoubleBracket]", 
+            RowBox[{"3", ",", "1"}], "\[RightDoubleBracket]"}], ",", 
+           RowBox[{"\[DoubleStruckCapitalQ]F", "\[LeftDoubleBracket]", 
+            RowBox[{"3", ",", "2"}], "\[RightDoubleBracket]"}], ",", 
+           "\[ScriptF]"}], "}"}], "]"}]}], "]"}], ";"}]}], 
+    "\[IndentingNewLine]", "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.768799733412269*^9, 3.768799734066764*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"ecc573e2-7795-4879-8a2b-168e7718e9be"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"<<", "AceGen`"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSInitialize", "[", 
+   RowBox[{"\"\<J2FiniteStrain3D\>\"", ",", 
+    RowBox[{"\"\<Language\>\"", "\[Rule]", "\"\<C++\>\""}], ",", 
+    RowBox[{"\"\<Mode\>\"", "\[Rule]", "\"\<Optimal\>\""}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSModule", "[", 
+   RowBox[{"\"\<J2FiniteStrain3D\>\"", ",", 
+    RowBox[{"Real", "[", 
+     RowBox[{
+      RowBox[{"d$$", "[", "6", "]"}], ",", 
+      RowBox[{"F$$", "[", "9", "]"}], ",", 
+      RowBox[{"h$$", "[", "10", "]"}], ",", 
+      RowBox[{"Sig$$", "[", "9", "]"}], ",", 
+      RowBox[{"Cmat$$", "[", 
+       RowBox[{"9", ",", "9"}], "]"}]}], "]"}]}], "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.7019422334683743`*^9, 3.701942240555492*^9}, {
+   3.701942551827433*^9, 3.7019425973402653`*^9}, 3.701942657899887*^9, {
+   3.701942771968176*^9, 3.701942954385462*^9}, {3.701944266809721*^9, 
+   3.701944420250247*^9}, {3.7019445990421953`*^9, 3.701944599570176*^9}, {
+   3.701944660346901*^9, 3.70194477540685*^9}, {3.701955726306006*^9, 
+   3.7019557287308893`*^9}, {3.701955760567013*^9, 3.701955763836216*^9}, {
+   3.701955819458672*^9, 3.701955822311013*^9}, {3.704201913057893*^9, 
+   3.704201913157365*^9}, {3.704202100890979*^9, 3.704202146351118*^9}, {
+   3.704202634440819*^9, 3.704202640132511*^9}, {3.704217798786852*^9, 
+   3.704217819290286*^9}, {3.704218573992752*^9, 3.70421858640561*^9}, {
+   3.704453218676137*^9, 3.7044532579484673`*^9}, {3.704453315091712*^9, 
+   3.704453383782406*^9}, 3.704513741771583*^9, {3.704515797861112*^9, 
+   3.7045158628588753`*^9}, {3.7045159165994053`*^9, 3.704515963792543*^9}, {
+   3.704516027311037*^9, 3.704516046615904*^9}, {3.7045160797269497`*^9, 
+   3.7045160968497143`*^9}, {3.704516141041891*^9, 3.704516172774065*^9}, {
+   3.7045162078456173`*^9, 3.704516365739004*^9}, {3.704516493039452*^9, 
+   3.704516501224061*^9}, {3.7045169809462557`*^9, 3.704517035591731*^9}, {
+   3.704535860102519*^9, 3.704535860744782*^9}, {3.704535959453867*^9, 
+   3.7045360998216133`*^9}, {3.704536215915635*^9, 3.704536269991667*^9}, 
+   3.704536389908112*^9, {3.7045365036142178`*^9, 3.7045365790668383`*^9}, {
+   3.704536735560103*^9, 3.704536738897978*^9}, {3.704536770466611*^9, 
+   3.7045369008464937`*^9}, 3.704536982085279*^9, {3.704544490268446*^9, 
+   3.704544623680798*^9}, {3.704544728826064*^9, 3.704544729455533*^9}, {
+   3.704553052376581*^9, 3.704553056288372*^9}, {3.704555019650963*^9, 
+   3.704555042754455*^9}, {3.704615454633226*^9, 3.704615473779351*^9}, {
+   3.704616514913865*^9, 3.704616551846909*^9}, 3.704963196886642*^9, {
+   3.767671638965519*^9, 3.7676716667878857`*^9}, {3.7678438777695017`*^9, 
+   3.7678439028250113`*^9}, {3.767854050966913*^9, 3.7678541558615437`*^9}, {
+   3.767854189445915*^9, 3.767854258071858*^9}, 3.767854302526312*^9, {
+   3.7678543419698477`*^9, 3.767854401822257*^9}, {3.7678544634173307`*^9, 
+   3.767854471415948*^9}, {3.767854655424312*^9, 3.767854724903532*^9}, 
+   3.767855019748522*^9, 3.767858231452024*^9, {3.7678722477328157`*^9, 
+   3.76787227185513*^9}, {3.767872379483078*^9, 3.767872384129302*^9}, {
+   3.76874650280758*^9, 3.76874656165804*^9}, {3.768746599673617*^9, 
+   3.768746700664364*^9}, {3.768746799417774*^9, 3.768746863068692*^9}, {
+   3.768746949650963*^9, 3.768747048851878*^9}, {3.768747106079649*^9, 
+   3.7687472224326077`*^9}, {3.768747316857086*^9, 3.76874739157579*^9}, {
+   3.768747441232719*^9, 3.768747465560882*^9}, {3.76874761030118*^9, 
+   3.7687476577671537`*^9}, {3.768747693775981*^9, 3.768747733807246*^9}, {
+   3.7687491506589003`*^9, 3.768749198679803*^9}, {3.768749963233906*^9, 
+   3.768749984572356*^9}, {3.7687500553491*^9, 3.76875005551775*^9}, {
+   3.7687502354219437`*^9, 3.768750248253613*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"bd908fdb-4d53-41a5-83d0-a3f8e77cb409"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "Eg", ",", "\[Nu]g", ",", "y0", ",", "y\[Infinity]", ",", "Kh", ",", 
+       "\[Delta]h"}], "}"}], "\[RightTee]", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"SMSReal", "[", 
+        RowBox[{"d$$", "[", "i", "]"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "6"}], "}"}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\[Lambda]g", ",", "\[Mu]g"}], "}"}], "\[DoubleRightTee]", 
+     RowBox[{"SMSHookeToLame", "[", 
+      RowBox[{"Eg", ",", "\[Nu]g"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"hn", "\[RightTee]", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"SMSReal", "[", 
+        RowBox[{"h$$", "[", "i", "]"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "10"}], "}"}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Fvec", "\[RightTee]", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"SMSReal", "[", 
+        RowBox[{"F$$", "[", "i", "]"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "9"}], "}"}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"SMSFreeze", "[", 
+     RowBox[{"\[DoubleStruckCapitalF]", ",", 
+      RowBox[{"Partition", "[", 
+       RowBox[{"Fvec", ",", "3"}], "]"}]}], "]"}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[DoubleStruckR]g", "=", 
+     RowBox[{"SMSVariables", "[", "\[DoubleStruckCapitalF]", "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[ScriptF]tr", "\[DoubleRightTee]", 
+     RowBox[{"PlasticMaterial", "[", 
+      RowBox[{"\"\<f\>\"", ",", "hn"}], "]"}]}], ";"}], "\[IndentingNewLine]",
+    "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"SMSIf", "[", 
+     RowBox[{"\[ScriptF]tr", "<", 
+      SuperscriptBox["10", 
+       RowBox[{"-", "10"}]]}], "]"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[DoubleStruckH]g", "\[DoubleLeftTee]", "hn"}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"PlasticIdicator", "\[DoubleLeftTee]", "0"}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"SMSElse", "[", "]"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[DoubleStruckH]gb", "\[DoubleLeftTee]", "hn"}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"LocalDivergence", "\[DoubleLeftTee]", "0"}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"SMSDo", "[", 
+     RowBox[{"SubIg", ",", "1", ",", "30", ",", "1", ",", 
+      RowBox[{"{", "\[DoubleStruckH]gb", "}"}]}], "]"}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[DoubleStruckCapitalQ]g", "\[DoubleRightTee]", 
+     RowBox[{"PlasticMaterial", "[", 
+      RowBox[{"\"\<Q\>\"", ",", "\[DoubleStruckH]gb"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[DoubleStruckCapitalA]g", "\[DoubleRightTee]", 
+     RowBox[{"SMSD", "[", 
+      RowBox[{"\[DoubleStruckCapitalQ]g", ",", "\[DoubleStruckH]gb"}], 
+      "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"LU", "\[DoubleRightTee]", 
+     RowBox[{"SMSLUFactor", "[", "\[DoubleStruckCapitalA]g", "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[CapitalDelta]\[DoubleStruckH]", "\[DoubleRightTee]", 
+     RowBox[{"SMSLUSolve", "[", 
+      RowBox[{"LU", ",", 
+       RowBox[{"-", "\[DoubleStruckCapitalQ]g"}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", "update", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[DoubleStruckH]gb", "\[LeftTee]", 
+     RowBox[{"\[DoubleStruckH]gb", "+", "\[CapitalDelta]\[DoubleStruckH]"}]}],
+     ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"on", " ", "convergency"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"SMSIf", "[", 
+     RowBox[{
+      RowBox[{"Sqrt", "[", 
+       RowBox[{
+       "\[CapitalDelta]\[DoubleStruckH]", ".", 
+        "\[CapitalDelta]\[DoubleStruckH]"}], "]"}], "<", 
+      SuperscriptBox["10", 
+       RowBox[{"-", "14"}]]}], "]"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"D\[DoubleStruckH]gDr", "\[DoubleLeftTee]", 
+     RowBox[{"SMSLUSolve", "[", 
+      RowBox[{"LU", ",", 
+       RowBox[{"-", 
+        RowBox[{"SMSD", "[", 
+         RowBox[{"\[DoubleStruckCapitalQ]g", ",", "\[DoubleStruckR]g", ",", 
+          RowBox[{"\"\<Constant\>\"", "\[Rule]", "\[DoubleStruckH]gb"}]}], 
+         "]"}]}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"SMSBreak", "[", "]"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"SMSEndIf", "[", "]"}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{"on", " ", "non"}], "-", "convergency"}], "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"SMSIf", "[", 
+     RowBox[{"SubIg", "\[Equal]", "29"}], "]"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"LocalDivergence", "\[LeftTee]", 
+     SuperscriptBox["10", "6"]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"SMSEndIf", "[", "]"}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"SMSEndDo", "[", 
+     RowBox[{"\[DoubleStruckH]gb", ",", "D\[DoubleStruckH]gDr"}], "]"}], 
+    ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"PlasticIdicator", "\[LeftTee]", 
+     SuperscriptBox["10", "6"]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[DoubleStruckH]g", "\[LeftTee]", 
+     RowBox[{"SMSFreeze", "[", 
+      RowBox[{"\[DoubleStruckH]gb", ",", 
+       RowBox[{"\"\<Dependency\>\"", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"\[DoubleStruckR]g", ",", "D\[DoubleStruckH]gDr"}], 
+         "}"}]}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"SMSEndIf", "[", 
+     RowBox[{
+     "\[DoubleStruckH]g", ",", "PlasticIdicator", ",", "LocalDivergence"}], 
+     "]"}], ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[DoubleStruckCapitalP]", "\[DoubleRightTee]", 
+     RowBox[{"PlasticMaterial", "[", 
+      RowBox[{"\"\<P\>\"", ",", "\[DoubleStruckH]g"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Pvec", "\[DoubleRightTee]", 
+     RowBox[{"Flatten", "[", "\[DoubleStruckCapitalP]", "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{"dPdF", "\[DoubleRightTee]", 
+      RowBox[{"SMSD", "[", 
+       RowBox[{"Pvec", ",", "Fvec", ",", 
+        RowBox[{"\"\<Method\>\"", "\[Rule]", "\"\<Forward\>\""}]}], "]"}]}], 
+     ";"}], "*)"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"export", " ", "quantities"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[Sigma]", "\[DoubleRightTee]", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"1", "/", 
+        RowBox[{"SMSDet", "[", "\[DoubleStruckCapitalF]", "]"}]}], ")"}], " ", 
+      RowBox[{"\[DoubleStruckCapitalP]", ".", 
+       RowBox[{"\[DoubleStruckCapitalF]", "\[Transpose]"}]}]}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[Sigma]vec", "=", 
+     RowBox[{"Flatten", "[", "\[Sigma]", "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"SMSExport", "[", 
+     RowBox[{"\[Sigma]vec", ",", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"Sig$$", "[", "i", "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"i", ",", "9"}], "}"}]}], "]"}]}], "]"}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"SMSExport", "[", 
+     RowBox[{"\[DoubleStruckH]g", ",", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"h$$", "[", "i", "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"i", ",", "10"}], "}"}]}], "]"}]}], "]"}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"SMSWrite", "[", 
+     RowBox[{"\"\<LocalAuxiliaryVariables\>\"", "\[Rule]", "True"}], "]"}], 
+    ";"}]}]}]], "Input",
+ CellChangeTimes->{{3.768798941586893*^9, 3.768798952064188*^9}, {
+  3.768798984617269*^9, 3.768798994771161*^9}, {3.7687996756995573`*^9, 
+  3.768799707804823*^9}, {3.768800008220766*^9, 3.768800013776094*^9}, {
+  3.768800164283491*^9, 
+  3.7688001656976748`*^9}},ExpressionUUID->"0b727376-9c21-413a-9d5d-\
+c5effb5a515d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ StyleBox[
+  TemplateBox[{
+   "\[ThinSpace]","\" \"",
+    "\"Closed form matrix Exponential module for symmetric matrix . Number of \
+terms in M is 6 and in f(M) is 6.\"",
+    RowBox[{"\" First derivatives df(M)/dM are supported\"", " ", 
+      "\" with \""}],"21","\" terms.\"","\" See also: \"",StyleBox[
+     TagBox[
+      ButtonBox[
+      "Matrix Functions", BaseStyle -> {"Link", Medium}, ButtonFunction :> 
+       Documentation`HelpLookup[
+        "paclet:AceGen/tutorial/Matrix Functions", \
+$CellContext`CompletionFunction -> (
+          SetOptions[#, DockedCells -> 
+           AceCommon`SMCSetUserInterface["DockedCells"]]& )], Evaluator -> 
+       Automatic, Method -> "Preemptive"], DisplayForm], Background -> 
+     GrayLevel[0.85], StripOnInput -> False]},
+   "RowWithSeparators"],
+  StripOnInput->False,
+  LineColor->RGBColor[0, 1, 0],
+  FrontFaceColor->RGBColor[0, 1, 0],
+  BackFaceColor->RGBColor[0, 1, 0],
+  GraphicsColor->RGBColor[0, 1, 0],
+  FontSize->Medium,
+  FontColor->RGBColor[0, 1, 0]]], "Print",
+ CellChangeTimes->{3.768799724924303*^9, 3.7687999172013683`*^9, 
+  3.768800030472858*^9},
+ CellLabel->
+  "During evaluation of \
+In[6]:=",ExpressionUUID->"b06bcdba-c79e-45fe-b383-460e67703f71"],
+
+Cell[BoxData[
+ StyleBox[
+  TemplateBox[{"\[ThinSpace]","\" \"",StyleBox["\"WARNING: \"", Bold, 
+     RGBColor[1, 0, 0], Medium, Underlined, StripOnInput -> False],
+    "\"Possible use of multi-valued variable that has not been randomized at \
+the beginning of the Do loop. Variable: \"",InterpretationBox[
+     ButtonBox[
+      StyleBox[
+       TemplateBox[{
+         SubscriptBox["\"\[InvisiblePrefixScriptBase]\"", "1"], 
+         "\"LocalDivergence\""}, "RowDefault"], FontColor -> 
+       RGBColor[1, 0.101961, 1], StripOnInput -> False], ButtonFunction :> 
+      AceGen`SMSButtonFunction["", {30, 116, 1}], ImageSize -> All, 
+      ImageMargins -> None, Evaluator -> Automatic, Appearance -> "Palette", 
+      FrameMargins -> None, Method -> "Preemptive"], 
+     AceGen`$V[116, 1]],"\" See also: \"",StyleBox[
+     TagBox[
+      ButtonBox[
+      "SMSDo", BaseStyle -> {"Link", Medium}, ButtonFunction :> 
+       Documentation`HelpLookup[
+        "paclet:AceGen/tutorial/Program Flow Control", \
+$CellContext`CompletionFunction -> ((
+          SetOptions[#, DockedCells -> 
+            AceCommon`SMCSetUserInterface["DockedCells"]]; NotebookFind[#, 
+            Apply[Sequence, {"SMSDo", All, CellTags}]])& )], Evaluator -> 
+       Automatic, Method -> "Preemptive"], DisplayForm], Background -> 
+     GrayLevel[0.85], StripOnInput -> False]},
+   "RowWithSeparators"],
+  StripOnInput->False,
+  LineColor->RGBColor[1, 0, 0],
+  FrontFaceColor->RGBColor[1, 0, 0],
+  BackFaceColor->RGBColor[1, 0, 0],
+  GraphicsColor->RGBColor[1, 0, 0],
+  FontSize->Medium,
+  FontColor->RGBColor[1, 0, 0]]], "Print",
+ CellChangeTimes->{3.768799724924303*^9, 3.7687999172013683`*^9, 
+  3.768800051839587*^9},
+ CellLabel->
+  "During evaluation of \
+In[6]:=",ExpressionUUID->"11d4f445-ee56-49f4-9b76-e925bdda368a"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   StyleBox["\<\"The structure of the lists must be the same.\"\>",
+    StripOnInput->False,
+    LineIndent->0,
+    LineColor->RGBColor[0.85098, 0.235294, 0.235294],
+    FrontFaceColor->RGBColor[0.85098, 0.235294, 0.235294],
+    BackFaceColor->RGBColor[0.85098, 0.235294, 0.235294],
+    GraphicsColor->RGBColor[0.85098, 0.235294, 0.235294],
+    FontSize->10,
+    FontWeight->Bold,
+    FontColor->RGBColor[0.85098, 0.235294, 0.235294]], 
+   "\[InvisibleSpace]", "\<\"\\n\"\>", 
+   "\[InvisibleSpace]", "\<\"Subroutine: J2FiniteStrain3D\"\>", 
+   "\[InvisibleSpace]", 
+   StyleBox["\<\" Description: \"\>",
+    StripOnInput->False,
+    FontWeight->Bold], "\[InvisibleSpace]", 
+   TemplateBox[{"  ","\"  \"","\"First list: \"",RowBox[{"{", 
+       RowBox[{
+         InterpretationBox[
+          ButtonBox[
+           StyleBox[
+            TemplateBox[{
+              SubscriptBox["\"\[InvisiblePrefixScriptBase]\"", "3"], 
+              SubscriptBox["\"\[DoubleStruckH]g\"", "1"]}, "RowDefault"], 
+            FontColor -> RGBColor[0.501961, 0, 0], StripOnInput -> False], 
+           ButtonFunction :> AceGen`SMSButtonFunction["", {41, 95, 3}], 
+           ImageSize -> All, ImageMargins -> None, Evaluator -> Automatic, 
+           Appearance -> "Palette", FrameMargins -> None, Method -> 
+           "Preemptive"], 
+          AceGen`$V[95, 3]], ",", 
+         InterpretationBox[
+          ButtonBox[
+           StyleBox[
+            TemplateBox[{
+              SubscriptBox["\"\[InvisiblePrefixScriptBase]\"", "3"], 
+              SubscriptBox["\"\[DoubleStruckH]g\"", "2"]}, "RowDefault"], 
+            FontColor -> RGBColor[0.501961, 0, 0], StripOnInput -> False], 
+           ButtonFunction :> AceGen`SMSButtonFunction["", {41, 96, 3}], 
+           ImageSize -> All, ImageMargins -> None, Evaluator -> Automatic, 
+           Appearance -> "Palette", FrameMargins -> None, Method -> 
+           "Preemptive"], 
+          AceGen`$V[96, 3]], ",", 
+         InterpretationBox[
+          ButtonBox[
+           StyleBox[
+            TemplateBox[{
+              SubscriptBox["\"\[InvisiblePrefixScriptBase]\"", "3"], 
+              SubscriptBox["\"\[DoubleStruckH]g\"", "3"]}, "RowDefault"], 
+            FontColor -> RGBColor[0.501961, 0, 0], StripOnInput -> False], 
+           ButtonFunction :> AceGen`SMSButtonFunction["", {41, 97, 3}], 
+           ImageSize -> All, ImageMargins -> None, Evaluator -> Automatic, 
+           Appearance -> "Palette", FrameMargins -> None, Method -> 
+           "Preemptive"], 
+          AceGen`$V[97, 3]], ",", 
+         InterpretationBox[
+          ButtonBox[
+           StyleBox[
+            TemplateBox[{
+              SubscriptBox["\"\[InvisiblePrefixScriptBase]\"", "3"], 
+              SubscriptBox["\"\[DoubleStruckH]g\"", "4"]}, "RowDefault"], 
+            FontColor -> RGBColor[0.501961, 0, 0], StripOnInput -> False], 
+           ButtonFunction :> AceGen`SMSButtonFunction["", {41, 98, 3}], 
+           ImageSize -> All, ImageMargins -> None, Evaluator -> Automatic, 
+           Appearance -> "Palette", FrameMargins -> None, Method -> 
+           "Preemptive"], 
+          AceGen`$V[98, 3]], ",", 
+         InterpretationBox[
+          ButtonBox[
+           StyleBox[
+            TemplateBox[{
+              SubscriptBox["\"\[InvisiblePrefixScriptBase]\"", "3"], 
+              SubscriptBox["\"\[DoubleStruckH]g\"", "5"]}, "RowDefault"], 
+            FontColor -> RGBColor[0.501961, 0, 0], StripOnInput -> False], 
+           ButtonFunction :> AceGen`SMSButtonFunction["", {41, 99, 3}], 
+           ImageSize -> All, ImageMargins -> None, Evaluator -> Automatic, 
+           Appearance -> "Palette", FrameMargins -> None, Method -> 
+           "Preemptive"], 
+          AceGen`$V[99, 3]], ",", 
+         InterpretationBox[
+          ButtonBox[
+           StyleBox[
+            TemplateBox[{
+              SubscriptBox["\"\[InvisiblePrefixScriptBase]\"", "3"], 
+              SubscriptBox["\"\[DoubleStruckH]g\"", "6"]}, "RowDefault"], 
+            FontColor -> RGBColor[0.501961, 0, 0], StripOnInput -> False], 
+           ButtonFunction :> AceGen`SMSButtonFunction["", {41, 100, 3}], 
+           ImageSize -> All, ImageMargins -> None, Evaluator -> Automatic, 
+           Appearance -> "Palette", FrameMargins -> None, Method -> 
+           "Preemptive"], 
+          AceGen`$V[100, 3]], ",", 
+         InterpretationBox[
+          ButtonBox[
+           StyleBox[
+            TemplateBox[{
+              SubscriptBox["\"\[InvisiblePrefixScriptBase]\"", "3"], 
+              SubscriptBox["\"\[DoubleStruckH]g\"", "7"]}, "RowDefault"], 
+            FontColor -> RGBColor[0.501961, 0, 0], StripOnInput -> False], 
+           ButtonFunction :> AceGen`SMSButtonFunction["", {41, 101, 3}], 
+           ImageSize -> All, ImageMargins -> None, Evaluator -> Automatic, 
+           Appearance -> "Palette", FrameMargins -> None, Method -> 
+           "Preemptive"], 
+          AceGen`$V[101, 3]], ",", 
+         InterpretationBox[
+          ButtonBox[
+           StyleBox[
+            TemplateBox[{
+              SubscriptBox["\"\[InvisiblePrefixScriptBase]\"", "3"], 
+              SubscriptBox["\"\[DoubleStruckH]g\"", "8"]}, "RowDefault"], 
+            FontColor -> RGBColor[0.501961, 0, 0], StripOnInput -> False], 
+           ButtonFunction :> AceGen`SMSButtonFunction["", {41, 102, 3}], 
+           ImageSize -> All, ImageMargins -> None, Evaluator -> Automatic, 
+           Appearance -> "Palette", FrameMargins -> None, Method -> 
+           "Preemptive"], 
+          AceGen`$V[102, 3]], ",", 
+         InterpretationBox[
+          ButtonBox[
+           StyleBox[
+            TemplateBox[{
+              SubscriptBox["\"\[InvisiblePrefixScriptBase]\"", "3"], 
+              SubscriptBox["\"\[DoubleStruckH]g\"", "9"]}, "RowDefault"], 
+            FontColor -> RGBColor[0.501961, 0, 0], StripOnInput -> False], 
+           ButtonFunction :> AceGen`SMSButtonFunction["", {41, 103, 3}], 
+           ImageSize -> All, ImageMargins -> None, Evaluator -> Automatic, 
+           Appearance -> "Palette", FrameMargins -> None, Method -> 
+           "Preemptive"], 
+          AceGen`$V[103, 3]], ",", 
+         InterpretationBox[
+          ButtonBox[
+           StyleBox[
+            TemplateBox[{
+              SubscriptBox["\"\[InvisiblePrefixScriptBase]\"", "3"], 
+              SubscriptBox["\"\[DoubleStruckH]g\"", "10"]}, "RowDefault"], 
+            FontColor -> RGBColor[0.501961, 0, 0], StripOnInput -> False], 
+           ButtonFunction :> AceGen`SMSButtonFunction["", {41, 104, 3}], 
+           ImageSize -> All, ImageMargins -> None, Evaluator -> Automatic, 
+           Appearance -> "Palette", FrameMargins -> None, Method -> 
+           "Preemptive"], 
+          AceGen`$V[104, 3]]}], "}"}],"\" Second list: \"",RowBox[{"{", 
+       RowBox[{
+         RowBox[{"h$$", "[", "1", "]"}], ",", 
+         RowBox[{"h$$", "[", "2", "]"}], ",", 
+         RowBox[{"h$$", "[", "3", "]"}], ",", 
+         RowBox[{"h$$", "[", "4", "]"}], ",", 
+         RowBox[{"h$$", "[", "5", "]"}], ",", 
+         RowBox[{"h$$", "[", "6", "]"}], ",", 
+         RowBox[{"h$$", "[", "7", "]"}], ",", 
+         RowBox[{"h$$", "[", "8", "]"}], ",", 
+         RowBox[{"h$$", "[", "9", "]"}]}], "}"}]},
+    "RowWithSeparators"], "\[InvisibleSpace]", 
+   StyleBox["\<\"\\nEvents: \"\>",
+    StripOnInput->False,
+    FontWeight->Bold], "\[InvisibleSpace]", 
+   RowBox[{"8", " ", "\<\"SMSDB-0\"\>"}], "\[InvisibleSpace]", "\<\"\\n\"\>", 
+   "\[InvisibleSpace]", 
+   StyleBox["\<\"Version: \"\>",
+    StripOnInput->False,
+    FontWeight->Bold], 
+   "\[InvisibleSpace]", "\<\"6.923 MacOSX (19 Apr 19) (MMA 12.)\"\>", 
+   "\[InvisibleSpace]", 
+   StyleBox["\<\" Module: \"\>",
+    StripOnInput->False,
+    FontWeight->Bold], "\[InvisibleSpace]", "\<\"SMSExport\"\>", 
+   "\[InvisibleSpace]", 
+   StyleBox["\<\"\\nSee also: \"\>",
+    StripOnInput->False,
+    FontWeight->Bold], "\[InvisibleSpace]", 
+   TagBox[
+    ButtonBox["SMSExport",
+     BaseStyle->{"Link", Medium},
+     ButtonFunction:>Documentation`HelpLookup[
+      "paclet:AceGen/tutorial/Symbolic-Numeric Interface", \
+$CellContext`CompletionFunction -> ((
+        SetOptions[#, DockedCells -> 
+          AceCommon`SMCSetUserInterface["DockedCells"]]; NotebookFind[#, 
+          Apply[Sequence, {"SMSExport", All, CellTags}]])& )],
+     Evaluator->Automatic,
+     Method->"Preemptive"],
+    DisplayForm], "\[InvisibleSpace]", "\<\"  \"\>", "\[InvisibleSpace]", 
+   TagBox[
+    ButtonBox[
+     RowBox[{"AceGen", " ", "Troubleshooting"}],
+     BaseStyle->{"Link", Medium},
+     ButtonFunction:>Documentation`HelpLookup[
+      "paclet:AceGen/tutorial/AceGen Troubleshooting", \
+$CellContext`CompletionFunction -> (
+        SetOptions[#, DockedCells -> 
+         AceCommon`SMCSetUserInterface["DockedCells"]]& )],
+     Evaluator->Automatic,
+     Method->"Preemptive"],
+    DisplayForm], "\[InvisibleSpace]", "\<\"  \"\>", "\[InvisibleSpace]", 
+   ButtonBox[
+    StyleBox["\<\"Continue\"\>",
+     StripOnInput->False,
+     FontSize->Medium],
+    Appearance->Automatic,
+    ButtonFunction:>(Part[AceCommon`SMCSession, 6] = False; 
+     AceCommon`SMCAction = Hold[]; If[
+       And[AceCommon`SMCAceGenLoaded, 
+        Or[Part[AceGen`SMSSession, 1] === "Derivation", 
+         And[
+          MatchQ[
+           Part[AceGen`SMSSession, 1], 
+           Alternatives["Write", "Reload"]], Part[AceGen`SMSSession, 6] === 
+          "Debug"]]], AceGen`SMSShowEnabled = True; AceGen`SMSSetVFormat[
+         Part[AceGen`SMSEditMode, 3]]; Null]; Null),
+    Evaluator->Automatic,
+    Method->"Preemptive"]}],
+  SequenceForm[
+   Style["The structure of the lists must be the same.", 
+    RGBColor[0.85098, 0.235294, 0.235294], Bold, 10, LineIndent -> 0], "\n", 
+   "Subroutine: J2FiniteStrain3D", 
+   Style[" Description: ", Bold], 
+   Row[{"First list: ", {
+      Interpretation[
+       Button[
+        Style[
+         Row[{
+           Subscript["\[InvisiblePrefixScriptBase]", 3], 
+           Subscript["\[DoubleStruckH]g", 1]}], FontColor -> 
+         RGBColor[0.501961, 0, 0]], 
+        AceGen`SMSButtonFunction["", {41, 95, 3}], ImageSize -> All, 
+        ImageMargins -> None, Evaluator -> Automatic, Appearance -> "Palette",
+         FrameMargins -> None], 
+       AceGen`$V[95, 3]], 
+      Interpretation[
+       Button[
+        Style[
+         Row[{
+           Subscript["\[InvisiblePrefixScriptBase]", 3], 
+           Subscript["\[DoubleStruckH]g", 2]}], FontColor -> 
+         RGBColor[0.501961, 0, 0]], 
+        AceGen`SMSButtonFunction["", {41, 96, 3}], ImageSize -> All, 
+        ImageMargins -> None, Evaluator -> Automatic, Appearance -> "Palette",
+         FrameMargins -> None], 
+       AceGen`$V[96, 3]], 
+      Interpretation[
+       Button[
+        Style[
+         Row[{
+           Subscript["\[InvisiblePrefixScriptBase]", 3], 
+           Subscript["\[DoubleStruckH]g", 3]}], FontColor -> 
+         RGBColor[0.501961, 0, 0]], 
+        AceGen`SMSButtonFunction["", {41, 97, 3}], ImageSize -> All, 
+        ImageMargins -> None, Evaluator -> Automatic, Appearance -> "Palette",
+         FrameMargins -> None], 
+       AceGen`$V[97, 3]], 
+      Interpretation[
+       Button[
+        Style[
+         Row[{
+           Subscript["\[InvisiblePrefixScriptBase]", 3], 
+           Subscript["\[DoubleStruckH]g", 4]}], FontColor -> 
+         RGBColor[0.501961, 0, 0]], 
+        AceGen`SMSButtonFunction["", {41, 98, 3}], ImageSize -> All, 
+        ImageMargins -> None, Evaluator -> Automatic, Appearance -> "Palette",
+         FrameMargins -> None], 
+       AceGen`$V[98, 3]], 
+      Interpretation[
+       Button[
+        Style[
+         Row[{
+           Subscript["\[InvisiblePrefixScriptBase]", 3], 
+           Subscript["\[DoubleStruckH]g", 5]}], FontColor -> 
+         RGBColor[0.501961, 0, 0]], 
+        AceGen`SMSButtonFunction["", {41, 99, 3}], ImageSize -> All, 
+        ImageMargins -> None, Evaluator -> Automatic, Appearance -> "Palette",
+         FrameMargins -> None], 
+       AceGen`$V[99, 3]], 
+      Interpretation[
+       Button[
+        Style[
+         Row[{
+           Subscript["\[InvisiblePrefixScriptBase]", 3], 
+           Subscript["\[DoubleStruckH]g", 6]}], FontColor -> 
+         RGBColor[0.501961, 0, 0]], 
+        AceGen`SMSButtonFunction["", {41, 100, 3}], ImageSize -> All, 
+        ImageMargins -> None, Evaluator -> Automatic, Appearance -> "Palette",
+         FrameMargins -> None], 
+       AceGen`$V[100, 3]], 
+      Interpretation[
+       Button[
+        Style[
+         Row[{
+           Subscript["\[InvisiblePrefixScriptBase]", 3], 
+           Subscript["\[DoubleStruckH]g", 7]}], FontColor -> 
+         RGBColor[0.501961, 0, 0]], 
+        AceGen`SMSButtonFunction["", {41, 101, 3}], ImageSize -> All, 
+        ImageMargins -> None, Evaluator -> Automatic, Appearance -> "Palette",
+         FrameMargins -> None], 
+       AceGen`$V[101, 3]], 
+      Interpretation[
+       Button[
+        Style[
+         Row[{
+           Subscript["\[InvisiblePrefixScriptBase]", 3], 
+           Subscript["\[DoubleStruckH]g", 8]}], FontColor -> 
+         RGBColor[0.501961, 0, 0]], 
+        AceGen`SMSButtonFunction["", {41, 102, 3}], ImageSize -> All, 
+        ImageMargins -> None, Evaluator -> Automatic, Appearance -> "Palette",
+         FrameMargins -> None], 
+       AceGen`$V[102, 3]], 
+      Interpretation[
+       Button[
+        Style[
+         Row[{
+           Subscript["\[InvisiblePrefixScriptBase]", 3], 
+           Subscript["\[DoubleStruckH]g", 9]}], FontColor -> 
+         RGBColor[0.501961, 0, 0]], 
+        AceGen`SMSButtonFunction["", {41, 103, 3}], ImageSize -> All, 
+        ImageMargins -> None, Evaluator -> Automatic, Appearance -> "Palette",
+         FrameMargins -> None], 
+       AceGen`$V[103, 3]], 
+      Interpretation[
+       Button[
+        Style[
+         Row[{
+           Subscript["\[InvisiblePrefixScriptBase]", 3], 
+           Subscript["\[DoubleStruckH]g", 10]}], FontColor -> 
+         RGBColor[0.501961, 0, 0]], 
+        AceGen`SMSButtonFunction["", {41, 104, 3}], ImageSize -> All, 
+        ImageMargins -> None, Evaluator -> Automatic, Appearance -> "Palette",
+         FrameMargins -> None], 
+       AceGen`$V[104, 3]]}, " Second list: ", {
+      AceEnvironment`h$$[1], 
+      AceEnvironment`h$$[2], 
+      AceEnvironment`h$$[3], 
+      AceEnvironment`h$$[4], 
+      AceEnvironment`h$$[5], 
+      AceEnvironment`h$$[6], 
+      AceEnvironment`h$$[7], 
+      AceEnvironment`h$$[8], 
+      AceEnvironment`h$$[9]}}, "  "], 
+   Style["\nEvents: ", Bold], 8 "SMSDB-0", "\n", 
+   Style["Version: ", Bold], "6.923 MacOSX (19 Apr 19) (MMA 12.)", 
+   Style[" Module: ", Bold], "SMSExport", 
+   Style["\nSee also: ", Bold], 
+   DisplayForm[
+    ButtonBox[
+    "SMSExport", BaseStyle -> {"Link", Medium}, ButtonFunction :> 
+     Documentation`HelpLookup[
+      "paclet:AceGen/tutorial/Symbolic-Numeric Interface", \
+$CellContext`CompletionFunction -> ((
+        SetOptions[#, DockedCells -> 
+          AceCommon`SMCSetUserInterface["DockedCells"]]; NotebookFind[#, 
+          Apply[Sequence, {"SMSExport", All, CellTags}]])& )], Evaluator -> 
+     Automatic, Method -> "Preemptive"]], "  ", 
+   DisplayForm[
+    ButtonBox[
+    "AceGen Troubleshooting", BaseStyle -> {"Link", Medium}, ButtonFunction :> 
+     Documentation`HelpLookup[
+      "paclet:AceGen/tutorial/AceGen Troubleshooting", \
+$CellContext`CompletionFunction -> (
+        SetOptions[#, DockedCells -> 
+         AceCommon`SMCSetUserInterface["DockedCells"]]& )], Evaluator -> 
+     Automatic, Method -> "Preemptive"]], "  ", 
+   Button[
+    Style["Continue", Medium], Part[AceCommon`SMCSession, 6] = False; 
+    AceCommon`SMCAction = Hold[]; If[
+      And[AceCommon`SMCAceGenLoaded, 
+       Or[Part[AceGen`SMSSession, 1] === "Derivation", 
+        And[
+         MatchQ[
+          Part[AceGen`SMSSession, 1], 
+          Alternatives["Write", "Reload"]], Part[AceGen`SMSSession, 6] === 
+         "Debug"]]], AceGen`SMSShowEnabled = True; AceGen`SMSSetVFormat[
+        Part[AceGen`SMSEditMode, 3]]; Null]; Null]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.768799724924303*^9, 3.7687999172013683`*^9, 
+  3.768800054255478*^9},
+ CellLabel->
+  "During evaluation of \
+In[6]:=",ExpressionUUID->"e9def139-e623-46e8-bde0-436aa61f8c18"]
+}, Open  ]],
+
+Cell[BoxData["$Aborted"], "Output",
+ CellChangeTimes->{3.768799725373945*^9, 3.7687999398177137`*^9, 
+  3.76880005438404*^9},
+ CellLabel->"Out[41]=",ExpressionUUID->"d919090e-7234-4308-86fb-41dcba9a3b01"]
+}, Open  ]]
 }, Open  ]]
 },
-WindowSize->{808, 855},
-WindowMargins->{{218, Automatic}, {Automatic, 180}},
+WindowSize->{1319, 1357},
+WindowMargins->{{210, Automatic}, {Automatic, -360}},
 FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
 ]
@@ -1196,30 +2714,58 @@ Cell[CellGroupData[{
 Cell[7384, 241, 169, 3, 54, "Subsection",ExpressionUUID->"97acbb4e-080d-4a82-a07c-19e0a5fef2b1"],
 Cell[7556, 246, 476, 13, 82, "Text",ExpressionUUID->"4e1c2e72-720e-43fe-ae6b-0e1250a6efcc"],
 Cell[CellGroupData[{
-Cell[8057, 263, 9054, 216, 753, "Input",ExpressionUUID->"3f0d847a-6123-4db9-a12f-9c7d75c36d19"],
-Cell[17114, 481, 3193, 74, 86, "Print",ExpressionUUID->"41a53392-c9f8-4a4a-8cea-336cfc138363"]
+Cell[8057, 263, 9095, 218, 753, "Input",ExpressionUUID->"3f0d847a-6123-4db9-a12f-9c7d75c36d19"],
+Cell[17155, 483, 3193, 74, 86, "Print",ExpressionUUID->"41a53392-c9f8-4a4a-8cea-336cfc138363"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[20356, 561, 163, 3, 54, "Subsection",ExpressionUUID->"88b6064e-dd20-4606-9e73-a85e5427c825"],
+Cell[20397, 563, 163, 3, 54, "Subsection",ExpressionUUID->"88b6064e-dd20-4606-9e73-a85e5427c825"],
 Cell[CellGroupData[{
-Cell[20544, 568, 2001, 50, 169, "Input",ExpressionUUID->"56bb9bb5-a137-4381-8bd6-0aeef7de36c0"],
-Cell[22548, 620, 1169, 26, 76, "Output",ExpressionUUID->"d92be19f-f3a6-4393-a604-f857f673ea70"]
+Cell[20585, 570, 2001, 50, 169, "Input",ExpressionUUID->"56bb9bb5-a137-4381-8bd6-0aeef7de36c0"],
+Cell[22589, 622, 1169, 26, 76, "Output",ExpressionUUID->"d92be19f-f3a6-4393-a604-f857f673ea70"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[23778, 653, 166, 3, 98, "Title",ExpressionUUID->"7de93dac-5ed9-4521-a44a-58035c84dbf4"],
+Cell[23819, 655, 166, 3, 98, "Title",ExpressionUUID->"7de93dac-5ed9-4521-a44a-58035c84dbf4"],
 Cell[CellGroupData[{
-Cell[23969, 660, 7937, 189, 384, "Input",ExpressionUUID->"f3ea91b8-ed2b-468c-a1a4-acea30ae07fc"],
-Cell[31909, 851, 2616, 66, 86, "Print",ExpressionUUID->"e28674ba-0e9b-44b9-af1b-f33499755eb8"]
+Cell[24010, 662, 7937, 189, 384, "Input",ExpressionUUID->"f3ea91b8-ed2b-468c-a1a4-acea30ae07fc"],
+Cell[31950, 853, 2616, 66, 86, "Print",ExpressionUUID->"e28674ba-0e9b-44b9-af1b-f33499755eb8"]
 }, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[34615, 925, 164, 3, 72, "Title",ExpressionUUID->"45ecbc3f-c8bb-4e2d-b361-1289ebc4f19d"],
+Cell[CellGroupData[{
+Cell[34804, 932, 7216, 171, 363, "Input",ExpressionUUID->"2c61b94d-2de2-4ff1-b17f-cdb56fa1f763"],
+Cell[42023, 1105, 2541, 65, 86, "Print",ExpressionUUID->"16313108-f1a0-4935-8a32-63230d3d9ee3"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[44613, 1176, 270, 4, 72, "Title",ExpressionUUID->"cbefa29c-0ce1-4064-a6c5-a28ad2c7906d"],
+Cell[CellGroupData[{
+Cell[44908, 1184, 8515, 196, 409, "Input",ExpressionUUID->"3850eaae-ceee-40a7-b471-af8c3ea4c819"],
+Cell[53426, 1382, 2493, 64, 86, "Print",ExpressionUUID->"4e2b9cab-e6e7-4f53-8251-4973d9f2aec9"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[55968, 1452, 321, 5, 72, "Title",ExpressionUUID->"321d3b9c-1ea4-4ef6-b307-1eb4bdc603fe"],
+Cell[CellGroupData[{
+Cell[56314, 1461, 7475, 170, 346, "Input",ExpressionUUID->"0dd1c630-14b1-4057-ad63-1c077c9fce3c"],
+Cell[63792, 1633, 2518, 65, 86, "Print",ExpressionUUID->"6b1121d0-2648-47bd-8bd9-c8f2780b7cbf"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[66359, 1704, 371, 6, 72, "Title",ExpressionUUID->"d0645cbb-5c75-4e12-94d0-0df5355fc01a"],
+Cell[66733, 1712, 9936, 228, 688, "Input",ExpressionUUID->"ecc573e2-7795-4879-8a2b-168e7718e9be"],
+Cell[76672, 1942, 3897, 62, 73, "Input",ExpressionUUID->"bd908fdb-4d53-41a5-83d0-a3f8e77cb409"],
+Cell[CellGroupData[{
+Cell[80594, 2008, 8464, 221, 1190, "Input",ExpressionUUID->"0b727376-9c21-413a-9d5d-c5effb5a515d"],
+Cell[CellGroupData[{
+Cell[89083, 2233, 1231, 30, 46, "Print",ExpressionUUID->"b06bcdba-c79e-45fe-b383-460e67703f71"],
+Cell[90317, 2265, 1794, 39, 29, "Print",ExpressionUUID->"11d4f445-ee56-49f4-9b76-e925bdda368a"],
+Cell[92114, 2306, 16258, 374, 141, "Print",ExpressionUUID->"e9def139-e623-46e8-bde0-436aa61f8c18"]
 }, Open  ]],
-Cell[CellGroupData[{
-Cell[34574, 923, 164, 3, 98, "Title",ExpressionUUID->"45ecbc3f-c8bb-4e2d-b361-1289ebc4f19d"],
-Cell[CellGroupData[{
-Cell[34763, 930, 7216, 171, 363, "Input",ExpressionUUID->"2c61b94d-2de2-4ff1-b17f-cdb56fa1f763"],
-Cell[41982, 1103, 2541, 65, 86, "Print",ExpressionUUID->"16313108-f1a0-4935-8a32-63230d3d9ee3"]
+Cell[108387, 2683, 204, 3, 34, "Output",ExpressionUUID->"d919090e-7234-4308-86fb-41dcba9a3b01"]
 }, Open  ]]
 }, Open  ]]
 }

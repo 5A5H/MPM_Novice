@@ -290,11 +290,6 @@ void GridToParticle(double &dt, MPMMaterial &Mate){
       // Update Particles Stresses
       double dummyh[20];
       Mate.GetStresses(Pt.F, dummyh, Pt.Sig);
-      // for (int i=0;i<3;i++){
-      //   for (int j=0;j<3;j++){
-      //     Pt.Sig[i][j] = 0e0;
-      //   }
-      // }
 
 
   } // end if particle is alone in the dark ...
@@ -322,11 +317,19 @@ int main()
     int PostFrequency = 200;
 
 //------------------------------------------ Material declaration -----------------------------------------------------
-    MPMMaterial Steel(2);
-    double Emod = 1000;
+    MPMMaterial Steel(5);
+    double Emod = 2000;
     double nu   = 0.3;
+    double y0   = 10e10;
+    double yinf = 10e10;
+    double kh   = 10e10;
+    double deltah = 0;
     Steel.SetMaterialParameter(Emod);
     Steel.SetMaterialParameter(nu);
+    Steel.SetMaterialParameter(y0);
+    Steel.SetMaterialParameter(yinf);
+    Steel.SetMaterialParameter(kh);
+    Steel.SetMaterialParameter(deltah);
     Material.push_back(Steel);
 
 //------------------------------------------ spatial discretization ---------------------------------------------------

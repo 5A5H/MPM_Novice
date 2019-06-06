@@ -8,5 +8,9 @@ void SmallStrainHookePlaneStrain2D(double MaterialData[2],double Eps[3],double E
 
 void SmallStrainHookePlaneStress2D(double MaterialData[2],double Eps[3],double Exp[16]);
 
+void STVKPlaneStress2D(double MaterialData[2],double F[9],double Sig[9],double Cmat[9][9]);
+
+void STVKPlaneStrain2D(double MaterialData[2],double F[9],double Sig[9],double Cmat[9][9]);
+
 
 #endif
