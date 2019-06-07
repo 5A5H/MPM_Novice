@@ -289,6 +289,7 @@ void GridToParticle(double &dt, MPMMaterial &Mate){
 
       // Update Particles Stresses
       double dummyh[20];
+      for (int i=0;i<20;i++) dummyh[i]=0.0;
       Mate.GetStresses(Pt.F, dummyh, Pt.Sig);
 
 
@@ -317,8 +318,8 @@ int main()
     int PostFrequency = 200;
 
 //------------------------------------------ Material declaration -----------------------------------------------------
-    MPMMaterial Steel(5);
-    double Emod = 2000;
+    MPMMaterial Steel(6);
+    double Emod = 1000;
     double nu   = 0.3;
     double y0   = 10e10;
     double yinf = 10e10;

@@ -22,14 +22,14 @@
 
 #ifdef SMSWINDOWS
 #include "direct.h"
-#endif 
+#endif
 
 #ifdef SMSLINUX
 #include <unistd.h>
 #include <sys/dir.h>
 #include <sys/param.h>
 #include <dlfcn.h>
-#endif 
+#endif
 
 #ifdef SMSMAC
 #include <dlfcn.h>
@@ -39,7 +39,7 @@
 #define min(a,b) (((a)<(b))?(a):(b))
 #endif
 #ifndef max
-#define max(a,b) (((a)>(b))?(a):(b)) 
+#define max(a,b) (((a)>(b))?(a):(b))
 #endif
 
 #ifdef SMSWINDOWS
@@ -64,7 +64,7 @@
 #define CALLBACK __attribute__((__stdcall__))
 #define DLLEXPORT
 #define _inline
-#endif 
+#endif
 
 #ifdef SMSMAC
 #define GETCWD getcwd
@@ -79,7 +79,7 @@
 #define CALLBACK __attribute__((__stdcall__))
 #define DLLEXPORT
 #define _inline
-#endif 
+#endif
 
 
 double SMSDot(double a[],double b[],int n);
@@ -102,5 +102,6 @@ void SMSZero(double a[],int n);
 #define LessEqual(a,b,c)        (a<=b && b<=c)
 #define Greater(a,b,c)        (a>b && b>c)
 #define GreaterEqual(a,b,c)        (a>=b && b>=c)
+
 
 #endif

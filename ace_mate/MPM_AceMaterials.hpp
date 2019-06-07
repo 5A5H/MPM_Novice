@@ -12,5 +12,6 @@ void STVKPlaneStress2D(double MaterialData[2],double F[9],double Sig[9],double C
 
 void STVKPlaneStrain2D(double MaterialData[2],double F[9],double Sig[9],double Cmat[9][9]);
 
+void J2FiniteStrain3D(double d[6],double F[9],double h[10],double Sig[9],double Cmat[9][9]);
 
 #endif

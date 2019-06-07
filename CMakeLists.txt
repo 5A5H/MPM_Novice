@@ -22,13 +22,13 @@ add_library(mdm2dp
     ace_mate/SmallStrainHookePlaneStress2D.cpp
     ace_mate/STVKPlaneStress2D.cpp
     ace_mate/STVKPlaneStrain2D.cpp
+    ace_mate/J2FiniteStrain3D.cpp
     src/MPM_Process.cpp
     src/MPM_OutputVTK.cpp
     src/MPM_Particle.cpp
     src/MPM_GridNode.cpp
     src/MPM_GridElement.cpp
 )
-
 
 target_include_directories(
   mdm2dp
@@ -37,22 +37,44 @@ target_include_directories(
     "ace_mate"
 )
 
-add_executable(MPM2D
-  main.cpp
+# Metal Cutting
+add_executable(MetalCut
+              metal_cut/metal_cut.cpp
 )
-target_link_libraries(MPM2D mdm2dp)
+target_link_libraries(MetalCut
+                      mdm2dp
+                      /Users/sash/mpm_2d/ace_mate/libaceutility.a
+)
+
+
+add_executable(MPM2D
+               main.cpp
+)
+target_link_libraries(MPM2D
+                      mdm2dp
+                      /Users/sash/mpm_2d/ace_mate/libaceutility.a
+)
 
 add_executable(DiscMDM2D
-  two_discs.cpp
+               two_discs.cpp
 )
-target_link_libraries(DiscMDM2D mdm2dp)
+target_link_libraries(DiscMDM2D
+                      mdm2dp
+                      /Users/sash/mpm_2d/ace_mate/libaceutility.a
+)
 
 add_executable(DiscMDM2Dn
-  two_discs_n.cpp
+               two_discs_n.cpp
 )
-target_link_libraries(DiscMDM2Dn mdm2dp)
+target_link_libraries(DiscMDM2Dn
+                      mdm2dp
+                      /Users/sash/mpm_2d/ace_mate/libaceutility.a
+)
 
 add_executable(BarMDM2D
-  bar.cpp
+               bar.cpp
 )
-target_link_libraries(BarMDM2D mdm2dp)
+target_link_libraries(BarMDM2D
+                      mdm2dp
+                      /Users/sash/mpm_2d/ace_mate/libaceutility.a
+)

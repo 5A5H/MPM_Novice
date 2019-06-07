@@ -63,7 +63,11 @@ MPMMaterial::MPMMaterial(int id){
       ID=id;
       break;
 
-    
+    case 6:
+      std::cout << "AceGen material Created"  << std::endl;
+      std::cout << " - J2 finite strain plasticity"  << std::endl;
+      ID=id;
+      break;
 
     default:
       std::cout << "Waring: Material not defined!"  << std::endl;
@@ -232,6 +236,29 @@ Fvec[0]=F[0][0]; Fvec[1]=F[0][1]; Fvec[2]=F[0][2];
 Fvec[3]=F[1][0]; Fvec[4]=F[1][1]; Fvec[5]=F[1][2];
 Fvec[6]=F[2][0]; Fvec[7]=F[2][1]; Fvec[8]=F[2][2];
 STVKPlaneStrain2D(v ,Fvec ,Sigvec ,Cmat);
+// Transform Sigvec back to tensor notation
+Sig[0][0]=Sigvec[0];Sig[0][1]=Sigvec[1];Sig[0][2]=Sigvec[2];
+Sig[1][0]=Sigvec[3];Sig[1][1]=Sigvec[4];Sig[1][2]=Sigvec[5];
+Sig[2][0]=Sigvec[6];Sig[2][1]=Sigvec[7];Sig[2][2]=Sigvec[8];
+
+
+break;
+
+case 6:
+// Call AceGen Material Subroutine: STVK Elastic Hookes Law with Plain Strain assumption
+if (MaterialParameter.size()!=6) {std::cout << "Warning: Material Parameter not set properly! "  << std::endl; break;}
+v[0] = MaterialParameter[0]; // Emod
+v[1] = MaterialParameter[1]; // nu
+v[2] = MaterialParameter[2]; // y_0
+v[3] = MaterialParameter[3]; // y_inf
+v[4] = MaterialParameter[4]; // kh
+v[5] = MaterialParameter[5]; // deltah
+// Flatten deformation gradient
+Fvec[0]=F[0][0]; Fvec[1]=F[0][1]; Fvec[2]=F[0][2];
+Fvec[3]=F[1][0]; Fvec[4]=F[1][1]; Fvec[5]=F[1][2];
+Fvec[6]=F[2][0]; Fvec[7]=F[2][1]; Fvec[8]=F[2][2];
+J2FiniteStrain3D(v ,Fvec ,h ,Sigvec ,Cmat);
+//STVKPlaneStrain2D(v ,Fvec ,Sigvec ,Cmat);
 // Transform Sigvec back to tensor notation
 Sig[0][0]=Sigvec[0];Sig[0][1]=Sigvec[1];Sig[0][2]=Sigvec[2];
 Sig[1][0]=Sigvec[3];Sig[1][1]=Sigvec[4];Sig[1][2]=Sigvec[5];

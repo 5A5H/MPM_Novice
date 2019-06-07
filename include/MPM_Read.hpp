@@ -5,7 +5,7 @@
 #include <vector>
 
 void ReadParticle(std::string FileName, std::vector<MPMParticle> &ParticleContainer);
-void ReadGridNodes(std::string FileName, std::vector<MPMGridNode> &GridNodeContainer);
+//void ReadGridNodes(std::string FileName, std::vector<MPMGridNode> &GridNodeContainer);
 void ReadGridElementsQ4(std::string FileName, std::vector<MPMGridElement> &GridElementContainer);
 
 void ReadParticle(std::string FileName, std::vector<MPMParticle> &ParticleContainer) {
@@ -42,12 +42,12 @@ void ReadParticle(std::string FileName, std::vector<MPMParticle> &ParticleContai
   }
 }
 
-void ReadGridNodes(std::string FileName, std::vector<MPMGridNode> &GridNodeContainer) {
+void ReadGridNodes(std::string FileName, std::vector<MPMGridNode> &GridNodeContainer, int mode = 0) {
   std::ifstream INFile(FileName, std::ios::in);
   if (INFile.is_open()) {
     std::string line;
     int i = 0;
-    double x,y;
+    double x,y,z;
     while (std::getline(INFile, line)) {
       std::size_t pos = 0;
       // Find X-Coordinate
@@ -57,8 +57,17 @@ void ReadGridNodes(std::string FileName, std::vector<MPMGridNode> &GridNodeConta
       line.erase(0,pos+1);
       pos = line.find(',');
       std::istringstream( line.substr(0,pos) ) >> y;
+      if (mode==0) {
       // Give birth to a node
       GridNodeContainer.push_back(   MPMGridNode(i, x, y, 0.0)   );
+    } else {
+      //Find Z-Coordinae
+      line.erase(0,pos+1);
+      pos = line.find(',');
+      std::istringstream( line.substr(0,pos) ) >> z;
+      // Give birth to a node
+      GridNodeContainer.push_back(   MPMGridNode(i, x, y, z)   );
+    }
       i++;
     }
     INFile.close();
