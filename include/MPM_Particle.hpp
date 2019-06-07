@@ -1,6 +1,7 @@
 #ifndef _MPM_PARTICLE_
 #define _MPM_PARTICLE_
 
+#include <math.h>
 
 class MPMParticle {
   public:
@@ -25,11 +26,13 @@ class MPMParticle {
       double L[3][3]; //velocity gradient
       double b[3]; //body force
       int Elmt; //current element of the particle
+      double h[20]; // material point history
+
 
       bool checkNAN();
       double getMass(void);                       // A Member Function that returns the Current Mass of the Particle  MemberFunction: hass access to all data of the object
       void Report(void);                          // A Member Function to print out a report of this object
-
+      double SigMises(){return sqrt(0.15e1*(2e0*Sig[0][1]*Sig[1][0]+2e0*Sig[0][2]*Sig[2][0]+2e0*Sig[1][2]*Sig[2][1]+pow(Sig[0][0]+((-Sig[0][0]-Sig[1][1]-Sig[2][2])/3e0),2)+pow(Sig[1][1]+((-Sig[0][0]-Sig[1][1]-Sig[2][2])/3e0),2)+pow(Sig[2][2]+((-Sig[0][0]-Sig[1][1]-Sig[2][2])/3e0),2)));}
   private:
 };
 

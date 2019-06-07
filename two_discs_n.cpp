@@ -288,9 +288,7 @@ void GridToParticle(double &dt, MPMMaterial &Mate){
 
 
       // Update Particles Stresses
-      double dummyh[20];
-      for (int i=0;i<20;i++) dummyh[i]=0.0;
-      Mate.GetStresses(Pt.F, dummyh, Pt.Sig);
+      Mate.GetStresses(Pt.F, Pt.h, Pt.Sig);
 
 
   } // end if particle is alone in the dark ...
@@ -306,7 +304,7 @@ int main()
     MPMTimings.SetTime("Program Start");
 
     double t0 = 0.0;
-    double tmax = 3.5;
+    double tmax = 6.5;
     double dt = 0.001;
     double rho  = 1000;
     int step = 1;
@@ -321,9 +319,9 @@ int main()
     MPMMaterial Steel(6);
     double Emod = 1000;
     double nu   = 0.3;
-    double y0   = 10e10;
+    double y0   = 100;
     double yinf = 10e10;
-    double kh   = 10e10;
+    double kh   = 1;
     double deltah = 0;
     Steel.SetMaterialParameter(Emod);
     Steel.SetMaterialParameter(nu);

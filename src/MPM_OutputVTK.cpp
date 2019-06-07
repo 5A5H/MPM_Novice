@@ -85,6 +85,69 @@ void MPMOutputVTK::TestVTUParticleExport(std::string FileName, std::vector<MPMPa
     }
     OutputFile << "</DataArray>" << std::endl;
 
+    // Write Particle Stresses
+    OutputFile << "<DataArray Name=\"Sig11\" NumberOfComponents=\"1\" format=\"ascii\" type=\"Float32\">";
+    for (auto &Particle : OutParticleContainer) {
+      OutputFile << "  " << Particle.Sig[0][0];
+    }
+    OutputFile << "</DataArray>" << std::endl;
+    OutputFile << "<DataArray Name=\"Sig12\" NumberOfComponents=\"1\" format=\"ascii\" type=\"Float32\">";
+    for (auto &Particle : OutParticleContainer) {
+      OutputFile << "  " << Particle.Sig[0][1];
+    }
+    OutputFile << "</DataArray>" << std::endl;
+    OutputFile << "<DataArray Name=\"Sig13\" NumberOfComponents=\"1\" format=\"ascii\" type=\"Float32\">";
+    for (auto &Particle : OutParticleContainer) {
+      OutputFile << "  " << Particle.Sig[0][2];
+    }
+    OutputFile << "</DataArray>" << std::endl;
+    OutputFile << "<DataArray Name=\"Sig21\" NumberOfComponents=\"1\" format=\"ascii\" type=\"Float32\">";
+    for (auto &Particle : OutParticleContainer) {
+      OutputFile << "  " << Particle.Sig[1][0];
+    }
+    OutputFile << "</DataArray>" << std::endl;
+    OutputFile << "<DataArray Name=\"Sig22\" NumberOfComponents=\"1\" format=\"ascii\" type=\"Float32\">";
+    for (auto &Particle : OutParticleContainer) {
+      OutputFile << "  " << Particle.Sig[1][1];
+    }
+    OutputFile << "</DataArray>" << std::endl;
+    OutputFile << "<DataArray Name=\"Sig23\" NumberOfComponents=\"1\" format=\"ascii\" type=\"Float32\">";
+    for (auto &Particle : OutParticleContainer) {
+      OutputFile << "  " << Particle.Sig[1][2];
+    }
+    OutputFile << "</DataArray>" << std::endl;
+    OutputFile << "<DataArray Name=\"Sig31\" NumberOfComponents=\"1\" format=\"ascii\" type=\"Float32\">";
+    for (auto &Particle : OutParticleContainer) {
+      OutputFile << "  " << Particle.Sig[2][0];
+    }
+    OutputFile << "</DataArray>" << std::endl;
+    OutputFile << "<DataArray Name=\"Sig32\" NumberOfComponents=\"1\" format=\"ascii\" type=\"Float32\">";
+    for (auto &Particle : OutParticleContainer) {
+      OutputFile << "  " << Particle.Sig[2][1];
+    }
+    OutputFile << "</DataArray>" << std::endl;
+    OutputFile << "<DataArray Name=\"Sig33\" NumberOfComponents=\"1\" format=\"ascii\" type=\"Float32\">";
+    for (auto &Particle : OutParticleContainer) {
+      OutputFile << "  " << Particle.Sig[2][2];
+    }
+    OutputFile << "</DataArray>" << std::endl;
+
+    // Write VonMises Stresses
+    OutputFile << "<DataArray Name=\"SigMises\" NumberOfComponents=\"1\" format=\"ascii\" type=\"Float32\">";
+    for (auto &Particle : OutParticleContainer) {
+      OutputFile << "  " << Particle.SigMises();
+    }
+    OutputFile << "</DataArray>" << std::endl;
+
+    // Write plastic indicator
+    OutputFile << "<DataArray Name=\"alpha\" NumberOfComponents=\"1\" format=\"ascii\" type=\"Float32\">";
+    for (auto &Particle : OutParticleContainer) {
+      OutputFile << "  " << Particle.h[9];
+    }
+    OutputFile << "</DataArray>" << std::endl;
+
+
+
     // Write Particle Velocity
     OutputFile << "<DataArray Name=\"Velocity\" NumberOfComponents=\"3\" format=\"ascii\" type=\"Float32\">";
     for(int i = 0; i < NumberOfParticles; i++){

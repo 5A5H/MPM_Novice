@@ -29,6 +29,7 @@ MPMParticle::MPMParticle(double x, double y, double z){
     F[i][i] = 1e0;
     b[i] = 0e0;
   }
+  for (int i=0;i<20;i++) h[i]=0.0;
 }
 MPMParticle::MPMParticle(){
   ID = 0;
@@ -53,6 +54,7 @@ MPMParticle::MPMParticle(){
     F[i][i] = 1e0;
     b[i] = 0e0;
   }
+  for (int i=0;i<20;i++) h[i]=0.0;
 }
 MPMParticle::MPMParticle(int id, double x, double y, double z, double vol){
   ID = id;
@@ -81,6 +83,7 @@ MPMParticle::MPMParticle(int id, double x, double y, double z, double vol){
     F[i][i] = 1e0;
     b[i] = 0e0;
   }
+  for (int i=0;i<20;i++) h[i]=0.0;
 
 }
 
