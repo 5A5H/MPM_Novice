@@ -402,13 +402,18 @@ void GridToParticle(std::vector<MPMParticle> &Particle, std::vector<MPMGridNode>
 
 
       // Update Particles Stresses
-      double dummyh[20];
-      Mate.GetStresses(Pt.F, dummyh, Pt.Sig);
+      Mate.GetStresses(Pt.F, Pt.h, Pt.Sig);
 
 
   } // end if particle is alone in the dark ...
   }//End particle loop
 };
+void MoveRigidBody(double dt, std::vector<MPMParticle> &Particle){
+  for (auto &Pt : Particle){
+    Pt.V[0] += -.1;
+    Pt.X[0] += -.1*dt;
+  }
+}
 
 
 //----------------------------------- Global Variables ----------------------------------------------------------------
@@ -417,19 +422,19 @@ static std::vector<MPMGridNode> GridNode;
 static std::vector<MPMGridElement> GridElement;
 static double MassTolerance = 10e-6;
 
-double t0 = 0.0; double tmax = 1.001; double dt = 0.001; double rho  = 1000; int step = 0;
+double t0 = 0.0; double tmax = 2; double dt = 10e-5; double rho  = 1000; int step = 0;
 
-bool ParaviewOutput = true; int PostFrequency = 200;
+bool ParaviewOutput = true; int PostFrequency = 1000;
 std::string ToolOutputFile  = "/Users/sash/mpm_2d/metal_cut/Post/TwoParticle_Tool";
 std::string PieceOutputFile = "/Users/sash/mpm_2d/metal_cut/Post/TwoParticle_Piece";
 std::string GridOutputFile  = "/Users/sash/mpm_2d/metal_cut/Post/TwoParticle_Grid";
 
-static int    MatID   = 5; //STVK 3D
-static double Emod    = 2000;
+static int    MatID   = 6;
+static double Emod    = 1000;
 static double nu      = 0.3;
-static double y_0     = 10e10;
+static double y_0     = 100;
 static double y_inf   = 10e10;
-static double kh      = 10e10;
+static double kh      = 0;
 static double deltah  = 0;
 
 std::string ToolInputFile         = "/Users/sash/mpm_2d/metal_cut/Tool.cvs";
@@ -448,6 +453,10 @@ int main(){
   MPMMaterial Steel(MatID);
   Steel.SetMaterialParameter(Emod);
   Steel.SetMaterialParameter(nu);
+  Steel.SetMaterialParameter(y_0);
+  Steel.SetMaterialParameter(y_inf);
+  Steel.SetMaterialParameter(kh);
+  Steel.SetMaterialParameter(deltah);
 
   ReadParticle(ToolInputFile, Tool);
   ReadParticle(PieceInputFile, Piece);
@@ -477,11 +486,13 @@ int main(){
     GridBoundaryCondition(GridNode);
     GridTimeIntegration(dt, GridNode, MassTolerance);
 
-    GridToParticle(Tool, GridNode, GridElement, dt, Steel, MassTolerance);
+    //GridToParticle(Tool, GridNode, GridElement, dt, Steel, MassTolerance);
+    MoveRigidBody(dt,Tool);
+    GridToParticle(Piece, GridNode, GridElement, dt, Steel, MassTolerance);
 
 
     StatusBar(step, t, tmax, dt);
-    if (step % PostFrequency) {
+    if ((step % PostFrequency)==0) {
       VTKExport.TestVTUParticleExport(ToolOutputFile  + "_" + std::to_string(step) + ".vtu", Tool);
       VTKExport.TestVTUParticleExport(PieceOutputFile + "_" + std::to_string(step) + ".vtu", Piece);
       VTKExport.TestVTUGridExport(    GridOutputFile  + "_" + std::to_string(step) + ".vtu",GridNode,GridElement);
