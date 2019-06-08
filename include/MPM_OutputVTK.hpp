@@ -23,6 +23,13 @@ class MPMOutputVTK {
       );
 
   private:
+    double CuttOff(double &Input, double CutOffValue = 1e10, double FallbackValue = 0){
+      if (Input*Input > CutOffValue*CutOffValue) {
+        return FallbackValue;
+      } else {
+        return Input;
+      }
+    }
 
 };
 

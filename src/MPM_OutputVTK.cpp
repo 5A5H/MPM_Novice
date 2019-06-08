@@ -38,11 +38,11 @@ void MPMOutputVTK::TestVTUParticleExport(std::string FileName, std::vector<MPMPa
   // Write Points
   OutputFile << "<Points>" << std::endl;
 
-  OutputFile << "<DataArray NumberOfComponents=\"3\" format=\"ascii\" type=\"Float32\">";
+  OutputFile << "<DataArray NumberOfComponents=\"3\" format=\"ascii\" type=\"Float64\">";
   for(int i = 0; i < NumberOfParticles; i++){
-    OutputFile << "  " << OutParticleContainer[i].X[0] ;
-    OutputFile << "  " << OutParticleContainer[i].X[1] ;
-    OutputFile << "  " << OutParticleContainer[i].X[2] ;
+    OutputFile << "  " << CuttOff(OutParticleContainer[i].X[0]) ;
+    OutputFile << "  " << CuttOff(OutParticleContainer[i].X[1]) ;
+    OutputFile << "  " << CuttOff(OutParticleContainer[i].X[2]) ;
   }
   OutputFile << "</DataArray>" << std::endl;
 
@@ -75,85 +75,86 @@ void MPMOutputVTK::TestVTUParticleExport(std::string FileName, std::vector<MPMPa
     // Write Particle Volume
     OutputFile << "<DataArray Name=\"Volume\" NumberOfComponents=\"1\" format=\"ascii\" type=\"Float32\">";
     for(int i = 0; i < NumberOfParticles; i++){
-      OutputFile << "  " << OutParticleContainer[i].Vol ;
+      OutputFile << "  " << CuttOff(OutParticleContainer[i].Vol) ;
     }
     OutputFile << "</DataArray>" << std::endl;
     // Write Particle Mass
     OutputFile << "<DataArray Name=\"Mass\" NumberOfComponents=\"1\" format=\"ascii\" type=\"Float32\">";
     for (auto &Particle : OutParticleContainer) {
-      OutputFile << "  " << Particle.Mass;
+      OutputFile << "  " << CuttOff(Particle.Mass);
     }
     OutputFile << "</DataArray>" << std::endl;
 
     // Write Particle Stresses
     OutputFile << "<DataArray Name=\"Sig11\" NumberOfComponents=\"1\" format=\"ascii\" type=\"Float32\">";
     for (auto &Particle : OutParticleContainer) {
-      OutputFile << "  " << Particle.Sig[0][0];
+      OutputFile << "  " << CuttOff(Particle.Sig[0][0]);
     }
     OutputFile << "</DataArray>" << std::endl;
     OutputFile << "<DataArray Name=\"Sig12\" NumberOfComponents=\"1\" format=\"ascii\" type=\"Float32\">";
     for (auto &Particle : OutParticleContainer) {
-      OutputFile << "  " << Particle.Sig[0][1];
+      OutputFile << "  " << CuttOff(Particle.Sig[0][1]);
     }
     OutputFile << "</DataArray>" << std::endl;
     OutputFile << "<DataArray Name=\"Sig13\" NumberOfComponents=\"1\" format=\"ascii\" type=\"Float32\">";
     for (auto &Particle : OutParticleContainer) {
-      OutputFile << "  " << Particle.Sig[0][2];
+      OutputFile << "  " << CuttOff(Particle.Sig[0][2]);
     }
     OutputFile << "</DataArray>" << std::endl;
     OutputFile << "<DataArray Name=\"Sig21\" NumberOfComponents=\"1\" format=\"ascii\" type=\"Float32\">";
     for (auto &Particle : OutParticleContainer) {
-      OutputFile << "  " << Particle.Sig[1][0];
+      OutputFile << "  " << CuttOff(Particle.Sig[1][0]);
     }
     OutputFile << "</DataArray>" << std::endl;
     OutputFile << "<DataArray Name=\"Sig22\" NumberOfComponents=\"1\" format=\"ascii\" type=\"Float32\">";
     for (auto &Particle : OutParticleContainer) {
-      OutputFile << "  " << Particle.Sig[1][1];
+      OutputFile << "  " << CuttOff(Particle.Sig[1][1]);
     }
     OutputFile << "</DataArray>" << std::endl;
     OutputFile << "<DataArray Name=\"Sig23\" NumberOfComponents=\"1\" format=\"ascii\" type=\"Float32\">";
     for (auto &Particle : OutParticleContainer) {
-      OutputFile << "  " << Particle.Sig[1][2];
+      OutputFile << "  " << CuttOff(Particle.Sig[1][2]);
     }
     OutputFile << "</DataArray>" << std::endl;
     OutputFile << "<DataArray Name=\"Sig31\" NumberOfComponents=\"1\" format=\"ascii\" type=\"Float32\">";
     for (auto &Particle : OutParticleContainer) {
-      OutputFile << "  " << Particle.Sig[2][0];
+      OutputFile << "  " << CuttOff(Particle.Sig[2][0]);
     }
     OutputFile << "</DataArray>" << std::endl;
     OutputFile << "<DataArray Name=\"Sig32\" NumberOfComponents=\"1\" format=\"ascii\" type=\"Float32\">";
     for (auto &Particle : OutParticleContainer) {
-      OutputFile << "  " << Particle.Sig[2][1];
+      OutputFile << "  " << CuttOff(Particle.Sig[2][1]);
     }
     OutputFile << "</DataArray>" << std::endl;
     OutputFile << "<DataArray Name=\"Sig33\" NumberOfComponents=\"1\" format=\"ascii\" type=\"Float32\">";
     for (auto &Particle : OutParticleContainer) {
-      OutputFile << "  " << Particle.Sig[2][2];
+      OutputFile << "  " << CuttOff(Particle.Sig[2][2]);
     }
     OutputFile << "</DataArray>" << std::endl;
 
     // Write VonMises Stresses
     OutputFile << "<DataArray Name=\"SigMises\" NumberOfComponents=\"1\" format=\"ascii\" type=\"Float32\">";
     for (auto &Particle : OutParticleContainer) {
-      OutputFile << "  " << Particle.SigMises();
+      double sigmises = Particle.SigMises();
+      OutputFile << "  " << CuttOff(sigmises);
     }
     OutputFile << "</DataArray>" << std::endl;
 
     // Write plastic indicator
     OutputFile << "<DataArray Name=\"alpha\" NumberOfComponents=\"1\" format=\"ascii\" type=\"Float32\">";
     for (auto &Particle : OutParticleContainer) {
-      OutputFile << "  " << Particle.h[9];
+      OutputFile << "  " << CuttOff(Particle.h[9]);
     }
     OutputFile << "</DataArray>" << std::endl;
 
 
 
     // Write Particle Velocity
-    OutputFile << "<DataArray Name=\"Velocity\" NumberOfComponents=\"3\" format=\"ascii\" type=\"Float32\">";
+    OutputFile << "<DataArray Name=\"Velocity\" NumberOfComponents=\"3\" format=\"ascii\" type=\"Float64\">";
     for(int i = 0; i < NumberOfParticles; i++){
-      OutputFile << "  " << OutParticleContainer[i].V[0] ;
-      OutputFile << "  " << OutParticleContainer[i].V[1] ;
-      OutputFile << "  " << OutParticleContainer[i].V[2] ;
+      OutputFile << "  " << CuttOff(OutParticleContainer[i].V[0]);
+      OutputFile << "  " << CuttOff(OutParticleContainer[i].V[1]);
+      OutputFile << "  " << CuttOff(OutParticleContainer[i].V[2]);
     }
     OutputFile << "</DataArray>" << std::endl;
   OutputFile << "</PointData>" << std::endl;
@@ -231,36 +232,36 @@ void MPMOutputVTK::TestVTUGridExport(
       // Write Point Data
       OutputFile << "<PointData>" << std::endl;
         // Write Particle Volume
-        OutputFile << "<DataArray Name=\"Mass\" NumberOfComponents=\"1\" format=\"ascii\" type=\"Float32\">";
+        OutputFile << "<DataArray Name=\"Mass\" NumberOfComponents=\"1\" format=\"ascii\" type=\"Float64\">";
         for (auto &Node : OutNodeContainer) {
           OutputFile << "  " << Node.Mass;
         }
         OutputFile << "</DataArray>" << std::endl;
 
         // Write Particle Velocity
-        OutputFile << "<DataArray Name=\"V\" NumberOfComponents=\"3\" format=\"ascii\" type=\"Float32\">";
+        OutputFile << "<DataArray Name=\"V\" NumberOfComponents=\"3\" format=\"ascii\" type=\"Float64\">";
         for(int i = 0; i < NumberOfNodes; i++){
-          OutputFile << "  " << OutNodeContainer[i].V[0] ;
-          OutputFile << "  " << OutNodeContainer[i].V[1] ;
-          OutputFile << "  " << OutNodeContainer[i].V[2] ;
+          OutputFile << "  " << CuttOff(OutNodeContainer[i].V[0]);
+          OutputFile << "  " << CuttOff(OutNodeContainer[i].V[1]);
+          OutputFile << "  " << CuttOff(OutNodeContainer[i].V[2]);
         }
         OutputFile << "</DataArray>" << std::endl;
 
 //------ Write Nodal Momentum
-        OutputFile << "<DataArray Name=\"Momentum\" NumberOfComponents=\"3\" format=\"ascii\" type=\"Float32\">";
+        OutputFile << "<DataArray Name=\"Momentum\" NumberOfComponents=\"3\" format=\"ascii\" type=\"Float64\">";
         for (auto &Node : OutNodeContainer) {
-          OutputFile << "  " << Node.Momentum[0];
-          OutputFile << "  " << Node.Momentum[1];
-          OutputFile << "  " << Node.Momentum[2];
+          OutputFile << "  " << CuttOff(Node.Momentum[0]);
+          OutputFile << "  " << CuttOff(Node.Momentum[1]);
+          OutputFile << "  " << CuttOff(Node.Momentum[2]);
         }
         OutputFile << "</DataArray>" << std::endl;
 
 //------ Write Nodal Momentum
-        OutputFile << "<DataArray Name=\"InternalForce\" NumberOfComponents=\"3\" format=\"ascii\" type=\"Float32\">";
+        OutputFile << "<DataArray Name=\"InternalForce\" NumberOfComponents=\"3\" format=\"ascii\" type=\"Float64\">";
         for (auto &Node : OutNodeContainer) {
-          OutputFile << "  " << Node.InternalForce[0];
-          OutputFile << "  " << Node.InternalForce[1];
-          OutputFile << "  " << Node.InternalForce[2];
+          OutputFile << "  " << CuttOff(Node.InternalForce[0]);
+          OutputFile << "  " << CuttOff(Node.InternalForce[1]);
+          OutputFile << "  " << CuttOff(Node.InternalForce[2]);
         }
         OutputFile << "</DataArray>" << std::endl;
 
