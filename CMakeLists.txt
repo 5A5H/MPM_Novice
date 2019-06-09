@@ -3,7 +3,7 @@ set(CMAKE_CXX_STANDARD 11)
 
 project(MPM2DProject)
 
-# Figure out the system
+# Figure out the system (to link against the correct version of libaceutility)
 if (${CMAKE_SYSTEM_NAME} MATCHES "Windows")
     set(WINDOWS TRUE)
 elseif (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
@@ -56,12 +56,8 @@ target_include_directories(
     "ace_mate"
 )
 
-#add_library(AceUtil STATIC IMPORTED GLOBAL)
-#set_target_properties(AceUtil PROPERTIES IMPORTED_LOCATION "/Users/sash/mpm_2d/ace_mate/libaceutility_mac.a")
-
+#The follwing copy thing worked !
 #file(COPY /Users/sash/mpm_2d/ace_mate/libaceutility_mac.a DESTINATION ${CMAKE_BINARY_DIR}/libAceUtil.a)
-#add_library(AceUtil STATIC IMPORTED)
-#set_target_properties(AceUtil PROPERTIES IMPORTED_LOCATION "./libAceUtil.a")
 
 # Metal Cutting
 add_executable(MetalCut
@@ -89,13 +85,6 @@ target_link_libraries(DiscMDM2D
                       ${AceUtil}
 )
 
-add_executable(ImpactMDM2D
-               impact/impact.cpp
-)
-target_link_libraries(ImpactMDM2D
-                      mdm2dp
-                      ${AceUtil}
-)
 
 add_executable(DiscMDM2Dn
                two_discs_n.cpp
@@ -112,3 +101,17 @@ target_link_libraries(BarMDM2D
                       mdm2dp
                       ${AceUtil}
 )
+
+################################## HIGH VELOCITY IMPACT
+#set(CMAKE_CURRENT_BINARY_DIR ${CMAKE_SOURCE_DIR}/impact/)
+add_executable(ImpactMDM2D
+               impact/impact.cpp
+)
+target_link_libraries(ImpactMDM2D
+                      mdm2dp
+                      ${AceUtil}
+)
+#message(${CMAKE_CURRENT_BINARY_DIR}/ImpactMDM2D)
+#message(${CMAKE_SOURCE_DIR}/impact/ImpactMDM2D)
+file(COPY ${CMAKE_CURRENT_BINARY_DIR}/ImpactMDM2D DESTINATION ${CMAKE_SOURCE_DIR}/impact/)
+##################################

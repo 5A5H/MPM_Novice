@@ -429,9 +429,9 @@ static double MassTolerance = 10e-6;
 double t0 = 0.0; double tmax = 40.0e-6; double dt = 1.18e-8; int step = 0;
 
 bool ParaviewOutput = true; int PostFrequency = 10;
-std::string ImpactorOutputFile  = "/Users/sash/mpm_2d/impact/post/Impactor";
-std::string TargetOutputFile = "/Users/sash/mpm_2d/impact/post/Target";
-std::string GridOutputFile  = "/Users/sash/mpm_2d/impact/post/Grid";
+std::string ImpactorOutputFile  = "post/Impactor";
+std::string TargetOutputFile = "post/Target";
+std::string GridOutputFile  = "post/Grid";
 
 // Setup Material Impactor
 static int    MatIDs  = 5;
@@ -448,10 +448,10 @@ static double kh      = 0;
 static double deltah  = 0;
 
 
-std::string TargetInputFile       = "/Users/sash/mpm_2d/impact/Target.cvs";
-std::string ImpactorInputFile     = "/Users/sash/mpm_2d/impact/Impactor.cvs";
-std::string GridNodesInputFile    = "/Users/sash/mpm_2d/impact/Nodes.cvs";
-std::string GridElementInputFile  = "/Users/sash/mpm_2d/impact/Elements.cvs";
+std::string TargetInputFile       = "Target.cvs";
+std::string ImpactorInputFile     = "Impactor.cvs";
+std::string GridNodesInputFile    = "Nodes.cvs";
+std::string GridElementInputFile  = "Elements.cvs";
 
 
 
