@@ -113,5 +113,5 @@ target_link_libraries(ImpactMDM2D
 )
 #message(${CMAKE_CURRENT_BINARY_DIR}/ImpactMDM2D)
 #message(${CMAKE_SOURCE_DIR}/impact/ImpactMDM2D)
-file(COPY ${CMAKE_CURRENT_BINARY_DIR}/ImpactMDM2D DESTINATION ${CMAKE_SOURCE_DIR}/impact/)
+#file(COPY ${CMAKE_CURRENT_BINARY_DIR}/ImpactMDM2D DESTINATION ${CMAKE_SOURCE_DIR}/impact/)
 ##################################
