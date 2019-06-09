@@ -417,30 +417,37 @@ void MoveRigidBody(double dt, std::vector<MPMParticle> &Particle){
 
 
 //----------------------------------- Global Variables ----------------------------------------------------------------
-static std::vector<MPMParticle> Tool,Piece;
+static std::vector<MPMParticle> Impactor,Target;
 static std::vector<MPMGridNode> GridNode;
 static std::vector<MPMGridElement> GridElement;
 static double MassTolerance = 10e-6;
 
-double t0 = 0.0; double tmax = 1.8; double dt = 10e-5; double rho  = 10; int step = 0;
+double t0 = 0.0; double tmax = 40.0; double dt = 1.18e-2; int step = 0;
 
-bool ParaviewOutput = true; int PostFrequency = 100;
-std::string ToolOutputFile  = "/Users/sash/mpm_2d/metal_cut/Post/TwoParticle_Tool";
-std::string PieceOutputFile = "/Users/sash/mpm_2d/metal_cut/Post/TwoParticle_Piece";
-std::string GridOutputFile  = "/Users/sash/mpm_2d/metal_cut/Post/TwoParticle_Grid";
+bool ParaviewOutput = true; int PostFrequency = 10;
+std::string ImpactorOutputFile  = "/Users/sash/mpm_2d/impact/post/Impactor";
+std::string TargetOutputFile = "/Users/sash/mpm_2d/impact/post/Target";
+std::string GridOutputFile  = "/Users/sash/mpm_2d/impact/post/Grid";
 
+// Setup Material Impactor
+static int    MatIDs  = 4;
+static double Emods   = 200e3;
+static double nus     = 0.3;
+
+// Setup Material Target
 static int    MatID   = 6;
-static double Emod    = 10000;
+static double Emod    = 78.2e3;
 static double nu      = 0.3;
-static double y_0     = 100;
+static double y_0     = 300;
 static double y_inf   = 10e10;
 static double kh      = 0;
 static double deltah  = 0;
 
-std::string ToolInputFile         = "/Users/sash/mpm_2d/metal_cut/Tool.cvs";
-std::string PieceInputFile        = "/Users/sash/mpm_2d/metal_cut/Piece.cvs";
-std::string GridNodesInputFile    = "/Users/sash/mpm_2d/metal_cut/Nodes.cvs";
-std::string GridElementInputFile  = "/Users/sash/mpm_2d/metal_cut/Elements.cvs";
+
+std::string TargetInputFile       = "/Users/sash/mpm_2d/impact/Target.cvs";
+std::string ImpactorInputFile     = "/Users/sash/mpm_2d/impact/Impactor.cvs";
+std::string GridNodesInputFile    = "/Users/sash/mpm_2d/impact/Nodes.cvs";
+std::string GridElementInputFile  = "/Users/sash/mpm_2d/impact/Elements.cvs";
 
 
 
@@ -450,61 +457,66 @@ int main(){
   std::cout << "_____________________Welcome to MPM2D!____________________\n";
 
   MPMOutputVTK VTKExport;
-  MPMMaterial Steel(MatID);
-  Steel.SetMaterialParameter(Emod);
-  Steel.SetMaterialParameter(nu);
-  Steel.SetMaterialParameter(y_0);
-  Steel.SetMaterialParameter(y_inf);
-  Steel.SetMaterialParameter(kh);
-  Steel.SetMaterialParameter(deltah);
 
-  ReadParticle(ToolInputFile, Tool);
-  ReadParticle(PieceInputFile, Piece);
+  MPMMaterial Steel(MatIDs);
+  Steel.SetMaterialParameter(Emods);
+  Steel.SetMaterialParameter(nus);
+
+  MPMMaterial Alu(MatID);
+  Alu.SetMaterialParameter(Emod);
+  Alu.SetMaterialParameter(nu);
+  Alu.SetMaterialParameter(y_0);
+  Alu.SetMaterialParameter(y_inf);
+  Alu.SetMaterialParameter(kh);
+  Alu.SetMaterialParameter(deltah);
+
+  ReadParticle(ImpactorInputFile, Impactor);
+  ReadParticle(TargetInputFile, Target);
   ReadGridNodes(GridNodesInputFile, GridNode, 1);
   ReadGridElementsQ4(GridElementInputFile, GridElement);
   std::cout << "Problem Data: " << std::endl;
-  std::cout << "Number of Particles    : " << Tool.size() + Piece.size() << std::endl;
+  std::cout << "Number of Particles    : " << Impactor.size() << std::endl;
+  std::cout << "Number of Particles    : " << Target.size() << std::endl;
   std::cout << "Number of Grid Nodes   : " << GridNode.size() << std::endl;
   std::cout << "Number of Grid Elements: " << GridElement.size() << std::endl;
 
-  double V0[3] = {-0.1,0,0};
-  SetInitialCondition(Tool, rho, V0);
+  double V0[3] = {0,-1.16,0};
+  SetInitialCondition(Impactor, 7850e-12, V0);
   V0[0]=0e0; V0[1]=0e0; V0[2]=0e0;
-  SetInitialCondition(Piece, rho, V0);
-  MoveRigidBody(0.8,Tool);
+  SetInitialCondition(Targest, 2700e-12, V0);
 
-  VTKExport.TestVTUParticleExport(ToolOutputFile  + "_" + std::to_string(step) + ".vtu", Tool);
-  VTKExport.TestVTUParticleExport(PieceOutputFile + "_" + std::to_string(step) + ".vtu", Piece);
-  VTKExport.TestVTUGridExport(    GridOutputFile  + "_" + std::to_string(step) + ".vtu",GridNode,GridElement);
+  VTKExport.TestVTUParticleExport(ImpactorOutputFile  + "_" + std::to_string(step) + ".vtu", Impactor);
+  VTKExport.TestVTUParticleExport(TargetOutputFile    + "_" + std::to_string(step) + ".vtu", Target);
+  VTKExport.TestVTUGridExport(    GridOutputFile      + "_" + std::to_string(step) + ".vtu",GridNode,GridElement);
 
-  for (double t=t0;t<tmax;t=t+dt){
-
-    if (NextStep(Tool, Piece, GridNode, GridElement, t)) return 1;
-
-    ParticlesToGrid(Tool, GridNode, GridElement);
-    ParticlesToGrid(Piece, GridNode, GridElement);
-
-    GridBoundaryCondition(GridNode);
-    GridTimeIntegration(dt, GridNode, MassTolerance);
-
-    //GridToParticle(Tool, GridNode, GridElement, dt, Steel, MassTolerance);
-    MoveRigidBody(dt,Tool);
-    GridToParticle(Piece, GridNode, GridElement, dt, Steel, MassTolerance);
-
-
-    StatusBar(step, t, tmax, dt);
-    if ((step % PostFrequency)==0) {
-      VTKExport.TestVTUParticleExport(ToolOutputFile  + "_" + std::to_string(step) + ".vtu", Tool);
-      VTKExport.TestVTUParticleExport(PieceOutputFile + "_" + std::to_string(step) + ".vtu", Piece);
-      VTKExport.TestVTUGridExport(    GridOutputFile  + "_" + std::to_string(step) + ".vtu",GridNode,GridElement);
-    }
-    step++;
-  }
-  std::cout << std::endl;
-
-  VTKExport.TestVTUParticleExport(ToolOutputFile  + "_" + std::to_string(step) + ".vtu", Tool);
-  VTKExport.TestVTUParticleExport(PieceOutputFile + "_" + std::to_string(step) + ".vtu", Piece);
-  VTKExport.TestVTUGridExport(    GridOutputFile  + "_" + std::to_string(step) + ".vtu",GridNode,GridElement);
+  // for (double t=t0;t<tmax;t=t+dt){
+  //
+  //   if (NextStep(Tool, Piece, GridNode, GridElement, t)) return 1;
+  //
+  //   ParticlesToGrid(Tool, GridNode, GridElement);
+  //   ParticlesToGrid(Piece, GridNode, GridElement);
+  //
+  //   GridBoundaryCondition(GridNode);
+  //   GridTimeIntegration(dt, GridNode, MassTolerance);
+  //
+  //   //GridToParticle(Tool, GridNode, GridElement, dt, Steel, MassTolerance);
+  //   MoveRigidBody(dt,Tool);
+  //   GridToParticle(Piece, GridNode, GridElement, dt, Steel, MassTolerance);
+  //
+  //
+  //   StatusBar(step, t, tmax, dt);
+  //   if ((step % PostFrequency)==0) {
+  //     VTKExport.TestVTUParticleExport(ToolOutputFile  + "_" + std::to_string(step) + ".vtu", Tool);
+  //     VTKExport.TestVTUParticleExport(PieceOutputFile + "_" + std::to_string(step) + ".vtu", Piece);
+  //     VTKExport.TestVTUGridExport(    GridOutputFile  + "_" + std::to_string(step) + ".vtu",GridNode,GridElement);
+  //   }
+  //   step++;
+  // }
+  // std::cout << std::endl;
+  //
+  // VTKExport.TestVTUParticleExport(ToolOutputFile  + "_" + std::to_string(step) + ".vtu", Tool);
+  // VTKExport.TestVTUParticleExport(PieceOutputFile + "_" + std::to_string(step) + ".vtu", Piece);
+  // VTKExport.TestVTUGridExport(    GridOutputFile  + "_" + std::to_string(step) + ".vtu",GridNode,GridElement);
 
   std::cout << "_________________________ The End ________________________\n";
   return 0;

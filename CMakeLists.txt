@@ -63,6 +63,14 @@ target_link_libraries(DiscMDM2D
                       /Users/sash/mpm_2d/ace_mate/libaceutility.a
 )
 
+add_executable(ImpactMDM2D
+               impact/impact.cpp
+)
+target_link_libraries(ImpactMDM2D
+                      mdm2dp
+                      /Users/sash/mpm_2d/ace_mate/libaceutility.a
+)
+
 add_executable(DiscMDM2Dn
                two_discs_n.cpp
 )
