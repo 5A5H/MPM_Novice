@@ -19,8 +19,7 @@ endif(MACOSX)
 
 if (LINUX)
 message("Hello Linux User")
-set(AceUtil "/home/smaassen/.Mathematica/Applications/AceFEM/Include/CDr
-iver/Linux64/libaceutil.a")
+set(AceUtil "/home/smaassen/.Mathematica/Applications/AceFEM/Include/CDriver/Linux64/libaceutility.a")
 endif(LINUX)
 
 add_library(mdm2dp
