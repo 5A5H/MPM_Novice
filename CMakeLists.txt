@@ -4,7 +4,6 @@ set(CMAKE_CXX_STANDARD 11)
 project(MPM2DProject)
 
 # Figure out the system
-
 if (${CMAKE_SYSTEM_NAME} MATCHES "Windows")
     set(WINDOWS TRUE)
 elseif (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
@@ -15,10 +14,13 @@ endif()
 
 if (MACOSX)
 message("Hello Mac User")
+set(AceUtil "/Users/sash/mpm_2d/ace_mate/libaceutility_mac.a")
 endif(MACOSX)
 
 if (LINUX)
 message("Hello Linux User")
+set(AceUtil "/home/smaassen/.Mathematica/Applications/AceFEM/Include/CDr
+iver/Linux64/libaceutil.a")
 endif(LINUX)
 
 add_library(mdm2dp
@@ -55,13 +57,20 @@ target_include_directories(
     "ace_mate"
 )
 
+#add_library(AceUtil STATIC IMPORTED GLOBAL)
+#set_target_properties(AceUtil PROPERTIES IMPORTED_LOCATION "/Users/sash/mpm_2d/ace_mate/libaceutility_mac.a")
+
+#file(COPY /Users/sash/mpm_2d/ace_mate/libaceutility_mac.a DESTINATION ${CMAKE_BINARY_DIR}/libAceUtil.a)
+#add_library(AceUtil STATIC IMPORTED)
+#set_target_properties(AceUtil PROPERTIES IMPORTED_LOCATION "./libAceUtil.a")
+
 # Metal Cutting
 add_executable(MetalCut
               metal_cut/metal_cut.cpp
 )
 target_link_libraries(MetalCut
                       mdm2dp
-                      ace_mate/libaceutility.a
+                      ${AceUtil}
 )
 
 
@@ -70,7 +79,7 @@ add_executable(MPM2D
 )
 target_link_libraries(MPM2D
                       mdm2dp
-                      ace_mate/libaceutility.a
+                      ${AceUtil}
 )
 
 add_executable(DiscMDM2D
@@ -78,7 +87,7 @@ add_executable(DiscMDM2D
 )
 target_link_libraries(DiscMDM2D
                       mdm2dp
-                      ace_mate/libaceutility.a
+                      ${AceUtil}
 )
 
 add_executable(ImpactMDM2D
@@ -86,7 +95,7 @@ add_executable(ImpactMDM2D
 )
 target_link_libraries(ImpactMDM2D
                       mdm2dp
-                      ace_mate/libaceutility.a
+                      ${AceUtil}
 )
 
 add_executable(DiscMDM2Dn
@@ -94,7 +103,7 @@ add_executable(DiscMDM2Dn
 )
 target_link_libraries(DiscMDM2Dn
                       mdm2dp
-                      ace_mate/libaceutility.a
+                      ${AceUtil}
 )
 
 add_executable(BarMDM2D
@@ -102,5 +111,5 @@ add_executable(BarMDM2D
 )
 target_link_libraries(BarMDM2D
                       mdm2dp
-                      ace_mate/libaceutility.a
+                      ${AceUtil}
 )
