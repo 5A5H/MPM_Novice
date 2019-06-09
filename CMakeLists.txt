@@ -5,9 +5,17 @@ project(MPM2DProject)
 
 # Figure out the system
 
-if (APPLE)
+if (${CMAKE_SYSTEM_NAME} MATCHES "Windows")
+    set(WINDOWS TRUE)
+elseif (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
+    set(LINUX TRUE)
+elseif (${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
+    set(MACOSX TRUE)
+endif()
+
+if (MACOSX)
 message("Hello Mac User")
-endif(APPLE)
+endif(MACOSX)
 
 if (LINUX)
 message("Hello Linux User")
