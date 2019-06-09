@@ -3,6 +3,16 @@ set(CMAKE_CXX_STANDARD 11)
 
 project(MPM2DProject)
 
+# Figure out the system
+
+if (APPLE)
+message("Hello Mac User")
+endif(APPLE)
+
+if (LINUX)
+message("Hello Linux User")
+endif(LINUX)
+
 add_library(mdm2dp
     include/MPM_Process.hpp
     include/MPM_OutputVTK.hpp
@@ -43,7 +53,7 @@ add_executable(MetalCut
 )
 target_link_libraries(MetalCut
                       mdm2dp
-                      /Users/sash/mpm_2d/ace_mate/libaceutility.a
+                      ace_mate/libaceutility.a
 )
 
 
@@ -52,7 +62,7 @@ add_executable(MPM2D
 )
 target_link_libraries(MPM2D
                       mdm2dp
-                      /Users/sash/mpm_2d/ace_mate/libaceutility.a
+                      ace_mate/libaceutility.a
 )
 
 add_executable(DiscMDM2D
@@ -60,7 +70,7 @@ add_executable(DiscMDM2D
 )
 target_link_libraries(DiscMDM2D
                       mdm2dp
-                      /Users/sash/mpm_2d/ace_mate/libaceutility.a
+                      ace_mate/libaceutility.a
 )
 
 add_executable(ImpactMDM2D
@@ -68,7 +78,7 @@ add_executable(ImpactMDM2D
 )
 target_link_libraries(ImpactMDM2D
                       mdm2dp
-                      /Users/sash/mpm_2d/ace_mate/libaceutility.a
+                      ace_mate/libaceutility.a
 )
 
 add_executable(DiscMDM2Dn
@@ -76,7 +86,7 @@ add_executable(DiscMDM2Dn
 )
 target_link_libraries(DiscMDM2Dn
                       mdm2dp
-                      /Users/sash/mpm_2d/ace_mate/libaceutility.a
+                      ace_mate/libaceutility.a
 )
 
 add_executable(BarMDM2D
@@ -84,5 +94,5 @@ add_executable(BarMDM2D
 )
 target_link_libraries(BarMDM2D
                       mdm2dp
-                      /Users/sash/mpm_2d/ace_mate/libaceutility.a
+                      ace_mate/libaceutility.a
 )
