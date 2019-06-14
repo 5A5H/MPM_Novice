@@ -9,21 +9,20 @@
 #include <sys/stat.h> // mkdir()
 #include <unistd.h> //rmdir()
 
-// Define a class for writing data as CVS
-class File_CVS {
-public:
-  File_CVS(std::string FileName){OutputFile.open(FileName, std::ios::out);};
-  ~File_CVS(){OutputFile.close();};
-
-  // This Function let you directly access the file
-  std::ofstream* strm(){return &OutputFile;};
-
-private:
-  std::ofstream OutputFile;
-};
-
 namespace MPM {
 
+  // Define a class for writing data as CVS
+  class File_CVS {
+  public:
+    File_CVS(std::string FileName){OutputFile.open(FileName, std::ios::out);};
+    ~File_CVS(){OutputFile.close();};
+
+    // This Function let you directly access the file
+    std::ofstream* strm(){return &OutputFile;};
+
+  private:
+    std::ofstream OutputFile;
+  };
 
   int SetupEnvironment(){
 

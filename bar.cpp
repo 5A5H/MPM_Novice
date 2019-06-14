@@ -313,8 +313,8 @@ int main()
     std::string GridOutputFile = "/Users/sash/mpm_2d/data/Bar/Bar_Grid";
     int PostFrequency = 200;
     MPMOutputVTK VTK1;
-    File_CVS MyFile_V("/Users/sash/mpm_2d/data/Bar/MyCVS_V");
-    File_CVS MyFile_X("/Users/sash/mpm_2d/data/Bar/MyCVS_X");
+    MPM::File_CVS MyFile_V("/Users/sash/mpm_2d/data/Bar/MyCVS_V");
+    MPM::File_CVS MyFile_X("/Users/sash/mpm_2d/data/Bar/MyCVS_X");
 
 //------------------------------------------ Material declaration -----------------------------------------------------
     MPMMaterial Steel(3);
