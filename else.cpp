@@ -13,6 +13,8 @@
 #include <MPM_AceMaterials.hpp>
 #include <MPM_HF.hpp>
 
+#include <ELSE_System.hpp>
+
 #include <math.h>
 
 #include <iostream>
@@ -29,9 +31,15 @@ std::vector<MPMMaterial> Material;
 
 
 //------------------------------------------ MAIN ---------------------------------------------------------------------
-int main()
+int main(int argc, char** argv)
 {
-    std::cout << "_____________________Welcome to ELSE!____________________\n";
+    std::cout << "_____________________Welcome to ELSE!____________________" << std::endl;
+
+
+    ELSE::SetupEnvironment(argc, argv);
+    std::cout << "Input File: " << ELSE::InputFileName << std::endl;
+
+
     // Genrate The Time Tracker
     MPMTimeTracker MPMTimings;
 
@@ -52,8 +60,6 @@ int main()
     LogFile.open("ThisElseLog", std::ios::out);
     LogFile << "test" << std::endl;
     LogFile.close();
-
-    MPM::SetupEnvironment();
 
 
     //Read and Create Objects

@@ -36,12 +36,17 @@ add_library(mdm2dp
     src/MPM_GridElement.cpp
 )
 
-target_include_directories(
-  mdm2dp
-  PUBLIC
-    "include"
-    "ace_mate"
-)
+#target_include_directories(
+#  mdm2dp
+#  PUBLIC
+#    "include"
+#    "ace_mate"
+#)
+include_directories(
+  ${CMAKE_CURRENT_SOURCE_DIR}/include
+  ${CMAKE_CURRENT_SOURCE_DIR}/ace_mate
+  ${CMAKE_CURRENT_SOURCE_DIR}/third_party/tiny_xml2
+  )
 
 #The follwing copy thing worked !
 #file(COPY /Users/sash/mpm_2d/ace_mate/libaceutility_mac.a DESTINATION ${CMAKE_BINARY_DIR}/libAceUtil.a)
