@@ -23,7 +23,7 @@ class MPMOutputVTK {
       );
 
       // Add Particle Output
-      void SetOutput(std::string FileName, std::vector<MPMParticle> &OutParticleContainer, std::vector<string> OutputStrings)
+      void SetOutput(std::string FileName, std::vector<MPMParticle> &OutParticleContainer, std::vector<std::string> OutputStrings);
 
   private:
 
@@ -37,7 +37,7 @@ class MPMOutputVTK {
     }
 
     //Particle Output Container
-    std::vector<string>
+    std::vector<std::string> ParticleOutputFileContainer;
 
 };
 
