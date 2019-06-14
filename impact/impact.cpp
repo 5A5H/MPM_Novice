@@ -100,16 +100,6 @@ void SetInitialCondition(std::vector<MPMParticle> &ParticleContainer, double rho
      Pt.V[0] = V[0]; Pt.V[1] = V[1]; Pt.V[2] = V[2];
    }
 };
-void StatusBar(int step, double t, double tmax, double dt){
-  int maxstep = t/dt;
-  if(step % 20 == 0){
-    std::cout << "   Time Integration Progress : [";
-    for (int i = 0;i<=(t/tmax)*24;i++) std::cout << "%";
-    for (int i = 0;i<=24-(t/tmax)*24;i++) std::cout << "-";
-    std::cout << "]";
-    std::cout << "   Progress : " << std::setprecision(3) << std::setw(4) << std::left << (t/tmax)*100 << " % \r" << std::flush;
-  }
-};
 bool NextStep(std::vector<MPMParticle> &Tool, std::vector<MPMParticle> &Piece, std::vector<MPMGridNode> &GridNode, std::vector<MPMGridElement> &GridElement, double t){
   // Check for nan Tool
   for (auto &Pt : Tool) {
@@ -513,7 +503,7 @@ int main(){
     GridToParticle(Impactor, GridNode, GridElement, dt, Steel, MassTolerance);
 
 
-    StatusBar(step, t, tmax, dt);
+    MPM::StatusBar(step, t, tmax, dt);
     if ((step % PostFrequency)==0) {
       VTKExport.TestVTUParticleExport(ImpactorOutputFile  + "_" + std::to_string(step) + ".vtu", Impactor);
       VTKExport.TestVTUParticleExport(TargetOutputFile    + "_" + std::to_string(step) + ".vtu", Target);
