@@ -23,19 +23,6 @@ set(AceUtil "/home/smaassen/.Mathematica/Applications/AceFEM/Include/CDriver/Lin
 endif(LINUX)
 
 add_library(mdm2dp
-    include/MPM_Process.hpp
-    include/MPM_OutputVTK.hpp
-    include/MPM_Particle.hpp
-    include/MPM_GridNode.hpp
-    include/MPM_GridNodeBC.hpp
-    include/MPM_Material.hpp
-    include/MPM_TimeTracker.hpp
-    include/MPM_GridElement.hpp
-    include/MPM_Read.hpp
-    include/MPM_SHPQ4.hpp
-    include/MPM_HF.hpp
-    ace_mate/MPM_AceMaterials.hpp
-    ace_mate/sms.h
     ace_mate/SMSUtility.c
     ace_mate/SmallStrainHookePlaneStrain2D.cpp
     ace_mate/SmallStrainHookePlaneStress2D.cpp
