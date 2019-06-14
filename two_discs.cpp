@@ -43,7 +43,7 @@ int main()
     double MassTolerance = 10e-6;
 
     double t0 = 0.0;
-    double tmax = 6.5;
+    double tmax = 8.0;
     double dt = 0.001;
     double rho  = 1000;
     int step = 1;

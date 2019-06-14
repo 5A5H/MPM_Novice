@@ -103,7 +103,8 @@ if (debugaceroutine) std::cout << "PLASTIC"<< std::endl;
  v[113]=h[7];
  v[114]=h[8];
  v[115]=h[9];
- for(i117=1;i117<=30;i117++){
+ for(i117=1;i117<=100;i117++){
+   if (i117==99) std::cout << "PLASTIC divergence"<< std::endl;
   v[121]=1e0+v[106];
   v[123]=1e0+v[107];
   v[125]=1e0+v[108];

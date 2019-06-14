@@ -2294,7 +2294,7 @@ Cell[BoxData["\<\"/Users/sash/mpm_2d/impact//Target.cvs\"\>"], "Output",
 }, Open  ]]
 },
 WindowSize->{1383, 855},
-WindowMargins->{{Automatic, 0}, {Automatic, 540}},
+WindowMargins->{{0, Automatic}, {Automatic, 540}},
 FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
 ]
