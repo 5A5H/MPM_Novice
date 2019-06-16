@@ -32,6 +32,7 @@ add_library(mdm2dp
     src/MPM_Process.cpp
     src/MPM_OutputVTK.cpp
     src/MPM_Particle.cpp
+    src/MPM_Body.cpp
     src/MPM_GridNode.cpp
     src/MPM_GridElement.cpp
     src/ELSE_System.cpp

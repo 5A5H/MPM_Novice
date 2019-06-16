@@ -2,6 +2,9 @@
 #define _MPM_PARTICLE_
 
 #include <math.h>
+#include <string>
+#include <vector>
+#include <array>
 
 class MPMParticle {
   public:
@@ -33,6 +36,17 @@ class MPMParticle {
       double getMass(void);                       // A Member Function that returns the Current Mass of the Particle  MemberFunction: hass access to all data of the object
       void Report(void);                          // A Member Function to print out a report of this object
       double SigMises(){return sqrt(0.15e1*(2e0*Sig[0][1]*Sig[1][0]+2e0*Sig[0][2]*Sig[2][0]+2e0*Sig[1][2]*Sig[2][1]+pow(Sig[0][0]+((-Sig[0][0]-Sig[1][1]-Sig[2][2])/3e0),2)+pow(Sig[1][1]+((-Sig[0][0]-Sig[1][1]-Sig[2][2])/3e0),2)+pow(Sig[2][2]+((-Sig[0][0]-Sig[1][1]-Sig[2][2])/3e0),2)));}
+
+      // Implementation of Post-Processing
+      // Function that just return smth.
+      // Input is a key
+      // each function returns an integer for its information and modifies up to 9->trensor double values
+      int GetPost(std::string KEY, std::array<double,9>, std::array<int,9>);
+      // int: 0 -> key not defined !
+      // int: 1 -> scalar integer
+      // int: 2 -> scalar double
+      // int: 3 -> vector[3] double
+      // int: 4 -> tensor[9] double
   private:
 };
 

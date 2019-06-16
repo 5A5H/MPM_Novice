@@ -12,6 +12,7 @@
 #include <MPM_Material.hpp>
 #include <MPM_AceMaterials.hpp>
 #include <MPM_HF.hpp>
+#include <MPM_Body.hpp>
 #include <ELSE_GeometricLibrary.hpp>
 
 #include <math.h>
@@ -288,7 +289,8 @@ void GridToParticle(double &dt, MPMMaterial &Mate){
 
 
       // Update Particles Stresses
-      Mate.GetStresses(Pt.F, Pt.h, Pt.Sig);
+      std::vector<double> dummyio;
+      Mate.GetStresses(Pt.F, Pt.h, Pt.Sig, dummyio);
 
 
   } // end if particle is alone in the dark ...
@@ -304,7 +306,7 @@ int main()
     MPMTimings.SetTime("Program Start");
 
     double t0 = 0.0;
-    double tmax = 6.5;
+    double tmax = 1.5; // 6.5 was good
     double dt = 0.001;
     double rho  = 1000;
     int step = 1;
@@ -347,6 +349,7 @@ int main()
     std::cout << "Number of Grid Nodes   : " << GridNode.size() << std::endl;
     std::cout << "Number of Grid Elements: " << GridElement.size() << std::endl;
     MPMTimings.SetTime("Read End");
+    MPM_Body Disks(Particle);
 
     //Set Particle Mass [and Partical initial condition experimental]
     // MPMGridNodeBC MyFirstGridNodeBC;
@@ -375,6 +378,13 @@ int main()
       }
 
 //---------------------------------------------------------------------------------------------------------------------
+    //exp
+    MPMOutputVTK VTKOut("TwoDisks_Plastic");
+    std::vector<std::string> POutPutNames;
+    POutPutNames.push_back("SigMises");
+    POutPutNames.push_back("MaterialState");
+    VTKOut.SetOutput("/Users/sash/mpm_2d/data/out/TwoDisks_Plastic", Particle, POutPutNames);
+
     std::cout << "- Begin Time Integration" << std::endl;
     std::vector<int> PGC;  // PGC ->  ParticleGridConnectivity; holds element connectivity {0->element2 1->element3 .. noparticles->element89}
     std::string statusbar;
@@ -419,6 +429,7 @@ int main()
       MPMOutputVTK VTKExport;
       VTKExport.TestVTUGridExport(GridOutputFile + "_" + std::to_string(step) + ".vtu",GridNode,GridElement);
       VTKExport.TestVTUParticleExport(ParticleOutputFile + "_" + std::to_string(step) + ".vtu",Particle);
+      VTKOut.WriteOutput(t);
       }
     }
 

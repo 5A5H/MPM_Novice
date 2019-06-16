@@ -393,7 +393,8 @@ void GridToParticle(std::vector<MPMParticle> &Particle, std::vector<MPMGridNode>
 
 
       // Update Particles Stresses
-      Mate.GetStresses(Pt.F, Pt.h, Pt.Sig);
+      std::vector<double> dummyio;
+      Mate.GetStresses(Pt.F, Pt.h, Pt.Sig, dummyio);
 
 
   } // end if particle is alone in the dark ...

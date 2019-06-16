@@ -33,3 +33,7 @@ The following composes the .vtu files for convenient read. It is supposed to hav
 </Collection>
 </VTKFile>
 ```
+## Implementation:
+
+All Paraview/VTU output functionality is implemented within the
+MPMOutputVTK class.

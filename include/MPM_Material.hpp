@@ -5,6 +5,8 @@
 #include <iostream>
 #include <MPM_AceMaterials.hpp>
 
+#include <math.h>
+
 class MPMMaterial {
   public:
       MPMMaterial(int id);
@@ -13,7 +15,7 @@ class MPMMaterial {
 
       void SetMaterialParameter(double InputMaterialParameter);
       double *getStresses(double F[9]);                                       // for now only F but for future extended with optional args. e.g. time dependent
-      void GetStresses(double F[3][3], double h[20], double Sig[3][3] );
+      void GetStresses(double F[3][3], double h[20], double Sig[3][3] ,std::vector<double> &MaterialIO);
       void Report(void);                          // A Member Function to print out a report of this object
 
   private:
@@ -21,6 +23,17 @@ class MPMMaterial {
 
   //some functions from continuum mechanics
       void Det(double F[9], double &detF){detF=F[2]*(-(F[4]*F[6])+F[3]*F[7])-F[1]*(-(F[5]*F[6])+F[3]*F[8])+F[0]*(-(F[5]*F[7])+F[4]*F[8]);};
+      void A_ijB_kj(double A[9], double B[9], double C[9]){
+        C[0]=B[0]*A[0]+B[1]*A[1]+B[2]*A[2];
+        C[1]=B[3]*A[0]+B[4]*A[1]+B[5]*A[2];
+        C[2]=B[6]*A[0]+B[7]*A[1]+B[8]*A[2];
+        C[3]=B[0]*A[3]+B[1]*A[4]+B[2]*A[5];
+        C[4]=B[3]*A[3]+B[4]*A[4]+B[5]*A[5];
+        C[5]=B[6]*A[3]+B[7]*A[4]+B[8]*A[5];
+        C[6]=B[0]*A[6]+B[1]*A[7]+B[2]*A[8];
+        C[7]=B[3]*A[6]+B[4]*A[7]+B[5]*A[8];
+        C[8]=B[6]*A[6]+B[7]*A[7]+B[8]*A[8];
+      };
 };
 
 MPMMaterial::~MPMMaterial(){}
@@ -140,7 +153,7 @@ double *MPMMaterial::getStresses(double F[9]){                                  
   return Sig;                                                                   // Sig = [Sig11,  Sig12,  Sig13,  Sig21,  Sig22,  Sig23,  Sig31,  Sig32,  Sig33]
 }
 
-void MPMMaterial::GetStresses(double F[3][3], double h[20], double Sig[3][3] ){
+void MPMMaterial::GetStresses(double F[3][3], double h[20], double Sig[3][3] ,std::vector<double> &MaterialIO){
   //
 double Eps[6] = {0,0,0,0,0,0};
 double v[10];                                                                 // vector with auxillary variables (at least for default material)
@@ -264,6 +277,17 @@ J2FiniteStrain3D(v ,Fvec ,h ,Sigvec ,dPdF ,AdditionalData);
 Sig[0][0]=Sigvec[0];Sig[0][1]=Sigvec[1];Sig[0][2]=Sigvec[2];
 Sig[1][0]=Sigvec[3];Sig[1][1]=Sigvec[4];Sig[1][2]=Sigvec[5];
 Sig[2][0]=Sigvec[6];Sig[2][1]=Sigvec[7];Sig[2][2]=Sigvec[8];
+// seigvec is now pvec ... can i use this ?
+//sig = 1/j P.Ft
+A_ijB_kj(Sigvec,Fvec,vaux);
+//so und jetzt checken wir mal !
+// if ( abs(vaux[0]-AdditionalData[7]) >10e-6) {std::cout << "tau11" << std::endl;}
+// if ( abs(vaux[2]-AdditionalData[8]) >10e-6) {std::cout << "tau12" << std::endl;}
+// if ( abs(vaux[3]-AdditionalData[9]) >10e-6) {std::cout << "tau13" << std::endl;}
+// if ( abs(vaux[4]-AdditionalData[10]) >10e-6) {std::cout << "tau22" << std::endl;}
+// if ( abs(vaux[5]-AdditionalData[11]) >10e-6) {std::cout << "tau23" << std::endl;}
+// if ( abs(vaux[8]-AdditionalData[12]) >10e-6) {std::cout << "tau33" << std::endl;}
+
 // extract data from AdditionalData
 MaterialState = (AdditionalData[0]<100)? 0:1; // 0-> elastic, 1->plastic
 MaterialConvergence = (AdditionalData[1]<100)? 0:1; // 0-> convergence, 1->divergence

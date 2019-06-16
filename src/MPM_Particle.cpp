@@ -145,3 +145,9 @@ void MPMParticle::Report(void){
   std::cout << "L32         :"  << std::setw(21) << L[2][1] << std::endl;
   std::cout << "L33         :"  << std::setw(21) << L[2][2] << std::endl;
 }
+
+// Post-Processing Interface
+int MPMParticle::GetPost(std::string KEY, std::array<double,9>, std::array<int,9>){
+  //if()
+  //return 0;
+}
