@@ -37,7 +37,7 @@ int main(int argc, char** argv)
 
 
     ELSE::SetupEnvironment(argc, argv);
-    std::cout << "Input File: " << ELSE::InputFileName << std::endl;
+    ELSE::ReadInputFile(ELSE::InputFileName);
 
 
     // Genrate The Time Tracker
@@ -57,7 +57,7 @@ int main(int argc, char** argv)
 
     // A log file
     std::ofstream LogFile;
-    LogFile.open("ThisElseLog", std::ios::out);
+    LogFile.open("Else_Files/ThisElseLog", std::ios::out);
     LogFile << "test" << std::endl;
     LogFile.close();
 

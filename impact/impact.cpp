@@ -420,9 +420,9 @@ void MoveRigidBody(double dt, std::vector<MPMParticle> &Particle){
 static std::vector<MPMParticle> Impactor,Target;
 static std::vector<MPMGridNode> GridNode;
 static std::vector<MPMGridElement> GridElement;
-static double MassTolerance = 10e-10;
+static double MassTolerance = 10e-6;
 
-double t0 = 0.0; double tmax = 40.0e-6; double dt = 1.18e-9; int step = 0;
+double t0 = 0.0; double tmax = 40.0e-6; double dt = 1.18e-8; int step = 0;
 
 bool ParaviewOutput = true; int PostFrequency = 100;
 std::string ImpactorOutputFile  = "/Users/sash/mpm_2d/impact/post/Impactor";

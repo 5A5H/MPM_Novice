@@ -415,7 +415,7 @@ static double MassTolerance = 10e-6;
 
 double t0 = 0.0; double tmax = 1.8; double dt = 10e-5; double rho  = 10; int step = 0;
 
-bool ParaviewOutput = true; int PostFrequency = 100;
+bool ParaviewOutput = true; int PostFrequency = 10000;
 std::string ToolOutputFile  = "/Users/sash/mpm_2d/metal_cut/Post/TwoParticle_Tool";
 std::string PieceOutputFile = "/Users/sash/mpm_2d/metal_cut/Post/TwoParticle_Piece";
 std::string GridOutputFile  = "/Users/sash/mpm_2d/metal_cut/Post/TwoParticle_Grid";

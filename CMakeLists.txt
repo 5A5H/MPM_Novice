@@ -34,6 +34,15 @@ add_library(mdm2dp
     src/MPM_Particle.cpp
     src/MPM_GridNode.cpp
     src/MPM_GridElement.cpp
+    src/ELSE_System.cpp
+)
+
+add_library(ELSE_CORE
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/ELSE_System.cpp
+)
+
+add_library(tiny_xml2
+    ${CMAKE_CURRENT_SOURCE_DIR}/third_party/tiny_xml2/tinyxml2.cpp
 )
 
 #target_include_directories(
@@ -42,6 +51,7 @@ add_library(mdm2dp
 #    "include"
 #    "ace_mate"
 #)
+
 include_directories(
   ${CMAKE_CURRENT_SOURCE_DIR}/include
   ${CMAKE_CURRENT_SOURCE_DIR}/ace_mate
@@ -115,5 +125,7 @@ add_executable(ELSE
 target_link_libraries(ELSE
                       mdm2dp
                       ${AceUtil}
+                      tiny_xml2
+                      ELSE_CORE
 )
 ##################################

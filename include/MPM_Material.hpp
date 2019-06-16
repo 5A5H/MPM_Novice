@@ -279,7 +279,15 @@ void MPMMaterial::Report(){
     std::cout << "Young's modulus: " << MaterialParameter[0] << std::endl;
     std::cout << "Possion's ratio: " << MaterialParameter[1] << std::endl;
   }
-  std::cout << "---- Material Report ----" << std::endl;
+  if (ID == 6){
+    std::cout << "Young's modulus: " << MaterialParameter[0] << std::endl;
+    std::cout << "Possion's ratio: " << MaterialParameter[1] << std::endl;
+    std::cout << "Yield strength: " << MaterialParameter[2] << std::endl;
+    std::cout << "exp. hardening yield strength saturation: " << MaterialParameter[3] << std::endl;
+    std::cout << "linear hardening coefficient: " << MaterialParameter[4] << std::endl;
+    std::cout << "exponential hardening coefficient: " << MaterialParameter[5] << std::endl;
+  }
+  std::cout << "---- Material Report End ----" << std::endl;
 }
 
 #endif
