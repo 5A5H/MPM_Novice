@@ -1,6 +1,6 @@
 /*************************************************************
 * AceGen    6.923 MacOSX (19 Apr 19)                         *
-*           Co. J. Korelc  2013           15 Jun 19 22:57:34 *
+*           Co. J. Korelc  2013           16 Jun 19 11:18:32 *
 **************************************************************
 User     : Full professional version
 Notebook : mate_planestrain_linearelasticity_ctest
@@ -8,7 +8,7 @@ Evaluation time                 : 0 s     Mode  : Optimal
 Number of formulae              : 12      Method: Automatic
 Subroutine                      : SmallStrainHookePlaneStress2D size: 243
 Total size of Mathematica  code : 243 subexpressions
-Total size of C code            : 756 bytes */
+Total size of C code            : 788 bytes */
 #include "sms.h"
 
 /******************* S U B R O U T I N E *********************/
@@ -16,6 +16,10 @@ void SmallStrainHookePlaneStress2D(double MaterialData[2],double Eps[3]
      ,double Exp[16])
 {
 double v[149];
+\*
+Some infos 
+and some more
+* 
 v[39]=Eps[0]+Eps[1];
 bool debugaceroutine=true;
 v[37]=MaterialData[0]/(1e0+MaterialData[1]);

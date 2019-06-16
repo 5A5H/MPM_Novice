@@ -3,10 +3,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[         0,          0]
-NotebookDataLength[    163147,       3983]
-NotebookOptionsPosition[    158973,       3893]
-NotebookOutlinePosition[    159309,       3908]
-CellTagsIndexPosition[    159266,       3905]
+NotebookDataLength[    172998,       4235]
+NotebookOptionsPosition[    168611,       4138]
+NotebookOutlinePosition[    168948,       4153]
+CellTagsIndexPosition[    168905,       4150]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -235,7 +235,7 @@ Cell[TextData[{
  CellChangeTimes->{{3.704544129336649*^9, 
   3.70454448174839*^9}},ExpressionUUID->"95f75d79-fc70-4e85-94eb-\
 bf05561bfa1b"]
-}, Open  ]],
+}, Closed]],
 
 Cell[CellGroupData[{
 
@@ -558,7 +558,7 @@ Cell[BoxData[
   "During evaluation of \
 In[109]:=",ExpressionUUID->"167713c2-fa53-43eb-9e79-d3bada400db2"]
 }, Open  ]]
-}, Open  ]],
+}, Closed]],
 
 Cell[CellGroupData[{
 
@@ -650,8 +650,8 @@ Cell[BoxData[
   "Out[130]//MatrixForm=",ExpressionUUID->"bb68e662-a822-49ef-95d7-\
 545a29779289"]
 }, Open  ]]
-}, Open  ]]
-}, Open  ]],
+}, Closed]]
+}, Closed]],
 
 Cell[CellGroupData[{
 
@@ -663,6 +663,10 @@ Cell["Material Plane Stress", "Title",
 Cell[CellGroupData[{
 
 Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+  "MaterialInfo", "=", "\"\<\\*\nSome infos \nand some more\n*\\ \>\""}], 
+  ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"<<", "AceGen`"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
@@ -678,7 +682,8 @@ Cell[BoxData[{
      RowBox[{
       RowBox[{"MaterialData$$", "[", "2", "]"}], ",", 
       RowBox[{"Eps$$", "[", "3", "]"}], ",", 
-      RowBox[{"Exp$$", "[", "16", "]"}]}], "]"}]}], "]"}], 
+      RowBox[{"Exp$$", "[", "16", "]"}]}], "]"}], ",", 
+    RowBox[{"\"\<Verbatim\>\"", "\[Rule]", "MaterialInfo"}]}], "]"}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"SMSVerbatim", "[", "\"\<bool debugaceroutine=true;\>\"", "]"}], 
@@ -832,12 +837,13 @@ Cell[BoxData[{
     RowBox[{"SMSLogical", "[", "debugaceroutine$$$", "]"}], "\[Equal]", 
     "True"}], "]"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"SMSEndIf", "[", "]"}], 
-  ";"}], "\[IndentingNewLine]", "SMSVerbatim", "\[IndentingNewLine]", 
+  RowBox[{"SMSEndIf", "[", "]"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"SMSWrite", "[", 
    RowBox[{"\"\<LocalAuxiliaryVariables\>\"", "\[Rule]", "True"}], "]"}], 
-  ";"}]}], "Input",
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"FilePrint", "[", "\"\<SmallStrainHookePlaneStress2D.cpp\>\"", 
+  "]"}]}], "Input",
  CellChangeTimes->{{3.7019422334683743`*^9, 3.701942240555492*^9}, {
    3.701942551827433*^9, 3.7019425973402653`*^9}, 3.701942657899887*^9, {
    3.701942771968176*^9, 3.701942954385462*^9}, {3.701944266809721*^9, 
@@ -882,18 +888,13 @@ Cell[BoxData[{
    3.769618813191036*^9, 3.7696188978511972`*^9}, {3.769619039971738*^9, 
    3.769619118080332*^9}, {3.769619292278298*^9, 3.76961939947717*^9}, {
    3.769619434931073*^9, 3.7696194590352173`*^9}, {3.769619527083165*^9, 
-   3.769619539590551*^9}, {3.769621049843371*^9, 3.769621052522295*^9}},
+   3.769619539590551*^9}, {3.769621049843371*^9, 3.769621052522295*^9}, {
+   3.769664608142582*^9, 3.769664617849169*^9}, 3.769664679482464*^9, {
+   3.769665413000909*^9, 3.769665510751696*^9}},
  CellLabel->
-  "In[853]:=",ExpressionUUID->"f3ea91b8-ed2b-468c-a1a4-acea30ae07fc"],
+  "In[110]:=",ExpressionUUID->"f3ea91b8-ed2b-468c-a1a4-acea30ae07fc"],
 
-Cell[BoxData["SMSVerbatim"], "Output",
- CellChangeTimes->{
-  3.7696183566612167`*^9, 3.7696183931693497`*^9, {3.769618877860435*^9, 
-   3.769618898919129*^9}, {3.769619079892664*^9, 3.7696191196995373`*^9}, {
-   3.7696193569311657`*^9, 3.769619383527081*^9}, {3.769619438606738*^9, 
-   3.7696194601220303`*^9}, 3.769619542562868*^9, 3.769621054030501*^9},
- CellLabel->
-  "Out[872]=",ExpressionUUID->"83cfc91b-6fda-4835-b317-1dcfc94c853a"],
+Cell[CellGroupData[{
 
 Cell[BoxData[
  TagBox[GridBox[{
@@ -902,7 +903,7 @@ Cell[BoxData[
         RGBColor[0, 0, 1], StripOnInput -> False],
        "\"SmallStrainHookePlaneStress2D.cpp\"",StyleBox[
        "\"  Size: \"", Bold, 
-        RGBColor[0, 0, 1], StripOnInput -> False],"1405",StyleBox[
+        RGBColor[0, 0, 1], StripOnInput -> False],"1437",StyleBox[
        "\"  Time: \"", Bold, 
         RGBColor[0, 0, 1], StripOnInput -> False],"0"},
       "RowDefault"]},
@@ -959,25 +960,17 @@ Cell[BoxData[
  CellChangeTimes->{
   3.769619120205764*^9, {3.7696193577911377`*^9, 3.769619384082189*^9}, {
    3.769619439194191*^9, 3.7696194612141447`*^9}, 3.769619543019421*^9, 
-   3.7696210545884237`*^9},
+   3.7696210545884237`*^9, 3.76966462266956*^9, 3.769664681582439*^9, {
+   3.769665425135303*^9, 3.769665445567582*^9}, 3.769665478967741*^9, 
+   3.7696655121295547`*^9},
  CellLabel->
   "During evaluation of \
-In[853]:=",ExpressionUUID->"aa475cf1-beab-4605-bc0c-695a19109d6b"]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"FilePrint", "[", "\"\<SmallStrainHookePlaneStress2D.cpp\>\"", 
-  "]"}]], "Input",
- CellChangeTimes->{{3.769616875691527*^9, 3.769616887214553*^9}},
- CellLabel->
-  "In[874]:=",ExpressionUUID->"25ca12d1-8803-4c0c-9e9b-0b92741730c2"],
+In[110]:=",ExpressionUUID->"d38ac246-6cb7-4642-914b-29eee48c5aaa"],
 
 Cell["\<\
 /*************************************************************
 * AceGen    6.923 MacOSX (19 Apr 19)                         *
-*           Co. J. Korelc  2013           15 Jun 19 22:57:34 *
+*           Co. J. Korelc  2013           16 Jun 19 11:18:32 *
 **************************************************************
 User     : Full professional version
 Notebook : mate_planestrain_linearelasticity_ctest
@@ -985,7 +978,7 @@ Evaluation time                 : 0 s     Mode  : Optimal
 Number of formulae              : 12      Method: Automatic
 Subroutine                      : SmallStrainHookePlaneStress2D size: 243
 Total size of Mathematica  code : 243 subexpressions
-Total size of C code            : 756 bytes */
+Total size of C code            : 788 bytes */
 #include \"sms.h\"
 
 /******************* S U B R O U T I N E *********************/
@@ -993,6 +986,10 @@ void SmallStrainHookePlaneStress2D(double MaterialData[2],double Eps[3]
      ,double Exp[16])
 {
 double v[149];
+\\*
+Some infos 
+and some more
+* 
 v[39]=Eps[0]+Eps[1];
 bool debugaceroutine=true;
 v[37]=MaterialData[0]/(1e0+MaterialData[1]);
@@ -1021,19 +1018,18 @@ Exp[14]=0e0;
 Exp[15]=v[37];
 };\
 \>", "Print",
- CellChangeTimes->{{3.7696168887970552`*^9, 3.769616914857386*^9}, 
-   3.769616965114966*^9, 3.769617104868799*^9, 3.769617140991251*^9, 
-   3.769617384522778*^9, 3.7696174202961187`*^9, 3.769617493605785*^9, 
-   3.769618006707924*^9, {3.769618097790757*^9, 3.769618113748617*^9}, 
-   3.769618181889385*^9, 3.769618359915106*^9, 3.769618395699313*^9, 
-   3.769618902840008*^9, {3.769619082785738*^9, 3.769619122654574*^9}, {
-   3.769619360562477*^9, 3.76961938700147*^9}, {3.76961944202017*^9, 
-   3.7696194628927298`*^9}, 3.769619548843648*^9, 3.7696210606608343`*^9},
+ CellChangeTimes->{
+  3.769619120205764*^9, {3.7696193577911377`*^9, 3.769619384082189*^9}, {
+   3.769619439194191*^9, 3.7696194612141447`*^9}, 3.769619543019421*^9, 
+   3.7696210545884237`*^9, 3.76966462266956*^9, 3.769664681582439*^9, {
+   3.769665425135303*^9, 3.769665445567582*^9}, 3.769665478967741*^9, 
+   3.769665512201603*^9},
  CellLabel->
   "During evaluation of \
-In[874]:=",ExpressionUUID->"51c0b334-5ca3-48bc-a5c2-c40f22aa2da5"]
+In[110]:=",ExpressionUUID->"8abdb2c1-0e32-4682-9e25-f3cb4b81b7a6"]
 }, Open  ]]
-}, Open  ]],
+}, Open  ]]
+}, Closed]],
 
 Cell[CellGroupData[{
 
@@ -1817,13 +1813,83 @@ In[183]:=",ExpressionUUID->"c9f54875-e954-4f19-bb83-0fa0c5d430e8"]
 
 Cell[CellGroupData[{
 
-Cell["Material 3D J2 FiniteStrain !MatrixExponent Issue", "Title",
+Cell["Material 3D J2 FiniteStrain", "Title",
  CellChangeTimes->{{3.7678722273326683`*^9, 3.767872232631587*^9}, {
   3.7687464402495003`*^9, 3.768746441186487*^9}, {3.7687464919864883`*^9, 
   3.768746492835479*^9}, {3.7687491422917643`*^9, 3.768749143878159*^9}, {
   3.768749886631278*^9, 3.768749916970417*^9}, {3.768808617534038*^9, 
-  3.7688086236645412`*^9}},ExpressionUUID->"d0645cbb-5c75-4e12-94d0-\
+  3.7688086236645412`*^9}, {3.769668720371842*^9, 
+  3.76966872105684*^9}},ExpressionUUID->"d0645cbb-5c75-4e12-94d0-\
 0df5355fc01a"],
+
+Cell[CellGroupData[{
+
+Cell["Material Info", "Subsection",
+ CellChangeTimes->{{3.769671228029265*^9, 
+  3.769671257241468*^9}},ExpressionUUID->"9405cc7e-6170-4e4f-afa5-\
+3b3772fccbd0"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+  "MaterialInfo", "=", 
+   "\"\<\n/*------------------------------------------------------------------\
+------------------------------\n\
+------------------------------------------------------------------------------\
+--------------------\nMaterial: J2 finite strain plasticity (rate \
+independent)\nInput:   d[6 ]  = [Emod, nu, y0, yinf, Kh, dh]\n         F[9 ]  \
+= [F11, F12, F13, F21, F22, F23, F31, F32, F33]\n         h[10]  = \
+[Fpinv11-1, Fpinv12, Fpinv13, Fpinv21, Fpinv22-1, Fpinv23, Fpinv31, Fpinv32, \
+\n                   Fpinv33-1, alpha]\nOutput:  P[9 ]  = [P11, P12, P13, \
+P21, P22, P23, P31, P32, P33]\n         dPdF[81] = [dP11dF11, dP11dF12, \
+dP11dF13, dP11dF21, ..., dP11dF33,\n                     dP12dF11, dP12dF12, \
+dP12dF13, dP12dF21, ..., dP12dF33,\n                     dP13dF11, dP13dF12, \
+dP13dF13, dP13dF21, ..., dP13dF33,\n                     dP21dF11, dP21dF12, \
+dP21dF13, dP21dF21, ..., dP21dF33,\n                     ...\n                \
+     dP33dF11, dP33dF12, dP33dF13, dP33dF21, ..., dP33dF33]\n         \
+AdditionalData[20] = [\n                                0  -> Plastic \
+indicator (<100 -> elastic, >100 -> platsic)\n                                \
+1  -> Divergence indicator (<100 ->convergence, >100 ->divergence)\n          \
+                      2  -> number of required iterations\n                   \
+             3  -> Initial TauMises\n                                4  -> \
+Initial YieldMises\n                                5  -> Final TauMises\n    \
+                            6  -> Final YieldMises\n                          \
+      7...12  -> Final Tau (Symmetric) = [Tau11, Tau12, Tau13, \n             \
+                                                       Tau22, Tau23, Tau33]\n \
+                             ]\nLegend: Emod -> Youngs modulus\n        nu   \
+-> Possions ratio\n        y0   -> initial yield surface (kirchhoff stress \
+Tau)\n        yinf -> saturated yield stress (kirchhoff stress Tau, \
+saturation by exp. hardening)\n        Kh   -> linear hardening coefficient\n \
+       dh   -> exponential hardening coefficient\n        Fxy  -> deformation \
+gradient\n        Fpinvxy -> inverse pointwise plastic part of the deformatin \
+gradient\n        h[]  -> pointwise material history field\n        Pxy  -> \
+1.st Piola Kirchhoff stress\n        Tauxy-> Kirchhoff stress\n        \
+alpha-> accumulated plastic strain\nSome Theory aspects:\n\
+VonMisesYieldSurface: (yinf+(y0-yinf)Exp[-dh alpha]+Kh alpha)\n\
+------------------------------------------------------------------------------\
+--------------------\n\
+------------------------------------------------------------------------------\
+------------------*/ \>\""}], ";"}]], "Input",
+ CellChangeTimes->{{3.76966538191363*^9, 3.7696653833979893`*^9}, {
+  3.7696655190540123`*^9, 3.7696658298831997`*^9}, {3.769665863231221*^9, 
+  3.769665903751562*^9}, {3.7696660903022537`*^9, 3.769666269236278*^9}, {
+  3.7696663041458597`*^9, 3.769666702385084*^9}, {3.769666738378254*^9, 
+  3.769666792627948*^9}, {3.7696678688397083`*^9, 3.769668062623261*^9}, {
+  3.769668320829296*^9, 3.7696683604261703`*^9}, {3.76966846268929*^9, 
+  3.769668516659881*^9}, {3.7696687679409943`*^9, 3.769668846466639*^9}, {
+  3.769669052740471*^9, 3.769669074169859*^9}, {3.769669122376998*^9, 
+  3.769669126862465*^9}, {3.769671109703744*^9, 3.7696711293093967`*^9}, {
+  3.769671298920957*^9, 3.769671360537642*^9}, {3.7696721557096777`*^9, 
+  3.769672156271014*^9}},ExpressionUUID->"692c8963-2086-4e42-8026-\
+bc3aca26f5f5"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Material Subroutine AceGen Syntax", "Subsection",
+ CellChangeTimes->{{3.769671238480013*^9, 
+  3.769671248964863*^9}},ExpressionUUID->"4fc4ff44-e9ca-4827-ac7e-\
+cca6c4d334f2"],
 
 Cell[BoxData[{
  RowBox[{
@@ -1927,15 +1993,6 @@ Cell[BoxData[{
           RowBox[{"\[DoubleStruckCapitalF]e", "\[Transpose]"}]}]}], ",", 
         RowBox[{"\"\<Symmetric\>\"", "\[Rule]", "True"}]}], "]"}], ";", 
       "\[IndentingNewLine]", 
-      RowBox[{"If", "[", 
-       RowBox[{
-        RowBox[{"task", "\[Equal]", "\"\<P\>\""}], ",", 
-        RowBox[{"Return", "[", 
-         RowBox[{"SMSD", "[", 
-          RowBox[{"\[CapitalPi]", ",", "\[DoubleStruckCapitalF]", ",", 
-           RowBox[{"\"\<Constant\>\"", "\[Rule]", "\[DoubleStruckH]gm"}]}], 
-          "]"}], "]"}]}], "]"}], ";", "\[IndentingNewLine]", 
-      "\[IndentingNewLine]", 
       RowBox[{"dev\[Tau]", "\[DoubleRightTee]", 
        RowBox[{"\[Tau]", "-", 
         RowBox[{
@@ -1964,7 +2021,15 @@ Cell[BoxData[{
       "\[IndentingNewLine]", 
       RowBox[{"\[ScriptF]", "\[DoubleRightTee]", 
        RowBox[{"\[Tau]Mises", "-", "\[Tau]y"}]}], ";", "\[IndentingNewLine]", 
-      
+      "\[IndentingNewLine]", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"task", "\[Equal]", "\"\<P\>\""}], ",", 
+        RowBox[{"Return", "[", 
+         RowBox[{"SMSD", "[", 
+          RowBox[{"\[CapitalPi]", ",", "\[DoubleStruckCapitalF]", ",", 
+           RowBox[{"\"\<Constant\>\"", "\[Rule]", "\[DoubleStruckH]gm"}]}], 
+          "]"}], "]"}]}], "]"}], ";", "\[IndentingNewLine]", 
       RowBox[{"If", "[", 
        RowBox[{
         RowBox[{"task", "\[Equal]", "\"\<f\>\""}], ",", 
@@ -2052,9 +2117,20 @@ Cell[BoxData[{
             RowBox[{"3", ",", "2"}], "\[RightDoubleBracket]"}], ",", 
            "\[ScriptF]"}], "}"}], "]"}]}], "]"}], ";"}]}], 
     "\[IndentingNewLine]", "]"}]}], ";"}]}], "Input",
- CellChangeTimes->{{3.768799733412269*^9, 3.768799734066764*^9}},
+ CellChangeTimes->{{3.768799733412269*^9, 3.768799734066764*^9}, {
+  3.7696684394276323`*^9, 3.7696684462085238`*^9}},
  CellLabel->
-  "In[983]:=",ExpressionUUID->"ecc573e2-7795-4879-8a2b-168e7718e9be"],
+  "In[215]:=",ExpressionUUID->"ecc573e2-7795-4879-8a2b-168e7718e9be"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Code Generation", "Subsection",
+ CellChangeTimes->{{3.769671282896003*^9, 
+  3.7696712857638407`*^9}},ExpressionUUID->"5f997b32-b184-4a81-bb7e-\
+cb646f196827"],
+
+Cell[CellGroupData[{
 
 Cell[BoxData[{
  RowBox[{
@@ -2073,9 +2149,10 @@ Cell[BoxData[{
       RowBox[{"d$$", "[", "6", "]"}], ",", 
       RowBox[{"F$$", "[", "9", "]"}], ",", 
       RowBox[{"h$$", "[", "10", "]"}], ",", 
-      RowBox[{"Sig$$", "[", "9", "]"}], ",", 
-      RowBox[{"Cmat$$", "[", 
-       RowBox[{"9", ",", "9"}], "]"}]}], "]"}]}], "]"}], 
+      RowBox[{"P$$", "[", "9", "]"}], ",", 
+      RowBox[{"dPdF$$", "[", "81", "]"}], ",", 
+      RowBox[{"AdditionalData$$", "[", "20", "]"}]}], "]"}], ",", 
+    RowBox[{"\"\<Verbatim\>\"", "\[Rule]", "MaterialInfo"}]}], "]"}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
@@ -2085,7 +2162,406 @@ Cell[BoxData[{
   RowBox[{"SMSVerbatim", "[", "\"\<bool debugaceroutine=false;\>\"", "]"}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"SMSVerbatim", "[", "\"\<bool debugplastic=true;\>\"", "]"}], 
+  RowBox[{
+   RowBox[{"SMSVerbatim", "[", "\"\<bool debugplastic=false;\>\"", "]"}], 
+   ";"}], "\[IndentingNewLine]"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+    "Eg", ",", "\[Nu]g", ",", "y0", ",", "y\[Infinity]", ",", "Kh", ",", 
+     "\[Delta]h"}], "}"}], "\[RightTee]", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"SMSReal", "[", 
+      RowBox[{"d$$", "[", "i", "]"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "6"}], "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSVerbatim", "[", 
+   RowBox[{
+   "\"\<if (debugmaterialparameters) std::cout << 'Emod    : '<<\>\"", ",", 
+    " ", "Eg", ",", " ", "\"\<<< std::endl;\>\""}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSVerbatim", "[", 
+   RowBox[{
+   "\"\<if (debugmaterialparameters) std::cout << 'nu      : '<<\>\"", ",", 
+    " ", "\[Nu]g", ",", " ", "\"\<<< std::endl;\>\""}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSVerbatim", "[", 
+   RowBox[{
+   "\"\<if (debugmaterialparameters) std::cout << 'y0      : '<<\>\"", ",", 
+    " ", "y0", ",", " ", "\"\<<< std::endl;\>\""}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSVerbatim", "[", 
+   RowBox[{
+   "\"\<if (debugmaterialparameters) std::cout << 'yinf    : '<<\>\"", ",", 
+    " ", "y\[Infinity]", ",", " ", "\"\<<< std::endl;\>\""}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSVerbatim", "[", 
+   RowBox[{
+   "\"\<if (debugmaterialparameters) std::cout << 'Kh      : '<<\>\"", ",", 
+    " ", "Kh", ",", " ", "\"\<<< std::endl;\>\""}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSVerbatim", "[", 
+   RowBox[{
+   "\"\<if (debugmaterialparameters) std::cout << 'del_h   : '<<\>\"", ",", 
+    "\[Delta]h", ",", " ", "\"\<<< std::endl;\>\""}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"\[Lambda]g", ",", "\[Mu]g"}], "}"}], "\[DoubleRightTee]", 
+    RowBox[{"SMSHookeToLame", "[", 
+     RowBox[{"Eg", ",", "\[Nu]g"}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"hn", "\[RightTee]", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"SMSReal", "[", 
+       RowBox[{"h$$", "[", "i", "]"}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "10"}], "}"}]}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Fvec", "\[RightTee]", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"SMSReal", "[", 
+      RowBox[{"F$$", "[", "i", "]"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "9"}], "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSFreeze", "[", 
+   RowBox[{"\[DoubleStruckCapitalF]", ",", 
+    RowBox[{"Partition", "[", 
+     RowBox[{"Fvec", ",", "3"}], "]"}]}], "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[DoubleStruckR]g", "=", 
+    RowBox[{"SMSVariables", "[", "\[DoubleStruckCapitalF]", "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[ScriptF]tr", "\[DoubleRightTee]", 
+   RowBox[{"PlasticMaterial", "[", 
+    RowBox[{"\"\<f\>\"", ",", "hn"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSVerbatim", "[", 
+   RowBox[{
+   "\"\<if (debugaceroutine) std::cout << 'Initial MisesTau:' <<\>\"", ",", 
+    "\[Tau]Mises", ",", "\"\<<< std::endl;\>\""}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSExport", "[", 
+   RowBox[{"\[Tau]Mises", ",", 
+    RowBox[{"AdditionalData$$", "[", "4", "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"SMSExport", "[", 
+    RowBox[{"\[Tau]y", ",", 
+     RowBox[{"AdditionalData$$", "[", "5", "]"}]}], "]"}], ";"}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSIf", "[", 
+   RowBox[{"\[ScriptF]tr", "<", 
+    SuperscriptBox["10", 
+     RowBox[{"-", "10"}]]}], "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+  "SMSVerbatim", "[", 
+   "\"\<if (debugaceroutine) std::cout << 'Elastic'<< std::endl;\>\"", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSExport", "[", 
+   RowBox[{"0", ",", 
+    RowBox[{"AdditionalData$$", "[", "1", "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[DoubleStruckH]g", "\[DoubleLeftTee]", "hn"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"PlasticIdicator", "\[DoubleLeftTee]", "0"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSElse", "[", "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSExport", "[", 
+   RowBox[{"1000", ",", 
+    RowBox[{"AdditionalData$$", "[", "1", "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+  "SMSVerbatim", "[", 
+   "\"\<if (debugaceroutine) std::cout << 'Plastic'<< std::endl;\>\"", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+  "SMSVerbatim", "[", 
+   "\"\<if (debugplastic) std::cout << 'Plastic'<< std::endl;\>\"", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[DoubleStruckH]gb", "\[DoubleLeftTee]", "hn"}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"LocalDivergence", "\[DoubleLeftTee]", "0"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"SMSDo", "[", 
+    RowBox[{"SubIg", ",", "1", ",", "51", ",", "1", ",", 
+     RowBox[{"{", 
+      RowBox[{"\[DoubleStruckH]gb", ",", "LocalDivergence"}], "}"}]}], "]"}], 
+   ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[DoubleStruckCapitalQ]g", "\[DoubleRightTee]", 
+   RowBox[{"PlasticMaterial", "[", 
+    RowBox[{"\"\<Q\>\"", ",", "\[DoubleStruckH]gb"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[DoubleStruckCapitalA]g", "\[DoubleRightTee]", 
+   RowBox[{"SMSD", "[", 
+    RowBox[{"\[DoubleStruckCapitalQ]g", ",", "\[DoubleStruckH]gb"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"LU", "\[DoubleRightTee]", 
+   RowBox[{"SMSLUFactor", "[", "\[DoubleStruckCapitalA]g", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[CapitalDelta]\[DoubleStruckH]", "\[DoubleRightTee]", 
+    RowBox[{"SMSLUSolve", "[", 
+     RowBox[{"LU", ",", 
+      RowBox[{"-", "\[DoubleStruckCapitalQ]g"}]}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", "update", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[DoubleStruckH]gb", "\[LeftTee]", 
+    RowBox[{"\[DoubleStruckH]gb", "+", "\[CapitalDelta]\[DoubleStruckH]"}]}], 
+   ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"on", " ", "convergency"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSIf", "[", 
+   RowBox[{
+    RowBox[{"Sqrt", "[", 
+     RowBox[{
+     "\[CapitalDelta]\[DoubleStruckH]", ".", 
+      "\[CapitalDelta]\[DoubleStruckH]"}], "]"}], "<", 
+    SuperscriptBox["10", 
+     RowBox[{"-", "14"}]]}], "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+  "SMSVerbatim", "[", 
+   "\"\<if (debugaceroutine) std::cout << '   iteration converged!'<< \
+std::endl;\>\"", "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSVerbatim", "[", 
+   RowBox[{
+   "\"\<if (debugaceroutine) std::cout << '   iteration : '<<\>\"", ",", 
+    "SubIg", ",", "\"\<<< std::endl;\>\""}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+  "SMSVerbatim", "[", 
+   "\"\<if (debugplastic) std::cout << '   iteration converged!'<< std::endl;\
+\>\"", "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSVerbatim", "[", 
+   RowBox[{
+   "\"\<if (debugplastic) std::cout << '   iteration : '<<\>\"", ",", "SubIg",
+     ",", "\"\<<< std::endl;\>\""}], "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"D\[DoubleStruckH]gDr", "\[DoubleLeftTee]", 
+   RowBox[{"SMSLUSolve", "[", 
+    RowBox[{"LU", ",", 
+     RowBox[{"-", 
+      RowBox[{"SMSD", "[", 
+       RowBox[{"\[DoubleStruckCapitalQ]g", ",", "\[DoubleStruckR]g", ",", 
+        RowBox[{"\"\<Constant\>\"", "\[Rule]", "\[DoubleStruckH]gb"}]}], 
+       "]"}]}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSExport", "[", 
+   RowBox[{"0", ",", 
+    RowBox[{"AdditionalData$$", "[", "2", "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSExport", "[", 
+   RowBox[{"SubIg", ",", 
+    RowBox[{"AdditionalData$$", "[", "3", "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSBreak", "[", "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"SMSEndIf", "[", "]"}], ";"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"on", " ", "non"}], "-", "convergency"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSIf", "[", 
+   RowBox[{"SubIg", "\[Equal]", "50"}], "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+  "SMSVerbatim", "[", 
+   "\"\<if (debugaceroutine) std::cout << '   iteration diverged!!!!' << \
+std::endl;\>\"", "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+  "SMSVerbatim", "[", 
+   "\"\<if (debugplastic) std::cout << '   iteration diverged!!!!' << \
+std::endl;\>\"", "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"LocalDivergence", "\[LeftTee]", 
+   SuperscriptBox["10", "6"]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSExport", "[", 
+   RowBox[{"1000", ",", 
+    RowBox[{"AdditionalData$$", "[", "2", "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSExport", "[", 
+   RowBox[{"SubIg", ",", 
+    RowBox[{"AdditionalData$$", "[", "3", "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"SMSEndIf", "[", "]"}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSEndDo", "[", 
+   RowBox[{"\[DoubleStruckH]gb", ",", "D\[DoubleStruckH]gDr"}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"PlasticIdicator", "\[LeftTee]", 
+   SuperscriptBox["10", "6"]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[DoubleStruckH]g", "\[LeftTee]", 
+   RowBox[{"SMSFreeze", "[", 
+    RowBox[{"\[DoubleStruckH]gb", ",", 
+     RowBox[{"\"\<Dependency\>\"", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\[DoubleStruckR]g", ",", "D\[DoubleStruckH]gDr"}], "}"}]}]}], 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"SMSEndIf", "[", 
+    RowBox[{
+    "\[DoubleStruckH]g", ",", "PlasticIdicator", ",", "LocalDivergence"}], 
+    "]"}], ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[DoubleStruckCapitalP]", "\[DoubleRightTee]", 
+   RowBox[{"PlasticMaterial", "[", 
+    RowBox[{"\"\<P\>\"", ",", "\[DoubleStruckH]g"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSExport", "[", 
+   RowBox[{"\[Tau]Mises", ",", 
+    RowBox[{"AdditionalData$$", "[", "6", "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSExport", "[", 
+   RowBox[{"\[Tau]y", ",", 
+    RowBox[{"AdditionalData$$", "[", "7", "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSExport", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"\[Tau]", "\[LeftDoubleBracket]", 
+       RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}], ",", 
+      RowBox[{"\[Tau]", "\[LeftDoubleBracket]", 
+       RowBox[{"1", ",", "2"}], "\[RightDoubleBracket]"}], ",", 
+      RowBox[{"\[Tau]", "\[LeftDoubleBracket]", 
+       RowBox[{"1", ",", "3"}], "\[RightDoubleBracket]"}], ",", 
+      RowBox[{"\[Tau]", "\[LeftDoubleBracket]", 
+       RowBox[{"2", ",", "2"}], "\[RightDoubleBracket]"}], ",", 
+      RowBox[{"\[Tau]", "\[LeftDoubleBracket]", 
+       RowBox[{"2", ",", "3"}], "\[RightDoubleBracket]"}], ",", 
+      RowBox[{"\[Tau]", "\[LeftDoubleBracket]", 
+       RowBox[{"3", ",", "3"}], "\[RightDoubleBracket]"}]}], "}"}], ",", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"AdditionalData$$", "[", "i", "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "8", ",", "13"}], "}"}]}], "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSVerbatim", "[", 
+   RowBox[{
+   "\"\<if (debugaceroutine) std::cout << 'Final MisesTau:' << \>\"", ",", 
+    "\[Tau]Mises", ",", "\"\<<< std::endl;\>\""}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"SMSVerbatim", "[", 
+    RowBox[{
+    "\"\<if (debugplastic) std::cout << 'Final MisesTau:' << \>\"", ",", 
+     "\[Tau]Mises", ",", "\"\<<< std::endl;\>\""}], "]"}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Pvec", "\[DoubleRightTee]", 
+    RowBox[{"Flatten", "[", "\[DoubleStruckCapitalP]", "]"}]}], ";"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"dPdF", "\[DoubleRightTee]", 
+     RowBox[{"SMSD", "[", 
+      RowBox[{"Pvec", ",", "Fvec", ",", 
+       RowBox[{"\"\<Method\>\"", "\[Rule]", "\"\<Forward\>\""}]}], "]"}]}], 
+    ";"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Sigma]", "=", 
+   RowBox[{
+    RowBox[{"1", "/", 
+     RowBox[{"SMSDet", "[", "\[DoubleStruckCapitalF]", "]"}]}], "\[Tau]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[Sigma]vec", "=", 
+    RowBox[{"Flatten", "[", "\[Sigma]", "]"}]}], ";"}], "\[IndentingNewLine]",
+   "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"export", " ", "quantities"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSExport", "[", 
+   RowBox[{"\[Sigma]vec", ",", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"P$$", "[", "i", "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "9"}], "}"}]}], "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSExport", "[", 
+   RowBox[{"\[DoubleStruckH]g", ",", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"h$$", "[", "i", "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "10"}], "}"}]}], "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSWrite", "[", 
+   RowBox[{
+    RowBox[{"\"\<LocalAuxiliaryVariables\>\"", "\[Rule]", "True"}], ",", 
+    RowBox[{"\"\<IncludeHeaders\>\"", "\[Rule]", 
+     RowBox[{"{", "\"\<MPM_AceMaterials.hpp\>\"", "}"}]}], ",", 
+    RowBox[{"\"\<OptimizingLoops\>\"", "\[Rule]", "1"}]}], "]"}], 
   ";"}]}], "Input",
  CellChangeTimes->{{3.7019422334683743`*^9, 3.701942240555492*^9}, {
    3.701942551827433*^9, 3.7019425973402653`*^9}, 3.701942657899887*^9, {
@@ -2130,342 +2606,13 @@ Cell[BoxData[{
    3.768749984572356*^9}, {3.7687500553491*^9, 3.76875005551775*^9}, {
    3.7687502354219437`*^9, 3.768750248253613*^9}, {3.7696195819410763`*^9, 
    3.769619633027039*^9}, 3.7696196962624083`*^9, {3.7696214889346457`*^9, 
-   3.769621521492414*^9}},
- CellLabel->
-  "In[985]:=",ExpressionUUID->"bd908fdb-4d53-41a5-83d0-a3f8e77cb409"],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"\[IndentingNewLine]", 
-  RowBox[{
-   RowBox[{
-    RowBox[{
-     RowBox[{"{", 
-      RowBox[{
-      "Eg", ",", "\[Nu]g", ",", "y0", ",", "y\[Infinity]", ",", "Kh", ",", 
-       "\[Delta]h"}], "}"}], "\[RightTee]", 
-     RowBox[{"Table", "[", 
-      RowBox[{
-       RowBox[{"SMSReal", "[", 
-        RowBox[{"d$$", "[", "i", "]"}], "]"}], ",", 
-       RowBox[{"{", 
-        RowBox[{"i", ",", "6"}], "}"}]}], "]"}]}], ";"}], 
-   "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"SMSVerbatim", "[", 
-     RowBox[{
-     "\"\<if (debugmaterialparameters) std::cout << 'Emod    : '<<\>\"", ",", 
-      " ", "Eg", ",", " ", "\"\<<< std::endl;\>\""}], "]"}], ";"}], 
-   "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"SMSVerbatim", "[", 
-     RowBox[{
-     "\"\<if (debugmaterialparameters) std::cout << 'nu      : '<<\>\"", ",", 
-      " ", "\[Nu]g", ",", " ", "\"\<<< std::endl;\>\""}], "]"}], ";"}], 
-   "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"SMSVerbatim", "[", 
-     RowBox[{
-     "\"\<if (debugmaterialparameters) std::cout << 'y0      : '<<\>\"", ",", 
-      " ", "y0", ",", " ", "\"\<<< std::endl;\>\""}], "]"}], ";"}], 
-   "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"SMSVerbatim", "[", 
-     RowBox[{
-     "\"\<if (debugmaterialparameters) std::cout << 'yinf    : '<<\>\"", ",", 
-      " ", "y\[Infinity]", ",", " ", "\"\<<< std::endl;\>\""}], "]"}], ";"}], 
-   "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"SMSVerbatim", "[", 
-     RowBox[{
-     "\"\<if (debugmaterialparameters) std::cout << 'Kh      : '<<\>\"", ",", 
-      " ", "Kh", ",", " ", "\"\<<< std::endl;\>\""}], "]"}], ";"}], 
-   "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"SMSVerbatim", "[", 
-     RowBox[{
-     "\"\<if (debugmaterialparameters) std::cout << 'del_h   : '<<\>\"", ",", 
-      "\[Delta]h", ",", " ", "\"\<<< std::endl;\>\""}], "]"}], ";"}], 
-   "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{
-     RowBox[{"{", 
-      RowBox[{"\[Lambda]g", ",", "\[Mu]g"}], "}"}], "\[DoubleRightTee]", 
-     RowBox[{"SMSHookeToLame", "[", 
-      RowBox[{"Eg", ",", "\[Nu]g"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
-   "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"hn", "\[RightTee]", 
-     RowBox[{"Table", "[", 
-      RowBox[{
-       RowBox[{"SMSReal", "[", 
-        RowBox[{"h$$", "[", "i", "]"}], "]"}], ",", 
-       RowBox[{"{", 
-        RowBox[{"i", ",", "10"}], "}"}]}], "]"}]}], ";"}], 
-   "\[IndentingNewLine]", "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"Fvec", "\[RightTee]", 
-     RowBox[{"Table", "[", 
-      RowBox[{
-       RowBox[{"SMSReal", "[", 
-        RowBox[{"F$$", "[", "i", "]"}], "]"}], ",", 
-       RowBox[{"{", 
-        RowBox[{"i", ",", "9"}], "}"}]}], "]"}]}], ";"}], 
-   "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"SMSFreeze", "[", 
-     RowBox[{"\[DoubleStruckCapitalF]", ",", 
-      RowBox[{"Partition", "[", 
-       RowBox[{"Fvec", ",", "3"}], "]"}]}], "]"}], ";"}], 
-   "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"\[DoubleStruckR]g", "=", 
-     RowBox[{"SMSVariables", "[", "\[DoubleStruckCapitalF]", "]"}]}], ";"}], 
-   "\[IndentingNewLine]", "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"\[ScriptF]tr", "\[DoubleRightTee]", 
-     RowBox[{"PlasticMaterial", "[", 
-      RowBox[{"\"\<f\>\"", ",", "hn"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"SMSVerbatim", "[", 
-     RowBox[{
-     "\"\<if (debugaceroutine) std::cout << 'Initial MisesTau:' <<\>\"", ",", 
-      "\[Tau]Mises", ",", "\"\<<< std::endl;\>\""}], "]"}], ";"}], 
-   "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"SMSIf", "[", 
-     RowBox[{"\[ScriptF]tr", "<", 
-      SuperscriptBox["10", 
-       RowBox[{"-", "10"}]]}], "]"}], ";"}], "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{
-    "SMSVerbatim", "[", 
-     "\"\<if (debugaceroutine) std::cout << 'Elastic'<< std::endl;\>\"", 
-     "]"}], ";"}], "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"\[DoubleStruckH]g", "\[DoubleLeftTee]", "hn"}], ";"}], 
-   "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"PlasticIdicator", "\[DoubleLeftTee]", "0"}], ";"}], 
-   "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"SMSElse", "[", "]"}], ";"}], "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{
-    "SMSVerbatim", "[", 
-     "\"\<if (debugaceroutine) std::cout << 'Plastic'<< std::endl;\>\"", 
-     "]"}], ";"}], "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{
-    "SMSVerbatim", "[", 
-     "\"\<if (debugplastic) std::cout << 'Plastic'<< std::endl;\>\"", "]"}], 
-    ";"}], "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"\[DoubleStruckH]gb", "\[DoubleLeftTee]", "hn"}], ";"}], 
-   "\[IndentingNewLine]", "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"LocalDivergence", "\[DoubleLeftTee]", "0"}], ";"}], 
-   "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"SMSDo", "[", 
-     RowBox[{"SubIg", ",", "1", ",", "30", ",", "1", ",", 
-      RowBox[{"{", 
-       RowBox[{"\[DoubleStruckH]gb", ",", "LocalDivergence"}], "}"}]}], "]"}],
-     ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"\[DoubleStruckCapitalQ]g", "\[DoubleRightTee]", 
-     RowBox[{"PlasticMaterial", "[", 
-      RowBox[{"\"\<Q\>\"", ",", "\[DoubleStruckH]gb"}], "]"}]}], ";"}], 
-   "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"\[DoubleStruckCapitalA]g", "\[DoubleRightTee]", 
-     RowBox[{"SMSD", "[", 
-      RowBox[{"\[DoubleStruckCapitalQ]g", ",", "\[DoubleStruckH]gb"}], 
-      "]"}]}], ";"}], "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"LU", "\[DoubleRightTee]", 
-     RowBox[{"SMSLUFactor", "[", "\[DoubleStruckCapitalA]g", "]"}]}], ";"}], 
-   "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"\[CapitalDelta]\[DoubleStruckH]", "\[DoubleRightTee]", 
-     RowBox[{"SMSLUSolve", "[", 
-      RowBox[{"LU", ",", 
-       RowBox[{"-", "\[DoubleStruckCapitalQ]g"}]}], "]"}]}], ";"}], 
-   "\[IndentingNewLine]", "\[IndentingNewLine]", 
-   RowBox[{"(*", "update", "*)"}], "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"\[DoubleStruckH]gb", "\[LeftTee]", 
-     RowBox[{"\[DoubleStruckH]gb", "+", "\[CapitalDelta]\[DoubleStruckH]"}]}],
-     ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
-   RowBox[{"(*", 
-    RowBox[{"on", " ", "convergency"}], "*)"}], "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"SMSIf", "[", 
-     RowBox[{
-      RowBox[{"Sqrt", "[", 
-       RowBox[{
-       "\[CapitalDelta]\[DoubleStruckH]", ".", 
-        "\[CapitalDelta]\[DoubleStruckH]"}], "]"}], "<", 
-      SuperscriptBox["10", 
-       RowBox[{"-", "14"}]]}], "]"}], ";"}], "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{
-    "SMSVerbatim", "[", 
-     "\"\<if (debugaceroutine) std::cout << '   iteration converged!'<< \
-std::endl;\>\"", "]"}], ";"}], "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"SMSVerbatim", "[", 
-     RowBox[{
-     "\"\<if (debugaceroutine) std::cout << '   iteration : '<<\>\"", ",", 
-      "SubIg", ",", "\"\<<< std::endl;\>\""}], "]"}], ";"}], 
-   "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{
-    "SMSVerbatim", "[", 
-     "\"\<if (debugplastic) std::cout << '   iteration converged!'<< \
-std::endl;\>\"", "]"}], ";"}], "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"SMSVerbatim", "[", 
-     RowBox[{
-     "\"\<if (debugplastic) std::cout << '   iteration : '<<\>\"", ",", 
-      "SubIg", ",", "\"\<<< std::endl;\>\""}], "]"}], ";"}], 
-   "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"D\[DoubleStruckH]gDr", "\[DoubleLeftTee]", 
-     RowBox[{"SMSLUSolve", "[", 
-      RowBox[{"LU", ",", 
-       RowBox[{"-", 
-        RowBox[{"SMSD", "[", 
-         RowBox[{"\[DoubleStruckCapitalQ]g", ",", "\[DoubleStruckR]g", ",", 
-          RowBox[{"\"\<Constant\>\"", "\[Rule]", "\[DoubleStruckH]gb"}]}], 
-         "]"}]}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"SMSBreak", "[", "]"}], ";"}], "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"SMSEndIf", "[", "]"}], ";"}], "\[IndentingNewLine]", 
-   "\[IndentingNewLine]", 
-   RowBox[{"(*", 
-    RowBox[{
-     RowBox[{"on", " ", "non"}], "-", "convergency"}], "*)"}], 
-   "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"SMSIf", "[", 
-     RowBox[{"SubIg", "\[Equal]", "29"}], "]"}], ";"}], "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{
-    "SMSVerbatim", "[", 
-     "\"\<if (debugaceroutine) std::cout << '   iteration diverged!!!!' << \
-std::endl;\>\"", "]"}], ";"}], "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{
-    "SMSVerbatim", "[", 
-     "\"\<if (debugplastic) std::cout << '   iteration diverged!!!!' << \
-std::endl;\>\"", "]"}], ";"}], "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"LocalDivergence", "\[LeftTee]", 
-     SuperscriptBox["10", "6"]}], ";"}], "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"SMSEndIf", "[", "]"}], ";"}], "\[IndentingNewLine]", 
-   "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"SMSEndDo", "[", 
-     RowBox[{"\[DoubleStruckH]gb", ",", "D\[DoubleStruckH]gDr"}], "]"}], 
-    ";"}], "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"PlasticIdicator", "\[LeftTee]", 
-     SuperscriptBox["10", "6"]}], ";"}], "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"\[DoubleStruckH]g", "\[LeftTee]", 
-     RowBox[{"SMSFreeze", "[", 
-      RowBox[{"\[DoubleStruckH]gb", ",", 
-       RowBox[{"\"\<Dependency\>\"", "\[Rule]", 
-        RowBox[{"{", 
-         RowBox[{"\[DoubleStruckR]g", ",", "D\[DoubleStruckH]gDr"}], 
-         "}"}]}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"SMSEndIf", "[", 
-     RowBox[{
-     "\[DoubleStruckH]g", ",", "PlasticIdicator", ",", "LocalDivergence"}], 
-     "]"}], ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"\[DoubleStruckCapitalP]", "\[DoubleRightTee]", 
-     RowBox[{"PlasticMaterial", "[", 
-      RowBox[{"\"\<P\>\"", ",", "\[DoubleStruckH]g"}], "]"}]}], ";"}], 
-   "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"SMSVerbatim", "[", 
-     RowBox[{
-     "\"\<if (debugaceroutine) std::cout << 'Final MisesTau:' << \>\"", ",", 
-      "\[Tau]Mises", ",", "\"\<<< std::endl;\>\""}], "]"}], ";"}], 
-   "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"SMSVerbatim", "[", 
-     RowBox[{
-     "\"\<if (debugplastic) std::cout << 'Final MisesTau:' << \>\"", ",", 
-      "\[Tau]Mises", ",", "\"\<<< std::endl;\>\""}], "]"}], ";"}], 
-   "\[IndentingNewLine]", "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"Pvec", "\[DoubleRightTee]", 
-     RowBox[{"Flatten", "[", "\[DoubleStruckCapitalP]", "]"}]}], ";"}], 
-   "\[IndentingNewLine]", 
-   RowBox[{"(*", 
-    RowBox[{
-     RowBox[{"dPdF", "\[DoubleRightTee]", 
-      RowBox[{"SMSD", "[", 
-       RowBox[{"Pvec", ",", "Fvec", ",", 
-        RowBox[{"\"\<Method\>\"", "\[Rule]", "\"\<Forward\>\""}]}], "]"}]}], 
-     ";"}], "*)"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
-   RowBox[{"(*", 
-    RowBox[{"export", " ", "quantities"}], "*)"}], "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"\[Sigma]", "\[DoubleRightTee]", 
-     RowBox[{
-      RowBox[{"(", 
-       RowBox[{"1", "/", 
-        RowBox[{"SMSDet", "[", "\[DoubleStruckCapitalF]", "]"}]}], ")"}], " ", 
-      RowBox[{"\[DoubleStruckCapitalP]", ".", 
-       RowBox[{"\[DoubleStruckCapitalF]", "\[Transpose]"}]}]}]}], ";"}], 
-   "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"\[Sigma]vec", "=", 
-     RowBox[{"Flatten", "[", "\[Sigma]", "]"}]}], ";"}], 
-   "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"SMSExport", "[", 
-     RowBox[{"\[Sigma]vec", ",", 
-      RowBox[{"Table", "[", 
-       RowBox[{
-        RowBox[{"Sig$$", "[", "i", "]"}], ",", 
-        RowBox[{"{", 
-         RowBox[{"i", ",", "9"}], "}"}]}], "]"}]}], "]"}], ";"}], 
-   "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"SMSExport", "[", 
-     RowBox[{"\[DoubleStruckH]g", ",", 
-      RowBox[{"Table", "[", 
-       RowBox[{
-        RowBox[{"h$$", "[", "i", "]"}], ",", 
-        RowBox[{"{", 
-         RowBox[{"i", ",", "10"}], "}"}]}], "]"}]}], "]"}], ";"}], 
-   "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"SMSWrite", "[", 
-     RowBox[{"\"\<LocalAuxiliaryVariables\>\"", "\[Rule]", "True"}], "]"}], 
-    ";"}]}]}]], "Input",
- CellChangeTimes->{{3.768798941586893*^9, 3.768798952064188*^9}, {
-  3.768798984617269*^9, 3.768798994771161*^9}, {3.7687996756995573`*^9, 
-  3.768799707804823*^9}, {3.768800008220766*^9, 3.768800013776094*^9}, {
-  3.768800164283491*^9, 3.7688001656976748`*^9}, {3.769619644815319*^9, 
-  3.769619826105859*^9}, {3.769619895107226*^9, 3.769619898016642*^9}, {
-  3.769619937824691*^9, 3.769620026763185*^9}, {3.769620094084045*^9, 
-  3.7696202793578176`*^9}, {3.769620325664156*^9, 3.769620416726158*^9}, {
-  3.769620627733097*^9, 3.769620733281732*^9}, {3.7696207929518023`*^9, 
-  3.769620798936759*^9}, {3.769621035282202*^9, 3.769621040052785*^9}, {
-  3.7696210743848257`*^9, 3.76962119614889*^9}, {3.7696213228484364`*^9, 
-  3.769621327008024*^9}, {3.7696215488747883`*^9, 3.7696216006224537`*^9}},
- CellLabel->
-  "In[991]:=",ExpressionUUID->"0b727376-9c21-413a-9d5d-c5effb5a515d"],
+   3.769621521492414*^9}, {3.7696651476085653`*^9, 3.7696651728507566`*^9}, {
+   3.7696653622156963`*^9, 3.7696653752420597`*^9}, {3.769665958552434*^9, 
+   3.769665971759153*^9}, {3.7696689325389757`*^9, 3.7696689334151573`*^9}, {
+   3.769669226698958*^9, 3.769669226765463*^9}, 3.769671275886332*^9, {
+   3.769672447708034*^9, 
+   3.769672450067267*^9}},ExpressionUUID->"bd908fdb-4d53-41a5-83d0-\
+a3f8e77cb409"],
 
 Cell[CellGroupData[{
 
@@ -2499,10 +2646,11 @@ $CellContext`CompletionFunction -> (
   3.768799724924303*^9, 3.7687999172013683`*^9, 3.768800030472858*^9, 
    3.768800173556779*^9, 3.769617425861156*^9, 3.769619846107863*^9, 
    3.7696207419719543`*^9, 3.769620802882833*^9, 3.769620833544886*^9, {
-   3.769621200358226*^9, 3.76962121135566*^9}, 3.769621625687294*^9},
+   3.769621200358226*^9, 3.76962121135566*^9}, 3.769621625687294*^9, 
+   3.769668976570228*^9, 3.76967137067754*^9},
  CellLabel->
   "During evaluation of \
-In[991]:=",ExpressionUUID->"e1f0fc54-9c3f-47b5-a15b-ed65130377c1"],
+In[217]:=",ExpressionUUID->"ea1b9532-45b0-4ff0-b039-4c1bf0835cad"],
 
 Cell[BoxData[
  TagBox[GridBox[{
@@ -2510,9 +2658,9 @@ Cell[BoxData[
      TemplateBox[{StyleBox["\"File: \"", Bold, 
         RGBColor[0, 0, 1], StripOnInput -> False],"\"J2FiniteStrain3D.cpp\"",
        StyleBox["\"  Size: \"", Bold, 
-        RGBColor[0, 0, 1], StripOnInput -> False],"55123",StyleBox[
+        RGBColor[0, 0, 1], StripOnInput -> False],"58191",StyleBox[
        "\"  Time: \"", Bold, 
-        RGBColor[0, 0, 1], StripOnInput -> False],"35"},
+        RGBColor[0, 0, 1], StripOnInput -> False],"36"},
       "RowDefault"]},
     {
      TagBox[GridBox[{
@@ -2540,7 +2688,7 @@ Cell[BoxData[
           BackFaceColor->RGBColor[0, 0, 1],
           GraphicsColor->RGBColor[0, 0, 1],
           FontWeight->Bold,
-          FontColor->RGBColor[0, 0, 1]], "946"},
+          FontColor->RGBColor[0, 0, 1]], "964"},
         {
          StyleBox["\<\"No.Leafs\"\>",
           StripOnInput->False,
@@ -2549,7 +2697,7 @@ Cell[BoxData[
           BackFaceColor->RGBColor[0, 0, 1],
           GraphicsColor->RGBColor[0, 0, 1],
           FontWeight->Bold,
-          FontColor->RGBColor[0, 0, 1]], "24496"}
+          FontColor->RGBColor[0, 0, 1]], "24537"}
        },
        AutoDelete->False,
        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Center}}},
@@ -2568,10 +2716,11 @@ Cell[BoxData[
   3.768799724924303*^9, 3.7687999172013683`*^9, 3.768800030472858*^9, 
    3.768800173556779*^9, 3.769617425861156*^9, 3.769619846107863*^9, 
    3.7696207419719543`*^9, 3.769620802882833*^9, 3.769620833544886*^9, {
-   3.769621200358226*^9, 3.76962121135566*^9}, 3.769621665343767*^9},
+   3.769621200358226*^9, 3.76962121135566*^9}, 3.769621625687294*^9, 
+   3.769668976570228*^9, 3.769671410451083*^9},
  CellLabel->
   "During evaluation of \
-In[991]:=",ExpressionUUID->"c271cd2f-13ab-4848-82a2-1c6d486688a7"]
+In[217]:=",ExpressionUUID->"c4690775-2b0d-432c-a1e9-3cf9e7f75081"]
 }, Open  ]]
 }, Open  ]],
 
@@ -2581,80 +2730,131 @@ Cell[BoxData[
  RowBox[{"FilePrint", "[", "\"\<J2FiniteStrain3D.cpp\>\"", "]"}]], "Input",
  CellChangeTimes->{{3.7696198510495443`*^9, 3.769619865351902*^9}},
  CellLabel->
-  "In[1046]:=",ExpressionUUID->"b046b526-ea25-4f69-812b-ae41795e70ce"],
+  "In[205]:=",ExpressionUUID->"b046b526-ea25-4f69-812b-ae41795e70ce"],
 
 Cell["\<\
 /*************************************************************
 * AceGen    6.923 MacOSX (19 Apr 19)                         *
-*           Co. J. Korelc  2013           15 Jun 19 23:07:45 *
+*           Co. J. Korelc  2013           16 Jun 19 12:16:58 *
 **************************************************************
 User     : Full professional version
 Notebook : mate_planestrain_linearelasticity_ctest
-Evaluation time                 : 35 s    Mode  : Optimal
-Number of formulae              : 946     Method: Automatic
-Subroutine                      : J2FiniteStrain3D size: 24496
-Total size of Mathematica  code : 24496 subexpressions
-Total size of C code            : 54481 bytes */
+Evaluation time                 : 36 s    Mode  : Optimal
+Number of formulae              : 979     Method: Automatic
+Subroutine                      : J2FiniteStrain3D size: 24809
+Total size of Mathematica  code : 24809 subexpressions
+Total size of C code            : 58333 bytes */
 #include \"sms.h\"
 
 /******************* S U B R O U T I N E *********************/
-void J2FiniteStrain3D(double d[6],double F[9],double h[10],double Sig[9]
-     ,double Cmat[9][9])
+void J2FiniteStrain3D(double d[6],double F[9],double h[10],double P[9]
+     ,double dPdF[9][9],double AdditionalData[20])
 {
-double v[2631];
+double v[2650];
 int repC1;double MatrixDEXC1[21];double MatrixEXC1[6];double MatrixXC1[6];
-int i130,b103,b104,b1072,b2113,b2185;
+int i134,b105,b106,b1076,b2119,b2200;
+\\*---------------------------------------------------------------------------\
+-----------------------
+--------------------------
+------------------------------------------------------------------------------\
+---------------------
+-------------------------
+Material: J2 finite strain plasticity (time independent)
+Input:   d[6 ]  = [Emod, nu, y0, yinf, Kh, dh]
+         F[9 ]  = [F11, F12, F13, F21, F22, F23, F31, F32, F33]
+         h[10]  = [Fpinv11-1, Fpinv12, Fpinv13, Fpinv21, Fpinv22-1, Fpinv23, \
+Fpinv31, Fpinv32
+, Fpinv33-1, alpha]
+Output:  P[9 ]  = [P11, P12, P13, P21, P22, P23, P31, P32, P33]
+         dPdF[81] = [dP11dF11, dP11dF12, dP11dF13, dP11dF21, ..., dP11dF33,
+                     dP12dF11, dP12dF12, dP12dF13, dP12dF21, ..., dP12dF33,
+                     dP13dF11, dP13dF12, dP13dF13, dP13dF21, ..., dP13dF33,
+                     dP21dF11, dP21dF12, dP21dF13, dP21dF21, ..., dP21dF33,
+                     ...
+                     dP33dF11, dP33dF12, dP33dF13, dP33dF21, ..., dP33dF33]
+         AdditionalData[20] = [
+                                0  -> Plastic indicator (<100 -> elastic, \
+>100 -> platsic)
+                                1  -> Divergence indicator (<100 -> \
+convergence, >100 -> divergence
+)
+                                2  -> number of required iterations
+                                3  -> Initial TauMises
+                                4  -> Initial YieldMises
+                                5  -> Final TauMises
+                                6  -> Final YieldMises
+                                7...12  -> Final Tau (Symmetric) = [Tau11, \
+Tau12, Tau13, Tau22
+, Tau23, Tau33]
+                              ]
+Legend: Emod -> Youngs modulus
+        nu   -> Possions ratio
+        y0   -> initial yield surface (kirchhoff stress tau)
+        yinf -> saturated yield stress (kirchhoff stress tau, saturation by \
+exp. hardening)
+        Kh   -> linear hardening coefficient
+        dh   -> exponential hardening coefficient
+        Fxy  -> deformation gradient
+        Fpinvxy -> inverse pointwise plastic part of the deformatin gradient
+        h[]  -> pointwise material history field
+        Pxy  -> 1.st Piola Kirchhoff stress
+        alpha-> accumulated plastic strain
+Some Theory aspects:
+VonMisesYieldSurface: (yinf+(y0-yinf)Exp[-dh alpha]+Kh alpha)
+------------------------------------------------------------------------------\
+---------------------
+-------------------------
+------------------------------------------------------------------------------\
+---------------------
+-------------------------* 
 bool debugmaterialparameters=false;
 bool debugaceroutine=false;
-bool debugplastic=true;
-v[2209]=d[0]/(1e0+d[1]);
-v[185]=d[2]-d[3];
+bool debugplastic=false;
+v[2217]=d[0]/(1e0+d[1]);
+v[189]=d[2]-d[3];
 if (debugmaterialparameters) std::cout << \"Emod    : \"<<d[0]<< std::endl;
 if (debugmaterialparameters) std::cout << \"nu      : \"<<d[1]<< std::endl;
 if (debugmaterialparameters) std::cout << \"y0      : \"<<d[2]<< std::endl;
 if (debugmaterialparameters) std::cout << \"yinf    : \"<<d[3]<< std::endl;
 if (debugmaterialparameters) std::cout << \"Kh      : \"<<d[4]<< std::endl;
 if (debugmaterialparameters) std::cout << \"del_h   : \"<<d[5]<< std::endl;
-v[16]=(d[1]*v[2209])/(1e0-2e0*d[1]);
-v[152]=v[16]/4e0;
-v[153]=-v[16]-v[2209];
+v[16]=(d[1]*v[2217])/(1e0-2e0*d[1]);
+v[156]=v[16]/4e0;
+v[157]=-v[16]-v[2217];
 v[50]=1e0+h[0];
 v[52]=1e0+h[1];
 v[54]=1e0+h[2];
-v[2198]=1e0/(F[2]*(-(F[4]*F[6])+F[3]*F[7])+F[1]*(F[5]*F[6]-F[3]*F[8])+F[0]*(-(\
-F[5]*F[7])+F[4]*F[8])
- );
 v[47]=F[1]*h[6]+F[2]*h[7]+F[0]*v[50];
-v[2216]=(v[47]*v[47]);
+v[2224]=(v[47]*v[47]);
 v[48]=F[0]*h[3]+F[2]*h[8]+F[1]*v[52];
-v[2215]=(v[48]*v[48]);
+v[2223]=(v[48]*v[48]);
 v[49]=F[0]*h[4]+F[1]*h[5]+F[2]*v[54];
-v[2214]=(v[49]*v[49]);
-v[2212]=v[47]*v[49];
+v[2222]=(v[49]*v[49]);
+v[2220]=v[47]*v[49];
 v[51]=F[4]*h[6]+F[5]*h[7]+F[3]*v[50];
 v[53]=F[3]*h[3]+F[5]*h[8]+F[4]*v[52];
 v[55]=F[3]*h[4]+F[4]*h[5]+F[5]*v[54];
 v[56]=F[7]*h[6]+F[8]*h[7]+F[6]*v[50];
 v[57]=F[6]*h[3]+F[8]*h[8]+F[7]*v[52];
 v[58]=F[6]*h[4]+F[7]*h[5]+F[8]*v[54];
-v[59]=v[2216]+(v[51]*v[51])+(v[56]*v[56]);
+v[59]=v[2224]+(v[51]*v[51])+(v[56]*v[56]);
 v[60]=v[47]*v[48]+v[51]*v[53]+v[56]*v[57];
 v[74]=(v[60]*v[60]);
-v[61]=v[2212]+v[51]*v[55]+v[56]*v[58];
+v[61]=v[2220]+v[51]*v[55]+v[56]*v[58];
 v[76]=(v[61]*v[61]);
-v[62]=v[2215]+(v[53]*v[53])+(v[57]*v[57]);
+v[62]=v[2223]+(v[53]*v[53])+(v[57]*v[57]);
 v[63]=v[48]*v[49]+v[53]*v[55]+v[57]*v[58];
 v[69]=2e0*v[61]*v[63];
-v[64]=v[2214]+(v[55]*v[55])+(v[58]*v[58]);
-v[2210]=-(v[63]*v[63])+v[62]*v[64];
-v[68]=v[152]+v[153]/(4e0*(v[2210]*v[59]+v[60]*v[69]-v[64]*v[74]-v[62]*v[76]));\
+v[64]=v[2222]+(v[55]*v[55])+(v[58]*v[58]);
+v[2218]=-(v[63]*v[63])+v[62]*v[64];
+v[68]=v[156]+v[157]/(4e0*(v[2218]*v[59]+v[60]*v[69]-v[64]*v[74]-v[62]*v[76]));\
 
 v[70]=(v[48]*v[68])/2e0;
 v[71]=2e0*v[60]*v[61]-2e0*v[59]*v[63];
 v[80]=(v[68]*v[71])/2e0;
 v[72]=-((v[61]*v[62]-v[60]*v[63])*v[68]);
-v[73]=v[2209]/4e0;
-v[83]=v[2210]*v[68]+v[73];
+v[73]=v[2217]/4e0;
+v[83]=v[2218]*v[68]+v[73];
 v[82]=v[73]+v[68]*(v[59]*v[64]-v[76]);
 v[81]=v[73]+v[68]*(v[59]*v[62]-v[74]);
 v[90]=v[56]*v[72]+v[57]*v[80]+v[58]*v[81];
@@ -2665,9 +2865,9 @@ v[92]=v[58]*v[72]+v[57]*v[79]+v[56]*v[83];
 v[91]=v[56]*v[79]+v[58]*v[80]+v[57]*v[82];
 v[88]=v[55]*v[72]+v[53]*v[79]+v[51]*v[83];
 v[87]=v[51]*v[79]+v[55]*v[80]+v[53]*v[82];
-v[78]=2e0*(2e0*v[49]*v[70]*v[71]+2e0*v[2212]*v[72]+2e0*v[47]*v[70]*v[75]+v[\
-2214]*v[81]
- +v[2215]*v[82]+v[2216]*v[83]);
+v[78]=2e0*(2e0*v[49]*v[70]*v[71]+2e0*v[2220]*v[72]+2e0*v[47]*v[70]*v[75]+v[\
+2222]*v[81]
+ +v[2223]*v[82]+v[2224]*v[83]);
 v[89]=2e0*(v[55]*v[86]+v[53]*v[87]+v[51]*v[88]);
 v[94]=2e0*(v[58]*v[90]+v[57]*v[91]+v[56]*v[92]);
 v[96]=(-v[78]-v[89]-v[94])/3e0;
@@ -2676,1223 +2876,1268 @@ v[49]*v[90]
  +v[48]*v[91]+v[47]*v[92],2)+8e0*Power(v[55]*v[90]+v[53]*v[91]+v[51]*v[92],2)+\
 Power(v[78]+v[96],2)
  +Power(v[89]+v[96],2)+Power(v[94]+v[96],2)));
+v[100]=d[3]+d[4]*h[9]+v[189]*exp(-(d[5]*h[9]));
 if (debugaceroutine) std::cout << \"Initial MisesTau:\" <<v[99]<< std::endl;
-b103=(-d[3]-d[4]*h[9]+v[99]-v[185]*exp(-(d[5]*h[9])))<0.1e-9;
-if(b103){
+AdditionalData[3]=v[99];
+AdditionalData[4]=v[100];
+b105=(-v[100]+v[99])<0.1e-9;
+if(b105){
  if (debugaceroutine) std::cout << \"Elastic\"<< std::endl;
- v[106]=h[0];
- v[107]=h[1];
- v[108]=h[2];
- v[109]=h[3];
- v[110]=h[4];
- v[111]=h[5];
- v[112]=h[6];
- v[113]=h[7];
- v[114]=h[8];
- v[115]=h[9];
+ AdditionalData[0]=0e0;
+ v[109]=h[0];
+ v[110]=h[1];
+ v[111]=h[2];
+ v[112]=h[3];
+ v[113]=h[4];
+ v[114]=h[5];
+ v[115]=h[6];
+ v[116]=h[7];
+ v[117]=h[8];
+ v[118]=h[9];
 } else {
+ AdditionalData[0]=1000e0;
  if (debugaceroutine) std::cout << \"Plastic\"<< std::endl;
  if (debugplastic) std::cout << \"Plastic\"<< std::endl;
- v[119]=h[0];
- v[120]=h[1];
- v[121]=h[2];
- v[122]=h[3];
- v[123]=h[4];
- v[124]=h[5];
- v[125]=h[6];
- v[126]=h[7];
- v[127]=h[8];
- v[128]=h[9];
- for(i130=1;i130<=30;i130++){
-  v[134]=1e0+v[119];
-  v[136]=1e0+v[120];
-  v[138]=1e0+v[121];
-  v[2267]=-(v[185]*exp(-(d[5]*v[128])));
-  v[131]=F[1]*v[125]+F[2]*v[126]+F[0]*v[134];
-  v[2240]=(v[131]*v[131]);
-  v[132]=F[0]*v[122]+F[2]*v[127]+F[1]*v[136];
-  v[2241]=(v[132]*v[132]);
-  v[133]=F[0]*v[123]+F[1]*v[124]+F[2]*v[138];
-  v[2243]=v[132]*v[133];
-  v[2242]=(v[133]*v[133]);
-  v[135]=F[4]*v[125]+F[5]*v[126]+F[3]*v[134];
-  v[137]=F[3]*v[122]+F[5]*v[127]+F[4]*v[136];
-  v[139]=F[3]*v[123]+F[4]*v[124]+F[5]*v[138];
-  v[140]=F[7]*v[125]+F[8]*v[126]+F[6]*v[134];
-  v[269]=F[2]*v[131]+F[5]*v[135]+F[8]*v[140];
-  v[266]=F[0]*v[131]+F[3]*v[135]+F[6]*v[140];
-  v[265]=F[1]*v[131]+F[4]*v[135]+F[7]*v[140];
-  v[263]=2e0*v[269];
-  v[262]=2e0*v[265];
-  v[261]=2e0*v[266];
-  v[141]=F[6]*v[122]+F[8]*v[127]+F[7]*v[136];
-  v[2219]=F[0]*v[132]+F[3]*v[137]+F[6]*v[141];
-  v[2218]=F[1]*v[132]+F[4]*v[137]+F[7]*v[141];
-  v[2217]=F[2]*v[132]+F[5]*v[137]+F[8]*v[141];
-  v[287]=2e0*v[2217];
-  v[286]=2e0*v[2219];
-  v[285]=2e0*v[2218];
-  v[142]=F[6]*v[123]+F[7]*v[124]+F[8]*v[138];
-  v[2222]=F[0]*v[133]+F[3]*v[139]+F[6]*v[142];
-  v[2221]=F[1]*v[133]+F[4]*v[139]+F[7]*v[142];
-  v[2220]=F[2]*v[133]+F[5]*v[139]+F[8]*v[142];
-  v[299]=2e0*v[2221];
-  v[298]=2e0*v[2222];
-  v[297]=2e0*v[2220];
-  v[143]=(v[135]*v[135])+(v[140]*v[140])+v[2240];
-  v[144]=v[131]*v[132]+v[135]*v[137]+v[140]*v[141];
-  v[399]=2e0*v[144]*v[2220];
-  v[388]=2e0*v[144]*v[2222];
-  v[383]=2e0*v[144]*v[2221];
-  v[361]=-(v[144]*v[263])+v[143]*v[287];
-  v[274]=2e0*v[144]*v[2217];
-  v[273]=2e0*v[144]*v[2218];
-  v[363]=-(v[144]*v[261])+v[143]*v[286];
-  v[364]=-(v[144]*v[262])+v[143]*v[285];
-  v[270]=2e0*v[144]*v[2219];
-  v[159]=(v[144]*v[144]);
-  v[145]=v[131]*v[133]+v[135]*v[139]+v[140]*v[142];
-  v[2230]=2e0*v[145];
-  v[367]=2e0*v[145]*v[2217];
-  v[365]=2e0*v[145]*v[2218];
-  v[358]=2e0*v[145]*v[2219];
-  v[284]=2e0*v[145]*v[2220];
-  v[283]=2e0*v[145]*v[2221];
-  v[360]=-(v[145]*v[262])+v[143]*v[299];
-  v[362]=-(v[145]*v[261])+v[143]*v[298];
-  v[369]=-(v[145]*v[263])+v[143]*v[297];
-  v[279]=2e0*v[145]*v[2222];
-  v[161]=(v[145]*v[145]);
-  v[146]=(v[137]*v[137])+(v[141]*v[141])+v[2241];
-  v[339]=v[143]*v[146]-v[159];
-  v[147]=v[137]*v[139]+v[141]*v[142]+v[2243];
-  v[2223]=2e0*v[147];
-  v[398]=v[147]*v[263];
-  v[387]=v[147]*v[261];
-  v[382]=v[147]*v[262];
-  v[380]=v[144]*v[2223]-v[146]*v[2230];
-  v[368]=v[367]-2e0*v[398]+v[399];
-  v[366]=v[365]-2e0*v[382]+v[383];
-  v[359]=v[358]-2e0*v[387]+v[388];
-  v[296]=v[365]+v[382];
-  v[424]=v[296]-2e0*v[144]*v[299];
-  v[295]=v[358]+v[387];
-  v[423]=v[295]-2e0*v[144]*v[298];
-  v[294]=v[367]+v[398];
-  v[421]=v[294]-2e0*v[144]*v[297];
-  v[293]=2e0*v[147]*v[2220];
-  v[292]=2e0*v[147]*v[2218];
-  v[291]=2e0*v[147]*v[2219];
-  v[290]=2e0*v[147]*v[2222];
-  v[289]=2e0*v[147]*v[2217];
-  v[288]=2e0*v[147]*v[2221];
-  v[162]=(v[147]*v[147]);
-  v[155]=v[145]*v[2223];
-  v[148]=(v[139]*v[139])+(v[142]*v[142])+v[2242];
-  v[427]=v[148]*v[263]-v[284];
-  v[426]=v[148]*v[287]-v[293];
-  v[425]=v[148]*v[285]-v[288];
-  v[422]=v[148]*v[261]-v[279];
-  v[420]=v[148]*v[262]-v[283];
-  v[419]=v[148]*v[286]-v[290];
-  v[329]=v[143]*v[148]-v[161];
-  v[319]=v[146]*v[148]-v[162];
-  v[149]=v[144]*v[155]-v[148]*v[159]-v[146]*v[161]+v[143]*v[319];
-  v[310]=-v[153]/(4e0*Power(v[149],2));
-  v[318]=v[310]*(v[155]*v[269]+v[144]*v[284]-v[161]*v[287]-v[143]*v[293]+v[\
-148]*v[361]);
-  v[338]=v[318]*v[329];
-  v[317]=v[310]*(v[155]*v[2217]-v[162]*v[263]-v[148]*v[274]+v[144]*v[293]+v[\
-146]*v[427]);
-  v[356]=(v[132]*v[317])/2e0;
-  v[327]=v[317]*v[319];
-  v[316]=v[310]*(v[155]*v[2218]-v[162]*v[262]-v[148]*v[273]+v[144]*v[288]+v[\
-146]*v[420]);
-  v[355]=(v[132]*v[316])/2e0;
-  v[326]=v[316]*v[319];
-  v[315]=-(v[310]*(v[143]*v[292]-v[144]*v[296]+v[159]*v[299]-v[146]*v[360]));
-  v[354]=(v[132]*v[315])/2e0;
-  v[345]=v[315]*v[339];
-  v[314]=-(v[310]*(v[143]*v[291]-v[144]*v[295]+v[159]*v[298]-v[146]*v[362]));
-  v[353]=(v[132]*v[314])/2e0;
-  v[344]=v[314]*v[339];
-  v[313]=v[310]*(v[155]*v[266]+v[144]*v[279]-v[161]*v[286]-v[143]*v[290]+v[\
-148]*v[363]);
-  v[333]=v[313]*v[329];
-  v[312]=-(v[310]*(v[143]*v[289]-v[144]*v[294]+v[159]*v[297]-v[146]*v[369]));
-  v[351]=(v[132]*v[312])/2e0;
-  v[342]=v[312]*v[339];
-  v[311]=v[310]*(v[155]*v[265]+v[144]*v[283]-v[161]*v[285]-v[143]*v[288]+v[\
-148]*v[364]);
-  v[331]=v[311]*v[329];
-  v[309]=v[310]*(v[155]*v[2219]-v[162]*v[261]-v[148]*v[270]+v[144]*v[290]+v[\
-146]*v[422]);
-  v[349]=(v[132]*v[309])/2e0;
-  v[320]=v[309]*v[319];
-  v[154]=v[152]+v[153]/(4e0*v[149]);
-  v[2250]=v[154]*v[419];
-  v[2249]=v[154]*v[420];
-  v[2248]=v[154]*v[422];
-  v[2239]=v[154]*v[425];
-  v[2238]=v[154]*v[426];
-  v[2237]=v[154]*v[427];
-  v[2236]=v[154]*v[360];
-  v[2235]=v[154]*v[361];
-  v[2234]=v[154]*v[362];
-  v[2233]=v[154]*v[363];
-  v[2232]=v[154]*v[364];
-  v[2231]=v[154]*v[369];
-  v[2229]=-(v[154]*(-v[289]+v[146]*v[297]));
-  v[2228]=-(v[154]*(-v[291]+v[146]*v[298]));
-  v[2227]=-(v[154]*(-v[292]+v[146]*v[299]));
-  v[2226]=-(v[154]*(v[146]*v[261]-v[270]));
-  v[2225]=-(v[154]*(v[146]*v[262]-v[273]));
-  v[2224]=-(v[154]*(v[146]*v[263]-v[274]));
-  v[400]=(v[318]*v[380]+v[154]*(-2e0*v[145]*v[287]+v[398]+v[399]))/2e0;
-  v[397]=(v[2229]+v[317]*v[380])/2e0;
-  v[395]=(v[2227]+v[316]*v[380])/2e0;
-  v[393]=(v[2225]+v[315]*v[380])/2e0;
-  v[391]=(v[2226]+v[314]*v[380])/2e0;
-  v[389]=(v[313]*v[380]+v[154]*(-2e0*v[145]*v[286]+v[387]+v[388]))/2e0;
-  v[386]=(v[2224]+v[312]*v[380])/2e0;
-  v[384]=(v[311]*v[380]+v[154]*(-2e0*v[145]*v[285]+v[382]+v[383]))/2e0;
-  v[381]=(v[2228]+v[309]*v[380])/2e0;
-  v[357]=(F[2]*v[154]+v[132]*v[318])/2e0;
-  v[352]=(F[0]*v[154]+v[132]*v[313])/2e0;
-  v[350]=(F[1]*v[154]+v[132]*v[311])/2e0;
-  v[348]=v[2235]+v[318]*v[339];
-  v[347]=-v[2224]+v[317]*v[339];
-  v[346]=-v[2225]+v[316]*v[339];
-  v[343]=v[2233]+v[313]*v[339];
-  v[341]=v[2232]+v[311]*v[339];
-  v[340]=-v[2226]+v[309]*v[339];
-  v[337]=v[2237]+v[317]*v[329];
-  v[336]=v[2249]+v[316]*v[329];
-  v[335]=v[2236]+v[315]*v[329];
-  v[334]=v[2234]+v[314]*v[329];
-  v[332]=v[2231]+v[312]*v[329];
-  v[330]=v[2248]+v[309]*v[329];
-  v[328]=v[2238]+v[318]*v[319];
-  v[325]=-v[2227]+v[315]*v[319];
-  v[324]=-v[2228]+v[314]*v[319];
-  v[323]=v[2250]+v[313]*v[319];
-  v[322]=-v[2229]+v[312]*v[319];
-  v[321]=v[2239]+v[311]*v[319];
-  v[168]=v[154]*v[319]+v[73];
-  v[167]=v[154]*v[329]+v[73];
-  v[2251]=v[132]*v[167];
-  v[166]=v[154]*v[339]+v[73];
-  v[156]=(v[132]*v[154])/2e0;
-  v[2246]=-(v[133]*v[156]);
-  v[157]=-2e0*v[143]*v[147]+v[144]*v[2230];
-  v[2245]=v[133]*v[157];
-  v[2244]=v[156]*v[157]+v[133]*v[166];
-  v[378]=(-v[2231]+v[157]*v[318])/2e0;
-  v[377]=(v[157]*v[317]+v[154]*v[368])/2e0;
-  v[376]=(v[157]*v[316]+v[154]*v[366])/2e0;
-  v[375]=(-v[2232]+v[157]*v[315])/2e0;
-  v[415]=F[4]*v[166]+v[139]*v[345]+v[137]*v[375]+v[135]*v[393];
-  v[406]=F[7]*v[166]+v[142]*v[345]+v[141]*v[375]+v[140]*v[393];
-  v[374]=(-v[2233]+v[157]*v[314])/2e0;
-  v[414]=F[3]*v[166]+v[139]*v[344]+v[137]*v[374]+v[135]*v[391];
-  v[405]=F[6]*v[166]+v[142]*v[344]+v[141]*v[374]+v[140]*v[391];
-  v[373]=(-v[2234]+v[157]*v[313])/2e0;
-  v[372]=(-v[2235]+v[157]*v[312])/2e0;
-  v[412]=F[5]*v[166]+v[139]*v[342]+v[137]*v[372]+v[135]*v[386];
-  v[403]=F[8]*v[166]+v[142]*v[342]+v[141]*v[372]+v[140]*v[386];
-  v[371]=(-v[2236]+v[157]*v[311])/2e0;
-  v[370]=(v[157]*v[309]+v[154]*v[359])/2e0;
-  v[165]=(v[154]*v[157])/2e0;
-  v[484]=F[4]*v[165];
-  v[482]=F[3]*v[165];
-  v[479]=F[5]*v[165];
-  v[457]=F[7]*v[165];
-  v[455]=F[6]*v[165];
-  v[452]=F[8]*v[165];
-  v[418]=v[139]*v[348]+v[137]*v[378]+v[135]*v[400]+v[479];
-  v[413]=v[139]*v[343]+v[137]*v[373]+v[135]*v[389]+v[482];
-  v[411]=v[139]*v[341]+v[137]*v[371]+v[135]*v[384]+v[484];
-  v[409]=v[142]*v[348]+v[141]*v[378]+v[140]*v[400]+v[452];
-  v[404]=v[142]*v[343]+v[141]*v[373]+v[140]*v[389]+v[455];
-  v[402]=v[142]*v[341]+v[141]*v[371]+v[140]*v[384]+v[457];
-  v[158]=(v[154]*v[380])/2e0;
-  v[503]=F[2]*v[158];
-  v[501]=F[1]*v[158];
-  v[498]=F[0]*v[158];
-  v[495]=v[131]*v[158]+v[2244];
-  v[2247]=v[2244]+v[495];
-  v[471]=F[4]*v[158];
-  v[469]=F[3]*v[158];
-  v[466]=F[5]*v[158];
-  v[444]=F[7]*v[158];
-  v[442]=F[6]*v[158];
-  v[439]=F[8]*v[158];
-  v[417]=v[139]*v[347]+v[137]*v[377]+v[135]*v[397]+v[466];
-  v[416]=v[139]*v[346]+v[137]*v[376]+v[135]*v[395]+v[471];
-  v[410]=v[139]*v[340]+v[137]*v[370]+v[135]*v[381]+v[469];
-  v[408]=v[142]*v[347]+v[141]*v[377]+v[140]*v[397]+v[439];
-  v[407]=v[142]*v[346]+v[141]*v[376]+v[140]*v[395]+v[444];
-  v[401]=v[142]*v[340]+v[141]*v[370]+v[140]*v[381]+v[442];
-  v[175]=v[140]*v[158]+v[141]*v[165]+v[142]*v[166];
-  v[171]=v[135]*v[158]+v[137]*v[165]+v[139]*v[166];
-  v[160]=-2e0*v[144]*v[148]+v[155];
-  v[491]=v[133]*v[158]+v[156]*v[160]+v[131]*v[168];
-  v[436]=(-v[2237]+v[160]*v[318])/2e0;
-  v[490]=F[5]*v[167]+v[137]*v[338]+v[139]*v[378]+v[135]*v[436];
-  v[463]=F[8]*v[167]+v[141]*v[338]+v[142]*v[378]+v[140]*v[436];
-  v[435]=(-v[2238]+v[160]*v[317])/2e0;
-  v[474]=F[5]*v[168]+v[135]*v[327]+v[139]*v[397]+v[137]*v[435];
-  v[447]=F[8]*v[168]+v[140]*v[327]+v[142]*v[397]+v[141]*v[435];
-  v[434]=(-v[2239]+v[160]*v[316])/2e0;
-  v[473]=F[4]*v[168]+v[135]*v[326]+v[139]*v[395]+v[137]*v[434];
-  v[446]=F[7]*v[168]+v[140]*v[326]+v[142]*v[395]+v[141]*v[434];
-  v[433]=(v[160]*v[315]+v[154]*v[424])/2e0;
-  v[500]=2e0*(F[1]*v[2247]+v[2240]*v[325]+v[2241]*v[335]+v[2242]*v[345]+v[\
-2245]*v[354]
-   +v[2246]*v[364]+v[2243]*v[375]+v[131]*(v[160]*v[354]+2e0*v[133]*v[393]+v[\
-156]*v[424]
-   +v[132]*v[433]+v[501]));
-  v[485]=v[137]*v[335]+v[139]*v[375]+v[135]*v[433]+v[484];
-  v[472]=v[135]*v[325]+v[139]*v[393]+v[137]*v[433]+v[471];
-  v[529]=2e0*(F[4]*v[171]+v[139]*v[415]+v[135]*v[472]+v[137]*v[485]);
-  v[511]=2e0*(F[1]*v[171]+v[133]*v[415]+v[131]*v[472]+v[132]*v[485]);
-  v[458]=v[141]*v[335]+v[142]*v[375]+v[140]*v[433]+v[457];
-  v[445]=v[140]*v[325]+v[142]*v[393]+v[141]*v[433]+v[444];
-  v[547]=2e0*(F[7]*v[175]+v[142]*v[406]+v[140]*v[445]+v[141]*v[458]);
-  v[556]=(-v[500]-v[529]-v[547])/3e0;
-  v[583]=v[547]+v[556];
-  v[574]=v[529]+v[556];
-  v[565]=v[500]+v[556];
-  v[538]=2e0*(F[4]*v[175]+v[139]*v[406]+v[135]*v[445]+v[137]*v[458]);
-  v[520]=2e0*(F[1]*v[175]+v[133]*v[406]+v[131]*v[445]+v[132]*v[458]);
-  v[432]=(v[160]*v[314]+v[154]*v[423])/2e0;
-  v[499]=2e0*(F[0]*v[2247]+v[2240]*v[324]+v[2241]*v[334]+v[2242]*v[344]+v[\
-2245]*v[353]
-   +v[2246]*v[363]+v[2243]*v[374]+v[131]*(v[160]*v[353]+2e0*v[133]*v[391]+v[\
-156]*v[423]
-   +v[132]*v[432]+v[498]));
-  v[483]=v[137]*v[334]+v[139]*v[374]+v[135]*v[432]+v[482];
-  v[470]=v[135]*v[324]+v[139]*v[391]+v[137]*v[432]+v[469];
-  v[528]=2e0*(F[3]*v[171]+v[139]*v[414]+v[135]*v[470]+v[137]*v[483]);
-  v[510]=2e0*(F[0]*v[171]+v[133]*v[414]+v[131]*v[470]+v[132]*v[483]);
-  v[456]=v[141]*v[334]+v[142]*v[374]+v[140]*v[432]+v[455];
-  v[443]=v[140]*v[324]+v[142]*v[391]+v[141]*v[432]+v[442];
-  v[546]=2e0*(F[6]*v[175]+v[142]*v[405]+v[140]*v[443]+v[141]*v[456]);
-  v[555]=(-v[499]-v[528]-v[546])/3e0;
-  v[582]=v[546]+v[555];
-  v[573]=v[528]+v[555];
-  v[564]=v[499]+v[555];
-  v[537]=2e0*(F[3]*v[175]+v[139]*v[405]+v[135]*v[443]+v[137]*v[456]);
-  v[519]=2e0*(F[0]*v[175]+v[133]*v[405]+v[131]*v[443]+v[132]*v[456]);
-  v[431]=(-v[2248]+v[160]*v[313])/2e0;
-  v[481]=F[3]*v[167]+v[137]*v[333]+v[139]*v[373]+v[135]*v[431];
-  v[454]=F[6]*v[167]+v[141]*v[333]+v[142]*v[373]+v[140]*v[431];
-  v[430]=(v[160]*v[312]+v[154]*v[421])/2e0;
-  v[496]=2e0*(F[2]*v[2247]+v[2240]*v[322]+v[2241]*v[332]+v[2242]*v[342]+v[\
-2245]*v[351]
-   +v[2246]*v[361]+v[2243]*v[372]+v[131]*(v[160]*v[351]+2e0*v[133]*v[386]+v[\
-156]*v[421]
-   +v[132]*v[430]+v[503]));
-  v[480]=v[137]*v[332]+v[139]*v[372]+v[135]*v[430]+v[479];
-  v[467]=v[135]*v[322]+v[139]*v[386]+v[137]*v[430]+v[466];
-  v[526]=2e0*(F[5]*v[171]+v[139]*v[412]+v[135]*v[467]+v[137]*v[480]);
-  v[508]=2e0*(F[2]*v[171]+v[133]*v[412]+v[131]*v[467]+v[132]*v[480]);
-  v[453]=v[141]*v[332]+v[142]*v[372]+v[140]*v[430]+v[452];
-  v[440]=v[140]*v[322]+v[142]*v[386]+v[141]*v[430]+v[439];
-  v[544]=2e0*(F[8]*v[175]+v[142]*v[403]+v[140]*v[440]+v[141]*v[453]);
-  v[553]=(-v[496]-v[526]-v[544])/3e0;
-  v[580]=v[544]+v[553];
-  v[571]=v[526]+v[553];
-  v[562]=v[496]+v[553];
-  v[535]=2e0*(F[5]*v[175]+v[139]*v[403]+v[135]*v[440]+v[137]*v[453]);
-  v[517]=2e0*(F[2]*v[175]+v[133]*v[403]+v[131]*v[440]+v[132]*v[453]);
-  v[429]=(-v[2249]+v[160]*v[311])/2e0;
-  v[478]=F[4]*v[167]+v[137]*v[331]+v[139]*v[371]+v[135]*v[429];
-  v[451]=F[7]*v[167]+v[141]*v[331]+v[142]*v[371]+v[140]*v[429];
-  v[428]=(-v[2250]+v[160]*v[309])/2e0;
-  v[464]=F[3]*v[168]+v[135]*v[320]+v[139]*v[381]+v[137]*v[428];
-  v[437]=F[6]*v[168]+v[140]*v[320]+v[142]*v[381]+v[141]*v[428];
-  v[164]=(v[154]*v[160])/2e0;
-  v[504]=2e0*(v[131]*(F[2]*v[168]+v[131]*v[327]+v[160]*v[356]+v[133]*v[397]-v[\
-156]*v[426])+v[132]*
-   (F[2]*v[164]+v[132]*v[337]+v[133]*v[377]+v[131]*v[435])+F[2]*v[491]+v[133]*\
-(v[133]*v[347]
-   +v[157]*v[356]+v[156]*v[368]+v[131]*v[397]+v[503]));
-  v[502]=2e0*(v[131]*(F[1]*v[168]+v[131]*v[326]+v[160]*v[355]+v[133]*v[395]-v[\
-156]*v[425])+v[132]*
-   (F[1]*v[164]+v[132]*v[336]+v[133]*v[376]+v[131]*v[434])+F[1]*v[491]+v[133]*\
-(v[133]*v[346]
-   +v[157]*v[355]+v[156]*v[366]+v[131]*v[395]+v[501]));
-  v[493]=v[131]*v[164]+v[133]*v[165]+v[2251];
-  v[2252]=v[2251]+v[493];
-  v[505]=2e0*(F[2]*v[2252]+v[2240]*v[328]+v[2241]*v[338]+v[2242]*v[348]+v[\
-2245]*v[357]
-   +v[2246]*v[369]+v[2243]*v[378]+v[131]*(v[160]*v[357]+2e0*v[133]*v[400]-v[\
-156]*v[427]
-   +v[132]*v[436]));
-  v[497]=2e0*(F[0]*v[2252]+v[2240]*v[323]+v[2241]*v[333]+v[2242]*v[343]+v[\
-2245]*v[352]
-   +v[2246]*v[362]+v[2243]*v[373]+v[131]*(v[160]*v[352]+2e0*v[133]*v[389]-v[\
-156]*v[422]
-   +v[132]*v[431]));
-  v[494]=2e0*(F[1]*v[2252]+v[2240]*v[321]+v[2241]*v[331]+v[2242]*v[341]+v[\
-2245]*v[350]
-   +v[2246]*v[360]+v[2243]*v[371]+v[131]*(v[160]*v[350]+2e0*v[133]*v[384]-v[\
-156]*v[420]
-   +v[132]*v[429]));
-  v[492]=2e0*(v[131]*(F[0]*v[168]+v[131]*v[320]+v[160]*v[349]+v[133]*v[381]-v[\
-156]*v[419])+v[132]*
-   (F[0]*v[164]+v[132]*v[330]+v[133]*v[370]+v[131]*v[428])+F[0]*v[491]+v[133]*\
-(v[133]*v[340]
-   +v[157]*v[349]+v[156]*v[359]+v[131]*v[381]+v[498]));
-  v[488]=F[5]*v[164];
-  v[489]=v[137]*v[337]+v[139]*v[377]+v[135]*v[435]+v[488];
-  v[486]=F[4]*v[164];
-  v[487]=v[137]*v[336]+v[139]*v[376]+v[135]*v[434]+v[486];
-  v[476]=F[3]*v[164];
-  v[477]=v[137]*v[330]+v[139]*v[370]+v[135]*v[428]+v[476];
-  v[475]=v[135]*v[328]+v[139]*v[400]+v[137]*v[436]+v[488];
-  v[468]=v[135]*v[323]+v[139]*v[389]+v[137]*v[431]+v[476];
-  v[465]=v[135]*v[321]+v[139]*v[384]+v[137]*v[429]+v[486];
-  v[461]=F[8]*v[164];
-  v[462]=v[141]*v[337]+v[142]*v[377]+v[140]*v[435]+v[461];
-  v[459]=F[7]*v[164];
-  v[460]=v[141]*v[336]+v[142]*v[376]+v[140]*v[434]+v[459];
-  v[449]=F[6]*v[164];
-  v[450]=v[141]*v[330]+v[142]*v[370]+v[140]*v[428]+v[449];
-  v[448]=v[140]*v[328]+v[142]*v[400]+v[141]*v[436]+v[461];
-  v[441]=v[140]*v[323]+v[142]*v[389]+v[141]*v[431]+v[449];
-  v[438]=v[140]*v[321]+v[142]*v[384]+v[141]*v[429]+v[459];
-  v[177]=v[142]*v[158]+v[141]*v[164]+v[140]*v[168];
-  v[549]=2e0*(F[8]*v[177]+v[142]*v[408]+v[140]*v[447]+v[141]*v[462]);
-  v[548]=2e0*(F[7]*v[177]+v[142]*v[407]+v[140]*v[446]+v[141]*v[460]);
-  v[542]=2e0*(F[6]*v[177]+v[142]*v[401]+v[140]*v[437]+v[141]*v[450]);
-  v[540]=2e0*(F[5]*v[177]+v[139]*v[408]+v[135]*v[447]+v[137]*v[462]);
-  v[539]=2e0*(F[4]*v[177]+v[139]*v[407]+v[135]*v[446]+v[137]*v[460]);
-  v[533]=2e0*(F[3]*v[177]+v[139]*v[401]+v[135]*v[437]+v[137]*v[450]);
-  v[522]=2e0*(F[2]*v[177]+v[133]*v[408]+v[131]*v[447]+v[132]*v[462]);
-  v[521]=2e0*(F[1]*v[177]+v[133]*v[407]+v[131]*v[446]+v[132]*v[460]);
-  v[515]=2e0*(F[0]*v[177]+v[133]*v[401]+v[131]*v[437]+v[132]*v[450]);
-  v[176]=v[140]*v[164]+v[142]*v[165]+v[141]*v[167];
-  v[550]=2e0*(F[8]*v[176]+v[142]*v[409]+v[140]*v[448]+v[141]*v[463]);
-  v[545]=2e0*(F[6]*v[176]+v[142]*v[404]+v[140]*v[441]+v[141]*v[454]);
-  v[543]=2e0*(F[7]*v[176]+v[142]*v[402]+v[140]*v[438]+v[141]*v[451]);
-  v[541]=2e0*(F[5]*v[176]+v[139]*v[409]+v[135]*v[448]+v[137]*v[463]);
-  v[536]=2e0*(F[3]*v[176]+v[139]*v[404]+v[135]*v[441]+v[137]*v[454]);
-  v[534]=2e0*(F[4]*v[176]+v[139]*v[402]+v[135]*v[438]+v[137]*v[451]);
-  v[523]=2e0*(F[2]*v[176]+v[133]*v[409]+v[131]*v[448]+v[132]*v[463]);
-  v[518]=2e0*(F[0]*v[176]+v[133]*v[404]+v[131]*v[441]+v[132]*v[454]);
-  v[516]=2e0*(F[1]*v[176]+v[133]*v[402]+v[131]*v[438]+v[132]*v[451]);
-  v[173]=v[139]*v[158]+v[137]*v[164]+v[135]*v[168];
-  v[531]=2e0*(F[5]*v[173]+v[139]*v[417]+v[135]*v[474]+v[137]*v[489]);
-  v[558]=(-v[504]-v[531]-v[549])/3e0;
-  v[585]=v[549]+v[558];
-  v[576]=v[531]+v[558];
-  v[567]=v[504]+v[558];
-  v[530]=2e0*(F[4]*v[173]+v[139]*v[416]+v[135]*v[473]+v[137]*v[487]);
-  v[557]=(-v[502]-v[530]-v[548])/3e0;
-  v[584]=v[548]+v[557];
-  v[575]=v[530]+v[557];
-  v[566]=v[502]+v[557];
-  v[524]=2e0*(F[3]*v[173]+v[139]*v[410]+v[135]*v[464]+v[137]*v[477]);
-  v[551]=(-v[492]-v[524]-v[542])/3e0;
-  v[578]=v[542]+v[551];
-  v[569]=v[524]+v[551];
-  v[560]=v[492]+v[551];
-  v[513]=2e0*(F[2]*v[173]+v[133]*v[417]+v[131]*v[474]+v[132]*v[489]);
-  v[512]=2e0*(F[1]*v[173]+v[133]*v[416]+v[131]*v[473]+v[132]*v[487]);
-  v[506]=2e0*(F[0]*v[173]+v[133]*v[410]+v[131]*v[464]+v[132]*v[477]);
-  v[172]=v[135]*v[164]+v[139]*v[165]+v[137]*v[167];
-  v[532]=2e0*(F[5]*v[172]+v[139]*v[418]+v[135]*v[475]+v[137]*v[490]);
-  v[559]=(-v[505]-v[532]-v[550])/3e0;
+ v[123]=h[0];
+ v[124]=h[1];
+ v[125]=h[2];
+ v[126]=h[3];
+ v[127]=h[4];
+ v[128]=h[5];
+ v[129]=h[6];
+ v[130]=h[7];
+ v[131]=h[8];
+ v[132]=h[9];
+ for(i134=1;i134<=51;i134++){
+  v[138]=1e0+v[123];
+  v[140]=1e0+v[124];
+  v[142]=1e0+v[125];
+  v[2275]=-(v[189]*exp(-(d[5]*v[132])));
+  v[135]=F[1]*v[129]+F[2]*v[130]+F[0]*v[138];
+  v[2248]=(v[135]*v[135]);
+  v[136]=F[0]*v[126]+F[2]*v[131]+F[1]*v[140];
+  v[2249]=(v[136]*v[136]);
+  v[137]=F[0]*v[127]+F[1]*v[128]+F[2]*v[142];
+  v[2251]=v[136]*v[137];
+  v[2250]=(v[137]*v[137]);
+  v[139]=F[4]*v[129]+F[5]*v[130]+F[3]*v[138];
+  v[141]=F[3]*v[126]+F[5]*v[131]+F[4]*v[140];
+  v[143]=F[3]*v[127]+F[4]*v[128]+F[5]*v[142];
+  v[144]=F[7]*v[129]+F[8]*v[130]+F[6]*v[138];
+  v[273]=F[2]*v[135]+F[5]*v[139]+F[8]*v[144];
+  v[270]=F[0]*v[135]+F[3]*v[139]+F[6]*v[144];
+  v[269]=F[1]*v[135]+F[4]*v[139]+F[7]*v[144];
+  v[267]=2e0*v[273];
+  v[266]=2e0*v[269];
+  v[265]=2e0*v[270];
+  v[145]=F[6]*v[126]+F[8]*v[131]+F[7]*v[140];
+  v[2227]=F[0]*v[136]+F[3]*v[141]+F[6]*v[145];
+  v[2226]=F[1]*v[136]+F[4]*v[141]+F[7]*v[145];
+  v[2225]=F[2]*v[136]+F[5]*v[141]+F[8]*v[145];
+  v[291]=2e0*v[2225];
+  v[290]=2e0*v[2227];
+  v[289]=2e0*v[2226];
+  v[146]=F[6]*v[127]+F[7]*v[128]+F[8]*v[142];
+  v[2230]=F[0]*v[137]+F[3]*v[143]+F[6]*v[146];
+  v[2229]=F[1]*v[137]+F[4]*v[143]+F[7]*v[146];
+  v[2228]=F[2]*v[137]+F[5]*v[143]+F[8]*v[146];
+  v[303]=2e0*v[2229];
+  v[302]=2e0*v[2230];
+  v[301]=2e0*v[2228];
+  v[147]=(v[139]*v[139])+(v[144]*v[144])+v[2248];
+  v[148]=v[135]*v[136]+v[139]*v[141]+v[144]*v[145];
+  v[403]=2e0*v[148]*v[2228];
+  v[392]=2e0*v[148]*v[2230];
+  v[387]=2e0*v[148]*v[2229];
+  v[365]=-(v[148]*v[267])+v[147]*v[291];
+  v[278]=2e0*v[148]*v[2225];
+  v[277]=2e0*v[148]*v[2226];
+  v[367]=-(v[148]*v[265])+v[147]*v[290];
+  v[368]=-(v[148]*v[266])+v[147]*v[289];
+  v[274]=2e0*v[148]*v[2227];
+  v[163]=(v[148]*v[148]);
+  v[149]=v[135]*v[137]+v[139]*v[143]+v[144]*v[146];
+  v[2238]=2e0*v[149];
+  v[371]=2e0*v[149]*v[2225];
+  v[369]=2e0*v[149]*v[2226];
+  v[362]=2e0*v[149]*v[2227];
+  v[288]=2e0*v[149]*v[2228];
+  v[287]=2e0*v[149]*v[2229];
+  v[364]=-(v[149]*v[266])+v[147]*v[303];
+  v[366]=-(v[149]*v[265])+v[147]*v[302];
+  v[373]=-(v[149]*v[267])+v[147]*v[301];
+  v[283]=2e0*v[149]*v[2230];
+  v[165]=(v[149]*v[149]);
+  v[150]=(v[141]*v[141])+(v[145]*v[145])+v[2249];
+  v[343]=v[147]*v[150]-v[163];
+  v[151]=v[141]*v[143]+v[145]*v[146]+v[2251];
+  v[2231]=2e0*v[151];
+  v[402]=v[151]*v[267];
+  v[391]=v[151]*v[265];
+  v[386]=v[151]*v[266];
+  v[384]=v[148]*v[2231]-v[150]*v[2238];
+  v[372]=v[371]-2e0*v[402]+v[403];
+  v[370]=v[369]-2e0*v[386]+v[387];
+  v[363]=v[362]-2e0*v[391]+v[392];
+  v[300]=v[369]+v[386];
+  v[428]=v[300]-2e0*v[148]*v[303];
+  v[299]=v[362]+v[391];
+  v[427]=v[299]-2e0*v[148]*v[302];
+  v[298]=v[371]+v[402];
+  v[425]=v[298]-2e0*v[148]*v[301];
+  v[297]=2e0*v[151]*v[2228];
+  v[296]=2e0*v[151]*v[2226];
+  v[295]=2e0*v[151]*v[2227];
+  v[294]=2e0*v[151]*v[2230];
+  v[293]=2e0*v[151]*v[2225];
+  v[292]=2e0*v[151]*v[2229];
+  v[166]=(v[151]*v[151]);
+  v[159]=v[149]*v[2231];
+  v[152]=(v[143]*v[143])+(v[146]*v[146])+v[2250];
+  v[431]=v[152]*v[267]-v[288];
+  v[430]=v[152]*v[291]-v[297];
+  v[429]=v[152]*v[289]-v[292];
+  v[426]=v[152]*v[265]-v[283];
+  v[424]=v[152]*v[266]-v[287];
+  v[423]=v[152]*v[290]-v[294];
+  v[333]=v[147]*v[152]-v[165];
+  v[323]=v[150]*v[152]-v[166];
+  v[153]=v[148]*v[159]-v[152]*v[163]-v[150]*v[165]+v[147]*v[323];
+  v[314]=-v[157]/(4e0*Power(v[153],2));
+  v[322]=v[314]*(v[159]*v[273]+v[148]*v[288]-v[165]*v[291]-v[147]*v[297]+v[\
+152]*v[365]);
+  v[342]=v[322]*v[333];
+  v[321]=v[314]*(v[159]*v[2225]-v[166]*v[267]-v[152]*v[278]+v[148]*v[297]+v[\
+150]*v[431]);
+  v[360]=(v[136]*v[321])/2e0;
+  v[331]=v[321]*v[323];
+  v[320]=v[314]*(v[159]*v[2226]-v[166]*v[266]-v[152]*v[277]+v[148]*v[292]+v[\
+150]*v[424]);
+  v[359]=(v[136]*v[320])/2e0;
+  v[330]=v[320]*v[323];
+  v[319]=-(v[314]*(v[147]*v[296]-v[148]*v[300]+v[163]*v[303]-v[150]*v[364]));
+  v[358]=(v[136]*v[319])/2e0;
+  v[349]=v[319]*v[343];
+  v[318]=-(v[314]*(v[147]*v[295]-v[148]*v[299]+v[163]*v[302]-v[150]*v[366]));
+  v[357]=(v[136]*v[318])/2e0;
+  v[348]=v[318]*v[343];
+  v[317]=v[314]*(v[159]*v[270]+v[148]*v[283]-v[165]*v[290]-v[147]*v[294]+v[\
+152]*v[367]);
+  v[337]=v[317]*v[333];
+  v[316]=-(v[314]*(v[147]*v[293]-v[148]*v[298]+v[163]*v[301]-v[150]*v[373]));
+  v[355]=(v[136]*v[316])/2e0;
+  v[346]=v[316]*v[343];
+  v[315]=v[314]*(v[159]*v[269]+v[148]*v[287]-v[165]*v[289]-v[147]*v[292]+v[\
+152]*v[368]);
+  v[335]=v[315]*v[333];
+  v[313]=v[314]*(v[159]*v[2227]-v[166]*v[265]-v[152]*v[274]+v[148]*v[294]+v[\
+150]*v[426]);
+  v[353]=(v[136]*v[313])/2e0;
+  v[324]=v[313]*v[323];
+  v[158]=v[156]+v[157]/(4e0*v[153]);
+  v[2258]=v[158]*v[423];
+  v[2257]=v[158]*v[424];
+  v[2256]=v[158]*v[426];
+  v[2247]=v[158]*v[429];
+  v[2246]=v[158]*v[430];
+  v[2245]=v[158]*v[431];
+  v[2244]=v[158]*v[364];
+  v[2243]=v[158]*v[365];
+  v[2242]=v[158]*v[366];
+  v[2241]=v[158]*v[367];
+  v[2240]=v[158]*v[368];
+  v[2239]=v[158]*v[373];
+  v[2237]=-(v[158]*(-v[293]+v[150]*v[301]));
+  v[2236]=-(v[158]*(-v[295]+v[150]*v[302]));
+  v[2235]=-(v[158]*(-v[296]+v[150]*v[303]));
+  v[2234]=-(v[158]*(v[150]*v[265]-v[274]));
+  v[2233]=-(v[158]*(v[150]*v[266]-v[277]));
+  v[2232]=-(v[158]*(v[150]*v[267]-v[278]));
+  v[404]=(v[322]*v[384]+v[158]*(-2e0*v[149]*v[291]+v[402]+v[403]))/2e0;
+  v[401]=(v[2237]+v[321]*v[384])/2e0;
+  v[399]=(v[2235]+v[320]*v[384])/2e0;
+  v[397]=(v[2233]+v[319]*v[384])/2e0;
+  v[395]=(v[2234]+v[318]*v[384])/2e0;
+  v[393]=(v[317]*v[384]+v[158]*(-2e0*v[149]*v[290]+v[391]+v[392]))/2e0;
+  v[390]=(v[2232]+v[316]*v[384])/2e0;
+  v[388]=(v[315]*v[384]+v[158]*(-2e0*v[149]*v[289]+v[386]+v[387]))/2e0;
+  v[385]=(v[2236]+v[313]*v[384])/2e0;
+  v[361]=(F[2]*v[158]+v[136]*v[322])/2e0;
+  v[356]=(F[0]*v[158]+v[136]*v[317])/2e0;
+  v[354]=(F[1]*v[158]+v[136]*v[315])/2e0;
+  v[352]=v[2243]+v[322]*v[343];
+  v[351]=-v[2232]+v[321]*v[343];
+  v[350]=-v[2233]+v[320]*v[343];
+  v[347]=v[2241]+v[317]*v[343];
+  v[345]=v[2240]+v[315]*v[343];
+  v[344]=-v[2234]+v[313]*v[343];
+  v[341]=v[2245]+v[321]*v[333];
+  v[340]=v[2257]+v[320]*v[333];
+  v[339]=v[2244]+v[319]*v[333];
+  v[338]=v[2242]+v[318]*v[333];
+  v[336]=v[2239]+v[316]*v[333];
+  v[334]=v[2256]+v[313]*v[333];
+  v[332]=v[2246]+v[322]*v[323];
+  v[329]=-v[2235]+v[319]*v[323];
+  v[328]=-v[2236]+v[318]*v[323];
+  v[327]=v[2258]+v[317]*v[323];
+  v[326]=-v[2237]+v[316]*v[323];
+  v[325]=v[2247]+v[315]*v[323];
+  v[172]=v[158]*v[323]+v[73];
+  v[171]=v[158]*v[333]+v[73];
+  v[2259]=v[136]*v[171];
+  v[170]=v[158]*v[343]+v[73];
+  v[160]=(v[136]*v[158])/2e0;
+  v[2254]=-(v[137]*v[160]);
+  v[161]=-2e0*v[147]*v[151]+v[148]*v[2238];
+  v[2253]=v[137]*v[161];
+  v[2252]=v[160]*v[161]+v[137]*v[170];
+  v[382]=(-v[2239]+v[161]*v[322])/2e0;
+  v[381]=(v[161]*v[321]+v[158]*v[372])/2e0;
+  v[380]=(v[161]*v[320]+v[158]*v[370])/2e0;
+  v[379]=(-v[2240]+v[161]*v[319])/2e0;
+  v[419]=F[4]*v[170]+v[143]*v[349]+v[141]*v[379]+v[139]*v[397];
+  v[410]=F[7]*v[170]+v[146]*v[349]+v[145]*v[379]+v[144]*v[397];
+  v[378]=(-v[2241]+v[161]*v[318])/2e0;
+  v[418]=F[3]*v[170]+v[143]*v[348]+v[141]*v[378]+v[139]*v[395];
+  v[409]=F[6]*v[170]+v[146]*v[348]+v[145]*v[378]+v[144]*v[395];
+  v[377]=(-v[2242]+v[161]*v[317])/2e0;
+  v[376]=(-v[2243]+v[161]*v[316])/2e0;
+  v[416]=F[5]*v[170]+v[143]*v[346]+v[141]*v[376]+v[139]*v[390];
+  v[407]=F[8]*v[170]+v[146]*v[346]+v[145]*v[376]+v[144]*v[390];
+  v[375]=(-v[2244]+v[161]*v[315])/2e0;
+  v[374]=(v[161]*v[313]+v[158]*v[363])/2e0;
+  v[169]=(v[158]*v[161])/2e0;
+  v[488]=F[4]*v[169];
+  v[486]=F[3]*v[169];
+  v[483]=F[5]*v[169];
+  v[461]=F[7]*v[169];
+  v[459]=F[6]*v[169];
+  v[456]=F[8]*v[169];
+  v[422]=v[143]*v[352]+v[141]*v[382]+v[139]*v[404]+v[483];
+  v[417]=v[143]*v[347]+v[141]*v[377]+v[139]*v[393]+v[486];
+  v[415]=v[143]*v[345]+v[141]*v[375]+v[139]*v[388]+v[488];
+  v[413]=v[146]*v[352]+v[145]*v[382]+v[144]*v[404]+v[456];
+  v[408]=v[146]*v[347]+v[145]*v[377]+v[144]*v[393]+v[459];
+  v[406]=v[146]*v[345]+v[145]*v[375]+v[144]*v[388]+v[461];
+  v[162]=(v[158]*v[384])/2e0;
+  v[507]=F[2]*v[162];
+  v[505]=F[1]*v[162];
+  v[502]=F[0]*v[162];
+  v[499]=v[135]*v[162]+v[2252];
+  v[2255]=v[2252]+v[499];
+  v[475]=F[4]*v[162];
+  v[473]=F[3]*v[162];
+  v[470]=F[5]*v[162];
+  v[448]=F[7]*v[162];
+  v[446]=F[6]*v[162];
+  v[443]=F[8]*v[162];
+  v[421]=v[143]*v[351]+v[141]*v[381]+v[139]*v[401]+v[470];
+  v[420]=v[143]*v[350]+v[141]*v[380]+v[139]*v[399]+v[475];
+  v[414]=v[143]*v[344]+v[141]*v[374]+v[139]*v[385]+v[473];
+  v[412]=v[146]*v[351]+v[145]*v[381]+v[144]*v[401]+v[443];
+  v[411]=v[146]*v[350]+v[145]*v[380]+v[144]*v[399]+v[448];
+  v[405]=v[146]*v[344]+v[145]*v[374]+v[144]*v[385]+v[446];
+  v[179]=v[144]*v[162]+v[145]*v[169]+v[146]*v[170];
+  v[175]=v[139]*v[162]+v[141]*v[169]+v[143]*v[170];
+  v[164]=-2e0*v[148]*v[152]+v[159];
+  v[495]=v[137]*v[162]+v[160]*v[164]+v[135]*v[172];
+  v[440]=(-v[2245]+v[164]*v[322])/2e0;
+  v[494]=F[5]*v[171]+v[141]*v[342]+v[143]*v[382]+v[139]*v[440];
+  v[467]=F[8]*v[171]+v[145]*v[342]+v[146]*v[382]+v[144]*v[440];
+  v[439]=(-v[2246]+v[164]*v[321])/2e0;
+  v[478]=F[5]*v[172]+v[139]*v[331]+v[143]*v[401]+v[141]*v[439];
+  v[451]=F[8]*v[172]+v[144]*v[331]+v[146]*v[401]+v[145]*v[439];
+  v[438]=(-v[2247]+v[164]*v[320])/2e0;
+  v[477]=F[4]*v[172]+v[139]*v[330]+v[143]*v[399]+v[141]*v[438];
+  v[450]=F[7]*v[172]+v[144]*v[330]+v[146]*v[399]+v[145]*v[438];
+  v[437]=(v[164]*v[319]+v[158]*v[428])/2e0;
+  v[504]=2e0*(F[1]*v[2255]+v[2248]*v[329]+v[2249]*v[339]+v[2250]*v[349]+v[\
+2253]*v[358]
+   +v[2254]*v[368]+v[2251]*v[379]+v[135]*(v[164]*v[358]+2e0*v[137]*v[397]+v[\
+160]*v[428]
+   +v[136]*v[437]+v[505]));
+  v[489]=v[141]*v[339]+v[143]*v[379]+v[139]*v[437]+v[488];
+  v[476]=v[139]*v[329]+v[143]*v[397]+v[141]*v[437]+v[475];
+  v[533]=2e0*(F[4]*v[175]+v[143]*v[419]+v[139]*v[476]+v[141]*v[489]);
+  v[515]=2e0*(F[1]*v[175]+v[137]*v[419]+v[135]*v[476]+v[136]*v[489]);
+  v[462]=v[145]*v[339]+v[146]*v[379]+v[144]*v[437]+v[461];
+  v[449]=v[144]*v[329]+v[146]*v[397]+v[145]*v[437]+v[448];
+  v[551]=2e0*(F[7]*v[179]+v[146]*v[410]+v[144]*v[449]+v[145]*v[462]);
+  v[560]=(-v[504]-v[533]-v[551])/3e0;
+  v[587]=v[551]+v[560];
+  v[578]=v[533]+v[560];
+  v[569]=v[504]+v[560];
+  v[542]=2e0*(F[4]*v[179]+v[143]*v[410]+v[139]*v[449]+v[141]*v[462]);
+  v[524]=2e0*(F[1]*v[179]+v[137]*v[410]+v[135]*v[449]+v[136]*v[462]);
+  v[436]=(v[164]*v[318]+v[158]*v[427])/2e0;
+  v[503]=2e0*(F[0]*v[2255]+v[2248]*v[328]+v[2249]*v[338]+v[2250]*v[348]+v[\
+2253]*v[357]
+   +v[2254]*v[367]+v[2251]*v[378]+v[135]*(v[164]*v[357]+2e0*v[137]*v[395]+v[\
+160]*v[427]
+   +v[136]*v[436]+v[502]));
+  v[487]=v[141]*v[338]+v[143]*v[378]+v[139]*v[436]+v[486];
+  v[474]=v[139]*v[328]+v[143]*v[395]+v[141]*v[436]+v[473];
+  v[532]=2e0*(F[3]*v[175]+v[143]*v[418]+v[139]*v[474]+v[141]*v[487]);
+  v[514]=2e0*(F[0]*v[175]+v[137]*v[418]+v[135]*v[474]+v[136]*v[487]);
+  v[460]=v[145]*v[338]+v[146]*v[378]+v[144]*v[436]+v[459];
+  v[447]=v[144]*v[328]+v[146]*v[395]+v[145]*v[436]+v[446];
+  v[550]=2e0*(F[6]*v[179]+v[146]*v[409]+v[144]*v[447]+v[145]*v[460]);
+  v[559]=(-v[503]-v[532]-v[550])/3e0;
   v[586]=v[550]+v[559];
   v[577]=v[532]+v[559];
-  v[568]=v[505]+v[559];
-  v[527]=2e0*(F[3]*v[172]+v[139]*v[413]+v[135]*v[468]+v[137]*v[481]);
-  v[554]=(-v[497]-v[527]-v[545])/3e0;
-  v[581]=v[545]+v[554];
-  v[572]=v[527]+v[554];
-  v[563]=v[497]+v[554];
-  v[525]=2e0*(F[4]*v[172]+v[139]*v[411]+v[135]*v[465]+v[137]*v[478]);
-  v[552]=(-v[494]-v[525]-v[543])/3e0;
-  v[579]=v[543]+v[552];
-  v[570]=v[525]+v[552];
-  v[561]=v[494]+v[552];
-  v[514]=2e0*(F[2]*v[172]+v[133]*v[418]+v[131]*v[475]+v[132]*v[490]);
-  v[509]=2e0*(F[0]*v[172]+v[133]*v[413]+v[131]*v[468]+v[132]*v[481]);
-  v[507]=2e0*(F[1]*v[172]+v[133]*v[411]+v[131]*v[465]+v[132]*v[478]);
-  v[163]=2e0*(v[131]*v[491]+v[132]*v[493]+v[133]*v[495]);
-  v[169]=2e0*(v[133]*v[171]+v[132]*v[172]+v[131]*v[173]);
-  v[170]=2e0*(v[133]*v[175]+v[132]*v[176]+v[131]*v[177]);
-  v[174]=2e0*(v[139]*v[171]+v[137]*v[172]+v[135]*v[173]);
-  v[178]=2e0*(v[139]*v[175]+v[137]*v[176]+v[135]*v[177]);
-  v[179]=2e0*(v[142]*v[175]+v[141]*v[176]+v[140]*v[177]);
-  v[181]=(-v[163]-v[174]-v[179])/3e0;
-  v[180]=v[163]+v[181];
-  v[182]=v[174]+v[181];
-  v[183]=v[179]+v[181];
-  v[2253]=sqrt(0.15e1*(2e0*(v[169]*v[169])+2e0*(v[170]*v[170])+2e0*(v[178]*v[\
-178])+(v[180]*v[180])+
-   (v[182]*v[182])+(v[183]*v[183])));
-  v[2259]=0.15e1/v[2253];
-  v[2258]=0.15e1/v[2253];
-  v[2257]=0.15e1/v[2253];
-  v[2256]=0.15e1/v[2253];
-  v[2255]=0.15e1/v[2253];
-  v[2254]=0.15e1/v[2253];
-  v[596]=(0.15e1*(2e0*v[169]*v[514]+2e0*v[170]*v[523]+2e0*v[178]*v[541]+v[180]\
-*v[568]+v[182]*v[577]
-   +v[183]*v[586]))/v[2253];
-  v[595]=(0.15e1*(2e0*v[169]*v[513]+2e0*v[170]*v[522]+2e0*v[178]*v[540]+v[180]\
-*v[567]+v[182]*v[576]
-   +v[183]*v[585]))/v[2253];
-  v[594]=(0.15e1*(2e0*v[169]*v[512]+2e0*v[170]*v[521]+2e0*v[178]*v[539]+v[180]\
-*v[566]+v[182]*v[575]
-   +v[183]*v[584]))/v[2253];
-  v[593]=v[2259]*(2e0*v[169]*v[511]+2e0*v[170]*v[520]+2e0*v[178]*v[538]+v[180]\
-*v[565]+v[182]*v[574]
-   +v[183]*v[583]);
-  v[592]=v[2258]*(2e0*v[169]*v[510]+2e0*v[170]*v[519]+2e0*v[178]*v[537]+v[180]\
-*v[564]+v[182]*v[573]
-   +v[183]*v[582]);
-  v[591]=v[2257]*(2e0*v[169]*v[509]+2e0*v[170]*v[518]+2e0*v[178]*v[536]+v[180]\
-*v[563]+v[182]*v[572]
-   +v[183]*v[581]);
-  v[590]=v[2256]*(2e0*v[169]*v[508]+2e0*v[170]*v[517]+2e0*v[178]*v[535]+v[180]\
-*v[562]+v[182]*v[571]
-   +v[183]*v[580]);
-  v[589]=v[2255]*(2e0*v[169]*v[507]+2e0*v[170]*v[516]+2e0*v[178]*v[534]+v[180]\
-*v[561]+v[182]*v[570]
-   +v[183]*v[579]);
-  v[588]=v[2254]*(2e0*v[169]*v[506]+2e0*v[170]*v[515]+2e0*v[178]*v[533]+v[180]\
-*v[560]+v[182]*v[569]
-   +v[183]*v[578]);
-  v[598]=1e0/Power(v[2253],2);
-  v[606]=-(v[596]*v[598]);
-  v[605]=-(v[595]*v[598]);
-  v[604]=-(v[594]*v[598]);
-  v[603]=-(v[593]*v[598]);
-  v[602]=-(v[592]*v[598]);
-  v[601]=-(v[591]*v[598]);
-  v[600]=-(v[590]*v[598]);
-  v[599]=-(v[589]*v[598]);
-  v[597]=-(v[588]*v[598]);
-  v[722]=-0.1224744871391589e1*v[180]*v[2254];
-  v[712]=-0.1224744871391589e1*v[169]*v[2255];
-  v[702]=-0.1224744871391589e1*v[170]*v[2256];
-  v[692]=-0.1224744871391589e1*v[182]*v[2257];
-  v[682]=-0.1224744871391589e1*v[178]*v[2258];
-  v[672]=-0.1224744871391589e1*v[183]*v[2259];
-  v[195]=h[9]-v[128];
-  v[2260]=0.18371173070873836e1*v[195];
-  v[721]=v[2260]*(v[568]/v[2253]+v[180]*v[606]);
-  v[720]=v[2260]*(v[567]/v[2253]+v[180]*v[605]);
-  v[719]=1e0*v[2260]*(v[566]/v[2253]+v[180]*v[604]);
-  v[718]=1e0*v[2260]*(v[565]/v[2253]+v[180]*v[603]);
-  v[717]=1e0*v[2260]*(v[564]/v[2253]+v[180]*v[602]);
-  v[716]=1e0*v[2260]*(v[563]/v[2253]+v[180]*v[601]);
-  v[715]=1e0*v[2260]*(v[562]/v[2253]+v[180]*v[600]);
-  v[714]=1e0*v[2260]*(v[561]/v[2253]+v[180]*v[599]);
-  v[713]=1e0*v[2260]*(v[560]/v[2253]+v[180]*v[597]);
-  v[711]=1e0*v[2260]*(v[514]/v[2253]+v[169]*v[606]);
-  v[710]=1e0*v[2260]*(v[513]/v[2253]+v[169]*v[605]);
-  v[709]=1e0*v[2260]*(v[512]/v[2253]+v[169]*v[604]);
-  v[708]=1e0*v[2260]*(v[511]/v[2253]+v[169]*v[603]);
-  v[707]=1e0*v[2260]*(v[510]/v[2253]+v[169]*v[602]);
-  v[706]=1e0*v[2260]*(v[509]/v[2253]+v[169]*v[601]);
-  v[705]=1e0*v[2260]*(v[508]/v[2253]+v[169]*v[600]);
-  v[704]=1e0*v[2260]*(v[507]/v[2253]+v[169]*v[599]);
-  v[703]=1e0*v[2260]*(v[506]/v[2253]+v[169]*v[597]);
-  v[701]=1e0*v[2260]*(v[523]/v[2253]+v[170]*v[606]);
-  v[700]=1e0*v[2260]*(v[522]/v[2253]+v[170]*v[605]);
-  v[699]=1e0*v[2260]*(v[521]/v[2253]+v[170]*v[604]);
-  v[698]=1e0*v[2260]*(v[520]/v[2253]+v[170]*v[603]);
-  v[697]=1e0*v[2260]*(v[519]/v[2253]+v[170]*v[602]);
-  v[696]=1e0*v[2260]*(v[518]/v[2253]+v[170]*v[601]);
-  v[695]=1e0*v[2260]*(v[517]/v[2253]+v[170]*v[600]);
-  v[694]=1e0*v[2260]*(v[516]/v[2253]+v[170]*v[599]);
-  v[693]=1e0*v[2260]*(v[515]/v[2253]+v[170]*v[597]);
-  v[691]=1e0*v[2260]*(v[577]/v[2253]+v[182]*v[606]);
-  v[690]=1e0*v[2260]*(v[576]/v[2253]+v[182]*v[605]);
-  v[689]=1e0*v[2260]*(v[575]/v[2253]+v[182]*v[604]);
-  v[688]=1e0*v[2260]*(v[574]/v[2253]+v[182]*v[603]);
-  v[687]=1e0*v[2260]*(v[573]/v[2253]+v[182]*v[602]);
-  v[686]=1e0*v[2260]*(v[572]/v[2253]+v[182]*v[601]);
-  v[685]=1e0*v[2260]*(v[571]/v[2253]+v[182]*v[600]);
-  v[684]=1e0*v[2260]*(v[570]/v[2253]+v[182]*v[599]);
-  v[683]=1e0*v[2260]*(v[569]/v[2253]+v[182]*v[597]);
-  v[681]=1e0*v[2260]*(v[541]/v[2253]+v[178]*v[606]);
-  v[680]=1e0*v[2260]*(v[540]/v[2253]+v[178]*v[605]);
-  v[679]=1e0*v[2260]*(v[539]/v[2253]+v[178]*v[604]);
-  v[678]=1e0*v[2260]*(v[538]/v[2253]+v[178]*v[603]);
-  v[677]=1e0*v[2260]*(v[537]/v[2253]+v[178]*v[602]);
-  v[676]=1e0*v[2260]*(v[536]/v[2253]+v[178]*v[601]);
-  v[675]=1e0*v[2260]*(v[535]/v[2253]+v[178]*v[600]);
-  v[674]=1e0*v[2260]*(v[534]/v[2253]+v[178]*v[599]);
-  v[673]=1e0*v[2260]*(v[533]/v[2253]+v[178]*v[597]);
-  v[671]=1e0*v[2260]*(v[586]/v[2253]+v[183]*v[606]);
-  v[670]=1e0*v[2260]*(v[585]/v[2253]+v[183]*v[605]);
-  v[669]=1e0*v[2260]*(v[584]/v[2253]+v[183]*v[604]);
-  v[668]=1e0*v[2260]*(v[583]/v[2253]+v[183]*v[603]);
-  v[667]=1e0*v[2260]*(v[582]/v[2253]+v[183]*v[602]);
-  v[666]=1e0*v[2260]*(v[581]/v[2253]+v[183]*v[601]);
-  v[665]=1e0*v[2260]*(v[580]/v[2253]+v[183]*v[600]);
-  v[664]=1e0*v[2260]*(v[579]/v[2253]+v[183]*v[599]);
-  v[663]=1e0*v[2260]*(v[578]/v[2253]+v[183]*v[597]);
-  MatrixXC1[0]=-(v[195]*v[722]);
-  MatrixXC1[1]=-(v[195]*v[712]);
-  MatrixXC1[2]=-(v[195]*v[702]);
-  MatrixXC1[3]=-(v[195]*v[692]);
-  MatrixXC1[4]=-(v[195]*v[682]);
-  MatrixXC1[5]=-(v[195]*v[672]);
+  v[568]=v[503]+v[559];
+  v[541]=2e0*(F[3]*v[179]+v[143]*v[409]+v[139]*v[447]+v[141]*v[460]);
+  v[523]=2e0*(F[0]*v[179]+v[137]*v[409]+v[135]*v[447]+v[136]*v[460]);
+  v[435]=(-v[2256]+v[164]*v[317])/2e0;
+  v[485]=F[3]*v[171]+v[141]*v[337]+v[143]*v[377]+v[139]*v[435];
+  v[458]=F[6]*v[171]+v[145]*v[337]+v[146]*v[377]+v[144]*v[435];
+  v[434]=(v[164]*v[316]+v[158]*v[425])/2e0;
+  v[500]=2e0*(F[2]*v[2255]+v[2248]*v[326]+v[2249]*v[336]+v[2250]*v[346]+v[\
+2253]*v[355]
+   +v[2254]*v[365]+v[2251]*v[376]+v[135]*(v[164]*v[355]+2e0*v[137]*v[390]+v[\
+160]*v[425]
+   +v[136]*v[434]+v[507]));
+  v[484]=v[141]*v[336]+v[143]*v[376]+v[139]*v[434]+v[483];
+  v[471]=v[139]*v[326]+v[143]*v[390]+v[141]*v[434]+v[470];
+  v[530]=2e0*(F[5]*v[175]+v[143]*v[416]+v[139]*v[471]+v[141]*v[484]);
+  v[512]=2e0*(F[2]*v[175]+v[137]*v[416]+v[135]*v[471]+v[136]*v[484]);
+  v[457]=v[145]*v[336]+v[146]*v[376]+v[144]*v[434]+v[456];
+  v[444]=v[144]*v[326]+v[146]*v[390]+v[145]*v[434]+v[443];
+  v[548]=2e0*(F[8]*v[179]+v[146]*v[407]+v[144]*v[444]+v[145]*v[457]);
+  v[557]=(-v[500]-v[530]-v[548])/3e0;
+  v[584]=v[548]+v[557];
+  v[575]=v[530]+v[557];
+  v[566]=v[500]+v[557];
+  v[539]=2e0*(F[5]*v[179]+v[143]*v[407]+v[139]*v[444]+v[141]*v[457]);
+  v[521]=2e0*(F[2]*v[179]+v[137]*v[407]+v[135]*v[444]+v[136]*v[457]);
+  v[433]=(-v[2257]+v[164]*v[315])/2e0;
+  v[482]=F[4]*v[171]+v[141]*v[335]+v[143]*v[375]+v[139]*v[433];
+  v[455]=F[7]*v[171]+v[145]*v[335]+v[146]*v[375]+v[144]*v[433];
+  v[432]=(-v[2258]+v[164]*v[313])/2e0;
+  v[468]=F[3]*v[172]+v[139]*v[324]+v[143]*v[385]+v[141]*v[432];
+  v[441]=F[6]*v[172]+v[144]*v[324]+v[146]*v[385]+v[145]*v[432];
+  v[168]=(v[158]*v[164])/2e0;
+  v[508]=2e0*(v[135]*(F[2]*v[172]+v[135]*v[331]+v[164]*v[360]+v[137]*v[401]-v[\
+160]*v[430])+v[136]*
+   (F[2]*v[168]+v[136]*v[341]+v[137]*v[381]+v[135]*v[439])+F[2]*v[495]+v[137]*\
+(v[137]*v[351]
+   +v[161]*v[360]+v[160]*v[372]+v[135]*v[401]+v[507]));
+  v[506]=2e0*(v[135]*(F[1]*v[172]+v[135]*v[330]+v[164]*v[359]+v[137]*v[399]-v[\
+160]*v[429])+v[136]*
+   (F[1]*v[168]+v[136]*v[340]+v[137]*v[380]+v[135]*v[438])+F[1]*v[495]+v[137]*\
+(v[137]*v[350]
+   +v[161]*v[359]+v[160]*v[370]+v[135]*v[399]+v[505]));
+  v[497]=v[135]*v[168]+v[137]*v[169]+v[2259];
+  v[2260]=v[2259]+v[497];
+  v[509]=2e0*(F[2]*v[2260]+v[2248]*v[332]+v[2249]*v[342]+v[2250]*v[352]+v[\
+2253]*v[361]
+   +v[2254]*v[373]+v[2251]*v[382]+v[135]*(v[164]*v[361]+2e0*v[137]*v[404]-v[\
+160]*v[431]
+   +v[136]*v[440]));
+  v[501]=2e0*(F[0]*v[2260]+v[2248]*v[327]+v[2249]*v[337]+v[2250]*v[347]+v[\
+2253]*v[356]
+   +v[2254]*v[366]+v[2251]*v[377]+v[135]*(v[164]*v[356]+2e0*v[137]*v[393]-v[\
+160]*v[426]
+   +v[136]*v[435]));
+  v[498]=2e0*(F[1]*v[2260]+v[2248]*v[325]+v[2249]*v[335]+v[2250]*v[345]+v[\
+2253]*v[354]
+   +v[2254]*v[364]+v[2251]*v[375]+v[135]*(v[164]*v[354]+2e0*v[137]*v[388]-v[\
+160]*v[424]
+   +v[136]*v[433]));
+  v[496]=2e0*(v[135]*(F[0]*v[172]+v[135]*v[324]+v[164]*v[353]+v[137]*v[385]-v[\
+160]*v[423])+v[136]*
+   (F[0]*v[168]+v[136]*v[334]+v[137]*v[374]+v[135]*v[432])+F[0]*v[495]+v[137]*\
+(v[137]*v[344]
+   +v[161]*v[353]+v[160]*v[363]+v[135]*v[385]+v[502]));
+  v[492]=F[5]*v[168];
+  v[493]=v[141]*v[341]+v[143]*v[381]+v[139]*v[439]+v[492];
+  v[490]=F[4]*v[168];
+  v[491]=v[141]*v[340]+v[143]*v[380]+v[139]*v[438]+v[490];
+  v[480]=F[3]*v[168];
+  v[481]=v[141]*v[334]+v[143]*v[374]+v[139]*v[432]+v[480];
+  v[479]=v[139]*v[332]+v[143]*v[404]+v[141]*v[440]+v[492];
+  v[472]=v[139]*v[327]+v[143]*v[393]+v[141]*v[435]+v[480];
+  v[469]=v[139]*v[325]+v[143]*v[388]+v[141]*v[433]+v[490];
+  v[465]=F[8]*v[168];
+  v[466]=v[145]*v[341]+v[146]*v[381]+v[144]*v[439]+v[465];
+  v[463]=F[7]*v[168];
+  v[464]=v[145]*v[340]+v[146]*v[380]+v[144]*v[438]+v[463];
+  v[453]=F[6]*v[168];
+  v[454]=v[145]*v[334]+v[146]*v[374]+v[144]*v[432]+v[453];
+  v[452]=v[144]*v[332]+v[146]*v[404]+v[145]*v[440]+v[465];
+  v[445]=v[144]*v[327]+v[146]*v[393]+v[145]*v[435]+v[453];
+  v[442]=v[144]*v[325]+v[146]*v[388]+v[145]*v[433]+v[463];
+  v[181]=v[146]*v[162]+v[145]*v[168]+v[144]*v[172];
+  v[553]=2e0*(F[8]*v[181]+v[146]*v[412]+v[144]*v[451]+v[145]*v[466]);
+  v[552]=2e0*(F[7]*v[181]+v[146]*v[411]+v[144]*v[450]+v[145]*v[464]);
+  v[546]=2e0*(F[6]*v[181]+v[146]*v[405]+v[144]*v[441]+v[145]*v[454]);
+  v[544]=2e0*(F[5]*v[181]+v[143]*v[412]+v[139]*v[451]+v[141]*v[466]);
+  v[543]=2e0*(F[4]*v[181]+v[143]*v[411]+v[139]*v[450]+v[141]*v[464]);
+  v[537]=2e0*(F[3]*v[181]+v[143]*v[405]+v[139]*v[441]+v[141]*v[454]);
+  v[526]=2e0*(F[2]*v[181]+v[137]*v[412]+v[135]*v[451]+v[136]*v[466]);
+  v[525]=2e0*(F[1]*v[181]+v[137]*v[411]+v[135]*v[450]+v[136]*v[464]);
+  v[519]=2e0*(F[0]*v[181]+v[137]*v[405]+v[135]*v[441]+v[136]*v[454]);
+  v[180]=v[144]*v[168]+v[146]*v[169]+v[145]*v[171];
+  v[554]=2e0*(F[8]*v[180]+v[146]*v[413]+v[144]*v[452]+v[145]*v[467]);
+  v[549]=2e0*(F[6]*v[180]+v[146]*v[408]+v[144]*v[445]+v[145]*v[458]);
+  v[547]=2e0*(F[7]*v[180]+v[146]*v[406]+v[144]*v[442]+v[145]*v[455]);
+  v[545]=2e0*(F[5]*v[180]+v[143]*v[413]+v[139]*v[452]+v[141]*v[467]);
+  v[540]=2e0*(F[3]*v[180]+v[143]*v[408]+v[139]*v[445]+v[141]*v[458]);
+  v[538]=2e0*(F[4]*v[180]+v[143]*v[406]+v[139]*v[442]+v[141]*v[455]);
+  v[527]=2e0*(F[2]*v[180]+v[137]*v[413]+v[135]*v[452]+v[136]*v[467]);
+  v[522]=2e0*(F[0]*v[180]+v[137]*v[408]+v[135]*v[445]+v[136]*v[458]);
+  v[520]=2e0*(F[1]*v[180]+v[137]*v[406]+v[135]*v[442]+v[136]*v[455]);
+  v[177]=v[143]*v[162]+v[141]*v[168]+v[139]*v[172];
+  v[535]=2e0*(F[5]*v[177]+v[143]*v[421]+v[139]*v[478]+v[141]*v[493]);
+  v[562]=(-v[508]-v[535]-v[553])/3e0;
+  v[589]=v[553]+v[562];
+  v[580]=v[535]+v[562];
+  v[571]=v[508]+v[562];
+  v[534]=2e0*(F[4]*v[177]+v[143]*v[420]+v[139]*v[477]+v[141]*v[491]);
+  v[561]=(-v[506]-v[534]-v[552])/3e0;
+  v[588]=v[552]+v[561];
+  v[579]=v[534]+v[561];
+  v[570]=v[506]+v[561];
+  v[528]=2e0*(F[3]*v[177]+v[143]*v[414]+v[139]*v[468]+v[141]*v[481]);
+  v[555]=(-v[496]-v[528]-v[546])/3e0;
+  v[582]=v[546]+v[555];
+  v[573]=v[528]+v[555];
+  v[564]=v[496]+v[555];
+  v[517]=2e0*(F[2]*v[177]+v[137]*v[421]+v[135]*v[478]+v[136]*v[493]);
+  v[516]=2e0*(F[1]*v[177]+v[137]*v[420]+v[135]*v[477]+v[136]*v[491]);
+  v[510]=2e0*(F[0]*v[177]+v[137]*v[414]+v[135]*v[468]+v[136]*v[481]);
+  v[176]=v[139]*v[168]+v[143]*v[169]+v[141]*v[171];
+  v[536]=2e0*(F[5]*v[176]+v[143]*v[422]+v[139]*v[479]+v[141]*v[494]);
+  v[563]=(-v[509]-v[536]-v[554])/3e0;
+  v[590]=v[554]+v[563];
+  v[581]=v[536]+v[563];
+  v[572]=v[509]+v[563];
+  v[531]=2e0*(F[3]*v[176]+v[143]*v[417]+v[139]*v[472]+v[141]*v[485]);
+  v[558]=(-v[501]-v[531]-v[549])/3e0;
+  v[585]=v[549]+v[558];
+  v[576]=v[531]+v[558];
+  v[567]=v[501]+v[558];
+  v[529]=2e0*(F[4]*v[176]+v[143]*v[415]+v[139]*v[469]+v[141]*v[482]);
+  v[556]=(-v[498]-v[529]-v[547])/3e0;
+  v[583]=v[547]+v[556];
+  v[574]=v[529]+v[556];
+  v[565]=v[498]+v[556];
+  v[518]=2e0*(F[2]*v[176]+v[137]*v[422]+v[135]*v[479]+v[136]*v[494]);
+  v[513]=2e0*(F[0]*v[176]+v[137]*v[417]+v[135]*v[472]+v[136]*v[485]);
+  v[511]=2e0*(F[1]*v[176]+v[137]*v[415]+v[135]*v[469]+v[136]*v[482]);
+  v[167]=2e0*(v[135]*v[495]+v[136]*v[497]+v[137]*v[499]);
+  v[173]=2e0*(v[137]*v[175]+v[136]*v[176]+v[135]*v[177]);
+  v[174]=2e0*(v[137]*v[179]+v[136]*v[180]+v[135]*v[181]);
+  v[178]=2e0*(v[143]*v[175]+v[141]*v[176]+v[139]*v[177]);
+  v[182]=2e0*(v[143]*v[179]+v[141]*v[180]+v[139]*v[181]);
+  v[183]=2e0*(v[146]*v[179]+v[145]*v[180]+v[144]*v[181]);
+  v[185]=(-v[167]-v[178]-v[183])/3e0;
+  v[184]=v[167]+v[185];
+  v[186]=v[178]+v[185];
+  v[187]=v[183]+v[185];
+  v[2261]=sqrt(0.15e1*(2e0*(v[173]*v[173])+2e0*(v[174]*v[174])+2e0*(v[182]*v[\
+182])+(v[184]*v[184])+
+   (v[186]*v[186])+(v[187]*v[187])));
+  v[2267]=0.15e1/v[2261];
+  v[2266]=0.15e1/v[2261];
+  v[2265]=0.15e1/v[2261];
+  v[2264]=0.15e1/v[2261];
+  v[2263]=0.15e1/v[2261];
+  v[2262]=0.15e1/v[2261];
+  v[600]=(0.15e1*(2e0*v[173]*v[518]+2e0*v[174]*v[527]+2e0*v[182]*v[545]+v[184]\
+*v[572]+v[186]*v[581]
+   +v[187]*v[590]))/v[2261];
+  v[599]=(0.15e1*(2e0*v[173]*v[517]+2e0*v[174]*v[526]+2e0*v[182]*v[544]+v[184]\
+*v[571]+v[186]*v[580]
+   +v[187]*v[589]))/v[2261];
+  v[598]=(0.15e1*(2e0*v[173]*v[516]+2e0*v[174]*v[525]+2e0*v[182]*v[543]+v[184]\
+*v[570]+v[186]*v[579]
+   +v[187]*v[588]))/v[2261];
+  v[597]=v[2267]*(2e0*v[173]*v[515]+2e0*v[174]*v[524]+2e0*v[182]*v[542]+v[184]\
+*v[569]+v[186]*v[578]
+   +v[187]*v[587]);
+  v[596]=v[2266]*(2e0*v[173]*v[514]+2e0*v[174]*v[523]+2e0*v[182]*v[541]+v[184]\
+*v[568]+v[186]*v[577]
+   +v[187]*v[586]);
+  v[595]=v[2265]*(2e0*v[173]*v[513]+2e0*v[174]*v[522]+2e0*v[182]*v[540]+v[184]\
+*v[567]+v[186]*v[576]
+   +v[187]*v[585]);
+  v[594]=v[2264]*(2e0*v[173]*v[512]+2e0*v[174]*v[521]+2e0*v[182]*v[539]+v[184]\
+*v[566]+v[186]*v[575]
+   +v[187]*v[584]);
+  v[593]=v[2263]*(2e0*v[173]*v[511]+2e0*v[174]*v[520]+2e0*v[182]*v[538]+v[184]\
+*v[565]+v[186]*v[574]
+   +v[187]*v[583]);
+  v[592]=v[2262]*(2e0*v[173]*v[510]+2e0*v[174]*v[519]+2e0*v[182]*v[537]+v[184]\
+*v[564]+v[186]*v[573]
+   +v[187]*v[582]);
+  v[602]=1e0/Power(v[2261],2);
+  v[610]=-(v[600]*v[602]);
+  v[609]=-(v[599]*v[602]);
+  v[608]=-(v[598]*v[602]);
+  v[607]=-(v[597]*v[602]);
+  v[606]=-(v[596]*v[602]);
+  v[605]=-(v[595]*v[602]);
+  v[604]=-(v[594]*v[602]);
+  v[603]=-(v[593]*v[602]);
+  v[601]=-(v[592]*v[602]);
+  v[726]=-0.1224744871391589e1*v[184]*v[2262];
+  v[716]=-0.1224744871391589e1*v[173]*v[2263];
+  v[706]=-0.1224744871391589e1*v[174]*v[2264];
+  v[696]=-0.1224744871391589e1*v[186]*v[2265];
+  v[686]=-0.1224744871391589e1*v[182]*v[2266];
+  v[676]=-0.1224744871391589e1*v[187]*v[2267];
+  v[199]=h[9]-v[132];
+  v[2268]=0.18371173070873836e1*v[199];
+  v[725]=v[2268]*(v[572]/v[2261]+v[184]*v[610]);
+  v[724]=v[2268]*(v[571]/v[2261]+v[184]*v[609]);
+  v[723]=1e0*v[2268]*(v[570]/v[2261]+v[184]*v[608]);
+  v[722]=1e0*v[2268]*(v[569]/v[2261]+v[184]*v[607]);
+  v[721]=1e0*v[2268]*(v[568]/v[2261]+v[184]*v[606]);
+  v[720]=1e0*v[2268]*(v[567]/v[2261]+v[184]*v[605]);
+  v[719]=1e0*v[2268]*(v[566]/v[2261]+v[184]*v[604]);
+  v[718]=1e0*v[2268]*(v[565]/v[2261]+v[184]*v[603]);
+  v[717]=1e0*v[2268]*(v[564]/v[2261]+v[184]*v[601]);
+  v[715]=1e0*v[2268]*(v[518]/v[2261]+v[173]*v[610]);
+  v[714]=1e0*v[2268]*(v[517]/v[2261]+v[173]*v[609]);
+  v[713]=1e0*v[2268]*(v[516]/v[2261]+v[173]*v[608]);
+  v[712]=1e0*v[2268]*(v[515]/v[2261]+v[173]*v[607]);
+  v[711]=1e0*v[2268]*(v[514]/v[2261]+v[173]*v[606]);
+  v[710]=1e0*v[2268]*(v[513]/v[2261]+v[173]*v[605]);
+  v[709]=1e0*v[2268]*(v[512]/v[2261]+v[173]*v[604]);
+  v[708]=1e0*v[2268]*(v[511]/v[2261]+v[173]*v[603]);
+  v[707]=1e0*v[2268]*(v[510]/v[2261]+v[173]*v[601]);
+  v[705]=1e0*v[2268]*(v[527]/v[2261]+v[174]*v[610]);
+  v[704]=1e0*v[2268]*(v[526]/v[2261]+v[174]*v[609]);
+  v[703]=1e0*v[2268]*(v[525]/v[2261]+v[174]*v[608]);
+  v[702]=1e0*v[2268]*(v[524]/v[2261]+v[174]*v[607]);
+  v[701]=1e0*v[2268]*(v[523]/v[2261]+v[174]*v[606]);
+  v[700]=1e0*v[2268]*(v[522]/v[2261]+v[174]*v[605]);
+  v[699]=1e0*v[2268]*(v[521]/v[2261]+v[174]*v[604]);
+  v[698]=1e0*v[2268]*(v[520]/v[2261]+v[174]*v[603]);
+  v[697]=1e0*v[2268]*(v[519]/v[2261]+v[174]*v[601]);
+  v[695]=1e0*v[2268]*(v[581]/v[2261]+v[186]*v[610]);
+  v[694]=1e0*v[2268]*(v[580]/v[2261]+v[186]*v[609]);
+  v[693]=1e0*v[2268]*(v[579]/v[2261]+v[186]*v[608]);
+  v[692]=1e0*v[2268]*(v[578]/v[2261]+v[186]*v[607]);
+  v[691]=1e0*v[2268]*(v[577]/v[2261]+v[186]*v[606]);
+  v[690]=1e0*v[2268]*(v[576]/v[2261]+v[186]*v[605]);
+  v[689]=1e0*v[2268]*(v[575]/v[2261]+v[186]*v[604]);
+  v[688]=1e0*v[2268]*(v[574]/v[2261]+v[186]*v[603]);
+  v[687]=1e0*v[2268]*(v[573]/v[2261]+v[186]*v[601]);
+  v[685]=1e0*v[2268]*(v[545]/v[2261]+v[182]*v[610]);
+  v[684]=1e0*v[2268]*(v[544]/v[2261]+v[182]*v[609]);
+  v[683]=1e0*v[2268]*(v[543]/v[2261]+v[182]*v[608]);
+  v[682]=1e0*v[2268]*(v[542]/v[2261]+v[182]*v[607]);
+  v[681]=1e0*v[2268]*(v[541]/v[2261]+v[182]*v[606]);
+  v[680]=1e0*v[2268]*(v[540]/v[2261]+v[182]*v[605]);
+  v[679]=1e0*v[2268]*(v[539]/v[2261]+v[182]*v[604]);
+  v[678]=1e0*v[2268]*(v[538]/v[2261]+v[182]*v[603]);
+  v[677]=1e0*v[2268]*(v[537]/v[2261]+v[182]*v[601]);
+  v[675]=1e0*v[2268]*(v[590]/v[2261]+v[187]*v[610]);
+  v[674]=1e0*v[2268]*(v[589]/v[2261]+v[187]*v[609]);
+  v[673]=1e0*v[2268]*(v[588]/v[2261]+v[187]*v[608]);
+  v[672]=1e0*v[2268]*(v[587]/v[2261]+v[187]*v[607]);
+  v[671]=1e0*v[2268]*(v[586]/v[2261]+v[187]*v[606]);
+  v[670]=1e0*v[2268]*(v[585]/v[2261]+v[187]*v[605]);
+  v[669]=1e0*v[2268]*(v[584]/v[2261]+v[187]*v[604]);
+  v[668]=1e0*v[2268]*(v[583]/v[2261]+v[187]*v[603]);
+  v[667]=1e0*v[2268]*(v[582]/v[2261]+v[187]*v[601]);
+  MatrixXC1[0]=-(v[199]*v[726]);
+  MatrixXC1[1]=-(v[199]*v[716]);
+  MatrixXC1[2]=-(v[199]*v[706]);
+  MatrixXC1[3]=-(v[199]*v[696]);
+  MatrixXC1[4]=-(v[199]*v[686]);
+  MatrixXC1[5]=-(v[199]*v[676]);
   MatrixExponentialOMDMFS(MatrixXC1,&repC1,MatrixEXC1,MatrixDEXC1);
-  v[213]=MatrixDEXC1[0];
-  v[214]=MatrixDEXC1[1];
-  v[215]=MatrixDEXC1[2];
-  v[216]=MatrixDEXC1[3];
-  v[217]=MatrixDEXC1[4];
-  v[218]=MatrixDEXC1[5];
-  v[732]=v[218]*v[672]+2e0*v[217]*v[682]+v[216]*v[692]+2e0*v[215]*v[702]+2e0*\
-v[214]*v[712]
-   +v[213]*v[722];
-  v[731]=v[218]*v[671]+2e0*v[217]*v[681]+v[216]*v[691]+2e0*v[215]*v[701]+2e0*\
-v[214]*v[711]
-   +v[213]*v[721];
-  v[730]=v[218]*v[670]+2e0*v[217]*v[680]+v[216]*v[690]+2e0*v[215]*v[700]+2e0*\
-v[214]*v[710]
-   +v[213]*v[720];
-  v[729]=v[218]*v[669]+2e0*v[217]*v[679]+v[216]*v[689]+2e0*v[215]*v[699]+2e0*\
-v[214]*v[709]
-   +v[213]*v[719];
-  v[728]=v[218]*v[668]+2e0*v[217]*v[678]+v[216]*v[688]+2e0*v[215]*v[698]+2e0*\
-v[214]*v[708]
-   +v[213]*v[718];
-  v[727]=v[218]*v[667]+2e0*v[217]*v[677]+v[216]*v[687]+2e0*v[215]*v[697]+2e0*\
-v[214]*v[707]
-   +v[213]*v[717];
-  v[726]=v[218]*v[666]+2e0*v[217]*v[676]+v[216]*v[686]+2e0*v[215]*v[696]+2e0*\
-v[214]*v[706]
-   +v[213]*v[716];
-  v[725]=v[218]*v[665]+2e0*v[217]*v[675]+v[216]*v[685]+2e0*v[215]*v[695]+2e0*\
-v[214]*v[705]
-   +v[213]*v[715];
-  v[724]=v[218]*v[664]+2e0*v[217]*v[674]+v[216]*v[684]+2e0*v[215]*v[694]+2e0*\
-v[214]*v[704]
-   +v[213]*v[714];
-  v[723]=v[218]*v[663]+2e0*v[217]*v[673]+v[216]*v[683]+2e0*v[215]*v[693]+2e0*\
-v[214]*v[703]
-   +v[213]*v[713];
-  v[2263]=MatrixDEXC1[6]+v[216];
-  v[2262]=MatrixDEXC1[7]+v[217];
-  v[221]=MatrixDEXC1[8];
-  v[222]=MatrixDEXC1[9];
-  v[2261]=MatrixDEXC1[10]+v[222];
-  v[224]=MatrixDEXC1[11];
-  v[742]=v[224]*v[672]+v[2261]*v[682]+v[221]*v[692]+v[2262]*v[702]+v[2263]*v[\
-712]+v[214]*v[722];
-  v[741]=v[224]*v[671]+v[2261]*v[681]+v[221]*v[691]+v[2262]*v[701]+v[2263]*v[\
-711]+v[214]*v[721];
-  v[740]=v[224]*v[670]+v[2261]*v[680]+v[221]*v[690]+v[2262]*v[700]+v[2263]*v[\
-710]+v[214]*v[720];
-  v[739]=v[224]*v[669]+v[2261]*v[679]+v[221]*v[689]+v[2262]*v[699]+v[2263]*v[\
-709]+v[214]*v[719];
-  v[738]=v[224]*v[668]+v[2261]*v[678]+v[221]*v[688]+v[2262]*v[698]+v[2263]*v[\
-708]+v[214]*v[718];
-  v[737]=v[224]*v[667]+v[2261]*v[677]+v[221]*v[687]+v[2262]*v[697]+v[2263]*v[\
-707]+v[214]*v[717];
-  v[736]=v[224]*v[666]+v[2261]*v[676]+v[221]*v[686]+v[2262]*v[696]+v[2263]*v[\
-706]+v[214]*v[716];
-  v[735]=v[224]*v[665]+v[2261]*v[675]+v[221]*v[685]+v[2262]*v[695]+v[2263]*v[\
-705]+v[214]*v[715];
-  v[734]=v[224]*v[664]+v[2261]*v[674]+v[221]*v[684]+v[2262]*v[694]+v[2263]*v[\
-704]+v[214]*v[714];
-  v[733]=v[224]*v[663]+v[2261]*v[673]+v[221]*v[683]+v[2262]*v[693]+v[2263]*v[\
-703]+v[214]*v[713];
-  v[2265]=MatrixDEXC1[12]+v[218];
-  v[2264]=MatrixDEXC1[13]+v[224];
-  v[227]=MatrixDEXC1[14];
-  v[752]=v[227]*v[672]+v[2264]*v[682]+v[222]*v[692]+v[2265]*v[702]+v[2262]*v[\
-712]+v[215]*v[722];
+  v[217]=MatrixDEXC1[0];
+  v[218]=MatrixDEXC1[1];
+  v[219]=MatrixDEXC1[2];
+  v[220]=MatrixDEXC1[3];
+  v[221]=MatrixDEXC1[4];
+  v[222]=MatrixDEXC1[5];
+  v[736]=v[222]*v[676]+2e0*v[221]*v[686]+v[220]*v[696]+2e0*v[219]*v[706]+2e0*\
+v[218]*v[716]
+   +v[217]*v[726];
+  v[735]=v[222]*v[675]+2e0*v[221]*v[685]+v[220]*v[695]+2e0*v[219]*v[705]+2e0*\
+v[218]*v[715]
+   +v[217]*v[725];
+  v[734]=v[222]*v[674]+2e0*v[221]*v[684]+v[220]*v[694]+2e0*v[219]*v[704]+2e0*\
+v[218]*v[714]
+   +v[217]*v[724];
+  v[733]=v[222]*v[673]+2e0*v[221]*v[683]+v[220]*v[693]+2e0*v[219]*v[703]+2e0*\
+v[218]*v[713]
+   +v[217]*v[723];
+  v[732]=v[222]*v[672]+2e0*v[221]*v[682]+v[220]*v[692]+2e0*v[219]*v[702]+2e0*\
+v[218]*v[712]
+   +v[217]*v[722];
+  v[731]=v[222]*v[671]+2e0*v[221]*v[681]+v[220]*v[691]+2e0*v[219]*v[701]+2e0*\
+v[218]*v[711]
+   +v[217]*v[721];
+  v[730]=v[222]*v[670]+2e0*v[221]*v[680]+v[220]*v[690]+2e0*v[219]*v[700]+2e0*\
+v[218]*v[710]
+   +v[217]*v[720];
+  v[729]=v[222]*v[669]+2e0*v[221]*v[679]+v[220]*v[689]+2e0*v[219]*v[699]+2e0*\
+v[218]*v[709]
+   +v[217]*v[719];
+  v[728]=v[222]*v[668]+2e0*v[221]*v[678]+v[220]*v[688]+2e0*v[219]*v[698]+2e0*\
+v[218]*v[708]
+   +v[217]*v[718];
+  v[727]=v[222]*v[667]+2e0*v[221]*v[677]+v[220]*v[687]+2e0*v[219]*v[697]+2e0*\
+v[218]*v[707]
+   +v[217]*v[717];
+  v[2271]=MatrixDEXC1[6]+v[220];
+  v[2270]=MatrixDEXC1[7]+v[221];
+  v[225]=MatrixDEXC1[8];
+  v[226]=MatrixDEXC1[9];
+  v[2269]=MatrixDEXC1[10]+v[226];
+  v[228]=MatrixDEXC1[11];
+  v[746]=v[228]*v[676]+v[2269]*v[686]+v[225]*v[696]+v[2270]*v[706]+v[2271]*v[\
+716]+v[218]*v[726];
+  v[745]=v[228]*v[675]+v[2269]*v[685]+v[225]*v[695]+v[2270]*v[705]+v[2271]*v[\
+715]+v[218]*v[725];
+  v[744]=v[228]*v[674]+v[2269]*v[684]+v[225]*v[694]+v[2270]*v[704]+v[2271]*v[\
+714]+v[218]*v[724];
+  v[743]=v[228]*v[673]+v[2269]*v[683]+v[225]*v[693]+v[2270]*v[703]+v[2271]*v[\
+713]+v[218]*v[723];
+  v[742]=v[228]*v[672]+v[2269]*v[682]+v[225]*v[692]+v[2270]*v[702]+v[2271]*v[\
+712]+v[218]*v[722];
+  v[741]=v[228]*v[671]+v[2269]*v[681]+v[225]*v[691]+v[2270]*v[701]+v[2271]*v[\
+711]+v[218]*v[721];
+  v[740]=v[228]*v[670]+v[2269]*v[680]+v[225]*v[690]+v[2270]*v[700]+v[2271]*v[\
+710]+v[218]*v[720];
+  v[739]=v[228]*v[669]+v[2269]*v[679]+v[225]*v[689]+v[2270]*v[699]+v[2271]*v[\
+709]+v[218]*v[719];
+  v[738]=v[228]*v[668]+v[2269]*v[678]+v[225]*v[688]+v[2270]*v[698]+v[2271]*v[\
+708]+v[218]*v[718];
+  v[737]=v[228]*v[667]+v[2269]*v[677]+v[225]*v[687]+v[2270]*v[697]+v[2271]*v[\
+707]+v[218]*v[717];
+  v[2273]=MatrixDEXC1[12]+v[222];
+  v[2272]=MatrixDEXC1[13]+v[228];
+  v[231]=MatrixDEXC1[14];
+  v[756]=v[231]*v[676]+v[2272]*v[686]+v[226]*v[696]+v[2273]*v[706]+v[2270]*v[\
+716]+v[219]*v[726];
+  v[786]=F[0]*v[736]+F[3]*v[746]+F[6]*v[756];
+  v[776]=F[1]*v[736]+F[4]*v[746]+F[7]*v[756];
+  v[766]=F[2]*v[736]+F[5]*v[746]+F[8]*v[756];
+  v[886]=-(h[7]*v[766])-h[6]*v[776]-v[50]*v[786];
+  v[755]=v[231]*v[675]+v[2272]*v[685]+v[226]*v[695]+v[2273]*v[705]+v[2270]*v[\
+715]+v[219]*v[725];
+  v[785]=F[0]*v[735]+F[3]*v[745]+F[6]*v[755];
+  v[775]=F[1]*v[735]+F[4]*v[745]+F[7]*v[755];
+  v[765]=F[2]*v[735]+F[5]*v[745]+F[8]*v[755];
+  v[885]=-(h[7]*v[765])-h[6]*v[775]-v[50]*v[785];
+  v[754]=v[231]*v[674]+v[2272]*v[684]+v[226]*v[694]+v[2273]*v[704]+v[2270]*v[\
+714]+v[219]*v[724];
+  v[784]=F[0]*v[734]+F[3]*v[744]+F[6]*v[754];
+  v[774]=F[1]*v[734]+F[4]*v[744]+F[7]*v[754];
+  v[764]=F[2]*v[734]+F[5]*v[744]+F[8]*v[754];
+  v[884]=F[2]-h[7]*v[764]-h[6]*v[774]-v[50]*v[784];
+  v[753]=v[231]*v[673]+v[2272]*v[683]+v[226]*v[693]+v[2273]*v[703]+v[2270]*v[\
+713]+v[219]*v[723];
+  v[783]=F[0]*v[733]+F[3]*v[743]+F[6]*v[753];
+  v[773]=F[1]*v[733]+F[4]*v[743]+F[7]*v[753];
+  v[763]=F[2]*v[733]+F[5]*v[743]+F[8]*v[753];
+  v[883]=F[1]-h[7]*v[763]-h[6]*v[773]-v[50]*v[783];
+  v[752]=v[231]*v[672]+v[2272]*v[682]+v[226]*v[692]+v[2273]*v[702]+v[2270]*v[\
+712]+v[219]*v[722];
   v[782]=F[0]*v[732]+F[3]*v[742]+F[6]*v[752];
   v[772]=F[1]*v[732]+F[4]*v[742]+F[7]*v[752];
   v[762]=F[2]*v[732]+F[5]*v[742]+F[8]*v[752];
   v[882]=-(h[7]*v[762])-h[6]*v[772]-v[50]*v[782];
-  v[751]=v[227]*v[671]+v[2264]*v[681]+v[222]*v[691]+v[2265]*v[701]+v[2262]*v[\
-711]+v[215]*v[721];
+  v[751]=v[231]*v[671]+v[2272]*v[681]+v[226]*v[691]+v[2273]*v[701]+v[2270]*v[\
+711]+v[219]*v[721];
   v[781]=F[0]*v[731]+F[3]*v[741]+F[6]*v[751];
   v[771]=F[1]*v[731]+F[4]*v[741]+F[7]*v[751];
   v[761]=F[2]*v[731]+F[5]*v[741]+F[8]*v[751];
   v[881]=-(h[7]*v[761])-h[6]*v[771]-v[50]*v[781];
-  v[750]=v[227]*v[670]+v[2264]*v[680]+v[222]*v[690]+v[2265]*v[700]+v[2262]*v[\
-710]+v[215]*v[720];
+  v[750]=v[231]*v[670]+v[2272]*v[680]+v[226]*v[690]+v[2273]*v[700]+v[2270]*v[\
+710]+v[219]*v[720];
   v[780]=F[0]*v[730]+F[3]*v[740]+F[6]*v[750];
   v[770]=F[1]*v[730]+F[4]*v[740]+F[7]*v[750];
   v[760]=F[2]*v[730]+F[5]*v[740]+F[8]*v[750];
-  v[880]=F[2]-h[7]*v[760]-h[6]*v[770]-v[50]*v[780];
-  v[749]=v[227]*v[669]+v[2264]*v[679]+v[222]*v[689]+v[2265]*v[699]+v[2262]*v[\
-709]+v[215]*v[719];
+  v[880]=-(h[7]*v[760])-h[6]*v[770]-v[50]*v[780];
+  v[749]=v[231]*v[669]+v[2272]*v[679]+v[226]*v[689]+v[2273]*v[699]+v[2270]*v[\
+709]+v[219]*v[719];
   v[779]=F[0]*v[729]+F[3]*v[739]+F[6]*v[749];
   v[769]=F[1]*v[729]+F[4]*v[739]+F[7]*v[749];
   v[759]=F[2]*v[729]+F[5]*v[739]+F[8]*v[749];
-  v[879]=F[1]-h[7]*v[759]-h[6]*v[769]-v[50]*v[779];
-  v[748]=v[227]*v[668]+v[2264]*v[678]+v[222]*v[688]+v[2265]*v[698]+v[2262]*v[\
-708]+v[215]*v[718];
+  v[879]=-(h[7]*v[759])-h[6]*v[769]-v[50]*v[779];
+  v[748]=v[231]*v[668]+v[2272]*v[678]+v[226]*v[688]+v[2273]*v[698]+v[2270]*v[\
+708]+v[219]*v[718];
   v[778]=F[0]*v[728]+F[3]*v[738]+F[6]*v[748];
   v[768]=F[1]*v[728]+F[4]*v[738]+F[7]*v[748];
   v[758]=F[2]*v[728]+F[5]*v[738]+F[8]*v[748];
   v[878]=-(h[7]*v[758])-h[6]*v[768]-v[50]*v[778];
-  v[747]=v[227]*v[667]+v[2264]*v[677]+v[222]*v[687]+v[2265]*v[697]+v[2262]*v[\
-707]+v[215]*v[717];
+  v[747]=v[231]*v[667]+v[2272]*v[677]+v[226]*v[687]+v[2273]*v[697]+v[2270]*v[\
+707]+v[219]*v[717];
   v[777]=F[0]*v[727]+F[3]*v[737]+F[6]*v[747];
   v[767]=F[1]*v[727]+F[4]*v[737]+F[7]*v[747];
   v[757]=F[2]*v[727]+F[5]*v[737]+F[8]*v[747];
-  v[877]=-(h[7]*v[757])-h[6]*v[767]-v[50]*v[777];
-  v[746]=v[227]*v[666]+v[2264]*v[676]+v[222]*v[686]+v[2265]*v[696]+v[2262]*v[\
-706]+v[215]*v[716];
-  v[776]=F[0]*v[726]+F[3]*v[736]+F[6]*v[746];
-  v[766]=F[1]*v[726]+F[4]*v[736]+F[7]*v[746];
-  v[756]=F[2]*v[726]+F[5]*v[736]+F[8]*v[746];
-  v[876]=-(h[7]*v[756])-h[6]*v[766]-v[50]*v[776];
-  v[745]=v[227]*v[665]+v[2264]*v[675]+v[222]*v[685]+v[2265]*v[695]+v[2262]*v[\
-705]+v[215]*v[715];
-  v[775]=F[0]*v[725]+F[3]*v[735]+F[6]*v[745];
-  v[765]=F[1]*v[725]+F[4]*v[735]+F[7]*v[745];
-  v[755]=F[2]*v[725]+F[5]*v[735]+F[8]*v[745];
-  v[875]=-(h[7]*v[755])-h[6]*v[765]-v[50]*v[775];
-  v[744]=v[227]*v[664]+v[2264]*v[674]+v[222]*v[684]+v[2265]*v[694]+v[2262]*v[\
-704]+v[215]*v[714];
-  v[774]=F[0]*v[724]+F[3]*v[734]+F[6]*v[744];
-  v[764]=F[1]*v[724]+F[4]*v[734]+F[7]*v[744];
-  v[754]=F[2]*v[724]+F[5]*v[734]+F[8]*v[744];
-  v[874]=-(h[7]*v[754])-h[6]*v[764]-v[50]*v[774];
-  v[743]=v[227]*v[663]+v[2264]*v[673]+v[222]*v[683]+v[2265]*v[693]+v[2262]*v[\
-703]+v[215]*v[713];
-  v[773]=F[0]*v[723]+F[3]*v[733]+F[6]*v[743];
-  v[763]=F[1]*v[723]+F[4]*v[733]+F[7]*v[743];
-  v[753]=F[2]*v[723]+F[5]*v[733]+F[8]*v[743];
-  v[873]=F[0]-h[7]*v[753]-h[6]*v[763]-v[50]*v[773];
-  v[228]=MatrixDEXC1[15];
-  v[229]=MatrixDEXC1[16];
-  v[230]=MatrixDEXC1[17];
-  v[792]=v[230]*v[672]+2e0*v[229]*v[682]+v[228]*v[692]+2e0*v[222]*v[702]+2e0*\
-v[221]*v[712]
-   +v[216]*v[722];
-  v[791]=v[230]*v[671]+2e0*v[229]*v[681]+v[228]*v[691]+2e0*v[222]*v[701]+2e0*\
-v[221]*v[711]
-   +v[216]*v[721];
-  v[790]=v[230]*v[670]+2e0*v[229]*v[680]+v[228]*v[690]+2e0*v[222]*v[700]+2e0*\
-v[221]*v[710]
-   +v[216]*v[720];
-  v[789]=v[230]*v[669]+2e0*v[229]*v[679]+v[228]*v[689]+2e0*v[222]*v[699]+2e0*\
-v[221]*v[709]
-   +v[216]*v[719];
-  v[788]=v[230]*v[668]+2e0*v[229]*v[678]+v[228]*v[688]+2e0*v[222]*v[698]+2e0*\
-v[221]*v[708]
-   +v[216]*v[718];
-  v[787]=v[230]*v[667]+2e0*v[229]*v[677]+v[228]*v[687]+2e0*v[222]*v[697]+2e0*\
-v[221]*v[707]
-   +v[216]*v[717];
-  v[786]=v[230]*v[666]+2e0*v[229]*v[676]+v[228]*v[686]+2e0*v[222]*v[696]+2e0*\
-v[221]*v[706]
-   +v[216]*v[716];
-  v[785]=v[230]*v[665]+2e0*v[229]*v[675]+v[228]*v[685]+2e0*v[222]*v[695]+2e0*\
-v[221]*v[705]
-   +v[216]*v[715];
-  v[784]=v[230]*v[664]+2e0*v[229]*v[674]+v[228]*v[684]+2e0*v[222]*v[694]+2e0*\
-v[221]*v[704]
-   +v[216]*v[714];
-  v[783]=v[230]*v[663]+2e0*v[229]*v[673]+v[228]*v[683]+2e0*v[222]*v[693]+2e0*\
-v[221]*v[703]
-   +v[216]*v[713];
-  v[2266]=MatrixDEXC1[18]+v[230];
-  v[232]=MatrixDEXC1[19];
-  v[802]=v[232]*v[672]+v[2266]*v[682]+v[229]*v[692]+v[2264]*v[702]+v[2261]*v[\
-712]+v[217]*v[722];
+  v[877]=F[0]-h[7]*v[757]-h[6]*v[767]-v[50]*v[777];
+  v[232]=MatrixDEXC1[15];
+  v[233]=MatrixDEXC1[16];
+  v[234]=MatrixDEXC1[17];
+  v[796]=v[234]*v[676]+2e0*v[233]*v[686]+v[232]*v[696]+2e0*v[226]*v[706]+2e0*\
+v[225]*v[716]
+   +v[220]*v[726];
+  v[795]=v[234]*v[675]+2e0*v[233]*v[685]+v[232]*v[695]+2e0*v[226]*v[705]+2e0*\
+v[225]*v[715]
+   +v[220]*v[725];
+  v[794]=v[234]*v[674]+2e0*v[233]*v[684]+v[232]*v[694]+2e0*v[226]*v[704]+2e0*\
+v[225]*v[714]
+   +v[220]*v[724];
+  v[793]=v[234]*v[673]+2e0*v[233]*v[683]+v[232]*v[693]+2e0*v[226]*v[703]+2e0*\
+v[225]*v[713]
+   +v[220]*v[723];
+  v[792]=v[234]*v[672]+2e0*v[233]*v[682]+v[232]*v[692]+2e0*v[226]*v[702]+2e0*\
+v[225]*v[712]
+   +v[220]*v[722];
+  v[791]=v[234]*v[671]+2e0*v[233]*v[681]+v[232]*v[691]+2e0*v[226]*v[701]+2e0*\
+v[225]*v[711]
+   +v[220]*v[721];
+  v[790]=v[234]*v[670]+2e0*v[233]*v[680]+v[232]*v[690]+2e0*v[226]*v[700]+2e0*\
+v[225]*v[710]
+   +v[220]*v[720];
+  v[789]=v[234]*v[669]+2e0*v[233]*v[679]+v[232]*v[689]+2e0*v[226]*v[699]+2e0*\
+v[225]*v[709]
+   +v[220]*v[719];
+  v[788]=v[234]*v[668]+2e0*v[233]*v[678]+v[232]*v[688]+2e0*v[226]*v[698]+2e0*\
+v[225]*v[708]
+   +v[220]*v[718];
+  v[787]=v[234]*v[667]+2e0*v[233]*v[677]+v[232]*v[687]+2e0*v[226]*v[697]+2e0*\
+v[225]*v[707]
+   +v[220]*v[717];
+  v[2274]=MatrixDEXC1[18]+v[234];
+  v[236]=MatrixDEXC1[19];
+  v[806]=v[236]*v[676]+v[2274]*v[686]+v[233]*v[696]+v[2272]*v[706]+v[2269]*v[\
+716]+v[221]*v[726];
+  v[836]=F[0]*v[746]+F[3]*v[796]+F[6]*v[806];
+  v[826]=F[1]*v[746]+F[4]*v[796]+F[7]*v[806];
+  v[816]=F[2]*v[746]+F[5]*v[796]+F[8]*v[806];
+  v[805]=v[236]*v[675]+v[2274]*v[685]+v[233]*v[695]+v[2272]*v[705]+v[2269]*v[\
+715]+v[221]*v[725];
+  v[835]=F[0]*v[745]+F[3]*v[795]+F[6]*v[805];
+  v[825]=F[1]*v[745]+F[4]*v[795]+F[7]*v[805];
+  v[815]=F[2]*v[745]+F[5]*v[795]+F[8]*v[805];
+  v[804]=v[236]*v[674]+v[2274]*v[684]+v[233]*v[694]+v[2272]*v[704]+v[2269]*v[\
+714]+v[221]*v[724];
+  v[834]=F[0]*v[744]+F[3]*v[794]+F[6]*v[804];
+  v[824]=F[1]*v[744]+F[4]*v[794]+F[7]*v[804];
+  v[814]=F[2]*v[744]+F[5]*v[794]+F[8]*v[804];
+  v[803]=v[236]*v[673]+v[2274]*v[683]+v[233]*v[693]+v[2272]*v[703]+v[2269]*v[\
+713]+v[221]*v[723];
+  v[833]=F[0]*v[743]+F[3]*v[793]+F[6]*v[803];
+  v[823]=F[1]*v[743]+F[4]*v[793]+F[7]*v[803];
+  v[813]=F[2]*v[743]+F[5]*v[793]+F[8]*v[803];
+  v[802]=v[236]*v[672]+v[2274]*v[682]+v[233]*v[692]+v[2272]*v[702]+v[2269]*v[\
+712]+v[221]*v[722];
   v[832]=F[0]*v[742]+F[3]*v[792]+F[6]*v[802];
   v[822]=F[1]*v[742]+F[4]*v[792]+F[7]*v[802];
   v[812]=F[2]*v[742]+F[5]*v[792]+F[8]*v[802];
-  v[801]=v[232]*v[671]+v[2266]*v[681]+v[229]*v[691]+v[2264]*v[701]+v[2261]*v[\
-711]+v[217]*v[721];
+  v[801]=v[236]*v[671]+v[2274]*v[681]+v[233]*v[691]+v[2272]*v[701]+v[2269]*v[\
+711]+v[221]*v[721];
   v[831]=F[0]*v[741]+F[3]*v[791]+F[6]*v[801];
   v[821]=F[1]*v[741]+F[4]*v[791]+F[7]*v[801];
   v[811]=F[2]*v[741]+F[5]*v[791]+F[8]*v[801];
-  v[800]=v[232]*v[670]+v[2266]*v[680]+v[229]*v[690]+v[2264]*v[700]+v[2261]*v[\
-710]+v[217]*v[720];
+  v[800]=v[236]*v[670]+v[2274]*v[680]+v[233]*v[690]+v[2272]*v[700]+v[2269]*v[\
+710]+v[221]*v[720];
   v[830]=F[0]*v[740]+F[3]*v[790]+F[6]*v[800];
   v[820]=F[1]*v[740]+F[4]*v[790]+F[7]*v[800];
   v[810]=F[2]*v[740]+F[5]*v[790]+F[8]*v[800];
-  v[799]=v[232]*v[669]+v[2266]*v[679]+v[229]*v[689]+v[2264]*v[699]+v[2261]*v[\
-709]+v[217]*v[719];
+  v[799]=v[236]*v[669]+v[2274]*v[679]+v[233]*v[689]+v[2272]*v[699]+v[2269]*v[\
+709]+v[221]*v[719];
   v[829]=F[0]*v[739]+F[3]*v[789]+F[6]*v[799];
   v[819]=F[1]*v[739]+F[4]*v[789]+F[7]*v[799];
   v[809]=F[2]*v[739]+F[5]*v[789]+F[8]*v[799];
-  v[798]=v[232]*v[668]+v[2266]*v[678]+v[229]*v[688]+v[2264]*v[698]+v[2261]*v[\
-708]+v[217]*v[718];
+  v[798]=v[236]*v[668]+v[2274]*v[678]+v[233]*v[688]+v[2272]*v[698]+v[2269]*v[\
+708]+v[221]*v[718];
   v[828]=F[0]*v[738]+F[3]*v[788]+F[6]*v[798];
   v[818]=F[1]*v[738]+F[4]*v[788]+F[7]*v[798];
   v[808]=F[2]*v[738]+F[5]*v[788]+F[8]*v[798];
-  v[797]=v[232]*v[667]+v[2266]*v[677]+v[229]*v[687]+v[2264]*v[697]+v[2261]*v[\
-707]+v[217]*v[717];
+  v[797]=v[236]*v[667]+v[2274]*v[677]+v[233]*v[687]+v[2272]*v[697]+v[2269]*v[\
+707]+v[221]*v[717];
   v[827]=F[0]*v[737]+F[3]*v[787]+F[6]*v[797];
   v[817]=F[1]*v[737]+F[4]*v[787]+F[7]*v[797];
   v[807]=F[2]*v[737]+F[5]*v[787]+F[8]*v[797];
-  v[796]=v[232]*v[666]+v[2266]*v[676]+v[229]*v[686]+v[2264]*v[696]+v[2261]*v[\
-706]+v[217]*v[716];
-  v[826]=F[0]*v[736]+F[3]*v[786]+F[6]*v[796];
-  v[816]=F[1]*v[736]+F[4]*v[786]+F[7]*v[796];
-  v[806]=F[2]*v[736]+F[5]*v[786]+F[8]*v[796];
-  v[795]=v[232]*v[665]+v[2266]*v[675]+v[229]*v[685]+v[2264]*v[695]+v[2261]*v[\
-705]+v[217]*v[715];
-  v[825]=F[0]*v[735]+F[3]*v[785]+F[6]*v[795];
-  v[815]=F[1]*v[735]+F[4]*v[785]+F[7]*v[795];
-  v[805]=F[2]*v[735]+F[5]*v[785]+F[8]*v[795];
-  v[794]=v[232]*v[664]+v[2266]*v[674]+v[229]*v[684]+v[2264]*v[694]+v[2261]*v[\
-704]+v[217]*v[714];
-  v[824]=F[0]*v[734]+F[3]*v[784]+F[6]*v[794];
-  v[814]=F[1]*v[734]+F[4]*v[784]+F[7]*v[794];
-  v[804]=F[2]*v[734]+F[5]*v[784]+F[8]*v[794];
-  v[793]=v[232]*v[663]+v[2266]*v[673]+v[229]*v[683]+v[2264]*v[693]+v[2261]*v[\
-703]+v[217]*v[713];
-  v[823]=F[0]*v[733]+F[3]*v[783]+F[6]*v[793];
-  v[813]=F[1]*v[733]+F[4]*v[783]+F[7]*v[793];
-  v[803]=F[2]*v[733]+F[5]*v[783]+F[8]*v[793];
-  v[233]=MatrixDEXC1[20];
-  v[842]=v[233]*v[672]+2e0*v[232]*v[682]+v[230]*v[692]+2e0*v[227]*v[702]+2e0*\
-v[224]*v[712]
-   +v[218]*v[722];
+  v[237]=MatrixDEXC1[20];
+  v[846]=v[237]*v[676]+2e0*v[236]*v[686]+v[234]*v[696]+2e0*v[231]*v[706]+2e0*\
+v[228]*v[716]
+   +v[222]*v[726];
+  v[876]=F[0]*v[756]+F[3]*v[806]+F[6]*v[846];
+  v[866]=F[1]*v[756]+F[4]*v[806]+F[7]*v[846];
+  v[856]=F[2]*v[756]+F[5]*v[806]+F[8]*v[846];
+  v[845]=v[237]*v[675]+2e0*v[236]*v[685]+v[234]*v[695]+2e0*v[231]*v[705]+2e0*\
+v[228]*v[715]
+   +v[222]*v[725];
+  v[875]=F[0]*v[755]+F[3]*v[805]+F[6]*v[845];
+  v[865]=F[1]*v[755]+F[4]*v[805]+F[7]*v[845];
+  v[855]=F[2]*v[755]+F[5]*v[805]+F[8]*v[845];
+  v[844]=v[237]*v[674]+2e0*v[236]*v[684]+v[234]*v[694]+2e0*v[231]*v[704]+2e0*\
+v[228]*v[714]
+   +v[222]*v[724];
+  v[874]=F[0]*v[754]+F[3]*v[804]+F[6]*v[844];
+  v[864]=F[1]*v[754]+F[4]*v[804]+F[7]*v[844];
+  v[854]=F[2]*v[754]+F[5]*v[804]+F[8]*v[844];
+  v[843]=v[237]*v[673]+2e0*v[236]*v[683]+v[234]*v[693]+2e0*v[231]*v[703]+2e0*\
+v[228]*v[713]
+   +v[222]*v[723];
+  v[873]=F[0]*v[753]+F[3]*v[803]+F[6]*v[843];
+  v[863]=F[1]*v[753]+F[4]*v[803]+F[7]*v[843];
+  v[853]=F[2]*v[753]+F[5]*v[803]+F[8]*v[843];
+  v[842]=v[237]*v[672]+2e0*v[236]*v[682]+v[234]*v[692]+2e0*v[231]*v[702]+2e0*\
+v[228]*v[712]
+   +v[222]*v[722];
   v[872]=F[0]*v[752]+F[3]*v[802]+F[6]*v[842];
   v[862]=F[1]*v[752]+F[4]*v[802]+F[7]*v[842];
   v[852]=F[2]*v[752]+F[5]*v[802]+F[8]*v[842];
-  v[841]=v[233]*v[671]+2e0*v[232]*v[681]+v[230]*v[691]+2e0*v[227]*v[701]+2e0*\
-v[224]*v[711]
-   +v[218]*v[721];
+  v[841]=v[237]*v[671]+2e0*v[236]*v[681]+v[234]*v[691]+2e0*v[231]*v[701]+2e0*\
+v[228]*v[711]
+   +v[222]*v[721];
   v[871]=F[0]*v[751]+F[3]*v[801]+F[6]*v[841];
   v[861]=F[1]*v[751]+F[4]*v[801]+F[7]*v[841];
   v[851]=F[2]*v[751]+F[5]*v[801]+F[8]*v[841];
-  v[840]=v[233]*v[670]+2e0*v[232]*v[680]+v[230]*v[690]+2e0*v[227]*v[700]+2e0*\
-v[224]*v[710]
-   +v[218]*v[720];
+  v[840]=v[237]*v[670]+2e0*v[236]*v[680]+v[234]*v[690]+2e0*v[231]*v[700]+2e0*\
+v[228]*v[710]
+   +v[222]*v[720];
   v[870]=F[0]*v[750]+F[3]*v[800]+F[6]*v[840];
   v[860]=F[1]*v[750]+F[4]*v[800]+F[7]*v[840];
   v[850]=F[2]*v[750]+F[5]*v[800]+F[8]*v[840];
-  v[839]=v[233]*v[669]+2e0*v[232]*v[679]+v[230]*v[689]+2e0*v[227]*v[699]+2e0*\
-v[224]*v[709]
-   +v[218]*v[719];
+  v[839]=v[237]*v[669]+2e0*v[236]*v[679]+v[234]*v[689]+2e0*v[231]*v[699]+2e0*\
+v[228]*v[709]
+   +v[222]*v[719];
   v[869]=F[0]*v[749]+F[3]*v[799]+F[6]*v[839];
   v[859]=F[1]*v[749]+F[4]*v[799]+F[7]*v[839];
   v[849]=F[2]*v[749]+F[5]*v[799]+F[8]*v[839];
-  v[838]=v[233]*v[668]+2e0*v[232]*v[678]+v[230]*v[688]+2e0*v[227]*v[698]+2e0*\
-v[224]*v[708]
-   +v[218]*v[718];
+  v[838]=v[237]*v[668]+2e0*v[236]*v[678]+v[234]*v[688]+2e0*v[231]*v[698]+2e0*\
+v[228]*v[708]
+   +v[222]*v[718];
   v[868]=F[0]*v[748]+F[3]*v[798]+F[6]*v[838];
   v[858]=F[1]*v[748]+F[4]*v[798]+F[7]*v[838];
   v[848]=F[2]*v[748]+F[5]*v[798]+F[8]*v[838];
-  v[837]=v[233]*v[667]+2e0*v[232]*v[677]+v[230]*v[687]+2e0*v[227]*v[697]+2e0*\
-v[224]*v[707]
-   +v[218]*v[717];
+  v[837]=v[237]*v[667]+2e0*v[236]*v[677]+v[234]*v[687]+2e0*v[231]*v[697]+2e0*\
+v[228]*v[707]
+   +v[222]*v[717];
   v[867]=F[0]*v[747]+F[3]*v[797]+F[6]*v[837];
   v[857]=F[1]*v[747]+F[4]*v[797]+F[7]*v[837];
   v[847]=F[2]*v[747]+F[5]*v[797]+F[8]*v[837];
-  v[836]=v[233]*v[666]+2e0*v[232]*v[676]+v[230]*v[686]+2e0*v[227]*v[696]+2e0*\
-v[224]*v[706]
-   +v[218]*v[716];
-  v[866]=F[0]*v[746]+F[3]*v[796]+F[6]*v[836];
-  v[856]=F[1]*v[746]+F[4]*v[796]+F[7]*v[836];
-  v[846]=F[2]*v[746]+F[5]*v[796]+F[8]*v[836];
-  v[835]=v[233]*v[665]+2e0*v[232]*v[675]+v[230]*v[685]+2e0*v[227]*v[695]+2e0*\
-v[224]*v[705]
-   +v[218]*v[715];
-  v[865]=F[0]*v[745]+F[3]*v[795]+F[6]*v[835];
-  v[855]=F[1]*v[745]+F[4]*v[795]+F[7]*v[835];
-  v[845]=F[2]*v[745]+F[5]*v[795]+F[8]*v[835];
-  v[834]=v[233]*v[664]+2e0*v[232]*v[674]+v[230]*v[684]+2e0*v[227]*v[694]+2e0*\
-v[224]*v[704]
-   +v[218]*v[714];
-  v[864]=F[0]*v[744]+F[3]*v[794]+F[6]*v[834];
-  v[854]=F[1]*v[744]+F[4]*v[794]+F[7]*v[834];
-  v[844]=F[2]*v[744]+F[5]*v[794]+F[8]*v[834];
-  v[833]=v[233]*v[663]+2e0*v[232]*v[673]+v[230]*v[683]+2e0*v[227]*v[693]+2e0*\
-v[224]*v[703]
-   +v[218]*v[713];
-  v[863]=F[0]*v[743]+F[3]*v[793]+F[6]*v[833];
-  v[853]=F[1]*v[743]+F[4]*v[793]+F[7]*v[833];
-  v[843]=F[2]*v[743]+F[5]*v[793]+F[8]*v[833];
-  v[234]=MatrixEXC1[0];
-  v[235]=MatrixEXC1[1];
-  v[236]=MatrixEXC1[2];
-  v[248]=F[2]*v[234]+F[5]*v[235]+F[8]*v[236];
-  v[247]=F[1]*v[234]+F[4]*v[235]+F[7]*v[236];
-  v[246]=F[0]*v[234]+F[3]*v[235]+F[6]*v[236];
-  v[238]=MatrixEXC1[3];
-  v[239]=MatrixEXC1[4];
-  v[253]=F[2]*v[235]+F[5]*v[238]+F[8]*v[239];
-  v[252]=F[1]*v[235]+F[4]*v[238]+F[7]*v[239];
-  v[251]=F[0]*v[235]+F[3]*v[238]+F[6]*v[239];
-  v[242]=MatrixEXC1[5];
-  v[258]=F[2]*v[236]+F[5]*v[239]+F[8]*v[242];
-  v[257]=F[1]*v[236]+F[4]*v[239]+F[7]*v[242];
-  v[256]=F[0]*v[236]+F[3]*v[239]+F[6]*v[242];
-  v[243]=v[131]-h[6]*v[247]-h[7]*v[248]-v[246]*v[50];
-  v[963]=-((h[8]*v[803]+v[52]*v[813]+h[3]*v[823])/v[873]);
-  v[964]=F[4]-h[8]*v[804]-v[52]*v[814]-h[3]*v[824]-v[874]*v[963];
-  v[965]=-(h[8]*v[805])-v[52]*v[815]-h[3]*v[825]-v[875]*v[963];
-  v[966]=F[3]-h[8]*v[806]-v[52]*v[816]-h[3]*v[826]-v[876]*v[963];
-  v[967]=-(h[8]*v[807])-v[52]*v[817]-h[3]*v[827]-v[877]*v[963];
-  v[968]=-(h[8]*v[808])-v[52]*v[818]-h[3]*v[828]-v[878]*v[963];
-  v[969]=-(h[8]*v[809])-v[52]*v[819]-h[3]*v[829]-v[879]*v[963];
-  v[970]=-(h[8]*v[810])-v[52]*v[820]-h[3]*v[830]-v[880]*v[963];
-  v[971]=F[5]-h[8]*v[811]-v[52]*v[821]-h[3]*v[831]-v[881]*v[963];
-  v[972]=-(h[8]*v[812])-v[52]*v[822]-h[3]*v[832]-v[882]*v[963];
-  v[973]=-((v[54]*v[843]+h[5]*v[853]+h[4]*v[863])/v[873]);
-  v[974]=-((h[8]*v[753]+v[52]*v[763]+h[3]*v[773])/v[873]);
-  v[975]=-((v[54]*v[753]+h[5]*v[763]+h[4]*v[773])/v[873]);
-  v[976]=-((v[54]*v[803]+h[5]*v[813]+h[4]*v[823])/v[873]);
-  v[977]=-((-F[3]+h[7]*v[803]+h[6]*v[813]+v[50]*v[823])/v[873]);
-  v[978]=-((-F[6]+h[7]*v[843]+h[6]*v[853]+v[50]*v[863])/v[873]);
-  v[979]=-((h[8]*v[843]+v[52]*v[853]+h[3]*v[863])/v[873]);
-  v[980]=v[588]/v[873];
-  v[981]=-((v[54]*v[844]+h[5]*v[854]+h[4]*v[864]+v[874]*v[973])/v[964]);
-  v[982]=F[8]-v[54]*v[845]-h[5]*v[855]-h[4]*v[865]-v[875]*v[973]-v[965]*v[981];
-  v[983]=-(v[54]*v[846])-h[5]*v[856]-h[4]*v[866]-v[876]*v[973]-v[966]*v[981];
-  v[984]=F[6]-v[54]*v[847]-h[5]*v[857]-h[4]*v[867]-v[877]*v[973]-v[967]*v[981];
-  v[985]=F[7]-v[54]*v[848]-h[5]*v[858]-h[4]*v[868]-v[878]*v[973]-v[968]*v[981];
-  v[986]=-(v[54]*v[849])-h[5]*v[859]-h[4]*v[869]-v[879]*v[973]-v[969]*v[981];
-  v[987]=-(v[54]*v[850])-h[5]*v[860]-h[4]*v[870]-v[880]*v[973]-v[970]*v[981];
-  v[988]=-(v[54]*v[851])-h[5]*v[861]-h[4]*v[871]-v[881]*v[973]-v[971]*v[981];
-  v[989]=-(v[54]*v[852])-h[5]*v[862]-h[4]*v[872]-v[882]*v[973]-v[972]*v[981];
-  v[990]=-((-F[1]+h[8]*v[754]+v[52]*v[764]+h[3]*v[774]+v[874]*v[974])/v[964]);\
+  v[238]=MatrixEXC1[0];
+  v[239]=MatrixEXC1[1];
+  v[240]=MatrixEXC1[2];
+  v[252]=F[2]*v[238]+F[5]*v[239]+F[8]*v[240];
+  v[251]=F[1]*v[238]+F[4]*v[239]+F[7]*v[240];
+  v[250]=F[0]*v[238]+F[3]*v[239]+F[6]*v[240];
+  v[242]=MatrixEXC1[3];
+  v[243]=MatrixEXC1[4];
+  v[257]=F[2]*v[239]+F[5]*v[242]+F[8]*v[243];
+  v[256]=F[1]*v[239]+F[4]*v[242]+F[7]*v[243];
+  v[255]=F[0]*v[239]+F[3]*v[242]+F[6]*v[243];
+  v[246]=MatrixEXC1[5];
+  v[262]=F[2]*v[240]+F[5]*v[243]+F[8]*v[246];
+  v[261]=F[1]*v[240]+F[4]*v[243]+F[7]*v[246];
+  v[260]=F[0]*v[240]+F[3]*v[243]+F[6]*v[246];
+  v[247]=v[135]-h[6]*v[251]-h[7]*v[252]-v[250]*v[50];
+  v[967]=-((h[8]*v[807]+v[52]*v[817]+h[3]*v[827])/v[877]);
+  v[968]=F[4]-h[8]*v[808]-v[52]*v[818]-h[3]*v[828]-v[878]*v[967];
+  v[969]=-(h[8]*v[809])-v[52]*v[819]-h[3]*v[829]-v[879]*v[967];
+  v[970]=F[3]-h[8]*v[810]-v[52]*v[820]-h[3]*v[830]-v[880]*v[967];
+  v[971]=-(h[8]*v[811])-v[52]*v[821]-h[3]*v[831]-v[881]*v[967];
+  v[972]=-(h[8]*v[812])-v[52]*v[822]-h[3]*v[832]-v[882]*v[967];
+  v[973]=-(h[8]*v[813])-v[52]*v[823]-h[3]*v[833]-v[883]*v[967];
+  v[974]=-(h[8]*v[814])-v[52]*v[824]-h[3]*v[834]-v[884]*v[967];
+  v[975]=F[5]-h[8]*v[815]-v[52]*v[825]-h[3]*v[835]-v[885]*v[967];
+  v[976]=-(h[8]*v[816])-v[52]*v[826]-h[3]*v[836]-v[886]*v[967];
+  v[977]=-((v[54]*v[847]+h[5]*v[857]+h[4]*v[867])/v[877]);
+  v[978]=-((h[8]*v[757]+v[52]*v[767]+h[3]*v[777])/v[877]);
+  v[979]=-((v[54]*v[757]+h[5]*v[767]+h[4]*v[777])/v[877]);
+  v[980]=-((v[54]*v[807]+h[5]*v[817]+h[4]*v[827])/v[877]);
+  v[981]=-((-F[3]+h[7]*v[807]+h[6]*v[817]+v[50]*v[827])/v[877]);
+  v[982]=-((-F[6]+h[7]*v[847]+h[6]*v[857]+v[50]*v[867])/v[877]);
+  v[983]=-((h[8]*v[847]+v[52]*v[857]+h[3]*v[867])/v[877]);
+  v[984]=v[592]/v[877];
+  v[985]=-((v[54]*v[848]+h[5]*v[858]+h[4]*v[868]+v[878]*v[977])/v[968]);
+  v[986]=F[8]-v[54]*v[849]-h[5]*v[859]-h[4]*v[869]-v[879]*v[977]-v[969]*v[985];
+  v[987]=-(v[54]*v[850])-h[5]*v[860]-h[4]*v[870]-v[880]*v[977]-v[970]*v[985];
+  v[988]=F[6]-v[54]*v[851]-h[5]*v[861]-h[4]*v[871]-v[881]*v[977]-v[971]*v[985];
+  v[989]=F[7]-v[54]*v[852]-h[5]*v[862]-h[4]*v[872]-v[882]*v[977]-v[972]*v[985];
+  v[990]=-(v[54]*v[853])-h[5]*v[863]-h[4]*v[873]-v[883]*v[977]-v[973]*v[985];
+  v[991]=-(v[54]*v[854])-h[5]*v[864]-h[4]*v[874]-v[884]*v[977]-v[974]*v[985];
+  v[992]=-(v[54]*v[855])-h[5]*v[865]-h[4]*v[875]-v[885]*v[977]-v[975]*v[985];
+  v[993]=-(v[54]*v[856])-h[5]*v[866]-h[4]*v[876]-v[886]*v[977]-v[976]*v[985];
+  v[994]=-((-F[1]+h[8]*v[758]+v[52]*v[768]+h[3]*v[778]+v[878]*v[978])/v[968]);\
 
-  v[991]=-((v[54]*v[754]+h[5]*v[764]+h[4]*v[774]+v[874]*v[975])/v[964]);
-  v[992]=-((v[54]*v[804]+h[5]*v[814]+h[4]*v[824]+v[874]*v[976])/v[964]);
-  v[993]=-((h[7]*v[804]+h[6]*v[814]+v[50]*v[824]+v[874]*v[977])/v[964]);
-  v[994]=-((h[7]*v[844]+h[6]*v[854]+v[50]*v[864]+v[874]*v[978])/v[964]);
-  v[995]=-((-F[7]+h[8]*v[844]+v[52]*v[854]+h[3]*v[864]+v[874]*v[979])/v[964]);\
+  v[995]=-((v[54]*v[758]+h[5]*v[768]+h[4]*v[778]+v[878]*v[979])/v[968]);
+  v[996]=-((v[54]*v[808]+h[5]*v[818]+h[4]*v[828]+v[878]*v[980])/v[968]);
+  v[997]=-((h[7]*v[808]+h[6]*v[818]+v[50]*v[828]+v[878]*v[981])/v[968]);
+  v[998]=-((h[7]*v[848]+h[6]*v[858]+v[50]*v[868]+v[878]*v[982])/v[968]);
+  v[999]=-((-F[7]+h[8]*v[848]+v[52]*v[858]+h[3]*v[868]+v[878]*v[983])/v[968]);\
 
-  v[996]=(v[589]-v[874]*v[980])/v[964];
-  v[997]=-((h[8]*v[755]+v[52]*v[765]+h[3]*v[775]+v[875]*v[974]+v[965]*v[990])/\
-v[982]);
-  v[998]=F[0]-h[8]*v[756]-v[52]*v[766]-h[3]*v[776]-v[876]*v[974]-v[966]*v[990]\
--v[983]*v[997];
-  v[999]=-(h[8]*v[757])-v[52]*v[767]-h[3]*v[777]-v[877]*v[974]-v[967]*v[990]-\
-v[984]*v[997];
-  v[1000]=-(h[8]*v[758])-v[52]*v[768]-h[3]*v[778]-v[878]*v[974]-v[968]*v[990]-\
-v[985]*v[997];
-  v[1001]=-(h[8]*v[759])-v[52]*v[769]-h[3]*v[779]-v[879]*v[974]-v[969]*v[990]-\
-v[986]*v[997];
-  v[1002]=-(h[8]*v[760])-v[52]*v[770]-h[3]*v[780]-v[880]*v[974]-v[970]*v[990]-\
-v[987]*v[997];
-  v[1003]=F[2]-h[8]*v[761]-v[52]*v[771]-h[3]*v[781]-v[881]*v[974]-v[971]*v[\
-990]-v[988]*v[997];
-  v[1004]=-(h[8]*v[762])-v[52]*v[772]-h[3]*v[782]-v[882]*v[974]-v[972]*v[990]-\
-v[989]*v[997];
-  v[1005]=-((-F[2]+v[54]*v[755]+h[5]*v[765]+h[4]*v[775]+v[875]*v[975]+v[965]*\
-v[991])/v[982]);
-  v[1006]=-((-F[5]+v[54]*v[805]+h[5]*v[815]+h[4]*v[825]+v[875]*v[976]+v[965]*\
-v[992])/v[982]);
-  v[1007]=-((h[7]*v[805]+h[6]*v[815]+v[50]*v[825]+v[875]*v[977]+v[965]*v[993])\
-/v[982]);
-  v[1008]=-((h[7]*v[845]+h[6]*v[855]+v[50]*v[865]+v[875]*v[978]+v[965]*v[994])\
-/v[982]);
-  v[1009]=-((h[8]*v[845]+v[52]*v[855]+h[3]*v[865]+v[875]*v[979]+v[965]*v[995])\
-/v[982]);
-  v[1010]=(v[590]-v[875]*v[980]-v[965]*v[996])/v[982];
-  v[1011]=-((v[54]*v[756]+h[5]*v[766]+h[4]*v[776]+v[876]*v[975]+v[1005]*v[983]\
-+v[966]*v[991])
-   /v[998]);
-  v[1012]=F[0]-v[54]*v[757]-h[5]*v[767]-h[4]*v[777]-v[877]*v[975]-v[1005]*v[\
-984]-v[967]*v[991]
-   -v[1011]*v[999];
-  v[1013]=F[1]-v[1000]*v[1011]-v[54]*v[758]-h[5]*v[768]-h[4]*v[778]-v[878]*v[\
-975]-v[1005]*v[985]
-   -v[968]*v[991];
-  v[1014]=-(v[1001]*v[1011])-v[54]*v[759]-h[5]*v[769]-h[4]*v[779]-v[879]*v[\
-975]-v[1005]*v[986]
-   -v[969]*v[991];
-  v[1015]=-(v[1002]*v[1011])-v[54]*v[760]-h[5]*v[770]-h[4]*v[780]-v[880]*v[\
-975]-v[1005]*v[987]
-   -v[970]*v[991];
-  v[1016]=-(v[1003]*v[1011])-v[54]*v[761]-h[5]*v[771]-h[4]*v[781]-v[881]*v[\
-975]-v[1005]*v[988]
-   -v[971]*v[991];
-  v[1017]=-(v[1004]*v[1011])-v[54]*v[762]-h[5]*v[772]-h[4]*v[782]-v[882]*v[\
-975]-v[1005]*v[989]
-   -v[972]*v[991];
-  v[1018]=-((v[54]*v[806]+h[5]*v[816]+h[4]*v[826]+v[876]*v[976]+v[1006]*v[983]\
-+v[966]*v[992])
-   /v[998]);
-  v[1019]=-((h[7]*v[806]+h[6]*v[816]+v[50]*v[826]+v[876]*v[977]+v[1007]*v[983]\
-+v[966]*v[993])
-   /v[998]);
-  v[1020]=-((h[7]*v[846]+h[6]*v[856]+v[50]*v[866]+v[876]*v[978]+v[1008]*v[983]\
-+v[966]*v[994])
-   /v[998]);
-  v[1021]=-((-F[6]+h[8]*v[846]+v[52]*v[856]+h[3]*v[866]+v[876]*v[979]+v[1009]*\
-v[983]+v[966]*v[995])
-   /v[998]);
-  v[1022]=-((-v[591]+v[876]*v[980]+v[1010]*v[983]+v[966]*v[996])/v[998]);
-  v[1023]=-((-F[3]+v[54]*v[807]+h[5]*v[817]+h[4]*v[827]+v[877]*v[976]+v[1006]*\
-v[984]+v[967]*v[992]
-   +v[1018]*v[999])/v[1012]);
-  v[1024]=F[4]-v[1000]*v[1018]-v[1013]*v[1023]-v[54]*v[808]-h[5]*v[818]-h[4]*\
-v[828]-v[878]*v[976]
-   -v[1006]*v[985]-v[968]*v[992];
-  v[1025]=-(v[1001]*v[1018])-v[1014]*v[1023]-v[54]*v[809]-h[5]*v[819]-h[4]*v[\
-829]-v[879]*v[976]
-   -v[1006]*v[986]-v[969]*v[992];
-  v[1026]=-(v[1002]*v[1018])-v[1015]*v[1023]-v[54]*v[810]-h[5]*v[820]-h[4]*v[\
-830]-v[880]*v[976]
-   -v[1006]*v[987]-v[970]*v[992];
-  v[1027]=-(v[1003]*v[1018])-v[1016]*v[1023]-v[54]*v[811]-h[5]*v[821]-h[4]*v[\
-831]-v[881]*v[976]
-   -v[1006]*v[988]-v[971]*v[992];
-  v[1028]=-(v[1004]*v[1018])-v[1017]*v[1023]-v[54]*v[812]-h[5]*v[822]-h[4]*v[\
-832]-v[882]*v[976]
-   -v[1006]*v[989]-v[972]*v[992];
-  v[1029]=-((h[7]*v[807]+h[6]*v[817]+v[50]*v[827]+v[877]*v[977]+v[1007]*v[984]\
-+v[967]*v[993]
-   +v[1019]*v[999])/v[1012]);
-  v[1030]=-((h[7]*v[847]+h[6]*v[857]+v[50]*v[867]+v[877]*v[978]+v[1008]*v[984]\
-+v[967]*v[994]
-   +v[1020]*v[999])/v[1012]);
-  v[1031]=-((h[8]*v[847]+v[52]*v[857]+h[3]*v[867]+v[877]*v[979]+v[1009]*v[984]\
-+v[967]*v[995]
-   +v[1021]*v[999])/v[1012]);
-  v[1032]=-((-v[592]+v[877]*v[980]+v[1010]*v[984]+v[967]*v[996]+v[1022]*v[999]\
-)/v[1012]);
-  v[1033]=-((v[1000]*v[1019]+v[1013]*v[1029]+h[7]*v[808]+h[6]*v[818]+v[50]*v[\
-828]+v[878]*v[977]
-   +v[1007]*v[985]+v[968]*v[993])/v[1024]);
-  v[1034]=F[4]-v[1001]*v[1019]-v[1014]*v[1029]-v[1025]*v[1033]-h[7]*v[809]-h[\
-6]*v[819]-v[50]*v[829]
-   -v[879]*v[977]-v[1007]*v[986]-v[969]*v[993];
-  v[1035]=F[5]-v[1002]*v[1019]-v[1015]*v[1029]-v[1026]*v[1033]-h[7]*v[810]-h[\
-6]*v[820]-v[50]*v[830]
-   -v[880]*v[977]-v[1007]*v[987]-v[970]*v[993];
-  v[1036]=-(v[1003]*v[1019])-v[1016]*v[1029]-v[1027]*v[1033]-h[7]*v[811]-h[6]*\
-v[821]-v[50]*v[831]
-   -v[881]*v[977]-v[1007]*v[988]-v[971]*v[993];
-  v[1037]=-(v[1004]*v[1019])-v[1017]*v[1029]-v[1028]*v[1033]-h[7]*v[812]-h[6]*\
-v[822]-v[50]*v[832]
-   -v[882]*v[977]-v[1007]*v[989]-v[972]*v[993];
-  v[1038]=-((v[1000]*v[1020]+v[1013]*v[1030]+h[7]*v[848]+h[6]*v[858]+v[50]*v[\
-868]+v[878]*v[978]
-   +v[1008]*v[985]+v[968]*v[994])/v[1024]);
-  v[1039]=-((v[1000]*v[1021]+v[1013]*v[1031]+h[8]*v[848]+v[52]*v[858]+h[3]*v[\
-868]+v[878]*v[979]
-   +v[1009]*v[985]+v[968]*v[995])/v[1024]);
-  v[1040]=-((v[1000]*v[1022]+v[1013]*v[1032]-v[593]+v[878]*v[980]+v[1010]*v[\
-985]+v[968]*v[996])
-   /v[1024]);
-  v[1041]=-((-F[7]+v[1001]*v[1020]+v[1014]*v[1030]+v[1025]*v[1038]+h[7]*v[849]\
-+h[6]*v[859]
-   +v[50]*v[869]+v[879]*v[978]+v[1008]*v[986]+v[969]*v[994])/v[1034]);
-  v[1042]=F[8]-v[1002]*v[1020]-v[1015]*v[1030]-v[1026]*v[1038]-v[1035]*v[1041]\
--h[7]*v[850]
-   -h[6]*v[860]-v[50]*v[870]-v[880]*v[978]-v[1008]*v[987]-v[970]*v[994];
-  v[1043]=-(v[1003]*v[1020])-v[1016]*v[1030]-v[1027]*v[1038]-v[1036]*v[1041]-\
-h[7]*v[851]
-   -h[6]*v[861]-v[50]*v[871]-v[881]*v[978]-v[1008]*v[988]-v[971]*v[994];
-  v[1044]=-(v[1004]*v[1020])-v[1017]*v[1030]-v[1028]*v[1038]-v[1037]*v[1041]-\
-h[7]*v[852]
-   -h[6]*v[862]-v[50]*v[872]-v[882]*v[978]-v[1008]*v[989]-v[972]*v[994];
-  v[1045]=-((v[1001]*v[1021]+v[1014]*v[1031]+v[1025]*v[1039]+h[8]*v[849]+v[52]\
-*v[859]+h[3]*v[869]
-   +v[879]*v[979]+v[1009]*v[986]+v[969]*v[995])/v[1034]);
-  v[1046]=-((v[1001]*v[1022]+v[1014]*v[1032]+v[1025]*v[1040]-v[594]+v[879]*v[\
-980]+v[1010]*v[986]
-   +v[969]*v[996])/v[1034]);
-  v[1047]=-((v[1002]*v[1021]+v[1015]*v[1031]+v[1026]*v[1039]+v[1035]*v[1045]+\
-h[8]*v[850]
-   +v[52]*v[860]+h[3]*v[870]+v[880]*v[979]+v[1009]*v[987]+v[970]*v[995])/v[\
-1042]);
-  v[1048]=F[8]-v[1003]*v[1021]-v[1016]*v[1031]-v[1027]*v[1039]-v[1036]*v[1045]\
--v[1043]*v[1047]
-   -h[8]*v[851]-v[52]*v[861]-h[3]*v[871]-v[881]*v[979]-v[1009]*v[988]-v[971]*\
-v[995];
-  v[1049]=-(v[1004]*v[1021])-v[1017]*v[1031]-v[1028]*v[1039]-v[1037]*v[1045]-\
-v[1044]*v[1047]
-   -h[8]*v[852]-v[52]*v[862]-h[3]*v[872]-v[882]*v[979]-v[1009]*v[989]-v[972]*\
-v[995];
-  v[1050]=-((v[1002]*v[1022]+v[1015]*v[1032]+v[1026]*v[1040]+v[1035]*v[1046]-\
-v[595]+v[880]*v[980]
-   +v[1010]*v[987]+v[970]*v[996])/v[1042]);
-  v[1051]=-((v[1003]*v[1022]+v[1016]*v[1032]+v[1027]*v[1040]+v[1036]*v[1046]+\
-v[1043]*v[1050]-v[596]
-   +v[881]*v[980]+v[1010]*v[988]+v[971]*v[996])/v[1048]);
-  v[1053]=-v[137]+h[3]*v[251]+h[8]*v[253]+v[252]*v[52]+v[243]*v[963];
-  v[1054]=-v[142]+h[4]*v[256]+h[5]*v[257]+v[258]*v[54]+v[243]*v[973]-v[1053]*\
-v[981];
-  v[1055]=-v[132]+h[3]*v[246]+h[8]*v[248]+v[247]*v[52]+v[243]*v[974]-v[1053]*\
-v[990]-v[1054]*v[997];
-  v[1056]=-(v[1005]*v[1054])-v[1011]*v[1055]-v[133]+h[4]*v[246]+h[5]*v[247]+v[\
-248]*v[54]
-   +v[243]*v[975]-v[1053]*v[991];
-  v[1057]=-(v[1006]*v[1054])-v[1018]*v[1055]-v[1023]*v[1056]-v[139]+h[4]*v[\
-251]+h[5]*v[252]
-   +v[253]*v[54]+v[243]*v[976]-v[1053]*v[992];
-  v[1058]=-(v[1007]*v[1054])-v[1019]*v[1055]-v[1029]*v[1056]-v[1033]*v[1057]-\
-v[135]+h[6]*v[252]
-   +h[7]*v[253]+v[251]*v[50]+v[243]*v[977]-v[1053]*v[993];
-  v[1059]=-(v[1008]*v[1054])-v[1020]*v[1055]-v[1030]*v[1056]-v[1038]*v[1057]-\
-v[1041]*v[1058]-v[140]
-   +h[6]*v[257]+h[7]*v[258]+v[256]*v[50]+v[243]*v[978]-v[1053]*v[994];
-  v[1060]=-(v[1009]*v[1054])-v[1021]*v[1055]-v[1031]*v[1056]-v[1039]*v[1057]-\
-v[1045]*v[1058]
-   -v[1047]*v[1059]-v[141]+h[3]*v[256]+h[8]*v[258]+v[257]*v[52]+v[243]*v[979]-\
-v[1053]*v[995];
-  v[1061]=(-d[3]+v[1010]*v[1054]+v[1022]*v[1055]+v[1032]*v[1056]+v[1040]*v[\
-1057]+v[1046]*v[1058]
-   +v[1050]*v[1059]+v[1051]*v[1060]-d[4]*v[128]+v[2253]+v[2267]-v[243]*v[980]+\
-v[1053]*v[996])/(d[4]
-   +v[1004]*v[1022]+v[1017]*v[1032]+v[1028]*v[1040]+v[1037]*v[1046]+v[1044]*v[\
-1050]+v[1049]*v[1051]
-   +d[5]*v[2267]+v[882]*v[980]+v[1010]*v[989]+v[972]*v[996]);
-  v[1062]=(v[1060]-v[1049]*v[1061])/v[1048];
-  v[1063]=(v[1059]-v[1044]*v[1061]-v[1043]*v[1062])/v[1042];
-  v[1064]=-((-v[1058]+v[1037]*v[1061]+v[1036]*v[1062]+v[1035]*v[1063])/v[1034]\
+  v[1000]=(v[593]-v[878]*v[984])/v[968];
+  v[1001]=-((h[8]*v[759]+v[52]*v[769]+h[3]*v[779]+v[879]*v[978]+v[969]*v[994])\
+/v[986]);
+  v[1002]=F[0]-h[8]*v[760]-v[52]*v[770]-h[3]*v[780]-v[880]*v[978]-v[1001]*v[\
+987]-v[970]*v[994];
+  v[1003]=-(h[8]*v[761])-v[52]*v[771]-h[3]*v[781]-v[881]*v[978]-v[1001]*v[988]\
+-v[971]*v[994];
+  v[1004]=-(h[8]*v[762])-v[52]*v[772]-h[3]*v[782]-v[882]*v[978]-v[1001]*v[989]\
+-v[972]*v[994];
+  v[1005]=-(h[8]*v[763])-v[52]*v[773]-h[3]*v[783]-v[883]*v[978]-v[1001]*v[990]\
+-v[973]*v[994];
+  v[1006]=-(h[8]*v[764])-v[52]*v[774]-h[3]*v[784]-v[884]*v[978]-v[1001]*v[991]\
+-v[974]*v[994];
+  v[1007]=F[2]-h[8]*v[765]-v[52]*v[775]-h[3]*v[785]-v[885]*v[978]-v[1001]*v[\
+992]-v[975]*v[994];
+  v[1008]=-(h[8]*v[766])-v[52]*v[776]-h[3]*v[786]-v[886]*v[978]-v[1001]*v[993]\
+-v[976]*v[994];
+  v[1009]=-((-F[2]+v[54]*v[759]+h[5]*v[769]+h[4]*v[779]+v[879]*v[979]+v[969]*\
+v[995])/v[986]);
+  v[1010]=-((-F[5]+v[54]*v[809]+h[5]*v[819]+h[4]*v[829]+v[879]*v[980]+v[969]*\
+v[996])/v[986]);
+  v[1011]=-((h[7]*v[809]+h[6]*v[819]+v[50]*v[829]+v[879]*v[981]+v[969]*v[997])\
+/v[986]);
+  v[1012]=-((h[7]*v[849]+h[6]*v[859]+v[50]*v[869]+v[879]*v[982]+v[969]*v[998])\
+/v[986]);
+  v[1013]=-((h[8]*v[849]+v[52]*v[859]+h[3]*v[869]+v[879]*v[983]+v[969]*v[999])\
+/v[986]);
+  v[1014]=(v[594]-v[1000]*v[969]-v[879]*v[984])/v[986];
+  v[1015]=-((v[54]*v[760]+h[5]*v[770]+h[4]*v[780]+v[880]*v[979]+v[1009]*v[987]\
++v[970]*v[995])
+   /v[1002]);
+  v[1016]=F[0]-v[1003]*v[1015]-v[54]*v[761]-h[5]*v[771]-h[4]*v[781]-v[881]*v[\
+979]-v[1009]*v[988]
+   -v[971]*v[995];
+  v[1017]=F[1]-v[1004]*v[1015]-v[54]*v[762]-h[5]*v[772]-h[4]*v[782]-v[882]*v[\
+979]-v[1009]*v[989]
+   -v[972]*v[995];
+  v[1018]=-(v[1005]*v[1015])-v[54]*v[763]-h[5]*v[773]-h[4]*v[783]-v[883]*v[\
+979]-v[1009]*v[990]
+   -v[973]*v[995];
+  v[1019]=-(v[1006]*v[1015])-v[54]*v[764]-h[5]*v[774]-h[4]*v[784]-v[884]*v[\
+979]-v[1009]*v[991]
+   -v[974]*v[995];
+  v[1020]=-(v[1007]*v[1015])-v[54]*v[765]-h[5]*v[775]-h[4]*v[785]-v[885]*v[\
+979]-v[1009]*v[992]
+   -v[975]*v[995];
+  v[1021]=-(v[1008]*v[1015])-v[54]*v[766]-h[5]*v[776]-h[4]*v[786]-v[886]*v[\
+979]-v[1009]*v[993]
+   -v[976]*v[995];
+  v[1022]=-((v[54]*v[810]+h[5]*v[820]+h[4]*v[830]+v[880]*v[980]+v[1010]*v[987]\
++v[970]*v[996])
+   /v[1002]);
+  v[1023]=-((h[7]*v[810]+h[6]*v[820]+v[50]*v[830]+v[880]*v[981]+v[1011]*v[987]\
++v[970]*v[997])
+   /v[1002]);
+  v[1024]=-((h[7]*v[850]+h[6]*v[860]+v[50]*v[870]+v[880]*v[982]+v[1012]*v[987]\
++v[970]*v[998])
+   /v[1002]);
+  v[1025]=-((-F[6]+h[8]*v[850]+v[52]*v[860]+h[3]*v[870]+v[880]*v[983]+v[1013]*\
+v[987]+v[970]*v[999])
+   /v[1002]);
+  v[1026]=-((-v[595]+v[1000]*v[970]+v[880]*v[984]+v[1014]*v[987])/v[1002]);
+  v[1027]=-((-F[3]+v[1003]*v[1022]+v[54]*v[811]+h[5]*v[821]+h[4]*v[831]+v[881]\
+*v[980]
+   +v[1010]*v[988]+v[971]*v[996])/v[1016]);
+  v[1028]=F[4]-v[1004]*v[1022]-v[1017]*v[1027]-v[54]*v[812]-h[5]*v[822]-h[4]*\
+v[832]-v[882]*v[980]
+   -v[1010]*v[989]-v[972]*v[996];
+  v[1029]=-(v[1005]*v[1022])-v[1018]*v[1027]-v[54]*v[813]-h[5]*v[823]-h[4]*v[\
+833]-v[883]*v[980]
+   -v[1010]*v[990]-v[973]*v[996];
+  v[1030]=-(v[1006]*v[1022])-v[1019]*v[1027]-v[54]*v[814]-h[5]*v[824]-h[4]*v[\
+834]-v[884]*v[980]
+   -v[1010]*v[991]-v[974]*v[996];
+  v[1031]=-(v[1007]*v[1022])-v[1020]*v[1027]-v[54]*v[815]-h[5]*v[825]-h[4]*v[\
+835]-v[885]*v[980]
+   -v[1010]*v[992]-v[975]*v[996];
+  v[1032]=-(v[1008]*v[1022])-v[1021]*v[1027]-v[54]*v[816]-h[5]*v[826]-h[4]*v[\
+836]-v[886]*v[980]
+   -v[1010]*v[993]-v[976]*v[996];
+  v[1033]=-((v[1003]*v[1023]+h[7]*v[811]+h[6]*v[821]+v[50]*v[831]+v[881]*v[\
+981]+v[1011]*v[988]
+   +v[971]*v[997])/v[1016]);
+  v[1034]=-((v[1003]*v[1024]+h[7]*v[851]+h[6]*v[861]+v[50]*v[871]+v[881]*v[\
+982]+v[1012]*v[988]
+   +v[971]*v[998])/v[1016]);
+  v[1035]=-((v[1003]*v[1025]+h[8]*v[851]+v[52]*v[861]+h[3]*v[871]+v[881]*v[\
+983]+v[1013]*v[988]
+   +v[971]*v[999])/v[1016]);
+  v[1036]=-((v[1003]*v[1026]-v[596]+v[1000]*v[971]+v[881]*v[984]+v[1014]*v[\
+988])/v[1016]);
+  v[1037]=-((v[1004]*v[1023]+v[1017]*v[1033]+h[7]*v[812]+h[6]*v[822]+v[50]*v[\
+832]+v[882]*v[981]
+   +v[1011]*v[989]+v[972]*v[997])/v[1028]);
+  v[1038]=F[4]-v[1005]*v[1023]-v[1018]*v[1033]-v[1029]*v[1037]-h[7]*v[813]-h[\
+6]*v[823]-v[50]*v[833]
+   -v[883]*v[981]-v[1011]*v[990]-v[973]*v[997];
+  v[1039]=F[5]-v[1006]*v[1023]-v[1019]*v[1033]-v[1030]*v[1037]-h[7]*v[814]-h[\
+6]*v[824]-v[50]*v[834]
+   -v[884]*v[981]-v[1011]*v[991]-v[974]*v[997];
+  v[1040]=-(v[1007]*v[1023])-v[1020]*v[1033]-v[1031]*v[1037]-h[7]*v[815]-h[6]*\
+v[825]-v[50]*v[835]
+   -v[885]*v[981]-v[1011]*v[992]-v[975]*v[997];
+  v[1041]=-(v[1008]*v[1023])-v[1021]*v[1033]-v[1032]*v[1037]-h[7]*v[816]-h[6]*\
+v[826]-v[50]*v[836]
+   -v[886]*v[981]-v[1011]*v[993]-v[976]*v[997];
+  v[1042]=-((v[1004]*v[1024]+v[1017]*v[1034]+h[7]*v[852]+h[6]*v[862]+v[50]*v[\
+872]+v[882]*v[982]
+   +v[1012]*v[989]+v[972]*v[998])/v[1028]);
+  v[1043]=-((v[1004]*v[1025]+v[1017]*v[1035]+h[8]*v[852]+v[52]*v[862]+h[3]*v[\
+872]+v[882]*v[983]
+   +v[1013]*v[989]+v[972]*v[999])/v[1028]);
+  v[1044]=-((v[1004]*v[1026]+v[1017]*v[1036]-v[597]+v[1000]*v[972]+v[882]*v[\
+984]+v[1014]*v[989])
+   /v[1028]);
+  v[1045]=-((-F[7]+v[1005]*v[1024]+v[1018]*v[1034]+v[1029]*v[1042]+h[7]*v[853]\
++h[6]*v[863]
+   +v[50]*v[873]+v[883]*v[982]+v[1012]*v[990]+v[973]*v[998])/v[1038]);
+  v[1046]=F[8]-v[1006]*v[1024]-v[1019]*v[1034]-v[1030]*v[1042]-v[1039]*v[1045]\
+-h[7]*v[854]
+   -h[6]*v[864]-v[50]*v[874]-v[884]*v[982]-v[1012]*v[991]-v[974]*v[998];
+  v[1047]=-(v[1007]*v[1024])-v[1020]*v[1034]-v[1031]*v[1042]-v[1040]*v[1045]-\
+h[7]*v[855]
+   -h[6]*v[865]-v[50]*v[875]-v[885]*v[982]-v[1012]*v[992]-v[975]*v[998];
+  v[1048]=-(v[1008]*v[1024])-v[1021]*v[1034]-v[1032]*v[1042]-v[1041]*v[1045]-\
+h[7]*v[856]
+   -h[6]*v[866]-v[50]*v[876]-v[886]*v[982]-v[1012]*v[993]-v[976]*v[998];
+  v[1049]=-((v[1005]*v[1025]+v[1018]*v[1035]+v[1029]*v[1043]+h[8]*v[853]+v[52]\
+*v[863]+h[3]*v[873]
+   +v[883]*v[983]+v[1013]*v[990]+v[973]*v[999])/v[1038]);
+  v[1050]=-((v[1005]*v[1026]+v[1018]*v[1036]+v[1029]*v[1044]-v[598]+v[1000]*v[\
+973]+v[883]*v[984]
+   +v[1014]*v[990])/v[1038]);
+  v[1051]=-((v[1006]*v[1025]+v[1019]*v[1035]+v[1030]*v[1043]+v[1039]*v[1049]+\
+h[8]*v[854]
+   +v[52]*v[864]+h[3]*v[874]+v[884]*v[983]+v[1013]*v[991]+v[974]*v[999])/v[\
+1046]);
+  v[1052]=F[8]-v[1007]*v[1025]-v[1020]*v[1035]-v[1031]*v[1043]-v[1040]*v[1049]\
+-v[1047]*v[1051]
+   -h[8]*v[855]-v[52]*v[865]-h[3]*v[875]-v[885]*v[983]-v[1013]*v[992]-v[975]*\
+v[999];
+  v[1053]=-(v[1008]*v[1025])-v[1021]*v[1035]-v[1032]*v[1043]-v[1041]*v[1049]-\
+v[1048]*v[1051]
+   -h[8]*v[856]-v[52]*v[866]-h[3]*v[876]-v[886]*v[983]-v[1013]*v[993]-v[976]*\
+v[999];
+  v[1054]=-((v[1006]*v[1026]+v[1019]*v[1036]+v[1030]*v[1044]+v[1039]*v[1050]-\
+v[599]+v[1000]*v[974]
+   +v[884]*v[984]+v[1014]*v[991])/v[1046]);
+  v[1055]=-((v[1007]*v[1026]+v[1020]*v[1036]+v[1031]*v[1044]+v[1040]*v[1050]+\
+v[1047]*v[1054]-v[600]
+   +v[1000]*v[975]+v[885]*v[984]+v[1014]*v[992])/v[1052]);
+  v[1057]=-v[141]+h[3]*v[255]+h[8]*v[257]+v[256]*v[52]+v[247]*v[967];
+  v[1058]=-v[146]+h[4]*v[260]+h[5]*v[261]+v[262]*v[54]+v[247]*v[977]-v[1057]*\
+v[985];
+  v[1059]=-(v[1001]*v[1058])-v[136]+h[3]*v[250]+h[8]*v[252]+v[251]*v[52]+v[\
+247]*v[978]
+   -v[1057]*v[994];
+  v[1060]=-(v[1009]*v[1058])-v[1015]*v[1059]-v[137]+h[4]*v[250]+h[5]*v[251]+v[\
+252]*v[54]
+   +v[247]*v[979]-v[1057]*v[995];
+  v[1061]=-(v[1010]*v[1058])-v[1022]*v[1059]-v[1027]*v[1060]-v[143]+h[4]*v[\
+255]+h[5]*v[256]
+   +v[257]*v[54]+v[247]*v[980]-v[1057]*v[996];
+  v[1062]=-(v[1011]*v[1058])-v[1023]*v[1059]-v[1033]*v[1060]-v[1037]*v[1061]-\
+v[139]+h[6]*v[256]
+   +h[7]*v[257]+v[255]*v[50]+v[247]*v[981]-v[1057]*v[997];
+  v[1063]=-(v[1012]*v[1058])-v[1024]*v[1059]-v[1034]*v[1060]-v[1042]*v[1061]-\
+v[1045]*v[1062]-v[144]
+   +h[6]*v[261]+h[7]*v[262]+v[260]*v[50]+v[247]*v[982]-v[1057]*v[998];
+  v[1064]=-(v[1013]*v[1058])-v[1025]*v[1059]-v[1035]*v[1060]-v[1043]*v[1061]-\
+v[1049]*v[1062]
+   -v[1051]*v[1063]-v[145]+h[3]*v[260]+h[8]*v[262]+v[261]*v[52]+v[247]*v[983]-\
+v[1057]*v[999];
+  v[1065]=(-d[3]+v[1000]*v[1057]+v[1014]*v[1058]+v[1026]*v[1059]+v[1036]*v[\
+1060]+v[1044]*v[1061]
+   +v[1050]*v[1062]+v[1054]*v[1063]+v[1055]*v[1064]-d[4]*v[132]+v[2261]+v[\
+2275]-v[247]*v[984])/(d[4]
+   +v[1008]*v[1026]+v[1021]*v[1036]+v[1032]*v[1044]+v[1041]*v[1050]+v[1048]*v[\
+1054]+v[1053]*v[1055]
+   +d[5]*v[2275]+v[1000]*v[976]+v[886]*v[984]+v[1014]*v[993]);
+  v[1066]=(v[1064]-v[1053]*v[1065])/v[1052];
+  v[1067]=(v[1063]-v[1048]*v[1065]-v[1047]*v[1066])/v[1046];
+  v[1068]=-((-v[1062]+v[1041]*v[1065]+v[1040]*v[1066]+v[1039]*v[1067])/v[1038]\
 );
-  v[1065]=-((-v[1057]+v[1028]*v[1061]+v[1027]*v[1062]+v[1026]*v[1063]+v[1025]*\
-v[1064])/v[1024]);
-  v[1066]=-((-v[1056]+v[1017]*v[1061]+v[1016]*v[1062]+v[1015]*v[1063]+v[1014]*\
-v[1064]
-   +v[1013]*v[1065])/v[1012]);
-  v[1067]=-((-v[1055]+v[1004]*v[1061]+v[1003]*v[1062]+v[1002]*v[1063]+v[1001]*\
-v[1064]
-   +v[1000]*v[1065]+v[1066]*v[999])/v[998]);
-  v[1068]=-((-v[1054]+v[1067]*v[983]+v[1066]*v[984]+v[1065]*v[985]+v[1064]*v[\
-986]+v[1063]*v[987]
-   +v[1062]*v[988]+v[1061]*v[989])/v[982]);
-  v[1069]=-((-v[1053]+v[1068]*v[965]+v[1067]*v[966]+v[1066]*v[967]+v[1065]*v[\
-968]+v[1064]*v[969]
-   +v[1063]*v[970]+v[1062]*v[971]+v[1061]*v[972])/v[964]);
-  v[1070]=-((v[243]+v[1069]*v[874]+v[1068]*v[875]+v[1067]*v[876]+v[1066]*v[\
-877]+v[1065]*v[878]
-   +v[1064]*v[879]+v[1063]*v[880]+v[1062]*v[881]+v[1061]*v[882])/v[873]);
-  v[119]=v[1070]+v[119];
-  v[120]=v[1069]+v[120];
-  v[121]=v[1068]+v[121];
-  v[122]=v[1067]+v[122];
-  v[123]=v[1066]+v[123];
-  v[124]=v[1065]+v[124];
-  v[125]=v[1064]+v[125];
-  v[126]=v[1063]+v[126];
-  v[127]=v[1062]+v[127];
-  v[128]=v[1061]+v[128];
-  if(sqrt((v[1061]*v[1061])+(v[1062]*v[1062])+(v[1063]*v[1063])+(v[1064]*v[\
-1064])+(v[1065]*v[1065])
-   +(v[1066]*v[1066])+(v[1067]*v[1067])+(v[1068]*v[1068])+(v[1069]*v[1069])+(\
-v[1070]*v[1070])
+  v[1069]=-((-v[1061]+v[1032]*v[1065]+v[1031]*v[1066]+v[1030]*v[1067]+v[1029]*\
+v[1068])/v[1028]);
+  v[1070]=-((-v[1060]+v[1021]*v[1065]+v[1020]*v[1066]+v[1019]*v[1067]+v[1018]*\
+v[1068]
+   +v[1017]*v[1069])/v[1016]);
+  v[1071]=-((-v[1059]+v[1008]*v[1065]+v[1007]*v[1066]+v[1006]*v[1067]+v[1005]*\
+v[1068]
+   +v[1004]*v[1069]+v[1003]*v[1070])/v[1002]);
+  v[1072]=-((-v[1058]+v[1071]*v[987]+v[1070]*v[988]+v[1069]*v[989]+v[1068]*v[\
+990]+v[1067]*v[991]
+   +v[1066]*v[992]+v[1065]*v[993])/v[986]);
+  v[1073]=-((-v[1057]+v[1072]*v[969]+v[1071]*v[970]+v[1070]*v[971]+v[1069]*v[\
+972]+v[1068]*v[973]
+   +v[1067]*v[974]+v[1066]*v[975]+v[1065]*v[976])/v[968]);
+  v[1074]=-((v[247]+v[1073]*v[878]+v[1072]*v[879]+v[1071]*v[880]+v[1070]*v[\
+881]+v[1069]*v[882]
+   +v[1068]*v[883]+v[1067]*v[884]+v[1066]*v[885]+v[1065]*v[886])/v[877]);
+  v[123]=v[1074]+v[123];
+  v[124]=v[1073]+v[124];
+  v[125]=v[1072]+v[125];
+  v[126]=v[1071]+v[126];
+  v[127]=v[1070]+v[127];
+  v[128]=v[1069]+v[128];
+  v[129]=v[1068]+v[129];
+  v[130]=v[1067]+v[130];
+  v[131]=v[1066]+v[131];
+  v[132]=v[1065]+v[132];
+  if(sqrt((v[1065]*v[1065])+(v[1066]*v[1066])+(v[1067]*v[1067])+(v[1068]*v[\
+1068])+(v[1069]*v[1069])
+   +(v[1070]*v[1070])+(v[1071]*v[1071])+(v[1072]*v[1072])+(v[1073]*v[1073])+(\
+v[1074]*v[1074])
    )<0.1e-13){
    if (debugaceroutine) std::cout << \"   iteration converged!\"<< std::endl;
-   if (debugaceroutine) std::cout << \"   iteration : \"<<i130<< std::endl;
+   if (debugaceroutine) std::cout << \"   iteration : \"<<i134<< std::endl;
    if (debugplastic) std::cout << \"   iteration converged!\"<< std::endl;
-   if (debugplastic) std::cout << \"   iteration : \"<<i130<< std::endl;
+   if (debugplastic) std::cout << \"   iteration : \"<<i134<< std::endl;
+   AdditionalData[1]=0e0;
+   AdditionalData[2]=i134;
    break;
   } else {
   };
-  if(i130==29){
+  if(i134==50){
    if (debugaceroutine) std::cout << \"   iteration diverged!!!!\" << \
 std::endl;
    if (debugplastic) std::cout << \"   iteration diverged!!!!\" << std::endl;
+   AdditionalData[1]=1000e0;
+   AdditionalData[2]=i134;
   } else {
   };
  };/* end for */
- v[106]=v[119];
- v[107]=v[120];
- v[108]=v[121];
- v[109]=v[122];
- v[110]=v[123];
- v[111]=v[124];
- v[112]=v[125];
- v[113]=v[126];
- v[114]=v[127];
- v[115]=v[128];
+ v[109]=v[123];
+ v[110]=v[124];
+ v[111]=v[125];
+ v[112]=v[126];
+ v[113]=v[127];
+ v[114]=v[128];
+ v[115]=v[129];
+ v[116]=v[130];
+ v[117]=v[131];
+ v[118]=v[132];
 };
-v[2123]=1e0+v[108];
-v[2121]=1e0+v[107];
-v[2119]=1e0+v[106];
-v[2116]=F[1]*v[112]+F[2]*v[113]+F[0]*v[2119];
-v[2117]=F[0]*v[109]+F[2]*v[114]+F[1]*v[2121];
-v[2118]=F[0]*v[110]+F[1]*v[111]+F[2]*v[2123];
-v[2120]=F[4]*v[112]+F[5]*v[113]+F[3]*v[2119];
-v[2122]=F[3]*v[109]+F[5]*v[114]+F[4]*v[2121];
-v[2124]=F[3]*v[110]+F[4]*v[111]+F[5]*v[2123];
-v[2125]=F[7]*v[112]+F[8]*v[113]+F[6]*v[2119];
-v[2126]=F[6]*v[109]+F[8]*v[114]+F[7]*v[2121];
-v[2127]=F[6]*v[110]+F[7]*v[111]+F[8]*v[2123];
-v[2128]=(v[2116]*v[2116])+(v[2120]*v[2120])+(v[2125]*v[2125]);
-v[2129]=v[2116]*v[2117]+v[2120]*v[2122]+v[2125]*v[2126];
-v[2142]=(v[2129]*v[2129]);
-v[2130]=v[2116]*v[2118]+v[2120]*v[2124]+v[2125]*v[2127];
-v[2144]=(v[2130]*v[2130]);
-v[2131]=(v[2117]*v[2117])+(v[2122]*v[2122])+(v[2126]*v[2126]);
-v[2132]=v[2117]*v[2118]+v[2122]*v[2124]+v[2126]*v[2127];
-v[2138]=2e0*v[2130]*v[2132];
-v[2133]=(v[2118]*v[2118])+(v[2124]*v[2124])+(v[2127]*v[2127]);
-v[2268]=-(v[2132]*v[2132])+v[2131]*v[2133];
-v[2137]=v[152]+v[153]/(4e0*(v[2129]*v[2138]-v[2133]*v[2142]-v[2131]*v[2144]+v[\
-2128]*v[2268]));
-v[2151]=v[2137]*v[2268]+v[73];
-v[2150]=v[2137]*(v[2128]*v[2133]-v[2144])+v[73];
-v[2149]=v[2137]*(v[2128]*v[2131]-v[2142])+v[73];
-v[2163]=2e0*(v[2129]*v[2130]-v[2128]*v[2132])*v[2137];
-v[2165]=(-2e0*v[2130]*v[2131]+2e0*v[2129]*v[2132])*v[2137];
-v[2166]=v[2137]*(-2e0*v[2129]*v[2133]+v[2138]);
-v[2167]=2e0*v[2127]*v[2149]+v[2126]*v[2163]+v[2125]*v[2165];
-v[2168]=2e0*v[2124]*v[2149]+v[2122]*v[2163]+v[2120]*v[2165];
-v[2169]=2e0*v[2118]*v[2149]+v[2117]*v[2163]+v[2116]*v[2165];
-v[2170]=2e0*v[2126]*v[2150]+v[2127]*v[2163]+v[2125]*v[2166];
-v[2171]=2e0*v[2122]*v[2150]+v[2124]*v[2163]+v[2120]*v[2166];
-v[2172]=2e0*v[2117]*v[2150]+v[2118]*v[2163]+v[2116]*v[2166];
-v[2173]=2e0*v[2125]*v[2151]+v[2127]*v[2165]+v[2126]*v[2166];
-v[2174]=2e0*v[2120]*v[2151]+v[2124]*v[2165]+v[2122]*v[2166];
-v[2175]=2e0*v[2116]*v[2151]+v[2118]*v[2165]+v[2117]*v[2166];
-b2185=b103;
-v[2186]=v[110]*v[2169]+v[109]*v[2172]+v[2119]*v[2175];
-v[2187]=v[111]*v[2169]+v[2121]*v[2172]+v[112]*v[2175];
-v[2188]=v[2123]*v[2169]+v[114]*v[2172]+v[113]*v[2175];
-v[2270]=(F[6]*v[2186]+F[7]*v[2187]+F[8]*v[2188])*v[2198];
-v[2269]=(F[3]*v[2186]+F[4]*v[2187]+F[5]*v[2188])*v[2198];
-v[2189]=v[110]*v[2168]+v[109]*v[2171]+v[2119]*v[2174];
-v[2190]=v[111]*v[2168]+v[2121]*v[2171]+v[112]*v[2174];
-v[2191]=v[2123]*v[2168]+v[114]*v[2171]+v[113]*v[2174];
-v[2271]=(F[6]*v[2189]+F[7]*v[2190]+F[8]*v[2191])*v[2198];
-if (debugaceroutine) std::cout << \"Final MisesTau:\" << v[2253]<< std::endl;
-if (debugplastic) std::cout << \"Final MisesTau:\" << v[2253]<< std::endl;
-Sig[0]=(F[0]*v[2186]+F[1]*v[2187]+F[2]*v[2188])*v[2198];
-Sig[1]=v[2269];
-Sig[2]=v[2270];
-Sig[3]=v[2269];
-Sig[4]=(F[3]*v[2189]+F[4]*v[2190]+F[5]*v[2191])*v[2198];
-Sig[5]=v[2271];
-Sig[6]=v[2270];
-Sig[7]=v[2271];
-Sig[8]=(F[7]*(v[111]*v[2167]+v[2121]*v[2170]+v[112]*v[2173])+F[8]*(v[2123]*v[\
-2167]+v[114]*v[2170]
- +v[113]*v[2173])+F[6]*(v[110]*v[2167]+v[109]*v[2170]+v[2119]*v[2173]))*v[\
-2198];
-h[0]=v[106];
-h[1]=v[107];
-h[2]=v[108];
-h[3]=v[109];
-h[4]=v[110];
-h[5]=v[111];
-h[6]=v[112];
-h[7]=v[113];
-h[8]=v[114];
-h[9]=v[115];
+v[2131]=1e0+v[111];
+v[2129]=1e0+v[110];
+v[2127]=1e0+v[109];
+v[2124]=F[1]*v[115]+F[2]*v[116]+F[0]*v[2127];
+v[2284]=(v[2124]*v[2124]);
+v[2125]=F[0]*v[112]+F[2]*v[117]+F[1]*v[2129];
+v[2283]=(v[2125]*v[2125]);
+v[2126]=F[0]*v[113]+F[1]*v[114]+F[2]*v[2131];
+v[2282]=(v[2126]*v[2126]);
+v[2280]=v[2124]*v[2126];
+v[2128]=F[4]*v[115]+F[5]*v[116]+F[3]*v[2127];
+v[2130]=F[3]*v[112]+F[5]*v[117]+F[4]*v[2129];
+v[2132]=F[3]*v[113]+F[4]*v[114]+F[5]*v[2131];
+v[2133]=F[7]*v[115]+F[8]*v[116]+F[6]*v[2127];
+v[2134]=F[6]*v[112]+F[8]*v[117]+F[7]*v[2129];
+v[2135]=F[6]*v[113]+F[7]*v[114]+F[8]*v[2131];
+v[2136]=(v[2128]*v[2128])+(v[2133]*v[2133])+v[2284];
+v[2137]=v[2124]*v[2125]+v[2128]*v[2130]+v[2133]*v[2134];
+v[2150]=(v[2137]*v[2137]);
+v[2138]=v[2128]*v[2132]+v[2133]*v[2135]+v[2280];
+v[2278]=2e0*v[2138];
+v[2152]=(v[2138]*v[2138]);
+v[2139]=(v[2130]*v[2130])+(v[2134]*v[2134])+v[2283];
+v[2140]=v[2125]*v[2126]+v[2130]*v[2132]+v[2134]*v[2135];
+v[2276]=2e0*v[2140];
+v[2146]=v[2138]*v[2276];
+v[2141]=(v[2132]*v[2132])+(v[2135]*v[2135])+v[2282];
+v[2277]=-(v[2140]*v[2140])+v[2139]*v[2141];
+v[2145]=v[156]+v[157]/(4e0*(v[2137]*v[2146]-v[2141]*v[2150]-v[2139]*v[2152]+v[\
+2136]*v[2277]));
+v[2159]=v[2145]*v[2277]+v[73];
+v[2290]=v[2128]*v[2159];
+v[2289]=v[2133]*v[2159];
+v[2158]=v[2145]*(v[2136]*v[2141]-v[2152])+v[73];
+v[2288]=v[2130]*v[2158];
+v[2287]=v[2134]*v[2158];
+v[2157]=v[2145]*(v[2136]*v[2139]-v[2150])+v[73];
+v[2286]=v[2132]*v[2157];
+v[2285]=v[2135]*v[2157];
+v[2147]=(v[2125]*v[2145])/2e0;
+v[2148]=-2e0*v[2136]*v[2140]+v[2137]*v[2278];
+v[2156]=(v[2145]*v[2148])/2e0;
+v[2149]=(v[2145]*(v[2137]*v[2276]-v[2139]*v[2278]))/2e0;
+v[2166]=v[2133]*v[2149]+v[2134]*v[2156]+v[2285];
+v[2162]=v[2128]*v[2149]+v[2130]*v[2156]+v[2286];
+v[2151]=-2e0*v[2137]*v[2141]+v[2146];
+v[2155]=(v[2145]*v[2151])/2e0;
+v[2168]=v[2135]*v[2149]+v[2134]*v[2155]+v[2289];
+v[2167]=v[2133]*v[2155]+v[2135]*v[2156]+v[2287];
+v[2164]=v[2132]*v[2149]+v[2130]*v[2155]+v[2290];
+v[2163]=v[2128]*v[2155]+v[2132]*v[2156]+v[2288];
+v[2154]=2e0*(2e0*v[2126]*v[2147]*v[2148]+2e0*v[2124]*v[2147]*v[2151]+2e0*v[\
+2149]*v[2280]
+ +v[2157]*v[2282]+v[2158]*v[2283]+v[2159]*v[2284]);
+v[2160]=2e0*(v[2126]*v[2162]+v[2125]*v[2163]+v[2124]*v[2164]);
+v[2161]=2e0*(v[2126]*v[2166]+v[2125]*v[2167]+v[2124]*v[2168]);
+v[2165]=2e0*(v[2132]*v[2162]+v[2130]*v[2163]+v[2128]*v[2164]);
+v[2170]=2e0*(v[2135]*v[2166]+v[2134]*v[2167]+v[2133]*v[2168]);
+v[2172]=(-v[2154]-v[2165]-v[2170])/3e0;
+v[2175]=sqrt(0.15e1*(2e0*(v[2160]*v[2160])+2e0*(v[2161]*v[2161])+8e0*Power(v[\
+2132]*v[2166]
+ +v[2130]*v[2167]+v[2128]*v[2168],2)+Power(v[2154]+v[2172],2)+Power(v[2165]+v[\
+2172],2)+Power(v[2170]
+ +v[2172],2)));
+v[2178]=2e0*v[2156];
+v[2180]=2e0*v[2149];
+v[2181]=2e0*v[2155];
+v[2182]=v[2134]*v[2178]+v[2133]*v[2180]+2e0*v[2285];
+v[2183]=v[2130]*v[2178]+v[2128]*v[2180]+2e0*v[2286];
+v[2184]=2e0*v[2126]*v[2157]+v[2125]*v[2178]+v[2124]*v[2180];
+v[2185]=v[2135]*v[2178]+v[2133]*v[2181]+2e0*v[2287];
+v[2186]=v[2132]*v[2178]+v[2128]*v[2181]+2e0*v[2288];
+v[2187]=2e0*v[2125]*v[2158]+v[2126]*v[2178]+v[2124]*v[2181];
+v[2188]=v[2135]*v[2180]+v[2134]*v[2181]+2e0*v[2289];
+v[2189]=v[2132]*v[2180]+v[2130]*v[2181]+2e0*v[2290];
+v[2190]=2e0*v[2124]*v[2159]+v[2126]*v[2180]+v[2125]*v[2181];
+b2200=b105;
+AdditionalData[5]=v[2175];
+AdditionalData[6]=d[3]+d[4]*v[118]+v[189]*exp(-(d[5]*v[118]));
+AdditionalData[7]=v[2154];
+AdditionalData[8]=v[2160];
+AdditionalData[9]=v[2161];
+AdditionalData[10]=v[2160];
+AdditionalData[11]=v[2165];
+AdditionalData[12]=v[2170];
+if (debugaceroutine) std::cout << \"Final MisesTau:\" << v[2175]<< std::endl;
+if (debugplastic) std::cout << \"Final MisesTau:\" << v[2175]<< std::endl;
+P[0]=v[113]*v[2184]+v[112]*v[2187]+v[2127]*v[2190];
+P[1]=v[114]*v[2184]+v[2129]*v[2187]+v[115]*v[2190];
+P[2]=v[2131]*v[2184]+v[117]*v[2187]+v[116]*v[2190];
+P[3]=v[113]*v[2183]+v[112]*v[2186]+v[2127]*v[2189];
+P[4]=v[114]*v[2183]+v[2129]*v[2186]+v[115]*v[2189];
+P[5]=v[2131]*v[2183]+v[117]*v[2186]+v[116]*v[2189];
+P[6]=v[113]*v[2182]+v[112]*v[2185]+v[2127]*v[2188];
+P[7]=v[114]*v[2182]+v[2129]*v[2185]+v[115]*v[2188];
+P[8]=v[2131]*v[2182]+v[117]*v[2185]+v[116]*v[2188];
+h[0]=v[109];
+h[1]=v[110];
+h[2]=v[111];
+h[3]=v[112];
+h[4]=v[113];
+h[5]=v[114];
+h[6]=v[115];
+h[7]=v[116];
+h[8]=v[117];
+h[9]=v[118];
 };\
 \>", "Print",
  CellChangeTimes->{3.769619903716874*^9, 3.769620818650776*^9, 
-  3.769620928398815*^9, 3.769621257471116*^9, 3.769621667230795*^9},
+  3.769620928398815*^9, 3.769621257471116*^9, 3.769621667230795*^9, 
+  3.7696690305333443`*^9},
  CellLabel->
   "During evaluation of \
-In[1046]:=",ExpressionUUID->"993c8fad-f9b1-41ff-a6c4-f7e35e3f5366"]
+In[205]:=",ExpressionUUID->"cc84da0d-002c-4755-9205-6cb0682545fd"]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{1133, 855},
-WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+WindowSize->{1815, 1395},
+WindowMargins->{{Automatic, 1}, {Automatic, 0}},
 FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
 ]
@@ -3912,70 +4157,77 @@ Cell[422, 15, 250, 7, 160, "Title",ExpressionUUID->"35744ce8-ad11-4158-9b67-6443
 Cell[CellGroupData[{
 Cell[697, 26, 163, 3, 54, "Subsection",ExpressionUUID->"8dbbca34-2e28-4462-920d-536e8f7ef81a"],
 Cell[863, 31, 6484, 205, 186, "Text",ExpressionUUID->"95f75d79-fc70-4e85-94eb-bf05561bfa1b"]
-}, Open  ]],
+}, Closed]],
 Cell[CellGroupData[{
-Cell[7384, 241, 169, 3, 54, "Subsection",ExpressionUUID->"97acbb4e-080d-4a82-a07c-19e0a5fef2b1"],
+Cell[7384, 241, 169, 3, 38, "Subsection",ExpressionUUID->"97acbb4e-080d-4a82-a07c-19e0a5fef2b1"],
 Cell[7556, 246, 476, 13, 82, "Text",ExpressionUUID->"4e1c2e72-720e-43fe-ae6b-0e1250a6efcc"],
 Cell[CellGroupData[{
 Cell[8057, 263, 9095, 218, 753, "Input",ExpressionUUID->"3f0d847a-6123-4db9-a12f-9c7d75c36d19"],
 Cell[17155, 483, 3219, 75, 86, "Print",ExpressionUUID->"167713c2-fa53-43eb-9e79-d3bada400db2"]
 }, Open  ]]
-}, Open  ]],
+}, Closed]],
 Cell[CellGroupData[{
-Cell[20423, 564, 163, 3, 54, "Subsection",ExpressionUUID->"88b6064e-dd20-4606-9e73-a85e5427c825"],
+Cell[20423, 564, 163, 3, 38, "Subsection",ExpressionUUID->"88b6064e-dd20-4606-9e73-a85e5427c825"],
 Cell[CellGroupData[{
 Cell[20611, 571, 2001, 50, 169, "Input",ExpressionUUID->"56bb9bb5-a137-4381-8bd6-0aeef7de36c0"],
 Cell[22615, 623, 1195, 27, 76, "Output",ExpressionUUID->"bb68e662-a822-49ef-95d7-545a29779289"]
 }, Open  ]]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[23871, 657, 166, 3, 72, "Title",ExpressionUUID->"7de93dac-5ed9-4521-a44a-58035c84dbf4"],
+Cell[CellGroupData[{
+Cell[24062, 664, 10006, 230, 552, "Input",ExpressionUUID->"f3ea91b8-ed2b-468c-a1a4-acea30ae07fc"],
+Cell[CellGroupData[{
+Cell[34093, 898, 2767, 69, 86, "Print",ExpressionUUID->"d38ac246-6cb7-4642-914b-29eee48c5aaa"],
+Cell[36863, 969, 1908, 59, 840, "Print",ExpressionUUID->"8abdb2c1-0e32-4682-9e25-f3cb4b81b7a6"]
 }, Open  ]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[23871, 657, 166, 3, 98, "Title",ExpressionUUID->"7de93dac-5ed9-4521-a44a-58035c84dbf4"],
-Cell[CellGroupData[{
-Cell[24062, 664, 9623, 222, 468, "Input",ExpressionUUID->"f3ea91b8-ed2b-468c-a1a4-acea30ae07fc"],
-Cell[33688, 888, 438, 7, 34, "Output",ExpressionUUID->"83cfc91b-6fda-4835-b317-1dcfc94c853a"],
-Cell[34129, 897, 2624, 67, 86, "Print",ExpressionUUID->"aa475cf1-beab-4605-bc0c-695a19109d6b"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[36790, 969, 254, 5, 30, "Input",ExpressionUUID->"25ca12d1-8803-4c0c-9e9b-0b92741730c2"],
-Cell[37047, 976, 2109, 57, 772, "Print",ExpressionUUID->"51c0b334-5ca3-48bc-a5c2-c40f22aa2da5"]
-}, Open  ]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[39205, 1039, 164, 3, 98, "Title",ExpressionUUID->"45ecbc3f-c8bb-4e2d-b361-1289ebc4f19d"],
-Cell[CellGroupData[{
-Cell[39394, 1046, 7216, 171, 363, "Input",ExpressionUUID->"2c61b94d-2de2-4ff1-b17f-cdb56fa1f763"],
-Cell[46613, 1219, 2563, 65, 70, "Print",ExpressionUUID->"b185e971-fdba-4e8d-ad31-2fe341eb0c56"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[49225, 1290, 270, 4, 72, "Title",ExpressionUUID->"cbefa29c-0ce1-4064-a6c5-a28ad2c7906d"],
+Cell[38832, 1035, 164, 3, 72, "Title",ExpressionUUID->"45ecbc3f-c8bb-4e2d-b361-1289ebc4f19d"],
 Cell[CellGroupData[{
-Cell[49520, 1298, 8514, 196, 409, "Input",ExpressionUUID->"3850eaae-ceee-40a7-b471-af8c3ea4c819"],
-Cell[58037, 1496, 2518, 65, 70, "Print",ExpressionUUID->"aefa16e5-17da-4717-85c1-3ccaed4f00ad"]
+Cell[39021, 1042, 7216, 171, 363, "Input",ExpressionUUID->"2c61b94d-2de2-4ff1-b17f-cdb56fa1f763"],
+Cell[46240, 1215, 2563, 65, 70, "Print",ExpressionUUID->"b185e971-fdba-4e8d-ad31-2fe341eb0c56"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[60604, 1567, 321, 5, 72, "Title",ExpressionUUID->"321d3b9c-1ea4-4ef6-b307-1eb4bdc603fe"],
+Cell[48852, 1286, 270, 4, 72, "Title",ExpressionUUID->"cbefa29c-0ce1-4064-a6c5-a28ad2c7906d"],
 Cell[CellGroupData[{
-Cell[60950, 1576, 7474, 170, 346, "Input",ExpressionUUID->"0dd1c630-14b1-4057-ad63-1c077c9fce3c"],
-Cell[68427, 1748, 2539, 65, 70, "Print",ExpressionUUID->"c9f54875-e954-4f19-bb83-0fa0c5d430e8"]
+Cell[49147, 1294, 8514, 196, 409, "Input",ExpressionUUID->"3850eaae-ceee-40a7-b471-af8c3ea4c819"],
+Cell[57664, 1492, 2518, 65, 70, "Print",ExpressionUUID->"aefa16e5-17da-4717-85c1-3ccaed4f00ad"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[71015, 1819, 441, 6, 72, "Title",ExpressionUUID->"d0645cbb-5c75-4e12-94d0-0df5355fc01a"],
-Cell[71459, 1827, 9941, 229, 688, "Input",ExpressionUUID->"ecc573e2-7795-4879-8a2b-168e7718e9be"],
-Cell[81403, 2058, 4400, 76, 136, "Input",ExpressionUUID->"bd908fdb-4d53-41a5-83d0-a3f8e77cb409"],
+Cell[60231, 1563, 321, 5, 72, "Title",ExpressionUUID->"321d3b9c-1ea4-4ef6-b307-1eb4bdc603fe"],
 Cell[CellGroupData[{
-Cell[85828, 2138, 12859, 329, 1589, "Input",ExpressionUUID->"0b727376-9c21-413a-9d5d-c5effb5a515d"],
+Cell[60577, 1572, 7474, 170, 346, "Input",ExpressionUUID->"0dd1c630-14b1-4057-ad63-1c077c9fce3c"],
+Cell[68054, 1744, 2539, 65, 70, "Print",ExpressionUUID->"c9f54875-e954-4f19-bb83-0fa0c5d430e8"]
+}, Open  ]]
+}, Closed]],
 Cell[CellGroupData[{
-Cell[98712, 2471, 1446, 33, 46, "Print",ExpressionUUID->"e1f0fc54-9c3f-47b5-a15b-ed65130377c1"],
-Cell[100161, 2506, 2704, 67, 86, "Print",ExpressionUUID->"c271cd2f-13ab-4848-82a2-1c6d486688a7"]
+Cell[70642, 1815, 467, 7, 72, "Title",ExpressionUUID->"d0645cbb-5c75-4e12-94d0-0df5355fc01a"],
+Cell[CellGroupData[{
+Cell[71134, 1826, 161, 3, 54, "Subsection",ExpressionUUID->"9405cc7e-6170-4e4f-afa5-3b3772fccbd0"],
+Cell[71298, 1831, 3584, 52, 892, "Input",ExpressionUUID->"692c8963-2086-4e42-8026-bc3aca26f5f5"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[74919, 1888, 181, 3, 54, "Subsection",ExpressionUUID->"4fc4ff44-e9ca-4827-ac7e-cca6c4d334f2"],
+Cell[75103, 1893, 9987, 229, 688, "Input",ExpressionUUID->"ecc573e2-7795-4879-8a2b-168e7718e9be"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[85127, 2127, 165, 3, 38, "Subsection",ExpressionUUID->"5f997b32-b184-4a81-bb7e-cb646f196827"],
+Cell[CellGroupData[{
+Cell[85317, 2134, 19005, 480, 1946, "Input",ExpressionUUID->"bd908fdb-4d53-41a5-83d0-a3f8e77cb409"],
+Cell[CellGroupData[{
+Cell[104347, 2618, 1493, 34, 26, "Print",ExpressionUUID->"ea1b9532-45b0-4ff0-b039-4c1bf0835cad"],
+Cell[105843, 2654, 2752, 68, 86, "Print",ExpressionUUID->"c4690775-2b0d-432c-a1e9-3cf9e7f75081"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[102914, 2579, 241, 4, 30, "Input",ExpressionUUID->"b046b526-ea25-4f69-812b-ae41795e70ce"],
-Cell[103158, 2585, 55787, 1304, 18996, "Print",ExpressionUUID->"993c8fad-f9b1-41ff-a6c4-f7e35e3f5366"]
+Cell[108644, 2728, 240, 4, 30, "Input",ExpressionUUID->"b046b526-ea25-4f69-812b-ae41795e70ce"],
+Cell[108887, 2734, 59684, 1399, 20441, "Print",ExpressionUUID->"cc84da0d-002c-4755-9205-6cb0682545fd"]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }

@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      7664,        221]
-NotebookOptionsPosition[      6805,        197]
-NotebookOutlinePosition[      7144,        212]
-CellTagsIndexPosition[      7101,        209]
+NotebookDataLength[     15335,        409]
+NotebookOptionsPosition[     13316,        367]
+NotebookOutlinePosition[     13655,        382]
+CellTagsIndexPosition[     13612,        379]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -25,12 +25,13 @@ Cell["Some Helper Functions", "Title",
   3.768890684281516*^9}},ExpressionUUID->"e3780fca-fda3-483a-9582-\
 323eff0a5b10"],
 
-Cell["Computation of VonMises Stresses", "Subtitle",
- CellChangeTimes->{{3.768890707086362*^9, 
-  3.76889072113523*^9}},ExpressionUUID->"6a577788-9ceb-4503-bb6d-\
-2c04c82706ad"],
-
 Cell[CellGroupData[{
+
+Cell["Computation of VonMises Stresses", "Subtitle",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.768890707086362*^9, 3.76889072113523*^9}, 
+   3.769670053253272*^9},ExpressionUUID->"6a577788-9ceb-4503-bb6d-\
+2c04c82706ad"],
 
 Cell[BoxData[{
  RowBox[{
@@ -85,8 +86,9 @@ Cell[BoxData[{
   RowBox[{"SMSWrite", "[", 
    RowBox[{"\"\<LocalAuxiliaryVariables\>\"", "\[Rule]", "True"}], "]"}], 
   ";"}]}], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
  CellChangeTimes->{{3.768890734805004*^9, 3.768890812812297*^9}, {
-  3.768890880097413*^9, 3.7688909903056583`*^9}},
+   3.768890880097413*^9, 3.7688909903056583`*^9}, 3.76967005325349*^9},
  CellLabel->
   "In[732]:=",ExpressionUUID->"98ede9e9-93a5-41b6-b327-875926b05753"],
 
@@ -150,17 +152,17 @@ Cell[BoxData[
    GridBoxFrame->{"Columns" -> False, "Rows" -> False},
    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
   "Column"]], "Print",
- CellChangeTimes->{3.7688910016611*^9},
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{3.7688910016611*^9, 3.7696700532536592`*^9},
  CellLabel->
   "During evaluation of \
-In[732]:=",ExpressionUUID->"d49c94b0-9473-47e5-9333-e8265d82b023"]
-}, Open  ]],
-
-Cell[CellGroupData[{
+In[732]:=",ExpressionUUID->"d49c94b0-9473-47e5-9333-e8265d82b023"],
 
 Cell[BoxData[
  RowBox[{"FilePrint", "[", "\"\<VonMisesStress.cpp\>\"", "]"}]], "Input",
- CellChangeTimes->{{3.768891003953616*^9, 3.768891020005309*^9}},
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.768891003953616*^9, 3.768891020005309*^9}, 
+   3.769670053253776*^9},
  CellLabel->
   "In[740]:=",ExpressionUUID->"e28b7826-f02e-4dd8-9a64-8afca16b3fc4"],
 
@@ -188,10 +190,178 @@ Sig[1][2]*Sig[2][1]
  +Power(Sig[0][0]+v[11],2)+Power(Sig[1][1]+v[11],2)+Power(Sig[2][2]+v[11],2)));
 };\
 \>", "Print",
- CellChangeTimes->{3.7688910203807783`*^9},
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{3.7688910203807783`*^9, 3.7696700532539263`*^9},
  CellLabel->
   "During evaluation of \
-In[740]:=",ExpressionUUID->"5f443b54-b998-4b27-84e3-2274f1b0a494"]
+In[740]:=",ExpressionUUID->"5f443b54-b998-4b27-84e3-2274f1b0a494"],
+
+Cell["Computation of Determinant", "Subtitle",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.768890707086362*^9, 3.76889072113523*^9}, {
+  3.769670053253272*^9, 
+  3.769670067012636*^9}},ExpressionUUID->"6e030a5d-0014-4ae6-855c-\
+74412e080793"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Variant 1 Det(F[9])", "Subsection",
+ CellChangeTimes->{{3.7696700703758383`*^9, 
+  3.76967009035645*^9}},ExpressionUUID->"6e85096f-5009-49e5-a598-\
+dad899e8030a"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"<<", "AceGen`"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSInitialize", "[", 
+   RowBox[{"\"\<Determinant\>\"", ",", 
+    RowBox[{"\"\<Language\>\"", "\[Rule]", "\"\<C++\>\""}], ",", 
+    RowBox[{"\"\<Mode\>\"", "\[Rule]", "\"\<Optimal\>\""}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSModule", "[", 
+   RowBox[{"\"\<Determinant\>\"", ",", 
+    RowBox[{"Real", "[", 
+     RowBox[{
+      RowBox[{"F$$", "[", "9", "]"}], ",", "detF$$"}], "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"F", "\[RightTee]", 
+   RowBox[{"Partition", "[", 
+    RowBox[{
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"SMSReal", "[", 
+        RowBox[{"F$$", "[", "i", "]"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "9"}], "}"}]}], "]"}], ",", "3"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"detF", "\[DoubleRightTee]", 
+   RowBox[{"SMSDet", "[", "F", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSExport", "[", 
+   RowBox[{"detF", ",", "detF$$"}], "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSWrite", "[", 
+   RowBox[{"\"\<LocalAuxiliaryVariables\>\"", "\[Rule]", "True"}], "]"}], 
+  ";"}]}], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.768890734805004*^9, 3.768890812812297*^9}, {
+   3.768890880097413*^9, 3.7688909903056583`*^9}, 3.76967005325349*^9, {
+   3.769670096772489*^9, 3.7696701343116837`*^9}, {3.769670166465329*^9, 
+   3.769670228778764*^9}},
+ CellLabel->
+  "In[206]:=",ExpressionUUID->"a2edf0e3-3317-41ed-ad2a-7278db547a72"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     TemplateBox[{StyleBox["\"File: \"", Bold, 
+        RGBColor[0, 0, 1], StripOnInput -> False],"\"Determinant.cpp\"",
+       StyleBox["\"  Size: \"", Bold, 
+        RGBColor[0, 0, 1], StripOnInput -> False],"835",StyleBox[
+       "\"  Time: \"", Bold, 
+        RGBColor[0, 0, 1], StripOnInput -> False],"0"},
+      "RowDefault"]},
+    {
+     TagBox[GridBox[{
+        {
+         StyleBox["\<\"Method\"\>",
+          StripOnInput->False,
+          LineColor->RGBColor[0, 0, 1],
+          FrontFaceColor->RGBColor[0, 0, 1],
+          BackFaceColor->RGBColor[0, 0, 1],
+          GraphicsColor->RGBColor[0, 0, 1],
+          FontWeight->Bold,
+          FontColor->RGBColor[0, 0, 1]], 
+         StyleBox["\<\"Determinant\"\>",
+          StripOnInput->False,
+          LineColor->RGBColor[0, 0, 1],
+          FrontFaceColor->RGBColor[0, 0, 1],
+          BackFaceColor->RGBColor[0, 0, 1],
+          GraphicsColor->RGBColor[0, 0, 1],
+          FontColor->RGBColor[0, 0, 1]]},
+        {
+         StyleBox["\<\"No.Formulae\"\>",
+          StripOnInput->False,
+          LineColor->RGBColor[0, 0, 1],
+          FrontFaceColor->RGBColor[0, 0, 1],
+          BackFaceColor->RGBColor[0, 0, 1],
+          GraphicsColor->RGBColor[0, 0, 1],
+          FontWeight->Bold,
+          FontColor->RGBColor[0, 0, 1]], "1"},
+        {
+         StyleBox["\<\"No.Leafs\"\>",
+          StripOnInput->False,
+          LineColor->RGBColor[0, 0, 1],
+          FrontFaceColor->RGBColor[0, 0, 1],
+          BackFaceColor->RGBColor[0, 0, 1],
+          GraphicsColor->RGBColor[0, 0, 1],
+          FontWeight->Bold,
+          FontColor->RGBColor[0, 0, 1]], "98"}
+       },
+       AutoDelete->False,
+       GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Center}}},
+       GridBoxDividers->{"Columns" -> {True, True}},
+       GridBoxFrame->{"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"]}
+   },
+   DefaultBaseStyle->"Column",
+   GridBoxAlignment->{"Columns" -> {{Left}}},
+   GridBoxDividers->{"Rows" -> {True, True}},
+   GridBoxFrame->{"Columns" -> False, "Rows" -> False},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Column"]], "Print",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{3.7688910016611*^9, 3.7696700532536592`*^9, 
+  3.769670231248767*^9},
+ CellLabel->
+  "During evaluation of \
+In[206]:=",ExpressionUUID->"0101e255-74ef-4424-be1c-ce004ebb7c62"],
+
+Cell[BoxData[
+ RowBox[{"FilePrint", "[", "\"\<Determinant.cpp\>\"", "]"}]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.768891003953616*^9, 3.768891020005309*^9}, 
+   3.769670053253776*^9, 3.769670113839911*^9},
+ CellLabel->
+  "In[213]:=",ExpressionUUID->"aa938935-33fe-4f6c-a730-e04136047d64"],
+
+Cell["\<\
+/*************************************************************
+* AceGen    6.923 MacOSX (19 Apr 19)                         *
+*           Co. J. Korelc  2013           16 Jun 19 12:37:11 *
+**************************************************************
+User     : Full professional version
+Notebook : helper_functions
+Evaluation time                 : 0 s     Mode  : Optimal
+Number of formulae              : 1       Method: Automatic
+Subroutine                      : Determinant size: 98
+Total size of Mathematica  code : 98 subexpressions
+Total size of C code            : 229 bytes */
+#include \"sms.h\"
+
+/******************* S U B R O U T I N E *********************/
+void Determinant(double F[9],double (*detF))
+{
+double v[121];
+(*detF)=F[2]*(-(F[4]*F[6])+F[3]*F[7])-F[1]*(-(F[5]*F[6])+F[3]*F[8])+F[0]*(-(F[\
+5]*F[7])+F[4]*F[8]);
+};\
+\>", "Print",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{3.7688910203807783`*^9, 3.7696700532539263`*^9, 
+  3.769670235717661*^9},
+ CellLabel->
+  "During evaluation of \
+In[213]:=",ExpressionUUID->"23bff0f1-c5f2-4cb9-8695-56675714580d"]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 },
@@ -213,14 +383,32 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 164, 3, 98, "Title",ExpressionUUID->"e3780fca-fda3-483a-9582-323eff0a5b10"],
-Cell[747, 27, 177, 3, 53, "Subtitle",ExpressionUUID->"6a577788-9ceb-4503-bb6d-2c04c82706ad"],
 Cell[CellGroupData[{
-Cell[949, 34, 1968, 56, 197, "Input",ExpressionUUID->"98ede9e9-93a5-41b6-b327-875926b05753"],
-Cell[2920, 92, 2429, 63, 86, "Print",ExpressionUUID->"d49c94b0-9473-47e5-9333-e8265d82b023"]
+Cell[769, 29, 255, 4, 53, "Subtitle",ExpressionUUID->"6a577788-9ceb-4503-bb6d-2c04c82706ad",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.}],
+Cell[1027, 35, 2045, 57, 197, "Input",ExpressionUUID->"98ede9e9-93a5-41b6-b327-875926b05753",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.}],
+Cell[3075, 94, 2508, 64, 86, "Print",ExpressionUUID->"d49c94b0-9473-47e5-9333-e8265d82b023",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.}],
+Cell[5586, 160, 317, 6, 30, "Input",ExpressionUUID->"e28b7826-f02e-4dd8-9a64-8afca16b3fc4",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.}],
+Cell[5906, 168, 1231, 28, 364, "Print",ExpressionUUID->"5f443b54-b998-4b27-84e3-2274f1b0a494",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.}],
+Cell[7140, 198, 275, 5, 53, "Subtitle",ExpressionUUID->"6e030a5d-0014-4ae6-855c-74412e080793",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.}]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5386, 160, 236, 4, 30, "Input",ExpressionUUID->"e28b7826-f02e-4dd8-9a64-8afca16b3fc4"],
-Cell[5625, 166, 1152, 27, 364, "Print",ExpressionUUID->"5f443b54-b998-4b27-84e3-2274f1b0a494"]
+Cell[7452, 208, 168, 3, 54, "Subsection",ExpressionUUID->"6e85096f-5009-49e5-a598-dad899e8030a"],
+Cell[CellGroupData[{
+Cell[7645, 215, 1643, 43, 157, "Input",ExpressionUUID->"a2edf0e3-3317-41ed-ad2a-7278db547a72",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.}],
+Cell[9291, 260, 2526, 65, 86, "Print",ExpressionUUID->"0101e255-74ef-4424-be1c-ce004ebb7c62",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.}],
+Cell[11820, 327, 336, 6, 30, "Input",ExpressionUUID->"aa938935-33fe-4f6c-a730-e04136047d64",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.}],
+Cell[12159, 335, 1117, 27, 330, "Print",ExpressionUUID->"23bff0f1-c5f2-4cb9-8695-56675714580d",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.}]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }

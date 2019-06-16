@@ -9,14 +9,7 @@ class MPMMaterial {
   public:
       MPMMaterial(int id);
       ~MPMMaterial();
-      int ID;                                                                   // Material ID (integer for now)
-      // double X[3];                       // The GridNode Spatial Coordinate
-      // double V[3];                       // The GridNode Velocity
-      // double Density;                             // The GridNode Material Density
-      // double Vol;                              // The GridNode Volume
-      // double Mass;                                // The GridNode Mass
-      // double Momentum[3];
-      // double InternalForce[3];
+      int ID;
 
       void SetMaterialParameter(double InputMaterialParameter);
       double *getStresses(double F[9]);                                       // for now only F but for future extended with optional args. e.g. time dependent
@@ -25,6 +18,9 @@ class MPMMaterial {
 
   private:
       std::vector<double> MaterialParameter;                                    // Contains arbitrary double material parameters which how to read is defined in the material subroutine of choice
+
+  //some functions from continuum mechanics
+      void Det(double F[9], double &detF){detF=F[2]*(-(F[4]*F[6])+F[3]*F[7])-F[1]*(-(F[5]*F[6])+F[3]*F[8])+F[0]*(-(F[5]*F[7])+F[4]*F[8]);};
 };
 
 MPMMaterial::~MPMMaterial(){}
@@ -151,7 +147,13 @@ double v[10];                                                                 //
 double vaux[100];                                                             // vector with auxillary variables (at least for acereturn)
 double Fvec[9];
 double Cmat[9][9];
+double dPdF[81];
+double AdditionalData[20];
 double Sigvec[9];
+int MaterialState;
+int MaterialConvergence;
+int MaterialIterations;
+double J;
 switch (ID){
 case 1:
 // Linear Elastic Default Material 2D
@@ -234,7 +236,6 @@ v[1] = MaterialParameter[1]; // nu
 // Flatten deformation gradient
 Fvec[0]=F[0][0]; Fvec[1]=F[0][1]; Fvec[2]=F[0][2];
 Fvec[3]=F[1][0]; Fvec[4]=F[1][1]; Fvec[5]=F[1][2];
-Fvec[6]=F[2][0]; Fvec[7]=F[2][1]; Fvec[8]=F[2][2];
 STVKPlaneStrain2D(v ,Fvec ,Sigvec ,Cmat);
 // Transform Sigvec back to tensor notation
 Sig[0][0]=Sigvec[0];Sig[0][1]=Sigvec[1];Sig[0][2]=Sigvec[2];
@@ -257,12 +258,22 @@ v[5] = MaterialParameter[5]; // deltah
 Fvec[0]=F[0][0]; Fvec[1]=F[0][1]; Fvec[2]=F[0][2];
 Fvec[3]=F[1][0]; Fvec[4]=F[1][1]; Fvec[5]=F[1][2];
 Fvec[6]=F[2][0]; Fvec[7]=F[2][1]; Fvec[8]=F[2][2];
-J2FiniteStrain3D(v ,Fvec ,h ,Sigvec ,Cmat);
-//STVKPlaneStrain2D(v ,Fvec ,Sigvec ,Cmat);
+//Remark: function now returns 1pk at sigvec location !
+J2FiniteStrain3D(v ,Fvec ,h ,Sigvec ,dPdF ,AdditionalData);
 // Transform Sigvec back to tensor notation
 Sig[0][0]=Sigvec[0];Sig[0][1]=Sigvec[1];Sig[0][2]=Sigvec[2];
 Sig[1][0]=Sigvec[3];Sig[1][1]=Sigvec[4];Sig[1][2]=Sigvec[5];
 Sig[2][0]=Sigvec[6];Sig[2][1]=Sigvec[7];Sig[2][2]=Sigvec[8];
+// extract data from AdditionalData
+MaterialState = (AdditionalData[0]<100)? 0:1; // 0-> elastic, 1->plastic
+MaterialConvergence = (AdditionalData[1]<100)? 0:1; // 0-> convergence, 1->divergence
+MaterialIterations = int( AdditionalData[2] );
+
+Det(Fvec, J);
+// extract kirchhoff stresses to sig tensor notation
+Sig[0][0]=AdditionalData[7]*(1/J);Sig[0][1]=AdditionalData[8 ]*(1/J);Sig[0][2]=AdditionalData[9]*(1/J);
+Sig[1][0]=AdditionalData[8]*(1/J);Sig[1][1]=AdditionalData[10]*(1/J);Sig[1][2]=AdditionalData[11]*(1/J);
+Sig[2][0]=AdditionalData[9]*(1/J);Sig[2][1]=AdditionalData[11]*(1/J);Sig[2][2]=AdditionalData[12]*(1/J);
 
 
 break;
