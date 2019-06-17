@@ -1,3 +1,6 @@
+#ifndef _ELSE_GEOMETRIC_LIBRARY_HPP_
+#define _ELSE_GEOMETRIC_LIBRARY_HPP_
+
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -88,3 +91,5 @@ namespace Geometric {
 
 } // namespace Geometric
 } // namspace ELSE
+
+#endif

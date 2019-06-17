@@ -147,7 +147,17 @@ void MPMParticle::Report(void){
 }
 
 // Post-Processing Interface
-int MPMParticle::GetPost(std::string KEY, std::array<double,9>, std::array<int,9>){
-  //if()
-  //return 0;
+// int: 0 -> key not defined !
+// int: 1 -> scalar integer
+// int: 2 -> scalar double
+// int: 3 -> vector[3] double
+// int: 4 -> tensor[9] double
+int MPMParticle::GetPost(std::string KEY, std::array<double,9> &RealOut, std::array<int,9> &IntOut){
+  if (KEY=="X"){RealOut[0]=X[0];RealOut[1]=X[1];RealOut[2]=X[2];return 3;}
+  if (KEY=="V"){RealOut[0]=V[0];RealOut[1]=V[1];RealOut[2]=V[2];return 3;}
+  if (KEY=="Mass"){RealOut[0]=Mass;return 2;}
+  if (KEY=="J"){double detF;ELSE::Conti::Det(F,detF);RealOut[0]=detF;return 2;}
+  if (KEY=="SigMises"){double sigmises;ELSE::Conti::VonMisesStress(Sig,sigmises);RealOut[0]=sigmises;return 2;}
+  if (KEY=="MaterialState"){IntOut[0]=0;return 1;}
+  return 0;
 }

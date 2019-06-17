@@ -3,18 +3,10 @@
 #include <fstream>
 #include <string>
 
-// Constructor of the MPMProcess
-MPMOutputVTK::MPMOutputVTK()
-{
-  //std::cout << "VTK Started" << std::endl;
-  //FileName = "/Users/sash/mpm_2d/data/vpuout_1.vtp";  //For now hard wired
-  //vtpfile.open(FileName); //and associates the stream object to the file
-}
-// Destructor of the MPMProcess
-MPMOutputVTK::~MPMOutputVTK()
-{
+MPMOutputVTK::MPMOutputVTK(){}
+
+MPMOutputVTK::~MPMOutputVTK(){
   WritePVD();
-  //std::cout << "VTK Terminated" << std::endl;
 }
 
 void MPMOutputVTK::TestVTUParticleExport(std::string FileName, std::vector<MPMParticle> &OutParticleContainer){
@@ -281,143 +273,91 @@ void MPMOutputVTK::TestVTUGridExport(
     }
   }
 
-// void VTUParticleExport(std::string FileName, std::vector<MPMParticle> &Particles, std::vector<std::string> ParticleOutputDataNames){
-//
-//     int NumberOfParticles  = Particles.size();
-//
-//     //open a file stream for output
-//     std::ofstream OutputFile;
-//     OutputFile.open(FileName, std::ios::out);
-//     // Write headder
-//     OutputFile << "<?xml version=\"1.0\" ?>" << std::endl;
-//     OutputFile << "<VTKFile byte_order=\"LittleEndian\" type=\"UnstructuredGrid\" version=\"0.1\">" << std::endl;
-//     OutputFile << "<UnstructuredGrid>" << std::endl;
-//     // Write Piece Headder
-//     OutputFile << "<Piece NumberOfCells=\"" << NumberOfParticles << "\" NumberOfPoints=\"" << NumberOfParticles << "\">" << std::endl;
-//     // Write Points
-//     OutputFile << "<Points>" << std::endl;
-//     OutputFile << "<DataArray NumberOfComponents=\"3\" format=\"ascii\" type=\"Float64\">";
-//     for(int i = 0; i < NumberOfParticles; i++){
-//       OutputFile << "  " << CuttOff(Particles[i].X[0]) ;
-//       OutputFile << "  " << CuttOff(Particles[i].X[1]) ;
-//       OutputFile << "  " << CuttOff(Particles[i].X[2]) ;
-//     }
-//     OutputFile << "</DataArray>" << std::endl;
-//     OutputFile << "</Points>" << std::endl;
-//     // Write Cells
-//     OutputFile << "<Cells>" << std::endl;
-//
-//     OutputFile << "<DataArray Name=\"connectivity\" format=\"ascii\" type=\"Int32\">";
-//     for(int i = 0; i < NumberOfParticles; i++) OutputFile << "  " << i ;
-//     OutputFile << "</DataArray>" << std::endl;
-//
-//     OutputFile << "<DataArray Name=\"offsets\" format=\"ascii\" type=\"Int32\">";
-//     for(int i = 0; i < NumberOfParticles; i++) OutputFile << "  " << (i+1)*1;
-//     OutputFile << "</DataArray>" << std::endl;
-//
-//     OutputFile << "<DataArray Name=\"types\" format=\"ascii\" type=\"UInt8\">";
-//     for(int i = 0; i < NumberOfParticles; i++) OutputFile << "  " << 1;
-//     OutputFile << "</DataArray>" << std::endl;
-//
-//     OutputFile << "</Cells>" << std::endl;
-//
-//     // Write Point Data
-//     OutputFile << "<PointData>" << std::endl;
-//       // Write Particle Volume
-//       OutputFile << "<DataArray Name=\"Volume\" NumberOfComponents=\"1\" format=\"ascii\" type=\"Float64\">";
-//       for(int i = 0; i < NumberOfParticles; i++){
-//         OutputFile << "  " << CuttOff(Particles[i].Vol) ;
-//       }
-//       OutputFile << "</DataArray>" << std::endl;
-//       // Write Particle Mass
-//       OutputFile << "<DataArray Name=\"Mass\" NumberOfComponents=\"1\" format=\"ascii\" type=\"Float64\">";
-//       for (auto &Particle : Particles) {
-//         OutputFile << "  " << CuttOff(Particle.Mass);
-//       }
-//       OutputFile << "</DataArray>" << std::endl;
-//   /*
-//       // Write Particle Stresses
-//       OutputFile << "<DataArray Name=\"Sig11\" NumberOfComponents=\"1\" format=\"ascii\" type=\"Float64\">";
-//       for (auto &Particle : OutParticleContainer) {
-//         OutputFile << "  " << CuttOff(Particle.Sig[0][0]);
-//       }
-//       OutputFile << "</DataArray>" << std::endl;
-//       OutputFile << "<DataArray Name=\"Sig12\" NumberOfComponents=\"1\" format=\"ascii\" type=\"Float64\">";
-//       for (auto &Particle : OutParticleContainer) {
-//         OutputFile << "  " << CuttOff(Particle.Sig[0][1]);
-//       }
-//       OutputFile << "</DataArray>" << std::endl;
-//       OutputFile << "<DataArray Name=\"Sig13\" NumberOfComponents=\"1\" format=\"ascii\" type=\"Float64\">";
-//       for (auto &Particle : OutParticleContainer) {
-//         OutputFile << "  " << CuttOff(Particle.Sig[0][2]);
-//       }
-//       OutputFile << "</DataArray>" << std::endl;
-//       OutputFile << "<DataArray Name=\"Sig21\" NumberOfComponents=\"1\" format=\"ascii\" type=\"Float64\">";
-//       for (auto &Particle : OutParticleContainer) {
-//         OutputFile << "  " << CuttOff(Particle.Sig[1][0]);
-//       }
-//       OutputFile << "</DataArray>" << std::endl;
-//       OutputFile << "<DataArray Name=\"Sig22\" NumberOfComponents=\"1\" format=\"ascii\" type=\"Float64\">";
-//       for (auto &Particle : OutParticleContainer) {
-//         OutputFile << "  " << CuttOff(Particle.Sig[1][1]);
-//       }
-//       OutputFile << "</DataArray>" << std::endl;
-//       OutputFile << "<DataArray Name=\"Sig23\" NumberOfComponents=\"1\" format=\"ascii\" type=\"Float64\">";
-//       for (auto &Particle : OutParticleContainer) {
-//         OutputFile << "  " << CuttOff(Particle.Sig[1][2]);
-//       }
-//       OutputFile << "</DataArray>" << std::endl;
-//       OutputFile << "<DataArray Name=\"Sig31\" NumberOfComponents=\"1\" format=\"ascii\" type=\"Float64\">";
-//       for (auto &Particle : OutParticleContainer) {
-//         OutputFile << "  " << CuttOff(Particle.Sig[2][0]);
-//       }
-//       OutputFile << "</DataArray>" << std::endl;
-//       OutputFile << "<DataArray Name=\"Sig32\" NumberOfComponents=\"1\" format=\"ascii\" type=\"Float64\">";
-//       for (auto &Particle : OutParticleContainer) {
-//         OutputFile << "  " << CuttOff(Particle.Sig[2][1]);
-//       }
-//       OutputFile << "</DataArray>" << std::endl;
-//       OutputFile << "<DataArray Name=\"Sig33\" NumberOfComponents=\"1\" format=\"ascii\" type=\"Float64\">";
-//       for (auto &Particle : OutParticleContainer) {
-//         OutputFile << "  " << CuttOff(Particle.Sig[2][2]);
-//       }
-//       OutputFile << "</DataArray>" << std::endl;
-//   */
-//       // Write VonMises Stresses
-//       OutputFile << "<DataArray Name=\"SigMises\" NumberOfComponents=\"1\" format=\"ascii\" type=\"Float64\">";
-//       for (auto &Particle : Particles) {
-//         double sigmises = Particle.SigMises();
-//         OutputFile << "  " << CuttOff(sigmises,1e10,-1);
-//       }
-//       OutputFile << "</DataArray>" << std::endl;
-//
-//       // Write plastic indicator
-//       OutputFile << "<DataArray Name=\"alpha\" NumberOfComponents=\"1\" format=\"ascii\" type=\"Float64\">";
-//       for (auto &Particle : Particles) {
-//         OutputFile << "  " << CuttOff(Particle.h[9]);
-//       }
-//       OutputFile << "</DataArray>" << std::endl;
-//
-//       // Write Particle Velocity
-//       OutputFile << "<DataArray Name=\"Velocity\" NumberOfComponents=\"3\" format=\"ascii\" type=\"Float64\">";
-//       for(int i = 0; i < NumberOfParticles; i++){
-//         OutputFile << "  " << CuttOff(Particles[i].V[0]);
-//         OutputFile << "  " << CuttOff(Particles[i].V[1]);
-//         OutputFile << "  " << CuttOff(Particles[i].V[2]);
-//       }
-//       OutputFile << "</DataArray>" << std::endl;
-//     OutputFile << "</PointData>" << std::endl;
-//     // Write Cell Data
-//     OutputFile << "<CellData/>" << std::endl;
-//     // Write Piece foot
-//     OutputFile << "</Piece>" << std::endl;
-//
-//     // Write foot
-//     OutputFile << "</UnstructuredGrid>" << std::endl;
-//     OutputFile << "</VTKFile>" << std::endl;
-//     //close the file stram
-//     OutputFile.close();
-// };
+void MPMOutputVTK::VTUParticleExport(std::string FileName, std::vector<MPMParticle> &Particles, std::vector<std::string> ParticleOutputDataNames){
+
+    int NumberOfParticles  = Particles.size();
+
+    //open a file stream for output
+    std::ofstream OutputFile;
+    OutputFile.open(FileName, std::ios::out);
+    // Write headder
+    OutputFile << "<?xml version=\"1.0\" ?>" << std::endl;
+    OutputFile << "<VTKFile byte_order=\"LittleEndian\" type=\"UnstructuredGrid\" version=\"0.1\">" << std::endl;
+    OutputFile << "<UnstructuredGrid>" << std::endl;
+    // Write Piece Headder
+    OutputFile << "<Piece NumberOfCells=\"" << NumberOfParticles << "\" NumberOfPoints=\"" << NumberOfParticles << "\">" << std::endl;
+    // Write Points
+    OutputFile << "<Points>" << std::endl;
+    OutputFile << "<DataArray NumberOfComponents=\"3\" format=\"ascii\" type=\"Float64\">";
+    for(int i = 0; i < NumberOfParticles; i++){
+      OutputFile << "  " << CuttOff(Particles[i].X[0]) ;
+      OutputFile << "  " << CuttOff(Particles[i].X[1]) ;
+      OutputFile << "  " << CuttOff(Particles[i].X[2]) ;
+    }
+    OutputFile << "</DataArray>" << std::endl;
+    OutputFile << "</Points>" << std::endl;
+    // Write Cells
+    OutputFile << "<Cells>" << std::endl;
+
+    OutputFile << "<DataArray Name=\"connectivity\" format=\"ascii\" type=\"Int32\">";
+    for(int i = 0; i < NumberOfParticles; i++) OutputFile << "  " << i ;
+    OutputFile << "</DataArray>" << std::endl;
+
+    OutputFile << "<DataArray Name=\"offsets\" format=\"ascii\" type=\"Int32\">";
+    for(int i = 0; i < NumberOfParticles; i++) OutputFile << "  " << (i+1)*1;
+    OutputFile << "</DataArray>" << std::endl;
+
+    OutputFile << "<DataArray Name=\"types\" format=\"ascii\" type=\"UInt8\">";
+    for(int i = 0; i < NumberOfParticles; i++) OutputFile << "  " << 1;
+    OutputFile << "</DataArray>" << std::endl;
+
+    OutputFile << "</Cells>" << std::endl;
+
+    // Write Point Data
+    OutputFile << "<PointData>" << std::endl;
+    for (std::string &PostTask : ParticleOutputDataNames){
+      // define dummy output symbols
+      int TaskKey;
+      std::array<int   , 9> IntOut;
+      std::array<double, 9> DoubleOut;
+
+      // initial call to get post type
+      TaskKey = Particles[0].GetPost(PostTask, DoubleOut, IntOut);
+      // Post-Processing Interface
+      // int: 0 -> key not defined !
+      if (TaskKey==0) break;
+      // int: 1 -> scalar integer
+      if (TaskKey==1) OutputFile << "<DataArray Name=\""<< PostTask <<"\" NumberOfComponents=\"1\" format=\"ascii\" type=\"Int32\">";
+      // int: 2 -> scalar double
+      if (TaskKey==2) OutputFile << "<DataArray Name=\""<< PostTask <<"\" NumberOfComponents=\"1\" format=\"ascii\" type=\"Float64\">";
+      // int: 3 -> vector[3] double
+      if (TaskKey==3) OutputFile << "<DataArray Name=\""<< PostTask <<"\" NumberOfComponents=\"3\" format=\"ascii\" type=\"Float64\">";
+      // int: 4 -> tensor[9] double
+      if (TaskKey==4) OutputFile << "<DataArray Name=\""<< PostTask <<"\" NumberOfComponents=\"9\" format=\"ascii\" type=\"Float64\">";
+
+      // Then write data
+      for (auto &Particle : Particles){
+        TaskKey = Particle.GetPost(PostTask, DoubleOut, IntOut);
+        if (TaskKey==1) OutputFile << "  " << IntOut[0];
+        if (TaskKey==2) OutputFile << "  " << CuttOff(DoubleOut[0]);
+        if (TaskKey==3) { OutputFile << "  " << CuttOff(DoubleOut[0]); OutputFile << "  " << CuttOff(DoubleOut[1]); OutputFile << "  " << CuttOff(DoubleOut[2]);}
+        if (TaskKey==4) { for (int i=0;i<9;i++){OutputFile << "  " << CuttOff(DoubleOut[i]);}}
+      }
+      // close data field
+      OutputFile << "</DataArray>" << std::endl;
+    }
+    OutputFile << "</PointData>" << std::endl;
+
+    // Write Cell Data
+    OutputFile << "<CellData/>" << std::endl;
+    // Write Piece foot
+    OutputFile << "</Piece>" << std::endl;
+    // Write foot
+    OutputFile << "</UnstructuredGrid>" << std::endl;
+    OutputFile << "</VTKFile>" << std::endl;
+    //close the file stram
+    OutputFile.close();
+};
 
 void MPMOutputVTK::SetOutput(std::string FileName, std::vector<MPMParticle> &OutParticleContainer, std::vector<std::string> OutputStrings){
   // if FileName is valid:
@@ -441,13 +381,10 @@ void MPMOutputVTK::SetOutput(std::string FileName, std::vector<MPMParticle> &Out
 void MPMOutputVTK::WriteOutput(double &t){
   // Write Particle Output Files
   for (int i=0;i<NoParticleOutputs;i++){
-    std::cout << ParticleOutputFileNames[i]<< std::endl;
-    std::cout << ParticleOutputFileWriteCounter[i]<< std::endl;
     std::string OutputFile = ParticleOutputFileNames[i]+ "_" + std::to_string(ParticleOutputFileWriteCounter[i]) + ".vtu";
 
     //write the output file
-    TestVTUParticleExport(OutputFile, *(ParticleOutputParticleContainers[i]));
-    //VTUParticleExport(OutputFile, *(ParticleOutputParticleContainers[i]), ParticleOutputDataNames);
+    VTUParticleExport(OutputFile, *(ParticleOutputParticleContainers[i]), ParticleOutputDataNames[i]);
 
     // For each written outputfile add an entry for pvd
     std::vector<std::string> NewFile = {OutputFile,std::to_string(t)};

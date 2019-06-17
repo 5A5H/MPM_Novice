@@ -24,6 +24,7 @@ class MPMOutputVTK {
         std::vector<MPMGridNode> &OutNodeContainer,
         std::vector<MPMGridElement> &OutElementContainer
       );
+      void VTUParticleExport(std::string FileName, std::vector<MPMParticle> &Particles, std::vector<std::string> ParticleOutputDataNames);
 
       // Add Particle Output
       void SetOutput(std::string FileName, std::vector<MPMParticle> &OutParticleContainer, std::vector<std::string> OutputStrings);

@@ -380,10 +380,7 @@ int main()
 //---------------------------------------------------------------------------------------------------------------------
     //exp
     MPMOutputVTK VTKOut("TwoDisks_Plastic");
-    std::vector<std::string> POutPutNames;
-    POutPutNames.push_back("SigMises");
-    POutPutNames.push_back("MaterialState");
-    VTKOut.SetOutput("/Users/sash/mpm_2d/data/out/TwoDisks_Plastic", Particle, POutPutNames);
+    VTKOut.SetOutput("/Users/sash/mpm_2d/data/out/TwoDisks_Plastic", Particle, {"SigMises","MaterialState","V"});
 
     std::cout << "- Begin Time Integration" << std::endl;
     std::vector<int> PGC;  // PGC ->  ParticleGridConnectivity; holds element connectivity {0->element2 1->element3 .. noparticles->element89}

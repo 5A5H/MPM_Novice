@@ -5,6 +5,7 @@
 #include <string>
 #include <vector>
 #include <array>
+#include <ELSE_ContiMechLibrary.hpp>
 
 class MPMParticle {
   public:
@@ -41,7 +42,7 @@ class MPMParticle {
       // Function that just return smth.
       // Input is a key
       // each function returns an integer for its information and modifies up to 9->trensor double values
-      int GetPost(std::string KEY, std::array<double,9>, std::array<int,9>);
+      int GetPost(std::string KEY, std::array<double,9> &RealOut, std::array<int,9> &IntOut);
       // int: 0 -> key not defined !
       // int: 1 -> scalar integer
       // int: 2 -> scalar double

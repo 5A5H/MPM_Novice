@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     23320,        599]
-NotebookOptionsPosition[     20369,        546]
-NotebookOutlinePosition[     20708,        561]
-CellTagsIndexPosition[     20665,        558]
+NotebookDataLength[     59476,       1556]
+NotebookOptionsPosition[     54174,       1467]
+NotebookOutlinePosition[     54513,       1482]
+CellTagsIndexPosition[     54470,       1479]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -194,8 +194,172 @@ Sig[1][2]*Sig[2][1]
  CellChangeTimes->{3.7688910203807783`*^9, 3.7696700532539263`*^9},
  CellLabel->
   "During evaluation of \
-In[740]:=",ExpressionUUID->"5f443b54-b998-4b27-84e3-2274f1b0a494"]
+In[740]:=",ExpressionUUID->"5f443b54-b998-4b27-84e3-2274f1b0a494"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"<<", "AceGen`"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSInitialize", "[", 
+   RowBox[{"\"\<VonMisesStress\>\"", ",", 
+    RowBox[{"\"\<Language\>\"", "\[Rule]", "\"\<C++\>\""}], ",", 
+    RowBox[{"\"\<Mode\>\"", "\[Rule]", "\"\<Optimal\>\""}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSModule", "[", 
+   RowBox[{"\"\<VonMisesStress\>\"", ",", 
+    RowBox[{"Real", "[", 
+     RowBox[{
+      RowBox[{"Sig$$", "[", "9", "]"}], ",", "SigMises$$"}], "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Sigma]", "\[RightTee]", 
+   RowBox[{"Partition", "[", 
+    RowBox[{
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"SMSReal", "[", 
+        RowBox[{"Sig$$", "[", "i", "]"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "9"}], "}"}]}], "]"}], ",", "3"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dev\[Sigma]", "\[DoubleRightTee]", 
+   RowBox[{"\[Sigma]", "-", 
+    RowBox[{
+     FractionBox["1", "3"], 
+     RowBox[{"Tr", "[", "\[Sigma]", "]"}], 
+     RowBox[{"IdentityMatrix", "[", "3", "]"}]}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Sigma]Mises", "\[DoubleRightTee]", 
+   RowBox[{"SMSSqrt", "[", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"3", "/", "2"}], ")"}], 
+     RowBox[{"Tr", "[", 
+      RowBox[{"dev\[Sigma]", ".", "dev\[Sigma]"}], "]"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSExport", "[", 
+   RowBox[{"\[Sigma]Mises", ",", "SigMises$$"}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSWrite", "[", 
+   RowBox[{
+    RowBox[{"\"\<LocalAuxiliaryVariables\>\"", "\[Rule]", "True"}], ",", 
+    RowBox[{"\"\<OptimizingLoops\>\"", "\[Rule]", "10"}]}], "]"}], 
+  ";"}]}], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.768890734805004*^9, 3.768890812812297*^9}, {
+   3.768890880097413*^9, 3.7688909903056583`*^9}, 3.76967005325349*^9, {
+   3.769706673965193*^9, 3.769706700534156*^9}, {3.769706736486617*^9, 
+   3.7697067422438602`*^9}},
+ CellLabel->
+  "In[476]:=",ExpressionUUID->"3c463f32-f630-4ba0-b98b-98c39d377f04"]
 }, Open  ]],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     TemplateBox[{StyleBox["\"File: \"", Bold, 
+        RGBColor[0, 0, 1], StripOnInput -> False],"\"VonMisesStress.cpp\"",
+       StyleBox["\"  Size: \"", Bold, 
+        RGBColor[0, 0, 1], StripOnInput -> False],"935",StyleBox[
+       "\"  Time: \"", Bold, 
+        RGBColor[0, 0, 1], StripOnInput -> False],"0"},
+      "RowDefault"]},
+    {
+     TagBox[GridBox[{
+        {
+         StyleBox["\<\"Method\"\>",
+          StripOnInput->False,
+          LineColor->RGBColor[0, 0, 1],
+          FrontFaceColor->RGBColor[0, 0, 1],
+          BackFaceColor->RGBColor[0, 0, 1],
+          GraphicsColor->RGBColor[0, 0, 1],
+          FontWeight->Bold,
+          FontColor->RGBColor[0, 0, 1]], 
+         StyleBox["\<\"VonMisesStress\"\>",
+          StripOnInput->False,
+          LineColor->RGBColor[0, 0, 1],
+          FrontFaceColor->RGBColor[0, 0, 1],
+          BackFaceColor->RGBColor[0, 0, 1],
+          GraphicsColor->RGBColor[0, 0, 1],
+          FontColor->RGBColor[0, 0, 1]]},
+        {
+         StyleBox["\<\"No.Formulae\"\>",
+          StripOnInput->False,
+          LineColor->RGBColor[0, 0, 1],
+          FrontFaceColor->RGBColor[0, 0, 1],
+          BackFaceColor->RGBColor[0, 0, 1],
+          GraphicsColor->RGBColor[0, 0, 1],
+          FontWeight->Bold,
+          FontColor->RGBColor[0, 0, 1]], "2"},
+        {
+         StyleBox["\<\"No.Leafs\"\>",
+          StripOnInput->False,
+          LineColor->RGBColor[0, 0, 1],
+          FrontFaceColor->RGBColor[0, 0, 1],
+          BackFaceColor->RGBColor[0, 0, 1],
+          GraphicsColor->RGBColor[0, 0, 1],
+          FontWeight->Bold,
+          FontColor->RGBColor[0, 0, 1]], "108"}
+       },
+       AutoDelete->False,
+       GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Center}}},
+       GridBoxDividers->{"Columns" -> {True, True}},
+       GridBoxFrame->{"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"]}
+   },
+   DefaultBaseStyle->"Column",
+   GridBoxAlignment->{"Columns" -> {{Left}}},
+   GridBoxDividers->{"Rows" -> {True, True}},
+   GridBoxFrame->{"Columns" -> False, "Rows" -> False},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Column"]], "Print",
+ CellChangeTimes->{3.7697067061776342`*^9, 3.76970674400836*^9},
+ CellLabel->
+  "During evaluation of \
+In[476]:=",ExpressionUUID->"b47efc2f-7e3c-4d9c-94ac-a1bbfc6cbe6b"],
+
+Cell[BoxData[
+ RowBox[{"FilePrint", "[", "\"\<VonMisesStress.cpp\>\"", "]"}]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.768891003953616*^9, 3.768891020005309*^9}, 
+   3.769670053253776*^9, {3.769706712769191*^9, 3.769706723860861*^9}},
+ CellLabel->
+  "In[484]:=",ExpressionUUID->"8737e258-88af-4703-a978-3a5baa74e660"],
+
+Cell["\<\
+/*************************************************************
+* AceGen    6.923 MacOSX (19 Apr 19)                         *
+*           Co. J. Korelc  2013           16 Jun 19 22:45:43 *
+**************************************************************
+User     : Full professional version
+Notebook : helper_functions
+Evaluation time                 : 0 s     Mode  : Optimal
+Number of formulae              : 2       Method: Automatic
+Subroutine                      : VonMisesStress size: 108
+Total size of Mathematica  code : 108 subexpressions
+Total size of C code            : 324 bytes */
+#include \"sms.h\"
+
+/******************* S U B R O U T I N E *********************/
+void VonMisesStress(double Sig[9],double (*SigMises))
+{
+double v[125];
+v[11]=(-Sig[0]-Sig[4]-Sig[8])/3e0;
+(*SigMises)=sqrt(0.15e1*(2e0*Sig[1]*Sig[3]+2e0*Sig[2]*Sig[6]+2e0*Sig[5]*Sig[7]\
++Power(Sig[0]+v[11],2
+ )+Power(Sig[4]+v[11],2)+Power(Sig[8]+v[11],2)));
+};\
+\>", "Print",
+ CellChangeTimes->{3.769706708103657*^9, 3.769706747589484*^9},
+ CellLabel->
+  "During evaluation of \
+In[484]:=",ExpressionUUID->"cbcfeca0-0545-4048-9549-876e137165ce"],
 
 Cell[CellGroupData[{
 
@@ -361,18 +525,12 @@ double v[121];
   "During evaluation of \
 In[213]:=",ExpressionUUID->"23bff0f1-c5f2-4cb9-8695-56675714580d"],
 
-Cell["Computation of SingleContraction", "Subtitle",
- CellGroupingRules->{"GroupTogetherGrouping", 10001.},
- CellChangeTimes->{{3.768890707086362*^9, 3.76889072113523*^9}, {
-  3.769670053253272*^9, 3.769670067012636*^9}, {3.7696729910725393`*^9, 
-  3.7696730016026487`*^9}},ExpressionUUID->"253cc602-19a8-496d-9a24-\
-ccaee11e44de"],
-
-Cell["Variant 1 Det(F[9])", "Subsection",
+Cell["Variant 2 Det(F[3][3])", "Subsection",
  CellGroupingRules->{"GroupTogetherGrouping", 10001.},
  CellChangeTimes->{{3.7696700703758383`*^9, 3.76967009035645*^9}, 
-   3.7696729910727453`*^9},ExpressionUUID->"d3a4b602-4317-4dd9-af56-\
-2b6bd61c926a"],
+   3.7696729910727453`*^9, {3.769707399931101*^9, 
+   3.769707405657447*^9}},ExpressionUUID->"3e48bf02-844c-4727-9173-\
+bdac9d2b01a9"],
 
 Cell[BoxData[{
  RowBox[{
@@ -388,44 +546,26 @@ Cell[BoxData[{
    RowBox[{"\"\<Determinant\>\"", ",", 
     RowBox[{"Real", "[", 
      RowBox[{
-      RowBox[{"P$$", "[", "9", "]"}], ",", 
-      RowBox[{"F$$", "[", "9", "]"}], ",", 
-      RowBox[{"T$$", "[", "9", "]"}]}], "]"}]}], "]"}], 
-  ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"P", "\[RightTee]", 
-   RowBox[{"Partition", "[", 
-    RowBox[{
-     RowBox[{"Table", "[", 
-      RowBox[{
-       RowBox[{"SMSReal", "[", 
-        RowBox[{"P$$", "[", "i", "]"}], "]"}], ",", 
-       RowBox[{"{", 
-        RowBox[{"i", ",", "9"}], "}"}]}], "]"}], ",", "3"}], "]"}]}], 
+      RowBox[{"F$$", "[", 
+       RowBox[{"3", ",", "3"}], "]"}], ",", "detF$$"}], "]"}]}], "]"}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"F", "\[RightTee]", 
-   RowBox[{"Partition", "[", 
+   RowBox[{"Table", "[", 
     RowBox[{
-     RowBox[{"Table", "[", 
-      RowBox[{
-       RowBox[{"SMSReal", "[", 
-        RowBox[{"F$$", "[", "i", "]"}], "]"}], ",", 
-       RowBox[{"{", 
-        RowBox[{"i", ",", "9"}], "}"}]}], "]"}], ",", "3"}], "]"}]}], 
-  ";"}], "\[IndentingNewLine]", 
+     RowBox[{"SMSReal", "[", 
+      RowBox[{"F$$", "[", 
+       RowBox[{"i", ",", "j"}], "]"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "3"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"j", ",", "3"}], "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"detF", "\[DoubleRightTee]", 
    RowBox[{"SMSDet", "[", "F", "]"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"SMSExport", "[", 
-   RowBox[{"T", ",", 
-    RowBox[{"Table", "[", 
-     RowBox[{
-      RowBox[{"T$$", "[", "i", "]"}], ",", 
-      RowBox[{"{", 
-       RowBox[{"i", ",", "9"}], "}"}]}], "]"}]}], "]"}], 
-  ";"}], "\[IndentingNewLine]", 
+   RowBox[{"detF", ",", "detF$$"}], "]"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"SMSWrite", "[", 
    RowBox[{"\"\<LocalAuxiliaryVariables\>\"", "\[Rule]", "True"}], "]"}], 
@@ -434,9 +574,11 @@ Cell[BoxData[{
  CellChangeTimes->{{3.768890734805004*^9, 3.768890812812297*^9}, {
    3.768890880097413*^9, 3.7688909903056583`*^9}, 3.76967005325349*^9, {
    3.769670096772489*^9, 3.7696701343116837`*^9}, {3.769670166465329*^9, 
-   3.769670228778764*^9}, 3.769672991073122*^9, {3.769673130499505*^9, 
-   3.769673201136286*^9}},ExpressionUUID->"5c3af06c-9941-42fe-8046-\
-047014c96760"],
+   3.769670228778764*^9}, 3.769672991073122*^9, {3.76970740862239*^9, 
+   3.769707439469274*^9}},
+ CellLabel->
+  "In[485]:=",ExpressionUUID->"f284a521-3817-4062-aaa0-853e06234aa7"]
+}, Open  ]],
 
 Cell[BoxData[
  TagBox[GridBox[{
@@ -444,7 +586,7 @@ Cell[BoxData[
      TemplateBox[{StyleBox["\"File: \"", Bold, 
         RGBColor[0, 0, 1], StripOnInput -> False],"\"Determinant.cpp\"",
        StyleBox["\"  Size: \"", Bold, 
-        RGBColor[0, 0, 1], StripOnInput -> False],"835",StyleBox[
+        RGBColor[0, 0, 1], StripOnInput -> False],"887",StyleBox[
        "\"  Time: \"", Bold, 
         RGBColor[0, 0, 1], StripOnInput -> False],"0"},
       "RowDefault"]},
@@ -483,7 +625,776 @@ Cell[BoxData[
           BackFaceColor->RGBColor[0, 0, 1],
           GraphicsColor->RGBColor[0, 0, 1],
           FontWeight->Bold,
-          FontColor->RGBColor[0, 0, 1]], "98"}
+          FontColor->RGBColor[0, 0, 1]], "113"}
+       },
+       AutoDelete->False,
+       GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Center}}},
+       GridBoxDividers->{"Columns" -> {True, True}},
+       GridBoxFrame->{"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"]}
+   },
+   DefaultBaseStyle->"Column",
+   GridBoxAlignment->{"Columns" -> {{Left}}},
+   GridBoxDividers->{"Rows" -> {True, True}},
+   GridBoxFrame->{"Columns" -> False, "Rows" -> False},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Column"]], "Print",
+ CellChangeTimes->{3.769707440880115*^9},
+ CellLabel->
+  "During evaluation of \
+In[485]:=",ExpressionUUID->"f36231bd-32bb-4c4c-9a17-28eba6a44e64"],
+
+Cell[BoxData[
+ RowBox[{"FilePrint", "[", "\"\<Determinant.cpp\>\"", "]"}]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10001.},
+ CellChangeTimes->{{3.768891003953616*^9, 3.768891020005309*^9}, 
+   3.769670053253776*^9, 3.769670113839911*^9, 3.769672991073494*^9},
+ CellLabel->
+  "In[492]:=",ExpressionUUID->"86c0375a-535b-477d-8f98-3df4b3d61746"],
+
+Cell["\<\
+/*************************************************************
+* AceGen    6.923 MacOSX (19 Apr 19)                         *
+*           Co. J. Korelc  2013           16 Jun 19 22:57:20 *
+**************************************************************
+User     : Full professional version
+Notebook : helper_functions
+Evaluation time                 : 0 s     Mode  : Optimal
+Number of formulae              : 1       Method: Automatic
+Subroutine                      : Determinant size: 113
+Total size of Mathematica  code : 113 subexpressions
+Total size of C code            : 279 bytes */
+#include \"sms.h\"
+
+/******************* S U B R O U T I N E *********************/
+void Determinant(double F[3][3],double (*detF))
+{
+double v[121];
+(*detF)=F[0][2]*(-(F[1][1]*F[2][0])+F[1][0]*F[2][1])-F[0][1]*(-(F[1][2]*F[2][\
+0])+F[1][0]*F[2][2])
+ +F[0][0]*(-(F[1][2]*F[2][1])+F[1][1]*F[2][2]);
+};\
+\>", "Print",
+ CellChangeTimes->{3.7697074432933407`*^9},
+ CellLabel->
+  "During evaluation of \
+In[492]:=",ExpressionUUID->"b5b45dd5-17cf-488b-9f61-9a265c8463bc"],
+
+Cell[CellGroupData[{
+
+Cell["Computation of SingleContraction", "Subtitle",
+ CellGroupingRules->{"GroupTogetherGrouping", 10001.},
+ CellChangeTimes->{{3.768890707086362*^9, 3.76889072113523*^9}, {
+  3.769670053253272*^9, 3.769670067012636*^9}, {3.7696729910725393`*^9, 
+  3.7696730016026487`*^9}},ExpressionUUID->"253cc602-19a8-496d-9a24-\
+ccaee11e44de"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"<<", "AceGen`"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSInitialize", "[", 
+   RowBox[{"\"\<ScalarTensor\>\"", ",", 
+    RowBox[{"\"\<Language\>\"", "\[Rule]", "\"\<C++\>\""}], ",", 
+    RowBox[{"\"\<Mode\>\"", "\[Rule]", "\"\<Optimal\>\""}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSModule", "[", 
+   RowBox[{"\"\<ScalarTensor\>\"", ",", 
+    RowBox[{"Real", "[", 
+     RowBox[{
+      RowBox[{"A$$", "[", "9", "]"}], ",", 
+      RowBox[{"B$$", "[", "9", "]"}], ",", 
+      RowBox[{"C$$", "[", "9", "]"}]}], "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"A", "\[RightTee]", 
+   RowBox[{"Partition", "[", 
+    RowBox[{
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"SMSReal", "[", 
+        RowBox[{"A$$", "[", "i", "]"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "9"}], "}"}]}], "]"}], ",", "3"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"B", "\[RightTee]", 
+   RowBox[{"Partition", "[", 
+    RowBox[{
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"SMSReal", "[", 
+        RowBox[{"B$$", "[", "i", "]"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "9"}], "}"}]}], "]"}], ",", "3"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"c", "\[DoubleRightTee]", 
+   RowBox[{"Tr", "[", 
+    RowBox[{"A", ".", 
+     RowBox[{"B", "\[Transpose]"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSExport", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+     "c", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+      "0", ",", "0"}], "}"}], ",", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"C$$", "[", "i", "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "9"}], "}"}]}], "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSWrite", "[", 
+   RowBox[{"\"\<LocalAuxiliaryVariables\>\"", "\[Rule]", "True"}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"FilePrint", "[", "\"\<ScalarTensor.cpp\>\"", "]"}]}], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10001.},
+ CellChangeTimes->{{3.768890734805004*^9, 3.768890812812297*^9}, {
+   3.768890880097413*^9, 3.7688909903056583`*^9}, 3.76967005325349*^9, {
+   3.769670096772489*^9, 3.7696701343116837`*^9}, {3.769670166465329*^9, 
+   3.769670228778764*^9}, 3.769672991073122*^9, {3.769673130499505*^9, 
+   3.7696732135782843`*^9}, {3.769673316778956*^9, 3.7696733501678133`*^9}, {
+   3.76970769428365*^9, 3.769707865860821*^9}},
+ CellLabel->
+  "In[520]:=",ExpressionUUID->"0e040d80-0bf9-43aa-9942-178530228887"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     TemplateBox[{StyleBox["\"File: \"", Bold, 
+        RGBColor[0, 0, 1], StripOnInput -> False],"\"ScalarTensor.cpp\"",
+       StyleBox["\"  Size: \"", Bold, 
+        RGBColor[0, 0, 1], StripOnInput -> False],"925",StyleBox[
+       "\"  Time: \"", Bold, 
+        RGBColor[0, 0, 1], StripOnInput -> False],"0"},
+      "RowDefault"]},
+    {
+     TagBox[GridBox[{
+        {
+         StyleBox["\<\"Method\"\>",
+          StripOnInput->False,
+          LineColor->RGBColor[0, 0, 1],
+          FrontFaceColor->RGBColor[0, 0, 1],
+          BackFaceColor->RGBColor[0, 0, 1],
+          GraphicsColor->RGBColor[0, 0, 1],
+          FontWeight->Bold,
+          FontColor->RGBColor[0, 0, 1]], 
+         StyleBox["\<\"ScalarTensor\"\>",
+          StripOnInput->False,
+          LineColor->RGBColor[0, 0, 1],
+          FrontFaceColor->RGBColor[0, 0, 1],
+          BackFaceColor->RGBColor[0, 0, 1],
+          GraphicsColor->RGBColor[0, 0, 1],
+          FontColor->RGBColor[0, 0, 1]]},
+        {
+         StyleBox["\<\"No.Formulae\"\>",
+          StripOnInput->False,
+          LineColor->RGBColor[0, 0, 1],
+          FrontFaceColor->RGBColor[0, 0, 1],
+          BackFaceColor->RGBColor[0, 0, 1],
+          GraphicsColor->RGBColor[0, 0, 1],
+          FontWeight->Bold,
+          FontColor->RGBColor[0, 0, 1]], "1"},
+        {
+         StyleBox["\<\"No.Leafs\"\>",
+          StripOnInput->False,
+          LineColor->RGBColor[0, 0, 1],
+          FrontFaceColor->RGBColor[0, 0, 1],
+          BackFaceColor->RGBColor[0, 0, 1],
+          GraphicsColor->RGBColor[0, 0, 1],
+          FontWeight->Bold,
+          FontColor->RGBColor[0, 0, 1]], "155"}
+       },
+       AutoDelete->False,
+       GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Center}}},
+       GridBoxDividers->{"Columns" -> {True, True}},
+       GridBoxFrame->{"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"]}
+   },
+   DefaultBaseStyle->"Column",
+   GridBoxAlignment->{"Columns" -> {{Left}}},
+   GridBoxDividers->{"Rows" -> {True, True}},
+   GridBoxFrame->{"Columns" -> False, "Rows" -> False},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Column"]], "Print",
+ CellChangeTimes->{{3.7697078294743834`*^9, 3.769707867270823*^9}},
+ CellLabel->
+  "During evaluation of \
+In[520]:=",ExpressionUUID->"c9bd06b9-a2cb-496e-a8e9-d7c186d4a21e"],
+
+Cell["\<\
+/*************************************************************
+* AceGen    6.923 MacOSX (19 Apr 19)                         *
+*           Co. J. Korelc  2013           16 Jun 19 23:04:27 *
+**************************************************************
+User     : Full professional version
+Notebook : helper_functions
+Evaluation time                 : 0 s     Mode  : Optimal
+Number of formulae              : 1       Method: Automatic
+Subroutine                      : ScalarTensor size: 155
+Total size of Mathematica  code : 155 subexpressions
+Total size of C code            : 316 bytes */
+#include \"sms.h\"
+
+/******************* S U B R O U T I N E *********************/
+void ScalarTensor(double A[9],double B[9],double C[9])
+{
+double v[130];
+C[0]=A[0]*B[0]+A[1]*B[1]+A[2]*B[2]+A[3]*B[3]+A[4]*B[4]+A[5]*B[5]+A[6]*B[6]+A[\
+7]*B[7]+A[8]*B[8];
+C[1]=0e0;
+C[2]=0e0;
+C[3]=0e0;
+C[4]=0e0;
+C[5]=0e0;
+C[6]=0e0;
+C[7]=0e0;
+C[8]=0e0;
+};\
+\>", "Print",
+ CellChangeTimes->{{3.7697078294743834`*^9, 3.7697078673456373`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[520]:=",ExpressionUUID->"24506e20-dbfd-4251-84bb-a64d5e362ff9"]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"<<", "AceGen`"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSInitialize", "[", 
+   RowBox[{"\"\<Tensor_ijjk\>\"", ",", 
+    RowBox[{"\"\<Language\>\"", "\[Rule]", "\"\<C++\>\""}], ",", 
+    RowBox[{"\"\<Mode\>\"", "\[Rule]", "\"\<Optimal\>\""}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSModule", "[", 
+   RowBox[{"\"\<Tensor_ijjk\>\"", ",", 
+    RowBox[{"Real", "[", 
+     RowBox[{
+      RowBox[{"A$$", "[", "9", "]"}], ",", 
+      RowBox[{"B$$", "[", "9", "]"}], ",", 
+      RowBox[{"C$$", "[", "9", "]"}]}], "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"A", "\[RightTee]", 
+   RowBox[{"Partition", "[", 
+    RowBox[{
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"SMSReal", "[", 
+        RowBox[{"A$$", "[", "i", "]"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "9"}], "}"}]}], "]"}], ",", "3"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"B", "\[RightTee]", 
+   RowBox[{"Partition", "[", 
+    RowBox[{
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"SMSReal", "[", 
+        RowBox[{"B$$", "[", "i", "]"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "9"}], "}"}]}], "]"}], ",", "3"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"c", "\[DoubleRightTee]", 
+   RowBox[{"A", ".", "B"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSExport", "[", 
+   RowBox[{
+    RowBox[{"Flatten", "[", "c", "]"}], ",", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"C$$", "[", "i", "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "9"}], "}"}]}], "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSWrite", "[", 
+   RowBox[{"\"\<LocalAuxiliaryVariables\>\"", "\[Rule]", "True"}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"FilePrint", "[", "\"\<Tensor_ijjk.cpp\>\"", "]"}]}], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10001.},
+ CellChangeTimes->{{3.768890734805004*^9, 3.768890812812297*^9}, {
+   3.768890880097413*^9, 3.7688909903056583`*^9}, 3.76967005325349*^9, {
+   3.769670096772489*^9, 3.7696701343116837`*^9}, {3.769670166465329*^9, 
+   3.769670228778764*^9}, 3.769672991073122*^9, {3.769673130499505*^9, 
+   3.7696732135782843`*^9}, {3.769673316778956*^9, 3.7696733501678133`*^9}, {
+   3.76970769428365*^9, 3.769707865860821*^9}, {3.769708402446237*^9, 
+   3.769708431948193*^9}},
+ CellLabel->
+  "In[538]:=",ExpressionUUID->"ff101cfd-7735-4a6f-8186-a43b4ed6755e"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     TemplateBox[{StyleBox["\"File: \"", Bold, 
+        RGBColor[0, 0, 1], StripOnInput -> False],"\"Tensor_ijjk.cpp\"",
+       StyleBox["\"  Size: \"", Bold, 
+        RGBColor[0, 0, 1], StripOnInput -> False],"1071",StyleBox[
+       "\"  Time: \"", Bold, 
+        RGBColor[0, 0, 1], StripOnInput -> False],"0"},
+      "RowDefault"]},
+    {
+     TagBox[GridBox[{
+        {
+         StyleBox["\<\"Method\"\>",
+          StripOnInput->False,
+          LineColor->RGBColor[0, 0, 1],
+          FrontFaceColor->RGBColor[0, 0, 1],
+          BackFaceColor->RGBColor[0, 0, 1],
+          GraphicsColor->RGBColor[0, 0, 1],
+          FontWeight->Bold,
+          FontColor->RGBColor[0, 0, 1]], 
+         StyleBox["\<\"Tensor_ijjk\"\>",
+          StripOnInput->False,
+          LineColor->RGBColor[0, 0, 1],
+          FrontFaceColor->RGBColor[0, 0, 1],
+          BackFaceColor->RGBColor[0, 0, 1],
+          GraphicsColor->RGBColor[0, 0, 1],
+          FontColor->RGBColor[0, 0, 1]]},
+        {
+         StyleBox["\<\"No.Formulae\"\>",
+          StripOnInput->False,
+          LineColor->RGBColor[0, 0, 1],
+          FrontFaceColor->RGBColor[0, 0, 1],
+          BackFaceColor->RGBColor[0, 0, 1],
+          GraphicsColor->RGBColor[0, 0, 1],
+          FontWeight->Bold,
+          FontColor->RGBColor[0, 0, 1]], "1"},
+        {
+         StyleBox["\<\"No.Leafs\"\>",
+          StripOnInput->False,
+          LineColor->RGBColor[0, 0, 1],
+          FrontFaceColor->RGBColor[0, 0, 1],
+          BackFaceColor->RGBColor[0, 0, 1],
+          GraphicsColor->RGBColor[0, 0, 1],
+          FontWeight->Bold,
+          FontColor->RGBColor[0, 0, 1]], "353"}
+       },
+       AutoDelete->False,
+       GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Center}}},
+       GridBoxDividers->{"Columns" -> {True, True}},
+       GridBoxFrame->{"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"]}
+   },
+   DefaultBaseStyle->"Column",
+   GridBoxAlignment->{"Columns" -> {{Left}}},
+   GridBoxDividers->{"Rows" -> {True, True}},
+   GridBoxFrame->{"Columns" -> False, "Rows" -> False},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Column"]], "Print",
+ CellChangeTimes->{{3.769708417797884*^9, 3.769708433322578*^9}},
+ CellLabel->
+  "During evaluation of \
+In[538]:=",ExpressionUUID->"e0af1276-0031-4c5d-9cff-9649ddbd4bc5"],
+
+Cell["\<\
+/*************************************************************
+* AceGen    6.923 MacOSX (19 Apr 19)                         *
+*           Co. J. Korelc  2013           16 Jun 19 23:13:53 *
+**************************************************************
+User     : Full professional version
+Notebook : helper_functions
+Evaluation time                 : 0 s     Mode  : Optimal
+Number of formulae              : 1       Method: Automatic
+Subroutine                      : Tensor_ijjk size: 353
+Total size of Mathematica  code : 353 subexpressions
+Total size of C code            : 463 bytes */
+#include \"sms.h\"
+
+/******************* S U B R O U T I N E *********************/
+void Tensor_ijjk(double A[9],double B[9],double C[9])
+{
+double v[138];
+C[0]=A[0]*B[0]+A[1]*B[3]+A[2]*B[6];
+C[1]=A[0]*B[1]+A[1]*B[4]+A[2]*B[7];
+C[2]=A[0]*B[2]+A[1]*B[5]+A[2]*B[8];
+C[3]=A[3]*B[0]+A[4]*B[3]+A[5]*B[6];
+C[4]=A[3]*B[1]+A[4]*B[4]+A[5]*B[7];
+C[5]=A[3]*B[2]+A[4]*B[5]+A[5]*B[8];
+C[6]=A[6]*B[0]+A[7]*B[3]+A[8]*B[6];
+C[7]=A[6]*B[1]+A[7]*B[4]+A[8]*B[7];
+C[8]=A[6]*B[2]+A[7]*B[5]+A[8]*B[8];
+};\
+\>", "Print",
+ CellChangeTimes->{{3.769708417797884*^9, 3.769708433338881*^9}},
+ CellLabel->
+  "During evaluation of \
+In[538]:=",ExpressionUUID->"6668710f-f4ec-4aa0-a463-7e61f0cf5f5c"]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"<<", "AceGen`"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSInitialize", "[", 
+   RowBox[{"\"\<Tensor_ijkj\>\"", ",", 
+    RowBox[{"\"\<Language\>\"", "\[Rule]", "\"\<C++\>\""}], ",", 
+    RowBox[{"\"\<Mode\>\"", "\[Rule]", "\"\<Optimal\>\""}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSModule", "[", 
+   RowBox[{"\"\<Tensor_ijkj\>\"", ",", 
+    RowBox[{"Real", "[", 
+     RowBox[{
+      RowBox[{"A$$", "[", "9", "]"}], ",", 
+      RowBox[{"B$$", "[", "9", "]"}], ",", 
+      RowBox[{"C$$", "[", "9", "]"}]}], "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"A", "\[RightTee]", 
+   RowBox[{"Partition", "[", 
+    RowBox[{
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"SMSReal", "[", 
+        RowBox[{"A$$", "[", "i", "]"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "9"}], "}"}]}], "]"}], ",", "3"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"B", "\[RightTee]", 
+   RowBox[{"Partition", "[", 
+    RowBox[{
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"SMSReal", "[", 
+        RowBox[{"B$$", "[", "i", "]"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "9"}], "}"}]}], "]"}], ",", "3"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"c", "\[DoubleRightTee]", 
+   RowBox[{"A", ".", 
+    RowBox[{"B", "\[Transpose]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSExport", "[", 
+   RowBox[{
+    RowBox[{"Flatten", "[", "c", "]"}], ",", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"C$$", "[", "i", "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "9"}], "}"}]}], "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSWrite", "[", 
+   RowBox[{"\"\<LocalAuxiliaryVariables\>\"", "\[Rule]", "True"}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"FilePrint", "[", "\"\<Tensor_ijkj.cpp\>\"", "]"}]}], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10001.},
+ CellChangeTimes->{{3.768890734805004*^9, 3.768890812812297*^9}, {
+   3.768890880097413*^9, 3.7688909903056583`*^9}, 3.76967005325349*^9, {
+   3.769670096772489*^9, 3.7696701343116837`*^9}, {3.769670166465329*^9, 
+   3.769670228778764*^9}, 3.769672991073122*^9, {3.769673130499505*^9, 
+   3.7696732135782843`*^9}, {3.769673316778956*^9, 3.7696733501678133`*^9}, {
+   3.76970769428365*^9, 3.769707865860821*^9}, {3.769708402446237*^9, 
+   3.769708431948193*^9}, {3.769708533108151*^9, 3.7697085430875883`*^9}},
+ CellLabel->
+  "In[547]:=",ExpressionUUID->"d2c294f4-50ea-4efb-8ed3-17fe1b4adac9"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     TemplateBox[{StyleBox["\"File: \"", Bold, 
+        RGBColor[0, 0, 1], StripOnInput -> False],"\"Tensor_ijkj.cpp\"",
+       StyleBox["\"  Size: \"", Bold, 
+        RGBColor[0, 0, 1], StripOnInput -> False],"1071",StyleBox[
+       "\"  Time: \"", Bold, 
+        RGBColor[0, 0, 1], StripOnInput -> False],"0"},
+      "RowDefault"]},
+    {
+     TagBox[GridBox[{
+        {
+         StyleBox["\<\"Method\"\>",
+          StripOnInput->False,
+          LineColor->RGBColor[0, 0, 1],
+          FrontFaceColor->RGBColor[0, 0, 1],
+          BackFaceColor->RGBColor[0, 0, 1],
+          GraphicsColor->RGBColor[0, 0, 1],
+          FontWeight->Bold,
+          FontColor->RGBColor[0, 0, 1]], 
+         StyleBox["\<\"Tensor_ijkj\"\>",
+          StripOnInput->False,
+          LineColor->RGBColor[0, 0, 1],
+          FrontFaceColor->RGBColor[0, 0, 1],
+          BackFaceColor->RGBColor[0, 0, 1],
+          GraphicsColor->RGBColor[0, 0, 1],
+          FontColor->RGBColor[0, 0, 1]]},
+        {
+         StyleBox["\<\"No.Formulae\"\>",
+          StripOnInput->False,
+          LineColor->RGBColor[0, 0, 1],
+          FrontFaceColor->RGBColor[0, 0, 1],
+          BackFaceColor->RGBColor[0, 0, 1],
+          GraphicsColor->RGBColor[0, 0, 1],
+          FontWeight->Bold,
+          FontColor->RGBColor[0, 0, 1]], "1"},
+        {
+         StyleBox["\<\"No.Leafs\"\>",
+          StripOnInput->False,
+          LineColor->RGBColor[0, 0, 1],
+          FrontFaceColor->RGBColor[0, 0, 1],
+          BackFaceColor->RGBColor[0, 0, 1],
+          GraphicsColor->RGBColor[0, 0, 1],
+          FontWeight->Bold,
+          FontColor->RGBColor[0, 0, 1]], "353"}
+       },
+       AutoDelete->False,
+       GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Center}}},
+       GridBoxDividers->{"Columns" -> {True, True}},
+       GridBoxFrame->{"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"]}
+   },
+   DefaultBaseStyle->"Column",
+   GridBoxAlignment->{"Columns" -> {{Left}}},
+   GridBoxDividers->{"Rows" -> {True, True}},
+   GridBoxFrame->{"Columns" -> False, "Rows" -> False},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Column"]], "Print",
+ CellChangeTimes->{3.769708544659706*^9},
+ CellLabel->
+  "During evaluation of \
+In[547]:=",ExpressionUUID->"73129143-5a6b-4fac-be88-a1162528ff59"],
+
+Cell["\<\
+/*************************************************************
+* AceGen    6.923 MacOSX (19 Apr 19)                         *
+*           Co. J. Korelc  2013           16 Jun 19 23:15:44 *
+**************************************************************
+User     : Full professional version
+Notebook : helper_functions
+Evaluation time                 : 0 s     Mode  : Optimal
+Number of formulae              : 1       Method: Automatic
+Subroutine                      : Tensor_ijkj size: 353
+Total size of Mathematica  code : 353 subexpressions
+Total size of C code            : 463 bytes */
+#include \"sms.h\"
+
+/******************* S U B R O U T I N E *********************/
+void Tensor_ijkj(double A[9],double B[9],double C[9])
+{
+double v[138];
+C[0]=A[0]*B[0]+A[1]*B[1]+A[2]*B[2];
+C[1]=A[0]*B[3]+A[1]*B[4]+A[2]*B[5];
+C[2]=A[0]*B[6]+A[1]*B[7]+A[2]*B[8];
+C[3]=A[3]*B[0]+A[4]*B[1]+A[5]*B[2];
+C[4]=A[3]*B[3]+A[4]*B[4]+A[5]*B[5];
+C[5]=A[3]*B[6]+A[4]*B[7]+A[5]*B[8];
+C[6]=A[6]*B[0]+A[7]*B[1]+A[8]*B[2];
+C[7]=A[6]*B[3]+A[7]*B[4]+A[8]*B[5];
+C[8]=A[6]*B[6]+A[7]*B[7]+A[8]*B[8];
+};\
+\>", "Print",
+ CellChangeTimes->{3.769708544671915*^9},
+ CellLabel->
+  "During evaluation of \
+In[547]:=",ExpressionUUID->"c5593b32-297e-4c0d-8f23-cc4d004b1908"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"<<", "AceGen`"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSInitialize", "[", 
+   RowBox[{"\"\<Tensor_jijk\>\"", ",", 
+    RowBox[{"\"\<Language\>\"", "\[Rule]", "\"\<C++\>\""}], ",", 
+    RowBox[{"\"\<Mode\>\"", "\[Rule]", "\"\<Optimal\>\""}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSModule", "[", 
+   RowBox[{"\"\<Tensor_jijk\>\"", ",", 
+    RowBox[{"Real", "[", 
+     RowBox[{
+      RowBox[{"A$$", "[", "9", "]"}], ",", 
+      RowBox[{"B$$", "[", "9", "]"}], ",", 
+      RowBox[{"C$$", "[", "9", "]"}]}], "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"A", "\[RightTee]", 
+   RowBox[{"Partition", "[", 
+    RowBox[{
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"SMSReal", "[", 
+        RowBox[{"A$$", "[", "i", "]"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "9"}], "}"}]}], "]"}], ",", "3"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"B", "\[RightTee]", 
+   RowBox[{"Partition", "[", 
+    RowBox[{
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"SMSReal", "[", 
+        RowBox[{"B$$", "[", "i", "]"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "9"}], "}"}]}], "]"}], ",", "3"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"c", "\[DoubleRightTee]", 
+   RowBox[{"A", ".", "B"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSExport", "[", 
+   RowBox[{
+    RowBox[{"Flatten", "[", "c", "]"}], ",", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"C$$", "[", "i", "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "9"}], "}"}]}], "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSWrite", "[", 
+   RowBox[{"\"\<LocalAuxiliaryVariables\>\"", "\[Rule]", "True"}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"FilePrint", "[", "\"\<Tensor_jijk.cpp\>\"", "]"}]}], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10001.},
+ CellChangeTimes->{{3.768890734805004*^9, 3.768890812812297*^9}, {
+   3.768890880097413*^9, 3.7688909903056583`*^9}, 3.76967005325349*^9, {
+   3.769670096772489*^9, 3.7696701343116837`*^9}, {3.769670166465329*^9, 
+   3.769670228778764*^9}, 3.769672991073122*^9, {3.769673130499505*^9, 
+   3.7696732135782843`*^9}, {3.769673316778956*^9, 3.7696733501678133`*^9}, {
+   3.76970769428365*^9, 3.769707865860821*^9}, {3.769708402446237*^9, 
+   3.769708431948193*^9}, {3.769708533108151*^9, 3.7697085430875883`*^9}, {
+   3.7697087312411346`*^9, 
+   3.769708749048274*^9}},ExpressionUUID->"68f20c73-55fa-4c46-8b2f-\
+d35daf4ba007"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"<<", "AceGen`"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSInitialize", "[", 
+   RowBox[{"\"\<P_FT\>\"", ",", 
+    RowBox[{"\"\<Language\>\"", "\[Rule]", "\"\<C++\>\""}], ",", 
+    RowBox[{"\"\<Mode\>\"", "\[Rule]", "\"\<Optimal\>\""}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSModule", "[", 
+   RowBox[{"\"\<P_FT\>\"", ",", 
+    RowBox[{"Real", "[", 
+     RowBox[{
+      RowBox[{"P$$", "[", "9", "]"}], ",", 
+      RowBox[{"F$$", "[", "9", "]"}], ",", 
+      RowBox[{"T$$", "[", "9", "]"}]}], "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"P", "\[RightTee]", 
+   RowBox[{"Partition", "[", 
+    RowBox[{
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"SMSReal", "[", 
+        RowBox[{"P$$", "[", "i", "]"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "9"}], "}"}]}], "]"}], ",", "3"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"F", "\[RightTee]", 
+   RowBox[{"Partition", "[", 
+    RowBox[{
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"SMSReal", "[", 
+        RowBox[{"F$$", "[", "i", "]"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "9"}], "}"}]}], "]"}], ",", "3"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"T", "\[DoubleRightTee]", 
+   RowBox[{"P", ".", 
+    RowBox[{"F", "\[Transpose]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSExport", "[", 
+   RowBox[{
+    RowBox[{"Flatten", "[", "T", "]"}], ",", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"T$$", "[", "i", "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "9"}], "}"}]}], "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SMSWrite", "[", 
+   RowBox[{"\"\<LocalAuxiliaryVariables\>\"", "\[Rule]", "True"}], "]"}], 
+  ";"}]}], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10001.},
+ CellChangeTimes->{{3.768890734805004*^9, 3.768890812812297*^9}, {
+   3.768890880097413*^9, 3.7688909903056583`*^9}, 3.76967005325349*^9, {
+   3.769670096772489*^9, 3.7696701343116837`*^9}, {3.769670166465329*^9, 
+   3.769670228778764*^9}, 3.769672991073122*^9, {3.769673130499505*^9, 
+   3.7696732135782843`*^9}, {3.769673316778956*^9, 3.7696733501678133`*^9}},
+ CellLabel->
+  "In[458]:=",ExpressionUUID->"5c3af06c-9941-42fe-8046-047014c96760"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     TemplateBox[{StyleBox["\"File: \"", Bold, 
+        RGBColor[0, 0, 1], StripOnInput -> False],"\"P_FT.cpp\"",StyleBox[
+       "\"  Size: \"", Bold, 
+        RGBColor[0, 0, 1], StripOnInput -> False],"1057",StyleBox[
+       "\"  Time: \"", Bold, 
+        RGBColor[0, 0, 1], StripOnInput -> False],"0"},
+      "RowDefault"]},
+    {
+     TagBox[GridBox[{
+        {
+         StyleBox["\<\"Method\"\>",
+          StripOnInput->False,
+          LineColor->RGBColor[0, 0, 1],
+          FrontFaceColor->RGBColor[0, 0, 1],
+          BackFaceColor->RGBColor[0, 0, 1],
+          GraphicsColor->RGBColor[0, 0, 1],
+          FontWeight->Bold,
+          FontColor->RGBColor[0, 0, 1]], 
+         StyleBox["\<\"P_FT\"\>",
+          StripOnInput->False,
+          LineColor->RGBColor[0, 0, 1],
+          FrontFaceColor->RGBColor[0, 0, 1],
+          BackFaceColor->RGBColor[0, 0, 1],
+          GraphicsColor->RGBColor[0, 0, 1],
+          FontColor->RGBColor[0, 0, 1]]},
+        {
+         StyleBox["\<\"No.Formulae\"\>",
+          StripOnInput->False,
+          LineColor->RGBColor[0, 0, 1],
+          FrontFaceColor->RGBColor[0, 0, 1],
+          BackFaceColor->RGBColor[0, 0, 1],
+          GraphicsColor->RGBColor[0, 0, 1],
+          FontWeight->Bold,
+          FontColor->RGBColor[0, 0, 1]], "1"},
+        {
+         StyleBox["\<\"No.Leafs\"\>",
+          StripOnInput->False,
+          LineColor->RGBColor[0, 0, 1],
+          FrontFaceColor->RGBColor[0, 0, 1],
+          BackFaceColor->RGBColor[0, 0, 1],
+          GraphicsColor->RGBColor[0, 0, 1],
+          FontWeight->Bold,
+          FontColor->RGBColor[0, 0, 1]], "353"}
        },
        AutoDelete->False,
        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Center}}},
@@ -499,53 +1410,63 @@ Cell[BoxData[
    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
   "Column"]], "Print",
  CellGroupingRules->{"GroupTogetherGrouping", 10001.},
- CellChangeTimes->{3.7688910016611*^9, 3.7696700532536592`*^9, 
-  3.769670231248767*^9, 3.7696729910733013`*^9},
+ CellChangeTimes->{
+  3.7688910016611*^9, 3.7696700532536592`*^9, 3.769670231248767*^9, 
+   3.7696729910733013`*^9, {3.7696733052314672`*^9, 3.769673319896521*^9}, 
+   3.769673355460335*^9},
  CellLabel->
   "During evaluation of \
-In[206]:=",ExpressionUUID->"19b8f3ff-a7cb-4be8-aff0-e054c54c1531"],
+In[458]:=",ExpressionUUID->"ac557b09-4f9c-4c80-944d-18192d265a10"],
 
 Cell[BoxData[
- RowBox[{"FilePrint", "[", "\"\<Determinant.cpp\>\"", "]"}]], "Input",
+ RowBox[{"FilePrint", "[", "\"\<P_FT.cpp\>\"", "]"}]], "Input",
  CellGroupingRules->{"GroupTogetherGrouping", 10001.},
  CellChangeTimes->{{3.768891003953616*^9, 3.768891020005309*^9}, 
-   3.769670053253776*^9, 3.769670113839911*^9, 3.769672991073494*^9},
+   3.769670053253776*^9, 3.769670113839911*^9, 3.769672991073494*^9, 
+   3.769673353566782*^9},
  CellLabel->
-  "In[213]:=",ExpressionUUID->"56f05213-38fa-4650-b96e-6996fc1dee55"],
+  "In[466]:=",ExpressionUUID->"56f05213-38fa-4650-b96e-6996fc1dee55"],
 
 Cell["\<\
 /*************************************************************
 * AceGen    6.923 MacOSX (19 Apr 19)                         *
-*           Co. J. Korelc  2013           16 Jun 19 12:37:11 *
+*           Co. J. Korelc  2013           16 Jun 19 13:29:15 *
 **************************************************************
 User     : Full professional version
 Notebook : helper_functions
 Evaluation time                 : 0 s     Mode  : Optimal
 Number of formulae              : 1       Method: Automatic
-Subroutine                      : Determinant size: 98
-Total size of Mathematica  code : 98 subexpressions
-Total size of C code            : 229 bytes */
+Subroutine                      : P_FT size: 353
+Total size of Mathematica  code : 353 subexpressions
+Total size of C code            : 456 bytes */
 #include \"sms.h\"
 
 /******************* S U B R O U T I N E *********************/
-void Determinant(double F[9],double (*detF))
+void P_FT(double P[9],double F[9],double T[9])
 {
-double v[121];
-(*detF)=F[2]*(-(F[4]*F[6])+F[3]*F[7])-F[1]*(-(F[5]*F[6])+F[3]*F[8])+F[0]*(-(F[\
-5]*F[7])+F[4]*F[8]);
+double v[138];
+T[0]=F[0]*P[0]+F[1]*P[1]+F[2]*P[2];
+T[1]=F[3]*P[0]+F[4]*P[1]+F[5]*P[2];
+T[2]=F[6]*P[0]+F[7]*P[1]+F[8]*P[2];
+T[3]=F[0]*P[3]+F[1]*P[4]+F[2]*P[5];
+T[4]=F[3]*P[3]+F[4]*P[4]+F[5]*P[5];
+T[5]=F[6]*P[3]+F[7]*P[4]+F[8]*P[5];
+T[6]=F[0]*P[6]+F[1]*P[7]+F[2]*P[8];
+T[7]=F[3]*P[6]+F[4]*P[7]+F[5]*P[8];
+T[8]=F[6]*P[6]+F[7]*P[7]+F[8]*P[8];
 };\
 \>", "Print",
  CellGroupingRules->{"GroupTogetherGrouping", 10001.},
  CellChangeTimes->{3.7688910203807783`*^9, 3.7696700532539263`*^9, 
-  3.769670235717661*^9, 3.7696729910736523`*^9},
+  3.769670235717661*^9, 3.7696729910736523`*^9, 3.769673356540902*^9},
  CellLabel->
   "During evaluation of \
-In[213]:=",ExpressionUUID->"ffcfecff-75e4-4412-83fd-90ed03c8e4b8"]
+In[466]:=",ExpressionUUID->"30ff6402-b0f9-44d0-9074-2065d5a3f257"]
 }, Open  ]]
 }, Open  ]]
 },
 WindowSize->{808, 855},
-WindowMargins->{{Automatic, 185}, {Automatic, 180}},
+WindowMargins->{{Automatic, 127}, {Automatic, 690}},
 FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
 ]
@@ -572,32 +1493,68 @@ Cell[3075, 94, 2508, 64, 86, "Print",ExpressionUUID->"d49c94b0-9473-47e5-9333-e8
 Cell[5586, 160, 317, 6, 30, "Input",ExpressionUUID->"e28b7826-f02e-4dd8-9a64-8afca16b3fc4",
  CellGroupingRules->{"GroupTogetherGrouping", 10000.}],
 Cell[5906, 168, 1231, 28, 364, "Print",ExpressionUUID->"5f443b54-b998-4b27-84e3-2274f1b0a494",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.}],
+Cell[7140, 198, 2184, 60, 197, "Input",ExpressionUUID->"3c463f32-f630-4ba0-b98b-98c39d377f04",
  CellGroupingRules->{"GroupTogetherGrouping", 10000.}]
 }, Open  ]],
+Cell[9339, 261, 2454, 63, 86, "Print",ExpressionUUID->"b47efc2f-7e3c-4d9c-94ac-a1bbfc6cbe6b"],
+Cell[11796, 326, 363, 6, 30, "Input",ExpressionUUID->"8737e258-88af-4703-a978-3a5baa74e660",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.}],
+Cell[12162, 334, 1133, 27, 364, "Print",ExpressionUUID->"cbcfeca0-0545-4048-9549-876e137165ce"],
 Cell[CellGroupData[{
-Cell[7174, 201, 301, 5, 53, "Subtitle",ExpressionUUID->"6e030a5d-0014-4ae6-855c-74412e080793",
+Cell[13320, 365, 301, 5, 53, "Subtitle",ExpressionUUID->"6e030a5d-0014-4ae6-855c-74412e080793",
  CellGroupingRules->{"GroupTogetherGrouping", 10001.}],
-Cell[7478, 208, 248, 4, 54, "Subsection",ExpressionUUID->"6e85096f-5009-49e5-a598-dad899e8030a",
+Cell[13624, 372, 248, 4, 54, "Subsection",ExpressionUUID->"6e85096f-5009-49e5-a598-dad899e8030a",
  CellGroupingRules->{"GroupTogetherGrouping", 10001.}],
-Cell[7729, 214, 1665, 43, 157, "Input",ExpressionUUID->"a2edf0e3-3317-41ed-ad2a-7278db547a72",
+Cell[13875, 378, 1665, 43, 157, "Input",ExpressionUUID->"a2edf0e3-3317-41ed-ad2a-7278db547a72",
  CellGroupingRules->{"GroupTogetherGrouping", 10001.}],
-Cell[9397, 259, 2550, 65, 86, "Print",ExpressionUUID->"0101e255-74ef-4424-be1c-ce004ebb7c62",
+Cell[15543, 423, 2550, 65, 86, "Print",ExpressionUUID->"0101e255-74ef-4424-be1c-ce004ebb7c62",
  CellGroupingRules->{"GroupTogetherGrouping", 10001.}],
-Cell[11950, 326, 358, 6, 30, "Input",ExpressionUUID->"aa938935-33fe-4f6c-a730-e04136047d64",
+Cell[18096, 490, 358, 6, 30, "Input",ExpressionUUID->"aa938935-33fe-4f6c-a730-e04136047d64",
  CellGroupingRules->{"GroupTogetherGrouping", 10001.}],
-Cell[12311, 334, 1141, 27, 330, "Print",ExpressionUUID->"23bff0f1-c5f2-4cb9-8695-56675714580d",
+Cell[18457, 498, 1141, 27, 330, "Print",ExpressionUUID->"23bff0f1-c5f2-4cb9-8695-56675714580d",
  CellGroupingRules->{"GroupTogetherGrouping", 10001.}],
-Cell[13455, 363, 331, 5, 53, "Subtitle",ExpressionUUID->"253cc602-19a8-496d-9a24-ccaee11e44de",
+Cell[19601, 527, 301, 5, 54, "Subsection",ExpressionUUID->"3e48bf02-844c-4727-9173-bdac9d2b01a9",
  CellGroupingRules->{"GroupTogetherGrouping", 10001.}],
-Cell[13789, 370, 248, 4, 54, "Subsection",ExpressionUUID->"d3a4b602-4317-4dd9-af56-2b6bd61c926a",
+Cell[19905, 534, 1756, 45, 157, "Input",ExpressionUUID->"f284a521-3817-4062-aaa0-853e06234aa7",
+ CellGroupingRules->{"GroupTogetherGrouping", 10001.}]
+}, Open  ]],
+Cell[21676, 582, 2425, 63, 86, "Print",ExpressionUUID->"f36231bd-32bb-4c4c-9a17-28eba6a44e64"],
+Cell[24104, 647, 358, 6, 30, "Input",ExpressionUUID->"86c0375a-535b-477d-8f98-3df4b3d61746",
  CellGroupingRules->{"GroupTogetherGrouping", 10001.}],
-Cell[14040, 376, 2243, 62, 178, "Input",ExpressionUUID->"5c3af06c-9941-42fe-8046-047014c96760",
+Cell[24465, 655, 1065, 26, 347, "Print",ExpressionUUID->"b5b45dd5-17cf-488b-9f61-9a265c8463bc"],
+Cell[CellGroupData[{
+Cell[25555, 685, 331, 5, 53, "Subtitle",ExpressionUUID->"253cc602-19a8-496d-9a24-ccaee11e44de",
  CellGroupingRules->{"GroupTogetherGrouping", 10001.}],
-Cell[16286, 440, 2550, 65, 86, "Print",ExpressionUUID->"19b8f3ff-a7cb-4be8-aff0-e054c54c1531",
+Cell[25889, 692, 2640, 71, 199, "Input",ExpressionUUID->"0e040d80-0bf9-43aa-9942-178530228887",
+ CellGroupingRules->{"GroupTogetherGrouping", 10001.}]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[28566, 768, 2453, 63, 86, "Print",ExpressionUUID->"c9bd06b9-a2cb-496e-a8e9-d7c186d4a21e"],
+Cell[31022, 833, 1129, 33, 466, "Print",ExpressionUUID->"24506e20-dbfd-4251-84bb-a64d5e362ff9"]
+}, Open  ]],
+Cell[32166, 869, 2526, 67, 199, "Input",ExpressionUUID->"ff101cfd-7735-4a6f-8186-a43b4ed6755e",
  CellGroupingRules->{"GroupTogetherGrouping", 10001.}],
-Cell[18839, 507, 358, 6, 30, "Input",ExpressionUUID->"56f05213-38fa-4650-b96e-6996fc1dee55",
+Cell[CellGroupData[{
+Cell[34717, 940, 2450, 63, 86, "Print",ExpressionUUID->"e0af1276-0031-4c5d-9cff-9649ddbd4bc5"],
+Cell[37170, 1005, 1269, 32, 466, "Print",ExpressionUUID->"6668710f-f4ec-4aa0-a463-7e61f0cf5f5c"]
+}, Open  ]],
+Cell[38454, 1040, 2605, 68, 199, "Input",ExpressionUUID->"d2c294f4-50ea-4efb-8ed3-17fe1b4adac9",
  CellGroupingRules->{"GroupTogetherGrouping", 10001.}],
-Cell[19200, 515, 1141, 27, 330, "Print",ExpressionUUID->"ffcfecff-75e4-4412-83fd-90ed03c8e4b8",
+Cell[CellGroupData[{
+Cell[41084, 1112, 2426, 63, 86, "Print",ExpressionUUID->"73129143-5a6b-4fac-be88-a1162528ff59"],
+Cell[43513, 1177, 1245, 32, 466, "Print",ExpressionUUID->"c5593b32-297e-4c0d-8f23-cc4d004b1908"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[44795, 1214, 2604, 68, 199, "Input",ExpressionUUID->"68f20c73-55fa-4c46-8b2f-d35daf4ba007",
+ CellGroupingRules->{"GroupTogetherGrouping", 10001.}],
+Cell[47402, 1284, 2359, 65, 178, "Input",ExpressionUUID->"5c3af06c-9941-42fe-8046-047014c96760",
+ CellGroupingRules->{"GroupTogetherGrouping", 10001.}],
+Cell[49764, 1351, 2616, 67, 86, "Print",ExpressionUUID->"ac557b09-4f9c-4c80-944d-18192d265a10",
+ CellGroupingRules->{"GroupTogetherGrouping", 10001.}],
+Cell[52383, 1420, 377, 7, 30, "Input",ExpressionUUID->"56f05213-38fa-4650-b96e-6996fc1dee55",
+ CellGroupingRules->{"GroupTogetherGrouping", 10001.}],
+Cell[52763, 1429, 1383, 34, 466, "Print",ExpressionUUID->"30ff6402-b0f9-44d0-9074-2065d5a3f257",
  CellGroupingRules->{"GroupTogetherGrouping", 10001.}]
 }, Open  ]]
 }, Open  ]]
