@@ -1,6 +1,7 @@
 #include <MPM_OutputVTK.hpp>
 #include <iostream>
 #include <fstream>
+#include <sstream>
 #include <string>
 
 MPMOutputVTK::MPMOutputVTK(){}
@@ -387,7 +388,11 @@ void MPMOutputVTK::WriteOutput(double &t){
     VTUParticleExport(OutputFile, *(ParticleOutputParticleContainers[i]), ParticleOutputDataNames[i]);
 
     // For each written outputfile add an entry for pvd
-    std::vector<std::string> NewFile = {OutputFile,std::to_string(t)};
+    // conversion t to time need care as t can be very small
+    std::stringstream stream ;
+    stream << t ;
+    std::string TIME = stream.str() ;
+    std::vector<std::string> NewFile = {OutputFile,TIME};
     OutputFileContainer.push_back(NewFile);
 
     // Increment counter

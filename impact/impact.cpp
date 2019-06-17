@@ -353,12 +353,13 @@ static std::vector<MPMGridNode> GridNode;
 static std::vector<MPMGridElement> GridElement;
 static double MassTolerance = 10e-6;
 
-double t0 = 0.0; double tmax = 40.0e-6; double dt = 1.18e-8; int step = 0;
+//double t0 = 0.0; double tmax = 40.0e-6; double dt = 1.18e-8; int step = 0;
+double t0 = 0.0; double tmax = 40.0e-6; double dt = 1.18e-6; int step = 0;
 
-bool ParaviewOutput = true; int PostFrequency = 100;
-std::string ImpactorOutputFile  = "/Users/sash/mpm_2d/impact/post/Impactor";
-std::string TargetOutputFile = "/Users/sash/mpm_2d/impact/post/Target";
-std::string GridOutputFile  = "/Users/sash/mpm_2d/impact/post/Grid";
+bool ParaviewOutput = true; int PostFrequency = 10;
+//std::string ImpactorOutputFile  = "/Users/sash/mpm_2d/impact/post/Impactor";
+//std::string TargetOutputFile = "/Users/sash/mpm_2d/impact/post/Target";
+//std::string GridOutputFile  = "/Users/sash/mpm_2d/impact/post/Grid";
 
 // Setup Material Impactor
 static int    MatIDs  = 5;
@@ -388,6 +389,10 @@ int main(){
   std::cout << "_____________________Welcome to MPM2D!____________________\n";
 
   MPMOutputVTK VTKExport;
+  MPMOutputVTK VTKOut("Impact");
+  VTKOut.SetOutput("/Users/sash/mpm_2d/impact/post/TwoDisks_Plastic_Target", Target, {"SigMises","MaterialState","V"});
+  VTKOut.SetOutput("/Users/sash/mpm_2d/impact/post/TwoDisks_Plastic_Impactor", Impactor, {});
+
 
   MPMMaterial Steel(MatIDs);
   Steel.SetMaterialParameter(Emods);
@@ -416,9 +421,10 @@ int main(){
   V0[0]=0e0; V0[1]=0e0; V0[2]=0e0;
   SetInitialCondition(Target, 2700.0, V0);
 
-  VTKExport.TestVTUParticleExport(ImpactorOutputFile  + "_" + std::to_string(step) + ".vtu", Impactor);
-  VTKExport.TestVTUParticleExport(TargetOutputFile    + "_" + std::to_string(step) + ".vtu", Target);
-  VTKExport.TestVTUGridExport(    GridOutputFile      + "_" + std::to_string(step) + ".vtu",GridNode,GridElement);
+  VTKOut.WriteOutput(t0);
+  //VTKExport.TestVTUParticleExport(ImpactorOutputFile  + "_" + std::to_string(step) + ".vtu", Impactor);
+  //VTKExport.TestVTUParticleExport(TargetOutputFile    + "_" + std::to_string(step) + ".vtu", Target);
+  //VTKExport.TestVTUGridExport(    GridOutputFile      + "_" + std::to_string(step) + ".vtu",GridNode,GridElement);
 
   for (double t=t0;t<tmax;t=t+dt){
 
@@ -436,17 +442,18 @@ int main(){
 
     MPM::StatusBar(step, t, tmax, dt);
     if ((step % PostFrequency)==0) {
-      VTKExport.TestVTUParticleExport(ImpactorOutputFile  + "_" + std::to_string(step) + ".vtu", Impactor);
-      VTKExport.TestVTUParticleExport(TargetOutputFile    + "_" + std::to_string(step) + ".vtu", Target);
-      VTKExport.TestVTUGridExport(    GridOutputFile      + "_" + std::to_string(step) + ".vtu",GridNode,GridElement);
+      VTKOut.WriteOutput(t);
+      //VTKExport.TestVTUParticleExport(ImpactorOutputFile  + "_" + std::to_string(step) + ".vtu", Impactor);
+      //VTKExport.TestVTUParticleExport(TargetOutputFile    + "_" + std::to_string(step) + ".vtu", Target);
+      //VTKExport.TestVTUGridExport(    GridOutputFile      + "_" + std::to_string(step) + ".vtu",GridNode,GridElement);
     }
     step++;
   }
   std::cout << std::endl;
-
-  VTKExport.TestVTUParticleExport(ImpactorOutputFile  + "_" + std::to_string(step) + ".vtu", Impactor);
-  VTKExport.TestVTUParticleExport(TargetOutputFile    + "_" + std::to_string(step) + ".vtu", Target);
-  VTKExport.TestVTUGridExport(    GridOutputFile      + "_" + std::to_string(step) + ".vtu",GridNode,GridElement);
+  VTKOut.WriteOutput(tmax);
+  //VTKExport.TestVTUParticleExport(ImpactorOutputFile  + "_" + std::to_string(step) + ".vtu", Impactor);
+  //VTKExport.TestVTUParticleExport(TargetOutputFile    + "_" + std::to_string(step) + ".vtu", Target);
+  //VTKExport.TestVTUGridExport(    GridOutputFile      + "_" + std::to_string(step) + ".vtu",GridNode,GridElement);
 
   std::cout << "_________________________ The End ________________________\n";
   return 0;
