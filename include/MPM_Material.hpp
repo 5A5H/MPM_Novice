@@ -4,6 +4,7 @@
 #include <vector>
 #include <iostream>
 #include <MPM_AceMaterials.hpp>
+#include <ELSE_ContiMechLibrary.hpp>
 
 #include <math.h>
 
@@ -15,7 +16,7 @@ class MPMMaterial {
 
       void SetMaterialParameter(double InputMaterialParameter);
       double *getStresses(double F[9]);                                       // for now only F but for future extended with optional args. e.g. time dependent
-      void GetStresses(double F[3][3], double h[20], double Sig[3][3] ,std::vector<double> &MaterialIO);
+      void GetStresses(double F[3][3], double h[20], double Sig[3][3] ,double MaterialIO[20]);
       void Report(void);                          // A Member Function to print out a report of this object
 
   private:
@@ -153,7 +154,7 @@ double *MPMMaterial::getStresses(double F[9]){                                  
   return Sig;                                                                   // Sig = [Sig11,  Sig12,  Sig13,  Sig21,  Sig22,  Sig23,  Sig31,  Sig32,  Sig33]
 }
 
-void MPMMaterial::GetStresses(double F[3][3], double h[20], double Sig[3][3] ,std::vector<double> &MaterialIO){
+void MPMMaterial::GetStresses(double F[3][3], double h[20], double Sig[3][3] , double MaterialIO[20]){
   //
 double Eps[6] = {0,0,0,0,0,0};
 double v[10];                                                                 // vector with auxillary variables (at least for default material)
@@ -293,13 +294,21 @@ MaterialState = (AdditionalData[0]<100)? 0:1; // 0-> elastic, 1->plastic
 MaterialConvergence = (AdditionalData[1]<100)? 0:1; // 0-> convergence, 1->divergence
 MaterialIterations = int( AdditionalData[2] );
 
+MaterialIO[0]=AdditionalData[0];
+MaterialIO[1]=AdditionalData[1];
+MaterialIO[2]=AdditionalData[2];
+MaterialIO[3]=AdditionalData[5];
+
 Det(Fvec, J);
 // extract kirchhoff stresses to sig tensor notation
 Sig[0][0]=AdditionalData[7]*(1/J);Sig[0][1]=AdditionalData[8 ]*(1/J);Sig[0][2]=AdditionalData[9]*(1/J);
 Sig[1][0]=AdditionalData[8]*(1/J);Sig[1][1]=AdditionalData[10]*(1/J);Sig[1][2]=AdditionalData[11]*(1/J);
 Sig[2][0]=AdditionalData[9]*(1/J);Sig[2][1]=AdditionalData[11]*(1/J);Sig[2][2]=AdditionalData[12]*(1/J);
-
-
+// double sigmises;ELSE::Conti::VonMisesStress(Sig,sigmises);
+// if (sigmises > 10e-3 ){
+// std::cout << sigmises << std::endl;
+// std::cout << AdditionalData[5] << std::endl;
+// }
 break;
 
 default:

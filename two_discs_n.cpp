@@ -289,8 +289,7 @@ void GridToParticle(double &dt, MPMMaterial &Mate){
 
 
       // Update Particles Stresses
-      std::vector<double> dummyio;
-      Mate.GetStresses(Pt.F, Pt.h, Pt.Sig, dummyio);
+      Mate.GetStresses(Pt.F, Pt.h, Pt.Sig, Pt.MateData);
 
 
   } // end if particle is alone in the dark ...
@@ -306,7 +305,7 @@ int main()
     MPMTimings.SetTime("Program Start");
 
     double t0 = 0.0;
-    double tmax = 1.5; // 6.5 was good
+    double tmax = 3.5; // 6.5 was good
     double dt = 0.001;
     double rho  = 1000;
     int step = 1;
@@ -380,7 +379,7 @@ int main()
 //---------------------------------------------------------------------------------------------------------------------
     //exp
     MPMOutputVTK VTKOut("TwoDisks_Plastic");
-    VTKOut.SetOutput("/Users/sash/mpm_2d/data/out/TwoDisks_Plastic", Particle, {"SigMises","MaterialState","V"});
+    VTKOut.SetOutput("/Users/sash/mpm_2d/data/out/TwoDisks_Plastic", Particle, {"SigMises","MaterialState","V","MaterialStatus","MaterialIterations","J"});
 
     std::cout << "- Begin Time Integration" << std::endl;
     std::vector<int> PGC;  // PGC ->  ParticleGridConnectivity; holds element connectivity {0->element2 1->element3 .. noparticles->element89}
@@ -412,6 +411,20 @@ int main()
 
     GridToParticle(dt, Steel);
     //Particle[0].Report();
+
+    // for (auto &Pt : Particle){
+    //   double sigmises;
+    //   ELSE::Conti::VonMisesStress(Pt.Sig,sigmises);
+    //   if (sigmises > 100){
+    //     std::cout << "----------" << std::endl;
+    //     std::cout << "Cauchy stress     : " << sigmises << std::endl;
+    //     std::cout << "Kirchhoff stress  : " << Pt.MateData[3] << std::endl;
+    //     std::cout << "MaterialState     : " << Pt.MateData[0] << std::endl;
+    //     std::cout << "MaterialStatus    : " << Pt.MateData[1] << std::endl;
+    //     std::cout << "MaterialIterations: " << Pt.MateData[2] << std::endl;
+    //     //std::cout << "Jacobi            : " << Pt.MateData[2] << std::endl;
+    //   }
+    // }
 
     // PostProcessing and Report
     if(step % PostFrequency == 0){

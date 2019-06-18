@@ -284,7 +284,7 @@ void GridToParticle(double &dt, MPMMaterial &Mate){
 
       // Update Particles Stresses
       double dummyh[20];
-      std::vector<double> dummyio;
+      double dummyio[20];
       Mate.GetStresses(Pt.F, dummyh, Pt.Sig, dummyio);
 
     }// End nodal loop

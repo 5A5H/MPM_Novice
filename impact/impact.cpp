@@ -14,11 +14,13 @@
 #include <MPM_HF.hpp>
 
 #include <ELSE_GeometricLibrary.hpp>
+#include <ELSE_ContiMechLibrary.hpp>
 
 #include <iostream>
 #include <fstream>
 #include <string>
 #include <vector>
+#include <algorithm>
 
 
 //declare function
@@ -332,8 +334,7 @@ void GridToParticle(std::vector<MPMParticle> &Particle, std::vector<MPMGridNode>
 
 
       // Update Particles Stresses
-      std::vector<double> dummyio;
-      Mate.GetStresses(Pt.F, Pt.h, Pt.Sig, dummyio);
+      Mate.GetStresses(Pt.F, Pt.h, Pt.Sig, Pt.MateData);
 
 
   } // end if particle is alone in the dark ...
@@ -353,8 +354,8 @@ static std::vector<MPMGridNode> GridNode;
 static std::vector<MPMGridElement> GridElement;
 static double MassTolerance = 10e-6;
 
-//double t0 = 0.0; double tmax = 40.0e-6; double dt = 1.18e-8; int step = 0;
-double t0 = 0.0; double tmax = 40.0e-6; double dt = 1.18e-6; int step = 0;
+double t0 = 0.0; double tmax = 40.0e-6; double dt = 1.18e-8; int step = 0;
+//double t0 = 0.0; double tmax = 40.0e-6; double dt = 1.18e-6; int step = 0;
 
 bool ParaviewOutput = true; int PostFrequency = 10;
 //std::string ImpactorOutputFile  = "/Users/sash/mpm_2d/impact/post/Impactor";
@@ -371,7 +372,7 @@ static int    MatID   = 6;
 static double Emod    = 78.2e9;
 static double nu      = 0.3;
 static double y_0     = 300.0e6;
-static double y_inf   = 10e100;
+static double y_inf   = 10e10;
 static double kh      = 0;
 static double deltah  = 0;
 
@@ -392,6 +393,7 @@ int main(){
   MPMOutputVTK VTKOut("Impact");
   VTKOut.SetOutput("/Users/sash/mpm_2d/impact/post/TwoDisks_Plastic_Target", Target, {"SigMises","MaterialState","V"});
   VTKOut.SetOutput("/Users/sash/mpm_2d/impact/post/TwoDisks_Plastic_Impactor", Impactor, {});
+  VTKOut.SetOutput("/Users/sash/mpm_2d/impact/post/TwoDisks_Plastic_Grid", GridNode, GridElement, {});
 
 
   MPMMaterial Steel(MatIDs);
@@ -420,8 +422,12 @@ int main(){
   SetInitialCondition(Impactor, 7850.0*2, V0);
   V0[0]=0e0; V0[1]=0e0; V0[2]=0e0;
   SetInitialCondition(Target, 2700.0, V0);
+  // initial displace 0.03
+  for (auto &Pt : Impactor) {Pt.X[1] -= 0.003;}
 
   VTKOut.WriteOutput(t0);
+
+
   //VTKExport.TestVTUParticleExport(ImpactorOutputFile  + "_" + std::to_string(step) + ".vtu", Impactor);
   //VTKExport.TestVTUParticleExport(TargetOutputFile    + "_" + std::to_string(step) + ".vtu", Target);
   //VTKExport.TestVTUGridExport(    GridOutputFile      + "_" + std::to_string(step) + ".vtu",GridNode,GridElement);
@@ -439,10 +445,36 @@ int main(){
     GridToParticle(Target, GridNode, GridElement, dt, Alu, MassTolerance);
     GridToParticle(Impactor, GridNode, GridElement, dt, Steel, MassTolerance);
 
+    // double maxCstress = 0.0;
+    // double maxKstress = 0.0;
+    // for (auto &Pt : Target){
+    //   double sigmises;
+    //   ELSE::Conti::VonMisesStress(Pt.Sig,sigmises);
+    //   if (sigmises > 3e8){
+    //     std::cout << "----------" << std::endl;
+    //     std::cout << "Cauchy stress     : " << sigmises << std::endl;
+    //     std::cout << "Kirchhoff stress  : " << Pt.MateData[3] << std::endl;
+    //     std::cout << "MaterialState     : " << Pt.MateData[0] << std::endl;
+    //     std::cout << "MaterialStatus    : " << Pt.MateData[1] << std::endl;
+    //     std::cout << "MaterialIterations: " << Pt.MateData[2] << std::endl;
+    //     //std::cout << "Jacobi            : " << Pt.MateData[2] << std::endl;
+    //   }
+    // }
 
     MPM::StatusBar(step, t, tmax, dt);
     if ((step % PostFrequency)==0) {
       VTKOut.WriteOutput(t);
+      // double maxCstress = 0.0;
+      // double maxKstress = 0.0;
+      // for (auto &Pt : Target){
+      //   double sigmises;
+      //   ELSE::Conti::VonMisesStress(Pt.Sig,sigmises);
+      //   maxCstress = max(maxCstress,sigmises);
+      //   maxKstress = max(maxKstress,Pt.MateData[3]);
+      // }
+      // std::cout << "Max Cauchy stress: " << maxCstress << std::endl;
+      // std::cout << "Max Kirchhoff stress: " << maxKstress << std::endl;
+      // write out max SigMises and Taumises
       //VTKExport.TestVTUParticleExport(ImpactorOutputFile  + "_" + std::to_string(step) + ".vtu", Impactor);
       //VTKExport.TestVTUParticleExport(TargetOutputFile    + "_" + std::to_string(step) + ".vtu", Target);
       //VTKExport.TestVTUGridExport(    GridOutputFile      + "_" + std::to_string(step) + ".vtu",GridNode,GridElement);

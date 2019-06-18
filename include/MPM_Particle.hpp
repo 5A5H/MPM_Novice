@@ -31,6 +31,7 @@ class MPMParticle {
       double b[3]; //body force
       int Elmt; //current element of the particle
       double h[20]; // material point history
+      double MateData[20];//additional data form material
 
 
       bool checkNAN();
@@ -50,5 +51,12 @@ class MPMParticle {
       // int: 4 -> tensor[9] double
   private:
 };
+
+//MateData
+// 1->MaterialState
+// 2->material convergence
+// 3->no material iterations
+// 4-> final taumises
+
 
 #endif

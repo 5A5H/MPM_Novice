@@ -358,7 +358,112 @@ void MPMOutputVTK::VTUParticleExport(std::string FileName, std::vector<MPMPartic
     OutputFile << "</VTKFile>" << std::endl;
     //close the file stram
     OutputFile.close();
-};
+}
+
+void MPMOutputVTK::VTUGridExport(std::string FileName, std::vector<MPMGridNode> &GridNodes, std::vector<MPMGridElement> &GridElements, std::vector<std::string> GridOutputDataNames){
+  //collecting information
+  //piece information
+  int NumberOfNodes   =   GridNodes.size();
+  int NumberOfCells   =   GridElements.size();
+
+
+  //open a file stream for output
+  std::ofstream OutputFile;
+  OutputFile.open(FileName, std::ios::out);
+  // Write headder
+  OutputFile << "<?xml version=\"1.0\" ?>" << std::endl;
+  OutputFile << "<VTKFile byte_order=\"LittleEndian\" type=\"UnstructuredGrid\" version=\"0.1\">" << std::endl;
+  OutputFile << "<UnstructuredGrid>" << std::endl;
+
+  // Piece 1 -> Particle
+  // Write Piece Headder
+  OutputFile << "<Piece NumberOfCells=\"" << NumberOfCells << "\" NumberOfPoints=\"" << NumberOfNodes << "\">" << std::endl;
+  // Write Points
+  OutputFile << "<Points>" << std::endl;
+
+  OutputFile << "<DataArray NumberOfComponents=\"3\" format=\"ascii\" type=\"Float32\">";
+  for(int i = 0; i < NumberOfNodes; i++){
+    OutputFile << "  " << GridNodes[i].X[0] ;
+    OutputFile << "  " << GridNodes[i].X[1] ;
+    OutputFile << "  " << GridNodes[i].X[2] ;
+  }
+  OutputFile << "</DataArray>" << std::endl;
+
+  OutputFile << "</Points>" << std::endl;
+  // Write Cells
+  OutputFile << "<Cells>" << std::endl;
+
+      OutputFile << "<DataArray Name=\"connectivity\" format=\"ascii\" type=\"Int32\">";
+      for(int i = 0; i < NumberOfCells; i++){
+        OutputFile << "  " << GridElements[i].N1;
+        OutputFile << "  " << GridElements[i].N2;
+        OutputFile << "  " << GridElements[i].N3;
+        OutputFile << "  " << GridElements[i].N4;
+      }
+      OutputFile << "</DataArray>" << std::endl;
+
+      OutputFile << "<DataArray Name=\"offsets\" format=\"ascii\" type=\"Int32\">";
+      for(int i = 0; i < NumberOfCells; i++) OutputFile << "  " << (i+1)*4;
+      OutputFile << "</DataArray>" << std::endl;
+
+
+      OutputFile << "<DataArray Name=\"types\" format=\"ascii\" type=\"UInt8\">";
+      for(int i = 0; i < NumberOfCells; i++) OutputFile << "  " << 9;
+      OutputFile << "</DataArray>" << std::endl;
+
+  OutputFile << "</Cells>" << std::endl;
+
+  // Write Point Data
+     OutputFile << "<PointData>" << std::endl;
+
+//   // Write Point Data
+//   OutputFile << "<PointData>" << std::endl;
+//     // Write Particle Volume
+//     OutputFile << "<DataArray Name=\"Mass\" NumberOfComponents=\"1\" format=\"ascii\" type=\"Float64\">";
+//     for (auto &Node : OutNodeContainer) {
+//       OutputFile << "  " << Node.Mass;
+//     }
+//     OutputFile << "</DataArray>" << std::endl;
+//
+//     // Write Particle Velocity
+//     OutputFile << "<DataArray Name=\"V\" NumberOfComponents=\"3\" format=\"ascii\" type=\"Float64\">";
+//     for(int i = 0; i < NumberOfNodes; i++){
+//       OutputFile << "  " << CuttOff(OutNodeContainer[i].V[0]);
+//       OutputFile << "  " << CuttOff(OutNodeContainer[i].V[1]);
+//       OutputFile << "  " << CuttOff(OutNodeContainer[i].V[2]);
+//     }
+//     OutputFile << "</DataArray>" << std::endl;
+//
+// //------ Write Nodal Momentum
+//     OutputFile << "<DataArray Name=\"Momentum\" NumberOfComponents=\"3\" format=\"ascii\" type=\"Float64\">";
+//     for (auto &Node : OutNodeContainer) {
+//       OutputFile << "  " << CuttOff(Node.Momentum[0]);
+//       OutputFile << "  " << CuttOff(Node.Momentum[1]);
+//       OutputFile << "  " << CuttOff(Node.Momentum[2]);
+//     }
+//     OutputFile << "</DataArray>" << std::endl;
+//
+// //------ Write Nodal Momentum
+//     OutputFile << "<DataArray Name=\"InternalForce\" NumberOfComponents=\"3\" format=\"ascii\" type=\"Float64\">";
+//     for (auto &Node : OutNodeContainer) {
+//       OutputFile << "  " << CuttOff(Node.InternalForce[0]);
+//       OutputFile << "  " << CuttOff(Node.InternalForce[1]);
+//       OutputFile << "  " << CuttOff(Node.InternalForce[2]);
+//     }
+//     OutputFile << "</DataArray>" << std::endl;
+//
+//
+  OutputFile << "</PointData>" << std::endl;
+  // Write Cell Data
+  OutputFile << "<CellData/>" << std::endl;
+  // Write Piece foot
+  OutputFile << "</Piece>" << std::endl;
+  // Write foot
+  OutputFile << "</UnstructuredGrid>" << std::endl;
+  OutputFile << "</VTKFile>" << std::endl;
+  //close the file stram
+  OutputFile.close();
+}
 
 void MPMOutputVTK::SetOutput(std::string FileName, std::vector<MPMParticle> &OutParticleContainer, std::vector<std::string> OutputStrings){
   // if FileName is valid:
@@ -376,6 +481,26 @@ void MPMOutputVTK::SetOutput(std::string FileName, std::vector<MPMParticle> &Out
 
   // if call is successfull
   NoParticleOutputs++;
+
+}
+
+void MPMOutputVTK::SetOutput(std::string FileName, std::vector<MPMGridNode> &GridNodes, std::vector<MPMGridElement> &GridElements, std::vector<std::string> OutputStrings){
+  // if FileName is valid:
+  GridOutputFileNames.push_back(FileName);
+
+  // if grid pointer are valid ...
+  // dummy
+  GridOutputNodeContainers.push_back(&GridNodes);
+  GridOutputElementContainers.push_back(&GridElements);
+
+  // if datanames valid ...
+  GridOutputDataNames.push_back(OutputStrings);
+
+  // set write counter for the just described file to zero
+  GridOutputFileWriteCounter.push_back(0);
+
+  // if call is successfull
+  NoGridOutputs++;
 
 }
 
@@ -399,7 +524,25 @@ void MPMOutputVTK::WriteOutput(double &t){
     ParticleOutputFileWriteCounter[i]++;
 
   }
+  // Write Grid Output Files
+  for (int i=0;i<NoGridOutputs;i++){
+    std::string OutputFile = GridOutputFileNames[i]+ "_" + std::to_string(GridOutputFileWriteCounter[i]) + ".vtu";
 
+    //write the output file
+    //VTUGridExport(OutputFile, *(GridOutputNodeContainers[i]), *(GridOutputElementContainers[i]), GridOutputDataNames[i]);
+
+    // For each written outputfile add an entry for pvd
+    // conversion t to time need care as t can be very small
+    std::stringstream stream ;
+    stream << t ;
+    std::string TIME = stream.str() ;
+    std::vector<std::string> NewFile = {OutputFile,TIME};
+    OutputFileContainer.push_back(NewFile);
+
+    // Increment counter
+    GridOutputFileWriteCounter[i]++;
+
+  }
 
 }
 
@@ -410,6 +553,7 @@ void MPMOutputVTK::WritePVD(){
   // Write headder
   PVDFile << "<VTKFile type=\"Collection\">" << std::endl;
   PVDFile << "<Collection>" << std::endl;
+
 
   for (std::vector<std::string> &WrittenFile : OutputFileContainer){
 

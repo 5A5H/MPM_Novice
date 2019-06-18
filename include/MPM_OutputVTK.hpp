@@ -15,7 +15,8 @@ class MPMOutputVTK {
       MPMOutputVTK();         // Constructor
       MPMOutputVTK(std::string SimName){
         SimulationName=SimName;
-        NoParticleOutputs=0;};         // Constructor
+        NoParticleOutputs=0;
+        NoGridOutputs=0;};         // Constructor
       ~MPMOutputVTK();        // Destructor
 
       void TestVTUParticleExport(std::string FileName, std::vector<MPMParticle> &OutParticleContainer);
@@ -25,9 +26,13 @@ class MPMOutputVTK {
         std::vector<MPMGridElement> &OutElementContainer
       );
       void VTUParticleExport(std::string FileName, std::vector<MPMParticle> &Particles, std::vector<std::string> ParticleOutputDataNames);
+      void VTUGridExport(std::string FileName, std::vector<MPMGridNode> &GridNodes, std::vector<MPMGridElement> &GridElements, std::vector<std::string> GridOutputDataNames);
 
       // Add Particle Output
       void SetOutput(std::string FileName, std::vector<MPMParticle> &OutParticleContainer, std::vector<std::string> OutputStrings);
+      // Add Grid Output
+      void SetOutput(std::string FileName, std::vector<MPMGridNode> &GridNodes, std::vector<MPMGridElement> &GridElements, std::vector<std::string> OutputStrings);
+
       void WriteOutput(double &t);
       void WritePVD();
 
@@ -56,13 +61,20 @@ class MPMOutputVTK {
     std::vector<std::vector<MPMParticle> *> ParticleOutputParticleContainers;
     std::vector<int> ParticleOutputFileWriteCounter;
 
+
+    int NoGridOutputs;
+    //Storage for Grid Outputs
+    std::vector<std::string> GridOutputFileNames;
+    std::vector<std::vector<std::string>> GridOutputDataNames;
+    std::vector<std::vector<MPMGridNode>    *> GridOutputNodeContainers;
+    std::vector<std::vector<MPMGridElement> *> GridOutputElementContainers;
+    std::vector<int> GridOutputFileWriteCounter;
+
+
     //OutputFile Container : Each wirtten file has an entry with
     //                       {Filename+Path, timestamp}
     std::vector<std::vector<std::string>> OutputFileContainer;
 
-    // Function to write the actual VTU-File
-    // The Coordinates and ParticleOutputDataNames of all Particles is written to OutputFile
-    void VTUParticleExport(std::string FileName, std::vector<MPMParticle> *Particles, std::vector<std::string> ParticleOutputDataNames);
 
 };
 

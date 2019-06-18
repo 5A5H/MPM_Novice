@@ -158,6 +158,9 @@ int MPMParticle::GetPost(std::string KEY, std::array<double,9> &RealOut, std::ar
   if (KEY=="Mass"){RealOut[0]=Mass;return 2;}
   if (KEY=="J"){double detF;ELSE::Conti::Det(F,detF);RealOut[0]=detF;return 2;}
   if (KEY=="SigMises"){double sigmises;ELSE::Conti::VonMisesStress(Sig,sigmises);RealOut[0]=sigmises;return 2;}
-  if (KEY=="MaterialState"){IntOut[0]=0;return 1;}
+  if (KEY=="TauMises"){RealOut[0]=MateData[3];return 2;}
+  if (KEY=="MaterialState"){IntOut[0]= (MateData[0]<100)? 0:1;return 1;}
+  if (KEY=="MaterialStatus"){IntOut[0]= (MateData[1]<100)? 0:1;return 1;}
+  if (KEY=="MaterialIterations"){IntOut[0]= int( MateData[2] );return 1;}
   return 0;
 }
