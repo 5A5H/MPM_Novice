@@ -1,13 +1,15 @@
-<Root>
+<InputFile>
 
-<MPMBODY>
+<MPMBODY Name="One" >
+  <Parameter Kind="CSV" File="two_disks_particledata.txt"/>
 </MPMBODY>
 
-<MPMBODY Name="One" Kind="CSV" File="two_disks_particledata.txt">
-</MPMBODY>
+<MPMMaterial Name="Steel" Kind="LinearElasticity_A">
+  <Parameter Name="Youngs modulus" Type="double" Value="1e3"/>
+  <Parameter Name="Possions ratio" Type="double" Value="0.3e0"/>
+  <Parameter Name="Initial Density" Type="double" Value="1e3"/>
+  <Parameter Name="PlaneStress" Type="int" Value="0"/>
+  <Parameter Name="PlaneStress" Type="bool" Value="false"/>
+</MPMMaterial>
 
-<MPMBODY Name="One" Kind="CSV" File="two_disks_particledata.txt">
-</MPMBODY>
-
-
-</Root>
+</InputFile>

@@ -21,7 +21,6 @@
 #include <fstream>
 #include <string>
 #include <vector>
-#include <sys/stat.h> // mkdir
 
 //----------------------------------- Global Variables ----------------------------------------------------------------
 std::vector<MPMParticle> Particle;
@@ -38,6 +37,7 @@ int main(int argc, char** argv)
 
     ELSE::SetupEnvironment(argc, argv);
     ELSE::ReadInputFile(ELSE::InputFileName);
+    //ELSE::LogFile << "22222" << std::endl;
 
 
     // Genrate The Time Tracker
@@ -51,15 +51,9 @@ int main(int argc, char** argv)
 
 
 //------------------------------------------ spatial discretization ---------------------------------------------------
-    std::string InputfileParticle = "two_discs_particledata.txt";
-    std::string InputfileNodes = "two_discs_node.txt";
-    std::string InputfileGrid = "two_discs_element.txt";
-
-    // A log file
-    std::ofstream LogFile;
-    LogFile.open("Else_Files/ThisElseLog", std::ios::out);
-    LogFile << "test" << std::endl;
-    LogFile.close();
+    std::string InputfileParticle = "two_disks_particledata.txt";
+    std::string InputfileNodes = "two_disks_node.txt";
+    std::string InputfileGrid = "two_disks_element.txt";
 
 
     //Read and Create Objects

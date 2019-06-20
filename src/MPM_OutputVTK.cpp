@@ -375,7 +375,6 @@ void MPMOutputVTK::VTUGridExport(std::string FileName, std::vector<MPMGridNode> 
   OutputFile << "<VTKFile byte_order=\"LittleEndian\" type=\"UnstructuredGrid\" version=\"0.1\">" << std::endl;
   OutputFile << "<UnstructuredGrid>" << std::endl;
 
-  // Piece 1 -> Particle
   // Write Piece Headder
   OutputFile << "<Piece NumberOfCells=\"" << NumberOfCells << "\" NumberOfPoints=\"" << NumberOfNodes << "\">" << std::endl;
   // Write Points
@@ -414,45 +413,7 @@ void MPMOutputVTK::VTUGridExport(std::string FileName, std::vector<MPMGridNode> 
   OutputFile << "</Cells>" << std::endl;
 
   // Write Point Data
-     OutputFile << "<PointData>" << std::endl;
-
-//   // Write Point Data
-//   OutputFile << "<PointData>" << std::endl;
-//     // Write Particle Volume
-//     OutputFile << "<DataArray Name=\"Mass\" NumberOfComponents=\"1\" format=\"ascii\" type=\"Float64\">";
-//     for (auto &Node : OutNodeContainer) {
-//       OutputFile << "  " << Node.Mass;
-//     }
-//     OutputFile << "</DataArray>" << std::endl;
-//
-//     // Write Particle Velocity
-//     OutputFile << "<DataArray Name=\"V\" NumberOfComponents=\"3\" format=\"ascii\" type=\"Float64\">";
-//     for(int i = 0; i < NumberOfNodes; i++){
-//       OutputFile << "  " << CuttOff(OutNodeContainer[i].V[0]);
-//       OutputFile << "  " << CuttOff(OutNodeContainer[i].V[1]);
-//       OutputFile << "  " << CuttOff(OutNodeContainer[i].V[2]);
-//     }
-//     OutputFile << "</DataArray>" << std::endl;
-//
-// //------ Write Nodal Momentum
-//     OutputFile << "<DataArray Name=\"Momentum\" NumberOfComponents=\"3\" format=\"ascii\" type=\"Float64\">";
-//     for (auto &Node : OutNodeContainer) {
-//       OutputFile << "  " << CuttOff(Node.Momentum[0]);
-//       OutputFile << "  " << CuttOff(Node.Momentum[1]);
-//       OutputFile << "  " << CuttOff(Node.Momentum[2]);
-//     }
-//     OutputFile << "</DataArray>" << std::endl;
-//
-// //------ Write Nodal Momentum
-//     OutputFile << "<DataArray Name=\"InternalForce\" NumberOfComponents=\"3\" format=\"ascii\" type=\"Float64\">";
-//     for (auto &Node : OutNodeContainer) {
-//       OutputFile << "  " << CuttOff(Node.InternalForce[0]);
-//       OutputFile << "  " << CuttOff(Node.InternalForce[1]);
-//       OutputFile << "  " << CuttOff(Node.InternalForce[2]);
-//     }
-//     OutputFile << "</DataArray>" << std::endl;
-//
-//
+  OutputFile << "<PointData>" << std::endl;
   OutputFile << "</PointData>" << std::endl;
   // Write Cell Data
   OutputFile << "<CellData/>" << std::endl;
@@ -529,7 +490,7 @@ void MPMOutputVTK::WriteOutput(double &t){
     std::string OutputFile = GridOutputFileNames[i]+ "_" + std::to_string(GridOutputFileWriteCounter[i]) + ".vtu";
 
     //write the output file
-    //VTUGridExport(OutputFile, *(GridOutputNodeContainers[i]), *(GridOutputElementContainers[i]), GridOutputDataNames[i]);
+    VTUGridExport(OutputFile, *(GridOutputNodeContainers[i]), *(GridOutputElementContainers[i]), GridOutputDataNames[i]);
 
     // For each written outputfile add an entry for pvd
     // conversion t to time need care as t can be very small

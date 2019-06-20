@@ -1,1 +1,13 @@
-test
+_____ELSE Log File_____
+Reading XML-Input File: two_disks_elastic.xml
+Reading Bodies : 
+    Catch Body : One
+Reading Materials : 
+    Catch Material : Steel
+		Steel is of kind: LinearElasticity_A
+		Steel Parameter Youngs modulus of type double: 1000
+		Steel Parameter Possions ratio of type double: 0.3
+		Steel Parameter Initial Density of type double: 1000
+		Steel Parameter PlaneStress of type int: 0
+		Steel Parameter PlaneStress of type bool: 0
+		Steel has : 5 parameters.
