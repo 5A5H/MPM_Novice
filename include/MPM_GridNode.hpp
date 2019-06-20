@@ -3,9 +3,12 @@
 
 class MPMGridNode {
   public:
+
       MPMGridNode();                              // The GridNode Class Constructor
       MPMGridNode(int id, double x, double y, double z);  // The GridNode Class Constructor requires coordinate
       ~MPMGridNode();                             // The GridNode Class Destructor
+
+
       int ID;                                     // The GridNode Id
       double X[3];                       // The GridNode Spatial Coordinate
       double V[3];                       // The GridNode Velocity
@@ -21,6 +24,7 @@ class MPMGridNode {
       void Report(void);                          // A Member Function to print out a report of this object
 
   private:
+
 };
 
 #endif

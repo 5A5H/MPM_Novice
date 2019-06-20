@@ -15,6 +15,8 @@
 
 #include <ELSE_System.hpp>
 
+#include <ELSE_MPMMaterial.hpp>
+
 #include <math.h>
 
 #include <iostream>
@@ -37,7 +39,10 @@ int main(int argc, char** argv)
 
     ELSE::SetupEnvironment(argc, argv);
     ELSE::ReadInputFile(ELSE::InputFileName);
-    //ELSE::LogFile << "22222" << std::endl;
+
+
+    // play with new material class
+    ELSE::MPM::Material Mate1;
 
 
     // Genrate The Time Tracker

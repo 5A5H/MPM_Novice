@@ -57,6 +57,7 @@ include_directories(
   ${CMAKE_CURRENT_SOURCE_DIR}/include
   ${CMAKE_CURRENT_SOURCE_DIR}/ace_mate
   ${CMAKE_CURRENT_SOURCE_DIR}/third_party/tiny_xml2
+  ${CMAKE_CURRENT_SOURCE_DIR}/materials
   )
 
 #The follwing copy thing worked !
