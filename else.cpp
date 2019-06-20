@@ -42,7 +42,7 @@ int main(int argc, char** argv)
 
 
     // play with new material class
-    ELSE::MPM::Material Mate1;
+    ELSE::MPM::Material Mate1("Steel");
 
 
     // Genrate The Time Tracker
