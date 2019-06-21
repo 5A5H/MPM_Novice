@@ -71,6 +71,19 @@ int main(int argc, char** argv)
     // Test the material factory
     ELSE::MPM::Material* Mate2;
     Mate2 = ELSE::MPM::CreateMaterial("UNKNOWN","Aluminium");
+    Mate2 = ELSE::MPM::CreateMaterial("LinearElasticity_A","Aluminium");
+    Mate2 -> addMaterialParameter("Emod",7800.0e0);
+    Mate2 -> addMaterialParameter("nue",0.3e0);
+    Mate2 -> addMaterialParameter("rho",1e3);
+    Mate2 -> dumpMaterialParameter(ELSE::LogFile);
+    F = {1,0,0, 0,1,0, 0,0,1};
+    ELSE::printTensor("F",F);
+    Mate2 -> getCauchyStress(Sig,F,MaterialHistory,IntegerMaterialIO,DoubleMaterialIO);
+    ELSE::printTensor("Sig",Sig);
+    F = {1.1,0.01,0, 0,0.9,0, 0,0,0.8};
+    ELSE::printTensor("F",F);
+    Mate2 -> getCauchyStress(Sig,F,MaterialHistory,IntegerMaterialIO,DoubleMaterialIO);
+    ELSE::printTensor("Sig",Sig);
 
 
     // Genrate The Time Tracker

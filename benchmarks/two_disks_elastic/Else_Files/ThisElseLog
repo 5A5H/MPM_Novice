@@ -20,3 +20,10 @@ Material Parameter of MPM Material: Steel
 			 "rho"  1000
 - BoolParameters		: 
 			 "boolvalue"  1
+Material Parameter of MPM Material: Aluminium
+- IntegerParameters	: 
+- DoubleParameters	: 
+			 "Emod"  7800
+			 "nue"  0.3
+			 "rho"  1000
+- BoolParameters		: 

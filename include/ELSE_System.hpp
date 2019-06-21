@@ -6,6 +6,8 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include <array>
+#include <iomanip>
 
 #include <sys/stat.h> // mkdir()
 #include <unistd.h> //rmdir()
@@ -22,6 +24,7 @@ namespace ELSE {
     // the ELSE::InputFileName is defined here
     static std::string InputFileName;
 
+  // Functions to react on errors by tinyxml
   template<typename T>
   inline void XMLErrorCheck(T *i, std::string ErrorMessage){
     if (i == nullptr) {
@@ -36,6 +39,7 @@ namespace ELSE {
     }
   }
 
+  // Creates standrd ELSE folders if not there and opens log file
   inline int SetupEnvironment(int &argc, char** &argv){
 
     // get input file from command line arguments
@@ -73,6 +77,7 @@ namespace ELSE {
     return 0;
   };
 
+  // A specialized function to read body class from input file using tinyxml
   inline int ReadBodysFromXML(tinyxml2::XMLDocument &XMLInputFile){
 
     LogFile << "Reading Bodies : " << std::endl;
@@ -137,6 +142,7 @@ namespace ELSE {
     return 0;
   }
 
+  // A specialized function to read material class from input file using tinyxml
   inline int ReadMaterialFromXML(tinyxml2::XMLDocument &XMLInputFile){
 
     LogFile << "Reading Materials : " << std::endl;
@@ -232,6 +238,7 @@ namespace ELSE {
     return 0;
   }
 
+  // The main Input file processing via tinyxml
   inline int ReadInputFile(std::string &PathToInputFile){
     // convert PathToInputFile int character array as required by tinyxml2
     char InpFile[PathToInputFile.size() + 1];
@@ -250,6 +257,22 @@ namespace ELSE {
 
 
     return 0;
+  };
+
+  // A standard output for ELSE tensors
+  inline void printTensor(const std::string Name,std::array<double, 6> SymmetricTensor){
+    std::string EmptyString;
+    for (int i=0;i<Name.length()+3;i++) EmptyString.append(" ");
+    std::cout << Name << " = " << std::setw(6) << SymmetricTensor[0] << "  "<< std::setw(6) <<  SymmetricTensor[1] << "  "<< std::setw(6) <<  SymmetricTensor[2] << std::endl;
+    std::cout << EmptyString   << std::setw(6) << SymmetricTensor[1] << "  "<< std::setw(6) <<  SymmetricTensor[3] << "  "<< std::setw(6) <<  SymmetricTensor[4] << std::endl;
+    std::cout << EmptyString   << std::setw(6) << SymmetricTensor[2] << "  "<< std::setw(6) <<  SymmetricTensor[4] << "  "<< std::setw(6) <<  SymmetricTensor[5] << std::endl;
+  };
+  inline void printTensor(const std::string Name,std::array<double, 9> Tensor){
+    std::string EmptyString;
+    for (int i=0;i<Name.length()+3;i++) EmptyString.append(" ");
+    std::cout << Name << " = " << std::setw(6) <<  Tensor[0] << "  "<< std::setw(6) <<  Tensor[1] << "  "<< std::setw(6) <<  Tensor[2] << std::endl;
+    std::cout << EmptyString   << std::setw(6) <<  Tensor[3] << "  "<< std::setw(6) <<  Tensor[4] << "  "<< std::setw(6) <<  Tensor[5] << std::endl;
+    std::cout << EmptyString   << std::setw(6) <<  Tensor[6] << "  "<< std::setw(6) <<  Tensor[7] << "  "<< std::setw(6) <<  Tensor[8] << std::endl;
   };
 
 }// end namepace else

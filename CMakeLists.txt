@@ -44,6 +44,7 @@ add_library(ELSE_CORE
 
 add_library(ELSE_MPM
     ${CMAKE_CURRENT_SOURCE_DIR}/materials/ELSE_MPMMaterial.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/materials/LinearElasticity_A.cpp
 )
 
 add_library(tiny_xml2

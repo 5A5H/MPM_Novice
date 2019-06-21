@@ -34,6 +34,13 @@ inline void TensorProduct(double A[9],double B[9],double C[9],std::string KEY){
   if (KEY=="jijk") {C[0]=A[0]*B[0]+A[3]*B[3]+A[6]*B[6];C[1]=A[0]*B[1]+A[3]*B[4]+A[6]*B[7];C[2]=A[0]*B[2]+A[3]*B[5]+A[6]*B[8];C[3]=A[1]*B[0]+A[4]*B[3]+A[7]*B[6];C[4]=A[1]*B[1]+A[4]*B[4]+A[7]*B[7];C[5]=A[1]*B[2]+A[4]*B[5]+A[7]*B[8];C[6]=A[2]*B[0]+A[5]*B[3]+A[8]*B[6];C[7]=A[2]*B[1]+A[5]*B[4]+A[8]*B[7];C[8]=A[2]*B[2]+A[5]*B[5]+A[8]*B[8];return;};
 };
 
+// Compute Lame-Constants
+inline int HookeToLame(double &Emod, double &nue, double &lambda, double &mue){
+  lambda = (Emod*nue) / ( (1.0+nue)*(1.0 - 2.0*nue) );
+  mue    = Emod / (2.0*(1.0 + nue));
+  return 0;
+};
+
 } // namespace Conti
 } // namspace ELSE
 

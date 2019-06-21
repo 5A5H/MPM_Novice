@@ -10,6 +10,7 @@
 #include <ELSE_MPMMaterial.hpp>
 
 // Below add inlcudes for the derived classes
+#include <LinearElasticity_A.hpp>
 
 /*
 The Material Factory
@@ -19,6 +20,7 @@ The Material Factory
     * Declaration an Implementation:
                                     materials/Material_A.cpp
                                     materials/Material_A.hpp
+    *! Unfortunately by now one has to also add the .cpp to the CMakeList.txt
     * They MUST inherit the MPM Material Base class:
                                     class Material_A: public Material {...}
     * They need to be known within this Factory:
@@ -37,7 +39,7 @@ namespace MPM{
     // MaterialKey defines the actual type of material object e.g. Material_A
     // MaterialName defines the name that is used for the specific problem e.g. Steel,Alu ..
 
-    //if ()
+    if (MaterialKey=="LinearElasticity_A") return new LinearElasticity_A(MaterialName);
 
     // if function evaluates to here there is no implementation for the requested material key
     std::cerr << "Error: No Implementation for a Material: " << MaterialKey << " found." << std::endl;
