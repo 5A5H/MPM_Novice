@@ -28,15 +28,44 @@ Material::Material(std::string MaterialName){
 // Destructor implementation
 Material::~Material(){}
 
+// Dump all available material parameter into offstream
+void Material::dumpMaterialParameter(std::ofstream &Outstream){
+  Outstream << "Material Parameter of MPM Material: " << Name << std::endl;
+
+  Outstream << "- IntegerParameters\t: " << std::endl;
+  for (auto &ParameterEntry : IntegerParameter) {
+    Outstream << "\t\t\t \"" << ParameterEntry.first << "\"";
+    Outstream << "  ";
+    Outstream << ParameterEntry.second;
+    Outstream << std::endl;
+  }
+
+  Outstream << "- DoubleParameters\t: " << std::endl;
+  for (auto &ParameterEntry : DoubleParameter) {
+    Outstream << "\t\t\t \"" << ParameterEntry.first << "\"";
+    Outstream << "  ";
+    Outstream << ParameterEntry.second;
+    Outstream << std::endl;
+  }
+
+  Outstream << "- BoolParameters\t\t: " << std::endl;
+  for (auto &ParameterEntry : BoolParameter) {
+    Outstream << "\t\t\t \"" << ParameterEntry.first << "\"";
+    Outstream << "  ";
+    Outstream << ParameterEntry.second;
+    Outstream << std::endl;
+  }
+};
+
 // Adding Material Parameter (Overloading)
 void Material::addMaterialParameter(std::string Name, int     Parameter){IntegerParameter[Name] = Parameter;};
 void Material::addMaterialParameter(std::string Name, double  Parameter){DoubleParameter[Name]  = Parameter;};
 void Material::addMaterialParameter(std::string Name, bool    Parameter){BoolParameter[Name]    = Parameter;};
 
 // Reading Material Parameter (Overloading)
-void Material::getMaterialParameter(std::string KEY, int    &Parameter){Parameter = IntegerParameter[Name]; };
-void Material::getMaterialParameter(std::string KEY, double &Parameter){Parameter = DoubleParameter[Name];  };
-void Material::getMaterialParameter(std::string KEY, bool   &Parameter){Parameter = BoolParameter[Name];    };
+void Material::getMaterialParameter(std::string KEY, int    &Parameter){Parameter = IntegerParameter.find(KEY)->second; };
+void Material::getMaterialParameter(std::string KEY, double &Parameter){Parameter = DoubleParameter.find(KEY)->second;  };
+void Material::getMaterialParameter(std::string KEY, bool   &Parameter){Parameter = BoolParameter.find(KEY)->second;    };
 
 
 // The virtual getCauchyStress function that returns an error

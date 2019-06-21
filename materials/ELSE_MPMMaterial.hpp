@@ -32,6 +32,9 @@ public:
   // Destructor
   ~Material();
 
+  // dump MaterialParameter into ofstream
+  void dumpMaterialParameter(std::ofstream &Outstream);
+
   // Adding Material Parameter
   void addMaterialParameter(std::string Name, int     Parameter);
   void addMaterialParameter(std::string Name, double  Parameter);

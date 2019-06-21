@@ -16,6 +16,7 @@
 #include <ELSE_System.hpp>
 
 #include <ELSE_MPMMaterial.hpp>
+#include <ELSE_MPMMaterialFactory.hpp>
 
 #include <math.h>
 
@@ -43,6 +44,33 @@ int main(int argc, char** argv)
 
     // play with new material class
     ELSE::MPM::Material Mate1("Steel");
+    Mate1.addMaterialParameter("Emod",21000.0e0);
+    Mate1.addMaterialParameter("nue",0.3e0);
+    Mate1.addMaterialParameter("rho",1e3);
+    Mate1.addMaterialParameter("integervalue",1);
+    Mate1.addMaterialParameter("boolvalue",true);
+    Mate1.dumpMaterialParameter(ELSE::LogFile);
+
+    int testint = 0;
+    Mate1.getMaterialParameter("integervalue",testint);
+    std::cout << "Int   : " << testint << std::endl;
+    double testdbl = 1.0;
+    Mate1.getMaterialParameter("Emod",testdbl);
+    std::cout << "Double: " << testdbl << std::endl;
+    bool testbool = false;
+    Mate1.getMaterialParameter("boolvalue",testbool);
+    std::cout << "Bool  : " << testbool << std::endl;
+
+    std::array<double, 6> Sig = {0,0,0,   0,0,     0};
+    std::array<double, 9> F   = {1,0,0, 0,1,0, 0,0,1};
+    std::map<std::string, double> MaterialHistory;
+    std::map<std::string, int>    IntegerMaterialIO;
+    std::map<std::string, double> DoubleMaterialIO;
+    Mate1.getCauchyStress(Sig,F,MaterialHistory,IntegerMaterialIO,DoubleMaterialIO);
+
+    // Test the material factory
+    ELSE::MPM::Material* Mate2;
+    Mate2 = ELSE::MPM::CreateMaterial("UNKNOWN","Aluminium");
 
 
     // Genrate The Time Tracker
