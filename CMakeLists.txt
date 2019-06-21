@@ -42,6 +42,10 @@ add_library(ELSE_CORE
     ${CMAKE_CURRENT_SOURCE_DIR}/src/ELSE_System.cpp
 )
 
+add_library(ELSE_MPM
+    ${CMAKE_CURRENT_SOURCE_DIR}/materials/ELSE_MPMMaterial.cpp
+)
+
 add_library(tiny_xml2
     ${CMAKE_CURRENT_SOURCE_DIR}/third_party/tiny_xml2/tinyxml2.cpp
 )
@@ -129,5 +133,6 @@ target_link_libraries(ELSE
                       ${AceUtil}
                       tiny_xml2
                       ELSE_CORE
+                      ELSE_MPM
 )
 ##################################

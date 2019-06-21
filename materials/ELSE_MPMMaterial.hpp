@@ -4,7 +4,7 @@
 
 #include <string>
 #include <map>
-#include <map>
+#include <array>
 
 /*
 The Material Base Class
@@ -59,28 +59,6 @@ private:
   std::map<std::string, bool    > BoolParameter;
 
 };
-
-// Constructor implementation
-Material::Material(std::string MaterialName){
-  Name = MaterialName;
-  if (LogFile.is_open()) LogFile << "Created:\t MPM-Material Object: " << Name << std::endl;
-}
-
-// Destructor implementation
-Material::~Material(){}
-
-// Adding Material Parameter (Overloading)
-addMaterialParameter.....
-
-// The virtual getCauchyStress function that returns an error
-int Material::getCauchyStress(  std::array<double, 6> &CauchyStress,
-                                std::array<double, 9> &DeformationGradient,
-                                std::map<std::string, double> &MaterialHistory,
-                                std::map<std::string, int>    &IntegerMaterialIO,
-                                std::map<std::string, double> &DoubleMaterialIO) {
-                                std::cerr << "Error: Call of getCauchyStress() - function from Base Class ELSE::MPM::Material." << std::endl;
-                                return -1;
-                              };
 
 }
 }

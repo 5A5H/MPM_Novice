@@ -16,24 +16,25 @@
 #include <tinyxml2.h>
 
 namespace ELSE {
-  // the ELSE::LogFile is defined here
-  std::ofstream LogFile;
+  // Variables of ELSE namespace:
+    // the ELSE::LogFile is defined here
+    static std::ofstream LogFile;
+    // the ELSE::InputFileName is defined here
+    static std::string InputFileName;
 
   template<typename T>
-  void XMLErrorCheck(T *i, std::string ErrorMessage){
+  inline void XMLErrorCheck(T *i, std::string ErrorMessage){
     if (i == nullptr) {
       std::cout << "Error: " << ErrorMessage << std::endl;
       exit(EXIT_FAILURE);
     }
   }
-  void XMLErrorCheck(int i, std::string ErrorMessage){
+  inline void XMLErrorCheck(int i, std::string ErrorMessage){
     if (i != 0) {
       std::cout << "Error: " << ErrorMessage << std::endl;
       exit(EXIT_FAILURE);
     }
   }
-
-  static std::string InputFileName;
 
   inline int SetupEnvironment(int &argc, char** &argv){
 
