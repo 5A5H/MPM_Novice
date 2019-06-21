@@ -35,14 +35,14 @@ The Material Factory
 namespace ELSE{
 namespace MPM{
 
-  Material* CreateMaterial(const std::string MaterialKey, const std::string MaterialName){
+  Material* CreateMaterial(const std::string MaterialKind, const std::string MaterialName){
     // MaterialKey defines the actual type of material object e.g. Material_A
     // MaterialName defines the name that is used for the specific problem e.g. Steel,Alu ..
 
     if (MaterialKey=="LinearElasticity_A") return new LinearElasticity_A(MaterialName);
 
     // if function evaluates to here there is no implementation for the requested material key
-    std::cerr << "Error: No Implementation for a Material: " << MaterialKey << " found." << std::endl;
+    std::cerr << "Error: No Implementation for a Material: " << MaterialKind << " found." << std::endl;
     return nullptr;
   }
 
