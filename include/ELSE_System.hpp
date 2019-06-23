@@ -274,6 +274,9 @@ namespace ELSE {
     std::cout << EmptyString   << std::setw(6) <<  Tensor[3] << "  "<< std::setw(6) <<  Tensor[4] << "  "<< std::setw(6) <<  Tensor[5] << std::endl;
     std::cout << EmptyString   << std::setw(6) <<  Tensor[6] << "  "<< std::setw(6) <<  Tensor[7] << "  "<< std::setw(6) <<  Tensor[8] << std::endl;
   };
+  inline void printTensor(const std::string Name,std::array<double, 3> Tensor){
+    std::cout << Name << " = " << std::setw(6) <<  Tensor[0] << "  "<< std::setw(6) <<  Tensor[1] << "  "<< std::setw(6) <<  Tensor[2] << std::endl;
+  };
 
 }// end namepace else
 

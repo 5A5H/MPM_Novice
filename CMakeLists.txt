@@ -43,6 +43,7 @@ add_library(ELSE_CORE
 )
 
 add_library(ELSE_MPM
+    ${CMAKE_CURRENT_SOURCE_DIR}/particles/ELSE_MPMParticle.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/materials/ELSE_MPMMaterial.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/materials/LinearElasticity_A.cpp
 )
@@ -63,6 +64,7 @@ include_directories(
   ${CMAKE_CURRENT_SOURCE_DIR}/ace_mate
   ${CMAKE_CURRENT_SOURCE_DIR}/third_party/tiny_xml2
   ${CMAKE_CURRENT_SOURCE_DIR}/materials
+  ${CMAKE_CURRENT_SOURCE_DIR}/particles
   )
 
 #The follwing copy thing worked !

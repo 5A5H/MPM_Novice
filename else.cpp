@@ -18,6 +18,9 @@
 #include <ELSE_MPMMaterial.hpp>
 #include <ELSE_MPMMaterialFactory.hpp>
 
+#include <ELSE_MPMParticle.hpp>
+#include <ELSE_MPMParticleFactory.hpp>
+
 #include <math.h>
 
 #include <iostream>
@@ -89,6 +92,21 @@ int main(int argc, char** argv)
     ELSE::printTensor("F",F);
     Mate2 -> getCauchyStress(Sig,F,MaterialHistory,IntegerMaterialIO,DoubleMaterialIO);
     ELSE::printTensor("Sig",Sig);
+
+    ELSE::MPM::Particle *Ptcl;
+    int pid = 0;
+    std::array<double, 3> XP = {100e0, 200e0, 300e0};
+    std::array<double, 3> geta = {400e0, 500e0, 600e0};
+    Ptcl = ELSE::MPM::CreateParticle("", pid, XP);
+    Ptcl -> get("X",geta);
+    ELSE::printTensor("Vec",geta);
+    std::array<double, 3> geta2 = {4.9735e0, -10e0, 0e0};
+    Ptcl -> set("X",geta2);
+    Ptcl -> get("X",geta);
+    geta2 = {-4.9735e0, 10e0, 99e0};
+    Ptcl -> update("X",geta2);
+    Ptcl -> get("X",geta);
+    ELSE::printTensor("Vec",geta);
 
 
     // Genrate The Time Tracker
