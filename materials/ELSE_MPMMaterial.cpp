@@ -28,6 +28,9 @@ Material::Material(std::string MaterialName){
 // Destructor implementation
 Material::~Material(){}
 
+// Get name of the material
+void Material::getName(std::string &MaterialName){MaterialName=Name;};
+
 // Dump all available material parameter into offstream
 void Material::dumpMaterialParameter(std::ofstream &Outstream){
   Outstream << "Material Parameter of MPM Material: " << Name << std::endl;

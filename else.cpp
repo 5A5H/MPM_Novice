@@ -69,9 +69,14 @@ int main(int argc, char** argv)
     Mate1.getCauchyStress(Sig,F,MaterialHistory,IntegerMaterialIO,DoubleMaterialIO);
 
     // Test the material factory
+    std::string MyMaterialName;
     ELSE::MPM::Material* Mate2;
     Mate2 = ELSE::MPM::CreateMaterial("UNKNOWN","Aluminium");
+    //Mate2 -> getName(MyMaterialName);
+    //std::cout << "Name of the Material: " << MyMaterialName << std::endl;
     Mate2 = ELSE::MPM::CreateMaterial("LinearElasticity_A","Aluminium");
+    Mate2 -> getName(MyMaterialName);
+    std::cout << "Name of the Material: " << MyMaterialName << std::endl;
     Mate2 -> addMaterialParameter("Emod",7800.0e0);
     Mate2 -> addMaterialParameter("nue",0.3e0);
     Mate2 -> addMaterialParameter("rho",1e3);
