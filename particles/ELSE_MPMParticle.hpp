@@ -58,12 +58,12 @@ public:
   Particle();
   Particle(int ID, array<double, 3> Position);
   Particle(int ID, array<double, 3> Position, double Volume);
-  Particle(int ID, array<double, 3> Position, double Volume, Material *ParticlesMaterial);
+  Particle(int ID, array<double, 3> Position, double Volume, Material *particlesmaterial);
   // destructor
   ~Particle();
 
   // material interaction
-  void setMaterial(Material *ParticlesMaterial);
+  void setMaterial(Material *particlesmaterial);
 
   // functions to interact with particle data
   void get(string KEY, int &Value);

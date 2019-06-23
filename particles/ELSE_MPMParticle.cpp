@@ -16,15 +16,18 @@ Particle::Particle(int ID, array<double, 3> Position, double Volume){
   ParticleDblData["V0"] = Volume;
 }
 // 3. ID, Position, Volume and Material
-Particle::Particle(int ID, array<double, 3> Position, double Volume, Material *ParticlesMaterial){
+Particle::Particle(int ID, array<double, 3> Position, double Volume, Material *particlesmaterial){
   ParticleIntData["ID"] = ID;
   ParticleVectorData["X"] = Position;
   ParticleDblData["V0"] = Volume;
-  ParticlesMaterial = ParticlesMaterial;
+  ParticlesMaterial = particlesmaterial;
 }
 
 // destructor of the particle base class
 Particle::~Particle(){}
+
+// associate material to particle
+void Particle::setMaterial(Material *particlesmaterial){ParticlesMaterial = particlesmaterial;};
 
 // getter functions
 void Particle::get(string KEY, int              &Value){Value = ParticleIntData.find(KEY) -> second;}
