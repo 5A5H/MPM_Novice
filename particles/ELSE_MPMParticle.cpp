@@ -48,8 +48,16 @@ void Particle::update(string KEY, array<double, 3> &Value){
   for (int i=0; i<3; i++) PValue[i] += Value[i];
   ParticleVectorData[KEY]   = PValue;
 }
-// void Particle::update(string KEY, array<double, 6> &Value){ParticleSymTensorData[KEY]=ParticleSymTensorData.find(KEY) -> second + Value;}
-// void Particle::update(string KEY, array<double, 9> &Value){ParticleTensorData[KEY]=ParticleTensorData.find(KEY) -> second + Value;}
+void Particle::update(string KEY, array<double, 6> &Value){
+  array<double, 6> PValue = ParticleSymTensorData.find(KEY) -> second;
+  for (int i=0; i<6; i++) PValue[i] += Value[i];
+  ParticleSymTensorData[KEY]   = PValue;
+}
+void Particle::update(string KEY, array<double, 9> &Value){
+  array<double, 9> PValue = ParticleTensorData.find(KEY) -> second;
+  for (int i=0; i<9; i++) PValue[i] += Value[i];
+  ParticleTensorData[KEY]   = PValue;
+}
 
 }
 }
