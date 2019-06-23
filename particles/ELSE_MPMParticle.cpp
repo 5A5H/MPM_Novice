@@ -62,5 +62,17 @@ void Particle::update(string KEY, array<double, 9> &Value){
   ParticleTensorData[KEY]   = PValue;
 }
 
+// interface function updateStresses (is virtual)
+void Particle::updateStress(){
+  std::array<double, 6> Sig;
+  std::array<double, 9> F;
+  get("F",F);
+
+  ParticlesMaterial -> getCauchyStress( Sig, F, h, IntMIO, DblMIO);
+
+  set("CauchyStress",Sig);
+
+};
+
 }
 }

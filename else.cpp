@@ -108,9 +108,20 @@ int main(int argc, char** argv)
     Ptcl -> get("X",geta);
     ELSE::printTensor("Vec",geta);
 
+    Ptcl -> setMaterial(Mate2);
+    F = {1.1,0.01,-0.09, 0,0.9,0.02, 0,0,0.8};
+    Ptcl -> set("F",F);
+    Ptcl -> updateStress();
+    Ptcl -> get("CauchyStress",Sig);
+    ELSE::printTensor("Sig",Sig);
+
+
+
+
 
     // Genrate The Time Tracker
     MPMTimeTracker MPMTimings;
+
 
 //------------------------------------------- Output declaration ------------------------------------------------------
     bool ParaviewOutput = true;

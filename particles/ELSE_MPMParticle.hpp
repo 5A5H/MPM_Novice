@@ -84,8 +84,8 @@ public:
   void update(string KEY, array<double, 6> &Value);
   void update(string KEY, array<double, 9> &Value);
 
-  // // standard functions for functionality
-  // virtual void updateStresses();
+  // standard functions for functionality
+  virtual void updateStress();
 
 private:
 
