@@ -14,6 +14,7 @@
 #include <MPM_HF.hpp>
 
 #include <ELSE_System.hpp>
+#include <ELSE_MPMDataManager.hpp>
 
 #include <ELSE_MPMMaterial.hpp>
 #include <ELSE_MPMMaterialFactory.hpp>
@@ -35,85 +36,22 @@ std::vector<MPMGridElement> GridElement;
 std::vector<MPMMaterial> Material;
 
 
+
+
 //------------------------------------------ MAIN ---------------------------------------------------------------------
 int main(int argc, char** argv)
 {
     std::cout << "_____________________Welcome to ELSE!____________________" << std::endl;
+    // Create Data Management
 
 
     ELSE::SetupEnvironment(argc, argv);
     ELSE::ReadInputFile(ELSE::InputFileName);
 
 
-    // play with new material class
-    ELSE::MPM::Material Mate1("Steel");
-    Mate1.addMaterialParameter("Emod",21000.0e0);
-    Mate1.addMaterialParameter("nue",0.3e0);
-    Mate1.addMaterialParameter("rho",1e3);
-    Mate1.addMaterialParameter("integervalue",1);
-    Mate1.addMaterialParameter("boolvalue",true);
-    Mate1.dumpMaterialParameter(ELSE::LogFile);
 
-    int testint = 0;
-    Mate1.getMaterialParameter("integervalue",testint);
-    std::cout << "Int   : " << testint << std::endl;
-    double testdbl = 1.0;
-    Mate1.getMaterialParameter("Emod",testdbl);
-    std::cout << "Double: " << testdbl << std::endl;
-    bool testbool = false;
-    Mate1.getMaterialParameter("boolvalue",testbool);
-    std::cout << "Bool  : " << testbool << std::endl;
 
-    std::array<double, 6> Sig = {0,0,0,   0,0,     0};
-    std::array<double, 9> F   = {1,0,0, 0,1,0, 0,0,1};
-    std::map<std::string, double> MaterialHistory;
-    std::map<std::string, int>    IntegerMaterialIO;
-    std::map<std::string, double> DoubleMaterialIO;
-    Mate1.getCauchyStress(Sig,F,MaterialHistory,IntegerMaterialIO,DoubleMaterialIO);
 
-    // Test the material factory
-    std::string MyMaterialName;
-    ELSE::MPM::Material* Mate2;
-    Mate2 = ELSE::MPM::CreateMaterial("UNKNOWN","Aluminium");
-    //Mate2 -> getName(MyMaterialName);
-    //std::cout << "Name of the Material: " << MyMaterialName << std::endl;
-    Mate2 = ELSE::MPM::CreateMaterial("LinearElasticity_A","Aluminium");
-    Mate2 -> getName(MyMaterialName);
-    std::cout << "Name of the Material: " << MyMaterialName << std::endl;
-    Mate2 -> addMaterialParameter("Emod",7800.0e0);
-    Mate2 -> addMaterialParameter("nue",0.3e0);
-    Mate2 -> addMaterialParameter("rho",1e3);
-    Mate2 -> dumpMaterialParameter(ELSE::LogFile);
-    F = {1,0,0, 0,1,0, 0,0,1};
-    ELSE::printTensor("F",F);
-    Mate2 -> getCauchyStress(Sig,F,MaterialHistory,IntegerMaterialIO,DoubleMaterialIO);
-    ELSE::printTensor("Sig",Sig);
-    F = {1.1,0.01,0, 0,0.9,0, 0,0,0.8};
-    ELSE::printTensor("F",F);
-    Mate2 -> getCauchyStress(Sig,F,MaterialHistory,IntegerMaterialIO,DoubleMaterialIO);
-    ELSE::printTensor("Sig",Sig);
-
-    ELSE::MPM::Particle *Ptcl;
-    int pid = 0;
-    std::array<double, 3> XP = {100e0, 200e0, 300e0};
-    std::array<double, 3> geta = {400e0, 500e0, 600e0};
-    Ptcl = ELSE::MPM::CreateParticle("", pid, XP);
-    Ptcl -> get("X",geta);
-    ELSE::printTensor("Vec",geta);
-    std::array<double, 3> geta2 = {4.9735e0, -10e0, 0e0};
-    Ptcl -> set("X",geta2);
-    Ptcl -> get("X",geta);
-    geta2 = {-4.9735e0, 10e0, 99e0};
-    Ptcl -> update("X",geta2);
-    Ptcl -> get("X",geta);
-    ELSE::printTensor("Vec",geta);
-
-    Ptcl -> setMaterial(Mate2);
-    F = {1.1,0.01,-0.09, 0,0.9,0.02, 0,0,0.8};
-    Ptcl -> set("F",F);
-    Ptcl -> updateStress();
-    Ptcl -> get("CauchyStress",Sig);
-    ELSE::printTensor("Sig",Sig);
 
 
 
@@ -131,13 +69,11 @@ int main(int argc, char** argv)
 
 
 //------------------------------------------ spatial discretization ---------------------------------------------------
-    std::string InputfileParticle = "two_disks_particledata.txt";
     std::string InputfileNodes = "two_disks_node.txt";
     std::string InputfileGrid = "two_disks_element.txt";
 
 
     //Read and Create Objects
-    ReadParticle(InputfileParticle, Particle);
     ReadGridNodes(InputfileNodes, GridNode);
     ReadGridElementsQ4(InputfileGrid, GridElement);
     std::cout << "Problem Data: " << std::endl;
@@ -151,3 +87,74 @@ int main(int argc, char** argv)
   MPMTimings.SetTime("Program Finish");
   return 0;
 }
+/*
+// play with new material class
+ELSE::MPM::Material Mate1("Steel");
+Mate1.addMaterialParameter("Emod",21000.0e0);
+Mate1.addMaterialParameter("nue",0.3e0);
+Mate1.addMaterialParameter("rho",1e3);
+Mate1.addMaterialParameter("integervalue",1);
+Mate1.addMaterialParameter("boolvalue",true);
+Mate1.dumpMaterialParameter(ELSE::LogFile);
+
+int testint = 0;
+Mate1.getMaterialParameter("integervalue",testint);
+std::cout << "Int   : " << testint << std::endl;
+double testdbl = 1.0;
+Mate1.getMaterialParameter("Emod",testdbl);
+std::cout << "Double: " << testdbl << std::endl;
+bool testbool = false;
+Mate1.getMaterialParameter("boolvalue",testbool);
+std::cout << "Bool  : " << testbool << std::endl;
+
+std::array<double, 6> Sig = {0,0,0,   0,0,     0};
+std::array<double, 9> F   = {1,0,0, 0,1,0, 0,0,1};
+std::map<std::string, double> MaterialHistory;
+std::map<std::string, int>    IntegerMaterialIO;
+std::map<std::string, double> DoubleMaterialIO;
+Mate1.getCauchyStress(Sig,F,MaterialHistory,IntegerMaterialIO,DoubleMaterialIO);
+
+// Test the material factory
+std::string MyMaterialName;
+ELSE::MPM::Material* Mate2;
+Mate2 = ELSE::MPM::CreateMaterial("UNKNOWN","Aluminium");
+//Mate2 -> getName(MyMaterialName);
+//std::cout << "Name of the Material: " << MyMaterialName << std::endl;
+Mate2 = ELSE::MPM::CreateMaterial("LinearElasticity_A","Aluminium");
+Mate2 -> getName(MyMaterialName);
+std::cout << "Name of the Material: " << MyMaterialName << std::endl;
+Mate2 -> addMaterialParameter("Emod",7800.0e0);
+Mate2 -> addMaterialParameter("nue",0.3e0);
+Mate2 -> addMaterialParameter("rho",1e3);
+Mate2 -> dumpMaterialParameter(ELSE::LogFile);
+F = {1,0,0, 0,1,0, 0,0,1};
+ELSE::printTensor("F",F);
+Mate2 -> getCauchyStress(Sig,F,MaterialHistory,IntegerMaterialIO,DoubleMaterialIO);
+ELSE::printTensor("Sig",Sig);
+F = {1.1,0.01,0, 0,0.9,0, 0,0,0.8};
+ELSE::printTensor("F",F);
+Mate2 -> getCauchyStress(Sig,F,MaterialHistory,IntegerMaterialIO,DoubleMaterialIO);
+ELSE::printTensor("Sig",Sig);
+
+ELSE::MPM::Particle *Ptcl;
+int pid = 0;
+std::array<double, 3> XP = {100e0, 200e0, 300e0};
+std::array<double, 3> geta = {400e0, 500e0, 600e0};
+Ptcl = ELSE::MPM::CreateParticle("", pid, XP);
+Ptcl -> get("X",geta);
+ELSE::printTensor("Vec",geta);
+std::array<double, 3> geta2 = {4.9735e0, -10e0, 0e0};
+Ptcl -> set("X",geta2);
+Ptcl -> get("X",geta);
+geta2 = {-4.9735e0, 10e0, 99e0};
+Ptcl -> update("X",geta2);
+Ptcl -> get("X",geta);
+ELSE::printTensor("Vec",geta);
+
+Ptcl -> setMaterial(Mate2);
+F = {1.1,0.01,-0.09, 0,0.9,0.02, 0,0,0.8};
+Ptcl -> set("F",F);
+Ptcl -> updateStress();
+Ptcl -> get("CauchyStress",Sig);
+ELSE::printTensor("Sig",Sig);
+*/

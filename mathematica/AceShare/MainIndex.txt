@@ -1,0 +1,2456 @@
+{{"Main library", "http://symech.fgg.uni-lj.si/MainLibraryV11/", 
+  {"SEPET1DFLET1DHooke" -> "SE/1/", "SEAXT2DFHYT2DNeoHookeWA" -> "SE/1/", 
+   "SEPEQ1ESLPQ1E4DHookeMisesExH" -> "SE/1/", "SEAXT1DFHYT1DNeoHookeWA" -> 
+    "SE/1/", "SEPEQ1DFLPQ1DHookeMisesExH" -> "SE/1/", 
+   "SEPST2DFHYT2DNeoHookeWA" -> "SE/1/", "SEAXT1DFJCT1DNeoHookeWAMisesExH" -> 
+    "SE/1/", "SEAXT2DFJCT2DNeoHookeWAMisesExH" -> "SE/1/", 
+   "SED3H1DFLEH1DHooke" -> "SE/1/", "SEPSQ2DFJCQ2DNeoHookeWAMisesExH" -> 
+    "SE/1/", "SEPST2DFLPT2DHookeMisesExH" -> "SE/1/", 
+   "SED3H1ESLECG9DHooke" -> "SE/1/", "SEPET1DFHYT1DNeoHookeWA" -> "SE/1/", 
+   "SEPEQ2SDFLPQ2SDHookeMisesExH" -> "SE/1/", "SED3O2DFLPO2DHookeMisesExH" -> 
+    "SE/1/", "SEPSQ2SDFHYQ2SDNeoHookeWA" -> "SE/1/", 
+   "SEPEQ2DFLEQ2DHooke" -> "SE/1/", "SED3H1DFHYH1DNeoHookeWA" -> "SE/1/", 
+   "SED3H1ESLPH1E9DHookeMisesExH" -> "SE/1/", "SEPEQ2SDFLEQ2SDHooke" -> 
+    "SE/1/", "SEAXQ2SDFJCQ2SDNeoHookeWAMisesExH" -> "SE/1/", 
+   "SEPST1DFLET1DHooke" -> "SE/2/", "SEPEQ1ESJCQ1E4DNeoHookeWAMisesExH" -> 
+    "SE/2/", "SEAXQ1DFJCQ1DNeoHookeWAMisesExH" -> "SE/2/", 
+   "SEPSQ2DFHYQ2DNeoHookeWA" -> "SE/2/", "SEPEQ1DIHYQ1TSDNeoHookeWA" -> 
+    "SE/2/", "SED3O1DFHYO1DNeoHookeWA" -> "SE/2/", 
+   "SEPSQ2DFLEQ2DHooke" -> "SE/2/", "SEAXT1DFLPT1DHookeMisesExH" -> "SE/2/", 
+   "SEPEQ1HRLEPianSumDHooke" -> "SE/2/", "SEPST1DFHYT1DNeoHookeWA" -> 
+    "SE/2/", "SEPEQ2DFHYQ2DNeoHookeWA" -> "SE/2/", 
+   "SEAXT2DFLPT2DHookeMisesExH" -> "SE/2/", "SEPET2DFLET2DHooke" -> "SE/2/", 
+   "SEAXQ2SDFLEQ2SDHooke" -> "SE/2/", "SEAXT1DFLET1DHooke" -> "SE/2/", 
+   "SEAXQ2DFLEQ2DHooke" -> "SE/2/", "SEAXQ2DFLPQ2DHookeMisesExH" -> "SE/2/", 
+   "SEPET1DFLPT1DHookeMisesExH" -> "SE/2/", "SEPET2DFHYT2DNeoHookeWA" -> 
+    "SE/2/", "SEPSQ2SDFLPQ2SDHookeMisesExH" -> "SE/2/", 
+   "SEAXQ2SDFLPQ2SDHookeMisesExH" -> "SE/2/", 
+   "SEPST1DFJCT1DNeoHookeWAMisesExH" -> "SE/3/", 
+   "SEPEQ2SDFHYQ2SDNeoHookeWA" -> "SE/3/", 
+   "SEPET2DFJCT2DNeoHookeWAMisesExH" -> "SE/3/", 
+   "SEPEQ1DFLEQ1DHooke" -> "SE/3/", "SED3O1DFLPO1DHookeMisesExH" -> "SE/3/", 
+   "SEPEQ1DIHYFBARDNeoHookeWA" -> "SE/3/", "SEPST1DFLPT1DHookeMisesExH" -> 
+    "SE/3/", "SED3H2DFJCH2DNeoHookeWAMisesExH" -> "SE/3/", 
+   "SEPEQ1DFJCQ1DNeoHookeWAMisesExH" -> "SE/3/", 
+   "SEPEQ2DFJCQ2DNeoHookeWAMisesExH" -> "SE/3/", "SEPEQ1DFHYQ1DNeoHookeWA" -> 
+    "SE/3/", "SEAXT2DFLET2DHooke" -> "SE/3/", "SEAXQ1DFLEQ1DHooke" -> 
+    "SE/3/", "SEPEQ1DIJCQ1TSDNeoHookeWAMisesExH" -> "SE/3/", 
+   "SED3H2DFLPH2DHookeMisesExH" -> "SE/3/", "SEPEQ2DFLPQ2DHookeMisesExH" -> 
+    "SE/3/", "SED3H2SDFJCH2SDNeoHookeWAMisesExH" -> "SE/3/", 
+   "SEAXQ2DFHYQ2DNeoHookeWA" -> "SE/3/", "SEAXQ2SDFHYQ2SDNeoHookeWA" -> 
+    "SE/3/", "SED3H1ESHYCG9DNeoHookeWA" -> "SE/3/", 
+   "SEPET2DFLPT2DHookeMisesExH" -> "SE/3/", 
+   "SEPET1DFJCT1DNeoHookeWAMisesExH" -> "SE/4/", 
+   "SEPSQ2DFLPQ2DHookeMisesExH" -> "SE/4/", "SEPEQ1ESLEQ1E4DHooke" -> 
+    "SE/4/", "SEPST2DFJCT2DNeoHookeWAMisesExH" -> "SE/4/", 
+   "SEPEQ1DIJCFBARDNeoHookeWAMisesExH" -> "SE/4/", 
+   "SEPSQ1DFLPQ1DHookeMisesExH" -> "SE/4/", "SEPEQ1ESHYCG4DNeoHookeWA" -> 
+    "SE/4/", "SEAXQ1DFHYQ1DNeoHookeWA" -> "SE/4/", 
+   "SED3H1HRLEPianTongDHooke" -> "SE/4/", "SEPSQ1DIHYFBARDNeoHookeWA" -> 
+    "SE/4/", "SEPST2DFLET2DHooke" -> "SE/4/", "SEPEQ1ESHYQ1E4DNeoHookeWA" -> 
+    "SE/4/", "SEPSQ1DFLEQ1DHooke" -> "SE/4/", 
+   "SEPEQ2SDFJCQ2SDNeoHookeWAMisesExH" -> "SE/4/", 
+   "SED3H2SDFLEH2SDHooke" -> "SE/4/", "SEAXQ1DILPQ1TSDHookeMisesExH" -> 
+    "SE/4/", "SEPSQ2SDFLEQ2SDHooke" -> "SE/4/", "SEMSP2DFLEP2P6DFiHooke" -> 
+    "SE/4/", "SEPSQ1ESJCQ1E4DNeoHookeWAMisesExH" -> "SE/4/", 
+   "SEPSQ1DFJCQ1DNeoHookeWAMisesExH" -> "SE/4/", 
+   "SEPSQ2SDFJCQ2SDNeoHookeWAMisesExH" -> "SE/4/", 
+   "SEPEQ1ESJCCG4DNeoHookeWAMisesExH" -> "SE/5/", 
+   "SEPEQ1DILEQ1TSDHooke" -> "SE/5/", "SED3O1DFJCO1DNeoHookeWAMisesExH" -> 
+    "SE/5/", "SED3H1DFLPH1DHookeMisesExH" -> "SE/5/", 
+   "SEPEQ1DILPQ1TSDHookeMisesExH" -> "SE/5/", "SEPSQ1ESLEQ1E4DHooke" -> 
+    "SE/5/", "SEMSS1DFHYS1P6DFiSVenant" -> "SE/5/", 
+   "SED3H2SDFHYH2SDNeoHookeWA" -> "SE/5/", 
+   "SED3H1ESJCH1E9DNeoHookeWAMisesExH" -> "SE/5/", 
+   "SEPSQ1DIHYQ1TSDNeoHookeWA" -> "SE/5/", "SEPSQ1HRLEPianSumDHooke" -> 
+    "SE/5/", "SEAXQ2DFJCQ2DNeoHookeWAMisesExH" -> "SE/5/", 
+   "SED3O2DFJCO2DNeoHookeWAMisesExH" -> "SE/5/", 
+   "SEAXQ1DFLPQ1DHookeMisesExH" -> "SE/5/", "SEMSS1DFLES1P6DFiHooke" -> 
+    "SE/5/", "SEPSQ1DIJCFBARDNeoHookeWAMisesExH" -> "SE/5/", 
+   "SED3O2DFLEO2DHooke" -> "SE/5/", "SEPSQ1ESHYQ1E4DNeoHookeWA" -> "SE/5/", 
+   "SEMSS2DFLPS2P6DFiHookeMisesExH" -> "SE/5/", "SEPSQ1DFHYQ1DNeoHookeWA" -> 
+    "SE/5/", "THAXT1DFNST1TFourier" -> "TH/1/", "SED3H1ESLEH1E9DHooke" -> 
+    "SE/5/", "THD3O2DFNSO2TFourier" -> "TH/1/", "THAXT2DFNST2TFourier" -> 
+    "TH/1/", "SED3O2DFHYO2DNeoHookeWA" -> "SE/6/", 
+   "THAXQ1DFNSQ1TFourier" -> "TH/1/", "THD3H1DFNSH1TFourier" -> "TH/1/", 
+   "SED3H1ESHYH1E9DNeoHookeWA" -> "SE/6/", "SEPSQ1DILEQ1TSDHooke" -> "SE/6/", 
+   "SEMSS2DFHYS2P6DFiSVenant" -> "SE/6/", "THAXQ2DFNSQ2TFourier" -> "TH/1/", 
+   "SED3H1DFJCH1DNeoHookeWAMisesExH" -> "SE/6/", "THD2Q1DFSTQ1TFourier" -> 
+    "TH/1/", "SEMSS2DFLES2P6DFiHooke" -> "SE/6/", 
+   "THAXQ2SDFNSQ2STFourier" -> "TH/1/", "SEMSS2SDFLPS2SP6DFiHookeMisesExH" -> 
+    "SE/6/", "SEPSQ1DILPQ1TSDHookeMisesExH" -> "SE/6/", 
+   "THD3O1DFNSO1TFourier" -> "TH/1/", "THD2Q2DFSTQ2TFourier" -> "TH/1/", 
+   "SEAXQ1DIHYQ1TSDNeoHookeWA" -> "SE/6/", "THD2Q2SDFSTQ2STFourier" -> 
+    "TH/1/", "THD3H2DFNSH2TFourier" -> "TH/1/", "THAXQ2DFSTQ2TFourier" -> 
+    "TH/1/", "SEMSS2SDFJCS2SP6DFiSVenantMisesExH" -> "SE/6/", 
+   "SED3H1DIHYFBARDNeoHookeWA" -> "SE/6/", "THAXT1DFSTT1TFourier" -> "TH/1/", 
+   "SEPSQ1ESJCCG4DNeoHookeWAMisesExH" -> "SE/6/", 
+   "THAXQ2SDFSTQ2STFourier" -> "TH/1/", "THAXT2DFSTT2TFourier" -> "TH/1/", 
+   "THD3H2SDFNSH2STFourier" -> "TH/1/", "THD3O1DFSTO1TFourier" -> "TH/1/", 
+   "SEMSS2SDFLES2SP6DFiHooke" -> "SE/6/", "THAXQ1DFSTQ1TFourier" -> "TH/1/", 
+   "THD3H2SDFSTH2STFourier" -> "TH/1/", "SEPSQ1ESHYCG4DNeoHookeWA" -> 
+    "SE/6/", "SEMSS2SDFHYS2SP6DFiSVenant" -> "SE/6/", 
+   "THD2T1DFSTT1TFourier" -> "TH/1/", "HYAXT1DFNST1PlDarcyKsVG" -> "HY/1/", 
+   "SEMSS1ASLEANSP6DFiHooke" -> "SE/6/", "HYD2T1DFNST1PlDarcyKsVG" -> 
+    "HY/1/", "THD3O2DFSTO2TFourier" -> "TH/2/", "THD2T2DFSTT2TFourier" -> 
+    "TH/2/", "SED3H1DIJCFBARDNeoHookeWAMisesExH" -> "SE/6/", 
+   "HYAXT2DFNST2PlDarcyKsVG" -> "HY/1/", "THD3H1DFSTH1TFourier" -> "TH/2/", 
+   "SEMSP1DFLEP1P6DFiHooke" -> "SE/6/", "HYD3O2DFNSO2PlDarcyKsVG" -> "HY/1/", 
+   "SEPSQ1DIJCQ1TSDNeoHookeWAMisesExH" -> "SE/6/", 
+   "SEMSP1DFHYP1P6DFiSVenant" -> "SE/6/", "HYAXQ1DFNSQ1PlDarcyKsVG" -> 
+    "HY/1/", "HYD2T2DFNST2PlDarcyKsVG" -> "HY/1/", 
+   "SED3H2DFLEH2DHooke" -> "SE/6/", "THD3H2DFSTH2TFourier" -> "TH/2/", 
+   "SEMSS1ESHYANSE4P6DFiSVenant" -> "SE/7/", "HYD2Q1DFSTQ1PlDarcyKsVG" -> 
+    "HY/1/", "SEMSS1ESLEANSE2P6DFiHooke" -> "SE/7/", 
+   "SEMSP1DFLPP1P6DFiHookeMisesExH" -> "SE/7/", 
+   "SEPSQ1ESLPQ1E4DHookeMisesExH" -> "SE/7/", "HYD2Q1DFNSQ1PlDarcyKsVG" -> 
+    "HY/1/", "HYAXQ2DFSTQ2PlDarcyKsVG" -> "HY/1/", 
+   "HYAXQ2DFNSQ2PlDarcyKsVG" -> "HY/1/", "HYD2Q2DFSTQ2PlDarcyKsVG" -> 
+    "HY/1/", "SEMSP1DFJCP1P6DFiSVenantMisesExH" -> "SE/7/", 
+   "SEMSP2DFHYP2P6DFiSVenant" -> "SE/7/", "SED3H2SDFLPH2SDHookeMisesExH" -> 
+    "SE/7/", "SED3H1DILEH1TSDHooke" -> "SE/7/", 
+   "HYD3H2SDFSTH2SPlDarcyKsVG" -> "HY/1/", "HYAXQ2SDFSTQ2SPlDarcyKsVG" -> 
+    "HY/1/", "HYAXQ2SDFNSQ2SPlDarcyKsVG" -> "HY/1/", 
+   "SEAXQ1DILEQ1TSDHooke" -> "SE/7/", "HYD3H1DFNSH1PlDarcyKsVG" -> "HY/1/", 
+   "GAD3O2DFNSO2PgDarcy" -> "GA/1/", "SED3H2DFHYH2DNeoHookeWA" -> "SE/7/", 
+   "GAAXT1DFNST1PgDarcy" -> "GA/1/", "HYD2Q2SDFSTQ2SPlDarcyKsVG" -> "HY/1/", 
+   "HYD3O1DFSTO1PlDarcyKsVG" -> "HY/1/", "GAD2T1DFNST1PgDarcy" -> "GA/1/", 
+   "HYD3O1DFNSO1PlDarcyKsVG" -> "HY/1/", "SEMSS1ESLEANSE4P6DFiHooke" -> 
+    "SE/7/", "SEMSP2DFLPP2P6DFiHookeMisesExH" -> "SE/7/", 
+   "HYAXT1DFSTT1PlDarcyKsVG" -> "HY/1/", "GAAXT2DFNST2PgDarcy" -> "GA/1/", 
+   "SEMSS1ASLEANSP6DFiHookeMisesExH" -> "SE/7/", "HYD2Q2DFNSQ2PlDarcyKsVG" -> 
+    "HY/1/", "GAD3H1DFNSH1PgDarcy" -> "GA/1/", "SED3O1DFLEO1DHooke" -> 
+    "SE/7/", "GAD2T2DFNST2PgDarcy" -> "GA/1/", "HYD3O2DFSTO2PlDarcyKsVG" -> 
+    "HY/1/", "HYD3H2DFNSH2PlDarcyKsVG" -> "HY/2/", 
+   "HYAXT2DFSTT2PlDarcyKsVG" -> "HY/2/", "GAAXQ1DFNSQ1PgDarcy" -> "GA/1/", 
+   "GAD2Q1DFSTQ1PgDarcy" -> "GA/1/", "GAD2Q1DFNSQ1PgDarcy" -> "GA/1/", 
+   "HYD2Q2SDFNSQ2SPlDarcyKsVG" -> "HY/2/", "GAAXQ2DFSTQ2PgDarcy" -> "GA/1/", 
+   "HYAXQ1DFSTQ1PlDarcyKsVG" -> "HY/2/", "HYD3H1DFSTH1PlDarcyKsVG" -> 
+    "HY/2/", "GAAXQ2DFNSQ2PgDarcy" -> "GA/1/", "GAD2Q2DFSTQ2PgDarcy" -> 
+    "GA/1/", "GAD2Q2DFNSQ2PgDarcy" -> "GA/1/", "THS2L1DFFLL1TConst" -> 
+    "TH/2/", "GAD3H2DFNSH2PgDarcy" -> "GA/1/", "GAAXQ2SDFSTQ2SPgDarcy" -> 
+    "GA/1/", "HYD3H2SDFNSH2SPlDarcyKsVG" -> "HY/2/", 
+   "GAAXQ2SDFNSQ2SPgDarcy" -> "GA/1/", "GAD2Q2SDFSTQ2SPgDarcy" -> "GA/1/", 
+   "GAD3H2SDFSTH2SPgDarcy" -> "GA/1/", "THS2L2DFFLL2TConst" -> "TH/2/", 
+   "GAD2Q2SDFNSQ2SPgDarcy" -> "GA/1/", "SEMSS1DFLPS1P6DFiHookeMisesExH" -> 
+    "SE/7/", "THSAL1DFFLL1TConst" -> "TH/2/", "THS3S1DFFLS1TConst" -> 
+    "TH/2/", "SEMSS1ESLEANSE2P6DFiHookeMisesExH" -> "SE/7/", 
+   "GAAXT1DFSTT1PgDarcy" -> "GA/1/", "GAD3O1DFNSO1PgDarcy" -> "GA/1/", 
+   "SEMSS1ESJCANSE4P6DFiSVenantMisesExH" -> "SE/7/", 
+   "HYD3H2DFSTH2PlDarcyKsVG" -> "HY/2/", "HYSAL2DFFLL2PlConst" -> "HY/2/", 
+   "HYD2T1DFSTT1PlDarcyKsVG" -> "HY/2/", "GAD3O1DFSTO1PgDarcy" -> "GA/2/", 
+   "MGAXT1DFSTT1MgMaxwell" -> "MG/1/", "GAD3H2SDFNSH2SPgDarcy" -> "GA/2/", 
+   "THS3S2DFFLS2TConst" -> "TH/2/", "THSAL2DFFLL2TConst" -> "TH/2/", 
+   "GAS2L1DFFLL1PgConst" -> "GA/2/", "GAAXT2DFSTT2PgDarcy" -> "GA/2/", 
+   "THD2T1DFNST1TFourier" -> "TH/2/", "GAS3S1DFFLS1PgConst" -> "GA/2/", 
+   "GAD3O2DFSTO2PgDarcy" -> "GA/2/", "THS3P1DFFLP1TConst" -> "TH/2/", 
+   "MGAXT2DFSTT2MgMaxwell" -> "MG/1/", "SEMSS1ESLEANSE4P6DFiHookeMisesExH" -> 
+    "SE/7/", "SEMSP2DFJCP2P6DFiSVenantMisesExH" -> "SE/7/", 
+   "GAAXQ1DFSTQ1PgDarcy" -> "GA/2/", "GAD2T1DFSTT1PgDarcy" -> "GA/2/", 
+   "GAS2L2DFFLL2PgConst" -> "GA/2/", "THD2T2DFNST2TFourier" -> "TH/2/", 
+   "GAS3S2DFFLS2PgConst" -> "GA/2/", "HYS3P1DFFLP1PlConst" -> "HY/2/", 
+   "THS3S2SDFFLS2STConst" -> "TH/2/", "HYD2T2DFSTT2PlDarcyKsVG" -> "HY/2/", 
+   "THS3P2DFFLP2TConst" -> "TH/2/", "GASAL1DFFLL1PgConst" -> "GA/2/", 
+   "HYS2L1DFFLL1PlLinC" -> "HY/2/", "THD2Q1DFNSQ1TFourier" -> "TH/2/", 
+   "GAS3S2SDFFLS2SPgConst" -> "GA/2/", "HYS3P2DFFLP2PlConst" -> "HY/2/", 
+   "HYS2L1DFFLL1PlConst" -> "HY/2/", "GAD3H1DFSTH1PgDarcy" -> "GA/2/", 
+   "THSAL2DFFLL2TLinC" -> "TH/2/", "MGAXQ1DFSTQ1MgMaxwell" -> "MG/1/", 
+   "GAD2T2DFSTT2PgDarcy" -> "GA/2/", "GASAL2DFFLL2PgConst" -> "GA/2/", 
+   "HYS3S1DFFLS1PlLinC" -> "HY/2/", "THS2L1DFFLL1TLinC" -> "TH/2/", 
+   "HYS3S1DFFLS1PlConst" -> "HY/2/", "HYS2L2DFFLL2PlConst" -> "HY/2/", 
+   "GAS3P1DFFLP1PgConst" -> "GA/2/", "HYS3S2DFFLS2PlLinC" -> "HY/2/", 
+   "THD2Q2DFNSQ2TFourier" -> "TH/2/", "THS3P1DFFLP1TLinC" -> "TH/2/", 
+   "SEAXQ1DIJCQ1TSDNeoHookeWAMisesExH" -> "SE/7/", 
+   "GAD3H2DFSTH2PgDarcy" -> "GA/2/", "MGAXQ2DFSTQ2MgMaxwell" -> "MG/1/", 
+   "HYS3S2DFFLS2PlConst" -> "HY/2/", "HYSAL1DFFLL1PlConst" -> "HY/2/", 
+   "GASAL2DFFLL2PgLinC" -> "GA/2/", "GAS3P2DFFLP2PgConst" -> "GA/2/", 
+   "THS2L2DFFLL2TLinC" -> "TH/2/", "SEMSS1ASHYANSP6DFiSVenant" -> "SE/7/", 
+   "HYS2L2DFFLL2PlLinC" -> "HY/2/", "HYS3S2SDFFLS2SPlLinC" -> "HY/3/", 
+   "THD2Q2SDFNSQ2STFourier" -> "TH/3/", "THS3P2DFFLP2TLinC" -> "TH/3/", 
+   "HYS3S2SDFFLS2SPlConst" -> "HY/3/", "GAS3P1DFFLP1PgLinC" -> "GA/2/", 
+   "THSAL1DFFLL1TLinC" -> "TH/3/", "MGAXQ2SDFSTQ2SMgMaxwell" -> "MG/1/", 
+   "HYSAL1DFFLL1PlLinC" -> "HY/3/", "GAS2L1DFFLL1PgLinC" -> "GA/2/", 
+   "THS3S1DFFLS1TLinC" -> "TH/3/", "GAS3P2DFFLP2PgLinC" -> "GA/3/", 
+   "HYSAL2DFFLL2PlLinC" -> "HY/3/", "GAS2L2DFFLL2PgLinC" -> "GA/3/", 
+   "THS3S2DFFLS2TLinC" -> "TH/3/", "GAS3S1DFFLS1PgLinC" -> "GA/3/", 
+   "HYS3P1DFFLP1PlLinC" -> "HY/3/", "GASAL1DFFLL1PgLinC" -> "GA/3/", 
+   "THS3S2SDFFLS2STLinC" -> "TH/3/", "GAS3S2DFFLS2PgLinC" -> "GA/3/", 
+   "HYS3P2DFFLP2PlLinC" -> "HY/3/", "GAS3S2SDFFLS2SPgLinC" -> "GA/3/", 
+   "SEMSS1DFJCS1P6DFiSVenantMisesExH" -> "SE/8/", 
+   "SED3H1DIJCH1TSDNeoHookeWAMisesExH" -> "SE/8/", 
+   "SEMSS1ESHYANSE2P6DFiSVenant" -> "SE/8/", 
+   "SEMSS1ASJCANSP6DFiSVenantMisesExH" -> "SE/8/", 
+   "SEMSS2DFJCS2P6DFiSVenantMisesExH" -> "SE/8/", 
+   "SED3H1DILPH1TSDHookeMisesExH" -> "SE/8/", 
+   "SEMSS1ESJCANSE2P6DFiSVenantMisesExH" -> "SE/8/", 
+   "SED3H1DIHYH1TSDNeoHookeWA" -> "SE/8/", 
+   "SED3H1ESJCCG9DNeoHookeWAMisesExH" -> "SE/8/"}, 
+  {"SEPET1DFLET1DHooke" -> {"SE", "PE", "T1", "DF", "LE", "T1", {"D"}, 
+     {"Hooke"}}, "SEAXT2DFHYT2DNeoHookeWA" -> {"SE", "AX", "T2", "DF", "HY", 
+     "T2", {"D"}, {{"NeoHooke", "WA"}}}, "SEPEQ1ESLPQ1E4DHookeMisesExH" -> 
+    {"SE", "PE", "Q1", "ES", "LP", "Q1E4", {"D"}, 
+     {"Hooke", {"Mises", "ExH"}}}, "SEAXT1DFHYT1DNeoHookeWA" -> 
+    {"SE", "AX", "T1", "DF", "HY", "T1", {"D"}, {{"NeoHooke", "WA"}}}, 
+   "SEPEQ1DFLPQ1DHookeMisesExH" -> {"SE", "PE", "Q1", "DF", "LP", "Q1", 
+     {"D"}, {"Hooke", {"Mises", "ExH"}}}, "SEPST2DFHYT2DNeoHookeWA" -> 
+    {"SE", "PS", "T2", "DF", "HY", "T2", {"D"}, {{"NeoHooke", "WA"}}}, 
+   "SEAXT1DFJCT1DNeoHookeWAMisesExH" -> {"SE", "AX", "T1", "DF", "JC", "T1", 
+     {"D"}, {{"NeoHooke", "WA"}, {"Mises", "ExH"}}}, 
+   "SEAXT2DFJCT2DNeoHookeWAMisesExH" -> {"SE", "AX", "T2", "DF", "JC", "T2", 
+     {"D"}, {{"NeoHooke", "WA"}, {"Mises", "ExH"}}}, 
+   "SED3H1DFLEH1DHooke" -> {"SE", "D3", "H1", "DF", "LE", "H1", {"D"}, 
+     {"Hooke"}}, "SEPSQ2DFJCQ2DNeoHookeWAMisesExH" -> 
+    {"SE", "PS", "Q2", "DF", "JC", "Q2", {"D"}, {{"NeoHooke", "WA"}, 
+      {"Mises", "ExH"}}}, "SEPST2DFLPT2DHookeMisesExH" -> 
+    {"SE", "PS", "T2", "DF", "LP", "T2", {"D"}, {"Hooke", {"Mises", "ExH"}}}, 
+   "SED3H1ESLECG9DHooke" -> {"SE", "D3", "H1", "ES", "LE", "CG9", {"D"}, 
+     {"Hooke"}}, "SEPET1DFHYT1DNeoHookeWA" -> {"SE", "PE", "T1", "DF", "HY", 
+     "T1", {"D"}, {{"NeoHooke", "WA"}}}, "SEPEQ2SDFLPQ2SDHookeMisesExH" -> 
+    {"SE", "PE", "Q2S", "DF", "LP", "Q2S", {"D"}, 
+     {"Hooke", {"Mises", "ExH"}}}, "SED3O2DFLPO2DHookeMisesExH" -> 
+    {"SE", "D3", "O2", "DF", "LP", "O2", {"D"}, {"Hooke", {"Mises", "ExH"}}}, 
+   "SEPSQ2SDFHYQ2SDNeoHookeWA" -> {"SE", "PS", "Q2S", "DF", "HY", "Q2S", 
+     {"D"}, {{"NeoHooke", "WA"}}}, "SEPEQ2DFLEQ2DHooke" -> 
+    {"SE", "PE", "Q2", "DF", "LE", "Q2", {"D"}, {"Hooke"}}, 
+   "SED3H1DFHYH1DNeoHookeWA" -> {"SE", "D3", "H1", "DF", "HY", "H1", {"D"}, 
+     {{"NeoHooke", "WA"}}}, "SED3H1ESLPH1E9DHookeMisesExH" -> 
+    {"SE", "D3", "H1", "ES", "LP", "H1E9", {"D"}, 
+     {"Hooke", {"Mises", "ExH"}}}, "SEPEQ2SDFLEQ2SDHooke" -> 
+    {"SE", "PE", "Q2S", "DF", "LE", "Q2S", {"D"}, {"Hooke"}}, 
+   "SEAXQ2SDFJCQ2SDNeoHookeWAMisesExH" -> {"SE", "AX", "Q2S", "DF", "JC", 
+     "Q2S", {"D"}, {{"NeoHooke", "WA"}, {"Mises", "ExH"}}}, 
+   "SEPST1DFLET1DHooke" -> {"SE", "PS", "T1", "DF", "LE", "T1", {"D"}, 
+     {"Hooke"}}, "SEPEQ1ESJCQ1E4DNeoHookeWAMisesExH" -> 
+    {"SE", "PE", "Q1", "ES", "JC", "Q1E4", {"D"}, {{"NeoHooke", "WA"}, 
+      {"Mises", "ExH"}}}, "SEAXQ1DFJCQ1DNeoHookeWAMisesExH" -> 
+    {"SE", "AX", "Q1", "DF", "JC", "Q1", {"D"}, {{"NeoHooke", "WA"}, 
+      {"Mises", "ExH"}}}, "SEPSQ2DFHYQ2DNeoHookeWA" -> 
+    {"SE", "PS", "Q2", "DF", "HY", "Q2", {"D"}, {{"NeoHooke", "WA"}}}, 
+   "SEPEQ1DIHYQ1TSDNeoHookeWA" -> {"SE", "PE", "Q1", "DI", "HY", "Q1TS", 
+     {"D"}, {{"NeoHooke", "WA"}}}, "SED3O1DFHYO1DNeoHookeWA" -> 
+    {"SE", "D3", "O1", "DF", "HY", "O1", {"D"}, {{"NeoHooke", "WA"}}}, 
+   "SEPSQ2DFLEQ2DHooke" -> {"SE", "PS", "Q2", "DF", "LE", "Q2", {"D"}, 
+     {"Hooke"}}, "SEAXT1DFLPT1DHookeMisesExH" -> {"SE", "AX", "T1", "DF", 
+     "LP", "T1", {"D"}, {"Hooke", {"Mises", "ExH"}}}, 
+   "SEPEQ1HRLEPianSumDHooke" -> {"SE", "PE", "Q1", "HR", "LE", "PianSum", 
+     {"D"}, {"Hooke"}}, "SEPST1DFHYT1DNeoHookeWA" -> 
+    {"SE", "PS", "T1", "DF", "HY", "T1", {"D"}, {{"NeoHooke", "WA"}}}, 
+   "SEPEQ2DFHYQ2DNeoHookeWA" -> {"SE", "PE", "Q2", "DF", "HY", "Q2", {"D"}, 
+     {{"NeoHooke", "WA"}}}, "SEAXT2DFLPT2DHookeMisesExH" -> 
+    {"SE", "AX", "T2", "DF", "LP", "T2", {"D"}, {"Hooke", {"Mises", "ExH"}}}, 
+   "SEPET2DFLET2DHooke" -> {"SE", "PE", "T2", "DF", "LE", "T2", {"D"}, 
+     {"Hooke"}}, "SEAXQ2SDFLEQ2SDHooke" -> {"SE", "AX", "Q2S", "DF", "LE", 
+     "Q2S", {"D"}, {"Hooke"}}, "SEAXT1DFLET1DHooke" -> 
+    {"SE", "AX", "T1", "DF", "LE", "T1", {"D"}, {"Hooke"}}, 
+   "SEAXQ2DFLEQ2DHooke" -> {"SE", "AX", "Q2", "DF", "LE", "Q2", {"D"}, 
+     {"Hooke"}}, "SEAXQ2DFLPQ2DHookeMisesExH" -> {"SE", "AX", "Q2", "DF", 
+     "LP", "Q2", {"D"}, {"Hooke", {"Mises", "ExH"}}}, 
+   "SEPET1DFLPT1DHookeMisesExH" -> {"SE", "PE", "T1", "DF", "LP", "T1", 
+     {"D"}, {"Hooke", {"Mises", "ExH"}}}, "SEPET2DFHYT2DNeoHookeWA" -> 
+    {"SE", "PE", "T2", "DF", "HY", "T2", {"D"}, {{"NeoHooke", "WA"}}}, 
+   "SEPSQ2SDFLPQ2SDHookeMisesExH" -> {"SE", "PS", "Q2S", "DF", "LP", "Q2S", 
+     {"D"}, {"Hooke", {"Mises", "ExH"}}}, "SEAXQ2SDFLPQ2SDHookeMisesExH" -> 
+    {"SE", "AX", "Q2S", "DF", "LP", "Q2S", {"D"}, 
+     {"Hooke", {"Mises", "ExH"}}}, "SEPST1DFJCT1DNeoHookeWAMisesExH" -> 
+    {"SE", "PS", "T1", "DF", "JC", "T1", {"D"}, {{"NeoHooke", "WA"}, 
+      {"Mises", "ExH"}}}, "SEPEQ2SDFHYQ2SDNeoHookeWA" -> 
+    {"SE", "PE", "Q2S", "DF", "HY", "Q2S", {"D"}, {{"NeoHooke", "WA"}}}, 
+   "SEPET2DFJCT2DNeoHookeWAMisesExH" -> {"SE", "PE", "T2", "DF", "JC", "T2", 
+     {"D"}, {{"NeoHooke", "WA"}, {"Mises", "ExH"}}}, 
+   "SEPEQ1DFLEQ1DHooke" -> {"SE", "PE", "Q1", "DF", "LE", "Q1", {"D"}, 
+     {"Hooke"}}, "SED3O1DFLPO1DHookeMisesExH" -> {"SE", "D3", "O1", "DF", 
+     "LP", "O1", {"D"}, {"Hooke", {"Mises", "ExH"}}}, 
+   "SEPEQ1DIHYFBARDNeoHookeWA" -> {"SE", "PE", "Q1", "DI", "HY", "FBAR", 
+     {"D"}, {{"NeoHooke", "WA"}}}, "SEPST1DFLPT1DHookeMisesExH" -> 
+    {"SE", "PS", "T1", "DF", "LP", "T1", {"D"}, {"Hooke", {"Mises", "ExH"}}}, 
+   "SED3H2DFJCH2DNeoHookeWAMisesExH" -> {"SE", "D3", "H2", "DF", "JC", "H2", 
+     {"D"}, {{"NeoHooke", "WA"}, {"Mises", "ExH"}}}, 
+   "SEPEQ1DFJCQ1DNeoHookeWAMisesExH" -> {"SE", "PE", "Q1", "DF", "JC", "Q1", 
+     {"D"}, {{"NeoHooke", "WA"}, {"Mises", "ExH"}}}, 
+   "SEPEQ2DFJCQ2DNeoHookeWAMisesExH" -> {"SE", "PE", "Q2", "DF", "JC", "Q2", 
+     {"D"}, {{"NeoHooke", "WA"}, {"Mises", "ExH"}}}, 
+   "SEPEQ1DFHYQ1DNeoHookeWA" -> {"SE", "PE", "Q1", "DF", "HY", "Q1", {"D"}, 
+     {{"NeoHooke", "WA"}}}, "SEAXT2DFLET2DHooke" -> 
+    {"SE", "AX", "T2", "DF", "LE", "T2", {"D"}, {"Hooke"}}, 
+   "SEAXQ1DFLEQ1DHooke" -> {"SE", "AX", "Q1", "DF", "LE", "Q1", {"D"}, 
+     {"Hooke"}}, "SEPEQ1DIJCQ1TSDNeoHookeWAMisesExH" -> 
+    {"SE", "PE", "Q1", "DI", "JC", "Q1TS", {"D"}, {{"NeoHooke", "WA"}, 
+      {"Mises", "ExH"}}}, "SED3H2DFLPH2DHookeMisesExH" -> 
+    {"SE", "D3", "H2", "DF", "LP", "H2", {"D"}, {"Hooke", {"Mises", "ExH"}}}, 
+   "SEPEQ2DFLPQ2DHookeMisesExH" -> {"SE", "PE", "Q2", "DF", "LP", "Q2", 
+     {"D"}, {"Hooke", {"Mises", "ExH"}}}, 
+   "SED3H2SDFJCH2SDNeoHookeWAMisesExH" -> {"SE", "D3", "H2S", "DF", "JC", 
+     "H2S", {"D"}, {{"NeoHooke", "WA"}, {"Mises", "ExH"}}}, 
+   "SEAXQ2DFHYQ2DNeoHookeWA" -> {"SE", "AX", "Q2", "DF", "HY", "Q2", {"D"}, 
+     {{"NeoHooke", "WA"}}}, "SEAXQ2SDFHYQ2SDNeoHookeWA" -> 
+    {"SE", "AX", "Q2S", "DF", "HY", "Q2S", {"D"}, {{"NeoHooke", "WA"}}}, 
+   "SED3H1ESHYCG9DNeoHookeWA" -> {"SE", "D3", "H1", "ES", "HY", "CG9", {"D"}, 
+     {{"NeoHooke", "WA"}}}, "SEPET2DFLPT2DHookeMisesExH" -> 
+    {"SE", "PE", "T2", "DF", "LP", "T2", {"D"}, {"Hooke", {"Mises", "ExH"}}}, 
+   "SEPET1DFJCT1DNeoHookeWAMisesExH" -> {"SE", "PE", "T1", "DF", "JC", "T1", 
+     {"D"}, {{"NeoHooke", "WA"}, {"Mises", "ExH"}}}, 
+   "SEPSQ2DFLPQ2DHookeMisesExH" -> {"SE", "PS", "Q2", "DF", "LP", "Q2", 
+     {"D"}, {"Hooke", {"Mises", "ExH"}}}, "SEPEQ1ESLEQ1E4DHooke" -> 
+    {"SE", "PE", "Q1", "ES", "LE", "Q1E4", {"D"}, {"Hooke"}}, 
+   "SEPST2DFJCT2DNeoHookeWAMisesExH" -> {"SE", "PS", "T2", "DF", "JC", "T2", 
+     {"D"}, {{"NeoHooke", "WA"}, {"Mises", "ExH"}}}, 
+   "SEPEQ1DIJCFBARDNeoHookeWAMisesExH" -> {"SE", "PE", "Q1", "DI", "JC", 
+     "FBAR", {"D"}, {{"NeoHooke", "WA"}, {"Mises", "ExH"}}}, 
+   "SEPSQ1DFLPQ1DHookeMisesExH" -> {"SE", "PS", "Q1", "DF", "LP", "Q1", 
+     {"D"}, {"Hooke", {"Mises", "ExH"}}}, "SEPEQ1ESHYCG4DNeoHookeWA" -> 
+    {"SE", "PE", "Q1", "ES", "HY", "CG4", {"D"}, {{"NeoHooke", "WA"}}}, 
+   "SEAXQ1DFHYQ1DNeoHookeWA" -> {"SE", "AX", "Q1", "DF", "HY", "Q1", {"D"}, 
+     {{"NeoHooke", "WA"}}}, "SED3H1HRLEPianTongDHooke" -> 
+    {"SE", "D3", "H1", "HR", "LE", "PianTong", {"D"}, {"Hooke"}}, 
+   "SEPSQ1DIHYFBARDNeoHookeWA" -> {"SE", "PS", "Q1", "DI", "HY", "FBAR", 
+     {"D"}, {{"NeoHooke", "WA"}}}, "SEPST2DFLET2DHooke" -> 
+    {"SE", "PS", "T2", "DF", "LE", "T2", {"D"}, {"Hooke"}}, 
+   "SEPEQ1ESHYQ1E4DNeoHookeWA" -> {"SE", "PE", "Q1", "ES", "HY", "Q1E4", 
+     {"D"}, {{"NeoHooke", "WA"}}}, "SEPSQ1DFLEQ1DHooke" -> 
+    {"SE", "PS", "Q1", "DF", "LE", "Q1", {"D"}, {"Hooke"}}, 
+   "SEPEQ2SDFJCQ2SDNeoHookeWAMisesExH" -> {"SE", "PE", "Q2S", "DF", "JC", 
+     "Q2S", {"D"}, {{"NeoHooke", "WA"}, {"Mises", "ExH"}}}, 
+   "SED3H2SDFLEH2SDHooke" -> {"SE", "D3", "H2S", "DF", "LE", "H2S", {"D"}, 
+     {"Hooke"}}, "SEAXQ1DILPQ1TSDHookeMisesExH" -> 
+    {"SE", "AX", "Q1", "DI", "LP", "Q1TS", {"D"}, 
+     {"Hooke", {"Mises", "ExH"}}}, "SEPSQ2SDFLEQ2SDHooke" -> 
+    {"SE", "PS", "Q2S", "DF", "LE", "Q2S", {"D"}, {"Hooke"}}, 
+   "SEMSP2DFLEP2P6DFiHooke" -> {"SE", "MS", "P2", "DF", "LE", "P2P6", 
+     {"D", "Fi"}, {"Hooke"}}, "SEPSQ1ESJCQ1E4DNeoHookeWAMisesExH" -> 
+    {"SE", "PS", "Q1", "ES", "JC", "Q1E4", {"D"}, {{"NeoHooke", "WA"}, 
+      {"Mises", "ExH"}}}, "SEPSQ1DFJCQ1DNeoHookeWAMisesExH" -> 
+    {"SE", "PS", "Q1", "DF", "JC", "Q1", {"D"}, {{"NeoHooke", "WA"}, 
+      {"Mises", "ExH"}}}, "SEPSQ2SDFJCQ2SDNeoHookeWAMisesExH" -> 
+    {"SE", "PS", "Q2S", "DF", "JC", "Q2S", {"D"}, {{"NeoHooke", "WA"}, 
+      {"Mises", "ExH"}}}, "SEPEQ1ESJCCG4DNeoHookeWAMisesExH" -> 
+    {"SE", "PE", "Q1", "ES", "JC", "CG4", {"D"}, {{"NeoHooke", "WA"}, 
+      {"Mises", "ExH"}}}, "SEPEQ1DILEQ1TSDHooke" -> 
+    {"SE", "PE", "Q1", "DI", "LE", "Q1TS", {"D"}, {"Hooke"}}, 
+   "SED3O1DFJCO1DNeoHookeWAMisesExH" -> {"SE", "D3", "O1", "DF", "JC", "O1", 
+     {"D"}, {{"NeoHooke", "WA"}, {"Mises", "ExH"}}}, 
+   "SED3H1DFLPH1DHookeMisesExH" -> {"SE", "D3", "H1", "DF", "LP", "H1", 
+     {"D"}, {"Hooke", {"Mises", "ExH"}}}, "SEPEQ1DILPQ1TSDHookeMisesExH" -> 
+    {"SE", "PE", "Q1", "DI", "LP", "Q1TS", {"D"}, 
+     {"Hooke", {"Mises", "ExH"}}}, "SEPSQ1ESLEQ1E4DHooke" -> 
+    {"SE", "PS", "Q1", "ES", "LE", "Q1E4", {"D"}, {"Hooke"}}, 
+   "SEMSS1DFHYS1P6DFiSVenant" -> {"SE", "MS", "S1", "DF", "HY", "S1P6", 
+     {"D", "Fi"}, {"SVenant"}}, "SED3H2SDFHYH2SDNeoHookeWA" -> 
+    {"SE", "D3", "H2S", "DF", "HY", "H2S", {"D"}, {{"NeoHooke", "WA"}}}, 
+   "SED3H1ESJCH1E9DNeoHookeWAMisesExH" -> {"SE", "D3", "H1", "ES", "JC", 
+     "H1E9", {"D"}, {{"NeoHooke", "WA"}, {"Mises", "ExH"}}}, 
+   "SEPSQ1DIHYQ1TSDNeoHookeWA" -> {"SE", "PS", "Q1", "DI", "HY", "Q1TS", 
+     {"D"}, {{"NeoHooke", "WA"}}}, "SEPSQ1HRLEPianSumDHooke" -> 
+    {"SE", "PS", "Q1", "HR", "LE", "PianSum", {"D"}, {"Hooke"}}, 
+   "SEAXQ2DFJCQ2DNeoHookeWAMisesExH" -> {"SE", "AX", "Q2", "DF", "JC", "Q2", 
+     {"D"}, {{"NeoHooke", "WA"}, {"Mises", "ExH"}}}, 
+   "SED3O2DFJCO2DNeoHookeWAMisesExH" -> {"SE", "D3", "O2", "DF", "JC", "O2", 
+     {"D"}, {{"NeoHooke", "WA"}, {"Mises", "ExH"}}}, 
+   "SEAXQ1DFLPQ1DHookeMisesExH" -> {"SE", "AX", "Q1", "DF", "LP", "Q1", 
+     {"D"}, {"Hooke", {"Mises", "ExH"}}}, "SEMSS1DFLES1P6DFiHooke" -> 
+    {"SE", "MS", "S1", "DF", "LE", "S1P6", {"D", "Fi"}, {"Hooke"}}, 
+   "SEPSQ1DIJCFBARDNeoHookeWAMisesExH" -> {"SE", "PS", "Q1", "DI", "JC", 
+     "FBAR", {"D"}, {{"NeoHooke", "WA"}, {"Mises", "ExH"}}}, 
+   "SED3O2DFLEO2DHooke" -> {"SE", "D3", "O2", "DF", "LE", "O2", {"D"}, 
+     {"Hooke"}}, "SEPSQ1ESHYQ1E4DNeoHookeWA" -> {"SE", "PS", "Q1", "ES", 
+     "HY", "Q1E4", {"D"}, {{"NeoHooke", "WA"}}}, 
+   "SEMSS2DFLPS2P6DFiHookeMisesExH" -> {"SE", "MS", "S2", "DF", "LP", "S2P6", 
+     {"D", "Fi"}, {"Hooke", {"Mises", "ExH"}}}, "SEPSQ1DFHYQ1DNeoHookeWA" -> 
+    {"SE", "PS", "Q1", "DF", "HY", "Q1", {"D"}, {{"NeoHooke", "WA"}}}, 
+   "THAXT1DFNST1TFourier" -> {"TH", "AX", "T1", "DF", "NS", "T1", {"T"}, 
+     {"Fourier"}}, "SED3H1ESLEH1E9DHooke" -> {"SE", "D3", "H1", "ES", "LE", 
+     "H1E9", {"D"}, {"Hooke"}}, "THD3O2DFNSO2TFourier" -> 
+    {"TH", "D3", "O2", "DF", "NS", "O2", {"T"}, {"Fourier"}}, 
+   "THAXT2DFNST2TFourier" -> {"TH", "AX", "T2", "DF", "NS", "T2", {"T"}, 
+     {"Fourier"}}, "SED3O2DFHYO2DNeoHookeWA" -> {"SE", "D3", "O2", "DF", 
+     "HY", "O2", {"D"}, {{"NeoHooke", "WA"}}}, "THAXQ1DFNSQ1TFourier" -> 
+    {"TH", "AX", "Q1", "DF", "NS", "Q1", {"T"}, {"Fourier"}}, 
+   "THD3H1DFNSH1TFourier" -> {"TH", "D3", "H1", "DF", "NS", "H1", {"T"}, 
+     {"Fourier"}}, "SED3H1ESHYH1E9DNeoHookeWA" -> {"SE", "D3", "H1", "ES", 
+     "HY", "H1E9", {"D"}, {{"NeoHooke", "WA"}}}, "SEPSQ1DILEQ1TSDHooke" -> 
+    {"SE", "PS", "Q1", "DI", "LE", "Q1TS", {"D"}, {"Hooke"}}, 
+   "SEMSS2DFHYS2P6DFiSVenant" -> {"SE", "MS", "S2", "DF", "HY", "S2P6", 
+     {"D", "Fi"}, {"SVenant"}}, "THAXQ2DFNSQ2TFourier" -> 
+    {"TH", "AX", "Q2", "DF", "NS", "Q2", {"T"}, {"Fourier"}}, 
+   "SED3H1DFJCH1DNeoHookeWAMisesExH" -> {"SE", "D3", "H1", "DF", "JC", "H1", 
+     {"D"}, {{"NeoHooke", "WA"}, {"Mises", "ExH"}}}, 
+   "THD2Q1DFSTQ1TFourier" -> {"TH", "D2", "Q1", "DF", "ST", "Q1", {"T"}, 
+     {"Fourier"}}, "SEMSS2DFLES2P6DFiHooke" -> {"SE", "MS", "S2", "DF", "LE", 
+     "S2P6", {"D", "Fi"}, {"Hooke"}}, "THAXQ2SDFNSQ2STFourier" -> 
+    {"TH", "AX", "Q2S", "DF", "NS", "Q2S", {"T"}, {"Fourier"}}, 
+   "SEMSS2SDFLPS2SP6DFiHookeMisesExH" -> {"SE", "MS", "S2S", "DF", "LP", 
+     "S2SP6", {"D", "Fi"}, {"Hooke", {"Mises", "ExH"}}}, 
+   "SEPSQ1DILPQ1TSDHookeMisesExH" -> {"SE", "PS", "Q1", "DI", "LP", "Q1TS", 
+     {"D"}, {"Hooke", {"Mises", "ExH"}}}, "THD3O1DFNSO1TFourier" -> 
+    {"TH", "D3", "O1", "DF", "NS", "O1", {"T"}, {"Fourier"}}, 
+   "THD2Q2DFSTQ2TFourier" -> {"TH", "D2", "Q2", "DF", "ST", "Q2", {"T"}, 
+     {"Fourier"}}, "SEAXQ1DIHYQ1TSDNeoHookeWA" -> {"SE", "AX", "Q1", "DI", 
+     "HY", "Q1TS", {"D"}, {{"NeoHooke", "WA"}}}, "THD2Q2SDFSTQ2STFourier" -> 
+    {"TH", "D2", "Q2S", "DF", "ST", "Q2S", {"T"}, {"Fourier"}}, 
+   "THD3H2DFNSH2TFourier" -> {"TH", "D3", "H2", "DF", "NS", "H2", {"T"}, 
+     {"Fourier"}}, "THAXQ2DFSTQ2TFourier" -> {"TH", "AX", "Q2", "DF", "ST", 
+     "Q2", {"T"}, {"Fourier"}}, "SEMSS2SDFJCS2SP6DFiSVenantMisesExH" -> 
+    {"SE", "MS", "S2S", "DF", "JC", "S2SP6", {"D", "Fi"}, 
+     {"SVenant", {"Mises", "ExH"}}}, "SED3H1DIHYFBARDNeoHookeWA" -> 
+    {"SE", "D3", "H1", "DI", "HY", "FBAR", {"D"}, {{"NeoHooke", "WA"}}}, 
+   "THAXT1DFSTT1TFourier" -> {"TH", "AX", "T1", "DF", "ST", "T1", {"T"}, 
+     {"Fourier"}}, "SEPSQ1ESJCCG4DNeoHookeWAMisesExH" -> 
+    {"SE", "PS", "Q1", "ES", "JC", "CG4", {"D"}, {{"NeoHooke", "WA"}, 
+      {"Mises", "ExH"}}}, "THAXQ2SDFSTQ2STFourier" -> 
+    {"TH", "AX", "Q2S", "DF", "ST", "Q2S", {"T"}, {"Fourier"}}, 
+   "THAXT2DFSTT2TFourier" -> {"TH", "AX", "T2", "DF", "ST", "T2", {"T"}, 
+     {"Fourier"}}, "THD3H2SDFNSH2STFourier" -> {"TH", "D3", "H2S", "DF", 
+     "NS", "H2S", {"T"}, {"Fourier"}}, "THD3O1DFSTO1TFourier" -> 
+    {"TH", "D3", "O1", "DF", "ST", "O1", {"T"}, {"Fourier"}}, 
+   "SEMSS2SDFLES2SP6DFiHooke" -> {"SE", "MS", "S2S", "DF", "LE", "S2SP6", 
+     {"D", "Fi"}, {"Hooke"}}, "THAXQ1DFSTQ1TFourier" -> 
+    {"TH", "AX", "Q1", "DF", "ST", "Q1", {"T"}, {"Fourier"}}, 
+   "THD3H2SDFSTH2STFourier" -> {"TH", "D3", "H2S", "DF", "ST", "H2S", {"T"}, 
+     {"Fourier"}}, "SEPSQ1ESHYCG4DNeoHookeWA" -> {"SE", "PS", "Q1", "ES", 
+     "HY", "CG4", {"D"}, {{"NeoHooke", "WA"}}}, 
+   "SEMSS2SDFHYS2SP6DFiSVenant" -> {"SE", "MS", "S2S", "DF", "HY", "S2SP6", 
+     {"D", "Fi"}, {"SVenant"}}, "THD2T1DFSTT1TFourier" -> 
+    {"TH", "D2", "T1", "DF", "ST", "T1", {"T"}, {"Fourier"}}, 
+   "HYAXT1DFNST1PlDarcyKsVG" -> {"HY", "AX", "T1", "DF", "NS", "T1", {"Pl"}, 
+     {"Darcy", "", "KsVG"}}, "SEMSS1ASLEANSP6DFiHooke" -> 
+    {"SE", "MS", "S1", "AS", "LE", "ANSP6", {"D", "Fi"}, {"Hooke"}}, 
+   "HYD2T1DFNST1PlDarcyKsVG" -> {"HY", "D2", "T1", "DF", "NS", "T1", {"Pl"}, 
+     {"Darcy", "", "KsVG"}}, "THD3O2DFSTO2TFourier" -> 
+    {"TH", "D3", "O2", "DF", "ST", "O2", {"T"}, {"Fourier"}}, 
+   "THD2T2DFSTT2TFourier" -> {"TH", "D2", "T2", "DF", "ST", "T2", {"T"}, 
+     {"Fourier"}}, "SED3H1DIJCFBARDNeoHookeWAMisesExH" -> 
+    {"SE", "D3", "H1", "DI", "JC", "FBAR", {"D"}, {{"NeoHooke", "WA"}, 
+      {"Mises", "ExH"}}}, "HYAXT2DFNST2PlDarcyKsVG" -> 
+    {"HY", "AX", "T2", "DF", "NS", "T2", {"Pl"}, {"Darcy", "", "KsVG"}}, 
+   "THD3H1DFSTH1TFourier" -> {"TH", "D3", "H1", "DF", "ST", "H1", {"T"}, 
+     {"Fourier"}}, "SEMSP1DFLEP1P6DFiHooke" -> {"SE", "MS", "P1", "DF", "LE", 
+     "P1P6", {"D", "Fi"}, {"Hooke"}}, "HYD3O2DFNSO2PlDarcyKsVG" -> 
+    {"HY", "D3", "O2", "DF", "NS", "O2", {"Pl"}, {"Darcy", "", "KsVG"}}, 
+   "SEPSQ1DIJCQ1TSDNeoHookeWAMisesExH" -> {"SE", "PS", "Q1", "DI", "JC", 
+     "Q1TS", {"D"}, {{"NeoHooke", "WA"}, {"Mises", "ExH"}}}, 
+   "SEMSP1DFHYP1P6DFiSVenant" -> {"SE", "MS", "P1", "DF", "HY", "P1P6", 
+     {"D", "Fi"}, {"SVenant"}}, "HYAXQ1DFNSQ1PlDarcyKsVG" -> 
+    {"HY", "AX", "Q1", "DF", "NS", "Q1", {"Pl"}, {"Darcy", "", "KsVG"}}, 
+   "HYD2T2DFNST2PlDarcyKsVG" -> {"HY", "D2", "T2", "DF", "NS", "T2", {"Pl"}, 
+     {"Darcy", "", "KsVG"}}, "SED3H2DFLEH2DHooke" -> 
+    {"SE", "D3", "H2", "DF", "LE", "H2", {"D"}, {"Hooke"}}, 
+   "THD3H2DFSTH2TFourier" -> {"TH", "D3", "H2", "DF", "ST", "H2", {"T"}, 
+     {"Fourier"}}, "SEMSS1ESHYANSE4P6DFiSVenant" -> 
+    {"SE", "MS", "S1", "ES", "HY", "ANSE4P6", {"D", "Fi"}, {"SVenant"}}, 
+   "HYD2Q1DFSTQ1PlDarcyKsVG" -> {"HY", "D2", "Q1", "DF", "ST", "Q1", {"Pl"}, 
+     {"Darcy", "", "KsVG"}}, "SEMSS1ESLEANSE2P6DFiHooke" -> 
+    {"SE", "MS", "S1", "ES", "LE", "ANSE2P6", {"D", "Fi"}, {"Hooke"}}, 
+   "SEMSP1DFLPP1P6DFiHookeMisesExH" -> {"SE", "MS", "P1", "DF", "LP", "P1P6", 
+     {"D", "Fi"}, {"Hooke", {"Mises", "ExH"}}}, 
+   "SEPSQ1ESLPQ1E4DHookeMisesExH" -> {"SE", "PS", "Q1", "ES", "LP", "Q1E4", 
+     {"D"}, {"Hooke", {"Mises", "ExH"}}}, "HYD2Q1DFNSQ1PlDarcyKsVG" -> 
+    {"HY", "D2", "Q1", "DF", "NS", "Q1", {"Pl"}, {"Darcy", "", "KsVG"}}, 
+   "HYAXQ2DFSTQ2PlDarcyKsVG" -> {"HY", "AX", "Q2", "DF", "ST", "Q2", {"Pl"}, 
+     {"Darcy", "", "KsVG"}}, "HYAXQ2DFNSQ2PlDarcyKsVG" -> 
+    {"HY", "AX", "Q2", "DF", "NS", "Q2", {"Pl"}, {"Darcy", "", "KsVG"}}, 
+   "HYD2Q2DFSTQ2PlDarcyKsVG" -> {"HY", "D2", "Q2", "DF", "ST", "Q2", {"Pl"}, 
+     {"Darcy", "", "KsVG"}}, "SEMSP1DFJCP1P6DFiSVenantMisesExH" -> 
+    {"SE", "MS", "P1", "DF", "JC", "P1P6", {"D", "Fi"}, 
+     {"SVenant", {"Mises", "ExH"}}}, "SEMSP2DFHYP2P6DFiSVenant" -> 
+    {"SE", "MS", "P2", "DF", "HY", "P2P6", {"D", "Fi"}, {"SVenant"}}, 
+   "SED3H2SDFLPH2SDHookeMisesExH" -> {"SE", "D3", "H2S", "DF", "LP", "H2S", 
+     {"D"}, {"Hooke", {"Mises", "ExH"}}}, "SED3H1DILEH1TSDHooke" -> 
+    {"SE", "D3", "H1", "DI", "LE", "H1TS", {"D"}, {"Hooke"}}, 
+   "HYD3H2SDFSTH2SPlDarcyKsVG" -> {"HY", "D3", "H2S", "DF", "ST", "H2S", 
+     {"Pl"}, {"Darcy", "", "KsVG"}}, "HYAXQ2SDFSTQ2SPlDarcyKsVG" -> 
+    {"HY", "AX", "Q2S", "DF", "ST", "Q2S", {"Pl"}, {"Darcy", "", "KsVG"}}, 
+   "HYAXQ2SDFNSQ2SPlDarcyKsVG" -> {"HY", "AX", "Q2S", "DF", "NS", "Q2S", 
+     {"Pl"}, {"Darcy", "", "KsVG"}}, "SEAXQ1DILEQ1TSDHooke" -> 
+    {"SE", "AX", "Q1", "DI", "LE", "Q1TS", {"D"}, {"Hooke"}}, 
+   "HYD3H1DFNSH1PlDarcyKsVG" -> {"HY", "D3", "H1", "DF", "NS", "H1", {"Pl"}, 
+     {"Darcy", "", "KsVG"}}, "GAD3O2DFNSO2PgDarcy" -> 
+    {"GA", "D3", "O2", "DF", "NS", "O2", {"Pg"}, {"Darcy"}}, 
+   "SED3H2DFHYH2DNeoHookeWA" -> {"SE", "D3", "H2", "DF", "HY", "H2", {"D"}, 
+     {{"NeoHooke", "WA"}}}, "GAAXT1DFNST1PgDarcy" -> 
+    {"GA", "AX", "T1", "DF", "NS", "T1", {"Pg"}, {"Darcy"}}, 
+   "HYD2Q2SDFSTQ2SPlDarcyKsVG" -> {"HY", "D2", "Q2S", "DF", "ST", "Q2S", 
+     {"Pl"}, {"Darcy", "", "KsVG"}}, "HYD3O1DFSTO1PlDarcyKsVG" -> 
+    {"HY", "D3", "O1", "DF", "ST", "O1", {"Pl"}, {"Darcy", "", "KsVG"}}, 
+   "GAD2T1DFNST1PgDarcy" -> {"GA", "D2", "T1", "DF", "NS", "T1", {"Pg"}, 
+     {"Darcy"}}, "HYD3O1DFNSO1PlDarcyKsVG" -> {"HY", "D3", "O1", "DF", "NS", 
+     "O1", {"Pl"}, {"Darcy", "", "KsVG"}}, "SEMSS1ESLEANSE4P6DFiHooke" -> 
+    {"SE", "MS", "S1", "ES", "LE", "ANSE4P6", {"D", "Fi"}, {"Hooke"}}, 
+   "SEMSP2DFLPP2P6DFiHookeMisesExH" -> {"SE", "MS", "P2", "DF", "LP", "P2P6", 
+     {"D", "Fi"}, {"Hooke", {"Mises", "ExH"}}}, "HYAXT1DFSTT1PlDarcyKsVG" -> 
+    {"HY", "AX", "T1", "DF", "ST", "T1", {"Pl"}, {"Darcy", "", "KsVG"}}, 
+   "GAAXT2DFNST2PgDarcy" -> {"GA", "AX", "T2", "DF", "NS", "T2", {"Pg"}, 
+     {"Darcy"}}, "SEMSS1ASLEANSP6DFiHookeMisesExH" -> 
+    {"SE", "MS", "S1", "AS", "LE", "ANSP6", {"D", "Fi"}, 
+     {"Hooke", {"Mises", "ExH"}}}, "HYD2Q2DFNSQ2PlDarcyKsVG" -> 
+    {"HY", "D2", "Q2", "DF", "NS", "Q2", {"Pl"}, {"Darcy", "", "KsVG"}}, 
+   "GAD3H1DFNSH1PgDarcy" -> {"GA", "D3", "H1", "DF", "NS", "H1", {"Pg"}, 
+     {"Darcy"}}, "SED3O1DFLEO1DHooke" -> {"SE", "D3", "O1", "DF", "LE", "O1", 
+     {"D"}, {"Hooke"}}, "GAD2T2DFNST2PgDarcy" -> {"GA", "D2", "T2", "DF", 
+     "NS", "T2", {"Pg"}, {"Darcy"}}, "HYD3O2DFSTO2PlDarcyKsVG" -> 
+    {"HY", "D3", "O2", "DF", "ST", "O2", {"Pl"}, {"Darcy", "", "KsVG"}}, 
+   "HYD3H2DFNSH2PlDarcyKsVG" -> {"HY", "D3", "H2", "DF", "NS", "H2", {"Pl"}, 
+     {"Darcy", "", "KsVG"}}, "HYAXT2DFSTT2PlDarcyKsVG" -> 
+    {"HY", "AX", "T2", "DF", "ST", "T2", {"Pl"}, {"Darcy", "", "KsVG"}}, 
+   "GAAXQ1DFNSQ1PgDarcy" -> {"GA", "AX", "Q1", "DF", "NS", "Q1", {"Pg"}, 
+     {"Darcy"}}, "GAD2Q1DFSTQ1PgDarcy" -> {"GA", "D2", "Q1", "DF", "ST", 
+     "Q1", {"Pg"}, {"Darcy"}}, "GAD2Q1DFNSQ1PgDarcy" -> 
+    {"GA", "D2", "Q1", "DF", "NS", "Q1", {"Pg"}, {"Darcy"}}, 
+   "HYD2Q2SDFNSQ2SPlDarcyKsVG" -> {"HY", "D2", "Q2S", "DF", "NS", "Q2S", 
+     {"Pl"}, {"Darcy", "", "KsVG"}}, "GAAXQ2DFSTQ2PgDarcy" -> 
+    {"GA", "AX", "Q2", "DF", "ST", "Q2", {"Pg"}, {"Darcy"}}, 
+   "HYAXQ1DFSTQ1PlDarcyKsVG" -> {"HY", "AX", "Q1", "DF", "ST", "Q1", {"Pl"}, 
+     {"Darcy", "", "KsVG"}}, "HYD3H1DFSTH1PlDarcyKsVG" -> 
+    {"HY", "D3", "H1", "DF", "ST", "H1", {"Pl"}, {"Darcy", "", "KsVG"}}, 
+   "GAAXQ2DFNSQ2PgDarcy" -> {"GA", "AX", "Q2", "DF", "NS", "Q2", {"Pg"}, 
+     {"Darcy"}}, "GAD2Q2DFSTQ2PgDarcy" -> {"GA", "D2", "Q2", "DF", "ST", 
+     "Q2", {"Pg"}, {"Darcy"}}, "GAD2Q2DFNSQ2PgDarcy" -> 
+    {"GA", "D2", "Q2", "DF", "NS", "Q2", {"Pg"}, {"Darcy"}}, 
+   "THS2L1DFFLL1TConst" -> {"TH", "S2", "L1", "DF", "FL", "L1", {"T"}, 
+     "Const"}, "GAD3H2DFNSH2PgDarcy" -> {"GA", "D3", "H2", "DF", "NS", "H2", 
+     {"Pg"}, {"Darcy"}}, "GAAXQ2SDFSTQ2SPgDarcy" -> 
+    {"GA", "AX", "Q2S", "DF", "ST", "Q2S", {"Pg"}, {"Darcy"}}, 
+   "HYD3H2SDFNSH2SPlDarcyKsVG" -> {"HY", "D3", "H2S", "DF", "NS", "H2S", 
+     {"Pl"}, {"Darcy", "", "KsVG"}}, "GAAXQ2SDFNSQ2SPgDarcy" -> 
+    {"GA", "AX", "Q2S", "DF", "NS", "Q2S", {"Pg"}, {"Darcy"}}, 
+   "GAD2Q2SDFSTQ2SPgDarcy" -> {"GA", "D2", "Q2S", "DF", "ST", "Q2S", {"Pg"}, 
+     {"Darcy"}}, "GAD3H2SDFSTH2SPgDarcy" -> {"GA", "D3", "H2S", "DF", "ST", 
+     "H2S", {"Pg"}, {"Darcy"}}, "THS2L2DFFLL2TConst" -> 
+    {"TH", "S2", "L2", "DF", "FL", "L2", {"T"}, "Const"}, 
+   "GAD2Q2SDFNSQ2SPgDarcy" -> {"GA", "D2", "Q2S", "DF", "NS", "Q2S", {"Pg"}, 
+     {"Darcy"}}, "SEMSS1DFLPS1P6DFiHookeMisesExH" -> 
+    {"SE", "MS", "S1", "DF", "LP", "S1P6", {"D", "Fi"}, 
+     {"Hooke", {"Mises", "ExH"}}}, "THSAL1DFFLL1TConst" -> 
+    {"TH", "SA", "L1", "DF", "FL", "L1", {"T"}, "Const"}, 
+   "THS3S1DFFLS1TConst" -> {"TH", "S3", "S1", "DF", "FL", "S1", {"T"}, 
+     "Const"}, "SEMSS1ESLEANSE2P6DFiHookeMisesExH" -> 
+    {"SE", "MS", "S1", "ES", "LE", "ANSE2P6", {"D", "Fi"}, 
+     {"Hooke", {"Mises", "ExH"}}}, "GAAXT1DFSTT1PgDarcy" -> 
+    {"GA", "AX", "T1", "DF", "ST", "T1", {"Pg"}, {"Darcy"}}, 
+   "GAD3O1DFNSO1PgDarcy" -> {"GA", "D3", "O1", "DF", "NS", "O1", {"Pg"}, 
+     {"Darcy"}}, "SEMSS1ESJCANSE4P6DFiSVenantMisesExH" -> 
+    {"SE", "MS", "S1", "ES", "JC", "ANSE4P6", {"D", "Fi"}, 
+     {"SVenant", {"Mises", "ExH"}}}, "HYD3H2DFSTH2PlDarcyKsVG" -> 
+    {"HY", "D3", "H2", "DF", "ST", "H2", {"Pl"}, {"Darcy", "", "KsVG"}}, 
+   "HYSAL2DFFLL2PlConst" -> {"HY", "SA", "L2", "DF", "FL", "L2", {"Pl"}, 
+     "Const"}, "HYD2T1DFSTT1PlDarcyKsVG" -> {"HY", "D2", "T1", "DF", "ST", 
+     "T1", {"Pl"}, {"Darcy", "", "KsVG"}}, "GAD3O1DFSTO1PgDarcy" -> 
+    {"GA", "D3", "O1", "DF", "ST", "O1", {"Pg"}, {"Darcy"}}, 
+   "MGAXT1DFSTT1MgMaxwell" -> {"MG", "AX", "T1", "DF", "ST", "T1", {"Mg"}, 
+     "Maxwell"}, "GAD3H2SDFNSH2SPgDarcy" -> {"GA", "D3", "H2S", "DF", "NS", 
+     "H2S", {"Pg"}, {"Darcy"}}, "THS3S2DFFLS2TConst" -> 
+    {"TH", "S3", "S2", "DF", "FL", "S2", {"T"}, "Const"}, 
+   "THSAL2DFFLL2TConst" -> {"TH", "SA", "L2", "DF", "FL", "L2", {"T"}, 
+     "Const"}, "GAS2L1DFFLL1PgConst" -> {"GA", "S2", "L1", "DF", "FL", "L1", 
+     {"Pg"}, "Const"}, "GAAXT2DFSTT2PgDarcy" -> {"GA", "AX", "T2", "DF", 
+     "ST", "T2", {"Pg"}, {"Darcy"}}, "THD2T1DFNST1TFourier" -> 
+    {"TH", "D2", "T1", "DF", "NS", "T1", {"T"}, {"Fourier"}}, 
+   "GAS3S1DFFLS1PgConst" -> {"GA", "S3", "S1", "DF", "FL", "S1", {"Pg"}, 
+     "Const"}, "GAD3O2DFSTO2PgDarcy" -> {"GA", "D3", "O2", "DF", "ST", "O2", 
+     {"Pg"}, {"Darcy"}}, "THS3P1DFFLP1TConst" -> {"TH", "S3", "P1", "DF", 
+     "FL", "P1", {"T"}, "Const"}, "MGAXT2DFSTT2MgMaxwell" -> 
+    {"MG", "AX", "T2", "DF", "ST", "T2", {"Mg"}, "Maxwell"}, 
+   "SEMSS1ESLEANSE4P6DFiHookeMisesExH" -> {"SE", "MS", "S1", "ES", "LE", 
+     "ANSE4P6", {"D", "Fi"}, {"Hooke", {"Mises", "ExH"}}}, 
+   "SEMSP2DFJCP2P6DFiSVenantMisesExH" -> {"SE", "MS", "P2", "DF", "JC", 
+     "P2P6", {"D", "Fi"}, {"SVenant", {"Mises", "ExH"}}}, 
+   "GAAXQ1DFSTQ1PgDarcy" -> {"GA", "AX", "Q1", "DF", "ST", "Q1", {"Pg"}, 
+     {"Darcy"}}, "GAD2T1DFSTT1PgDarcy" -> {"GA", "D2", "T1", "DF", "ST", 
+     "T1", {"Pg"}, {"Darcy"}}, "GAS2L2DFFLL2PgConst" -> 
+    {"GA", "S2", "L2", "DF", "FL", "L2", {"Pg"}, "Const"}, 
+   "THD2T2DFNST2TFourier" -> {"TH", "D2", "T2", "DF", "NS", "T2", {"T"}, 
+     {"Fourier"}}, "GAS3S2DFFLS2PgConst" -> {"GA", "S3", "S2", "DF", "FL", 
+     "S2", {"Pg"}, "Const"}, "HYS3P1DFFLP1PlConst" -> 
+    {"HY", "S3", "P1", "DF", "FL", "P1", {"Pl"}, "Const"}, 
+   "THS3S2SDFFLS2STConst" -> {"TH", "S3", "S2S", "DF", "FL", "S2S", {"T"}, 
+     "Const"}, "HYD2T2DFSTT2PlDarcyKsVG" -> {"HY", "D2", "T2", "DF", "ST", 
+     "T2", {"Pl"}, {"Darcy", "", "KsVG"}}, "THS3P2DFFLP2TConst" -> 
+    {"TH", "S3", "P2", "DF", "FL", "P2", {"T"}, "Const"}, 
+   "GASAL1DFFLL1PgConst" -> {"GA", "SA", "L1", "DF", "FL", "L1", {"Pg"}, 
+     "Const"}, "HYS2L1DFFLL1PlLinC" -> {"HY", "S2", "L1", "DF", "FL", "L1", 
+     {"Pl"}, "LinC"}, "THD2Q1DFNSQ1TFourier" -> {"TH", "D2", "Q1", "DF", 
+     "NS", "Q1", {"T"}, {"Fourier"}}, "GAS3S2SDFFLS2SPgConst" -> 
+    {"GA", "S3", "S2S", "DF", "FL", "S2S", {"Pg"}, "Const"}, 
+   "HYS3P2DFFLP2PlConst" -> {"HY", "S3", "P2", "DF", "FL", "P2", {"Pl"}, 
+     "Const"}, "HYS2L1DFFLL1PlConst" -> {"HY", "S2", "L1", "DF", "FL", "L1", 
+     {"Pl"}, "Const"}, "GAD3H1DFSTH1PgDarcy" -> {"GA", "D3", "H1", "DF", 
+     "ST", "H1", {"Pg"}, {"Darcy"}}, "THSAL2DFFLL2TLinC" -> 
+    {"TH", "SA", "L2", "DF", "FL", "L2", {"T"}, "LinC"}, 
+   "MGAXQ1DFSTQ1MgMaxwell" -> {"MG", "AX", "Q1", "DF", "ST", "Q1", {"Mg"}, 
+     "Maxwell"}, "GAD2T2DFSTT2PgDarcy" -> {"GA", "D2", "T2", "DF", "ST", 
+     "T2", {"Pg"}, {"Darcy"}}, "GASAL2DFFLL2PgConst" -> 
+    {"GA", "SA", "L2", "DF", "FL", "L2", {"Pg"}, "Const"}, 
+   "HYS3S1DFFLS1PlLinC" -> {"HY", "S3", "S1", "DF", "FL", "S1", {"Pl"}, 
+     "LinC"}, "THS2L1DFFLL1TLinC" -> {"TH", "S2", "L1", "DF", "FL", "L1", 
+     {"T"}, "LinC"}, "HYS3S1DFFLS1PlConst" -> {"HY", "S3", "S1", "DF", "FL", 
+     "S1", {"Pl"}, "Const"}, "HYS2L2DFFLL2PlConst" -> 
+    {"HY", "S2", "L2", "DF", "FL", "L2", {"Pl"}, "Const"}, 
+   "GAS3P1DFFLP1PgConst" -> {"GA", "S3", "P1", "DF", "FL", "P1", {"Pg"}, 
+     "Const"}, "HYS3S2DFFLS2PlLinC" -> {"HY", "S3", "S2", "DF", "FL", "S2", 
+     {"Pl"}, "LinC"}, "THD2Q2DFNSQ2TFourier" -> {"TH", "D2", "Q2", "DF", 
+     "NS", "Q2", {"T"}, {"Fourier"}}, "THS3P1DFFLP1TLinC" -> 
+    {"TH", "S3", "P1", "DF", "FL", "P1", {"T"}, "LinC"}, 
+   "SEAXQ1DIJCQ1TSDNeoHookeWAMisesExH" -> {"SE", "AX", "Q1", "DI", "JC", 
+     "Q1TS", {"D"}, {{"NeoHooke", "WA"}, {"Mises", "ExH"}}}, 
+   "GAD3H2DFSTH2PgDarcy" -> {"GA", "D3", "H2", "DF", "ST", "H2", {"Pg"}, 
+     {"Darcy"}}, "MGAXQ2DFSTQ2MgMaxwell" -> {"MG", "AX", "Q2", "DF", "ST", 
+     "Q2", {"Mg"}, "Maxwell"}, "HYS3S2DFFLS2PlConst" -> 
+    {"HY", "S3", "S2", "DF", "FL", "S2", {"Pl"}, "Const"}, 
+   "HYSAL1DFFLL1PlConst" -> {"HY", "SA", "L1", "DF", "FL", "L1", {"Pl"}, 
+     "Const"}, "GASAL2DFFLL2PgLinC" -> {"GA", "SA", "L2", "DF", "FL", "L2", 
+     {"Pg"}, "LinC"}, "GAS3P2DFFLP2PgConst" -> {"GA", "S3", "P2", "DF", "FL", 
+     "P2", {"Pg"}, "Const"}, "THS2L2DFFLL2TLinC" -> 
+    {"TH", "S2", "L2", "DF", "FL", "L2", {"T"}, "LinC"}, 
+   "SEMSS1ASHYANSP6DFiSVenant" -> {"SE", "MS", "S1", "AS", "HY", "ANSP6", 
+     {"D", "Fi"}, {"SVenant"}}, "HYS2L2DFFLL2PlLinC" -> 
+    {"HY", "S2", "L2", "DF", "FL", "L2", {"Pl"}, "LinC"}, 
+   "HYS3S2SDFFLS2SPlLinC" -> {"HY", "S3", "S2S", "DF", "FL", "S2S", {"Pl"}, 
+     "LinC"}, "THD2Q2SDFNSQ2STFourier" -> {"TH", "D2", "Q2S", "DF", "NS", 
+     "Q2S", {"T"}, {"Fourier"}}, "THS3P2DFFLP2TLinC" -> 
+    {"TH", "S3", "P2", "DF", "FL", "P2", {"T"}, "LinC"}, 
+   "HYS3S2SDFFLS2SPlConst" -> {"HY", "S3", "S2S", "DF", "FL", "S2S", {"Pl"}, 
+     "Const"}, "GAS3P1DFFLP1PgLinC" -> {"GA", "S3", "P1", "DF", "FL", "P1", 
+     {"Pg"}, "LinC"}, "THSAL1DFFLL1TLinC" -> {"TH", "SA", "L1", "DF", "FL", 
+     "L1", {"T"}, "LinC"}, "MGAXQ2SDFSTQ2SMgMaxwell" -> 
+    {"MG", "AX", "Q2S", "DF", "ST", "Q2S", {"Mg"}, "Maxwell"}, 
+   "HYSAL1DFFLL1PlLinC" -> {"HY", "SA", "L1", "DF", "FL", "L1", {"Pl"}, 
+     "LinC"}, "GAS2L1DFFLL1PgLinC" -> {"GA", "S2", "L1", "DF", "FL", "L1", 
+     {"Pg"}, "LinC"}, "THS3S1DFFLS1TLinC" -> {"TH", "S3", "S1", "DF", "FL", 
+     "S1", {"T"}, "LinC"}, "GAS3P2DFFLP2PgLinC" -> 
+    {"GA", "S3", "P2", "DF", "FL", "P2", {"Pg"}, "LinC"}, 
+   "HYSAL2DFFLL2PlLinC" -> {"HY", "SA", "L2", "DF", "FL", "L2", {"Pl"}, 
+     "LinC"}, "GAS2L2DFFLL2PgLinC" -> {"GA", "S2", "L2", "DF", "FL", "L2", 
+     {"Pg"}, "LinC"}, "THS3S2DFFLS2TLinC" -> {"TH", "S3", "S2", "DF", "FL", 
+     "S2", {"T"}, "LinC"}, "GAS3S1DFFLS1PgLinC" -> 
+    {"GA", "S3", "S1", "DF", "FL", "S1", {"Pg"}, "LinC"}, 
+   "HYS3P1DFFLP1PlLinC" -> {"HY", "S3", "P1", "DF", "FL", "P1", {"Pl"}, 
+     "LinC"}, "GASAL1DFFLL1PgLinC" -> {"GA", "SA", "L1", "DF", "FL", "L1", 
+     {"Pg"}, "LinC"}, "THS3S2SDFFLS2STLinC" -> {"TH", "S3", "S2S", "DF", 
+     "FL", "S2S", {"T"}, "LinC"}, "GAS3S2DFFLS2PgLinC" -> 
+    {"GA", "S3", "S2", "DF", "FL", "S2", {"Pg"}, "LinC"}, 
+   "HYS3P2DFFLP2PlLinC" -> {"HY", "S3", "P2", "DF", "FL", "P2", {"Pl"}, 
+     "LinC"}, "GAS3S2SDFFLS2SPgLinC" -> {"GA", "S3", "S2S", "DF", "FL", 
+     "S2S", {"Pg"}, "LinC"}, "SEMSS1DFJCS1P6DFiSVenantMisesExH" -> 
+    {"SE", "MS", "S1", "DF", "JC", "S1P6", {"D", "Fi"}, 
+     {"SVenant", {"Mises", "ExH"}}}, "SED3H1DIJCH1TSDNeoHookeWAMisesExH" -> 
+    {"SE", "D3", "H1", "DI", "JC", "H1TS", {"D"}, {{"NeoHooke", "WA"}, 
+      {"Mises", "ExH"}}}, "SEMSS1ESHYANSE2P6DFiSVenant" -> 
+    {"SE", "MS", "S1", "ES", "HY", "ANSE2P6", {"D", "Fi"}, {"SVenant"}}, 
+   "SEMSS1ASJCANSP6DFiSVenantMisesExH" -> {"SE", "MS", "S1", "AS", "JC", 
+     "ANSP6", {"D", "Fi"}, {"SVenant", {"Mises", "ExH"}}}, 
+   "SEMSS2DFJCS2P6DFiSVenantMisesExH" -> {"SE", "MS", "S2", "DF", "JC", 
+     "S2P6", {"D", "Fi"}, {"SVenant", {"Mises", "ExH"}}}, 
+   "SED3H1DILPH1TSDHookeMisesExH" -> {"SE", "D3", "H1", "DI", "LP", "H1TS", 
+     {"D"}, {"Hooke", {"Mises", "ExH"}}}, 
+   "SEMSS1ESJCANSE2P6DFiSVenantMisesExH" -> {"SE", "MS", "S1", "ES", "JC", 
+     "ANSE2P6", {"D", "Fi"}, {"SVenant", {"Mises", "ExH"}}}, 
+   "SED3H1DIHYH1TSDNeoHookeWA" -> {"SE", "D3", "H1", "DI", "HY", "H1TS", 
+     {"D"}, {{"NeoHooke", "WA"}}}, "SED3H1ESJCCG9DNeoHookeWAMisesExH" -> 
+    {"SE", "D3", "H1", "ES", "JC", "CG9", {"D"}, {{"NeoHooke", "WA"}, 
+      {"Mises", "ExH"}}}}, {{"Description"} -> "Physical problem", 
+   {"SE"} -> "Solid static", {"SE", "Description"} -> "Continuum model", 
+   {"SE", "PE"} -> "Plane strain", {"SE", "PS"} -> "Plane stress", 
+   {"SE", "AX"} -> "Axisymetric continuum", {"SE", "D3"} -> "3D continuum", 
+   {"SE", "MS"} -> "Mindlin shell", {"SE", _, "Description"} -> 
+    "Element topology", {"SE", "V1", "V1"} -> "point in 1D", 
+   {"SE", "V2", "V2"} -> "point in 2D", {"SE", "V3", "V3"} -> "point in 3D", 
+   {"SE", "D1", "D1"} -> "element with 2 nodes in 1D", 
+   {"SE", "D1", "D2"} -> "element with 3 nodes in 1D", 
+   {"SE", "S2" | "SA" | "B2" | "T2" | "TP", "L1"} -> 
+    "stright line in 2 D bounded by two nodes", 
+   {"SE", "S2" | "SA" | "B2" | "T2" | "TP", "L2"} -> 
+    "curve in 2D with three nodes", {"SE", "D2" | "AX" | "PS" | "PE", 
+     "T1"} -> "triangle with 3 nodes in 2D", 
+   {"SE", "D2" | "AX" | "PS" | "PE", "T2"} -> "triangle with 6 nodes in 2D", 
+   {"SE", "D2" | "AX" | "PS" | "PE", "Q1"} -> 
+    "quadrilateral with 4 nodes in 2D", 
+   {"SE", "D2" | "AX" | "PS" | "PE", "Q2"} -> 
+    "quadrilateral with 9 nodes in 2D", 
+   {"SE", "D2" | "AX" | "PS" | "PE", "Q2S"} -> 
+    "quadrilateral with 8 nodes in 2D (serendipity family)", 
+   {"SE", "C3" | "B3" | "T3" | "TV", "C1"} -> "3D curve with 2 nodes", 
+   {"SE", "C3" | "B3" | "T3", "C2"} -> "3D curve with 3 nodes", 
+   {"SE", "S3" | "KP" | "MP" | "KS" | "MS", "P1"} -> 
+    "triangle with 3 nodes in 3D", {"SE", "S3" | "KP" | "MP" | "KS" | "MS", 
+     "P2"} -> "triangle with 6 nodes in 3D", 
+   {"SE", "S3" | "KP" | "MP" | "KS" | "MS", "S1"} -> 
+    "quadrilateral with 4 nodes in 3D", 
+   {"SE", "S3" | "KP" | "MP" | "KS" | "MS", "S2"} -> 
+    "quadrilateral with 9 nodes in 3D", 
+   {"SE", "S3" | "KP" | "MP" | "KS" | "MS", "S2S"} -> 
+    "quadrilateral with 8 nodes in 3D (serendipity family)", 
+   {"SE", "D3", "O1"} -> "tetrahedron with 4 nodes", 
+   {"SE", "D3", "O2"} -> "tetrahedron with 10 nodes", 
+   {"SE", "D3", "H1"} -> "hexahedron with 8 nodes", 
+   {"SE", "D3", "H2"} -> "hexahedron with 27 nodes", 
+   {"SE", "D3", "H2S"} -> "hexahedron with 20 nodes (serendipity family)", 
+   {"SE", _, _, "Description"} -> "Variational formulation", 
+   {"SE", _, _, "DF"} -> "Standard Galerkin", {"SE", _, _, "DI"} -> 
+    "Underintegrated", {"SE", _, _, "HR"} -> "Mixed principles", 
+   {"SE", _, _, "ES"} -> "Enhanced strain (additional modes)", 
+   {"SE", _, _, "AS"} -> "Assumed strain", {"SE", _, _, _, "Description"} -> 
+    "Physical model", {"SE", _, _, _, "LE"} -> "Linear elastic", 
+   {"SE", _, _, _, "HY"} -> "Hyperelastic", {"SE", _, _, _, "LP"} -> 
+    "Small strain plasticity, plastic strain space", 
+   {"SE", _, _, _, "JC"} -> "Finite strain C_p^{-1} based plasticity", 
+   {"SE", _, _, _, "GS"} -> "General small strain inelastic models", 
+   {"SE", _, _, _, "GL"} -> "General finite strain inelastic models", 
+   {"SE", _, _, _, _, "Description"} -> "Element acronym", 
+   {"SE", _, "L1", "DF", _, "L1"} -> "Isoparametric formulation", 
+   {"SE", _, "L2", "DF", _, "L2"} -> "Isoparametric formulation", 
+   {"SE", _, "T1", "DF", _, "T1"} -> "Isoparametric formulation", 
+   {"SE", _, "T2", "DF", _, "T2"} -> "Isoparametric formulation", 
+   {"SE", _, "Q1", "DF", _, "Q1"} -> "Isoparametric formulation", 
+   {"SE", _, "Q2", "DF", _, "Q2"} -> "Isoparametric formulation", 
+   {"SE", _, "Q2S", "DF", _, "Q2S"} -> "Isoparametric formulation", 
+   {"SE", _, "O1", "DF", _, "O1"} -> "Isoparametric formulation", 
+   {"SE", _, "O2", "DF", _, "O2"} -> "Isoparametric formulation", 
+   {"SE", _, "H1", "DF", _, "H1"} -> "Isoparametric formulation", 
+   {"SE", _, "H2", "DF", _, "H2"} -> "Isoparametric formulation", 
+   {"SE", _, "H2S", "DF", _, "H2S"} -> "Isoparametric formulation", 
+   {"SE", "PE" | "PS" | "AX", "Q1", "ES", _, "Q1E4"} -> 
+    "EAS with 4 modes, standard", {"SE", "PE" | "PS" | "AX", "Q1", "ES", _, 
+     "CG4"} -> "EAS with 4 modes. Special formulation for large strain \
+problems, Korelc & Wriggers 1996.", {"SE", "PE" | "PS" | "AX", "Q1", "ES", _, 
+     "Q1E5"} -> "EAS with 5 modes,standard", 
+   {"SE", "PE" | "PS" | "AX", "Q1", "DI", _, "TV0D1"} -> "Taylor expansion of \
+shape functions, constant volumentric part and linear deviatoric part", 
+   {"SE", "PE" | "PS" | "AX", "Q1", "DI", _, "TV1D0"} -> "Taylor expansion of \
+shape functions, linear volumentric part and constant deviatoric part", 
+   {"SE", "PE" | "PS" | "AX", "Q1", "HR", _, "PianSum"} -> 
+    "Hybrid stress formulation, 5 stress modes by Pian-Sumihara", 
+   {"SE", "PE" | "PS" | "AX", "Q1", "DI", _, "Q1TS"} -> "Taylor expansion of \
+shape functions, volumetric/deviatoric split, Korelc & Wriggers 2010.", 
+   {"SE", "PE" | "PS" | "AX" | "D3", "Q1", "DI", _, "FBAR"} -> "F-bar \
+formulation. Volumetric locking is treated by splitting deformation gradient \
+into volumetric and deviatoric part. Volumetric part is underintegrated.", 
+   {"SE", "D3", "H1", "HR", _, "PianTong"} -> "Hybrid stress formulation. \
+Stress is interpolated with 18 stress modes by Pian-Tong", 
+   {"SE", "D3", "H1", "ES", _, "H1E9"} -> "EAS with 9 modes, standard", 
+   {"SE", "D3", "H1", "ES", _, "H1E12"} -> "EAS with 12 modes, standard", 
+   {"SE", "D3", "H1", "ES", _, "CG9"} -> "EAS with 9 modes. Special \
+formulation for large strain problems, Korelc & Wriggers 1996.", 
+   {"SE", "D3", "H1", "DI", _, "H1TS"} -> "Taylor expansion of shape \
+functions, volumetric/deviatoric split, Korelc & Wriggers 2010.", 
+   {"SE", "D3", "H1", "ES", _, "TSCG12"} -> "Taylor expansion of shape \
+functions, 12 enhanced strain modes,volumetric/deviatoric split, Korelc & \
+Wriggers 2010.", {"SE", _, _, _, _, _, "Description"} -> 
+    "Interpolated fields", {"SE", _, _, _, _, _, "D"} -> 
+    {"Displacement field (D)", "Displacement field (D)", "", True}, 
+   {"SE", "B2" | "B3" | "T2" | "T3" | "KP" | "MP" | "KS" | "MS", _, _, _, _, 
+     "Fi"} -> {"Rotations field (Fi)", "Rotations field (Fi)", "", True}, 
+   {"SE", _, _, _, _, _, "T"} -> {"Thermal field (T)", "Thermal field (T)", 
+     "", False}, {"SE", _, _, _, _, _, "Pl"} -> 
+    {"Liquid pressure field (Pl)", "Liquid pressure field (Pl)", "", False}, 
+   {"SE", _, _, _, _, _, "Pg"} -> {"Gas pressure field (Pg)", 
+     "Gas pressure field (Pg)", "", False}, 
+   {"SE", _, _, _, _, _, _, "Description"} -> "Material model", 
+   {"SE", "PE" | "D3" | "AX" | "PS", _, _, "LE" | "LP", _, _, "Hooke"} -> 
+    {"Linear Hooke-s law", "Strain energy", "", True}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", _, _, "HY" | "JC", _, _, "NeoHooke"} -> 
+    {"Neo-Hooke strain potential", "Strain energy", "", True}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", _, _, "HY" | "JC", _, _, "NeoHooke", 
+     "Description"} -> {"Neo-Hooke options", "", "Strain energy"}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", _, _, "HY" | "JC", _, _, "NeoHooke", 
+     "WA"} -> {"\[Mu]/2(Tr[C]-3-2Log[JF])+\[Lambda]/4( JF^2-1-2Log[JF])", 
+     "type", "Strain energy", True}, {"SE", "PE" | "D3" | "AX" | "PS", _, _, 
+     "HY" | "JC", _, _, "NeoHooke", "WB"} -> 
+    {"\[Lambda]/2(JF-1)^2+\[Mu]((Tr[C]-3)/2-Log[JF])", "type", 
+     "Strain energy", False}, {"SE", "PE" | "D3" | "AX" | "PS", _, _, 
+     "HY" | "JC", _, _, "SVenant"} -> 
+    {"Saint-Venant (Green-Lagrange/2th Piola-Kirchoff)", "Strain energy", "", 
+     True}, {"SE", "PE" | "D3" | "AX" | "PS", _, _, "HY" | "JC", _, _, 
+     "Hencky"} -> {"Strain potential based on logarithmic Hencky strain", 
+     "Strain energy", "", True}, {"SE", "PE" | "D3" | "AX" | "PS", _, _, 
+     "HY" | "JC", _, _, "Hencky", "Description"} -> 
+    {"Hencky options", "", "Strain energy"}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", _, _, "HY" | "JC", _, _, "Hencky", 
+     "LogC"} -> {"MatrixLog[C]", "type", "Strain energy", True}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", _, _, "HY" | "JC", _, _, "Hencky", 
+     "LogCIso"} -> {"deviatoric/volumetric split", "type", "Strain energy", 
+     False}, {"SE", "PE" | "D3" | "AX" | "PS", _, _, "HY" | "JC", _, _, 
+     "Ogden"} -> 
+    {"Strain potential based on powers of deviatoric stretch tensor", 
+     "Strain energy", "", True}, {"SE", "PE" | "D3" | "AX" | "PS", _, _, 
+     "HY" | "JC", _, _, "Ogden", "Description"} -> 
+    {"Ogden options", "", "Strain energy"}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", _, _, "HY" | "JC", _, _, "Ogden", 
+     "Storakers"} -> {"Volumetric energy U - powers of J", "type", 
+     "Strain energy", True}, {"SE", "PE" | "D3" | "AX" | "PS", _, _, 
+     "HY" | "JC", _, _, "MooneyRivlin"} -> {"Mooney-Rivlin strain potential", 
+     "Strain energy", "", True}, {"SE", "PE" | "D3" | "AX" | "PS", _, _, 
+     "HY" | "JC", _, _, "NeoHooke" | "Ogden" | "MooneyRivlin", "U1"} -> 
+    {"U=K/2(J-1)^2,(limits not OK)", "type", "Strain energy", True}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", _, _, "HY" | "JC", _, _, 
+     "NeoHooke" | "Ogden" | "MooneyRivlin", "U2"} -> 
+    {"U=K/2(ln J)^2, (limits not OK)", "type", "Strain energy", False}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", _, _, "HY" | "JC", _, _, 
+     "NeoHooke" | "Ogden" | "MooneyRivlin", "U3"} -> 
+    {"U=K/4((J-1)^2+(ln J)^2) (limits OK)", "type", "Strain energy", False}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", _, _, "HY" | "JC", _, _, 
+     "NeoHooke" | "Ogden" | "MooneyRivlin", "U4"} -> 
+    {"U=K*\[Beta]^-2(\[Beta] ln J + J^-\[Beta] -1), \[Beta]<-1, (limits OK)", 
+     "type", "Strain energy", False}, {"SE", "PE" | "D3" | "AX" | "PS", _, _, 
+     "HY" | "JC", _, _, "NeoHooke" | "Ogden" | "MooneyRivlin", "U5"} -> 
+    {"U=K(J ln J - J +1), (limits not OK)", "type", "Strain energy", False}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", _, _, "HY" | "JC", _, _, 
+     "NeoHooke" | "Ogden" | "MooneyRivlin", "U6"} -> 
+    {"U=K (\[Alpha]+1)^-1 J^(\[Beta]1+1)+(\[Beta]2-1)^-1 \
+J^-(\[Beta]2-1))(\[Beta]1+\[Beta]2)^-1-K (\[Beta]1+1)^-1(\[Beta]2-1)^-1, \
+\[Beta]1>0,\[Beta]2>1 (limits OK)", "type", "Strain energy", False}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", _, _, "HY" | "JC", _, _, 
+     "NeoHooke" | "Ogden" | "MooneyRivlin", "U7"} -> 
+    {"U=K(exp(J -1) - ln J -1), (limits OK)", "type", "Strain energy", 
+     False}, {"SE", "PE" | "D3" | "AX" | "PS", _, _, "HY" | "JC", _, _, 
+     "NeoHooke" | "Ogden" | "MooneyRivlin", "U8"} -> 
+    {"U=K/2(J -1) ln J, (limits OK)", "type", "Strain energy", False}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", _, _, "LP" | "JC" | "JF", _, _, 
+     "Mises"} -> {"J2 Flow Theory", "Plastic Model", "", True}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", _, _, "LP" | "JC" | "JF", _, _, "Mises", 
+     "Description"} -> {"Huber-von Mises specific options", "", 
+     "Plastic Model"}, {"SE", "PE" | "D3" | "AX" | "PS", _, _, 
+     "LP" | "JC" | "JF", _, _, "Mises", "Perfect"} -> 
+    {"Perfect elasto-plastic", "Isotropic hardening", "Plastic Model", 
+     False}, {"SE", "PE" | "D3" | "AX" | "PS", _, _, "LP" | "JC" | "JF", _, 
+     _, "Mises", "ExH"} -> 
+    {"Exponential Sy=Sy0+K epseq+ Rinf (1-Exp(- delta epseq))", 
+     "Isotropic hardening", "Plastic Model", True}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", _, _, "LP" | "JC" | "JF", _, _, "Mises", 
+     "LiH"} -> {"Linear Sy=Sy0+K epseq", "Isotropic hardening", 
+     "Plastic Model", False}, {"SE", "PE" | "D3" | "AX" | "PS", _, _, 
+     "LP" | "JC" | "JF", _, "T", "Mises", "TSoft"} -> 
+    {"Linear temperature softening+exponential hard.(Simo and Mihe)", 
+     "Isotropic hardening", "Plastic Model", False}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", _, _, "LP" | "JC" | "JF", _, _, _, 
+     "Description"} -> {"Plastic Models suboptions", "", "Plastic Model"}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", _, _, "LP" | "JC" | "JF", _, 
+     "Pl" | "Pg", _, "Se"} -> {"Use effective stressses in yield criterion", 
+     "Effective stress", "Plastic Model", False}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", _, _, "LP" | "JC" | "JF", _, "T", 
+     "Mises" | "HanselSpittel", "QHeat"} -> 
+    {"Machanical work and plastic heat dissipation contribution", 
+     "Mechanical heat", "Plastic Model", False}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", _, _, "LE" | "LP" | "PS" | "SE" | "SP" | 
+      "PM" | "HY" | "JC" | "JF", _, "T", "WT"} -> 
+    {"Add standard thermal expansion term (\[CapitalDelta]T*\[Alpha]T*U')", 
+     "Thermal expansion", "", False}, {"SE", "PE" | "D3" | "AX" | "PS", _, _, 
+     "LE" | "LP" | "PS" | "SE" | "SP" | "PM" | "HY" | "JC" | "JF", _, 
+     "Pl" | "Pg", "por"} -> {"Porous medium", "Pore pressures", "", False}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", _, _, "LE" | "LP" | "PS" | "SE" | "SP" | 
+      "PM" | "HY" | "JC" | "JF", _, "Pl", "Satl"} -> 
+    {"Saturated with liquid", "Pore pressures", "", False}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", _, _, "LE" | "LP" | "PS" | "SE" | "SP" | 
+      "PM" | "HY" | "JC" | "JF", _, "Pg", "Satg"} -> 
+    {"Saturated with gas", "Pore pressures", "", False}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", _, _, "LE" | "LP" | "PS" | "SE" | "SP" | 
+      "PM" | "HY" | "JC" | "JF", _, "Pl", "NSatl"} -> 
+    {"Partialy saturated with liquid", "Pore pressures", "", False}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", _, _, "LE" | "LP" | "PS" | "SE" | "SP" | 
+      "PM" | "HY" | "JC" | "JF", _, "Pg", "NSatg"} -> 
+    {"Partialy saturated with gas", "Pore pressures", "", False}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", _, _, "LE" | "LP" | "PS" | "SE" | "SP" | 
+      "PM" | "HY" | "JC" | "JF", _, "Pl" | "Pg", "NSatlg"} -> 
+    {"Interaction of liquid and gas", "Pore pressures", "", False}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", _, _, "LE" | "LP" | "PS" | "SE" | "SP" | 
+      "PM" | "HY" | "JC" | "JF", _, _, "NSatl" | "NSatg" | "NSatlg", 
+     "Description"} -> {"Saturation equation", "", "Pore pressures"}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", _, _, "LE" | "LP" | "PS" | "SE" | "SP" | 
+      "PM" | "HY" | "JC" | "JF", _, _, "NSatl" | "NSatg" | "NSatlg", 
+     "SMVG"} -> {"Modified Mualem\[Dash]van Genuchten saturation model", 
+     "Saturation equation", "Pore pressures", True}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", _, _, "LE" | "LP" | "PS" | "SE" | "SP" | 
+      "PM" | "HY" | "JC" | "JF", _, "T", "NSatl" | "NSatg" | "NSatlg", 
+     "SMVGT"} -> {"Modified Mualem\[Dash]van Genuchten saturation model with \
+temperature dependency", "Saturation equation", "Pore pressures", False}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", _, _, "LE" | "LP" | "PS" | "SE" | "SP" | 
+      "PM" | "HY" | "JC" | "JF", _, _, "Satl" | "NSatl" | "NSatlg", 
+     "Description"} -> {"Liquid density equation", "", "Pore pressures"}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", _, _, "LE" | "LP" | "PS" | "SE" | "SP" | 
+      "PM" | "HY" | "JC" | "JF", _, "T", "Satl" | "NSatl" | "NSatlg", 
+     "RholpT"} -> {"Liquid density formula by Fernandez (p-T dependence)", 
+     "Liquid density", "Pore pressures", True}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", _, _, "LE" | "LP" | "PS" | "SE" | "SP" | 
+      "PM" | "HY" | "JC" | "JF", _, "Pl", "Satl" | "NSatl" | "NSatlg", 
+     "Rholp"} -> {"Liquid density formula by Fernandez (p dependence)", 
+     "Liquid density", "Pore pressures", False}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", _, _, "LE" | "LP" | "PS" | "SE" | "SP" | 
+      "PM" | "HY" | "JC" | "JF", _, "T", "Satl" | "NSatl" | "NSatlg", 
+     "RholT"} -> {"Liquid density formula by Fernandez (T dependence)", 
+     "Liquid density", "Pore pressures", False}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", _, _, "GS", _, _, "Damage"} -> 
+    {"Continuum damage model", "Type", "", True}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", _, _, "GS", _, _, "Damage", 
+     "Description"} -> {"Damage options", "", "Type"}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", _, _, "GS", _, _, "Damage", 
+     "HookeDamage"} -> {"Linear Hooke-s law with damage", "Strain energy", 
+     "Type", True}, {"SE", "PE" | "D3" | "AX" | "PS", _, _, "GS", _, _, 
+     "Damage", "Hooke"} -> {"Linear Hooke-s law", "Strain energy", "Type", 
+     False}, {"SE", "PE" | "D3" | "AX" | "PS", _, _, "GS", _, _, "Gurson"} -> 
+    {"Voids model", "Type", "", True}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", _, _, "GS", _, _, "Soil"} -> 
+    {"Soil multi-surface model", "Type", "", True}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", _, _, "GL", _, _, "Damage"} -> 
+    {"Continuum damage model", "Type", "", True}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", _, _, "GL", _, _, "Damage", 
+     "Description"} -> {"Damage options", "", "Type"}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", _, _, "GL", _, _, "Damage", 
+     "NeoHookeDamage"} -> {"Neo-Hooke strain potential with damage", 
+     "Strain energy", "Type", True}, {"SE", "PE" | "D3" | "AX" | "PS", _, _, 
+     "GL", _, _, "Damage", "NeoHooke"} -> {"Neo-Hooke strain potential", 
+     "Strain energy", "Type", False}, {"SE", "PE" | "D3" | "AX" | "PS", _, _, 
+     "GL", _, _, "Gurson"} -> {"Voids model", "Type", "", True}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", _, _, "GL", _, _, "Soil"} -> 
+    {"Soil multi-surface model", "Type", "", True}, 
+   {"SE", "MS", "P1", "DF", _, "P1P6"} -> 
+    "6 DOF, isoparametric formulation.", 
+   {"SE", "MS", "P2", "DF", _, "P2P6"} -> 
+    "6 DOF, isoparametric formulation.", 
+   {"SE", "MS", "S1", "DF", _, "S1P6"} -> 
+    "6 DOF, isoparametric formulation.", 
+   {"SE", "MS", "S2", "DF", _, "S2P6"} -> 
+    "6 DOF, isoparametric formulation.", 
+   {"SE", "MS", "S2S", "DF", _, "S2SP6"} -> 
+    "6 DOF, isoparametric formulation.", 
+   {"SE", "MS", "S1", "AS", _, "ANSP6"} -> 
+    "Assumed natural shear strain formulation (ANS), 6 DOF.", 
+   {"SE", "MS", "S1", "ES", _, "ANSE2P6"} -> 
+    "ANS+2 enhanced modes for in-plane, 6 DOF.", 
+   {"SE", "MS", "S1", "ES", _, "ANSE4P6"} -> 
+    "ANS+4 enhanced modes for in-plane, 6 DOF.", 
+   {"SE", "MS", _, _, "LE" | "LP", _, _, "Hooke"} -> 
+    {"Linear Hooke-s law", "Strain energy", "", True}, 
+   {"SE", "MS", _, _, "HY" | "JC", _, _, "SVenant"} -> 
+    {"Saint-Venant (Green-Lagrange/2th Piola-Kirchoff)", "Strain energy", "", 
+     True}, {"SE", "MS", _, _, "LP" | "JC", _, _, "Mises"} -> 
+    {"J2 Flow Theory", "Plastic Model", "", True}, 
+   {"SE", "MS", _, _, "LP" | "JC", _, _, "Mises", "Description"} -> 
+    {"Huber-von Mises specific options", "", "Plastic Model"}, 
+   {"SE", "MS", _, _, "LP" | "JC", _, _, "Mises", "Perfect"} -> 
+    {"Perfect elasto-plastic", "Isotropic hardening", "Plastic Model", 
+     False}, {"SE", "MS", _, _, "LP" | "JC", _, _, "Mises", "ExH"} -> 
+    {"Exponential Sy=Sy0+K epseq+ Rinf (1-Exp(- delta epseq))", 
+     "Isotropic hardening", "Plastic Model", True}, 
+   {"SE", "MS", _, _, "LP" | "JC", _, _, "Mises", "LiH"} -> 
+    {"Linear Sy=Sy0+K epseq", "Isotropic hardening", "Plastic Model", False}, 
+   {"TH"} -> "Heat conduction element", {"TH", "Description"} -> 
+    "Continuum model", {"TH", "D2"} -> "2D continuum", 
+   {"TH", "D3"} -> "3D continuum", {"TH", "AX"} -> "Axisymetric continuum", 
+   {"TH", "S2"} -> "2D surface", {"TH", "S3"} -> "3D surface", 
+   {"TH", "SA"} -> "Axisymetric surface", {"TH", _, "Description"} -> 
+    "Element topology", {"TH", "V1", "V1"} -> "point in 1D", 
+   {"TH", "V2", "V2"} -> "point in 2D", {"TH", "V3", "V3"} -> "point in 3D", 
+   {"TH", "D1", "D1"} -> "element with 2 nodes in 1D", 
+   {"TH", "D1", "D2"} -> "element with 3 nodes in 1D", 
+   {"TH", "S2" | "SA" | "B2" | "T2" | "TP", "L1"} -> 
+    "stright line in 2 D bounded by two nodes", 
+   {"TH", "S2" | "SA" | "B2" | "T2" | "TP", "L2"} -> 
+    "curve in 2D with three nodes", {"TH", "D2" | "AX" | "PS" | "PE", 
+     "T1"} -> "triangle with 3 nodes in 2D", 
+   {"TH", "D2" | "AX" | "PS" | "PE", "T2"} -> "triangle with 6 nodes in 2D", 
+   {"TH", "D2" | "AX" | "PS" | "PE", "Q1"} -> 
+    "quadrilateral with 4 nodes in 2D", 
+   {"TH", "D2" | "AX" | "PS" | "PE", "Q2"} -> 
+    "quadrilateral with 9 nodes in 2D", 
+   {"TH", "D2" | "AX" | "PS" | "PE", "Q2S"} -> 
+    "quadrilateral with 8 nodes in 2D (serendipity family)", 
+   {"TH", "C3" | "B3" | "T3" | "TV", "C1"} -> "3D curve with 2 nodes", 
+   {"TH", "C3" | "B3" | "T3", "C2"} -> "3D curve with 3 nodes", 
+   {"TH", "S3" | "KP" | "MP" | "KS" | "MS", "P1"} -> 
+    "triangle with 3 nodes in 3D", {"TH", "S3" | "KP" | "MP" | "KS" | "MS", 
+     "P2"} -> "triangle with 6 nodes in 3D", 
+   {"TH", "S3" | "KP" | "MP" | "KS" | "MS", "S1"} -> 
+    "quadrilateral with 4 nodes in 3D", 
+   {"TH", "S3" | "KP" | "MP" | "KS" | "MS", "S2"} -> 
+    "quadrilateral with 9 nodes in 3D", 
+   {"TH", "S3" | "KP" | "MP" | "KS" | "MS", "S2S"} -> 
+    "quadrilateral with 8 nodes in 3D (serendipity family)", 
+   {"TH", "D3", "O1"} -> "tetrahedron with 4 nodes", 
+   {"TH", "D3", "O2"} -> "tetrahedron with 10 nodes", 
+   {"TH", "D3", "H1"} -> "hexahedron with 8 nodes", 
+   {"TH", "D3", "H2"} -> "hexahedron with 27 nodes", 
+   {"TH", "D3", "H2S"} -> "hexahedron with 20 nodes (serendipity family)", 
+   {"TH", _, _, "Description"} -> "Variational formulation", 
+   {"TH", _, _, "DF"} -> "Standard Galerkin", 
+   {"TH", _, _, _, "Description"} -> "Physical model", 
+   {"TH", "D2" | "D3" | "AX", _, _, "ST"} -> "Stationary heat conduction", 
+   {"TH", "D2" | "D3" | "AX", _, _, "NS"} -> "Nonstationary heat conduction", 
+   {"TH", "SA" | "S2" | "S3", _, _, "FL"} -> 
+    "Heat transfer boundary conditions", {"TH", _, _, _, _, "Description"} -> 
+    "Element acronym", {"TH", _, "V1", _, _, "V1"} -> 
+    "Isoparametric formulation.", {"TH", _, "D1", _, _, "D1"} -> 
+    "Isoparametric formulation.", {"TH", _, "D2", _, _, "D2"} -> 
+    "Isoparametric formulation.", {"TH", _, "V2", _, _, "V2"} -> 
+    "Isoparametric formulation.", {"TH", _, "L1", _, _, "L1"} -> 
+    "Isoparametric formulation.", {"TH", _, "L2", _, _, "L2"} -> 
+    "Isoparametric formulation.", {"TH", _, "LX", _, _, "LX"} -> 
+    "Isoparametric formulation.", {"TH", _, "T1", _, _, "T1"} -> 
+    "Isoparametric formulation.", {"TH", _, "T1X", _, _, "T1X"} -> 
+    "Isoparametric formulation.", {"TH", _, "T2", _, _, "T2"} -> 
+    "Isoparametric formulation.", {"TH", _, "T2X", _, _, "T2X"} -> 
+    "Isoparametric formulation.", {"TH", _, "TX", _, _, "TX"} -> 
+    "Isoparametric formulation.", {"TH", _, "TXX", _, _, "TXX"} -> 
+    "Isoparametric formulation.", {"TH", _, "Q1", _, _, "Q1"} -> 
+    "Isoparametric formulation.", {"TH", _, "Q2", _, _, "Q2"} -> 
+    "Isoparametric formulation.", {"TH", _, "Q2S", _, _, "Q2S"} -> 
+    "Isoparametric formulation.", {"TH", _, "QX", _, _, "QX"} -> 
+    "Isoparametric formulation.", {"TH", _, "V3", _, _, "V3"} -> 
+    "Isoparametric formulation.", {"TH", _, "C1", _, _, "C1"} -> 
+    "Isoparametric formulation.", {"TH", _, "C2", _, _, "C2"} -> 
+    "Isoparametric formulation.", {"TH", _, "CX", _, _, "CX"} -> 
+    "Isoparametric formulation.", {"TH", _, "P1", _, _, "P1"} -> 
+    "Isoparametric formulation.", {"TH", _, "P2", _, _, "P2"} -> 
+    "Isoparametric formulation.", {"TH", _, "PX", _, _, "PX"} -> 
+    "Isoparametric formulation.", {"TH", _, "S1", _, _, "S1"} -> 
+    "Isoparametric formulation.", {"TH", _, "S2", _, _, "S2"} -> 
+    "Isoparametric formulation.", {"TH", _, "S2S", _, _, "S2S"} -> 
+    "Isoparametric formulation.", {"TH", _, "SX", _, _, "SX"} -> 
+    "Isoparametric formulation.", {"TH", _, "O1", _, _, "O1"} -> 
+    "Isoparametric formulation.", {"TH", _, "O2", _, _, "O2"} -> 
+    "Isoparametric formulation.", {"TH", _, "OX", _, _, "OX"} -> 
+    "Isoparametric formulation.", {"TH", _, "H1", _, _, "H1"} -> 
+    "Isoparametric formulation.", {"TH", _, "H2", _, _, "H2"} -> 
+    "Isoparametric formulation.", {"TH", _, "H2S", _, _, "H2S"} -> 
+    "Isoparametric formulation.", {"TH", _, "HX", _, _, "HX"} -> 
+    "Isoparametric formulation.", {"TH", _, _, _, _, _, "Description"} -> 
+    "Interpolated fields", {"TH", _, _, _, _, _, "T"} -> 
+    {"Thermal field (T)", "Thermal field (T)", "", True}, 
+   {"TH", _, _, _, _, _, "D"} -> {"Displacement field (D)", 
+     "Displacement field (D)", "", False}, 
+   {"TH", "B2" | "B3" | "T2" | "T3" | "KP" | "MP" | "MP" | "MS", _, _, _, _, 
+     "Fi"} -> {"Rotations field (Fi)", "Rotations field (Fi)", "", False}, 
+   {"TH", _, _, _, _, _, "Pl"} -> {"Liquid pressure field (Pl)", 
+     "Liquid pressure field (Pl)", "", False}, {"TH", _, _, _, _, _, "Pg"} -> 
+    {"Gas pressure field (Pg)", "Gas pressure field (Pg)", "", False}, 
+   {"TH", _, _, _, _, _, "Mg"} -> {"Magnetic permeability field (Mg)", 
+     "Magnetic permeability field (Mg)", "", False}, 
+   {"TH", _, _, _, _, _, _, "Description"} -> "Material model", 
+   {"TH", _, _, _, "ST" | "NS", _, _, "Fourier"} -> 
+    {"Fourier's equation", "Heat conduction", "", True}, 
+   {"TH", _, _, _, "ST" | "NS", _, _, "por"} -> {"Porous medium", 
+     "Saturation level", "", False}, {"TH", _, _, _, "ST" | "NS", _, "Pl", 
+     "Satl"} -> {"Saturated with liquid", "Saturation level", "", False}, 
+   {"TH", _, _, _, "ST" | "NS", _, "Pg", "Satg"} -> 
+    {"Saturated with gas", "Saturation level", "", False}, 
+   {"TH", _, _, _, "ST" | "NS", _, "Pl", "NSatl"} -> 
+    {"Partialy saturated with liquid", "Saturation level", "", False}, 
+   {"TH", _, _, _, "ST" | "NS", _, "Pg", "NSatg"} -> 
+    {"Partialy saturated with gas", "Saturation level", "", False}, 
+   {"TH", _, _, _, "ST" | "NS", _, "Pl" | "Pg", "NSatlg"} -> 
+    {"Interaction of liquid and gas (liquid and gas fields required)", 
+     "Saturation level", "", False}, {"TH", _, _, _, "ST" | "NS", _, _, 
+     "NSatl" | "NSatg" | "NSatlg", "Description"} -> 
+    {"Saturation equation", "", "Saturation level"}, 
+   {"TH", _, _, _, "ST" | "NS", _, _, "NSatl" | "NSatg" | "NSatlg", 
+     "SMVG"} -> {"Modified Mualem\[Dash]van Genuchten saturation model", 
+     "Saturation equation", "Saturation level", True}, 
+   {"TH", _, _, _, "ST" | "NS", _, _, "NSatl" | "NSatg" | "NSatlg", 
+     "SMVGT"} -> {"Modified Mualem\[Dash]van Genuchten saturation model with \
+temperature dependency", "Saturation equation", "Saturation level", True}, 
+   {"TH", _, _, _, "ST" | "NS", _, _, "Satl" | "NSatl" | "NSatlg", 
+     "Description"} -> {"Liquid density equation", "", "Saturation level"}, 
+   {"TH", _, _, _, "ST" | "NS", _, _, "Satl" | "NSatl" | "NSatlg", 
+     "RholpT"} -> {"Liquid density formula by Fernandez (p-T dependence)", 
+     "Liquid density", "Saturation level", False}, 
+   {"TH", _, _, _, "ST" | "NS", _, _, "Satl" | "NSatl" | "NSatlg", 
+     "Rholp"} -> {"Liquid density formula by Fernandez (p dependence)", 
+     "Liquid density", "Saturation level", False}, 
+   {"TH", _, _, _, "ST" | "NS", _, _, "Satl" | "NSatl" | "NSatlg", 
+     "RholT"} -> {"Liquid density formula by Fernandez (T dependence)", 
+     "Liquid density", "Saturation level", False}, 
+   {"TH", _, _, _, "ST" | "NS", _, _, "Satg" | "NSatg" | "NSatlg", 
+     "Description"} -> {"Gas density equation", "", "Saturation level"}, 
+   {"TH", _, _, _, "ST" | "NS", _, _, "Satg" | "NSatg" | "NSatlg", 
+     "RhogpT"} -> 
+    {"Gas density formula defined by ideal Gas law (p-T dependence)", 
+     "Gas density", "Saturation level", False}, 
+   {"TH", _, _, _, "ST" | "NS", _, _, "NSatlg", "Rhov"} -> 
+    {"Gas density formula as a sum of dry and mois gas by ideal Gas law", 
+     "Gas density", "Saturation level", False}, 
+   {"TH", _, _, _, "NS" | "ST", _, "Pl" | "Pg", "NSatlg", "Rhov", "Qdh"} -> 
+    {"Heat from evaporation and condensation is included", "Vapour heat", 
+     "Gas density", False}, {"TH", _, _, _, "NS" | "ST", _, _, _, _, "Qdh", 
+     "Description"} -> {"Vapour heat specific options", "", "Vapour heat"}, 
+   {"TH", _, _, _, "NS", _, "D", _, _, "Qdh", "RD"} -> 
+    {"S rate dependent", "rate", "Vapour heat", False}, 
+   {"TH", _, _, _, "NS", _, _, _, _, "Qdh", "Ins"} -> 
+    {"Incompressible solid grain", "Incompressibility", "Vapour heat", True}, 
+   {"TH", _, _, _, "NS", _, _, _, _, "Qdh", "Cos"} -> 
+    {"Compressible solid grain", "Incompressibility", "Vapour heat", True}, 
+   {"TH", _, _, _, "ST" | "NS", _, "Pl" | "Pg", "Satl" | "Satg" | "NSatl" | 
+      "NSatg" | "NSatlg", "Dp"} -> {"Heat from Darcy equation", 
+     "Pressure heat sources", "Saturation level", False}, 
+   {"TH", _, _, _, "ST" | "NS", _, _, _, "Dp", "Description"} -> 
+    {"Heat from liquid/gas pressure gradient", "", "Pressure heat sources"}, 
+   {"TH", _, _, _, "ST" | "NS", _, _, _, "Dp", "KsVG"} -> 
+    {"Modified Mualem\[Dash]van Genuchten permeability model", 
+     "Permeability type", "Pressure heat sources", True}, 
+   {"TH", _, _, _, "ST" | "NS", _, _, _, "Dp", "KsBC"} -> 
+    {"Brooks and Corey permeability model", "Permeability type", 
+     "Pressure heat sources", True}, {"TH", _, _, _, "ST" | "NS", _, "Pl", 
+     "Satl" | "NSatl" | "NSatlg", "Dp", "MilArr"} -> 
+    {"Arhenius viscosity model", "Liquid viscosity", "Pressure heat sources", 
+     False}, {"TH", _, _, _, "ST" | "NS", _, "Pl", 
+     "Satl" | "NSatl" | "NSatlg", "Dp", "Mil2"} -> 
+    {"Viscosity model 2", "Liquid viscosity", "Pressure heat sources", 
+     False}, {"TH", _, _, _, "ST" | "NS", _, "Pl", 
+     "Satl" | "NSatl" | "NSatlg", "Dp", "Mil3"} -> 
+    {"Viscosity model 3", "Liquid viscosity", "Pressure heat sources", 
+     False}, {"TH", _, _, _, "ST" | "NS", _, "Pg", 
+     "Satg" | "NSatg" | "NSatlg", "Dp", "MigSut"} -> 
+    {"Sutherland viscosity model", "Gas viscosity", "Pressure heat sources", 
+     False}, {"TH", _, _, _, "ST" | "NS", _, "Mg", "QMG"} -> 
+    {"Added magnetic heat", "Magnetic heat", "", False}, 
+   {"TH", _, _, _, "FL", _, _, "Const"} -> {"Constant surface flux", 
+     "BC type", "", True}, {"TH", _, _, _, "FL", _, _, "LinC"} -> 
+    {"Linear convective heat BC", "BC type", "", False}, 
+   {"TH", _, _, _, "ST" | "NS" | "FL", _, "D", "CC"} -> 
+    {"Configuration dependent", "Configuration dependent", "", False}, 
+   {"HY"} -> "Liquid flow element", {"HY", "Description"} -> 
+    "Continuum model", {"HY", "D2"} -> "2D continuum", 
+   {"HY", "D3"} -> "3D continuum", {"HY", "AX"} -> "Axisymetric continuum", 
+   {"HY", "S2"} -> "2D surface", {"HY", "S3"} -> "3D surface", 
+   {"HY", "SA"} -> "Axisymetric surface", {"HY", _, "Description"} -> 
+    "Element topology", {"HY", "V1", "V1"} -> "point in 1D", 
+   {"HY", "V2", "V2"} -> "point in 2D", {"HY", "V3", "V3"} -> "point in 3D", 
+   {"HY", "D1", "D1"} -> "element with 2 nodes in 1D", 
+   {"HY", "D1", "D2"} -> "element with 3 nodes in 1D", 
+   {"HY", "S2" | "SA" | "B2" | "T2" | "TP", "L1"} -> 
+    "stright line in 2 D bounded by two nodes", 
+   {"HY", "S2" | "SA" | "B2" | "T2" | "TP", "L2"} -> 
+    "curve in 2D with three nodes", {"HY", "D2" | "AX" | "PS" | "PE", 
+     "T1"} -> "triangle with 3 nodes in 2D", 
+   {"HY", "D2" | "AX" | "PS" | "PE", "T2"} -> "triangle with 6 nodes in 2D", 
+   {"HY", "D2" | "AX" | "PS" | "PE", "Q1"} -> 
+    "quadrilateral with 4 nodes in 2D", 
+   {"HY", "D2" | "AX" | "PS" | "PE", "Q2"} -> 
+    "quadrilateral with 9 nodes in 2D", 
+   {"HY", "D2" | "AX" | "PS" | "PE", "Q2S"} -> 
+    "quadrilateral with 8 nodes in 2D (serendipity family)", 
+   {"HY", "C3" | "B3" | "T3" | "TV", "C1"} -> "3D curve with 2 nodes", 
+   {"HY", "C3" | "B3" | "T3", "C2"} -> "3D curve with 3 nodes", 
+   {"HY", "S3" | "KP" | "MP" | "KS" | "MS", "P1"} -> 
+    "triangle with 3 nodes in 3D", {"HY", "S3" | "KP" | "MP" | "KS" | "MS", 
+     "P2"} -> "triangle with 6 nodes in 3D", 
+   {"HY", "S3" | "KP" | "MP" | "KS" | "MS", "S1"} -> 
+    "quadrilateral with 4 nodes in 3D", 
+   {"HY", "S3" | "KP" | "MP" | "KS" | "MS", "S2"} -> 
+    "quadrilateral with 9 nodes in 3D", 
+   {"HY", "S3" | "KP" | "MP" | "KS" | "MS", "S2S"} -> 
+    "quadrilateral with 8 nodes in 3D (serendipity family)", 
+   {"HY", "D3", "O1"} -> "tetrahedron with 4 nodes", 
+   {"HY", "D3", "O2"} -> "tetrahedron with 10 nodes", 
+   {"HY", "D3", "H1"} -> "hexahedron with 8 nodes", 
+   {"HY", "D3", "H2"} -> "hexahedron with 27 nodes", 
+   {"HY", "D3", "H2S"} -> "hexahedron with 20 nodes (serendipity family)", 
+   {"HY", _, _, "Description"} -> "Variational formulation", 
+   {"HY", _, _, "DF"} -> "Standard Galerkin", 
+   {"HY", _, _, _, "Description"} -> "Physical model", 
+   {"HY", "D2" | "D3" | "AX", _, _, "ST"} -> "Stationary liquid flow", 
+   {"HY", "D2" | "D3" | "AX", _, _, "NS"} -> "Nonstationary liquid flow", 
+   {"HY", "SA" | "S2" | "S3", _, _, "FL"} -> 
+    "Liquid surface flux boundary conditions", 
+   {"HY", _, _, _, _, "Description"} -> "Element acronym", 
+   {"HY", _, "V1", _, _, "V1"} -> "Isoparametric formulation.", 
+   {"HY", _, "D1", _, _, "D1"} -> "Isoparametric formulation.", 
+   {"HY", _, "D2", _, _, "D2"} -> "Isoparametric formulation.", 
+   {"HY", _, "V2", _, _, "V2"} -> "Isoparametric formulation.", 
+   {"HY", _, "L1", _, _, "L1"} -> "Isoparametric formulation.", 
+   {"HY", _, "L2", _, _, "L2"} -> "Isoparametric formulation.", 
+   {"HY", _, "LX", _, _, "LX"} -> "Isoparametric formulation.", 
+   {"HY", _, "T1", _, _, "T1"} -> "Isoparametric formulation.", 
+   {"HY", _, "T1X", _, _, "T1X"} -> "Isoparametric formulation.", 
+   {"HY", _, "T2", _, _, "T2"} -> "Isoparametric formulation.", 
+   {"HY", _, "T2X", _, _, "T2X"} -> "Isoparametric formulation.", 
+   {"HY", _, "TX", _, _, "TX"} -> "Isoparametric formulation.", 
+   {"HY", _, "TXX", _, _, "TXX"} -> "Isoparametric formulation.", 
+   {"HY", _, "Q1", _, _, "Q1"} -> "Isoparametric formulation.", 
+   {"HY", _, "Q2", _, _, "Q2"} -> "Isoparametric formulation.", 
+   {"HY", _, "Q2S", _, _, "Q2S"} -> "Isoparametric formulation.", 
+   {"HY", _, "QX", _, _, "QX"} -> "Isoparametric formulation.", 
+   {"HY", _, "V3", _, _, "V3"} -> "Isoparametric formulation.", 
+   {"HY", _, "C1", _, _, "C1"} -> "Isoparametric formulation.", 
+   {"HY", _, "C2", _, _, "C2"} -> "Isoparametric formulation.", 
+   {"HY", _, "CX", _, _, "CX"} -> "Isoparametric formulation.", 
+   {"HY", _, "P1", _, _, "P1"} -> "Isoparametric formulation.", 
+   {"HY", _, "P2", _, _, "P2"} -> "Isoparametric formulation.", 
+   {"HY", _, "PX", _, _, "PX"} -> "Isoparametric formulation.", 
+   {"HY", _, "S1", _, _, "S1"} -> "Isoparametric formulation.", 
+   {"HY", _, "S2", _, _, "S2"} -> "Isoparametric formulation.", 
+   {"HY", _, "S2S", _, _, "S2S"} -> "Isoparametric formulation.", 
+   {"HY", _, "SX", _, _, "SX"} -> "Isoparametric formulation.", 
+   {"HY", _, "O1", _, _, "O1"} -> "Isoparametric formulation.", 
+   {"HY", _, "O2", _, _, "O2"} -> "Isoparametric formulation.", 
+   {"HY", _, "OX", _, _, "OX"} -> "Isoparametric formulation.", 
+   {"HY", _, "H1", _, _, "H1"} -> "Isoparametric formulation.", 
+   {"HY", _, "H2", _, _, "H2"} -> "Isoparametric formulation.", 
+   {"HY", _, "H2S", _, _, "H2S"} -> "Isoparametric formulation.", 
+   {"HY", _, "HX", _, _, "HX"} -> "Isoparametric formulation.", 
+   {"HY", _, _, _, _, _, "Description"} -> "Interpolated fields", 
+   {"HY", _, _, _, _, _, "Pl"} -> {"Liquid pressure field (Pl)", 
+     "Liquid pressure field (Pl)", "", True}, {"HY", _, _, _, _, _, "T"} -> 
+    {"Thermal field (T)", "Thermal field (T)", "", False}, 
+   {"HY", _, _, _, _, _, "D"} -> {"Displacement field (D)", 
+     "Displacement field (D)", "", False}, 
+   {"HY", "B2" | "B3" | "T2" | "T3" | "KP" | "MP" | "MP" | "MS", _, _, _, _, 
+     "Fi"} -> {"Rotations field (Fi)", "Rotations field (Fi)", "", False}, 
+   {"HY", _, _, _, _, _, "Pg"} -> {"Gas pressure field (Pg)", 
+     "Gas pressure field (Pg)", "", False}, 
+   {"HY", _, _, _, _, _, _, "Description"} -> "Material model", 
+   {"HY", _, _, _, "ST" | "NS", _, _, "Darcy"} -> 
+    {"Darcy-s model", "Flow model", "", True}, 
+   {"HY", _, _, _, "ST" | "NS", _, _, "Darcy", "Description"} -> 
+    {"Flow model options", "", "Flow model"}, 
+   {"HY", _, _, _, "ST" | "NS", _, "T", "Darcy", "MilArr"} -> 
+    {"Arhenius viscosity model (T dependent)", "Liquid viscosity", 
+     "Flow model", False}, {"HY", _, _, _, "ST" | "NS", _, "T", "Darcy", 
+     "Mil2"} -> {"Viscosity model 2 (T dependent)", "Liquid viscosity", 
+     "Flow model", False}, {"HY", _, _, _, "ST" | "NS", _, "T", "Darcy", 
+     "Mil3"} -> {"Viscosity model 3 (p-T dependent)", "Liquid viscosity", 
+     "Flow model", False}, {"HY", _, _, _, "ST" | "NS", _, "T", "Darcy", 
+     "MigSut"} -> {"Viscosity model 3 (p-T dependent)", "Gas viscosity", 
+     "Flow model", False}, {"HY", _, _, _, "ST" | "NS", _, _, "Satl"} -> 
+    {"Saturated with liquid", "Saturation level", "", False}, 
+   {"HY", _, _, _, "ST" | "NS", _, _, "NSatl"} -> 
+    {"Partialy saturated with liquid", "Saturation level", "", False}, 
+   {"HY", _, _, _, "ST" | "NS", _, _, "Satg"} -> {"Saturated with gas", 
+     "Saturation level", "", False}, {"HY", _, _, _, "ST" | "NS", _, _, 
+     "NSatg"} -> {"Partialy saturated with gas", "Saturation level", "", 
+     False}, {"HY", _, _, _, "ST" | "NS", _, "Pg", "NSatlg"} -> 
+    {"Interaction of liquid and gas", "Saturation level", "", False}, 
+   {"HY", _, _, _, "ST" | "NS", _, _, "NSatlg", "Description"} -> 
+    {"Gas density equation", "", "Saturation level"}, 
+   {"HY", _, _, _, "ST" | "NS", _, _, "NSatl" | "NSatg" | "NSatlg", 
+     "SMVG"} -> {"Modified Mualem\[Dash]van Genuchten saturation model", 
+     "Saturation equation", "Saturation level", True}, 
+   {"HY", _, _, _, "ST" | "NS", _, _, "NSatl" | "NSatg" | "NSatlg", 
+     "SMVGT"} -> {"Modified Mualem\[Dash]van Genuchten saturation model with \
+temperature dependency", "Saturation equation", "Saturation level", True}, 
+   {"HY", _, _, _, "ST" | "NS", _, "T", "NSatlg", "Rhov"} -> 
+    {"Gas density formula as a sum of dry and mois gas by ideal Gas law. \
+Evaporation pressure is included in formulation.", "Gas equation", 
+     "Saturation level", False}, {"HY", _, _, _, "ST" | "NS", _, _, _, 
+     "Rhov", "Description"} -> 
+    {"Liqud density formula to use in vapour model", "", "Gas equation"}, 
+   {"HY", _, _, _, "ST" | "NS", _, _, _, "Rhov", "Rholp"} -> 
+    {"Liquid density formula by Fernandez (p dependence)", "Liquid density", 
+     "Gas equation", False}, {"HY", _, _, _, "ST" | "NS", _, _, _, "Rhov", 
+     "RholT"} -> {"Liquid density formula by Fernandez (T dependence)", 
+     "Liquid density", "Gas equation", False}, 
+   {"HY", _, _, _, "ST" | "NS", _, _, _, "Rhov", "RholpT"} -> 
+    {"Liquid density formula by Fernandez (p-T dependence)", 
+     "Liquid density", "Gas equation", False}, 
+   {"HY", _, _, _, "ST" | "NS", _, _, "KsVG"} -> 
+    {"Modified Mualem\[Dash]van Genuchten permeability model", 
+     "Permeability type", "Saturation level", True}, 
+   {"HY", _, _, _, "ST" | "NS", _, _, "KsBC"} -> 
+    {"Brooks and Corey permeability model", "Permeability type", 
+     "Saturation level", True}, {"HY", _, _, _, "ST" | "NS", _, _, 
+     "Rholp"} -> {"Liquid density formula by Fernandez (p dependence)", 
+     "Liquid density", "Saturation level", False}, 
+   {"HY", _, _, _, "ST" | "NS", _, "T", "RholT"} -> 
+    {"Liquid density formula by Fernandez (T dependence)", "Liquid density", 
+     "Saturation level", False}, {"HY", _, _, _, "ST" | "NS", _, "T", 
+     "RholpT"} -> {"Liquid density formula by Fernandez (p-T dependence)", 
+     "Liquid density", "Saturation level", False}, 
+   {"HY", _, _, _, "ST" | "NS", _, _, "Ins"} -> 
+    {"Incompressible solid grain", "Incompressibility", "Vapour heat", 
+     False}, {"HY", _, _, _, "ST" | "NS", _, _, "Cos"} -> 
+    {"Compressible solid grain", "Incompressibility", "Vapour heat", False}, 
+   {"HY", _, _, _, "ST" | "NS", _, "D", "RD"} -> {"Strain rate dependent", 
+     "Strain rate dependent", "Solid element dependent", False}, 
+   {"HY", _, _, _, "FL", _, _, "Const"} -> {"Constant surface liquid flux", 
+     "BC type", "", True}, {"HY", _, _, _, "FL", _, _, "LinC"} -> 
+    {"Linear convective liquid BC", "BC type", "", False}, 
+   {"HY", _, _, _, "ST" | "NS" | "FL", _, "D", "CC"} -> 
+    {"Configuration dependent", "Configuration dependent", "", False}, 
+   {"GA"} -> "Gas flow element", {"GA", "Description"} -> "Continuum model", 
+   {"GA", "D2"} -> "2D continuum", {"GA", "D3"} -> "3D continuum", 
+   {"GA", "AX"} -> "Axisymetric continuum", {"GA", "S2"} -> "2D surface", 
+   {"GA", "S3"} -> "3D surface", {"GA", "SA"} -> "Axisymetric surface", 
+   {"GA", _, "Description"} -> "Element topology", 
+   {"GA", "V1", "V1"} -> "point in 1D", {"GA", "V2", "V2"} -> "point in 2D", 
+   {"GA", "V3", "V3"} -> "point in 3D", {"GA", "D1", "D1"} -> 
+    "element with 2 nodes in 1D", {"GA", "D1", "D2"} -> 
+    "element with 3 nodes in 1D", {"GA", "S2" | "SA" | "B2" | "T2" | "TP", 
+     "L1"} -> "stright line in 2 D bounded by two nodes", 
+   {"GA", "S2" | "SA" | "B2" | "T2" | "TP", "L2"} -> 
+    "curve in 2D with three nodes", {"GA", "D2" | "AX" | "PS" | "PE", 
+     "T1"} -> "triangle with 3 nodes in 2D", 
+   {"GA", "D2" | "AX" | "PS" | "PE", "T2"} -> "triangle with 6 nodes in 2D", 
+   {"GA", "D2" | "AX" | "PS" | "PE", "Q1"} -> 
+    "quadrilateral with 4 nodes in 2D", 
+   {"GA", "D2" | "AX" | "PS" | "PE", "Q2"} -> 
+    "quadrilateral with 9 nodes in 2D", 
+   {"GA", "D2" | "AX" | "PS" | "PE", "Q2S"} -> 
+    "quadrilateral with 8 nodes in 2D (serendipity family)", 
+   {"GA", "C3" | "B3" | "T3" | "TV", "C1"} -> "3D curve with 2 nodes", 
+   {"GA", "C3" | "B3" | "T3", "C2"} -> "3D curve with 3 nodes", 
+   {"GA", "S3" | "KP" | "MP" | "KS" | "MS", "P1"} -> 
+    "triangle with 3 nodes in 3D", {"GA", "S3" | "KP" | "MP" | "KS" | "MS", 
+     "P2"} -> "triangle with 6 nodes in 3D", 
+   {"GA", "S3" | "KP" | "MP" | "KS" | "MS", "S1"} -> 
+    "quadrilateral with 4 nodes in 3D", 
+   {"GA", "S3" | "KP" | "MP" | "KS" | "MS", "S2"} -> 
+    "quadrilateral with 9 nodes in 3D", 
+   {"GA", "S3" | "KP" | "MP" | "KS" | "MS", "S2S"} -> 
+    "quadrilateral with 8 nodes in 3D (serendipity family)", 
+   {"GA", "D3", "O1"} -> "tetrahedron with 4 nodes", 
+   {"GA", "D3", "O2"} -> "tetrahedron with 10 nodes", 
+   {"GA", "D3", "H1"} -> "hexahedron with 8 nodes", 
+   {"GA", "D3", "H2"} -> "hexahedron with 27 nodes", 
+   {"GA", "D3", "H2S"} -> "hexahedron with 20 nodes (serendipity family)", 
+   {"GA", _, _, "Description"} -> "Variational formulation", 
+   {"GA", _, _, "DF"} -> "Standard Galerkin", 
+   {"GA", _, _, _, "Description"} -> "Physical model", 
+   {"GA", "D2" | "D3" | "AX", _, _, "ST"} -> "Stationary gas flow", 
+   {"GA", "D2" | "D3" | "AX", _, _, "NS"} -> "Nonstationary gas flow", 
+   {"GA", "SA" | "S2" | "S3", _, _, "FL"} -> 
+    "Gas surface flux boundary conditions", 
+   {"GA", _, _, _, _, "Description"} -> "Element acronym", 
+   {"GA", _, "V1", _, _, "V1"} -> "Isoparametric formulation.", 
+   {"GA", _, "D1", _, _, "D1"} -> "Isoparametric formulation.", 
+   {"GA", _, "D2", _, _, "D2"} -> "Isoparametric formulation.", 
+   {"GA", _, "V2", _, _, "V2"} -> "Isoparametric formulation.", 
+   {"GA", _, "L1", _, _, "L1"} -> "Isoparametric formulation.", 
+   {"GA", _, "L2", _, _, "L2"} -> "Isoparametric formulation.", 
+   {"GA", _, "LX", _, _, "LX"} -> "Isoparametric formulation.", 
+   {"GA", _, "T1", _, _, "T1"} -> "Isoparametric formulation.", 
+   {"GA", _, "T1X", _, _, "T1X"} -> "Isoparametric formulation.", 
+   {"GA", _, "T2", _, _, "T2"} -> "Isoparametric formulation.", 
+   {"GA", _, "T2X", _, _, "T2X"} -> "Isoparametric formulation.", 
+   {"GA", _, "TX", _, _, "TX"} -> "Isoparametric formulation.", 
+   {"GA", _, "TXX", _, _, "TXX"} -> "Isoparametric formulation.", 
+   {"GA", _, "Q1", _, _, "Q1"} -> "Isoparametric formulation.", 
+   {"GA", _, "Q2", _, _, "Q2"} -> "Isoparametric formulation.", 
+   {"GA", _, "Q2S", _, _, "Q2S"} -> "Isoparametric formulation.", 
+   {"GA", _, "QX", _, _, "QX"} -> "Isoparametric formulation.", 
+   {"GA", _, "V3", _, _, "V3"} -> "Isoparametric formulation.", 
+   {"GA", _, "C1", _, _, "C1"} -> "Isoparametric formulation.", 
+   {"GA", _, "C2", _, _, "C2"} -> "Isoparametric formulation.", 
+   {"GA", _, "CX", _, _, "CX"} -> "Isoparametric formulation.", 
+   {"GA", _, "P1", _, _, "P1"} -> "Isoparametric formulation.", 
+   {"GA", _, "P2", _, _, "P2"} -> "Isoparametric formulation.", 
+   {"GA", _, "PX", _, _, "PX"} -> "Isoparametric formulation.", 
+   {"GA", _, "S1", _, _, "S1"} -> "Isoparametric formulation.", 
+   {"GA", _, "S2", _, _, "S2"} -> "Isoparametric formulation.", 
+   {"GA", _, "S2S", _, _, "S2S"} -> "Isoparametric formulation.", 
+   {"GA", _, "SX", _, _, "SX"} -> "Isoparametric formulation.", 
+   {"GA", _, "O1", _, _, "O1"} -> "Isoparametric formulation.", 
+   {"GA", _, "O2", _, _, "O2"} -> "Isoparametric formulation.", 
+   {"GA", _, "OX", _, _, "OX"} -> "Isoparametric formulation.", 
+   {"GA", _, "H1", _, _, "H1"} -> "Isoparametric formulation.", 
+   {"GA", _, "H2", _, _, "H2"} -> "Isoparametric formulation.", 
+   {"GA", _, "H2S", _, _, "H2S"} -> "Isoparametric formulation.", 
+   {"GA", _, "HX", _, _, "HX"} -> "Isoparametric formulation.", 
+   {"GA", _, _, _, _, _, "Description"} -> "Interpolated fields", 
+   {"GA", _, _, _, _, _, "Pg"} -> {"Gas pressure field (Pg)", 
+     "Gas pressure field (Pg)", "", True}, {"GA", _, _, _, _, _, "Pl"} -> 
+    {"Liquid pressure field (Pl)", "Liquid pressure field (Pl)", "", False}, 
+   {"GA", _, _, _, _, _, "T"} -> {"Thermal field (T)", "Thermal field (T)", 
+     "", False}, {"GA", _, _, _, _, _, "D"} -> {"Displacement field (D)", 
+     "Displacement field (D)", "", False}, 
+   {"GA", "B2" | "B3" | "T2" | "T3" | "KP" | "MP" | "MP" | "MS", _, _, _, _, 
+     "Fi"} -> {"Rotations field (Fi)", "Rotations field (Fi)", "", False}, 
+   {"GA", _, _, _, _, _, _, "Description"} -> "Material model", 
+   {"GA", _, _, _, "ST" | "NS", _, _, "Darcy"} -> 
+    {"Darcy's gas flow equation", "Flow model", "", True}, 
+   {"GA", _, _, _, "ST" | "NS", _, _, "Darcy", "Description"} -> 
+    {"Gas flow options", "", "Flow model"}, 
+   {"GA", _, _, _, "ST" | "NS", _, "T", "Darcy", "MigSut"} -> 
+    {"Sutherland viscosity model", "Gas viscosity", "Flow model", False}, 
+   {"GA", _, _, _, "ST" | "NS", _, _, "Satg"} -> {"Saturated with gas", 
+     "Saturation level", "", False}, {"GA", _, _, _, "ST" | "NS", _, _, 
+     "NSatg"} -> {"Partialy saturated with gas", "Saturation level", "", 
+     False}, {"GA", _, _, _, "ST" | "NS", _, "Pl", "NSatlg"} -> 
+    {"Interaction of liquid and gas", "Saturation level", "", False}, 
+   {"GA", _, _, _, "ST" | "NS", _, "Pl", "NSatlg", "Description"} -> 
+    {"Gas density equation", "", "Saturation level"}, 
+   {"GA", _, _, _, "ST" | "NS", _, "Pl", "NSatlg", "Rhov"} -> 
+    {"Gas density formula as a sum of dry and mois gas by ideal Gas law. \
+Evaporation pressure is included in formulation.", "Gas equation", 
+     "Saturation level", False}, {"GA", _, _, _, "ST" | "NS", _, "Pl", 
+     "NSatlg", "Rhov", "Description"} -> 
+    {"Liqud density formula to use in vapour model", "", "Gas equation"}, 
+   {"GA", _, _, _, "ST" | "NS", _, "Pl", "NSatlg", "Rhov", "Rholp"} -> 
+    {"Liquid density formula by Fernandez (p dependence)", "Liquid density", 
+     "Gas equation", False}, {"GA", _, _, _, "ST" | "NS", _, "Pl", "NSatlg", 
+     "Rhov", "RholT"} -> 
+    {"Liquid density formula by Fernandez (T dependence)", "Liquid density", 
+     "Gas equation", False}, {"GA", _, _, _, "ST" | "NS", _, "Pl", "NSatlg", 
+     "Rhov", "RholpT"} -> 
+    {"Liquid density formula by Fernandez (p-T dependence)", 
+     "Liquid density", "Gas equation", False}, 
+   {"GA", "GA", _, _, _, _, _, "Rhov", "MilArr"} -> 
+    {"Arhenius viscosity model (T dependent)", "Liquid viscosity", 
+     "Flow model", False}, {"GA", "GA", _, _, _, _, _, "Rhov", "Mil2"} -> 
+    {"Viscosity model 2 (T dependent)", "Liquid viscosity", "Flow model", 
+     False}, {"GA", "GA", _, _, _, _, _, "Rhov", "Mil3"} -> 
+    {"Viscosity model 3 (p-T dependent)", "Liquid viscosity", "Flow model", 
+     False}, {"GA", _, _, _, "ST" | "NS", _, _, "NSatl" | "NSatg" | "NSatlg", 
+     "SMVG"} -> {"Modified Mualem\[Dash]van Genuchten saturation model", 
+     "Saturation equation", "Saturation level", True}, 
+   {"GA", _, _, _, "ST" | "NS", _, _, "NSatl" | "NSatg" | "NSatlg", 
+     "SMVGT"} -> {"Modified Mualem\[Dash]van Genuchten saturation model with \
+temperature dependency", "Saturation equation", "Saturation level", True}, 
+   {"GA", _, _, _, "ST" | "NS", _, _, "NSatl" | "NSatg" | "NSatlg", 
+     "KsVG"} -> {"Modified Mualem\[Dash]van Genuchten permeability model", 
+     "Permeability type", "Saturation level", True}, 
+   {"GA", _, _, _, "ST" | "NS", _, _, "NSatl" | "NSatg" | "NSatlg", 
+     "KsBC"} -> {"Brooks and Corey permeability model", "Permeability type", 
+     "Saturation level", True}, {"GA", _, _, _, "ST" | "NS", _, "T", _, 
+     "RhogpT"} -> 
+    {"Gas density formula defined by ideal Gas law (p-T dependence)", 
+     "Gas equation", "Saturation level", False}, 
+   {"GA", _, _, _, "ST" | "NS", _, _, "Ins"} -> 
+    {"Incompressible solid grain", "Incompressibility", "Vapour heat", 
+     False}, {"GA", _, _, _, "ST" | "NS", _, _, "Cos"} -> 
+    {"Compressible solid grain", "Incompressibility", "Vapour heat", False}, 
+   {"GA", _, _, _, "ST" | "NS", _, "D", "RD"} -> {"Strain rate dependent", 
+     "Strain rate dependent", "Solid element dependent", False}, 
+   {"GA", _, _, _, "FL", _, _, "Const"} -> {"Constant surface gas flux", 
+     "BC type", "", True}, {"GA", _, _, _, "FL", _, _, "LinC"} -> 
+    {"Linear convective gas BC", "BC type", "", False}, 
+   {"GA", _, _, _, "ST" | "NS" | "FL", _, "D", "CC"} -> 
+    {"Configuration dependent", "Configuration dependent", "", False}, 
+   {"MG"} -> "Magnetic potential element", {"MG", "Description"} -> 
+    "Continuum model", {"MG", "AX"} -> "Axisymetric continuum", 
+   {"MG", "SA"} -> "Axisymetric surface", {"MG", _, "Description"} -> 
+    "Element topology", {"MG", "V1", "V1"} -> "point in 1D", 
+   {"MG", "V2", "V2"} -> "point in 2D", {"MG", "V3", "V3"} -> "point in 3D", 
+   {"MG", "D1", "D1"} -> "element with 2 nodes in 1D", 
+   {"MG", "D1", "D2"} -> "element with 3 nodes in 1D", 
+   {"MG", "S2" | "SA" | "B2" | "T2" | "TP", "L1"} -> 
+    "stright line in 2 D bounded by two nodes", 
+   {"MG", "S2" | "SA" | "B2" | "T2" | "TP", "L2"} -> 
+    "curve in 2D with three nodes", {"MG", "D2" | "AX" | "PS" | "PE", 
+     "T1"} -> "triangle with 3 nodes in 2D", 
+   {"MG", "D2" | "AX" | "PS" | "PE", "T2"} -> "triangle with 6 nodes in 2D", 
+   {"MG", "D2" | "AX" | "PS" | "PE", "Q1"} -> 
+    "quadrilateral with 4 nodes in 2D", 
+   {"MG", "D2" | "AX" | "PS" | "PE", "Q2"} -> 
+    "quadrilateral with 9 nodes in 2D", 
+   {"MG", "D2" | "AX" | "PS" | "PE", "Q2S"} -> 
+    "quadrilateral with 8 nodes in 2D (serendipity family)", 
+   {"MG", "C3" | "B3" | "T3" | "TV", "C1"} -> "3D curve with 2 nodes", 
+   {"MG", "C3" | "B3" | "T3", "C2"} -> "3D curve with 3 nodes", 
+   {"MG", "S3" | "KP" | "MP" | "KS" | "MS", "P1"} -> 
+    "triangle with 3 nodes in 3D", {"MG", "S3" | "KP" | "MP" | "KS" | "MS", 
+     "P2"} -> "triangle with 6 nodes in 3D", 
+   {"MG", "S3" | "KP" | "MP" | "KS" | "MS", "S1"} -> 
+    "quadrilateral with 4 nodes in 3D", 
+   {"MG", "S3" | "KP" | "MP" | "KS" | "MS", "S2"} -> 
+    "quadrilateral with 9 nodes in 3D", 
+   {"MG", "S3" | "KP" | "MP" | "KS" | "MS", "S2S"} -> 
+    "quadrilateral with 8 nodes in 3D (serendipity family)", 
+   {"MG", "D3", "O1"} -> "tetrahedron with 4 nodes", 
+   {"MG", "D3", "O2"} -> "tetrahedron with 10 nodes", 
+   {"MG", "D3", "H1"} -> "hexahedron with 8 nodes", 
+   {"MG", "D3", "H2"} -> "hexahedron with 27 nodes", 
+   {"MG", "D3", "H2S"} -> "hexahedron with 20 nodes (serendipity family)", 
+   {"MG", _, _, "Description"} -> "Variational formulation", 
+   {"MG", _, _, "DF"} -> "Standard Galerkin", 
+   {"MG", _, _, _, "Description"} -> "Physical model", 
+   {"MG", "D2" | "D3" | "AX", _, _, "ST"} -> "Stationary magnetic potential", 
+   {"MG", "SA" | "S2" | "S3", _, _, "FL"} -> "Surface Flux", 
+   {"MG", _, _, _, _, "Description"} -> "Element acronym", 
+   {"MG", _, "L1", _, _, "L1"} -> "Isoparametric formulation.", 
+   {"MG", _, "L2", _, _, "L2"} -> "Isoparametric formulation.", 
+   {"MG", _, "T1", _, _, "T1"} -> "Isoparametric formulation.", 
+   {"MG", _, "T2", _, _, "T2"} -> "Isoparametric formulation.", 
+   {"MG", _, "Q1", _, _, "Q1"} -> "Isoparametric formulation.", 
+   {"MG", _, "Q2", _, _, "Q2"} -> "Isoparametric formulation.", 
+   {"MG", _, "Q2S", _, _, "Q2S"} -> "Isoparametric formulation.", 
+   {"MG", _, _, _, _, _, "Description"} -> "Interpolated fields", 
+   {"MG", _, _, _, _, _, "Mg"} -> {"Magnetic potential (Mg)", 
+     "Magnetic potential (Mg)", "", True}, {"MG", _, _, _, _, _, "D"} -> 
+    {"Displacement field (D)", "Displacement field (D)", "", False}, 
+   {"MG", "B2" | "B3" | "T2" | "T3" | "KP" | "MP" | "MP" | "MS", _, _, _, _, 
+     "Fi"} -> {"Rotations field (Fi)", "Rotations field (Fi)", "", False}, 
+   {"MG", _, _, _, _, _, "T"} -> {"Thermal field (T)", "Thermal field (T)", 
+     "", False}, {"MG", _, _, _, "ST", _, _, "Description"} -> "Model", 
+   {"MG", _, _, _, "ST", _, _, "Maxwell"} -> {"Maxwell's equations", 
+     "Maxwell's equations", "", True}, 
+   {"MG", _, _, _, "ST", _, "T", "Maxwell", "Description"} -> 
+    {"Temperature dependent options", "", "Maxwell's equations"}, 
+   {"MG", _, _, _, "ST", _, "T", "Maxwell", "MMgCur"} -> 
+    {"Permeability(T)", "Permeability(T)", "Maxwell's equations", False}, 
+   {"MG", _, _, _, "ST" | "NS" | "FL", _, "D", "CC"} -> 
+    {"Configuration dependent", "Configuration dependent", "", False}, 
+   {"GE"} -> "Generic", {"GE", "Description"} -> "Continuum model", 
+   {"GE", "V1"} -> "Node in 1D", {"GE", "V2"} -> "Node in 2D", 
+   {"GE", "V3"} -> "Node in 3D", {"GE", "D1"} -> "1D continuum", 
+   {"GE", "D2"} -> "2D continuum", {"GE", "D3"} -> "3D continuum", 
+   {"GE", "C2"} -> "2D curve", {"GE", "C3"} -> "3D curve", 
+   {"GE", "S2"} -> "2D surface", {"GE", "S3"} -> "3D surface", 
+   {"GE", "SA"} -> "Axisymetric surface", {"GE", "AX"} -> 
+    "Axisymetric continuum", {"GE", "PS"} -> "Plane stress", 
+   {"GE", "PE"} -> "Plane strain", {"GE", "B2"} -> "2D Bernoully beam", 
+   {"GE", "B3"} -> "3D Bernoully beam", {"GE", "T2"} -> 
+    "2D Timoschenko beam", {"GE", "T3"} -> "3D Timoschenko beam", 
+   {"GE", "TP"} -> "2D truss", {"GE", "TV"} -> "3D truss", 
+   {"GE", "KP"} -> "Kirschoff plate", {"GE", "MP"} -> "Mindlin plate", 
+   {"GE", "KS"} -> "Kirschoff shell", {"GE", "MS"} -> "Mindlin shell", 
+   {"GE", _, "Description"} -> "Element topology", 
+   {"GE", "V1", "V1"} -> "point in 1D", {"GE", "V2", "V2"} -> "point in 2D", 
+   {"GE", "V3", "V3"} -> "point in 3D", {"GE", "D1", "D1"} -> 
+    "element with 2 nodes in 1D", {"GE", "D1", "D2"} -> 
+    "element with 3 nodes in 1D", {"GE", "C2" | "SA" | "B2" | "T2" | "TP", 
+     "L1"} -> "stright line in 2 D bounded by two nodes", 
+   {"GE", "C2" | "SA" | "B2" | "T2" | "TP", "L2"} -> 
+    "curve in 2D with three nodes", {"GE", "D2" | "AX" | "PS" | "PE", 
+     "T1"} -> "triangle with 3 nodes in 2D", 
+   {"GE", "D2" | "AX" | "PS" | "PE", "T2"} -> "triangle with 6 nodes in 2D", 
+   {"GE", "D2" | "AX" | "PS" | "PE", "Q1"} -> 
+    "quadrilateral with 4 nodes in 2D", 
+   {"GE", "D2" | "AX" | "PS" | "PE", "Q2"} -> 
+    "quadrilateral with 9 nodes in 2D", 
+   {"GE", "D2" | "AX" | "PS" | "PE", "Q2S"} -> 
+    "quadrilateral with 8 nodes in 2D (serendipity family)", 
+   {"GE", "C3" | "B3" | "T3" | "TV", "C1"} -> "3D curve with 2 nodes", 
+   {"GE", "C3" | "B3" | "T3", "C2"} -> "3D curve with 3 nodes", 
+   {"GE", "S3" | "KP" | "MP" | "KS" | "MS", "P1"} -> 
+    "triangle with 3 nodes in 3D", {"GE", "S3" | "KP" | "MP" | "KS" | "MS", 
+     "P2"} -> "triangle with 6 nodes in 3D", 
+   {"GE", "S3" | "KP" | "MP" | "KS" | "MS", "S1"} -> 
+    "quadrilateral with 4 nodes in 3D", 
+   {"GE", "S3" | "KP" | "MP" | "KS" | "MS", "S2"} -> 
+    "quadrilateral with 9 nodes in 3D", 
+   {"GE", "S3" | "KP" | "MP" | "KS" | "MS", "S2S"} -> 
+    "quadrilateral with 8 nodes in 3D (serendipity family)", 
+   {"GE", "D3", "O1"} -> "tetrahedron with 4 nodes", 
+   {"GE", "D3", "O2"} -> "tetrahedron with 10 nodes", 
+   {"GE", "D3", "H1"} -> "hexahedron with 8 nodes", 
+   {"GE", "D3", "H2"} -> "hexahedron with 27 nodes", 
+   {"GE", "D3", "H2S"} -> "hexahedron with 20 nodes (serendipity family)", 
+   {"GE", _, _, "Description"} -> "A", {"GE", _, _, "AA"} -> "AA", 
+   {"GE", _, _, "AA1"} -> "AA1", {"GE", _, _, _, "Description"} -> "B", 
+   {"GE", _, _, _, "BB"} -> "BB", {"GE", _, _, _, "BB1"} -> "BB1", 
+   {"GE", _, _, _, _, "Description"} -> "C", {"GE", _, _, _, _, "CC"} -> 
+    "CC", {"GE", _, _, _, _, "CC1"} -> "CC1"}, "Main library provides the \
+environment for making wide range of different solid, temperature, pressure \
+and magnetic potential dependent coupled elements.", 
+  {3.7635385145895755`17.328171353953824*^9, 
+   3.7635415266574136`17.328171701532018*^9}, "ML", 
+  "University of Ljubljana, jkorelc@fgg.uni-lj.si, bhudobiv@fgg.uni-lj.si", 
+  Null, 6.923, True, Hold[SMCElementSelector[]], 
+  {"http://symech.fgg.uni-lj.si/MainLibraryV11/", "MainLibrary.nb"}, 
+  Hold[SMCKeywordsLists = {}; SMCPaletteKeywords = {{{"SE", 0}}}; 
+    SMCSetPaletteKeyword[1, First[SMCPaletteKeywords], 
+     SMCPaths[[5,SMCSession[[40]]]]]; SMCSession[[42]] = True; 
+    SMCSession[[43]] = False; SMCSession[[44]] = False; 
+    SMCSession[[45]] = "AceFEM"; SMCSession[[46]] = "AceShare"; ], 
+  "C:\\MainLibraryV11\\", True, {"C:\\SMS\\Library\\", "HashData.txt"}, Null, 
+  1}, {"Contact elements library", 
+  "http://symech.fgg.uni-lj.si/AdditionalLibrary/Contact/", 
+  {"CTD3V3PFNonSmoothFL" -> "CT/1/", "CTD3V3ALNonSmoothFRCoulomb" -> "CT/1/", 
+   "CTD3V3PFNonSmoothFRCoulomb" -> "CT/1/", "CTD3V3PFBezier9FL" -> "CT/1/", 
+   "CTD3V3PFBezier16FL" -> "CT/1/", "CTD3V3ALBezier9FRCoulomb" -> "CT/1/", 
+   "CTD3V3ALBezier16FRCoulomb" -> "CT/1/", "CTD3V3PFBezier9FRCoulomb" -> 
+    "CT/1/", "CTD3V3PFBezier16FRCoulomb" -> "CT/1/", 
+   "CTD3V3PFGregoryFL" -> "CT/1/", "CTD3V3ALGregoryFRCoulomb" -> "CT/1/", 
+   "CTD3V3PFGregoryFRCoulomb" -> "CT/1/"}, 
+  {"CTD3V3PFNonSmoothFL" -> {"CT", "D3", "V3", "PF", "NonSmooth", "FL"}, 
+   "CTD3V3ALNonSmoothFRCoulomb" -> {"CT", "D3", "V3", "AL", "NonSmooth", 
+     {{"FR", "Coulomb"}}}, "CTD3V3PFNonSmoothFRCoulomb" -> 
+    {"CT", "D3", "V3", "PF", "NonSmooth", {{"FR", "Coulomb"}}}, 
+   "CTD3V3PFBezier9FL" -> {"CT", "D3", "V3", "PF", "Bezier9", "FL"}, 
+   "CTD3V3PFBezier16FL" -> {"CT", "D3", "V3", "PF", "Bezier16", "FL"}, 
+   "CTD3V3ALBezier9FRCoulomb" -> {"CT", "D3", "V3", "AL", "Bezier9", 
+     {{"FR", "Coulomb"}}}, "CTD3V3ALBezier16FRCoulomb" -> 
+    {"CT", "D3", "V3", "AL", "Bezier16", {{"FR", "Coulomb"}}}, 
+   "CTD3V3PFBezier9FRCoulomb" -> {"CT", "D3", "V3", "PF", "Bezier9", 
+     {{"FR", "Coulomb"}}}, "CTD3V3PFBezier16FRCoulomb" -> 
+    {"CT", "D3", "V3", "PF", "Bezier16", {{"FR", "Coulomb"}}}, 
+   "CTD3V3PFGregoryFL" -> {"CT", "D3", "V3", "PF", "Gregory", "FL"}, 
+   "CTD3V3ALGregoryFRCoulomb" -> {"CT", "D3", "V3", "AL", "Gregory", 
+     {{"FR", "Coulomb"}}}, "CTD3V3PFGregoryFRCoulomb" -> 
+    {"CT", "D3", "V3", "PF", "Gregory", {{"FR", "Coulomb"}}}}, 
+  {{"Description"} -> "Physical problem", {"CT"} -> "Contact", 
+   {"CT", "Description"} -> "Continuum model", 
+   {"CT", "D3"} -> "3D deformable-deformable", {"CT", _, "Description"} -> 
+    "Contact element topology", {"CT", "D2", "V2"} -> 
+    "2D point on slave part", {"CT", "D3", "V3"} -> "3D point on slave part", 
+   {"CT", _, _, "Description"} -> "Enforcement of contact", 
+   {"CT", _, _, "PF"} -> "Standard Penalty", {"CT", _, _, "AL"} -> 
+    "Augmented Lagrangian", {"CT", _, _, "UZ"} -> 
+    "Uzawa Augmented Lagrangian", {"CT", _, _, _, "Description"} -> 
+    "Surface interpolation", {"CT", _, _, _, "NonSmooth"} -> 
+    "Linear or bilinear master surface parametrization", 
+   {"CT", "D2", _, _, "Bezier3"} -> 
+    "Parametrization of master surface with 3-point Bezier curve", 
+   {"CT", "D2", _, _, "Bezier4"} -> 
+    "Parametrization of master surface with 4-point Bezier curve", 
+   {"CT", "D3", _, _, "Bezier9"} -> 
+    "Parametrization of master surface with 9-point Bezier patch", 
+   {"CT", "D3", _, _, "Bezier16"} -> 
+    "Parametrization of master surface with 16-point Bezier patch", 
+   {"CT", "D3", _, _, "Gregory"} -> 
+    "Parametrization of master surface with Gregory patch", 
+   {"CT", _, _, _, _, "Description"} -> "Physical model", 
+   {"CT", _, _, _, _, "FL"} -> {"Frictionless", "Contact law", "", True}, 
+   {"CT", _, _, _, _, "FR"} -> {"Frictional", "Contact law", "", False}, 
+   {"CT", _, _, _, _, "FR", "Description"} -> {"Frictional model options", 
+     "", "Contact law"}, {"CT", _, _, _, _, "FR", "Coulomb"} -> 
+    {"Coulomb friction law", "Coulomb", "Contact law", True}}, "Library of \
+contact elements. 2D and 3D smooth, frictional, multibody contact \
+formulations for large deformation and large sliding analysis.", 
+  {2017, 4, 23, 9, 43, 7.1015331`8.603927085687133}, "CT", 
+  "jleng@ippt.gov.pl", Null, 6.815, True, Hold[SMCElementSelector[]], 
+  {"http://symech.fgg.uni-lj.si/AdditionalLibrary/Contact/", "Contact3D.nb"}, 
+  Hold[SMCKeywordsLists = {}; SMCPaletteKeywords = {{{"CT", 0}}}; 
+    SMCSetPaletteKeyword[1, First[SMCPaletteKeywords], 
+     SMCPaths[[5,SMCSession[[40]]]]]; ], "D:\\AdditionalLibrary\\Contact\\", 
+  True, Null, Null, Null}, {"UMAT library", 
+  "http://symech.fgg.uni-lj.si/AdditionalLibrary/UMATLibraryV1/", {}, {}, 
+  {{"Description"} -> "Physical problem", {"SE"} -> "Solid static", 
+   {"SE", "Description"} -> "Continuum model", 
+   {"SE", "PE"} -> "Plane strain", {"SE", "PS"} -> "Plane stress", 
+   {"SE", "AX"} -> "Axisymetric continuum", {"SE", "D3"} -> "3D continuum", 
+   {"SE", "MS"} -> "Mindlin shell", {"SE", _, "Description"} -> 
+    "Physical model", {"SE", _, "LE"} -> "Linear elastic", 
+   {"SE", _, "HY"} -> "Hyperelastic", {"SE", _, "LP"} -> 
+    "Small strain plasticity, plastic strain space", 
+   {"SE", _, "JC"} -> "Finite strain C_p^{-1} based plasticity", 
+   {"SE", _, "GS"} -> "General small strain inelastic models", 
+   {"SE", _, "GL"} -> "General finite strain inelastic models", 
+   {"SE", _, _, "Description"} -> "Available fields", 
+   {"SE", _, _, "D"} -> {"Deformation field (D)", "Deformation field (D)", 
+     "", True}, {"SE", _, _, "T"} -> {"Thermal field (T)", 
+     "Thermal field (T)", "", False}, {"SE", _, _, "Pl"} -> 
+    {"Liquid pressure field (Pl)", "Liquid pressure field (Pl)", "", False}, 
+   {"SE", _, _, "Pg"} -> {"Gas pressure field (Pg)", 
+     "Gas pressure field (Pg)", "", False}, {"SE", _, _, _, "Description"} -> 
+    "Material model", {"SE", "PE" | "D3" | "AX" | "PS", "LE" | "LP", _, 
+     "Hooke"} -> {"Linear Hooke-s law", "Strain energy", "", True}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", "HY" | "JC", _, "NeoHooke"} -> 
+    {"Neo-Hooke strain potential", "Strain energy", "", True}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", "HY" | "JC", _, "NeoHooke", 
+     "Description"} -> {"Neo-Hooke options", "", "Strain energy"}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", "HY" | "JC", _, "NeoHooke", "WA"} -> 
+    {"\[Mu]/2(Tr[C]-3-2Log[JF])+\[Lambda]/4( JF^2-1-2Log[JF])", "type", 
+     "Strain energy", True}, {"SE", "PE" | "D3" | "AX" | "PS", "HY" | "JC", 
+     _, "NeoHooke", "WB"} -> 
+    {"\[Lambda]/2(JF-1)^2+\[Mu]((Tr[C]-3)/2-Log[JF])", "type", 
+     "Strain energy", False}, {"SE", "PE" | "D3" | "AX" | "PS", "HY" | "JC", 
+     _, "SVenant"} -> {"Saint-Venant (Green-Lagrange/2th Piola-Kirchoff)", 
+     "Strain energy", "", True}, {"SE", "PE" | "D3" | "AX" | "PS", 
+     "HY" | "JC", _, "Hencky"} -> 
+    {"Strain potential based on logarithmic Hencky strain", "Strain energy", 
+     "", True}, {"SE", "PE" | "D3" | "AX" | "PS", "HY" | "JC", _, "Hencky", 
+     "Description"} -> {"Hencky options", "", "Strain energy"}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", "HY" | "JC", _, "Hencky", "LogC"} -> 
+    {"MatrixLog[C]", "type", "Strain energy", True}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", "HY" | "JC", _, "Hencky", "LogCIso"} -> 
+    {"deviatoric/volumetric split", "type", "Strain energy", False}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", "HY" | "JC", _, "Ogden"} -> 
+    {"Strain potential based on powers of deviatoric stretch tensor", 
+     "Strain energy", "", True}, {"SE", "PE" | "D3" | "AX" | "PS", 
+     "HY" | "JC", _, "Ogden", "Description"} -> {"Ogden options", "", 
+     "Strain energy"}, {"SE", "PE" | "D3" | "AX" | "PS", "HY" | "JC", _, 
+     "Ogden", "Storakers"} -> {"Volumetric energy U - powers of J", "type", 
+     "Strain energy", True}, {"SE", "PE" | "D3" | "AX" | "PS", "HY" | "JC", 
+     _, "MooneyRivlin"} -> {"Mooney-Rivlin strain potential", 
+     "Strain energy", "", True}, {"SE", "PE" | "D3" | "AX" | "PS", 
+     "HY" | "JC", _, "NeoHooke" | "Ogden" | "MooneyRivlin", "U1"} -> 
+    {"U=K/2(J-1)^2,(limits not OK)", "type", "Strain energy", True}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", "HY" | "JC", _, 
+     "NeoHooke" | "Ogden" | "MooneyRivlin", "U2"} -> 
+    {"U=K/2(ln J)^2, (limits not OK)", "type", "Strain energy", False}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", "HY" | "JC", _, 
+     "NeoHooke" | "Ogden" | "MooneyRivlin", "U3"} -> 
+    {"U=K/4((J-1)^2+(ln J)^2) (limits OK)", "type", "Strain energy", False}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", "HY" | "JC", _, 
+     "NeoHooke" | "Ogden" | "MooneyRivlin", "U4"} -> 
+    {"U=K*\[Beta]^-2(\[Beta] ln J + J^-\[Beta] -1), \[Beta]<-1, (limits OK)", 
+     "type", "Strain energy", False}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", "HY" | "JC", _, 
+     "NeoHooke" | "Ogden" | "MooneyRivlin", "U5"} -> 
+    {"U=K(J ln J - J +1), (limits not OK)", "type", "Strain energy", False}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", "HY" | "JC", _, 
+     "NeoHooke" | "Ogden" | "MooneyRivlin", "U6"} -> 
+    {"U=K (\[Alpha]+1)^-1 J^(\[Beta]1+1)+(\[Beta]2-1)^-1 \
+J^-(\[Beta]2-1))(\[Beta]1+\[Beta]2)^-1-K (\[Beta]1+1)^-1(\[Beta]2-1)^-1, \
+\[Beta]1>0,\[Beta]2>1 (limits OK)", "type", "Strain energy", False}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", "HY" | "JC", _, 
+     "NeoHooke" | "Ogden" | "MooneyRivlin", "U7"} -> 
+    {"U=K(exp(J -1) - ln J -1), (limits OK)", "type", "Strain energy", 
+     False}, {"SE", "PE" | "D3" | "AX" | "PS", "HY" | "JC", _, 
+     "NeoHooke" | "Ogden" | "MooneyRivlin", "U8"} -> 
+    {"U=K/2(J -1) ln J, (limits OK)", "type", "Strain energy", False}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", "LP" | "JC" | "JF", _, "Mises"} -> 
+    {"J2 Flow Theory", "Plastic Model", "", True}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", "LP" | "JC" | "JF", _, "Mises", 
+     "Description"} -> {"Huber-von Mises specific options", "", 
+     "Plastic Model"}, {"SE", "PE" | "D3" | "AX" | "PS", "LP" | "JC" | "JF", 
+     _, "Mises", "Perfect"} -> {"Perfect elasto-plastic", 
+     "Isotropic hardening", "Plastic Model", False}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", "LP" | "JC" | "JF", _, "Mises", 
+     "ExH"} -> {"Exponential Sy=Sy0+K epseq+ Rinf (1-Exp(- delta epseq))", 
+     "Isotropic hardening", "Plastic Model", True}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", "LP" | "JC" | "JF", _, "Mises", 
+     "LiH"} -> {"Linear Sy=Sy0+K epseq", "Isotropic hardening", 
+     "Plastic Model", False}, {"SE", "PE" | "D3" | "AX" | "PS", 
+     "LP" | "JC" | "JF", "T", "Mises", "TSoft"} -> 
+    {"Linear temperature softening+exponential hard.(Simo and Mihe)", 
+     "Isotropic hardening", "Plastic Model", False}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", "LP" | "JC" | "JF", _, _, 
+     "Description"} -> {"Plastic Models suboptions", "", "Plastic Model"}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", "LP" | "JC" | "JF", "Pl" | "Pg", _, 
+     "Se"} -> {"Use effective stressses in yield criterion", 
+     "Effective stress", "Plastic Model", False}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", "LP" | "JC" | "JF", "T", 
+     "Mises" | "HanselSpittel", "QHeat"} -> 
+    {"Machanical work and plastic heat dissipation contribution", 
+     "Mechanical heat", "Plastic Model", False}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", "LE" | "LP" | "PS" | "SE" | "SP" | 
+      "PM" | "HY" | "JC" | "JF", "T", "WT"} -> 
+    {"Add standard thermal expansion term (\[CapitalDelta]T*\[Alpha]T*U')", 
+     "Thermal expansion", "", False}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", "LE" | "LP" | "PS" | "SE" | "SP" | 
+      "PM" | "HY" | "JC" | "JF", "Pl" | "Pg", "por"} -> 
+    {"Porous medium", "Pore pressures", "", False}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", "LE" | "LP" | "PS" | "SE" | "SP" | 
+      "PM" | "HY" | "JC" | "JF", "Pl", "Satl"} -> {"Saturated with liquid", 
+     "Pore pressures", "", False}, {"SE", "PE" | "D3" | "AX" | "PS", 
+     "LE" | "LP" | "PS" | "SE" | "SP" | "PM" | "HY" | "JC" | "JF", "Pg", 
+     "Satg"} -> {"Saturated with gas", "Pore pressures", "", False}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", "LE" | "LP" | "PS" | "SE" | "SP" | 
+      "PM" | "HY" | "JC" | "JF", "Pl", "NSatl"} -> 
+    {"Partialy saturated with liquid", "Pore pressures", "", False}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", "LE" | "LP" | "PS" | "SE" | "SP" | 
+      "PM" | "HY" | "JC" | "JF", "Pg", "NSatg"} -> 
+    {"Partialy saturated with gas", "Pore pressures", "", False}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", "LE" | "LP" | "PS" | "SE" | "SP" | 
+      "PM" | "HY" | "JC" | "JF", "Pl" | "Pg", "NSatlg"} -> 
+    {"Interaction of liquid and gas", "Pore pressures", "", False}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", "LE" | "LP" | "PS" | "SE" | "SP" | 
+      "PM" | "HY" | "JC" | "JF", _, "NSatl" | "NSatg" | "NSatlg", 
+     "Description"} -> {"Saturation equation", "", "Pore pressures"}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", "LE" | "LP" | "PS" | "SE" | "SP" | 
+      "PM" | "HY" | "JC" | "JF", _, "NSatl" | "NSatg" | "NSatlg", "SMVG"} -> 
+    {"Modified Mualem\[Dash]van Genuchten saturation model", 
+     "Saturation equation", "Pore pressures", True}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", "LE" | "LP" | "PS" | "SE" | "SP" | 
+      "PM" | "HY" | "JC" | "JF", "T", "NSatl" | "NSatg" | "NSatlg", 
+     "SMVGT"} -> {"Modified Mualem\[Dash]van Genuchten saturation model with \
+temperature dependency", "Saturation equation", "Pore pressures", False}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", "LE" | "LP" | "PS" | "SE" | "SP" | 
+      "PM" | "HY" | "JC" | "JF", _, "Satl" | "NSatl" | "NSatlg", 
+     "Description"} -> {"Liquid density equation", "", "Pore pressures"}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", "LE" | "LP" | "PS" | "SE" | "SP" | 
+      "PM" | "HY" | "JC" | "JF", "T", "Satl" | "NSatl" | "NSatlg", 
+     "RholpT"} -> {"Liquid density formula by Fernandez (p-T dependence)", 
+     "Liquid density", "Pore pressures", True}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", "LE" | "LP" | "PS" | "SE" | "SP" | 
+      "PM" | "HY" | "JC" | "JF", "Pl", "Satl" | "NSatl" | "NSatlg", 
+     "Rholp"} -> {"Liquid density formula by Fernandez (p dependence)", 
+     "Liquid density", "Pore pressures", False}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", "LE" | "LP" | "PS" | "SE" | "SP" | 
+      "PM" | "HY" | "JC" | "JF", "T", "Satl" | "NSatl" | "NSatlg", 
+     "RholT"} -> {"Liquid density formula by Fernandez (T dependence)", 
+     "Liquid density", "Pore pressures", False}, 
+   {"SE", "MS", "LE" | "LP", _, "Hooke"} -> {"Linear Hooke-s law", 
+     "Strain energy", "", True}, {"SE", "MS", "HY" | "JC", _, "SVenant"} -> 
+    {"Saint-Venant (Green-Lagrange/2th Piola-Kirchoff)", "Strain energy", "", 
+     True}, {"SE", "MS", "LP" | "JC", _, "Mises"} -> 
+    {"J2 Flow Theory", "Plastic Model", "", True}, 
+   {"SE", "MS", "LP" | "JC", _, "Mises", "Description"} -> 
+    {"Huber-von Mises specific options", "", "Plastic Model"}, 
+   {"SE", "MS", "LP" | "JC", _, "Mises", "Perfect"} -> 
+    {"Perfect elasto-plastic", "Isotropic hardening", "Plastic Model", 
+     False}, {"SE", "MS", "LP" | "JC", _, "Mises", "ExH"} -> 
+    {"Exponential Sy=Sy0+K epseq+ Rinf (1-Exp(- delta epseq))", 
+     "Isotropic hardening", "Plastic Model", True}, 
+   {"SE", "MS", "LP" | "JC", _, "Mises", "LiH"} -> 
+    {"Linear Sy=Sy0+K epseq", "Isotropic hardening", "Plastic Model", False}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", "GS", _, "Damage"} -> 
+    {"Continuum damage model", "Type", "", True}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", "GS", _, "Damage", "Description"} -> 
+    {"Damage options", "", "Type"}, {"SE", "PE" | "D3" | "AX" | "PS", "GS", 
+     _, "Damage", "HookeDamage"} -> {"Linear Hooke-s law with damage", 
+     "Strain energy", "Type", True}, {"SE", "PE" | "D3" | "AX" | "PS", "GS", 
+     _, "Damage", "Hooke"} -> {"Linear Hooke-s law", "Strain energy", "Type", 
+     False}, {"SE", "PE" | "D3" | "AX" | "PS", "GS", _, "Gurson"} -> 
+    {"Voids model", "Type", "", True}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", "GS", _, "Soil"} -> 
+    {"Soil multi-surface model", "Type", "", True}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", "GL", _, "Damage"} -> 
+    {"Continuum damage model", "Type", "", True}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", "GL", _, "Damage", "Description"} -> 
+    {"Damage options", "", "Type"}, {"SE", "PE" | "D3" | "AX" | "PS", "GL", 
+     _, "Damage", "NeoHookeDamage"} -> 
+    {"Neo-Hooke strain potential with damage", "Strain energy", "Type", 
+     True}, {"SE", "PE" | "D3" | "AX" | "PS", "GL", _, "Damage", 
+     "NeoHooke"} -> {"Neo-Hooke strain potential", "Strain energy", "Type", 
+     False}, {"SE", "PE" | "D3" | "AX" | "PS", "GL", _, "Gurson"} -> 
+    {"Voids model", "Type", "", True}, 
+   {"SE", "PE" | "D3" | "AX" | "PS", "GL", _, "Soil"} -> 
+    {"Soil multi-surface model", "Type", "", True}}, "UMAT library, which \
+provides the environment for making wide range of different user material \
+subroutines for ABAQUS and ANSYS.", {3.7374483012558803`17.32515018309857*^9, 
+   3.7374502373936827`17.325150408079274*^9}, "UM", 
+  "University of Ljubljana, jkorelc@fgg.uni-lj.si", Null, 6.901, True, 
+  Hold[SMCElementSelector[]], 
+  {"http://symech.fgg.uni-lj.si/AdditionalLibrary/UMATLibraryV1/", 
+   "MainLibrary.nb"}, Hold[SMCKeywordsLists = {}; 
+    SMCPaletteKeywords = {{{"SE", 0}}}; SMCSetPaletteKeyword[1, 
+     First[SMCPaletteKeywords], SMCPaths[[5,SMCSession[[40]]]]]; ], 
+  "D:\\UMATLibraryV1\\", True, {"D:\\SMS\\Library\\", "HashData.txt"}, 
+  Hold[SMCSession[[41]] = "ABAQUS UMAT"; SMCSession[[42]] = False; 
+    SMCSession[[43]] = True; SMCSession[[44]] = False; 
+    SMCSession[[45]] = "Unknown"; SMCSession[[46]] = "Local"; 
+    SMCSession[[47]] = "Optimal efficiency"; 
+    Grid[{{"Task", PopupMenu[Dynamic[SMCSession[[41]], 
+         (SMCSession[[41]] = #1) & ], {"ABAQUS UMAT", "ANSYS USERMAT"}, 
+        Background -> Lighter[Blue, 0.7]]}}, Alignment -> Left, 
+     ItemSize -> Full]], 1}, {"Isogeometric Analysis", 
+  "http://symech.fgg.uni-lj.si/AdditionalLibrary/IsogeometricLib/", 
+  {"SELoL2B1" -> "SE/1/", "SELoL2B2" -> "SE/1/", "SELoL2B3" -> "SE/1/", 
+   "SELoL3B1" -> "SE/1/", "SELoL3B2" -> "SE/1/", "SELoL3B3" -> "SE/1/", 
+   "SELoLsB1" -> "SE/1/", "SELoLsB2" -> "SE/1/", "SELoLsB3" -> "SE/1/", 
+   "SEAXB1LE" -> "SE/1/", "SEAXB2LE" -> "SE/1/", "SEAXB3LE" -> "SE/1/", 
+   "SEAXB1HY" -> "SE/1/", "SEAXB2HY" -> "SE/1/", "SEAXB3HY" -> "SE/1/", 
+   "SEPEB1LE" -> "SE/1/", "SEPEB1HY" -> "SE/1/", "SEPEB2HY" -> "SE/1/", 
+   "SEPEB3HY" -> "SE/1/", "SED3B1HY" -> "SE/1/", "SED3B2HY" -> "SE/1/", 
+   "SED3B3HY" -> "SE/2/", "SED3B1LE" -> "SE/2/", "SED3B2LE" -> "SE/2/", 
+   "SED3B3LE" -> "SE/2/"}, {"SELoL2B1" -> {"SE", "Lo", "L2", "B1"}, 
+   "SELoL2B2" -> {"SE", "Lo", "L2", "B2"}, 
+   "SELoL2B3" -> {"SE", "Lo", "L2", "B3"}, 
+   "SELoL3B1" -> {"SE", "Lo", "L3", "B1"}, 
+   "SELoL3B2" -> {"SE", "Lo", "L3", "B2"}, 
+   "SELoL3B3" -> {"SE", "Lo", "L3", "B3"}, 
+   "SELoLsB1" -> {"SE", "Lo", "Ls", "B1"}, 
+   "SELoLsB2" -> {"SE", "Lo", "Ls", "B2"}, 
+   "SELoLsB3" -> {"SE", "Lo", "Ls", "B3"}, 
+   "SEAXB1LE" -> {"SE", "AX", "B1", "LE"}, 
+   "SEAXB2LE" -> {"SE", "AX", "B2", "LE"}, 
+   "SEAXB3LE" -> {"SE", "AX", "B3", "LE"}, 
+   "SEAXB1HY" -> {"SE", "AX", "B1", "HY"}, 
+   "SEAXB2HY" -> {"SE", "AX", "B2", "HY"}, 
+   "SEAXB3HY" -> {"SE", "AX", "B3", "HY"}, 
+   "SEPEB1LE" -> {"SE", "PE", "B1", "LE"}, 
+   "SEPEB1HY" -> {"SE", "PE", "B1", "HY"}, 
+   "SEPEB2HY" -> {"SE", "PE", "B2", "HY"}, 
+   "SEPEB3HY" -> {"SE", "PE", "B3", "HY"}, 
+   "SED3B1HY" -> {"SE", "D3", "B1", "HY"}, 
+   "SED3B2HY" -> {"SE", "D3", "B2", "HY"}, 
+   "SED3B3HY" -> {"SE", "D3", "B3", "HY"}, 
+   "SED3B1LE" -> {"SE", "D3", "B1", "LE"}, 
+   "SED3B2LE" -> {"SE", "D3", "B2", "LE"}, 
+   "SED3B3LE" -> {"SE", "D3", "B3", "LE"}}, {{"SE"} -> "Solid Static", 
+   {"SE", "D3"} -> "3D continuum", {"SE", "AX"} -> "axisymmetric continuum", 
+   {"SE", "PE"} -> "plane strain", {"SE", "Lo"} -> "load elements", 
+   {"SE", "Lo", "L2"} -> "2D line load", {"SE", "Lo", "L3"} -> 
+    "3D line load", {"SE", "Lo", "Ls"} -> "3D surface load", 
+   {"SE", "Lo", _, "B1"} -> "first order Bezier", 
+   {"SE", "Lo", _, "B2"} -> "second order Bezier", 
+   {"SE", "Lo", _, "B3"} -> "third order Bezier", 
+   {"SE", _, "B1"} -> "first order Bezier", {"SE", _, "B2"} -> 
+    "second order Bezier", {"SE", _, "B3"} -> "third order Bezier", 
+   {"SE", _, _, "LE"} -> "linear elastic", {"SE", _, _, "HY"} -> 
+    "hyperelastic"}, "Finite elements for isogeometric analysis.", 
+  {2016, 4, 13, 6, 37, 54.7825821`9.491217340133648}, "IGA", 
+  "Ursa Solinc, University of Ljubljana, Slovenia", Null, {6.702, 6.702}, 
+  Null, Null, Null, Null, Null, Null, Null, Null, Null}, 
+ {"2D Beams", "http://symech.fgg.uni-lj.si/AdditionalLibrary/BeamsLib/", 
+  {"2DBDynElReisI1StaSt" -> "2D/1/", "2DBDynElReisI3StaSt" -> "2D/1/", 
+   "2DBDynStReisI1StaSt" -> "2D/1/"}, 
+  {"2DBDynElReisI1StaSt" -> {"2DBDyn", "El", "Reis", "I1", "StaSt"}, 
+   "2DBDynElReisI3StaSt" -> {"2DBDyn", "El", "Reis", "I3", "StaSt"}, 
+   "2DBDynStReisI1StaSt" -> {"2DBDyn", "St", "Reis", "I1", "StaSt"}}, 
+  {{"2DBSta"} -> "2D Beam Statics", {"2DBSta", "El"} -> 
+    "Linear elastic material model", {"2DBSta", "St"} -> 
+    "Fiber beam element with Menegotto Pinto steel model", 
+   {"2DBSta", "RC"} -> "Fiber beam element for reinforced concrete material", 
+   {"2DBSta", _, "LinK"} -> "Linear kinematics", 
+   {"2DBSta", _, "Reis"} -> "Ressiner beam kinematics", 
+   {"2DBSta", _, _, "I1"} -> "Linear interpolation of displacements", 
+   {"2DBSta", _, _, "I2"} -> "Quadratic interpolation of displacements", 
+   {"2DBSta", _, _, "I3"} -> "Cubic interpolation of displacements", 
+   {"2DBSta", _, _, "I4"} -> "Quartic interpolation of displacements", 
+   {"2DBDyn"} -> "2D Beam Dynamics", {"2DBDyn", "El"} -> 
+    "Linear elastic material model", {"2DBDyn", "St"} -> 
+    "Fiber beam element with Menegotto Pinto steel model", 
+   {"2DBDyn", "RC"} -> "Fiber beam elment for reinforced concrete material", 
+   {"2DBDyn", _, "Reis"} -> "Reissner's kinematics", 
+   {"2DBDyn", _, _, "I1"} -> "Linear interpolation of displacements", 
+   {"2DBDyn", _, _, "I2"} -> "Quadratic interpolation of displacements", 
+   {"2DBDyn", _, _, "I3"} -> "Cubic interpolation of displacements", 
+   {"2DBDyn", _, _, "I4"} -> "Quartic interpolation of displacements", 
+   {"2DBDyn", _, _, _, "StaSt"} -> "Integrator of Stander & Stein", 
+   {"2DBDyn", _, _, _, "STD"} -> "Integrator of Simo, Tarnow & Doblare", 
+   {"2DBDyn", _, _, _, "Wavg"} -> "Weak integrator with average rot. matrix", 
+   {"2DBDyn", _, _, _, "Wmid"} -> 
+    "Weak integrator with midpoint rot. matrix", 
+   {"2DBDyn", _, _, _, "IbMa"} -> 
+    "Integrator of Ibrahimbegovi\[CAcute] and Mamouri", 
+   {"2DBDyn", _, _, _, "New"} -> "Integrator of Newmark", 
+   {"2DBDyn", _, _, _, "HHT"} -> "Integrator of Hilber, Hughes & Taylor"}, 
+  StringForm[
+   "Finite elements for static and dynamic analysis of planar beams. \n ``", 
+   Hyperlink["Documentation and examples", "http://symech.fgg.uni-lj.si/Addit\
+ionalLibrary/BeamsLib/Doc/Beam_Examples.nb"]], 
+  {2016, 4, 13, 21, 21, 59.0779374`9.524000152529057}, "B2", 
+  "doc. dr. Matija Gams (matija.gams@zag.si)", Null, {6.702, 6.702}, Null, 
+  Null, Null, Null, Null, Null, Null, Null, Null}, 
+ {"AceFEM On-Line", "http://symech.fgg.uni-lj.si/Library_10.0/", 
+  {"SES3P1DFFLP1Uniform" -> "SE/7/", "SES3P2DFFLP2Uniform" -> "SE/7/", 
+   "SES3S1DFFLS1Uniform" -> "SE/7/", "SES3S2DFFLS2Uniform" -> "SE/8/", 
+   "SEC2L1DFFLL1Uniform" -> "SE/8/", "SESAL1DFFLL1Uniform" -> "SE/8/", 
+   "SEC2L2DFFLL2Uniform" -> "SE/8/", "SESAL2DFFLL2Uniform" -> "SE/8/", 
+   "SEC3C1DFFLC1LoadUniform" -> "SE/8/", "SEC3C1DFFLC16DOFLoadUniform" -> 
+    "SE/8/", "SEC3C2DFFLC2LoadUniform" -> "SE/8/", 
+   "SEPET1DFLET1Hooke" -> "SE/1/", "SEAXT1DFHYT1NeoHooke" -> "SE/1/", 
+   "SEPET1DFHYT1NeoHooke" -> "SE/1/", "SEAXT1DFLPT1HookeMises" -> "SE/1/", 
+   "SEPET1DFLPT1HookeMises" -> "SE/1/", "SEPST2DFLPT2HookeMises" -> "SE/1/", 
+   "SEPEQ2DFJCQ2NeoHookeMises" -> "SE/1/", "SEPET1DFJCT1NeoHookeMises" -> 
+    "SE/1/", "SEAXT1DFJCT1NeoHookeMises" -> "SE/1/", 
+   "SEPST1DFLET1Hooke" -> "SE/1/", "SEPEQ2SDFLEQ2SHooke" -> "SE/1/", 
+   "SEPET2DFLET2Hooke" -> "SE/1/", "SEPST1DFHYT1NeoHooke" -> "SE/1/", 
+   "SEPET2DFHYT2NeoHooke" -> "SE/1/", "SEPEQ2SDFHYQ2SNeoHooke" -> "SE/1/", 
+   "SEPST2DFJCT2NeoHookeMises" -> "SE/1/", "SEPST1DFLPT1HookeMises" -> 
+    "SE/1/", "SEAXT2DFLET2Hooke" -> "SE/1/", "SEPET2DFLPT2HookeMises" -> 
+    "SE/1/", "SEAXT2DFHYT2NeoHooke" -> "SE/1/", "SEPEQ2SDFLPQ2SHookeMises" -> 
+    "SE/1/", "SEAXT2DFLPT2HookeMises" -> "SE/1/", 
+   "SEPST1DFJCT1NeoHookeMises" -> "SE/1/", "SEAXT1DFLET1Hooke" -> "SE/1/", 
+   "SEPET2DFJCT2NeoHookeMises" -> "SE/1/", "SEPST2DFLET2Hooke" -> "SE/1/", 
+   "SEPSQ2SDFLEQ2SHooke" -> "SE/2/", "SEPST2DFHYT2NeoHooke" -> "SE/2/", 
+   "SEPSQ2SDFHYQ2SNeoHooke" -> "SE/2/", "SEAXQ2SDFHYQ2SNeoHooke" -> "SE/2/", 
+   "SEPEQ2SDFJCQ2SNeoHookeMises" -> "SE/2/", "SEAXT2DFJCT2NeoHookeMises" -> 
+    "SE/2/", "SEPEQ2DFLEQ2Hooke" -> "SE/2/", "SEPSQ2DFLEQ2Hooke" -> "SE/2/", 
+   "SEPEQ2DFHYQ2NeoHooke" -> "SE/2/", "SEPSQ2DFHYQ2NeoHooke" -> "SE/2/", 
+   "SEPSQ2SDFLPQ2SHookeMises" -> "SE/2/", "SEAXQ2SDFLPQ2SHookeMises" -> 
+    "SE/2/", "SEPEQ2DFLPQ2HookeMises" -> "SE/2/", 
+   "SEPSQ2DFLPQ2HookeMises" -> "SE/2/", "SEPEQ1ESLEQ1E4Hooke" -> "SE/2/", 
+   "SEPEQ1ESHYQ1E4NeoHooke" -> "SE/2/", "SEPEQ1ESLPQ1E4HookeMises" -> 
+    "SE/2/", "SEAXQ2SDFJCQ2SNeoHookeMises" -> "SE/2/", 
+   "SEPSQ2SDFJCQ2SNeoHookeMises" -> "SE/2/", "SEPEQ1HRLEPianSumHooke" -> 
+    "SE/2/", "SEPSQ1HRLEPianSumHooke" -> "SE/2/", 
+   "SEAXQ2DFLEQ2Hooke" -> "SE/2/", "SEPEQ1DFLEQ1Hooke" -> "SE/2/", 
+   "SEPEQ1DFHYQ1NeoHooke" -> "SE/2/", "SEAXQ2DFHYQ2NeoHooke" -> "SE/2/", 
+   "SEPSQ2DFJCQ2NeoHookeMises" -> "SE/2/", "SEPEQ1DFLPQ1HookeMises" -> 
+    "SE/3/", "SEPEQ1ESJCQ1E4NeoHookeMises" -> "SE/3/", 
+   "SEPEQ1ESLEQ1E5Hooke" -> "SE/3/", "SEAXQ2DFLPQ2HookeMises" -> "SE/3/", 
+   "SEPEQ1ESHYQ1E5NeoHooke" -> "SE/3/", "SEPEQ1DFJCQ1NeoHookeMises" -> 
+    "SE/3/", "SEPEQ1ESLPQ1E5HookeMises" -> "SE/3/", 
+   "SEPEQ1DIJCFBARNeoHookeMises" -> "SE/3/", "SEPSQ1DFLPQ1HookeMises" -> 
+    "SE/3/", "SEPEQ1DILEQ1TSHooke" -> "SE/3/", "SEAXQ2DFJCQ2NeoHookeMises" -> 
+    "SE/3/", "SEPEQ1DIHYQ1TSNeoHooke" -> "SE/3/", 
+   "SEAXQ2SDFLEQ2SHooke" -> "SE/3/", "SEPEQ1ESJCQ1E5NeoHookeMises" -> 
+    "SE/3/", "SEPEQ1DIHYFBARNeoHooke" -> "SE/3/", 
+   "SEPSQ1DFJCQ1NeoHookeMises" -> "SE/3/", "SEAXQ1DFLEQ1Hooke" -> "SE/3/", 
+   "SEPSQ1ESLEQ1E4Hooke" -> "SE/3/", "SEAXQ1DFHYQ1NeoHooke" -> "SE/3/", 
+   "SEPSQ1ESHYQ1E4NeoHooke" -> "SE/3/", "SEPEQ1DILPQ1TSHookeMises" -> 
+    "SE/3/", "SEAXQ1DFLPQ1HookeMises" -> "SE/3/", 
+   "SEPSQ1ESLPQ1E4HookeMises" -> "SE/3/", "SEPSQ1ESJCQ1E5NeoHookeMises" -> 
+    "SE/3/", "SEPSQ1DIHYFBARNeoHooke" -> "SE/3/", 
+   "SEAXQ1DFJCQ1NeoHookeMises" -> "SE/3/", "SEAXQ1ESLEQ1E5Hooke" -> "SE/4/", 
+   "SEPEQ1DIJCQ1TSNeoHookeMises" -> "SE/4/", "SEAXQ1ESHYQ1E5NeoHooke" -> 
+    "SE/4/", "SEPSQ1ESJCQ1E4NeoHookeMises" -> "SE/4/", 
+   "SEPEQ1ESHYCG4NeoHooke" -> "SE/4/", "SEPSQ1ESLEQ1E5Hooke" -> "SE/4/", 
+   "SEAXQ1ESLPQ1E5HookeMises" -> "SE/4/", "SEPSQ1DIJCFBARNeoHookeMises" -> 
+    "SE/4/", "SEPSQ1ESHYQ1E5NeoHooke" -> "SE/4/", 
+   "SEPSQ1DILEQ1TSHooke" -> "SE/4/", "SEPSQ1ESLPQ1E5HookeMises" -> "SE/4/", 
+   "SEPEQ1ESJCCG4NeoHookeMises" -> "SE/4/", "SEPSQ1DFLEQ1Hooke" -> "SE/4/", 
+   "SEPSQ1DIHYQ1TSNeoHooke" -> "SE/4/", "SEPSQ1DFHYQ1NeoHooke" -> "SE/4/", 
+   "SEAXQ1ESJCQ1E5NeoHookeMises" -> "SE/4/", "SEPSQ1DILPQ1TSHookeMises" -> 
+    "SE/4/", "SEPSQ1DIJCQ1TSNeoHookeMises" -> "SE/4/", 
+   "SEPSQ1ESHYCG4NeoHooke" -> "SE/4/", "SED3H1DILEH1TSHooke" -> "SE/4/", 
+   "SEPSQ1ESJCCG4NeoHookeMises" -> "SE/4/", "SEAXQ1DIHYQ1TSNeoHooke" -> 
+    "SE/4/", "SEAXQ1DILEQ1TSHooke" -> "SE/4/", "SED3O1DFLEO1Hooke" -> 
+    "SE/4/", "SED3H1ESLECG9Hooke" -> "SE/4/", "SED3O1DFHYO1NeoHooke" -> 
+    "SE/4/", "SED3O1DFLPO1HookeMises" -> "SE/5/", 
+   "SED3H1ESHYCG9NeoHooke" -> "SE/5/", "SED3O1DFJCO1NeoHookeMises" -> 
+    "SE/5/", "SED3O2DFLEO2Hooke" -> "SE/5/", "SED3H1DIHYH1TSNeoHooke" -> 
+    "SE/5/", "SED3O2DFHYO2NeoHooke" -> "SE/5/", "SED3O2DFLPO2HookeMises" -> 
+    "SE/5/", "SED3H1ESJCCG9NeoHookeMises" -> "SE/5/", 
+   "SEAXQ1DILPQ1TSHookeMises" -> "SE/5/", "SED3H1ESLEH1E12Hooke" -> "SE/5/", 
+   "SED3H1ESHYH1E12NeoHooke" -> "SE/5/", "SED3O2DFJCO2NeoHookeMises" -> 
+    "SE/5/", "SED3H1ESLPH1E12HookeMises" -> "SE/5/", 
+   "SED3H2DFLEH2Hooke" -> "SE/5/", "SED3H1DILPH1TSHookeMises" -> "SE/5/", 
+   "SED3H2DFHYH2NeoHooke" -> "SE/5/", "SEAXQ1DIJCQ1TSNeoHookeMises" -> 
+    "SE/5/", "SED3H1DFLEH1Hooke" -> "SE/5/", "SED3H1DFHYH1NeoHooke" -> 
+    "SE/5/", "SED3H2DFLPH2HookeMises" -> "SE/5/", 
+   "SED3H1ESJCH1E12NeoHookeMises" -> "SE/5/", "SED3H1HRLEPianTongHooke" -> 
+    "SE/5/", "SED3H1DFLPH1HookeMises" -> "SE/5/", 
+   "SED3H1DFJCH1NeoHookeMises" -> "SE/5/", "SED3H1DIHYFBARNeoHooke" -> 
+    "SE/5/", "SED3H2DFJCH2NeoHookeMises" -> "SE/5/", 
+   "SED3H2SDFLEH2SHooke" -> "SE/6/", "SED3H1DIJCH1TSNeoHookeMises" -> 
+    "SE/6/", "SED3H2SDFHYH2SNeoHooke" -> "SE/6/", 
+   "SED3H1ESLEH1E9Hooke" -> "SE/6/", "SED3H1ESHYH1E9NeoHooke" -> "SE/6/", 
+   "SED3H1DIJCFBARNeoHookeMises" -> "SE/6/", "SED3H2SDFLPH2SHookeMises" -> 
+    "SE/6/", "SED3H1ESLPH1E9HookeMises" -> "SE/6/", 
+   "SED3H2SDFJCH2SNeoHookeMises" -> "SE/6/", "SED3H1ESJCH1E9NeoHookeMises" -> 
+    "SE/6/", "SEMSP1DFLEP1P6Hooke" -> "SE/6/", "SEMSP2DFLEP2P6Hooke" -> 
+    "SE/6/", "SEMSS1DFLES1P6Hooke" -> "SE/6/", "SEMSS2SDFLES2SP6Hooke" -> 
+    "SE/6/", "SEMSS1ASLEANSP6Hooke" -> "SE/6/", "SEMSS2DFLES2P6Hooke" -> 
+    "SE/6/", "SEMSS1ESLEANSE2P6Hooke" -> "SE/6/", 
+   "SEMSS1ESLEANSE4P6Hooke" -> "SE/6/", "SEMSP1DFHYP1P6SVenant" -> "SE/6/", 
+   "SEMSP2DFHYP2P6SVenant" -> "SE/6/", "SEMSS1DFHYS1P6SVenant" -> "SE/6/", 
+   "SEMSP1DFLPP1P6HookeMises" -> "SE/6/", "SEMSS2SDFHYS2SP6SVenant" -> 
+    "SE/6/", "SEMSS2DFHYS2P6SVenant" -> "SE/6/", 
+   "SEMSP2DFLPP2P6HookeMises" -> "SE/6/", "SEMSS1DFLPS1P6HookeMises" -> 
+    "SE/6/", "SEMSS2SDFLPS2SP6HookeMises" -> "SE/7/", 
+   "SEMSS2DFLPS2P6HookeMises" -> "SE/7/", "SEMSS1ASHYANSP6SVenant" -> 
+    "SE/7/", "SEMSS1ESHYANSE2P6SVenant" -> "SE/7/", 
+   "SEMSS1ESHYANSE4P6SVenant" -> "SE/7/", "SEMSP1DFJCP1P6SVenantMises" -> 
+    "SE/7/", "THC2L1DFCOL1Uniform" -> "TH/1/", "THC2L2DFCOL2Uniform" -> 
+    "TH/1/", "THSAL1DFCOL1Uniform" -> "TH/1/", "THSAL2DFCOL2Uniform" -> 
+    "TH/1/", "THS3S1DFCOS1Uniform" -> "TH/1/", "THS3S2DFCOS2Uniform" -> 
+    "TH/1/", "THS3S2SDFCOS2SUniform" -> "TH/1/", 
+   "THS3P1DFCOP1Uniform" -> "TH/1/", "THS3P2DFCOP2Uniform" -> "TH/1/", 
+   "THD2T1DFSTT1Isotropic" -> "TH/1/", "THD2T1DFNST1Isotropic" -> "TH/1/", 
+   "THD2Q1DFSTQ1Isotropic" -> "TH/1/", "THD2Q1DFNSQ1Isotropic" -> "TH/1/", 
+   "THD3O1DFSTO1Isotropic" -> "TH/1/", "THD3O1DFNSO1Isotropic" -> "TH/1/", 
+   "THD3H1DFSTH1Isotropic" -> "TH/1/", "SEMSS1ASLPANSP6HookeMises" -> 
+    "SE/7/", "THD3H1DFNSH1Isotropic" -> "TH/1/", "THD2T2DFSTT2Isotropic" -> 
+    "TH/1/", "SEMSP2DFJCP2P6SVenantMises" -> "SE/7/", 
+   "THD2T2DFNST2Isotropic" -> "TH/1/", "THD2Q2DFSTQ2Isotropic" -> "TH/1/", 
+   "SEMSS1ESLPANSE2P6HookeMises" -> "SE/7/", "THD2Q2DFNSQ2Isotropic" -> 
+    "TH/1/", "THD3O2DFSTO2Isotropic" -> "TH/1/", 
+   "SEMSS1ESLPANSE4P6HookeMises" -> "SE/7/", "THD3O2DFNSO2Isotropic" -> 
+    "TH/1/", "SEMSS1DFJCS1P6SVenantMises" -> "SE/7/", 
+   "THD3H2DFNSH2Isotropic" -> "TH/1/", "THD3H2DFSTH2Isotropic" -> "TH/1/", 
+   "THD3H2SDFSTH2SIsotropic" -> "TH/1/", "SEMSS2SDFJCS2SP6SVenantMises" -> 
+    "SE/7/", "THD3H2SDFNSH2SIsotropic" -> "TH/2/", 
+   "SEMSS2DFJCS2P6SVenantMises" -> "SE/7/", "SEMSS1ASJCANSP6SVenantMises" -> 
+    "SE/7/", "SEMSS1ESJCANSE2P6SVenantMises" -> "SE/7/", 
+   "SEMSS1ESJCANSE4P6SVenantMises" -> "SE/7/"}, 
+  {"SES3P1DFFLP1Uniform" -> {"SE", "S3", "P1", "DF", "FL", "P1", "Uniform"}, 
+   "SES3P2DFFLP2Uniform" -> {"SE", "S3", "P2", "DF", "FL", "P2", "Uniform"}, 
+   "SES3S1DFFLS1Uniform" -> {"SE", "S3", "S1", "DF", "FL", "S1", "Uniform"}, 
+   "SES3S2DFFLS2Uniform" -> {"SE", "S3", "S2", "DF", "FL", "S2", "Uniform"}, 
+   "SEC2L1DFFLL1Uniform" -> {"SE", "C2", "L1", "DF", "FL", "L1", "Uniform"}, 
+   "SESAL1DFFLL1Uniform" -> {"SE", "SA", "L1", "DF", "FL", "L1", "Uniform"}, 
+   "SEC2L2DFFLL2Uniform" -> {"SE", "C2", "L2", "DF", "FL", "L2", "Uniform"}, 
+   "SESAL2DFFLL2Uniform" -> {"SE", "SA", "L2", "DF", "FL", "L2", "Uniform"}, 
+   "SEC3C1DFFLC1LoadUniform" -> {"SE", "C3", "C1", "DF", "FL", "C1Load", 
+     "Uniform"}, "SEC3C1DFFLC16DOFLoadUniform" -> {"SE", "C3", "C1", "DF", 
+     "FL", "C16DOFLoad", "Uniform"}, "SEC3C2DFFLC2LoadUniform" -> 
+    {"SE", "C3", "C2", "DF", "FL", "C2Load", "Uniform"}, 
+   "SEPET1DFLET1Hooke" -> {"SE", "PE", "T1", "DF", "LE", "T1", "Hooke"}, 
+   "SEAXT1DFHYT1NeoHooke" -> {"SE", "AX", "T1", "DF", "HY", "T1", 
+     "NeoHooke"}, "SEPET1DFHYT1NeoHooke" -> {"SE", "PE", "T1", "DF", "HY", 
+     "T1", "NeoHooke"}, "SEAXT1DFLPT1HookeMises" -> 
+    {"SE", "AX", "T1", "DF", "LP", "T1", "Hooke", "Mises"}, 
+   "SEPET1DFLPT1HookeMises" -> {"SE", "PE", "T1", "DF", "LP", "T1", "Hooke", 
+     "Mises"}, "SEPST2DFLPT2HookeMises" -> {"SE", "PS", "T2", "DF", "LP", 
+     "T2", "Hooke", "Mises"}, "SEPEQ2DFJCQ2NeoHookeMises" -> 
+    {"SE", "PE", "Q2", "DF", "JC", "Q2", "NeoHooke", "Mises"}, 
+   "SEPET1DFJCT1NeoHookeMises" -> {"SE", "PE", "T1", "DF", "JC", "T1", 
+     "NeoHooke", "Mises"}, "SEAXT1DFJCT1NeoHookeMises" -> 
+    {"SE", "AX", "T1", "DF", "JC", "T1", "NeoHooke", "Mises"}, 
+   "SEPST1DFLET1Hooke" -> {"SE", "PS", "T1", "DF", "LE", "T1", "Hooke"}, 
+   "SEPEQ2SDFLEQ2SHooke" -> {"SE", "PE", "Q2S", "DF", "LE", "Q2S", "Hooke"}, 
+   "SEPET2DFLET2Hooke" -> {"SE", "PE", "T2", "DF", "LE", "T2", "Hooke"}, 
+   "SEPST1DFHYT1NeoHooke" -> {"SE", "PS", "T1", "DF", "HY", "T1", 
+     "NeoHooke"}, "SEPET2DFHYT2NeoHooke" -> {"SE", "PE", "T2", "DF", "HY", 
+     "T2", "NeoHooke"}, "SEPEQ2SDFHYQ2SNeoHooke" -> 
+    {"SE", "PE", "Q2S", "DF", "HY", "Q2S", "NeoHooke"}, 
+   "SEPST2DFJCT2NeoHookeMises" -> {"SE", "PS", "T2", "DF", "JC", "T2", 
+     "NeoHooke", "Mises"}, "SEPST1DFLPT1HookeMises" -> 
+    {"SE", "PS", "T1", "DF", "LP", "T1", "Hooke", "Mises"}, 
+   "SEAXT2DFLET2Hooke" -> {"SE", "AX", "T2", "DF", "LE", "T2", "Hooke"}, 
+   "SEPET2DFLPT2HookeMises" -> {"SE", "PE", "T2", "DF", "LP", "T2", "Hooke", 
+     "Mises"}, "SEAXT2DFHYT2NeoHooke" -> {"SE", "AX", "T2", "DF", "HY", "T2", 
+     "NeoHooke"}, "SEPEQ2SDFLPQ2SHookeMises" -> {"SE", "PE", "Q2S", "DF", 
+     "LP", "Q2S", "Hooke", "Mises"}, "SEAXT2DFLPT2HookeMises" -> 
+    {"SE", "AX", "T2", "DF", "LP", "T2", "Hooke", "Mises"}, 
+   "SEPST1DFJCT1NeoHookeMises" -> {"SE", "PS", "T1", "DF", "JC", "T1", 
+     "NeoHooke", "Mises"}, "SEAXT1DFLET1Hooke" -> {"SE", "AX", "T1", "DF", 
+     "LE", "T1", "Hooke"}, "SEPET2DFJCT2NeoHookeMises" -> 
+    {"SE", "PE", "T2", "DF", "JC", "T2", "NeoHooke", "Mises"}, 
+   "SEPST2DFLET2Hooke" -> {"SE", "PS", "T2", "DF", "LE", "T2", "Hooke"}, 
+   "SEPSQ2SDFLEQ2SHooke" -> {"SE", "PS", "Q2S", "DF", "LE", "Q2S", "Hooke"}, 
+   "SEPST2DFHYT2NeoHooke" -> {"SE", "PS", "T2", "DF", "HY", "T2", 
+     "NeoHooke"}, "SEPSQ2SDFHYQ2SNeoHooke" -> {"SE", "PS", "Q2S", "DF", "HY", 
+     "Q2S", "NeoHooke"}, "SEAXQ2SDFHYQ2SNeoHooke" -> 
+    {"SE", "AX", "Q2S", "DF", "HY", "Q2S", "NeoHooke"}, 
+   "SEPEQ2SDFJCQ2SNeoHookeMises" -> {"SE", "PE", "Q2S", "DF", "JC", "Q2S", 
+     "NeoHooke", "Mises"}, "SEAXT2DFJCT2NeoHookeMises" -> 
+    {"SE", "AX", "T2", "DF", "JC", "T2", "NeoHooke", "Mises"}, 
+   "SEPEQ2DFLEQ2Hooke" -> {"SE", "PE", "Q2", "DF", "LE", "Q2", "Hooke"}, 
+   "SEPSQ2DFLEQ2Hooke" -> {"SE", "PS", "Q2", "DF", "LE", "Q2", "Hooke"}, 
+   "SEPEQ2DFHYQ2NeoHooke" -> {"SE", "PE", "Q2", "DF", "HY", "Q2", 
+     "NeoHooke"}, "SEPSQ2DFHYQ2NeoHooke" -> {"SE", "PS", "Q2", "DF", "HY", 
+     "Q2", "NeoHooke"}, "SEPSQ2SDFLPQ2SHookeMises" -> 
+    {"SE", "PS", "Q2S", "DF", "LP", "Q2S", "Hooke", "Mises"}, 
+   "SEAXQ2SDFLPQ2SHookeMises" -> {"SE", "AX", "Q2S", "DF", "LP", "Q2S", 
+     "Hooke", "Mises"}, "SEPEQ2DFLPQ2HookeMises" -> 
+    {"SE", "PE", "Q2", "DF", "LP", "Q2", "Hooke", "Mises"}, 
+   "SEPSQ2DFLPQ2HookeMises" -> {"SE", "PS", "Q2", "DF", "LP", "Q2", "Hooke", 
+     "Mises"}, "SEPEQ1ESLEQ1E4Hooke" -> {"SE", "PE", "Q1", "ES", "LE", 
+     "Q1E4", "Hooke"}, "SEPEQ1ESHYQ1E4NeoHooke" -> 
+    {"SE", "PE", "Q1", "ES", "HY", "Q1E4", "NeoHooke"}, 
+   "SEPEQ1ESLPQ1E4HookeMises" -> {"SE", "PE", "Q1", "ES", "LP", "Q1E4", 
+     "Hooke", "Mises"}, "SEAXQ2SDFJCQ2SNeoHookeMises" -> 
+    {"SE", "AX", "Q2S", "DF", "JC", "Q2S", "NeoHooke", "Mises"}, 
+   "SEPSQ2SDFJCQ2SNeoHookeMises" -> {"SE", "PS", "Q2S", "DF", "JC", "Q2S", 
+     "NeoHooke", "Mises"}, "SEPEQ1HRLEPianSumHooke" -> 
+    {"SE", "PE", "Q1", "HR", "LE", "PianSum", "Hooke"}, 
+   "SEPSQ1HRLEPianSumHooke" -> {"SE", "PS", "Q1", "HR", "LE", "PianSum", 
+     "Hooke"}, "SEAXQ2DFLEQ2Hooke" -> {"SE", "AX", "Q2", "DF", "LE", "Q2", 
+     "Hooke"}, "SEPEQ1DFLEQ1Hooke" -> {"SE", "PE", "Q1", "DF", "LE", "Q1", 
+     "Hooke"}, "SEPEQ1DFHYQ1NeoHooke" -> {"SE", "PE", "Q1", "DF", "HY", "Q1", 
+     "NeoHooke"}, "SEAXQ2DFHYQ2NeoHooke" -> {"SE", "AX", "Q2", "DF", "HY", 
+     "Q2", "NeoHooke"}, "SEPSQ2DFJCQ2NeoHookeMises" -> 
+    {"SE", "PS", "Q2", "DF", "JC", "Q2", "NeoHooke", "Mises"}, 
+   "SEPEQ1DFLPQ1HookeMises" -> {"SE", "PE", "Q1", "DF", "LP", "Q1", "Hooke", 
+     "Mises"}, "SEPEQ1ESJCQ1E4NeoHookeMises" -> {"SE", "PE", "Q1", "ES", 
+     "JC", "Q1E4", "NeoHooke", "Mises"}, "SEPEQ1ESLEQ1E5Hooke" -> 
+    {"SE", "PE", "Q1", "ES", "LE", "Q1E5", "Hooke"}, 
+   "SEAXQ2DFLPQ2HookeMises" -> {"SE", "AX", "Q2", "DF", "LP", "Q2", "Hooke", 
+     "Mises"}, "SEPEQ1ESHYQ1E5NeoHooke" -> {"SE", "PE", "Q1", "ES", "HY", 
+     "Q1E5", "NeoHooke"}, "SEPEQ1DFJCQ1NeoHookeMises" -> 
+    {"SE", "PE", "Q1", "DF", "JC", "Q1", "NeoHooke", "Mises"}, 
+   "SEPEQ1ESLPQ1E5HookeMises" -> {"SE", "PE", "Q1", "ES", "LP", "Q1E5", 
+     "Hooke", "Mises"}, "SEPEQ1DIJCFBARNeoHookeMises" -> 
+    {"SE", "PE", "Q1", "DI", "JC", "FBAR", "NeoHooke", "Mises"}, 
+   "SEPSQ1DFLPQ1HookeMises" -> {"SE", "PS", "Q1", "DF", "LP", "Q1", "Hooke", 
+     "Mises"}, "SEPEQ1DILEQ1TSHooke" -> {"SE", "PE", "Q1", "DI", "LE", 
+     "Q1TS", "Hooke"}, "SEAXQ2DFJCQ2NeoHookeMises" -> 
+    {"SE", "AX", "Q2", "DF", "JC", "Q2", "NeoHooke", "Mises"}, 
+   "SEPEQ1DIHYQ1TSNeoHooke" -> {"SE", "PE", "Q1", "DI", "HY", "Q1TS", 
+     "NeoHooke"}, "SEAXQ2SDFLEQ2SHooke" -> {"SE", "AX", "Q2S", "DF", "LE", 
+     "Q2S", "Hooke"}, "SEPEQ1ESJCQ1E5NeoHookeMises" -> 
+    {"SE", "PE", "Q1", "ES", "JC", "Q1E5", "NeoHooke", "Mises"}, 
+   "SEPEQ1DIHYFBARNeoHooke" -> {"SE", "PE", "Q1", "DI", "HY", "FBAR", 
+     "NeoHooke"}, "SEPSQ1DFJCQ1NeoHookeMises" -> {"SE", "PS", "Q1", "DF", 
+     "JC", "Q1", "NeoHooke", "Mises"}, "SEAXQ1DFLEQ1Hooke" -> 
+    {"SE", "AX", "Q1", "DF", "LE", "Q1", "Hooke"}, 
+   "SEPSQ1ESLEQ1E4Hooke" -> {"SE", "PS", "Q1", "ES", "LE", "Q1E4", "Hooke"}, 
+   "SEAXQ1DFHYQ1NeoHooke" -> {"SE", "AX", "Q1", "DF", "HY", "Q1", 
+     "NeoHooke"}, "SEPSQ1ESHYQ1E4NeoHooke" -> {"SE", "PS", "Q1", "ES", "HY", 
+     "Q1E4", "NeoHooke"}, "SEPEQ1DILPQ1TSHookeMises" -> 
+    {"SE", "PE", "Q1", "DI", "LP", "Q1TS", "Hooke", "Mises"}, 
+   "SEAXQ1DFLPQ1HookeMises" -> {"SE", "AX", "Q1", "DF", "LP", "Q1", "Hooke", 
+     "Mises"}, "SEPSQ1ESLPQ1E4HookeMises" -> {"SE", "PS", "Q1", "ES", "LP", 
+     "Q1E4", "Hooke", "Mises"}, "SEPSQ1ESJCQ1E5NeoHookeMises" -> 
+    {"SE", "PS", "Q1", "ES", "JC", "Q1E5", "NeoHooke", "Mises"}, 
+   "SEPSQ1DIHYFBARNeoHooke" -> {"SE", "PS", "Q1", "DI", "HY", "FBAR", 
+     "NeoHooke"}, "SEAXQ1DFJCQ1NeoHookeMises" -> {"SE", "AX", "Q1", "DF", 
+     "JC", "Q1", "NeoHooke", "Mises"}, "SEAXQ1ESLEQ1E5Hooke" -> 
+    {"SE", "AX", "Q1", "ES", "LE", "Q1E5", "Hooke"}, 
+   "SEPEQ1DIJCQ1TSNeoHookeMises" -> {"SE", "PE", "Q1", "DI", "JC", "Q1TS", 
+     "NeoHooke", "Mises"}, "SEAXQ1ESHYQ1E5NeoHooke" -> 
+    {"SE", "AX", "Q1", "ES", "HY", "Q1E5", "NeoHooke"}, 
+   "SEPSQ1ESJCQ1E4NeoHookeMises" -> {"SE", "PS", "Q1", "ES", "JC", "Q1E4", 
+     "NeoHooke", "Mises"}, "SEPEQ1ESHYCG4NeoHooke" -> 
+    {"SE", "PE", "Q1", "ES", "HY", "CG4", "NeoHooke"}, 
+   "SEPSQ1ESLEQ1E5Hooke" -> {"SE", "PS", "Q1", "ES", "LE", "Q1E5", "Hooke"}, 
+   "SEAXQ1ESLPQ1E5HookeMises" -> {"SE", "AX", "Q1", "ES", "LP", "Q1E5", 
+     "Hooke", "Mises"}, "SEPSQ1DIJCFBARNeoHookeMises" -> 
+    {"SE", "PS", "Q1", "DI", "JC", "FBAR", "NeoHooke", "Mises"}, 
+   "SEPSQ1ESHYQ1E5NeoHooke" -> {"SE", "PS", "Q1", "ES", "HY", "Q1E5", 
+     "NeoHooke"}, "SEPSQ1DILEQ1TSHooke" -> {"SE", "PS", "Q1", "DI", "LE", 
+     "Q1TS", "Hooke"}, "SEPSQ1ESLPQ1E5HookeMises" -> 
+    {"SE", "PS", "Q1", "ES", "LP", "Q1E5", "Hooke", "Mises"}, 
+   "SEPEQ1ESJCCG4NeoHookeMises" -> {"SE", "PE", "Q1", "ES", "JC", "CG4", 
+     "NeoHooke", "Mises"}, "SEPSQ1DFLEQ1Hooke" -> {"SE", "PS", "Q1", "DF", 
+     "LE", "Q1", "Hooke"}, "SEPSQ1DIHYQ1TSNeoHooke" -> 
+    {"SE", "PS", "Q1", "DI", "HY", "Q1TS", "NeoHooke"}, 
+   "SEPSQ1DFHYQ1NeoHooke" -> {"SE", "PS", "Q1", "DF", "HY", "Q1", 
+     "NeoHooke"}, "SEAXQ1ESJCQ1E5NeoHookeMises" -> 
+    {"SE", "AX", "Q1", "ES", "JC", "Q1E5", "NeoHooke", "Mises"}, 
+   "SEPSQ1DILPQ1TSHookeMises" -> {"SE", "PS", "Q1", "DI", "LP", "Q1TS", 
+     "Hooke", "Mises"}, "SEPSQ1DIJCQ1TSNeoHookeMises" -> 
+    {"SE", "PS", "Q1", "DI", "JC", "Q1TS", "NeoHooke", "Mises"}, 
+   "SEPSQ1ESHYCG4NeoHooke" -> {"SE", "PS", "Q1", "ES", "HY", "CG4", 
+     "NeoHooke"}, "SED3H1DILEH1TSHooke" -> {"SE", "D3", "H1", "DI", "LE", 
+     "H1TS", "Hooke"}, "SEPSQ1ESJCCG4NeoHookeMises" -> 
+    {"SE", "PS", "Q1", "ES", "JC", "CG4", "NeoHooke", "Mises"}, 
+   "SEAXQ1DIHYQ1TSNeoHooke" -> {"SE", "AX", "Q1", "DI", "HY", "Q1TS", 
+     "NeoHooke"}, "SEAXQ1DILEQ1TSHooke" -> {"SE", "AX", "Q1", "DI", "LE", 
+     "Q1TS", "Hooke"}, "SED3O1DFLEO1Hooke" -> {"SE", "D3", "O1", "DF", "LE", 
+     "O1", "Hooke"}, "SED3H1ESLECG9Hooke" -> {"SE", "D3", "H1", "ES", "LE", 
+     "CG9", "Hooke"}, "SED3O1DFHYO1NeoHooke" -> {"SE", "D3", "O1", "DF", 
+     "HY", "O1", "NeoHooke"}, "SED3O1DFLPO1HookeMises" -> 
+    {"SE", "D3", "O1", "DF", "LP", "O1", "Hooke", "Mises"}, 
+   "SED3H1ESHYCG9NeoHooke" -> {"SE", "D3", "H1", "ES", "HY", "CG9", 
+     "NeoHooke"}, "SED3O1DFJCO1NeoHookeMises" -> {"SE", "D3", "O1", "DF", 
+     "JC", "O1", "NeoHooke", "Mises"}, "SED3O2DFLEO2Hooke" -> 
+    {"SE", "D3", "O2", "DF", "LE", "O2", "Hooke"}, 
+   "SED3H1DIHYH1TSNeoHooke" -> {"SE", "D3", "H1", "DI", "HY", "H1TS", 
+     "NeoHooke"}, "SED3O2DFHYO2NeoHooke" -> {"SE", "D3", "O2", "DF", "HY", 
+     "O2", "NeoHooke"}, "SED3O2DFLPO2HookeMises" -> 
+    {"SE", "D3", "O2", "DF", "LP", "O2", "Hooke", "Mises"}, 
+   "SED3H1ESJCCG9NeoHookeMises" -> {"SE", "D3", "H1", "ES", "JC", "CG9", 
+     "NeoHooke", "Mises"}, "SEAXQ1DILPQ1TSHookeMises" -> 
+    {"SE", "AX", "Q1", "DI", "LP", "Q1TS", "Hooke", "Mises"}, 
+   "SED3H1ESLEH1E12Hooke" -> {"SE", "D3", "H1", "ES", "LE", "H1E12", 
+     "Hooke"}, "SED3H1ESHYH1E12NeoHooke" -> {"SE", "D3", "H1", "ES", "HY", 
+     "H1E12", "NeoHooke"}, "SED3O2DFJCO2NeoHookeMises" -> 
+    {"SE", "D3", "O2", "DF", "JC", "O2", "NeoHooke", "Mises"}, 
+   "SED3H1ESLPH1E12HookeMises" -> {"SE", "D3", "H1", "ES", "LP", "H1E12", 
+     "Hooke", "Mises"}, "SED3H2DFLEH2Hooke" -> {"SE", "D3", "H2", "DF", "LE", 
+     "H2", "Hooke"}, "SED3H1DILPH1TSHookeMises" -> 
+    {"SE", "D3", "H1", "DI", "LP", "H1TS", "Hooke", "Mises"}, 
+   "SED3H2DFHYH2NeoHooke" -> {"SE", "D3", "H2", "DF", "HY", "H2", 
+     "NeoHooke"}, "SEAXQ1DIJCQ1TSNeoHookeMises" -> 
+    {"SE", "AX", "Q1", "DI", "JC", "Q1TS", "NeoHooke", "Mises"}, 
+   "SED3H1DFLEH1Hooke" -> {"SE", "D3", "H1", "DF", "LE", "H1", "Hooke"}, 
+   "SED3H1DFHYH1NeoHooke" -> {"SE", "D3", "H1", "DF", "HY", "H1", 
+     "NeoHooke"}, "SED3H2DFLPH2HookeMises" -> {"SE", "D3", "H2", "DF", "LP", 
+     "H2", "Hooke", "Mises"}, "SED3H1ESJCH1E12NeoHookeMises" -> 
+    {"SE", "D3", "H1", "ES", "JC", "H1E12", "NeoHooke", "Mises"}, 
+   "SED3H1HRLEPianTongHooke" -> {"SE", "D3", "H1", "HR", "LE", "PianTong", 
+     "Hooke"}, "SED3H1DFLPH1HookeMises" -> {"SE", "D3", "H1", "DF", "LP", 
+     "H1", "Hooke", "Mises"}, "SED3H1DFJCH1NeoHookeMises" -> 
+    {"SE", "D3", "H1", "DF", "JC", "H1", "NeoHooke", "Mises"}, 
+   "SED3H1DIHYFBARNeoHooke" -> {"SE", "D3", "H1", "DI", "HY", "FBAR", 
+     "NeoHooke"}, "SED3H2DFJCH2NeoHookeMises" -> {"SE", "D3", "H2", "DF", 
+     "JC", "H2", "NeoHooke", "Mises"}, "SED3H2SDFLEH2SHooke" -> 
+    {"SE", "D3", "H2S", "DF", "LE", "H2S", "Hooke"}, 
+   "SED3H1DIJCH1TSNeoHookeMises" -> {"SE", "D3", "H1", "DI", "JC", "H1TS", 
+     "NeoHooke", "Mises"}, "SED3H2SDFHYH2SNeoHooke" -> 
+    {"SE", "D3", "H2S", "DF", "HY", "H2S", "NeoHooke"}, 
+   "SED3H1ESLEH1E9Hooke" -> {"SE", "D3", "H1", "ES", "LE", "H1E9", "Hooke"}, 
+   "SED3H1ESHYH1E9NeoHooke" -> {"SE", "D3", "H1", "ES", "HY", "H1E9", 
+     "NeoHooke"}, "SED3H1DIJCFBARNeoHookeMises" -> 
+    {"SE", "D3", "H1", "DI", "JC", "FBAR", "NeoHooke", "Mises"}, 
+   "SED3H2SDFLPH2SHookeMises" -> {"SE", "D3", "H2S", "DF", "LP", "H2S", 
+     "Hooke", "Mises"}, "SED3H1ESLPH1E9HookeMises" -> 
+    {"SE", "D3", "H1", "ES", "LP", "H1E9", "Hooke", "Mises"}, 
+   "SED3H2SDFJCH2SNeoHookeMises" -> {"SE", "D3", "H2S", "DF", "JC", "H2S", 
+     "NeoHooke", "Mises"}, "SED3H1ESJCH1E9NeoHookeMises" -> 
+    {"SE", "D3", "H1", "ES", "JC", "H1E9", "NeoHooke", "Mises"}, 
+   "SEMSP1DFLEP1P6Hooke" -> {"SE", "MS", "P1", "DF", "LE", "P1P6", "Hooke"}, 
+   "SEMSP2DFLEP2P6Hooke" -> {"SE", "MS", "P2", "DF", "LE", "P2P6", "Hooke"}, 
+   "SEMSS1DFLES1P6Hooke" -> {"SE", "MS", "S1", "DF", "LE", "S1P6", "Hooke"}, 
+   "SEMSS2SDFLES2SP6Hooke" -> {"SE", "MS", "S2S", "DF", "LE", "S2SP6", 
+     "Hooke"}, "SEMSS1ASLEANSP6Hooke" -> {"SE", "MS", "S1", "AS", "LE", 
+     "ANSP6", "Hooke"}, "SEMSS2DFLES2P6Hooke" -> {"SE", "MS", "S2", "DF", 
+     "LE", "S2P6", "Hooke"}, "SEMSS1ESLEANSE2P6Hooke" -> 
+    {"SE", "MS", "S1", "ES", "LE", "ANSE2P6", "Hooke"}, 
+   "SEMSS1ESLEANSE4P6Hooke" -> {"SE", "MS", "S1", "ES", "LE", "ANSE4P6", 
+     "Hooke"}, "SEMSP1DFHYP1P6SVenant" -> {"SE", "MS", "P1", "DF", "HY", 
+     "P1P6", "SVenant"}, "SEMSP2DFHYP2P6SVenant" -> 
+    {"SE", "MS", "P2", "DF", "HY", "P2P6", "SVenant"}, 
+   "SEMSS1DFHYS1P6SVenant" -> {"SE", "MS", "S1", "DF", "HY", "S1P6", 
+     "SVenant"}, "SEMSP1DFLPP1P6HookeMises" -> {"SE", "MS", "P1", "DF", "LP", 
+     "P1P6", "Hooke", "Mises"}, "SEMSS2SDFHYS2SP6SVenant" -> 
+    {"SE", "MS", "S2S", "DF", "HY", "S2SP6", "SVenant"}, 
+   "SEMSS2DFHYS2P6SVenant" -> {"SE", "MS", "S2", "DF", "HY", "S2P6", 
+     "SVenant"}, "SEMSP2DFLPP2P6HookeMises" -> {"SE", "MS", "P2", "DF", "LP", 
+     "P2P6", "Hooke", "Mises"}, "SEMSS1DFLPS1P6HookeMises" -> 
+    {"SE", "MS", "S1", "DF", "LP", "S1P6", "Hooke", "Mises"}, 
+   "SEMSS2SDFLPS2SP6HookeMises" -> {"SE", "MS", "S2S", "DF", "LP", "S2SP6", 
+     "Hooke", "Mises"}, "SEMSS2DFLPS2P6HookeMises" -> 
+    {"SE", "MS", "S2", "DF", "LP", "S2P6", "Hooke", "Mises"}, 
+   "SEMSS1ASHYANSP6SVenant" -> {"SE", "MS", "S1", "AS", "HY", "ANSP6", 
+     "SVenant"}, "SEMSS1ESHYANSE2P6SVenant" -> {"SE", "MS", "S1", "ES", "HY", 
+     "ANSE2P6", "SVenant"}, "SEMSS1ESHYANSE4P6SVenant" -> 
+    {"SE", "MS", "S1", "ES", "HY", "ANSE4P6", "SVenant"}, 
+   "SEMSP1DFJCP1P6SVenantMises" -> {"SE", "MS", "P1", "DF", "JC", "P1P6", 
+     "SVenant", "Mises"}, "THC2L1DFCOL1Uniform" -> 
+    {"TH", "C2", "L1", "DF", "CO", "L1", "Uniform"}, 
+   "THC2L2DFCOL2Uniform" -> {"TH", "C2", "L2", "DF", "CO", "L2", "Uniform"}, 
+   "THSAL1DFCOL1Uniform" -> {"TH", "SA", "L1", "DF", "CO", "L1", "Uniform"}, 
+   "THSAL2DFCOL2Uniform" -> {"TH", "SA", "L2", "DF", "CO", "L2", "Uniform"}, 
+   "THS3S1DFCOS1Uniform" -> {"TH", "S3", "S1", "DF", "CO", "S1", "Uniform"}, 
+   "THS3S2DFCOS2Uniform" -> {"TH", "S3", "S2", "DF", "CO", "S2", "Uniform"}, 
+   "THS3S2SDFCOS2SUniform" -> {"TH", "S3", "S2S", "DF", "CO", "S2S", 
+     "Uniform"}, "THS3P1DFCOP1Uniform" -> {"TH", "S3", "P1", "DF", "CO", 
+     "P1", "Uniform"}, "THS3P2DFCOP2Uniform" -> {"TH", "S3", "P2", "DF", 
+     "CO", "P2", "Uniform"}, "THD2T1DFSTT1Isotropic" -> 
+    {"TH", "D2", "T1", "DF", "ST", "T1", "Isotropic"}, 
+   "THD2T1DFNST1Isotropic" -> {"TH", "D2", "T1", "DF", "NS", "T1", 
+     "Isotropic"}, "THD2Q1DFSTQ1Isotropic" -> {"TH", "D2", "Q1", "DF", "ST", 
+     "Q1", "Isotropic"}, "THD2Q1DFNSQ1Isotropic" -> 
+    {"TH", "D2", "Q1", "DF", "NS", "Q1", "Isotropic"}, 
+   "THD3O1DFSTO1Isotropic" -> {"TH", "D3", "O1", "DF", "ST", "O1", 
+     "Isotropic"}, "THD3O1DFNSO1Isotropic" -> {"TH", "D3", "O1", "DF", "NS", 
+     "O1", "Isotropic"}, "THD3H1DFSTH1Isotropic" -> 
+    {"TH", "D3", "H1", "DF", "ST", "H1", "Isotropic"}, 
+   "SEMSS1ASLPANSP6HookeMises" -> {"SE", "MS", "S1", "AS", "LP", "ANSP6", 
+     "Hooke", "Mises"}, "THD3H1DFNSH1Isotropic" -> 
+    {"TH", "D3", "H1", "DF", "NS", "H1", "Isotropic"}, 
+   "THD2T2DFSTT2Isotropic" -> {"TH", "D2", "T2", "DF", "ST", "T2", 
+     "Isotropic"}, "SEMSP2DFJCP2P6SVenantMises" -> 
+    {"SE", "MS", "P2", "DF", "JC", "P2P6", "SVenant", "Mises"}, 
+   "THD2T2DFNST2Isotropic" -> {"TH", "D2", "T2", "DF", "NS", "T2", 
+     "Isotropic"}, "THD2Q2DFSTQ2Isotropic" -> {"TH", "D2", "Q2", "DF", "ST", 
+     "Q2", "Isotropic"}, "SEMSS1ESLPANSE2P6HookeMises" -> 
+    {"SE", "MS", "S1", "ES", "LP", "ANSE2P6", "Hooke", "Mises"}, 
+   "THD2Q2DFNSQ2Isotropic" -> {"TH", "D2", "Q2", "DF", "NS", "Q2", 
+     "Isotropic"}, "THD3O2DFSTO2Isotropic" -> {"TH", "D3", "O2", "DF", "ST", 
+     "O2", "Isotropic"}, "SEMSS1ESLPANSE4P6HookeMises" -> 
+    {"SE", "MS", "S1", "ES", "LP", "ANSE4P6", "Hooke", "Mises"}, 
+   "THD3O2DFNSO2Isotropic" -> {"TH", "D3", "O2", "DF", "NS", "O2", 
+     "Isotropic"}, "SEMSS1DFJCS1P6SVenantMises" -> 
+    {"SE", "MS", "S1", "DF", "JC", "S1P6", "SVenant", "Mises"}, 
+   "THD3H2DFNSH2Isotropic" -> {"TH", "D3", "H2", "DF", "NS", "H2", 
+     "Isotropic"}, "THD3H2DFSTH2Isotropic" -> {"TH", "D3", "H2", "DF", "ST", 
+     "H2", "Isotropic"}, "THD3H2SDFSTH2SIsotropic" -> 
+    {"TH", "D3", "H2S", "DF", "ST", "H2S", "Isotropic"}, 
+   "SEMSS2SDFJCS2SP6SVenantMises" -> {"SE", "MS", "S2S", "DF", "JC", "S2SP6", 
+     "SVenant", "Mises"}, "THD3H2SDFNSH2SIsotropic" -> 
+    {"TH", "D3", "H2S", "DF", "NS", "H2S", "Isotropic"}, 
+   "SEMSS2DFJCS2P6SVenantMises" -> {"SE", "MS", "S2", "DF", "JC", "S2P6", 
+     "SVenant", "Mises"}, "SEMSS1ASJCANSP6SVenantMises" -> 
+    {"SE", "MS", "S1", "AS", "JC", "ANSP6", "SVenant", "Mises"}, 
+   "SEMSS1ESJCANSE2P6SVenantMises" -> {"SE", "MS", "S1", "ES", "JC", 
+     "ANSE2P6", "SVenant", "Mises"}, "SEMSS1ESJCANSE4P6SVenantMises" -> 
+    {"SE", "MS", "S1", "ES", "JC", "ANSE4P6", "SVenant", "Mises"}}, 
+  {{"SE"} -> "Solid Static", {"SE", "D1"} -> "1D continuum", 
+   {"SE", "D2"} -> "2D continuum", {"SE", "D3"} -> "3D continuum", 
+   {"SE", "AX"} -> "Axisymmetric continuum", {"SE", "PS"} -> "plane stress", 
+   {"SE", "PE"} -> "plane strain", {"SE", "SA"} -> "Axisymmetric surface", 
+   {"SE", "B2"} -> "2D Bernoully beam", {"SE", "B3"} -> "3D Bernoully beam", 
+   {"SE", "T2"} -> "2D Timoschenko beam", {"SE", "T3"} -> 
+    "3D Timoschenko beam", {"SE", "KP"} -> "Kirschoff plate", 
+   {"SE", "MP"} -> "Mindlin plate", {"SE", "KS"} -> "Kirschoff shell", 
+   {"SE", "MS"} -> "Mindlin shell", {"SE", "C2"} -> "2D curve", 
+   {"SE", "C3"} -> "3D curve", {"SE", "TP"} -> "2D truss", 
+   {"SE", "TV"} -> "3D truss", {"SE", "S3"} -> "3D surface", 
+   {"SE", _, "V1"} -> "1D point", {"SE", _, "V2"} -> "2D point", 
+   {"SE", _, "V3"} -> "3D point", {"SE", _, "L1"} -> 
+    "curve with 2 nodes -2D", {"SE", _, "L2"} -> "curve with 3 nodes -2D", 
+   {"SE", _, "LX"} -> "curve with N nodes -2D", 
+   {"SE", _, "T1"} -> "Triangle with 3 nodes -2D", 
+   {"SE", _, "T2"} -> "Triangle with 6 nodes -2D", 
+   {"SE", _, "TX"} -> "Triangle with N nodes -2D", 
+   {"SE", _, "Q1"} -> "Quadrilateral with 4 nodes -2D", 
+   {"SE", _, "Q2"} -> "Quadrilateral with 9 nodes -2D", 
+   {"SE", _, "Q2S"} -> "Quadrilateral with 8 nodes -2D", 
+   {"SE", _, "QX"} -> "Quadrilateral with N nodes -2D", 
+   {"SE", _, "C1"} -> "curve with 2 nodes -3D", 
+   {"SE", _, "C2"} -> "curve with 3 nodes -3D", 
+   {"SE", _, "CX"} -> "curve with N nodes -3D", 
+   {"SE", _, "P1"} -> "Triangle with 3 nodes -3D", 
+   {"SE", _, "P2"} -> "Triangle with 6 nodes -3D", 
+   {"SE", _, "PX"} -> "Triangle with N nodes -3D", 
+   {"SE", _, "S1"} -> "Quadrilateral with 4 nodes -3D", 
+   {"SE", _, "S2"} -> "Quadrilateral with 9 nodes -3D", 
+   {"SE", _, "S2S"} -> "Quadrilateral with 8 nodes -3D", 
+   {"SE", _, "SX"} -> "Quadrilateral with N nodes -3D", 
+   {"SE", _, "O1"} -> "Tetrahedron with 4 nodes", 
+   {"SE", _, "O2"} -> "Tetrahedron with 10 nodes", 
+   {"SE", _, "OX"} -> "Tetrahedron with N nodes", 
+   {"SE", _, "H1"} -> "Hexahedron with 8 nodes", 
+   {"SE", _, "H2"} -> "Hexahedron with 27 nodes", 
+   {"SE", _, "H2S"} -> "Hexahedron with 20 nodes", 
+   {"SE", _, "HX"} -> "Hexahedron with N nodes", 
+   {"SE", _, _, "GF"} -> "Generic formulation", {"SE", _, _, "DF"} -> 
+    "Standard displacement", {"SE", _, _, "DI"} -> "Underintegrated", 
+   {"SE", _, _, "HR"} -> "Mixed principles", {"SE", _, _, "ES"} -> 
+    "Enhanced strain", {"SE", _, _, "CR"} -> "Corotattional", 
+   {"SE", _, _, "AS"} -> "Assumed strain", {"SE", _, _, "OF"} -> "Other", 
+   {"SE", _, _, _, "LE"} -> "Linear elastic", {"SE", _, _, _, "HY"} -> 
+    "Hyperelastic", {"SE", _, _, _, "LP"} -> "Small strain plasticity", 
+   {"SE", _, _, _, "JC"} -> "Large strain plasticity", 
+   {"SE", _, _, _, "SE"} -> "Second order theory - elastic", 
+   {"SE", _, _, _, "SP"} -> "Second order theory - plastic", 
+   {"SE", _, _, _, "FL"} -> "Surface flux", {"CT"} -> "Contact", 
+   {"CT", "D2"} -> "2D deformable-deformable", 
+   {"CT", "D3"} -> "3D deformable-deformable", 
+   {"CT", "R2"} -> "2D rigid-deformable", {"CT", "R3"} -> 
+    "3D rigid-deformable", {"CT", _, "V1"} -> "1D point", 
+   {"CT", _, "V2"} -> "2D point", {"CT", _, "V3"} -> "3D point", 
+   {"CT", _, "L1"} -> "curve with 2 nodes -2D", 
+   {"CT", _, "L2"} -> "curve with 3 nodes -2D", 
+   {"CT", _, "LX"} -> "curve with N nodes -2D", 
+   {"CT", _, "C1"} -> "curve with 2 nodes -3D", 
+   {"CT", _, "C2"} -> "curve with 3 nodes -3D", 
+   {"CT", _, "CX"} -> "curve with N nodes -3D", 
+   {"CT", _, "P1"} -> "Triangle with 3 nodes -3D", 
+   {"CT", _, "P2"} -> "Triangle with 6 nodes -3D", 
+   {"CT", _, "PX"} -> "Triangle with N nodes -3D", 
+   {"CT", _, "S1"} -> "Quadrilateral with 4 nodes -3D", 
+   {"CT", _, "S2"} -> "Quadrilateral with 9 nodes -3D", 
+   {"CT", _, "S2S"} -> "Quadrilateral with 8 nodes -3D", 
+   {"CT", _, "SX"} -> "Quadrilateral with N nodes -3D", 
+   {"CT", _, _, "GF"} -> "Generic formulation", {"CT", _, _, "PF"} -> 
+    "Standard penalty", {"CT", _, _, "AL"} -> "Augmented Lagrangian", 
+   {"CT", _, _, _, "FL"} -> "Frictionless", {"CT", _, _, _, "FR"} -> 
+    "Frictional", {"TH"} -> "Heat conduction", 
+   {"TH", "D1"} -> "1D continuum", {"TH", "D2"} -> "2D continuum", 
+   {"TH", "D3"} -> "3D continuum", {"TH", "AX"} -> "Axisymmetric continuum", 
+   {"TH", "C2"} -> "2D curve", {"TH", "C3"} -> "3D curve", 
+   {"TH", "SA"} -> "Axisymmetric surface", {"TH", "S3"} -> "3D surface", 
+   {"TH", _, "L1"} -> "curve with 2 nodes -2D", 
+   {"TH", _, "L2"} -> "curve with 3 nodes -2D", 
+   {"TH", _, "LX"} -> "curve with N nodes -2D", 
+   {"TH", _, "T1"} -> "Triangle with 3 nodes -2D", 
+   {"TH", _, "T2"} -> "Triangle with 6 nodes -2D", 
+   {"TH", _, "TX"} -> "Triangle with N nodes -2D", 
+   {"TH", _, "Q1"} -> "Quadrilateral with 4 nodes -2D", 
+   {"TH", _, "Q2"} -> "Quadrilateral with 9 nodes -2D", 
+   {"TH", _, "Q2S"} -> "Quadrilateral with 8 nodes -2D", 
+   {"TH", _, "QX"} -> "Quadrilateral with N nodes -2D", 
+   {"TH", _, "C1"} -> "curve with 2 nodes -3D", 
+   {"TH", _, "C2"} -> "curve with 3 nodes -3D", 
+   {"TH", _, "CX"} -> "curve with N nodes -3D", 
+   {"TH", _, "P1"} -> "Triangle with 3 nodes -3D", 
+   {"TH", _, "P2"} -> "Triangle with 6 nodes -3D", 
+   {"TH", _, "PX"} -> "Triangle with N nodes -3D", 
+   {"TH", _, "S1"} -> "Quadrilateral with 4 nodes -3D", 
+   {"TH", _, "S2"} -> "Quadrilateral with 9 nodes -3D", 
+   {"TH", _, "S2S"} -> "Quadrilateral with 8 nodes -3D", 
+   {"TH", _, "SX"} -> "Quadrilateral with N nodes -3D", 
+   {"TH", _, "O1"} -> "Tetrahedron with 4 nodes", 
+   {"TH", _, "O2"} -> "Tetrahedron with 10 nodes", 
+   {"TH", _, "OX"} -> "Tetrahedron with N nodes", 
+   {"TH", _, "H1"} -> "Hexahedron with 8 nodes", 
+   {"TH", _, "H2"} -> "Hexahedron with 27 nodes", 
+   {"TH", _, "H2S"} -> "Hexahedron with 20 nodes", 
+   {"TH", _, "HX"} -> "Hexahedron with N nodes", 
+   {"TH", _, _, "GF"} -> "Generic formulation", {"TH", _, _, "DF"} -> 
+    "Standard izoparametric", {"TH", _, _, _, "ST"} -> "Stationar", 
+   {"TH", _, _, _, "NS"} -> "Nonstationar", {"TH", _, _, _, "CO"} -> 
+    "Convective boundary conditions", {"DY"} -> "Solid Dynamic", 
+   {"DY", "D1"} -> "1D continuum", {"DY", "D2"} -> "2D continuum", 
+   {"DY", "D3"} -> "3D continuum", {"DY", "AX"} -> "Axisymmetric continuum", 
+   {"DY", "C2"} -> "2D curve", {"DY", "C3"} -> "3D curve", 
+   {"DY", "SA"} -> "Axisymmetric surface", {"DY", "S3"} -> "3D surface", 
+   {"DY", "B2"} -> "2D Bernoully beam", {"DY", "B3"} -> "3D Bernoully beam", 
+   {"DY", "T2"} -> "2D Timoschenko beam", {"DY", "T3"} -> 
+    "3D Timoschenko beam", {"DY", "PS"} -> "plane stress", 
+   {"DY", "PE"} -> "plane strain", {"DY", "KP"} -> "Kirschoff plate", 
+   {"DY", "MP"} -> "Mindlin plate", {"DY", "KS"} -> "Kirschoff shell", 
+   {"DY", "MS"} -> "Mindlin shell", {"DY", _, "L1"} -> 
+    "curve with 2 nodes -2D", {"DY", _, "L2"} -> "curve with 3 nodes -2D", 
+   {"DY", _, "LX"} -> "curve with N nodes -2D", 
+   {"DY", _, "T1"} -> "Triangle with 3 nodes -2D", 
+   {"DY", _, "T2"} -> "Triangle with 6 nodes -2D", 
+   {"DY", _, "TX"} -> "Triangle with N nodes -2D", 
+   {"DY", _, "Q1"} -> "Quadrilateral with 4 nodes -2D", 
+   {"DY", _, "Q2"} -> "Quadrilateral with 9 nodes -2D", 
+   {"DY", _, "Q2S"} -> "Quadrilateral with 8 nodes -2D", 
+   {"DY", _, "QX"} -> "Quadrilateral with N nodes -2D", 
+   {"DY", _, "C1"} -> "curve with 2 nodes -3D", 
+   {"DY", _, "C2"} -> "curve with 3 nodes -3D", 
+   {"DY", _, "CX"} -> "curve with N nodes -3D", 
+   {"DY", _, "P1"} -> "Triangle with 3 nodes -3D", 
+   {"DY", _, "P2"} -> "Triangle with 6 nodes -3D", 
+   {"DY", _, "PX"} -> "Triangle with N nodes -3D", 
+   {"DY", _, "S1"} -> "Quadrilateral with 4 nodes -3D", 
+   {"DY", _, "S2"} -> "Quadrilateral with 9 nodes -3D", 
+   {"DY", _, "S2S"} -> "Quadrilateral with 8 nodes -3D", 
+   {"DY", _, "SX"} -> "Quadrilateral with N nodes -3D", 
+   {"DY", _, "O1"} -> "Tetrahedron with 4 nodes", 
+   {"DY", _, "O2"} -> "Tetrahedron with 10 nodes", 
+   {"DY", _, "OX"} -> "Tetrahedron with N nodes", 
+   {"DY", _, "H1"} -> "Hexahedron with 8 nodes", 
+   {"DY", _, "H2"} -> "Hexahedron with 27 nodes", 
+   {"DY", _, "H2S"} -> "Hexahedron with 20 nodes", 
+   {"DY", _, "HX"} -> "Hexahedron with N nodes", 
+   {"DY", _, _, "GF"} -> "Generic formulation", {"DY", _, _, "DF"} -> 
+    "Standard-Newmark", {"DY", _, _, "DI"} -> "Underintegrated-Newmark", 
+   {"DY", _, _, "HR"} -> "Mixed principles-Newmark", 
+   {"DY", _, _, "ES"} -> "Non-conforming-Newmark", 
+   {"DY", _, _, "CR"} -> "Corotattional-Newmark", 
+   {"DY", _, _, "OF"} -> "Special-Newmark", {"DY", _, _, _, "LE"} -> 
+    "Linear elastic", {"DY", _, _, _, "HY"} -> "Hyperelastic", 
+   {"DY", _, _, _, "LP"} -> "Small strain plasticity", 
+   {"DY", _, _, _, "JC"} -> "Large strain plasticity", 
+   {"DY", _, _, _, "DY"} -> "Second order theory - elastic", 
+   {"DY", _, _, _, "SP"} -> "Second order theory - plastic", 
+   {"DY", _, _, _, "FL"} -> "Surface flux"}, "Basic AceFEM on-line FEM \
+library of:\nExtended collection of static solid elements:\n - 2D, 3D, \
+axisymmetric, loads\n - advanced element formulations (EAS, hybrid, \
+underintegrated ...)\n - elastic, hyperelastic, elasto-plastic, ...\nStandard \
+heat conduction elements:\n - 2D, 3D, axisymmetric, ..\n - stationar, \
+transient\nAll elements support full implicit direct and exact sensitivity \
+analysis.\nSymbolic templates for all elements are also included. ", 
+  {2015, 5, 1, 17, 30, 44.0582528`9.396602139667344}, "OL", 
+  "jkorelc@fgg.uni-lj.si", Null, {6.402, 6.402}, Null, Null, Null, Null, 
+  Null, Null, Null, Null, Null}}

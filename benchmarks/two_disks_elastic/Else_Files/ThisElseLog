@@ -11,19 +11,3 @@ Reading Materials :
 		Steel Parameter PlaneStress of type int: 0
 		Steel Parameter PlaneStress of type bool: 0
 		Steel has : 5 parameters.
-Material Parameter of MPM Material: Steel
-- IntegerParameters	: 
-			 "integervalue"  1
-- DoubleParameters	: 
-			 "Emod"  21000
-			 "nue"  0.3
-			 "rho"  1000
-- BoolParameters		: 
-			 "boolvalue"  1
-Material Parameter of MPM Material: Aluminium
-- IntegerParameters	: 
-- DoubleParameters	: 
-			 "Emod"  7800
-			 "nue"  0.3
-			 "rho"  1000
-- BoolParameters		: 
